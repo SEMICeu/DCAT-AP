@@ -8,4 +8,4 @@ The specification of the DCAT-AP was a joint initiative of DG CONNECT, the EU Pu
 
 The current version of DCAT-AP (v1.1) can be downloaded from https://joinup.ec.europa.eu/node/146653/.
 
-Any problems encountered, or suggestions for new functionalities can be submitted as issues on the DCAT-AP repository on GitHub. A short guideline for submitting issues can be found at https://github.com/SEMICeu/DCAT-AP/wiki.
+Any problems encountered, or suggestions for new functionalities can be submitted as issues on the DCAT-AP repository on GitHub. A short guideline for submitting issues can be found at https://github.com/SEMICeu/DCAT-AP/wiki/Submission-guidelines.
