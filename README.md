@@ -10,9 +10,9 @@ The current version of DCAT-AP (v1.1) can be downloaded from https://joinup.ec.e
 
 Any problems encountered, or suggestions for new functionalities can be submitted as issues on the DCAT-AP repository on GitHub. A short guideline for submitting issues can be found at https://github.com/SEMICeu/DCAT-AP/wiki/Submission-guidelines.
 
-# Structure of the repository
+## Structure of the repository
 
-/releases: DCAT-AP releases (1.0, 1.1, etc), each release might have different distributions
+/releases: DCAT-AP releases (1.1, etc), each release might have different distributions
 
 ## Licence
 
