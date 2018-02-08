@@ -38,11 +38,11 @@
 		},
 		"algorithm":{
 			"@id":"http://spdx.org/rdf/terms#algorithm",
-			"@type":"http://www.w3.org/2001/XMLSchema#string"
+			"@type":"http://spdx.org/rdf/terms#checksumAlgorithm_sha1"
 		},
 		"byteSize":{
 			"@id":"http://www.w3.org/ns/dcat#byteSize",
-			"@type":"http://www.w3.org/2001/XMLSchema#integer"
+			"@type":"http://www.w3.org/2001/XMLSchema#decimal"
 		},
 		"checksum":{
 			"@id":"http://spdx.org/rdf/terms#checksum",
@@ -50,7 +50,7 @@
 		},
 		"checksumValue":{
 			"@id":"http://spdx.org/rdf/terms#checksumValue",
-			"@type":"http://www.w3.org/2001/XMLSchema#integer"
+			"@type":"http://www.w3.org/2001/XMLSchema#hexBinary"
 		},
 		"conformsTo":{
 			"@id":"http://purl.org/dc/terms/conformsTo",
@@ -162,7 +162,7 @@
 		},
 		"publisher":{
 			"@id":"http://purl.org/dc/terms/publisher",
-			"@type":"http://xmlns.com/foaf/0.1/ Agent"
+			"@type":"http://xmlns.com/foaf/0.1/Agent"
 		},
 		"record":{
 			"@id":"http://www.w3.org/ns/dcat#record",
@@ -170,7 +170,7 @@
 		},
 		"relation":{
 			"@id":"http://purl.org/dc/terms/relation",
-			"@type":"http://www.w3.org/ns/dcat#Dataset"
+			"@type":"http://www.w3.org/2000/01/rdf-schema#Resource"
 		},
 		"rights":{
 			"@id":"http://purl.org/dc/terms/rights",
@@ -217,7 +217,7 @@
 			"@type":"http://www.w3.org/2004/02/skos/core#Concept"
 		},
 		"versionInfo":{
-			"@id":"http://www.w3.org/ns/dcat#owl:versionInfo",
+			"@id":"http://www.w3.org/2002/07/owl#versionInfo",
 			"@type":"http://www.w3.org/2001/XMLSchema#string"
 		},
 		"versionNotes":{
