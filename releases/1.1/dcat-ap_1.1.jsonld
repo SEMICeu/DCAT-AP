@@ -40,6 +40,10 @@
 			"@id":"http://spdx.org/rdf/terms#algorithm",
 			"@type":"http://spdx.org/rdf/terms#checksumAlgorithm_sha1"
 		},
+		"application_profile":{
+			"@id":"http://purl.org/dc/terms/conformsTo",
+			"@type":"http://www.w3.org/2000/01/rdf-schema#Resource"
+		},
 		"byteSize":{
 			"@id":"http://www.w3.org/ns/dcat#byteSize",
 			"@type":"http://www.w3.org/2001/XMLSchema#decimal"
@@ -52,9 +56,9 @@
 			"@id":"http://spdx.org/rdf/terms#checksumValue",
 			"@type":"http://www.w3.org/2001/XMLSchema#hexBinary"
 		},
-		"conformsTo":{
+		"conforms_to":{
 			"@id":"http://purl.org/dc/terms/conformsTo",
-			"@type":"http://www.w3.org/2000/01/rdf-schema#Resource"
+			"@type":"http://purl.org/dc/terms/Standard"
 		},
 		"contactPoint":{
 			"@id":"http://www.w3.org/ns/dcat#contactPoint",
@@ -77,8 +81,7 @@
 			"@type":"http://www.w3.org/2000/01/rdf-schema#Resource"
 		},
 		"endDate":{
-			"@id":"http://schema.org/endDate",
-			"@type":"http://www.w3.org/2001/XMLSchema#dateTime"
+			"@id":"http://schema.org/endDate"
 		},
 		"format":{
 			"@id":"http://purl.org/dc/terms/format",
@@ -105,8 +108,7 @@
 			"@type":"http://www.w3.org/ns/dcat#Catalog"
 		},
 		"issued":{
-			"@id":"http://purl.org/dc/terms/issued",
-			"@type":"http://www.w3.org/2001/XMLSchema#dateTime"
+			"@id":"http://purl.org/dc/terms/issued"
 		},
 		"isVersionOf":{
 			"@id":"http://purl.org/dc/terms/isVersionOf",
@@ -128,13 +130,16 @@
 			"@id":"http://purl.org/dc/terms/license",
 			"@type":"http://purl.org/dc/terms/LicenseDocument"
 		},
+		"linked_schemas":{
+			"@id":"http://purl.org/dc/terms/conformsTo",
+			"@type":"http://purl.org/dc/terms/Standard"
+		},
 		"mediaType":{
 			"@id":"http://www.w3.org/ns/dcat#mediaType",
 			"@type":"http://purl.org/dc/terms/MediaTypeOrExtent"
 		},
 		"modified":{
-			"@id":"http://purl.org/dc/terms/modified",
-			"@type":"http://www.w3.org/2001/XMLSchema#dateTime"
+			"@id":"http://purl.org/dc/terms/modified"
 		},
 		"name":{
 			"@id":"http://xmlns.com/foaf/0.1/name",
@@ -143,6 +148,10 @@
 		"notation":{
 			"@id":"http://www.w3.org/2004/02/skos/core#notation",
 			"@type":"http://www.w3.org/2001/XMLSchema#string"
+		},
+		"other_identifier":{
+			"@id":"http://www.w3.org/ns/adms#identifier",
+			"@type":"http://www.w3.org/ns/adms#Identifier"
 		},
 		"page":{
 			"@id":"http://xmlns.com/foaf/0.1/page",
@@ -184,13 +193,16 @@
 			"@id":"http://purl.org/dc/terms/source",
 			"@type":"http://www.w3.org/ns/dcat#Dataset"
 		},
+		"source_metadata":{
+			"@id":"http://purl.org/dc/terms/source",
+			"@type":"http://www.w3.org/ns/dcat#CatalogRecord"
+		},
 		"spatial":{
 			"@id":"http://purl.org/dc/terms/spatial",
 			"@type":"http://purl.org/dc/terms/Location"
 		},
 		"startDate":{
-			"@id":"http://schema.org/startDate",
-			"@type":"http://www.w3.org/2001/XMLSchema#dateTime"
+			"@id":"http://schema.org/startDate"
 		},
 		"status":{
 			"@id":"http://www.w3.org/ns/adms#status",
