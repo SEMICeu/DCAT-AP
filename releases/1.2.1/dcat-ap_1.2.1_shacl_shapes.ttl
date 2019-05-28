@@ -62,9 +62,9 @@
       foaf:name "Vassilios Peristeras" ;
     ] ;
   dct:license <https://joinup.ec.europa.eu/licence/isa-open-metadata-licence-v11> ;
-  dct:modified "2019-05-08"^^xsd:date ;
+  dct:modified "2019-05-28"^^xsd:date ;
   dct:publisher <http://publications.europa.eu/resource/authority/corporate-body/COM> ;
-  dct:relation <https://joinup.ec.europa.eu/node/69559> ;
+  dct:relation <http://data.europa.eu/w21/6be4d036-2e6d-4528-a888-0e9a0e29c579> ;
   dct:rightsHolder <http://publications.europa.eu/resource/authority/corporate-body/EURUN> ;
   dct:title "DCAT Application Profile for Data Portals in Europe"@en ;
   rdfs:comment "This document specifies the set of RDF classes and properties used in the DCAT Application profile for data portals in Europe (DCAT-AP)."@en ;
@@ -79,14 +79,15 @@
   owl:imports org: ;
   owl:imports foaf: ;
   owl:versionInfo "1.2.1" ;
-  foaf:depiction <https://github.com/SEMICeu/DCAT-AP/blob/master/releases/1.2/DCAT-AP_1.2.png> ;
-  foaf:homepage <https://joinup.ec.europa.eu/node/69559> ;
+  foaf:depiction <hhttps://github.com/SEMICeu/DCAT-AP/blob/master/releases/1.2.1/DCAT-AP_1.2.1.png> ;
+  foaf:homepage <http://data.europa.eu/w21/6be4d036-2e6d-4528-a888-0e9a0e29c579> ;
   foaf:logo <https://joinup.ec.europa.eu/sites/default/files/imagecache/community_logo/DCAT_application_profile_for_European_data_portals_logo_0.png> ;
   foaf:maker [
-      foaf:mbox <mailto:dcat_application_profile@joinup.ec.europa.eu> ;
+      foaf:mbox <mailto:contact@semic.eu> ;
       foaf:name "DCAT-AP Working Group" ;
-      foaf:page <https://joinup.ec.europa.eu/node/63580> ;
-    ] ;
+      foaf:page <https://github.com/SEMICeu/DCAT-AP> ;
+      foaf:page <https://joinup.ec.europa.eu/node/64331> ;
+] ;
 .
 :DateOrDateTimeDataType
   rdf:type sh:NodeShape ;
