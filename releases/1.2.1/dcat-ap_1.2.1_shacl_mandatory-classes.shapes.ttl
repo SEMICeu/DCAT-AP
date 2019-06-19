@@ -78,7 +78,7 @@
   owl:imports org: ;
   owl:imports foaf: ;
   owl:versionInfo "1.2.1" ;
-  foaf:depiction <hhttps://github.com/SEMICeu/DCAT-AP/blob/master/releases/1.2.1/DCAT-AP_1.2.1.png> ;
+  foaf:depiction <https://github.com/SEMICeu/DCAT-AP/blob/master/releases/1.2.1/DCAT-AP_1.2.1.png> ;
   foaf:homepage <http://data.europa.eu/w21/6be4d036-2e6d-4528-a888-0e9a0e29c579> ;
   foaf:logo <https://joinup.ec.europa.eu/sites/default/files/imagecache/community_logo/DCAT_application_profile_for_European_data_portals_logo_0.png> ;
   foaf:maker [
