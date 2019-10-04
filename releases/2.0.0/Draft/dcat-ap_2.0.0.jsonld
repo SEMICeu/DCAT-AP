@@ -7,7 +7,7 @@
 		"Checksum":"http://spdx.org/rdf/terms#Checksum",
 		"Concept":"http://www.w3.org/2004/02/skos/core#Concept",
 		"ConceptScheme":"http://www.w3.org/2004/02/skos/core#ConceptScheme",
-		"Dataservice":"https://www.w3.org/ns/dcat#DataService",
+		"DataService":"https://www.w3.org/ns/dcat#DataService",
 		"Dataset":"http://www.w3.org/ns/dcat#Dataset",
 		"Distribution":"http://www.w3.org/ns/dcat#Distribution",
 		"Document":"http://xmlns.com/foaf/0.1/Document",
