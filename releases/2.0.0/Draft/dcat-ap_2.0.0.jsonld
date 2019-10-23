@@ -25,7 +25,7 @@
 		"Checksum":"sdpx:Checksum",
 		"Concept":"skos:Concept",
 		"ConceptScheme":"skos:ConceptScheme",
-		"Dataservice":"dcat:DataService",
+		"DataService":"dcat:DataService",
 		"Dataset":"dcat:Dataset",
 		"Distribution":"dcat:Distribution",
 		"Document":"foaf:Document",
@@ -75,8 +75,7 @@
 		  	"@type":"skos:Concept"
 		},
 		"bbox":{
-			"@id":"dcat:bbox",
-			"@type":"xsd:string"
+			"@id":"dcat:bbox"
 		},
 		"byteSize":{
 		   	"@id":"dcat:byteSize",
@@ -102,7 +101,7 @@
 			"@id":"dcat:compressFormat",
 			"@type":"dct:MediaType"
 		},
-		"conforms_to":{
+		"conformsTo":{
 			"@id":"dct:conformsTo",
 			"@type":"dct:Standard"
 		},
@@ -139,11 +138,10 @@
 		},
 		"format":{
 			"@id":"dct:format",
-			"@type":"dct:MediaTypeorExtent"
+			"@type":"dct:MediaTypeOrExtent"
 		},
 		"geometry":{
-			"@id":"locn:geometry",
-			"@type":"xsd:string"
+			"@id":"locn:geometry"
 		},
 		"hasBeginning":{
 			"@id":"time:hasBeginning",
@@ -192,8 +190,7 @@
 			"@type":"dcat:Dataset"
 		},
 		"keyword":{
-			"@id":"dcat:keyword",
-			"@type":"rdfs:Literal"
+			"@id":"dcat:keyword"
 		},
 		"landingPage":{
 			"@id":"dcat:landingPage",
@@ -284,7 +281,7 @@
 		},
 		"service":{
 			"@id":"dcat:service",
-			"@type":"dcat:Catalog"
+			"@type":"dcat:DataService"
 		},
 		"source":{
 			"@id":"dct:source",
