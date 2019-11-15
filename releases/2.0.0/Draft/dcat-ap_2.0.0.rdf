@@ -50,14 +50,14 @@
     xmlns:xhv="&xhv;">
 <owl:Ontology rdf:about="https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe">
         <rdfs:label xml:lang="en">DCAT Application Profile for Data Portals in Europe</rdfs:label>
-        <dct:modified rdf:datatype="xsd:date">2019-05-28</dct:modified>
+        <dct:modified rdf:datatype="xsd:date">2019-11-15</dct:modified>
         <dct:abstract xml:lang="en">The DCAT Application profile for data portals in Europe (DCAT-AP) is a specification based on the Data Catalogue vocabulary (DCAT) for describing public sector datasets in Europe. Its basic use case is to enable a cross-data portal search for data sets and make public sector data better searchable across borders and sectors. This can be achieved by the exchange of descriptions of data sets among data portals.</dct:abstract>
         <cc:attributionName xml:lang="en">European Commission</cc:attributionName>
         <rdfs:comment xml:lang="en">This document specifies the set of RDF classes and properties used in the DCAT Application profile for data portals in Europe (DCAT-AP).</rdfs:comment>
         <owl:versionInfo>2.0.0</owl:versionInfo>
         <dct:publisher rdf:resource="http://publications.europa.eu/resource/authority/corporate-body/DIGIT"/>
         <cc:attributionURL rdf:resource="http://ec.europa.eu/"/>
-    <adms:versionNotes xml:lang="en">Change log for DCAT-AP v2.0.0: see github  </adms:versionNotes>
+    <adms:versionNotes xml:lang="en">Change log for DCAT-AP v2.0.0: see github</adms:versionNotes>
         <xhv:prev rdf:resource="https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe/release/200"/>
         <wdrs:describedby rdf:resource="http://data.europa.eu/w21/6be4d036-2e6d-4528-a888-0e9a0e29c579"/>
         <voaf:specializes rdf:resource="http://www.w3.org/ns/dcat#"/>
@@ -105,12 +105,22 @@
             <foaf:name>PwC EU Services</foaf:name>
             <foaf:homepage rdf:resource="http://www.pwc.com/gx/en/eu-institutions-services/"/>
           </schema:affiliation>	           
-        </dct:creator>	      
+        </dct:creator>
+ 	<dct:creator rdf:parseType="Resource">
+            <rdfs:seeAlso rdf:resource="https://www.ails.ece.ntua.gr/people/natasa"/>
+            <foaf:name>Natasa Sofou</foaf:name>
+            <foaf:homepage rdf:resource="https://www.ails.ece.ntua.gr/people/natasa"/>
+            <schema:affiliation rdf:parseType="Resource">
+             	<foaf:name>Artificial Intelligence and Learning Systems Laboratory, National Technical University of Athens</foaf:name>
+                <foaf:homepage rdf:resource="https://www.ails.ece.ntua.gr/"/>
+             </schema:affiliation>                 
+	</dct:creator>  
         <dct:creator rdf:parseType="Resource">
           <foaf:name>Bert Van Nuffelen</foaf:name>
+          <foaf:homepage rdf:resource="https://www.linkedin.com/in/bert-van-nuffelen-a349634/"/>
           <schema:affiliation rdf:parseType="Resource">
             <foaf:name>TenForce</foaf:name>
-    	<foaf:homepage rdf:resource="https://tenforce.com"/>
+    	    <foaf:homepage rdf:resource="https://tenforce.com"/>
           </schema:affiliation>	           
         </dct:creator>	      
         <foaf:maker rdf:parseType="Resource">
@@ -1179,7 +1189,7 @@
  
  <!--  Distribution - checksum   -->
  <rdf:Description rdf:about="http://spdx.org/rdf/terms#checksum"> 
-  <vann:usageNote xml:lang="en">Optional property.This property provides a mechanism that can be used to verify that the contents of a distribution have not changed.</vann:usageNote>
+  <vann:usageNote xml:lang="en">Optional property.This property provides a mechanism that can be used to verify that the contents of a distribution have not changed. The checksum is related to the downloadURL.</vann:usageNote>
   <dct:identifier>spdx:checksum</dct:identifier>
   <rdfs:label xml:lang="en">distribution - checksum</rdfs:label>
   <rdfs:isDefinedBy rdf:resource="http://spdx.org/rdf/terms/#checksum" />
@@ -1368,11 +1378,11 @@
   <rdfs:comment xml:lang="en">This property contains the end of the period.</rdfs:comment>
  </rdf:Description>
 
-<!--  Period Of Time - beggining  (dcat 2) -->
+<!--  Period Of Time - beginning  (dcat 2) -->
  <rdf:Description rdf:about="https://www.w3.org/TR/owl-time/#time:hasBeginning"> 
   <vann:usageNote xml:lang="en">Optional property. This property refers to the beginning of a period or interval.</vann:usageNote>
   <dct:identifier>time:hasBeginning</dct:identifier>
-  <rdfs:label xml:lang="en">Period Of Time - beggining</rdfs:label>
+  <rdfs:label xml:lang="en">Period Of Time - beginning</rdfs:label>
   <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:period_has_beginning" />
   <rdfs:comment xml:lang="en">This property refers to the beginning of a period or interval.</rdfs:comment>
  </rdf:Description>
