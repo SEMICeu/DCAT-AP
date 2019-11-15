@@ -48,6 +48,7 @@
         xmlns:time="http://www.w3.org/2006/time#"
         xmlns:dcatap="http://data.europa.eu/r5r/"
     xmlns:xhv="&xhv;">
+
 <owl:Ontology rdf:about="https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe">
         <rdfs:label xml:lang="en">DCAT Application Profile for Data Portals in Europe</rdfs:label>
         <dct:modified rdf:datatype="xsd:date">2019-11-15</dct:modified>

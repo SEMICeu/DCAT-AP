@@ -21,9 +21,23 @@
 @prefix dcatap: <http://data.europa.eu/r5r> .
 
 
-<http://data.europa.eu/r5r/mdrcv>
-    dct:conformsTo <https://joinup.ec.europa.eu/document/process-and-methodology-developing-core-vocabularies> ;
+<http://data.europa.eu/r5r/mdr_shapes>
+    dcat:accessURL <https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe/distribution/dcat-ap-200-shacl-shapes>;
+    dcat:downloadURL <https://github.com/SEMICeu/DCAT-AP/raw/cea5a96bb4a6f120c20b7a2b3fb4d86bcd725952/releases/2.0.0/Draft/dcat-ap_2.0.0_shacl_shapes.ttl> ;
+    dcatap:availability <http://data.europa.eu/r5r/stable> ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:conformsTo <https://www.w3.org/TR/shacl> ;
     dct:creator [
+        rdfs:seeAlso <https://www.linkedin.com/in/bert-van-nuffelen-a349634/> ;
+        org:memberOf <https://tenforce.com> ;
+        foaf:homepage <https://www.linkedin.com/in/bert-van-nuffelen-a349634/> ;
+        foaf:name "Bert Van Nuffelen"
+    ], [
+        rdfs:seeAlso <https://www.ails.ece.ntua.gr/people/natasa> ;
+        org:memberOf <https://www.ails.ece.ntua.gr/> ;
+        foaf:homepage <https://www.ails.ece.ntua.gr/people/natasa> ;
+        foaf:name "Natasa Sofou"
+    ], [
         rdfs:seeAlso <http://eugeniu.costezki.ro#me> ;
         org:memberOf <http://publications.europa.eu/resource/authority/corporate-body/PUBL> ;
         foaf:homepage <http://costezki.ro> ;
@@ -45,15 +59,14 @@
         foaf:name "Vassilios Peristeras"
     ] ;
     dct:license <https://creativecommons.org/licenses/by/4.0> ;
+    cc:attributionURL <http://ec.europa.eu/> ;
     dct:modified "2019-11-15"^^xsd:date ;
     dct:publisher <http://publications.europa.eu/resource/authority/corporate-body/DIGIT> ;
     dct:relation <https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe/release/200> ;
-    rdfs:comment "This document specifies the controlled vocabulary constraints on properties expressed by DCAT-AP in SHACL."@en ;
-    rdfs:label "Controlled Vocabulary Constraints of DCAT Application Profile for Data Portals in Europe"@en ;
+    dct:description "This document specifies the controlled vocabulary constraints on properties expressed by DCAT-AP in SHACL."@en ;
+    dct:title "Controlled Vocabulary Constraints of DCAT Application Profile for Data Portals in Europe"@en ;
     owl:versionInfo "2.0.0" ;
-    foaf:depiction <https://github.com/SEMICeu/DCAT-AP/blob/master/releases/2.0.0/Draft/DCAT-AP_2.0.0.png> ;
     foaf:homepage <https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe/release/200> ;
-    foaf:logo <https://joinup.ec.europa.eu/sites/default/files/imagecache/community_logo/DCAT_application_profile_for_European_data_portals_logo_0.png> ;
     foaf:maker [
         foaf:mbox <mailto:contact@semic.eu> ;
         foaf:name "DCAT-AP Working Group" ;
