@@ -98,6 +98,7 @@
     sh:property [
         sh:class dct:LinguisticSystem ;
         sh:path dct:language
+        sh:severity sh:Violation
     ], [
         sh:class dct:LicenseDocument ;
         sh:maxCount 1 ;
@@ -304,6 +305,7 @@
     ], [
         sh:class skos:Concept ;
         sh:path dcat:theme
+        sh:severity sh:Violation
     ], [
         sh:class dct:RightsStatement ;
         sh:maxCount 1 ;
