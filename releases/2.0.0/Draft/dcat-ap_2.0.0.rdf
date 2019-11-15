@@ -1490,14 +1490,14 @@
   </skos:Concept>
 
   <skos:Concept rdf:about="http://data.europa.eu/r5r/available">
-    <dct:identifier>experimental</dct:identifier>
+    <dct:identifier>available</dct:identifier>
     <skos:inScheme rdf:resource="http://data.europa.eu/r5r/availability/1.0"/>
     <skos:prefLabel xml:lang="en">available</skos:prefLabel>
     <skos:definition xml:lang="en">Data is available for a few years, medium term planning.</skos:definition>
   </skos:Concept>
 
   <skos:Concept rdf:about="http://data.europa.eu/r5r/stable">
-    <dct:identifier>experimental</dct:identifier>
+    <dct:identifier>stable</dct:identifier>
     <skos:inScheme rdf:resource="http://data.europa.eu/r5r/availability/1.0"/>
     <skos:prefLabel xml:lang="en">stable</skos:prefLabel>
     <skos:definition xml:lang="en">Data will remain available in the long term.</skos:definition>
