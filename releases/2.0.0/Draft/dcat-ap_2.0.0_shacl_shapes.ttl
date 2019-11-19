@@ -19,6 +19,7 @@
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dcatap: <http://data.europa.eu/r5r> .
+@prefix cc: <http://creativecommons.org/ns#> .
 
 <http://data.europa.eu/r5r/shacl_shapes>
     dcat:accessURL <https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe/distribution/dcat-ap-200-shacl-shapes>;
@@ -151,7 +152,7 @@
     sh:name "Catalog"@en ;
     sh:property [
         sh:class dct:LinguisticSystem ;
-        sh:path dct:language
+        sh:path dct:language ;
         sh:severity sh:Violation
     ], [
         sh:class dct:LicenseDocument ;
@@ -358,7 +359,7 @@
         sh:severity sh:Violation
     ], [
         sh:class skos:Concept ;
-        sh:path dcat:theme
+        sh:path dcat:theme ;
         sh:severity sh:Violation
     ], [
         sh:class dct:RightsStatement ;

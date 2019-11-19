@@ -19,6 +19,7 @@
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dcatap: <http://data.europa.eu/r5r> .
+@prefix cc: <http://creativecommons.org/ns#> .
 
 
 <http://data.europa.eu/r5r/mdr_shapes>
