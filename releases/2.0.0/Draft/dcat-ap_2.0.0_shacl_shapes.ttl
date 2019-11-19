@@ -299,7 +299,7 @@
         sh:severity sh:Violation
     ], [
         sh:nodeKind sh:BlankNodeOrIRI ;
-        sh:path dcat:endPointDescription ;
+        sh:path dcat:endpointDescription ;
         sh:severity sh:Violation
     ], [
         sh:class dct:LicenseDocument ;
@@ -544,8 +544,7 @@
         sh:path dcat:byteSize ;
         sh:severity sh:Violation
     ], [
-        sh:minCount 1 ;
-        sh:nodeKind sh:BlankNodeOrIRI ;
+        sh:nodeKind sh:BlankNodeOrIRI;
         sh:path dcat:downloadURL ;
         sh:severity sh:Violation
     ], [
@@ -585,9 +584,8 @@
         sh:path dcat:spatialResolutionInMeters ;
         sh:severity sh:Violation
     ], [
-        sh:maxCount 1 ;
         sh:minCount 1 ;
-        sh:nodeKind sh:BlankNodeOrIRI ;
+        sh:nodeKind sh:BlankNodeOrIRI;
         sh:path dcat:accessURL ;
         sh:severity sh:Violation
     ], [
