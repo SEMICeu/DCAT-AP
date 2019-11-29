@@ -16,4 +16,4 @@ Any problems encountered, or suggestions for new functionalities can be submitte
 
 ## Licence
 
-DCAT-AP releases are distributed under [ISA Open Metadata Licence v1.1](https://joinup.ec.europa.eu/licence/isa-open-metadata-licence-v11)
+DCAT-AP releases are distributed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
