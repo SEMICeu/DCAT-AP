@@ -132,11 +132,11 @@
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "beginning": {
-      "@id": "https://www.w3.org/TR/owl-time/#time:hasBeginning",
+      "@id": "http://www.w3.org/2006/time/hasBeginning",
       "@type": "@id"
     },
     "end": {
-      "@id": "https://www.w3.org/TR/owl-time/#time:hasEnd",
+      "@id": "http://www.w3.org/2006/time#hasEnd",
       "@type": "@id"
     },
     "hadRole": {
