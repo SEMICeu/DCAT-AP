@@ -261,7 +261,7 @@
 
 :Checksum_Shape
     a sh:NodeShape ;
-    sh:name "Category"@en ;
+    sh:name "Checksum"@en ;
     sh:property [
         sh:hasValue spdx:checksumAlgorithm_sha1 ;
         sh:maxCount 1 ;
@@ -410,6 +410,7 @@
         sh:path dct:source ;
         sh:severity sh:Violation
     ], [
+        sh:maxCount 1 ;
         sh:class skos:Concept ;
         sh:path dct:type ;
         sh:severity sh:Violation
