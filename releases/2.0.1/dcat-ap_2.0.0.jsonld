@@ -101,8 +101,7 @@
       "@type": "@id"
     },
     "description": {
-      "@id": "http://purl.org/dc/terms/description",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+      "@id": "http://purl.org/dc/terms/description"
     },
     "datasetDistribution": {
       "@id": "http://www.w3.org/ns/dcat#distribution",
@@ -214,8 +213,7 @@
       "@id": "http://purl.org/dc/terms/modified"
     },
     "name": {
-      "@id": "http://xmlns.com/foaf/0.1/name",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+      "@id": "http://xmlns.com/foaf/0.1/name"
     },
     "notation": {
       "@id": "http://www.w3.org/2004/02/skos/core#notation",
@@ -234,8 +232,7 @@
       "@type": "@id"
     },
     "preferredLabel": {
-      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel"
     },
     "primaryTopic": {
       "@id": "http://xmlns.com/foaf/0.1/primaryTopic",
@@ -341,8 +338,7 @@
       "@type": "@id"
     },
     "title": {
-      "@id": "http://purl.org/dc/terms/title",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+      "@id": "http://purl.org/dc/terms/title"
     },
     "type": {
       "@id": "http://purl.org/dc/terms/type",
@@ -357,8 +353,7 @@
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "versionNotes": {
-      "@id": "http://www.w3.org/ns/adms#versionNotes",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+      "@id": "http://www.w3.org/ns/adms#versionNotes"
     },
     "wasGeneratedBy": {
       "@id": "http://www.w3.org/ns/prov#wasGeneratedBy",
