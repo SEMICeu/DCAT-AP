@@ -146,7 +146,7 @@
     	<vann:usageNote xml:lang="en">Mandatory class. A catalogue or repository that hosts the Datasets being described.</vann:usageNote>
     	<dct:identifier>dcat:Catalog</dct:identifier>
     	<rdfs:label xml:lang="en">Catalogue</rdfs:label>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/2013/WD-vocab-dcat-20130312/#class-catalog"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Class:Catalog"/>
         <rdfs:comment xml:lang="en">A  curated collection of metadata about datasets</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
      <!-- <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/> -->
@@ -166,7 +166,7 @@
     	<vann:usageNote xml:lang="en">Mandatory class. A conceptual entity that represents the information published.</vann:usageNote>
     	<dct:identifier>dcat:Dataset</dct:identifier>
     	<rdfs:label xml:lang="en">Dataset</rdfs:label>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/2013/WD-vocab-dcat-20130312/#class-dataset"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Class:Dataset"/>
         <rdfs:comment xml:lang="en">A collection of data, published or curated by a single source, and available for access or download in one or more formats</rdfs:comment>
     </rdf:Description>
 
@@ -198,7 +198,7 @@
     	<vann:usageNote xml:lang="en">Recommended class - Category: a subject of a Dataset. Optional Class - Publisher type: A type of organisation that acts as a publisher. Optional Class - Status: an indication of the maturity of a Distribution.</vann:usageNote>
     	<dct:identifier>skos:Concept</dct:identifier>
     	<rdfs:label xml:lang="en">Category, Publisher type, Status </rdfs:label>
-    	<rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/2013/WD-vocab-dcat-20130312/#class-category-and-category-scheme"/>
+    	<rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Class:Concept"/>
     	<rdfs:comment xml:lang="en">An abstract idea or notion; a unit of thought.</rdfs:comment>
     </rdf:Description>
     
@@ -208,7 +208,7 @@
     	<vann:usageNote xml:lang="en">Recommended class. A physical embodiment of the Dataset in a particular format.</vann:usageNote>
     	<dct:identifier>dcat:Distribution</dct:identifier>
     	<rdfs:label xml:lang="en">Distribution</rdfs:label>
-    	<rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/2013/WD-vocab-dcat-20130312/#class-distribution"/>
+    	<rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Class:Distribution"/>
         <rdfs:comment xml:lang="en">Represents a specific available form of a dataset. Each dataset might be available in different forms, these forms might represent different formats of the dataset, different endpoints,... Examples of Distribution include a downloadable CSV file, an XLS file representing the dataset, an RSS feed…</rdfs:comment>
     </rdf:Description>
 
@@ -226,7 +226,7 @@
     	<vann:usageNote xml:lang="en">Recommended class. A concept collection (e.g. controlled vocabulary) in which the Category is defined.</vann:usageNote>
     	<dct:identifier>skos:ConceptScheme</dct:identifier>
     	<rdfs:label xml:lang="en">Category scheme</rdfs:label>
-    	<rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/2013/WD-vocab-dcat-20130312/#class-category-and-category-scheme"/>
+    	<rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Class:Concept_Scheme"/>
     	<rdfs:comment xml:lang="en">An abstract idea or notion; a unit of thought.</rdfs:comment>
     </rdf:Description>
     
@@ -239,7 +239,7 @@
     	<vann:usageNote xml:lang="en">Optional  class. A description of a Dataset’s entry in the Catalogue.</vann:usageNote>
     	<dct:identifier>dcat:CatalogRecord</dct:identifier>
     	<rdfs:label xml:lang="en">Catalogue Record</rdfs:label>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/2013/WD-vocab-dcat-20130312/#class-catalog-record"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Class:Catalog_Record"/>
         <rdfs:comment xml:lang="en">A record in a data catalog, describing a single dataset.</rdfs:comment>
     </rdf:Description>
 
@@ -398,7 +398,7 @@
     	<vann:usageNote xml:lang="en">Mandatory property. This property links the Catalogue with a Dataset that is part of the Catalogue.</vann:usageNote>
     	<dct:identifier>dcat:dataset</dct:identifier>
     	<rdfs:label xml:lang="en">Data Catalogue - dataset</rdfs:label>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/2013/WD-vocab-dcat-20130312/#class-catalog-record"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_dataset"/>
         <rdfs:comment xml:lang="en">A dataset that is part of the catalog.</rdfs:comment>
     </rdf:Description>
 
@@ -470,7 +470,7 @@
   <vann:usageNote xml:lang="en">Recommended property. This property refers to a knowledge organization system (KOS) used to classify the Catalogue's Datasets.</vann:usageNote>
   <dct:identifier>dcat:themeTaxonomy</dct:identifier>
   <rdfs:label xml:lang="en">Data Catalogue - themes</rdfs:label>
-  <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-dcat/" />
+  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_themes" />
   <rdfs:comment xml:lang="en">The knowledge organization system (KOS) used to classify catalog's datasets</rdfs:comment>
  </rdf:Description>
  
@@ -497,7 +497,7 @@
   <vann:usageNote xml:lang="en">Optional property. This property refers to a Catalogue Record that is part of the Catalogue</vann:usageNote>
   <dct:identifier>dcat:record</dct:identifier>
   <rdfs:label xml:lang="en">Data Catalogue - record</rdfs:label>
-  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat/#Property:catalog_catalog_record" />
+  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_catalog_record" />
   <rdfs:comment xml:lang="en">This property refers to a Catalogue Record that is part of the Catalogue</rdfs:comment>
  </rdf:Description>
  
@@ -673,7 +673,7 @@
   <vann:usageNote xml:lang="en">Recommended property. A collection of data that this data service can distribute.</vann:usageNote>
   <dct:identifier>dcat:servesDataset</dct:identifier>
   <rdfs:label xml:lang="en">Data Service - serves dataset</rdfs:label>
-  <rdfs:isDefinedBy rdf:resource= "https://www.w3.org/TR/vocab-dcat-2/#Property:data_service_serves_dataset " />
+  <rdfs:isDefinedBy rdf:resource= "https://www.w3.org/TR/vocab-dcat-2/#Property:data_service_serves_dataset" />
   <rdfs:comment xml:lang="en">A collection of data that this data service can distribute.</rdfs:comment>
  </rdf:Description>
 
@@ -682,7 +682,7 @@
   <vann:usageNote xml:lang="en">Recomended property. A description of the services available via the end-points, including their operations, parameters etc .</vann:usageNote>
   <dct:identifier>dcat:endpointDescription</dct:identifier>
   <rdfs:label xml:lang="en">Data Service - endpoint description</rdfs:label>
-  <rdfs:isDefinedBy rdf:resource= "https://www.w3.org/TR/vocab-dcat-2/#Property:data_service_endpoint_description " />
+  <rdfs:isDefinedBy rdf:resource= "https://www.w3.org/TR/vocab-dcat-2/#Property:data_service_endpoint_description" />
   <rdfs:comment xml:lang="en">A description of the services available via the end-points, including their operations, parameters etc.</rdfs:comment>
  </rdf:Description>
 
@@ -750,7 +750,7 @@
   <vann:usageNote xml:lang="en">Recommended property.This property contains contact information that can be used for sending comments about the Dataset.</vann:usageNote>
   <dct:identifier>dcat:contactPoint</dct:identifier>
   <rdfs:label xml:lang="en">Dataset - contact point</rdfs:label>
-  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-adms/#dcat-contactpoint" />
+  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_contact_point" />
   <rdfs:comment xml:lang="en">This property contains contact information that can be used for sending comments about the Dataset.</rdfs:comment>
  </rdf:Description>
  
@@ -759,7 +759,7 @@
   <vann:usageNote xml:lang="en">Recommended property. This property links the Dataset to an available Distribution.</vann:usageNote>
   <dct:identifier>dcat:distribution</dct:identifier>
   <rdfs:label xml:lang="en">Dataset - dataset distribution</rdfs:label>
-  <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-dcat/" />
+  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_distribution" />
   <rdfs:comment xml:lang="en">This property links the Dataset to an available Distribution.</rdfs:comment>
  </rdf:Description>
  
@@ -768,7 +768,7 @@
   <vann:usageNote xml:lang="en">Recommended property. This property contains a keyword or tag describing the Dataset.</vann:usageNote>
   <dct:identifier>dcat:keyword</dct:identifier>
   <rdfs:label xml:lang="en">Dataset - keyword/ tag</rdfs:label>
-  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat/#Property:dataset_keyword" />
+  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_keyword" />
   <rdfs:comment xml:lang="en">This property contains a keyword or tag describing the Dataset.</rdfs:comment>
  </rdf:Description>
  
@@ -797,7 +797,7 @@
   <vann:usageNote xml:lang="en">Recommended property. This property refers to a category of the Dataset. A Dataset may be associated with multiple themes. Subproperty of dct:subject.</vann:usageNote>
   <dct:identifier>dcat:theme</dct:identifier>
   <rdfs:label xml:lang="en">Dataset - theme/category</rdfs:label>
-  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat/#Property:dataset_theme" />
+  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_type" />
   <rdfs:comment xml:lang="en">This property refers to a category of the Dataset. A Dataset may be associated with multiple themes. Subproperty of dct:subject</rdfs:comment>
  </rdf:Description>
  
@@ -845,7 +845,7 @@
   <vann:usageNote xml:lang="en">Optional property. This property refers to a web page that provides access to the Dataset, its Distributions and/or additional information. </vann:usageNote>
   <dct:identifier>dcat:landingPage</dct:identifier>
   <rdfs:label xml:lang="en">Dataset - landing page</rdfs:label>
-  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat/#Property:dataset_landingpage" />
+  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_landing_page" />
   <rdfs:comment xml:lang="en">This property refers to a web page that provides access to the Dataset, its Distributions and/or additional information.</rdfs:comment>
  </rdf:Description>
  
@@ -1056,7 +1056,7 @@
   <vann:usageNote xml:lang="en">Mandatory property.  This property contains a URL that gives access to a Distribution of the Dataset. The resource at the access URL may contain information about how to get the Dataset. </vann:usageNote>
   <dct:identifier>dcat:accessURL</dct:identifier>
   <rdfs:label xml:lang="en">Distribution - access URL</rdfs:label>
-  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat/#Property:distribution_accessurl" />
+  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_access_url" />
   <rdfs:comment xml:lang="en">This property contains a URL that gives access to a Distribution of the Dataset. The resource at the access URL may contain information about how to get the Dataset.</rdfs:comment>
  </rdf:Description>
  
@@ -1101,7 +1101,7 @@
   <vann:usageNote xml:lang="en">Optional property. This property contains the size of a Distribution in bytes.</vann:usageNote>
   <dct:identifier>dcat:byteSize</dct:identifier>
   <rdfs:label xml:lang="en">Distribution - byte size</rdfs:label>
-  <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-dcat/#Property:distribution_size" />
+  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_size" />
   <rdfs:comment xml:lang="en">This property contains the size of a Distribution in bytes.</rdfs:comment>
  </rdf:Description>
  
@@ -1110,7 +1110,7 @@
   <vann:usageNote xml:lang="en">Optional property. This property contains a URL that is direct link to a downloadable file in a given format.</vann:usageNote>
   <dct:identifier>dcat:downloadURL</dct:identifier>
   <rdfs:label xml:lang="en">Distribution - download URL</rdfs:label>
-  <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-dcat/#Property:distribution_downloadurl" />
+  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_download_url" />
   <rdfs:comment xml:lang="en">This property contains a URL that is direct link to a downloadable file in a given format.</rdfs:comment>
  </rdf:Description>
  
@@ -1211,7 +1211,7 @@
   <vann:usageNote xml:lang="en">Optional property. This property refers to a policy expressing the rights associated with the resource if using the ODRL vocabulary. </vann:usageNote>
   <dct:identifier>odrl:hasPolicy </dct:identifier>
   <rdfs:label xml:lang="en">Distribution - has policy </rdfs:label>
-  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_has_policy" />
+  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_has_policy" />
   <rdfs:comment xml:lang="en">This property refers to a policy expressing the rights associated with the resource if using the ODRL vocabulary.</rdfs:comment>
  </rdf:Description>
 
