@@ -6,7 +6,7 @@
     "Checksum": "http://spdx.org/rdf/terms#Checksum",
     "Category": "http://www.w3.org/2004/02/skos/core#Concept",
     "CategoryScheme": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
-    "DataService": "https://www.w3.org/ns/dcat#DataService",
+    "DataService": "http://www.w3.org/ns/dcat#DataService",
     "Dataset": "http://www.w3.org/ns/dcat#Dataset",
     "Distribution": "http://www.w3.org/ns/dcat#Distribution",
     "Document": "http://xmlns.com/foaf/0.1/Document",
@@ -22,10 +22,10 @@
     "PeriodOfTime": "http://purl.org/dc/terms/PeriodOfTime",
     "ProvenanceStatement": "http://purl.org/dc/terms/ProvenanceStatement",
     "PublisherType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Relationship": "https://www.w3.org/ns/dcat#Relationship",
+    "Relationship": "http://www.w3.org/ns/dcat#Relationship",
     "Resource": "http://www.w3.org/2000/01/rdf-schema#Resource",
     "RightsStatement": "http://purl.org/dc/terms/RightsStatement",
-    "Role": "https://www.w3.org/ns/dcat#Role",
+    "Role": "http://www.w3.org/ns/dcat#Role",
     "Standard": "http://purl.org/dc/terms/Standard",
     "Status": "http://www.w3.org/2004/02/skos/core#Concept",
     "accessRights": {
@@ -33,7 +33,7 @@
       "@type": "@id"
     },
     "accessService": {
-      "@id": "https://www.w3.org/ns/dcat#accessService",
+      "@id": "http://www.w3.org/ns/dcat#accessService",
       "@type": "@id"
     },
     "accessURL": {
@@ -57,7 +57,7 @@
       "@type": "@id"
     },
     "boundingBox": {
-      "@id": "https://www.w3.org/ns/dcat#bbox",
+      "@id": "http://www.w3.org/ns/dcat#bbox",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "byteSize": {
@@ -65,7 +65,7 @@
       "@type": "http://www.w3.org/2001/XMLSchema#decimal"
     },
     "catalogue": {
-      "@id": "https://www.w3.org/ns/dcat#catalog",
+      "@id": "http://www.w3.org/ns/dcat#catalog",
       "@type": "@id"
     },
     "creator": {
@@ -73,7 +73,7 @@
       "@type": "@id"
     },
     "centroid": {
-      "@id": "https://www.w3.org/ns/dcat#centroid",
+      "@id": "http://www.w3.org/ns/dcat#centroid",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "checksum": {
@@ -85,7 +85,7 @@
       "@type": "http://www.w3.org/2001/XMLSchema#hexBinary"
     },
     "compressionFormat": {
-      "@id": "https://www.w3.org/ns/dcat#compressFormat",
+      "@id": "http://www.w3.org/ns/dcat#compressFormat",
       "@type": "@id"
     },
     "conformsTo": {
@@ -113,7 +113,7 @@
       "@type": "@id"
     },
     "endDate": {
-      "@id": "https://www.w3.org/ns/dcat#endDate"
+      "@id": "http://www.w3.org/ns/dcat#endDate"
     },
     "endpointDescription": {
       "@id": "http://www.w3.org/ns/dcat#endpointDescription",
@@ -140,7 +140,7 @@
       "@type": "@id"
     },
     "hadRole": {
-      "@id": "hhttps://www.w3.org/ns/dcat#hadRole",
+      "@id": "http://www.w3.org/ns/dcat#hadRole",
       "@type": "@id"
     },
     "hasPart": {
@@ -226,7 +226,7 @@
       "@type": "@id"
     },
     "packagingFormat": {
-      "@id": "https://www.w3.org/ns/dcat#packageFormat",
+      "@id": "http://www.w3.org/ns/dcat#packageFormat",
       "@type": "@id"
     },
     "documentation": {
@@ -254,7 +254,7 @@
       "@type": "@id"
     },
     "qualifiedRelation": {
-      "@id": "https://www.w3.org/ns/dcat#qualifiedRelation",
+      "@id": "http://www.w3.org/ns/dcat#qualifiedRelation",
       "@type": "@id"
     },
     "record": {
@@ -282,7 +282,7 @@
       "@type": "@id"
     },
     "service": {
-      "@id": "hhttps://www.w3.org/ns/dcat#service",
+      "@id": "http://www.w3.org/ns/dcat#service",
       "@type": "@id"
     },
     "source": {
@@ -306,11 +306,11 @@
       "@type": "@id"
     },
     "spatialResolution": {
-      "@id": "https://www.w3.org/ns/dcat#spatialResolutionInMeters",
+      "@id": "http://www.w3.org/ns/dcat#spatialResolutionInMeters",
       "@type": "http://www.w3.org/2001/XMLSchema#decimal"
     },
     "startDate": {
-      "@id": "https://www.w3.org/ns/dcat#startDate"
+      "@id": "http://www.w3.org/ns/dcat#startDate"
     },
     "changeType": {
       "@id": "http://www.w3.org/ns/adms#status",
@@ -325,7 +325,7 @@
       "@type": "@id"
     },
     "temporalResolution": {
-      "@id": "https://www.w3.org/ns/dcat#temporalResolution",
+      "@id": "http://www.w3.org/ns/dcat#temporalResolution",
       "@type": "http://www.w3.org/2001/XMLSchema#duration"
     },
     "theme": {

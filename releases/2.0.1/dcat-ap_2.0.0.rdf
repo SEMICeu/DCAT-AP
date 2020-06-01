@@ -352,7 +352,7 @@
     </rdf:Description>
 
   <!-- dcat:DataService  (dcat 2)  -->
- <rdf:Description rdf:about="https://www.w3.org/ns/dcat#DataService">
+ <rdf:Description rdf:about="http://www.w3.org/ns/dcat#DataService">
     	<vann:usageNote xml:lang="en">Optional class. A collection of operations that provides access to one or more datasets or data processing functions.</vann:usageNote>
     	<dct:identifier>dcat:DataService</dct:identifier>
     	<rdfs:label xml:lang="en">Data Service</rdfs:label>
@@ -362,7 +362,7 @@
 
 
 <!-- dcat:Relationship  (dcat 2) -->
- <rdf:Description rdf:about="https://www.w3.org/ns/dcat#Relationship">
+ <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Relationship">
     	<vann:usageNote xml:lang="en">Optional class. An association class for attaching additional information to a relationship between DCAT Resources.</vann:usageNote>
     	<dct:identifier>dcat:Relationship</dct:identifier>
     	<rdfs:label xml:lang="en">Relationship</rdfs:label>
@@ -371,7 +371,7 @@
     </rdf:Description>
 
     <!-- dcat:Role (dcat 2)  -->
- <rdf:Description rdf:about="https://www.w3.org/ns/dcat#Role">
+ <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Role">
     	<vann:usageNote xml:lang="en">Optional class. A role is the function of a resource or agent with respect to another resource, in the context of resource attribution or resource relationships. Note it is a subclass of skos:Concept.</vann:usageNote>
     	<dct:identifier><dcat:Role></dcat:Role></dct:identifier>
     	<rdfs:label xml:lang="en">Role</rdfs:label>
@@ -530,7 +530,7 @@
  </rdf:Description>
 
  <!--  Catalog -  service  (dcat 2) -->
- <rdf:Description rdf:about="https://www.w3.org/ns/dcat#service"> 
+ <rdf:Description rdf:about="http://www.w3.org/ns/dcat#service"> 
   <vann:usageNote xml:lang="en">Optional property. This property refers to a site or end-point that is listed in the catalog.</vann:usageNote>
   <dct:identifier> dcat:service</dct:identifier>
   <rdfs:label xml:lang="en">Data Catalogue - service</rdfs:label>
@@ -539,7 +539,7 @@
  </rdf:Description>
 
 <!--  Catalog -  catalog  (dcat 2) -->
- <rdf:Description rdf:about="https://www.w3.org/ns/dcat#catalog"> 
+ <rdf:Description rdf:about="http://www.w3.org/ns/dcat#catalog"> 
   <vann:usageNote xml:lang="en">Optional property. This property refers to  a catalog whose contents are of interest in the context of this catalog . </vann:usageNote>
   <dct:identifier> dcat:catalog</dct:identifier>
   <rdfs:label xml:lang="en">Data Catalogue - catalog </rdfs:label>
@@ -648,7 +648,7 @@
 <!-- ====================================== -->
 
 <!-- Data Service - endpoint URL   -->
- <rdf:Description rdf:about="https://www.w3.org/ns/dcat#endpointURL"> 
+ <rdf:Description rdf:about="http://www.w3.org/ns/dcat#endpointURL"> 
   <vann:usageNote xml:lang="en">Mandatory property. The root location or primary endpoint of the service (an IRI)..</vann:usageNote>
   <dct:identifier>dcat:endpointURL</dct:identifier>
   <rdfs:label xml:lang="en">Data Service - endpoint URL </rdfs:label>
@@ -669,7 +669,7 @@
 <!--             Recommended                 -->
 <!-- ====================================== -->
 <!-- Data Service - serves dataset   -->
- <rdf:Description rdf:about="https://www.w3.org/ns/dcat#servesdataset"> 
+ <rdf:Description rdf:about="http://www.w3.org/ns/dcat#servesdataset"> 
   <vann:usageNote xml:lang="en">Recommended property. A collection of data that this data service can distribute.</vann:usageNote>
   <dct:identifier>dcat:servesDataset</dct:identifier>
   <rdfs:label xml:lang="en">Data Service - serves dataset</rdfs:label>
@@ -678,7 +678,7 @@
  </rdf:Description>
 
 <!-- Data Service -  endpoint description -->
- <rdf:Description rdf:about="https://www.w3.org/ns/dcat#endpointDescription"> 
+ <rdf:Description rdf:about="http://www.w3.org/ns/dcat#endpointDescription"> 
   <vann:usageNote xml:lang="en">Recomended property. A description of the services available via the end-points, including their operations, parameters etc .</vann:usageNote>
   <dct:identifier>dcat:endpointDescription</dct:identifier>
   <rdfs:label xml:lang="en">Data Service - endpoint description</rdfs:label>
@@ -746,7 +746,7 @@
 <!-- ============================= -->
 
 <!--  Dataset - contact point -->
- <rdf:Description rdf:about="https://www.w3.org/ns/dcat#contactPoint"> 
+ <rdf:Description rdf:about="http://www.w3.org/ns/dcat#contactPoint"> 
   <vann:usageNote xml:lang="en">Recommended property.This property contains contact information that can be used for sending comments about the Dataset.</vann:usageNote>
   <dct:identifier>dcat:contactPoint</dct:identifier>
   <rdfs:label xml:lang="en">Dataset - contact point</rdfs:label>
@@ -1012,7 +1012,7 @@
  </rdf:Description>
 
  <!--  Dataset  -  temporal resolution (dcat 2) -->
- <rdf:Description rdf:about="https://www.w3.org/ns/dcat#temporalResolution"> 
+ <rdf:Description rdf:about="http://www.w3.org/ns/dcat#temporalResolution"> 
   <vann:usageNote xml:lang="en">Optional property. This property refers to the minimum time period resolvable in the dataset. </vann:usageNote>
   <dct:identifier>dcat:temporalResolution</dct:identifier>
   <rdfs:label xml:lang="en">Dataset - </rdfs:label>
@@ -1021,7 +1021,7 @@
  </rdf:Description>
 
  <!--  Dataset  - spatial resolution   (dcat 2) -->
- <rdf:Description rdf:about="https://www.w3.org/ns/dcat#spatialResolutionInMeters"> 
+ <rdf:Description rdf:about="http://www.w3.org/ns/dcat#spatialResolutionInMeters"> 
   <vann:usageNote xml:lang="en">Optional property. This property refers to the minimum spatial separation resolvable in a dataset, measured in meters. </vann:usageNote>
   <dct:identifier>dcat:spatialResolutionInMeters</dct:identifier>
   <rdfs:label xml:lang="en">Dataset - </rdfs:label>
@@ -1030,7 +1030,7 @@
  </rdf:Description>
 
  <!--  Dataset  - qualified Relation   (dcat 2) -->
-<rdf:Description rdf:about="https://www.w3.org/ns/dcat#qualifiedRelation"> 
+<rdf:Description rdf:about="http://www.w3.org/ns/dcat#qualifiedRelation"> 
   <vann:usageNote xml:lang="en">Optional property. This property provides a link to a description of a relationship with another resource. </vann:usageNote>
   <dct:identifier>dcat:qualifiedRelation</dct:identifier>
   <rdfs:label xml:lang="en">Dataset - qualified relation</rdfs:label>
@@ -1216,7 +1216,7 @@
  </rdf:Description>
 
  <!--   Distribution -  access service  (dcat 2)  -->
- <rdf:Description rdf:about="https://www.w3.org/ns/dcat#accessService"> 
+ <rdf:Description rdf:about="http://www.w3.org/ns/dcat#accessService"> 
   <vann:usageNote xml:lang="en">Optional property. This property refers to a data service that gives access to the distribution of the dataset. </vann:usageNote>
   <dct:identifier>dcat:accessService </dct:identifier>
   <rdfs:label xml:lang="en">Distribution - access service</rdfs:label>
@@ -1225,7 +1225,7 @@
  </rdf:Description>
 
  <!--   Distribution -  spatial resolution   (dcat 2) -->
- <rdf:Description rdf:about="https://www.w3.org/ns/dcat#spatialResolutionInMeters"> 
+ <rdf:Description rdf:about="http://www.w3.org/ns/dcat#spatialResolutionInMeters"> 
   <vann:usageNote xml:lang="en">Optional property. This property refers to the minimum spatial separation resolvable in a dataset distribution, measured in meters. . </vann:usageNote>
   <dct:identifier>dcat:spatialResolutionInMeters </dct:identifier>
   <rdfs:label xml:lang="en">Distribution - spatial resolution </rdfs:label>
@@ -1234,7 +1234,7 @@
  </rdf:Description>
 
  <!--   Distribution -  temporal resolution  (dcat 2)  -->
- <rdf:Description rdf:about="https://www.w3.org/ns/dcat#temporalResolution"> 
+ <rdf:Description rdf:about="http://www.w3.org/ns/dcat#temporalResolution"> 
   <vann:usageNote xml:lang="en">Optional property. This property refers to the minimum time period resolvable in the dataset distribution . </vann:usageNote>
   <dct:identifier>dcat:temporalResolution </dct:identifier>
   <rdfs:label xml:lang="en">Distribution - temporal resolution</rdfs:label>
@@ -1243,7 +1243,7 @@
  </rdf:Description>
 
  <!--   Distribution -  compression format  (dcat 2)  -->
- <rdf:Description rdf:about="https://www.w3.org/ns/dcat#compressFormat"> 
+ <rdf:Description rdf:about="http://www.w3.org/ns/dcat#compressFormat"> 
   <vann:usageNote xml:lang="en">Optional property. This property refers to the format of the file in which the data is contained in a compressed form, e.g. to reduce the size of the downloadable file. It SHOULD be expressed using a media type as defined in the official register of media types managed by IANA.</vann:usageNote>
   <dct:identifier>dcat:compressFormat</dct:identifier>
   <rdfs:label xml:lang="en">Distribution - compression format</rdfs:label>
@@ -1252,7 +1252,7 @@
  </rdf:Description>
 
  <!--   Distribution - packaging format   (dcat 2)  -->
- <rdf:Description rdf:about="https://www.w3.org/ns/dcat#packageFormat"> 
+ <rdf:Description rdf:about="http://www.w3.org/ns/dcat#packageFormat"> 
   <vann:usageNote xml:lang="en">Optional property. This property refers to the format of the file in which one or more data files are grouped together, e.g. to enable a set of related files to be downloaded together. It SHOULD be expressed using a media type as defined in the official register of media types managed by IANA. </vann:usageNote>
   <dct:identifier>dcat:packageFormat</dct:identifier>
   <rdfs:label xml:lang="en">Distribution - packaging format</rdfs:label>
@@ -1362,7 +1362,7 @@
 <!-- ====================================== --> 
 
 <!--  Period Of Time - start date  (dcat 2) -->
- <rdf:Description rdf:about="https://www.w3.org/ns/dcat#startDate"> 
+ <rdf:Description rdf:about="http://www.w3.org/ns/dcat#startDate"> 
   <vann:usageNote xml:lang="en">Recommended property. This property contains the start of the period.</vann:usageNote>
   <dct:identifier>dcat:startDate</dct:identifier>
   <rdfs:label xml:lang="en">Period Of Time - start date</rdfs:label>
@@ -1371,7 +1371,7 @@
  </rdf:Description>
  
 <!--  Period Of Time - end date (dcat 2)  -->
- <rdf:Description rdf:about="https://www.w3.org/ns/dcat#endDate"> 
+ <rdf:Description rdf:about="http://www.w3.org/ns/dcat#endDate"> 
   <vann:usageNote xml:lang="en">Recommended property. This property contains the end of the period.</vann:usageNote>
   <dct:identifier>dcat:endDate</dct:identifier>
   <rdfs:label xml:lang="en">Period Of Time - end date</rdfs:label>
@@ -1411,7 +1411,7 @@
  </rdf:Description>
 
  <!--  Location-  bounding box  (dcat 2)-->
- <rdf:Description rdf:about="https://www.w3.org/ns/dcat#bbox"> 
+ <rdf:Description rdf:about="http://www.w3.org/ns/dcat#bbox"> 
   <vann:usageNote xml:lang="en">Recommended property. This propert refers to the geographic bounding box of a resource.</vann:usageNote>
   <dct:identifier> dcat:bbox</dct:identifier>
   <rdfs:label xml:lang="en">Location - bounding box </rdfs:label>
@@ -1420,7 +1420,7 @@
  </rdf:Description>
 
  <!--  Location- centroid  (dcat 2)-->
- <rdf:Description rdf:about="https://www.w3.org/ns/dcat#centroid"> 
+ <rdf:Description rdf:about="http://www.w3.org/ns/dcat#centroid"> 
   <vann:usageNote xml:lang="en">Recommended property. This property refers to the geographic center (centroid) of a resource.</vann:usageNote>
   <dct:identifier>dcat:centroid</dct:identifier>
   <rdfs:label xml:lang="en">Location - centroid</rdfs:label>
@@ -1442,7 +1442,7 @@
  </rdf:Description>
 
  <!-- Relationship - had role  (dcat 2) -->
- <rdf:Description rdf:about="https://www.w3.org/ns/dcat#hadRole"> 
+ <rdf:Description rdf:about="http://www.w3.org/ns/dcat#hadRole"> 
   <vann:usageNote xml:lang="en">Mandatory property. The function of an entity or agent with respect to another entity or resource..</vann:usageNote>
   <dct:identifier>dcat:hadRole</dct:identifier>
   <rdfs:label xml:lang="en">Relationship - had role</rdfs:label>
