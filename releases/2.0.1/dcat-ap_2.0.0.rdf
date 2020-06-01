@@ -271,7 +271,7 @@
     </rdf:Description>
     
 <!-- adms:Identifier  -->
-    <rdf:Description rdf:about="https://www.w3.org/ns/adms#Identifier">
+    <rdf:Description rdf:about="http://www.w3.org/ns/adms#Identifier">
     	<vann:usageNote xml:lang="en">Optional class. An identifier in a particular context, consisting of the string that is the identifier; an optional identifier for the identifier scheme; an optional identifier for the version of the identifier scheme; an optional identifier for the agency that manages the identifier scheme</vann:usageNote>
     	<dct:identifier>adms:Identifier</dct:identifier>
     	<rdfs:label xml:lang="en">Identifier</rdfs:label>
