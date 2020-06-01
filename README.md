@@ -6,7 +6,7 @@ The DCAT Application profile for data portals in Europe (DCAT-AP) is a specifica
 
 The specification of the DCAT-AP was a joint initiative of DG CONNECT, the EU Publications Office and the ISA Programme. The specification was elaborated by a multi-disciplinary Working Group with representatives from 16 European Member States, some European Institutions and the US.
 
-The current version of DCAT-AP (v1.2) can be downloaded from https://joinup.ec.europa.eu/release/dcat-ap/12.
+The latest version of DCAT-AP (v2.0.1) can be downloaded from from the [releases](https://github.com/SEMICeu/DCAT-AP/releases) or via [JoinUp](https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe/release/200)
 
 Any problems encountered, or suggestions for new functionalities can be submitted as issues on the DCAT-AP repository on GitHub. A short guideline for submitting issues can be found at https://github.com/SEMICeu/DCAT-AP/wiki/Submission-guidelines.
 
@@ -16,4 +16,4 @@ Any problems encountered, or suggestions for new functionalities can be submitte
 
 ## Licence
 
-DCAT-AP releases are distributed under [ISA Open Metadata Licence v1.1](https://joinup.ec.europa.eu/licence/isa-open-metadata-licence-v11)
+DCAT-AP releases are distributed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
