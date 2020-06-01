@@ -128,7 +128,7 @@
       "@type": "@id"
     },
     "geometry": {
-      "@id": "https://www.w3.org/ns/locn#geometry",
+      "@id": "http://www.w3.org/ns/locn#geometry",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "beginning": {

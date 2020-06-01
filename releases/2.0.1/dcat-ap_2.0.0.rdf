@@ -1402,7 +1402,7 @@
 <!-- ====================================== --> 
 
 <!--  Location - geometry (dcat 2)-->
- <rdf:Description rdf:about="https://www.w3.org/ns/locn#geometry"> 
+ <rdf:Description rdf:about="http://www.w3.org/ns/locn#geometry"> 
   <vann:usageNote xml:lang="en">Optional property. This property associates any resource with the corresponding geometry.</vann:usageNote>
   <dct:identifier>locn:geometry </dct:identifier>
   <rdfs:label xml:lang="en">Location - geometry</rdfs:label>
