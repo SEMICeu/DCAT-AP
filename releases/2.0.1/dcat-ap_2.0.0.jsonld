@@ -250,7 +250,7 @@
       "@type": "@id"
     },
     "qualifiedAttribution": {
-      "@id": "https://www.w3.org/ns/prov#qualifiedAttribution",
+      "@id": "http://www.w3.org/ns/prov#qualifiedAttribution",
       "@type": "@id"
     },
     "qualifiedRelation": {
@@ -361,7 +361,7 @@
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "wasGeneratedBy": {
-      "@id": "https://www.w3.org/ns/prov#wasGeneratedBy",
+      "@id": "http://www.w3.org/ns/prov#wasGeneratedBy",
       "@type": "@id"
     }
 }
