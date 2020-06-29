@@ -57,7 +57,7 @@ The above example corresponds to the following RDF triples
 ```
 
 ### Identifying URI changes
-DCAT-AP 2.0.1 implements a URI change for the properties _startDate_ and _endDate_. To identify the existence of the old URIs in the catalogue, the SHACL rules in [dcat-ap_2.0.1_shacl_deprecateduris.ttl](https://github.com/SEMICeu/DCAT-AP/blob/master/releases/2.0.0/Draft/dcat-ap_2.0.1_shacl_deprecateduris.ttl) can be executed.  
+DCAT-AP 2.0.1 implements a URI change for the properties _startDate_ and _endDate_. To identify the existence of the old URIs in the catalogue, the SHACL rules in [dcat-ap_2.0.1_shacl_deprecateduris.ttl](https://github.com/SEMICeu/DCAT-AP/blob/master/releases/2.0.1/Draft/dcat-ap_2.0.1_shacl_deprecateduris.ttl) can be executed.  
 
 ### validating DCAT-AP
 To check whether a catalogue satisfies the DCAT-AP 2.0.1 specification the SHACL files can be used:
