@@ -1,14 +1,16 @@
-# DCAT-AP 2.0.0 release notes
+# DCAT-AP 2.0.1 release notes
 
-- Alignment with W3C DCAT 2.0 which introduces the ability to share data services.
-- In order to steer towards quality metadata descriptions, the implementation of a number of properties are recommended or made mandatory;
-- Removal of non-existing controlled vocabularies adms:change_type;
-- Addition of a new property dcatap:availability that indicates the planned availability of the distribution;
-- Coherency improvements on the specification and its distributions;
-- The alignment with W3C DCAT 2.0 resulted in the replacement of the URIs with respect to the last DCAT-AP release 1.2.1. Namely, for describing a Period of Time the DCAT native properties dcat:startDate and dcat:endDate will be used instead of schema:startDate or schema:endDate. A dedicated set of SHACL validation rules are provided in order to support catalogue’s owners in the [identification](https://github.com/SEMICeu/DCAT-AP/blob/master/releases/2.0.0/Draft/dcat-ap_2.0.0_shacl_deprecateduris.ttl) of the issue.
-- The supporting distributions, namely the common JSON-LD context and the SHACL templates are improved. To increase their reuse, the distributions are now released under the CC-BY 4.0 licence.
+This is a bugfix release. Only minor editorial changes have been applied.
 
-The complete list of addressed topics can be found in the [issue list, having the label release:2.0.0-november2019](https://github.com/SEMICeu/DCAT-AP/labels/release%3A2.0.0-november2019).
+- corrections to the prefix mappings
+- insert the reference to the recommendation URL of DCAT
+- fix the dcterms version to the version of 012-06-14, since a new release of dcterms has been done since nov 2019.
+- corrections to the shacl templates
+- small editorial changes
+- version bumping from 2.0.0 to 2.0.1
+
+
+The complete list of addressed topics can be found in the [issue list, having the label release:2.0.1-june2020 ](https://github.com/SEMICeu/DCAT-AP/labels/release%3A2.0.1-june2020).
 
 ## updates to supporting distributions
 ### JSON-LD
@@ -55,13 +57,14 @@ The above example corresponds to the following RDF triples
 ```
 
 ### Identifying URI changes
-DCAT-AP 2.0.0 implements a URI change for the properties _startDate_ and _endDate_. To identify the existence of the old URIs in the catalogue, the SHACL rules in [dcat-ap_2.0.0_shacl_deprecateduris.ttl](https://github.com/SEMICeu/DCAT-AP/blob/master/releases/2.0.0/Draft/dcat-ap_2.0.0_shacl_deprecateduris.ttl) can be executed.  
+DCAT-AP 2.0.1 implements a URI change for the properties _startDate_ and _endDate_. To identify the existence of the old URIs in the catalogue, the SHACL rules in [dcat-ap_2.0.1_shacl_deprecateduris.ttl](https://github.com/SEMICeu/DCAT-AP/blob/master/releases/2.0.0/Draft/dcat-ap_2.0.1_shacl_deprecateduris.ttl) can be executed.  
 
 ### validating DCAT-AP
-To check whether a catalogue satisfies the DCAT-AP 2.0.0 specification the SHACL files can be used:
-- [dcat-ap_2.0.0_shacl_shapes.ttl](https://github.com/SEMICeu/DCAT-AP/blob/master/releases/2.0.0/Draft/dcat-ap_2.0.0_shacl_shapes.ttl): constraints concerning existance, domain and range, and cardinalities.
-- [dcat-ap_2.0.0_shacl_mdr-vocabularies.shape.ttl](https://github.com/SEMICeu/DCAT-AP/blob/master/releases/2.0.0/Draft/dcat-ap_2.0.0_shacl_mdr-vocabularies.shape.ttl): constraints concerning the usage of controlled vocabularies
+To check whether a catalogue satisfies the DCAT-AP 2.0.1 specification the SHACL files can be used:
+- [dcat-ap_2.0.1_shacl_shapes.ttl](https://github.com/SEMICeu/DCAT-AP/blob/master/releases/2.0.1/Draft/dcat-ap_2.0.1_shacl_shapes.ttl): constraints concerning existance, domain and range, and cardinalities.
+- [dcat-ap_2.0.1_shacl_mdr-vocabularies.shape.ttl](https://github.com/SEMICeu/DCAT-AP/blob/master/releases/2.0.1/Draft/dcat-ap_2.0.1_shacl_mdr-vocabularies.shape.ttl): constraints concerning the usage of controlled vocabularies
 
 The first file provides for each class mentioned in DCAT-AP and having additional properties defined a template with the corresponding constraints. 
 In order to validate a catalogue additional data might be required to import into the validator, such as the controlled vocabularies. These have to be retrieved from the appropriate places.
 
+The shacl files are configured in this instance of the ISA testbed: https://www.itb.ec.europa.eu/shacl/dcat-ap/upload
