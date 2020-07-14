@@ -57,12 +57,12 @@ The above example corresponds to the following RDF triples
 ```
 
 ### Identifying URI changes
-DCAT-AP 2.0.1 implements a URI change for the properties _startDate_ and _endDate_. To identify the existence of the old URIs in the catalogue, the SHACL rules in [dcat-ap_2.0.1_shacl_deprecateduris.ttl](https://github.com/SEMICeu/DCAT-AP/blob/master/releases/2.0.1/Draft/dcat-ap_2.0.1_shacl_deprecateduris.ttl) can be executed.  
+DCAT-AP 2.0.1 implements a URI change for the properties _startDate_ and _endDate_. To identify the existence of the old URIs in the catalogue, the SHACL rules in [dcat-ap_2.0.1_shacl_deprecateduris.ttl](https://github.com/SEMICeu/DCAT-AP/blob/master/releases/2.0.1/dcat-ap_2.0.1_shacl_deprecateduris.ttl) can be executed.  
 
 ### validating DCAT-AP
 To check whether a catalogue satisfies the DCAT-AP 2.0.1 specification the SHACL files can be used:
-- [dcat-ap_2.0.1_shacl_shapes.ttl](https://github.com/SEMICeu/DCAT-AP/blob/master/releases/2.0.1/Draft/dcat-ap_2.0.1_shacl_shapes.ttl): constraints concerning existance, domain and range, and cardinalities.
-- [dcat-ap_2.0.1_shacl_mdr-vocabularies.shape.ttl](https://github.com/SEMICeu/DCAT-AP/blob/master/releases/2.0.1/Draft/dcat-ap_2.0.1_shacl_mdr-vocabularies.shape.ttl): constraints concerning the usage of controlled vocabularies
+- [dcat-ap_2.0.1_shacl_shapes.ttl](https://github.com/SEMICeu/DCAT-AP/blob/master/releases/2.0.1/dcat-ap_2.0.1_shacl_shapes.ttl): constraints concerning existance, domain and range, and cardinalities.
+- [dcat-ap_2.0.1_shacl_mdr-vocabularies.shape.ttl](https://github.com/SEMICeu/DCAT-AP/blob/master/releases/2.0.1/dcat-ap_2.0.1_shacl_mdr-vocabularies.shape.ttl): constraints concerning the usage of controlled vocabularies
 
 The first file provides for each class mentioned in DCAT-AP and having additional properties defined a template with the corresponding constraints. 
 In order to validate a catalogue additional data might be required to import into the validator, such as the controlled vocabularies. These have to be retrieved from the appropriate places.
