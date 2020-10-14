@@ -69,8 +69,8 @@ The first file provides for each class mentioned in DCAT-AP and having additiona
 
 In order to validate a catalogue additional data might be required to import into the validator, such as the controlled vocabularies. These have to be retrieved from the appropriate places.
 As support, the following files express the imports (not transitive) according to the SHACL specification, which can be loaded into the ISA testbed.
-- [dcat-ap_2.1.0_shacl_imports.ttl](): imports the vocabulary knowledge
-- [dcat-ap_2.1.0_shacl_mdr_imports.ttl](): imports the recommended codelists
+- [dcat-ap_2.1.0_shacl_imports.ttl](https://github.com/SEMICeu/DCAT-AP/blob/2.1.0-draft/releases/2.1.0/dcat-ap_2.1.0_shacl_imports.ttl): imports the vocabulary knowledge
+- [dcat-ap_2.1.0_shacl_mdr_imports.ttl](https://github.com/SEMICeu/DCAT-AP/blob/2.1.0-draft/releases/2.1.0/dcat-ap_2.1.0_shacl_mdr_imports.ttl): imports the recommended codelists
 
 
 The shacl files are configured in this instance of the ISA testbed: https://www.itb.ec.europa.eu/shacl/dcat-ap/upload
