@@ -406,11 +406,11 @@
     a sh:NodeShape ;
     sh:name "Relationship"@en ;
     sh:property [
-        sh:class dcat:Role ;
+        sh:node :DcatResource_Shape ;
         sh:path dct:relation ;
         sh:severity sh:Violation
     ], [
-        sh:node :DcatResource_Shape ;
+        sh:class dcat:Role ;
         sh:path dcat:hadRole ;
         sh:severity sh:Violation
     ] ;

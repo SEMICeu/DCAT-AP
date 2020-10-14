@@ -626,7 +626,6 @@
         sh:severity sh:Violation
     ], [
         sh:minCount 1 ;
-        sh:node :DcatResource_Shape ;
         sh:path dcat:hadRole ;
         sh:severity sh:Violation
     ] ;
