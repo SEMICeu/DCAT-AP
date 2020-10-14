@@ -16,7 +16,8 @@ It has 2 key input fields
     - content to validate: the file which will be validated 
     - external shapes: the background knowledge that this used to validate against. This consists of SHACL template files, but also of additional knowledge.
 
-The values to be provided to these input fields are downloadable machine processable URLs. Therefore one must use the _raw_ variants of the URLs pointing to the files. 
+The values to be provided to these input fields are downloadable machine processable URLs. Therefore one must use the _raw_ variants of the URLs pointing to the files. For the ISA testbed generic instance to work properly one should indicate that the input value is a URI and set the provided RDF serialization correct.  
+
 
 Each scenario will consists of a number of situations which will be constructed by inputting the described values.
 Each situation will differ from another situation by small changes in either a change in the content to validate or the provided external shapes. 
@@ -33,8 +34,8 @@ This scenario demonstrates the influence of the background knowledge.
 
 File example1.nt contains a coherent and DCAT-AP compliant dataset description
 
- - content to validate: example1.nt
- - external shapes: https://github.com/SEMICeu/DCAT-AP/blob/2.0.1-draft/releases/2.0.1/dcat-ap_2.0.1_shacl_shapes.ttl
+ - content to validate: https://github.com/SEMICeu/DCAT-AP/raw/2.1.0-draft/releases/2.1.0/examples/example1.nt
+ - external shapes: https://github.com/SEMICeu/DCAT-AP/raw/2.1.0-draft/releases/2.1.0/dcat-ap_2.1.0_shacl_shapes.ttl
 
 expected outcome: success, no errors
 ISA testbed result: success, no errors
@@ -44,8 +45,8 @@ ISA testbed result: success, no errors
 
 The file example2.nt is the same as example1.nt except that the publisher is now declared as an foaf:Organisation. 
 
- - content to validate: example2.nt
- - external shapes: https://github.com/SEMICeu/DCAT-AP/blob/2.0.1-draft/releases/2.0.1/dcat-ap_2.0.1_shacl_shapes.ttl
+ - content to validate: https://github.com/SEMICeu/DCAT-AP/raw/2.1.0-draft/releases/2.1.0/examples/example2.nt
+ - external shapes: https://github.com/SEMICeu/DCAT-AP/raw/2.1.0-draft/releases/2.1.0/dcat-ap_2.1.0_shacl_shapes.ttl
 
 expected outcome: success, no errors because one knows that foaf:Organisation is a foaf:Agent
 ISA testbed results: error, the publisher is not an foaf:Agent as expected by SHACL rules.
@@ -54,9 +55,9 @@ ISA testbed results: error, the publisher is not an foaf:Agent as expected by SH
 
 Test the same file example2.nt, but with additional extra information, namely the foaf vocabulary
 
- - content to validate: example2.nt
+ - content to validate: https://github.com/SEMICeu/DCAT-AP/raw/2.1.0-draft/releases/2.1.0/examples/example2.nt
  - external shapes: 
-    - https://github.com/SEMICeu/DCAT-AP/blob/2.0.1-draft/releases/2.0.1/dcat-ap_2.0.1_shacl_shapes.ttl
+    - https://github.com/SEMICeu/DCAT-AP/raw/2.1.0-draft/releases/2.1.0/dcat-ap_2.1.0_shacl_shapes.ttl
     - http://xmlns.com/foaf/spec/index.rdf
 
 expected outcome: success, no errors because one knows that foaf:Organisation is a foaf:Agent
