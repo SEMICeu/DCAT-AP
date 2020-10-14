@@ -35,7 +35,7 @@ This scenario demonstrates the influence of the background knowledge.
 File example1.nt contains a coherent and DCAT-AP compliant dataset description
 
  - content to validate: https://github.com/SEMICeu/DCAT-AP/raw/2.1.0-draft/releases/2.1.0/examples/example1.nt
- - external shapes: https://github.com/SEMICeu/DCAT-AP/raw/2.1.0-draft/releases/2.1.0/dcat-ap_2.1.0_shacl_shapes.ttl
+ - external shapes: https://github.com/SEMICeu/DCAT-AP/raw/2.1.0-draft/releases/2.0.1/dcat-ap_2.0.1_shacl_shapes.ttl
 
 expected outcome: success, no errors
 ISA testbed result: success, no errors
@@ -46,7 +46,7 @@ ISA testbed result: success, no errors
 The file example2.nt is the same as example1.nt except that the publisher is now declared as an foaf:Organisation. 
 
  - content to validate: https://github.com/SEMICeu/DCAT-AP/raw/2.1.0-draft/releases/2.1.0/examples/example2.nt
- - external shapes: https://github.com/SEMICeu/DCAT-AP/raw/2.1.0-draft/releases/2.1.0/dcat-ap_2.1.0_shacl_shapes.ttl
+ - external shapes: https://github.com/SEMICeu/DCAT-AP/raw/2.1.0-draft/releases/2.0.1/dcat-ap_2.0.1_shacl_shapes.ttl
 
 expected outcome: success, no errors because one knows that foaf:Organisation is a foaf:Agent
 ISA testbed results: error, the publisher is not an foaf:Agent as expected by SHACL rules.
@@ -58,6 +58,7 @@ Test the same file example2.nt, but with additional extra information, namely th
  - content to validate: https://github.com/SEMICeu/DCAT-AP/raw/2.1.0-draft/releases/2.1.0/examples/example2.nt
  - external shapes: 
     - https://github.com/SEMICeu/DCAT-AP/raw/2.1.0-draft/releases/2.1.0/dcat-ap_2.1.0_shacl_shapes.ttl
+    - https://github.com/SEMICeu/DCAT-AP/raw/2.1.0-draft/releases/2.0.1/dcat-ap_2.0.1_shacl_shapes.ttl
     - http://xmlns.com/foaf/spec/index.rdf
 
 expected outcome: success, no errors because one knows that foaf:Organisation is a foaf:Agent
