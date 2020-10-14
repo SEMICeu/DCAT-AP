@@ -1,0 +1,23 @@
+<https://creativecommons.org/publicdomain/zero/1.0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/LicenseDocument> .
+<https://myorg.eu/opendata/catalog> <http://purl.org/dc/terms/description> "This is an example catalog to demonstrate shacl validation"@en .
+<https://myorg.eu/opendata/catalog> <http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0/> .
+<https://myorg.eu/opendata/catalog> <http://purl.org/dc/terms/publisher> _:b0 .
+<https://myorg.eu/opendata/catalog> <http://purl.org/dc/terms/title> "Open Data Catalog of my organisation"@en .
+<https://myorg.eu/opendata/catalog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#Catalog> .
+<https://myorg.eu/opendata/catalog> <http://www.w3.org/ns/dcat#dataset> <https://myorg.eu/opendata/datasets/1> .
+<https://myorg.eu/opendata/datasets/1/distributions/csv> <http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0/> .
+<https://myorg.eu/opendata/datasets/1/distributions/csv> <http://purl.org/dc/terms/title> "The visitors to the Open Swimming Pool in CSV"@en .
+<https://myorg.eu/opendata/datasets/1/distributions/csv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#Distribution> .
+<https://myorg.eu/opendata/datasets/1/distributions/csv> <http://www.w3.org/ns/dcat#accessURL> <https://myorg.eu/opendata/datasets/1/distributions/csv> .
+<https://myorg.eu/opendata/datasets/1> <http://purl.org/dc/terms/description> "This dataset provides insight in the visitors to the Open Swimming Pool"@en .
+<https://myorg.eu/opendata/datasets/1> <http://purl.org/dc/terms/publisher> _:b1 .
+<https://myorg.eu/opendata/datasets/1> <http://purl.org/dc/terms/title> "visitors to the Open Swimming Pool"@en .
+<https://myorg.eu/opendata/datasets/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#Dataset> .
+<https://myorg.eu/opendata/datasets/1> <http://www.w3.org/ns/dcat#contactPoint> _:b2 .
+<https://myorg.eu/opendata/datasets/1> <http://www.w3.org/ns/dcat#distribution> <https://myorg.eu/opendata/datasets/1/distributions/csv> .
+_:b0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+_:b0 <http://xmlns.com/foaf/0.1/name> "myOrg"@en .
+_:b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+_:b1 <http://xmlns.com/foaf/0.1/name> "Publisher"@en .
+_:b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Kind> .
+_:b2 <http://www.w3.org/2006/vcard/ns#hasEmail> <mailto:opendata@myorg.eu> .
