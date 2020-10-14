@@ -1,0 +1,24 @@
+{
+  "@context": {
+    "description": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@container" : ["@set", "@language"]
+    },
+    "name": {
+      "@id": "http://xmlns.com/foaf/0.1/name",
+      "@container" : ["@set", "@language"]
+    },
+    "preferredLabel": {
+      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+      "@container" : ["@set", "@language"]
+    },
+    "title": {
+      "@id": "http://purl.org/dc/terms/title",
+      "@container" : ["@set", "@language"]
+    },
+    "versionNotes": {
+      "@id": "http://www.w3.org/ns/adms#versionNotes",
+      "@container" : ["@set", "@language"]
+    }
+}
+}
