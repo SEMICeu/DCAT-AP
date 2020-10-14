@@ -66,5 +66,5 @@ ISA testbed result: success, no errors
 
 ### Explanation
 The SHACL specification allows for take into the evaluation process background knowledge. Especially subclass relationships are supported. However only when this knowledge is available to the evaluation engine this knowledge will be taken into account. To understand the reason for an error one needs to know the configuration of the external shapes parameter. A validation service with the single parameter 'content to validate' must thus communicate to its users what is its used configuration in order to enable the user of that service to understand the error.
-A user providing data according to the example2.nt interpretation has a valid point that this interpretation should be considered an acceptable input. From the other perspective on the revieving side, the harvester might decide it is up to the provider to apply the subclass inference and provide the data according to the most abstract setting. The DCAT-AP specification does not provide a 
+A user providing data according to the example2.nt interpretation has a valid point that this interpretation should be considered an acceptable input. From the other perspective on the revieving side, the harvester might decide it is up to the provider to apply the subclass inference and provide the data according to the most abstract setting. 
 
