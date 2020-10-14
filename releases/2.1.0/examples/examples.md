@@ -1,4 +1,4 @@
-* Context
+# Context
 
 Exploiting and using SHACL in an operational context is not that obvious. The decisions taken can influence the outcome of the SHACL validation results from _accepted_ to _erroneous_. To guide these decisions this directory describes scenarios to illustrate various decision making points. 
 
@@ -7,7 +7,7 @@ Exploiting and using SHACL in an operational context is not that obvious. The de
 The example files in this directory are for illustration purposes only. They do not represent an existing dataset. 
 The copies of the existing vocabularies are also included for illustration purposes too. 
 
-** executing a demo scenario
+## executing a demo scenario
 
 The demo scenarios have been evaluated and tested with the ISA testbed generic instance. https://www.itb.ec.europa.eu/shacl/any/upload.
 This instance is a frontend to a barebone SHACL validation service. 
@@ -23,13 +23,13 @@ Each situation will differ from another situation by small changes in either a c
 
 
 
-* Scenarios
+# Scenarios
 
-** Scenario 1
+## Scenario 1
 
 This scenario demonstrates the influence of the background knowledge.
 
-*** situation 1
+### Situation 1
 
 File example1.nt contains a coherent and DCAT-AP compliant dataset description
 
@@ -40,7 +40,7 @@ expected outcome: success, no errors
 ISA testbed result: success, no errors
 
 
-** situation 2
+### Situation 2
 
 The file example2.nt is the same as example1.nt except that the publisher is now declared as an foaf:Organisation. 
 
@@ -50,7 +50,7 @@ The file example2.nt is the same as example1.nt except that the publisher is now
 expected outcome: success, no errors because one knows that foaf:Organisation is a foaf:Agent
 ISA testbed results: error, the publisher is not an foaf:Agent as expected by SHACL rules.
 
-** situation 3
+### Situation 3
 
 Test the same file example2.nt, but with additional extra information, namely the foaf vocabulary
 
@@ -62,7 +62,7 @@ Test the same file example2.nt, but with additional extra information, namely th
 expected outcome: success, no errors because one knows that foaf:Organisation is a foaf:Agent
 ISA testbed result: success, no errors
 
-** Explanation
+### Explanation
 The SHACL specification allows for take into the evaluation process background knowledge. Especially subclass relationships are supported. However only when this knowledge is available to the evaluation engine this knowledge will be taken into account. To understand the reason for an error one needs to know the configuration of the external shapes parameter. A validation service with the single parameter 'content to validate' must thus communicate to its users what is its used configuration in order to enable the user of that service to understand the error.
 A user providing data according to the example2.nt interpretation has a valid point that this interpretation should be considered an acceptable input. From the other perspective on the revieving side, the harvester might decide it is up to the provider to apply the subclass inference and provide the data according to the most abstract setting. The DCAT-AP specification does not provide a 
 
