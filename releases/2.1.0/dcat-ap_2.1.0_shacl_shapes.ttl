@@ -65,7 +65,7 @@
     dct:relation <https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe/release/200> ;
     dct:description "This document specifies the constraints on properties and classes expressed by DCAT-AP in SHACL."@en ;
     dct:title "The constraints of DCAT Application Profile for Data Portals in Europe"@en ;
-    owl:versionInfo "2.0.0" ;
+    owl:versionInfo "2.1.0" ;
     foaf:homepage <https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe/release/200> ;
     foaf:maker [
         foaf:mbox <mailto:contact@semic.eu> ;
@@ -76,8 +76,8 @@
 
 
 #-------------------------------------------------------------------------
-# The shapes in this file cover all classes in DCAT-AP 2.0.0.
-#
+# The shapes in this file cover all classes in DCAT-AP 2.1.0.
+# It covers all constraints that must be satisfied except those checking the ranges.
 # 
 #-------------------------------------------------------------------------
 
