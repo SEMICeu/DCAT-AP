@@ -67,6 +67,8 @@ To check whether a catalogue satisfies the DCAT-AP 2.0.1 specification the SHACL
 
 The first file provides for each class mentioned in DCAT-AP and having additional properties defined a template with the corresponding constraints. Class membership constraints are not present in the first fil. These are collected in the second file.  
 
+- [dcat-ap_2.1.0_shacl_shapes_recommended.ttl](https://github.com/SEMICeu/DCAT-AP/blob/2.1.0-draft/releases/2.1.0/dcat-ap_2.0.1_shacl_shapes_recommended.ttl): constraints concerning existance of recommended properties. 
+
 In order to validate a catalogue additional data might be required to import into the validator, such as the controlled vocabularies. These have to be retrieved from the appropriate places.
 As support, the following files express the imports (not transitive) according to the SHACL specification, which can be loaded into the ISA testbed.
 - [dcat-ap_2.1.0_shacl_imports.ttl](https://github.com/SEMICeu/DCAT-AP/blob/2.1.0-draft/releases/2.1.0/dcat-ap_2.1.0_shacl_imports.ttl): imports the vocabulary knowledge
