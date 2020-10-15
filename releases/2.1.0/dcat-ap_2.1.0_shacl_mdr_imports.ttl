@@ -5,6 +5,7 @@
 
 # 
 # This file provides the imports of the codelists recommended by the DCAT-AP application profile.
+#  http://publications.europa.eu/resource/authority/dataset-type (TODO)
 
 
 <http://data.europa.eu/r5r/codelist_imports>
