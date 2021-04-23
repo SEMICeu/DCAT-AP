@@ -189,7 +189,7 @@
         sh:severity sh:Violation
     ], [
         sh:class dct:LicenseDocument ;
-        sh:path dct:licence ;
+        sh:path dct:license ;
         sh:severity sh:Violation
     ], [
         sh:class dct:RightsStatement ;

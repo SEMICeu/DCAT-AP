@@ -284,7 +284,7 @@
         sh:severity sh:Violation
     ], [
         sh:maxCount 1 ;
-        sh:path dct:licence ;
+        sh:path dct:license ;
         sh:severity sh:Violation
     ], [
         sh:maxCount 1 ;
