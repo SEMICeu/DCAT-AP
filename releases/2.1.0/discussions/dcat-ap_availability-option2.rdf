@@ -1,0 +1,106 @@
+﻿<!-- =======================================    --> 
+<!-- Code List of availability levels: option 2 -->
+<!-- =======================================    --> 
+<?xml version="1.0"?>
+<!DOCTYPE rdf:RDF [
+    <!ENTITY dct "http://purl.org/dc/terms/" >
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY dcat "http://www.w3.org/ns/dcat#" >
+    <!ENTITY adms "http://www.w3.org/ns/adms#" >
+    <!ENTITY vann "http://purl.org/vocab/vann/" >
+    <!ENTITY xhv "http://www.w3.org/1999/xhtml/vocab#">
+    <!ENTITY cc "http://creativecommons.org/ns#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY vcard "http://www.w3.org/2006/vcard/ns#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY sdmx "http://purl.org/linked-data/sdmx#" >
+    <!ENTITY qb "http://purl.org/linked-data/cube#" >
+    <!ENTITY wdrs "http://www.w3.org/2007/05/powder-s#" >
+    <!ENTITY voaf "http://purl.org/vocommons/voaf#" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY skosDoc "http://www.w3.org/TR/skos-primer/">
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY documentation "http://data.europa.eu/w21/6be4d036-2e6d-4528-a888-0e9a0e29c579">
+    <!ENTITY documentationTitle "DCAT Application Profile for Data Portals in Europe - Final">
+    <!ENTITY methodology "https://joinup.ec.europa.eu/document/process-and-methodology-developing-core-vocabularies">
+    <!ENTITY methodologyTitle "Process and Methodology for Developing Core Vocabularies">
+    <!ENTITY spdx "http://spdx.org/rdf/terms#">
+]>
+<!-- About the application profile -->
+<rdf:RDF xmlns:cc="http://creativecommons.org/ns#"
+        xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:adms="http://www.w3.org/ns/adms#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+        xmlns:odrl="http://www.w3.org/ns/odrl/2/"
+        xmlns:owl="http://www.w3.org/2002/07/owl#"
+        xmlns:dcat="http://www.w3.org/ns/dcat#"
+        xmlns:lcon="http://www.w3.org/ns/locn#"
+    xmlns:sioc="http://rdfs.org/sioc/ns#"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+        xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:schema="http://schema.org/"
+    xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:voaf="http://purl.org/vocommons/voaf#"
+    xmlns:wdrs="http://www.w3.org/2007/05/powder-s#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+        xmlns:spdx="http://spdx.org/rdf/terms#"
+        xmlns:time="http://www.w3.org/2006/time#"
+        xmlns:dcatap="http://data.europa.eu/r5r/"
+    xmlns:xhv="&xhv;">
+
+<!-- ======================================= --> 
+<!-- Code List of availability levels -->
+<!-- ======================================= --> 
+
+  <owl:Ontology rdf:about="http://publications.europa.eu/resource/authority/distribution-availability">
+    <owl:versionInfo>1.0</owl:versionInfo>
+    <owl:versionIRI rdf:resource="http://publications.europa.eu/resource/authority/distribution-availability"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">List of availability levels.</rdfs:comment>
+  </owl:Ontology>
+
+ <!-- http://publications.europa.eu/resource/authority/distribution-availability/-->
+   <skos:ConceptScheme rdf:about="http://publications.europa.eu/resource/authority/distribution-availability">
+    <rdfs:label xml:lang="en">Distribution availability</rdfs:label>
+    <vann:usageNote xml:lang="en">The list of terms for the avalability levels of a dataset distribution  in the DCAT-AP  specification.</vann:usageNote>
+    <skos:prefLabel xml:lang="en">Distribution availability</skos:prefLabel>
+    <dct:identifier>http://publications.europa.eu/resource/authority/distribution-availability</dct:identifier>
+    <skos:hasTopConcept rdf:resource="http://publications.europa.eu/resource/authority/distribution-availability/temporary"/>
+    <skos:hasTopConcept rdf:resource="http://publications.europa.eu/resource/authority/distribution-availability/experimental"/>
+    <skos:hasTopConcept rdf:resource="http://publications.europa.eu/resource/authority/distribution-availability/available"/>
+    <skos:hasTopConcept rdf:resource="http://publications.europa.eu/resource/authority/distribution-availability/stable"/>
+  </skos:ConceptScheme>
+
+  <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/distribution-availability/temporary">
+    <dct:identifier>temporary</dct:identifier>
+    <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/distribution-availability"/>
+    <skos:prefLabel xml:lang="en">temporary</skos:prefLabel>
+    <skos:definition xml:lang="en">Data can disappear at any time, no planning.</skos:definition>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/distribution-availability/experimental">
+    <dct:identifier>experimental</dct:identifier>
+    <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/distribution-availability"/>
+    <skos:prefLabel xml:lang="en">experimental</skos:prefLabel>
+    <skos:definition xml:lang="en">Data is available for a few years, medium term planning.</skos:definition>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/distribution-availability/available">
+    <dct:identifier>available</dct:identifier>
+    <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/distribution-availability"/>
+    <skos:prefLabel xml:lang="en">available</skos:prefLabel>
+    <skos:definition xml:lang="en">Data is available for a few years, medium term planning.</skos:definition>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/distribution-availability/stable">
+    <dct:identifier>stable</dct:identifier>
+    <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/distribution-availability"/>
+    <skos:prefLabel xml:lang="en">stable</skos:prefLabel>
+    <skos:definition xml:lang="en">Data will remain available in the long term.</skos:definition>
+  </skos:Concept>
+
+
+</rdf:RDF>
