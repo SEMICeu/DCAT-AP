@@ -250,7 +250,7 @@
         sh:path spdx:algorithm ;
         sh:severity sh:Violation
     ], [
-        sh:dateTime xsd:hexBinary ;
+        sh:datatype xsd:hexBinary ;
         sh:maxCount 1 ;
         sh:minCount 1 ;
         sh:path spdx:checksumValue ;
