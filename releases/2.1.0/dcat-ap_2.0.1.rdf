@@ -1457,7 +1457,7 @@
 <!-- Property Definition: availability-->
   <rdf:Property rdf:about="http://data.europa.eu/r5r/availability">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
-    <rdfs:isDefinedBy rdf:resource="data.europa.eu/r5r/" />
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/r5r/" />
     <rdfs:label xml:lang="en">availability</rdfs:label>
     <rdfs:comment xml:lang="en">The knowledge organization system (KOS) used to classify Datase Distribution availability levels.</rdfs:comment>
     <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution" />
@@ -1468,7 +1468,7 @@
 <!-- Code List of availability levels -->
 <!-- ======================================= --> 
 
-  <owl:Ontology rdf:about="http://data.europa.eu/r5r/availability">
+   <owl:Ontology rdf:about="http://data.europa.eu/r5r/availability/1.0">
     <owl:versionInfo>1.0</owl:versionInfo>
     <owl:versionIRI rdf:resource="http://data.europa.eu/r5r/availability/1.0/"/>
     <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">List of availability levels.</rdfs:comment>
@@ -1493,21 +1493,21 @@
     <skos:definition xml:lang="en">Data can disappear at any time, no planning.</skos:definition>
   </skos:Concept>
 
-  <skos:Concept rdf:about="http://data.europa.eu/r5r/experimental">
+  <skos:Concept rdf:about="http://data.europa.eu/r5r/availability/experimental">
     <dct:identifier>experimental</dct:identifier>
     <skos:inScheme rdf:resource="http://data.europa.eu/r5r/availability/1.0"/>
     <skos:prefLabel xml:lang="en">experimental</skos:prefLabel>
     <skos:definition xml:lang="en">Data is available for a few years, medium term planning.</skos:definition>
   </skos:Concept>
 
-  <skos:Concept rdf:about="http://data.europa.eu/r5r/available">
+  <skos:Concept rdf:about="http://data.europa.eu/r5r/availability/available">
     <dct:identifier>available</dct:identifier>
     <skos:inScheme rdf:resource="http://data.europa.eu/r5r/availability/1.0"/>
     <skos:prefLabel xml:lang="en">available</skos:prefLabel>
     <skos:definition xml:lang="en">Data is available for a few years, medium term planning.</skos:definition>
   </skos:Concept>
 
-  <skos:Concept rdf:about="http://data.europa.eu/r5r/stable">
+  <skos:Concept rdf:about="http://data.europa.eu/r5r/availability/stable">
     <dct:identifier>stable</dct:identifier>
     <skos:inScheme rdf:resource="http://data.europa.eu/r5r/availability/1.0"/>
     <skos:prefLabel xml:lang="en">stable</skos:prefLabel>
