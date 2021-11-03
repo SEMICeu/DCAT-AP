@@ -1,4 +1,5 @@
 A second webinar on DCAT-AP took place on the 21st of October to reach consensus around the proposed resolutions for the issues considered in scope.
+
 The agenda of this webinar was the following:
 
 - Recap previous webinar 
