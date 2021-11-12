@@ -51,7 +51,7 @@
 
 <owl:Ontology rdf:about="https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe">
         <rdfs:label xml:lang="en">DCAT Application Profile for Data Portals in Europe</rdfs:label>
-        <dct:modified rdf:datatype="xsd:date">2019-11-15</dct:modified>
+        <dct:modified rdf:datatype="xsd:date">2021-12-01</dct:modified>
         <dct:abstract xml:lang="en">The DCAT Application profile for data portals in Europe (DCAT-AP) is a specification based on the Data Catalogue vocabulary (DCAT) for describing public sector datasets in Europe. Its basic use case is to enable a cross-data portal search for data sets and make public sector data better searchable across borders and sectors. This can be achieved by the exchange of descriptions of data sets among data portals.</dct:abstract>
         <cc:attributionName xml:lang="en">European Commission</cc:attributionName>
         <rdfs:comment xml:lang="en">This document specifies the set of RDF classes and properties used in the DCAT Application profile for data portals in Europe (DCAT-AP).</rdfs:comment>
@@ -1497,7 +1497,7 @@
     <dct:identifier>experimental</dct:identifier>
     <skos:inScheme rdf:resource="http://data.europa.eu/r5r/availability/1.0"/>
     <skos:prefLabel xml:lang="en">experimental</skos:prefLabel>
-    <skos:definition xml:lang="en">Data is available for a few years, medium term planning.</skos:definition>
+    <skos:definition xml:lang="en">Data is available on a trial basis, the expected availability is roughly a year.</skos:definition>
   </skos:Concept>
 
   <skos:Concept rdf:about="http://data.europa.eu/r5r/availability/available">
