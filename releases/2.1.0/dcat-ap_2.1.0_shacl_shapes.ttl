@@ -427,14 +427,20 @@
 
 :DateOrDateTimeDataType_Shape
     a sh:NodeShape ;
-    rdfs:comment "Date time date disjunction shape checks that a datatype property receives a date or a dateTime literal" ;
+    rdfs:comment "Date time date disjunction shape checks that a datatype property receives a temporal value: date, dateTime, gYear or gYearMonth literal" ;
     rdfs:label "Date time date disjunction" ;
-    sh:message "The values must be data typed as either xsd:date or xsd:dateTime" ;
+    sh:message "The values must be data typed as either xsd:date, xsd:dateTime, xsd:gYear or xsd:gYearMonth" ;
     sh:or ([
             sh:datatype xsd:date
         ]
         [
             sh:datatype xsd:dateTime
+        ]
+		[
+            sh:datatype xsd:gYear
+        ]
+		[
+            sh:datatype xsd:gYearMonth
         ]
     ) .
 
