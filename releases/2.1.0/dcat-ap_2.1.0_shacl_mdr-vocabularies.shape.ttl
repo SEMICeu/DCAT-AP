@@ -129,6 +129,16 @@
         sh:path skos:inScheme
     ] .
 
+:AccessRightRestriction
+    a sh:NodeShape ;
+    rdfs:comment "Access Rights Restriction" ;
+    rdfs:label "Data Theme Restriction" ;
+    sh:property [
+        sh:hasValue <http://publications.europa.eu/resource/authority/access-right> ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:path skos:inScheme
+    ] .
  
 :DatasetTypeRestriction
     a sh:NodeShape ;
@@ -336,13 +346,18 @@
         sh:path dcat:theme ;
 	sh:description "Multiple themes can be used but at least one concept of <http://publications.europa.eu/resource/authority/data-theme> should be present" ;
         sh:severity sh:Warning
-    ] ;
-	[
+    ], [
         sh:node :DatasetTypeRestriction ;
         sh:nodeKind sh:IRI ;
         sh:path dct:type ;
 	sh:description "Multiple types can be used but it is recommended to also provide at least one concept of <http://publications.europa.eu/resource/authority/dataset-type> should be present" ;
         sh:severity sh:Warning
+	], [
+        sh:node :AccessRightRestriction ;
+        sh:nodeKind sh:IRI ;
+        sh:path dct:accessRights ;
+		sh:description "A non EU managed concept is used to indicate the access right. If no corresponding can be found inform the maintainer of the EU language NAL" ;
+        sh:severity sh:Violation
     ] ;
     sh:targetClass dcat:Dataset.
 
@@ -378,6 +393,17 @@
         sh:severity sh:Violation
     ] ;
     sh:targetClass dcat:Distribution.
+
+:DataService_ShapeCV
+    a sh:NodeShape ;
+	sh:property [
+	    sh:node :AccessRightRestriction ;
+        sh:nodeKind sh:IRI ;
+        sh:path dct:accessRights ;
+		sh:description "A non EU managed concept is used to indicate the access right. If no corresponding can be found inform the maintainer of the EU language NAL" ;
+        sh:severity sh:Violation
+	] ; 
+	sh:targetClass dcat:Distribution.
 
 
 :Publisher_ShapeCV
