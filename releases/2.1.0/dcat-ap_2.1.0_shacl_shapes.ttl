@@ -189,7 +189,6 @@
         sh:path dcat:catalog ;
         sh:severity sh:Violation
     ], [
-        sh:maxCount 1 ;
         sh:path dct:creator ;
         sh:severity sh:Violation
     ], [
@@ -421,7 +420,6 @@
         sh:path dcat:spatialResolutionInMeters ;
         sh:severity sh:Violation
     ], [
-        sh:maxCount 1 ;
         sh:path dct:creator ;
         sh:severity sh:Violation
     ] ;
