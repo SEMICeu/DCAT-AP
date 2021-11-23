@@ -413,10 +413,12 @@
         sh:severity sh:Violation
     ], [
         sh:datatype xsd:duration ;
+		sh:maxCount 1 ;
         sh:path dcat:temporalResolution ;
         sh:severity sh:Violation
     ], [
         sh:datatype xsd:decimal ;
+		sh:maxCount 1 ;
         sh:path dcat:spatialResolutionInMeters ;
         sh:severity sh:Violation
     ], [
@@ -523,10 +525,12 @@
         sh:severity sh:Violation
     ], [
         sh:datatype xsd:duration ;
+		sh:maxCount 1 ;
         sh:path dcat:temporalResolution ;
         sh:severity sh:Violation
     ], [
         sh:datatype xsd:decimal ;
+		sh:maxCount 1 ;
         sh:path dcat:spatialResolutionInMeters ;
         sh:severity sh:Violation
     ], [
