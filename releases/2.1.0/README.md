@@ -25,4 +25,4 @@ As support, the following files express the imports (not transitive) according t
 
 The shacl files are configured in this instance of the ISA testbed: https://www.itb.ec.europa.eu/shacl/dcat-ap/upload
 
-
+If you would like to comment on the [Usage guide on Datasets, Distributions and Data Services](https://github.com/SEMICeu/DCAT-AP/blob/2.1.0-draft/releases/2.1.0/usageguide-dataset-distribution-dataservice.md), you can do so by adding a commit via this [link](https://github.com/SEMICeu/DCAT-AP/commit/d1bcb7937100b846527222737824ad37243ccd48).
