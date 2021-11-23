@@ -7,4 +7,4 @@ The agenda of this webinar was the following:
 - SHACL
 - Next steps
 
-The [slide deck](https://joinup.ec.europa.eu/sites/default/files/event/attachment/2021-11/DCAT-AP%20webinar%2021oct2021.pdf) and [recording](https://www.youtube.com/watch?v=Tgoqai86UJw) of the webinar are available.
+The [slide deck](https://joinup.ec.europa.eu/sites/default/files/event/attachment/2021-11/DCAT-AP%20webinar%2021oct2021.pdf), [meeting minutes](https://joinup.ec.europa.eu/sites/default/files/event/attachment/2021-11/DCAT-AP_Webinar%2021102021_MeetingMinutes_v1.00.pdf) and [recording](https://www.youtube.com/watch?v=Tgoqai86UJw) of the webinar are available.
