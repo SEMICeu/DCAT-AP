@@ -129,6 +129,19 @@
         sh:path skos:inScheme
     ] .
 
+ 
+:DatasetTypeRestriction
+    a sh:NodeShape ;
+    rdfs:comment "Dataset Type Restriction" ;
+    rdfs:label "Dataset Type Restriction" ;
+    sh:property [
+        sh:hasValue <http://publications.europa.eu/resource/authority/dataset-type> ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:path skos:inScheme
+    ] .	
+	
+
 :FileTypeRestriction
     a sh:NodeShape ;
     rdfs:comment "File Type Restriction" ;
@@ -307,6 +320,13 @@
         sh:nodeKind sh:IRI ;
         sh:path dcat:theme ;
 	sh:description "Multiple themes can be used but at least one concept of <http://publications.europa.eu/resource/authority/data-theme> should be present" ;
+        sh:severity sh:Warning
+    ] ;
+	[
+        sh:node :DatasetTypeRestriction ;
+        sh:nodeKind sh:IRI ;
+        sh:path dct:type ;
+	sh:description "Multiple types can be used but it is recommended to also provide at least one concept of <http://publications.europa.eu/resource/authority/dataset-type> should be present" ;
         sh:severity sh:Warning
     ] ;
     sh:targetClass dcat:Dataset.

@@ -374,7 +374,6 @@
         sh:path dct:source ;
         sh:severity sh:Violation
     ], [
-        sh:maxCount 1 ;
         sh:path dct:type ;
         sh:severity sh:Violation
     ], [
