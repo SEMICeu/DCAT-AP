@@ -233,6 +233,20 @@
         sh:path skos:inScheme
     ] .
 
+:ChecksumAlgorithmRestriction
+    a sh:NodeShape ;
+    rdfs:comment "Checksum algorithm restriction" ;
+    rdfs:label "Checksum algorithm restriction" ;
+	sh:class <http://spdx.org/rdf/terms#ChecksumAlgorithm>.
+
+:Checksum_ShapeCV
+    a sh:NodeShape ;
+    sh:property [
+        sh:node :ChecksumAlgorithmRestriction ;
+        sh:nodeKind sh:IRI ;
+        sh:path spdx:algorithm
+    ] ;
+    sh:targetClass spdx:Checksum.
 
 :LicenseDocument_ShapeCV
     a sh:NodeShape ;
@@ -242,6 +256,7 @@
         sh:path dct:type
     ] ;
     sh:targetClass dct:LicenseDocument.
+
 
 
 :Catalog_ShapeCV
