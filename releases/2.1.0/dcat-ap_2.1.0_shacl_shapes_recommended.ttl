@@ -143,7 +143,25 @@
         sh:path foaf:homepage ;
         sh:severity sh:Warning
     ] ;
+	sh:targetClass dcat:Catalog .
+	
+:Catalog_Shape2
+    a sh:NodeShape ;
+    sh:name "Catalog"@en ;
+    sh:or (
+		[
+			sh:path dcat:dataset ;
+			sh:minCount 1 ;
+		]
+		[
+			sh:path dcat:service ;
+			sh:minCount 1 ;
+		]
+	) ;
+    sh:severity sh:Warning;	
     sh:targetClass dcat:Catalog .
+
+
 
 :CategoryScheme_Shape
     a sh:NodeShape ;
