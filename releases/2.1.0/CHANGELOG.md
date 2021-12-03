@@ -2,7 +2,11 @@
 
 The complete list of all issues that resulted in some change are found at https://github.com/SEMICeu/DCAT-AP/labels/release%3A2.1.0-dec2021.  The discussions and interaction that have led to these changes can be found in the meeting minutes of the webinars, and in the github issues. The list below summarizes the applied changes.  
 
-## issues that are included 
+Webinars:
+  - https://github.com/SEMICeu/DCAT-AP/tree/master/Webinars/15-Sept-2021
+  - https://github.com/SEMICeu/DCAT-AP/tree/master/Webinars/21-Oct-2021
+
+## Included issues 
 
 - profile management:
    - https://github.com/SEMICeu/DCAT-AP/issues/194
@@ -83,15 +87,15 @@ explicitly  is  listed    DCAT-AP  is  considered  an  optional field for DCAT-A
    - https://github.com/SEMICeu/DCAT-AP/issues/147 : fix range in SHACL for checksum_shape
    - https://github.com/SEMICeu/DCAT-AP/issues/134 : skos:notation for class Identifier is declared mandatory, and thus min-cardinality must be 1
    
-## Issues that are included in this specification that have not resulted to a change
+## Issues that were discussed as part of the release 2.1.0 that have not resulted to a change
 
+### specific requests
 - https://github.com/SEMICeu/DCAT-AP/issues/184: no qualification adaptation for dct:format & dct:mediaType   
 - https://github.com/SEMICeu/DCAT-AP/issues/202: no adoption of distribution type NAL as recommended controlled vocabulary   
 - https://github.com/SEMICeu/DCAT-AP/issues/174: no introduction of the inverse property for foaf:primaryTopic 
 - https://github.com/SEMICeu/DCAT-AP/issues/157: no change in the cardinality constraints for dct:ispPartOf for a Catalogue
 - https://github.com/SEMICeu/DCAT-AP/issues/97: no change in the qualification for dct:rights and dct:license.
 - https://github.com/SEMICeu/DCAT-AP/issues/96: no change in the qualification for dct:rights and dct:license.
-
 
 ### adapting shacl expressions for DCAT-AP 1.2.1:
    - https://github.com/SEMICeu/DCAT-AP/issues/120
@@ -103,3 +107,6 @@ explicitly  is  listed    DCAT-AP  is  considered  an  optional field for DCAT-A
    
    It has been decided to not retrofit the changes to DCAT-AP 1.2.1, but to continue and further improve them in the new version. 
    Since DCAT-AP 2.1.0 is backward compatible (to a large extend), the SHACL constraints of 2.1.0 are thus mostly backward compatible.
+
+## Additional issues that were closed as part of issue processing for release 2.1.0  
+As part of the release 2.1.0 additional issues where closed. These contain announcements, questions, requests for advice.
