@@ -1,11 +1,16 @@
-# DCAT-AP 2.1.0 release notes
+# DCAT-AP 2.1.0 
 
+This release addresses the topics registered as a github issue and discussed during the webinars:
+  - https://github.com/SEMICeu/DCAT-AP/tree/master/Webinars/15-Sept-2021
+  - https://github.com/SEMICeu/DCAT-AP/tree/master/Webinars/21-Oct-2021
 
-## updates to supporting distributions
+Besides editorial fixes and small concrete requests (such as lifting a cardinality), this release mainly improves the readability of the specification as a profile from DCAT and provides guidelines for Datasets, Distributions and Data Services. 
 
-### new diagram
+# Changelog
+The [Changelog](CHANGELOG.md) documents in detail the changes performed for the release 2.1.0. 
 
-### JSON-LD
+# Guidelines for Datasets, Distributions and Data Services.
+The [usage guide on Datasets, Distributions and Data Services](usageguide-dataset-distribution-dataservice.md) provides a common interpretation for the treatment of Datasets, Distributions and Data Services.
 
 ### validating DCAT-AP
 To check whether a catalogue satisfies the DCAT-AP 2.0.1 specification the SHACL files can be used:
@@ -22,7 +27,6 @@ As support, the following files express the imports (not transitive) according t
 - [dcat-ap_2.1.0_shacl_imports.ttl](https://github.com/SEMICeu/DCAT-AP/blob/2.1.0-draft/releases/2.1.0/dcat-ap_2.1.0_shacl_imports.ttl): imports the vocabulary knowledge
 - [dcat-ap_2.1.0_shacl_mdr_imports.ttl](https://github.com/SEMICeu/DCAT-AP/blob/2.1.0-draft/releases/2.1.0/dcat-ap_2.1.0_shacl_mdr_imports.ttl): imports the recommended codelists
 
+The shacl files are configured in this instance of the ISA testbed: https://www.itb.ec.europa.eu/shacl/dcat-ap/upload. More information about the configured validation profiles is https://github.com/ISAITB/validator-resources-dcat-ap. 
 
-The shacl files are configured in this instance of the ISA testbed: https://www.itb.ec.europa.eu/shacl/dcat-ap/upload
 
-To comment on the [Usage guide on Datasets, Distributions and Data Services](https://github.com/SEMICeu/DCAT-AP/blob/2.1.0-draft/releases/2.1.0/usageguide-dataset-distribution-dataservice.md), please add a commit via this [link](https://github.com/SEMICeu/DCAT-AP/commit/d1bcb7937100b846527222737824ad37243ccd48).
