@@ -60,7 +60,7 @@
     ] ;
     dct:license <https://creativecommons.org/licenses/by/4.0> ;
     cc:attributionURL <http://ec.europa.eu/> ;
-    dct:modified "2020-07-15"^^xsd:date ;
+    dct:modified "2021-12-01"^^xsd:date ;
     dct:publisher <http://publications.europa.eu/resource/authority/corporate-body/DIGIT> ;
     dct:relation <https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe/release/210> ;
     dct:description "This document specifies the range constraints for object properties by DCAT-AP in SHACL."@en ;

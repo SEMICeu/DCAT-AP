@@ -60,12 +60,12 @@
     ] ;
     dct:license <https://creativecommons.org/licenses/by/4.0> ;
     cc:attributionURL <http://ec.europa.eu/> ;
-    dct:modified "2019-11-15"^^xsd:date ;
+    dct:modified "2021-12-01"^^xsd:date ;
     dct:publisher <http://publications.europa.eu/resource/authority/corporate-body/DIGIT> ;
     dct:relation <https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe/release/200> ;
     dct:description "This document specifies the constraints on properties and classes expressed by DCAT-AP in SHACL."@en ;
     dct:title "The constraints of DCAT Application Profile for Data Portals in Europe"@en ;
-    owl:versionInfo "2.0.0" ;
+    owl:versionInfo "2.1.0" ;
     foaf:homepage <https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe/release/200> ;
     foaf:maker [
         foaf:mbox <mailto:contact@semic.eu> ;

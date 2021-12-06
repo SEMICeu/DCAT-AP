@@ -55,7 +55,7 @@
         <dct:abstract xml:lang="en">The DCAT Application profile for data portals in Europe (DCAT-AP) is a specification based on the Data Catalogue vocabulary (DCAT) for describing public sector datasets in Europe. Its basic use case is to enable a cross-data portal search for data sets and make public sector data better searchable across borders and sectors. This can be achieved by the exchange of descriptions of data sets among data portals.</dct:abstract>
         <cc:attributionName xml:lang="en">European Commission</cc:attributionName>
         <rdfs:comment xml:lang="en">This document specifies the set of RDF classes and properties used in the DCAT Application profile for data portals in Europe (DCAT-AP).</rdfs:comment>
-        <owl:versionInfo>2.0.0</owl:versionInfo>
+        <owl:versionInfo>2.1.0</owl:versionInfo>
         <dct:publisher rdf:resource="http://publications.europa.eu/resource/authority/corporate-body/DIGIT"/>
         <cc:attributionURL rdf:resource="http://ec.europa.eu/"/>
     <adms:versionNotes xml:lang="en">Change log for DCAT-AP v2.1.0: see github</adms:versionNotes>
