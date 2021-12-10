@@ -79,7 +79,7 @@
     rdfs:comment "Availability restriction" ;
     rdfs:label "Availability restriction" ;
     sh:property [
-        sh:hasValue <http://data.europa.eu/r5r/availability/1.0> ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/planned-availability> ;
         sh:minCount 1 ;
         sh:nodeKind sh:IRI ;
         sh:path skos:inScheme

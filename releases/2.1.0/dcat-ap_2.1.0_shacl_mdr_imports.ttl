@@ -21,6 +21,7 @@
   owl:imports <http://publications.europa.eu/resource/authority/frequency> ;
   owl:imports <https://github.com/SEMICeu/ADMS-AP/raw/master/purl.org/ADMS_SKOS_v1.00.rdf> ; 
   owl:imports <http://publications.europa.eu/resource/authority/place> ;
+  owl:imports <http://publications.europa.eu/resource/authority/planned-availability> ;
   owl:imports <http://publications.europa.eu/resource/authority/access-right>
 .
 
