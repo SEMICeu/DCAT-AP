@@ -63,11 +63,11 @@
     cc:attributionURL <http://ec.europa.eu/> ;
     dct:modified "2021-12-01"^^xsd:date ;
     dct:publisher <http://publications.europa.eu/resource/authority/corporate-body/DIGIT> ;
-    dct:relation <https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe/release/200> ;
+    dct:relation <https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/210> ;
     dct:description "This document specifies the controlled vocabulary constraints on properties expressed by DCAT-AP in SHACL."@en ;
     dct:title "Controlled Vocabulary Constraints of DCAT Application Profile for Data Portals in Europe"@en ;
     owl:versionInfo "2.1.0" ;
-    foaf:homepage <https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe/release/200> ;
+    foaf:homepage <https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/210> ;
     foaf:maker [
         foaf:mbox <mailto:contact@semic.eu> ;
         foaf:name "DCAT-AP Working Group" ;

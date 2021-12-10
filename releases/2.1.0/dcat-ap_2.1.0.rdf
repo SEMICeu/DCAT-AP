@@ -58,8 +58,8 @@
         <owl:versionInfo>2.1.0</owl:versionInfo>
         <dct:publisher rdf:resource="http://publications.europa.eu/resource/authority/corporate-body/DIGIT"/>
         <cc:attributionURL rdf:resource="http://ec.europa.eu/"/>
-    <adms:versionNotes xml:lang="en">Change log for DCAT-AP v2.1.0: see github</adms:versionNotes>
-        <xhv:prev rdf:resource="https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe/release/200"/>
+	<adms:versionNotes xml:lang="en">Change log for DCAT-AP v2.1.0: see github</adms:versionNotes>
+        <xhv:prev rdf:resource="https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/210"/>
         <wdrs:describedby rdf:resource="http://data.europa.eu/w21/6be4d036-2e6d-4528-a888-0e9a0e29c579"/>
         <voaf:specializes rdf:resource="http://www.w3.org/ns/dcat#"/>
         <dct:relation rdf:resource="http://data.europa.eu/w21/6be4d036-2e6d-4528-a888-0e9a0e29c579"/>
@@ -127,7 +127,7 @@
         <foaf:maker rdf:parseType="Resource">
           <foaf:name>DCAT-AP Working Group</foaf:name>
           <foaf:page rdf:resource="https://github.com/SEMICeu/DCAT-AP"/>
-              <foaf:page rdf:resource="https://joinup.ec.europa.eu/node/64331"/>
+              <foaf:page rdf:resource="https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe"/>
         </foaf:maker>
     </owl:Ontology>
 
