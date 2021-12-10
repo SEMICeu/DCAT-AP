@@ -19,7 +19,7 @@
   owl:imports <http://publications.europa.eu/resource/authority/data-theme> ;
   owl:imports <http://publications.europa.eu/resource/authority/file-type> ;
   owl:imports <http://publications.europa.eu/resource/authority/frequency> ;
-  owl:imports <https://joinup.ec.europa.eu/svn/adms/ADMS_v1.00/ADMS_SKOS_v1.00.rdf> ; 
+  owl:imports <https://github.com/SEMICeu/ADMS-AP/raw/master/purl.org/ADMS_SKOS_v1.00.rdf> ; 
   owl:imports <http://publications.europa.eu/resource/authority/place> ;
   owl:imports <http://publications.europa.eu/resource/authority/access-right>
 .
