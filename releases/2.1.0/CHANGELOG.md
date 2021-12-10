@@ -87,7 +87,7 @@ explicitly  is  listed    DCAT-AP  is  considered  an  optional field for DCAT-A
    - https://github.com/SEMICeu/DCAT-AP/issues/147 : fix range in SHACL for checksum_shape
    - https://github.com/SEMICeu/DCAT-AP/issues/134 : skos:notation for class Identifier is declared mandatory, and thus min-cardinality must be 1
    
-## Issues that were discussed as part of the release 2.1.0 that have not resulted to a change
+## Issues that were discussed as part of the release 2.1.0 that have not resulted in a change
 
 ### specific requests
 - https://github.com/SEMICeu/DCAT-AP/issues/184: no qualification adaptation for dct:format & dct:mediaType   
