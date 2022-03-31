@@ -346,7 +346,7 @@
 :DataService_Property_dcat:endpointDescription
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path dcat:endpointDescription ;
-    sh:severity sh:Violation
+    sh:severity sh:Violation .
 
 :DataService_Property_dct_license
     sh:maxCount 1 ;
