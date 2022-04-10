@@ -361,7 +361,7 @@
 :DataService_Shape
     a sh:NodeShape ;
     sh:name "Data Service"@en ;
-    sh:property :DataService_Property_dcat:endpointDescription ;
+    sh:property :DataService_Property_dcat_endpointDescription ;
     sh:property :DataService_Property_dcat_endpointURL ;
     sh:property :DataService_Property_dcat_servesDataset ;
     sh:property :DataService_Property_dct_accessRights ;
