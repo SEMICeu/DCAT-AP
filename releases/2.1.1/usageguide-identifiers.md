@@ -146,9 +146,216 @@ It relies on sharing detailed metadata in the catalogue network.
 
 ## Example scenarios
 
-This section illustrates the above guidelines.
+This section illustrates the above guidelines. 
+
+All examples are expressed in RDF serialization turtle notation. 
+
+### Example Proposal 1 
 
 
+
+Invalid cases. The examples only show the identifier properties. The absence of an identifier property means this value has not been provided.
+```
+ex:cat1 a dcat:Catalog.
+ex:cat1 dcat:dataset [
+
+   # no adms:identifier present
+   ex:cat1-d1 a dcat:Dataset;
+              dct:identifier "Dataset 1",
+
+   ex:cat1-d2 a dcat:Dataset;
+              dct:identifier "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d",
+
+   ex:cat1-d3 a dcat:Dataset;
+              dct:identifier "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f",
+    
+   ex:cat1-d4 a dcat:Dataset,
+      
+   ex:cat1-d5 a dcat:Dataset;
+              dct:identifier "ex:cat1-d5",
+              
+   [] a dcat:dataset;
+      dct:identifier "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d",
+      
+   [] a dcat:dataset;
+      dct:identifier "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f",
+      
+   [] a dcat:dataset, # today this situation is possible,
+   
+   # adms:identifier present, but not complete
+   [] a dcat:dataset;
+         dct:identifier "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f",
+         adms:identifier [
+            [] skos:notation "Dataset 1";
+               dct:creator ex:org1
+            ]
+   
+   ex:cat1-d10 a dcat:Dataset;
+         dct:identifier "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d",
+          adms:identifier [
+            [] skos:notation "Dataset 1";
+               dct:creator ex:org1
+            ]  
+            
+    ex:cat1-d11 a dcat:Dataset;
+         dct:identifier "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d",
+          adms:identifier [
+            [] skos:notation "Dataset 1";
+                dct:creator ex:org1,
+                
+            [] skos:notation "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d";
+                dct:creator ex:inspire,
+                
+            ]   
+            
+     ex:cat1-d12 a dcat:Dataset;
+         dct:identifier "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d",
+          adms:identifier [
+                 
+            [] skos:notation "ex:cat1-d12";
+                dct:creator ex:cat1
+                
+            ]   
+]
+
+```
+
+valid situations for the above incorrect situations
+
+```
+ex:cat1 a dcat:Catalog.
+ex:cat1 dcat:dataset [
+
+   # no adms:identifier present
+   ex:cat1-d1 a dcat:Dataset;
+              dct:identifier "Dataset 1";
+              adms:identifier [
+                [] skos:notation "ex:cat1-d1";
+                dct:creator ex:cat1,
+                
+                [] skos:notation "Dataset1";
+                dct:creator ex:org1,
+                
+              ],
+
+   ex:cat1-d2 a dcat:Dataset;
+              dct:identifier "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d";
+              adms:identifier [
+                [] skos:notation "ex:cat1-d2";
+                dct:creator ex:cat1,
+                
+                [] skos:notation "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d";
+                dct:creator ex:org1,
+                
+              ]
+
+   ex:cat1-d3 a dcat:Dataset;
+              dct:identifier "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f",
+              adms:identifier [
+                [] skos:notation "ex:cat1-d3";
+                dct:creator ex:cat1,
+                
+                [] skos:notation "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f";
+                dct:creator ex:org1,
+                
+              ]
+              
+   ex:cat1-d4 a dcat:Dataset;
+             adms:identifier [
+                [] skos:notation "ex:cat1-d4";
+                dct:creator ex:cat1
+                               
+              ]
+      
+   ex:cat1-d5 a dcat:Dataset;
+              dct:identifier "ex:cat1-d5";
+              adms:identifier [
+                [] skos:notation "ex:cat1-d5";
+                dct:creator ex:cat1
+                               
+              ]
+              
+              
+   [] a dcat:dataset;
+      dct:identifier "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d";
+      adms:identifier [
+                          
+                [] skos:notation "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d";
+                dct:creator ex:org1,
+                
+              ]
+      
+   [] a dcat:dataset;
+      dct:identifier "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f",
+      adms:identifier [
+                             
+                [] skos:notation "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f";
+                dct:creator ex:org1,
+                
+              ]
+              
+   [] a dcat:dataset, 
+       # this becomes virtually impossible, as only the owner of a dataset could provide that case.
+       
+   
+   # adms:identifier present, but not complete
+   [] a dcat:dataset;
+         dct:identifier "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f",
+         adms:identifier [
+            [] skos:notation "Dataset 1";
+               dct:creator ex:org1,
+               
+               [] skos:notation "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f";
+               dct:creator ex:org1
+            ]
+   
+   ex:cat1-d10 a dcat:Dataset;
+         dct:identifier "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d",
+          adms:identifier [
+            [] skos:notation "Dataset 1";
+               dct:creator ex:org1,
+               
+            [] skos:notation "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d";
+               dct:creator ex:inspire
+               
+            [] skos:notation "ex:cat-d10";
+                dct:creator ex:cat1,     
+            ]  
+            
+    ex:cat1-d11 a dcat:Dataset;
+         dct:identifier "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d",
+          adms:identifier [
+            [] skos:notation "Dataset 1";
+                dct:creator ex:org1,
+                
+            [] skos:notation "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d";
+                dct:creator ex:inspire,
+               
+             [] skos:notation "ex:cat-d11";
+                dct:creator ex:cat1,   
+               
+            ]   
+            
+     ex:cat1-d12 a dcat:Dataset;
+         dct:identifier "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d",
+          adms:identifier [
+             [] skos:notation "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d";
+                dct:creator ex:inspire,
+                 
+            [] skos:notation "ex:cat1-d12";
+                dct:creator ex:cat1
+                
+            ]   
+]
+
+```
+
+
+### Example Proposal 2
+
+
+
+### harvesting scenarios
 
 Catalogue source 1: `ex:cat1`
 
