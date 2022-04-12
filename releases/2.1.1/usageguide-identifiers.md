@@ -7,9 +7,7 @@ But besides highlighting that identifiers should be qualityful (e.g. by followin
 
 This provides individual catalogue implementors with a lot of freedom. But it makes the usage harder. Harvesters which aggregate content from different sources face different interpretations. Data researchers that browse two data portals also have to adapt to the differences.
 
-The following guidelines are proposed to clarify 
-
-These guidelines are proposed with as main objective to support the reuse of datasets and data services throughout the catalogue network.
+These guidelines are proposed with as main objective to support the reuse of datasets and data services throughout the catalogue network. 
 
 
 ### Problem case
@@ -26,11 +24,11 @@ The alternative `adms:identifier` which provides metadata about an identifier, e
 The DCAT-AP specification hints that these are *other identifiers*, additional secondary identifiers.  
 
 Thirdly there are the RDF URIs. As many data catalogues exchange the catalogue content in RDF format, the datasets might get a URI assigned. 
-This identifier may or may not included by the catalogue also as `dct:identifier` or `adms:identifier`. 
+This identifier may or may not included by the catalogue as `dct:identifier` or `adms:identifier`. 
 
 ### Application use case 1
 
-Deciding whether two datasets are the same based on the identifying information provided is thus a complicated algorithm, of which the success is uncertain. 
+Deciding whether two datasets are the same based on the identifying information provided today is thus a complicated algorithm, of which the success is uncertain. 
 
 ### Application use case 2
 
@@ -42,7 +40,8 @@ The catalogue network is a (virtual) network of interconnected catalogues which 
 
 From the above the second is today the most frequent occurring case.
 
-It is incorrect to assume that the catalogue network is a tree of disjoint catalogues. 
+Although one may assume it, it is incorrect to consider the catalogue network as a tree of disjoint catalogues. 
+That is not today's practice.   
 This means that the same dataset may reach a catalogue throughout different routes in the network.
 When this happens the identifying information should be supportive to detect this. 
 Today the DCAT-AP specification and implementations do not guarantee that detecting this is simple and can be done with minimal effort.
@@ -58,21 +57,29 @@ The second part expresses a longer term vision, which is shared by the community
 
 ### Proposal 1 - share metadata on identifiers
 
-In short, the proposal is enlarge the use of `adms:identifier` not only for secondary identifiers, but for all identifiers assigned to the dataset throughout processing and sharing of that dataset in the catalogue network. 
+In short, the proposal is enlarge the use of `adms:identifier` not only for secondary identifiers, but for all identifiers assigned to the dataset throughout processing and sharing of that dataset in the catalogue network.
+
+This is augmented with the processing advice that an aggregator should create additional adms:identifier properties for any identifiers received from dataset publishers and any identifiers created by the aggregator, with metadata as proposed in this proposal.
+
 
 
 For a Dataset(*1)
 
 |Property        | URI           | Range   | Cardinality | definition | Usage Note |
 |----------------|---------------|---------|-------------|------------|------------|
-|identifier | adms:identifier | adms:Identifier | 0..n | described identifier for the Dataset | each identifier a catalogue or a process assigns and which is publicly accessible (e.g. via a data portal) should be included |
+|identifier | adms:identifier | adms:Identifier | 0..n  (*3)| described identifier for the Dataset | Each identifier a catalogue or a process assigns and which is publicly accessible (e.g. via a data portal) should be included.  |
+
+On the completeness:
+   - the value of `dct:identifier` should be included
+   - the RDF URI should be included
+   - on harvesting, the aggregator should never loose identifier information so if the RDF URI is changed, or dct:identifier value is changed during harvesting the original identifiers along the new identifiers should be part of the `adms:identifier` list. 
 
 To ensure that the meta information about the identifier is not solely the identifier value, 
 the proposal also includes additional requirements for [adms:Identifier](https://www.w3.org/TR/vocab-adms/#identifier).
 
 |Property        | URI           | Range   | Cardinality | definition | Usage Note |
 |----------------|---------------|---------|-------------|------------|------------|
-|notation        | skos:notation | Literal | 1..1        | 
+|notation        | skos:notation | Literal | 1..1        | content string which is the identifier| |
 |schema manager name  | adms:schemaAgency | Literal | 1..1 | the name of the agency that manages the identifier scheme | (*2) |
 |schema manager agent | dct:creator | foaf:Agent | 1..1 | the agency that manages the identifier scheme | (*2) |
 
@@ -84,13 +91,22 @@ _Open Discussion_
 
 (*2) at least one of the forms should be present. Either by making one property mandatory or by making the union mandatory.
 
+(*3) The minimum cardinality will be defacto 1 since managing a dataset without any identifier in a catalogue would be a rarity.  
+
 _CHANGELOG_
 
 - label change: "other identifier" -> "identifier"
 - usage note change: "This property refers to a secondary identifier of the Dataset" -> "described identifier for the Dataset"
-- 
 
 ### Proposal 2 - main identifier
+
+The motivation for this change is not only to clarify the meaning of the word _main_ in the label, but also that `adms:identifier` does not express a preference of use. 
+Any Identifier is as good as any other to support the identification of the dataset. 
+Without this knowledge, data portals cannot suggest data reseachers which identifier to use. 
+
+This proposal fixes the one who decides the preference, namely the owner or first publisher of that dataset. 
+This is a shift in the usage semantics as it now stresses the word _main_ in the label in the context of the whole metadata of the dataset, rather than the main in the usage context of a catalogue (which varies from catalogue to catalogue).      
+
 
 For a Dataset(*1)
 
@@ -98,20 +114,41 @@ For a Dataset(*1)
 |----------------|---------------|---------|-------------|------------|------------|
 |main identifier | dct:identifier| Literal | 0..1        | The main identifier for the Dataset | the value is assigned by the owner/publisher of the Dataset |
 
-If the _main identifier_ has a value, the full description is also part of the identifiers (adms:identifier).
+It is strongly recommended that owners and the orinal publishers of the datasets consider the use persistent identifiers for this. 
 
-*Harvesting guidelines*
+_CHANGELOG_
+- usage note change: "This property contains the main identifier for the Dataset, e.g. the URI or other unique identifier in the context of the Catalogue." -> "the value is assigned by the owner/publisher of the Dataset"
+- max cardinality: n -> 1
 
-When the services on a catalogue (like search, UI representation, statistics, ...) require identifiers in a coherent and consistent representation (e.g. a uuid), then the harvesting process will add these identifiers as part of the adms:identifier property. 
-This enrichment is also shared with the catalogue network.
+_Editorial note_ 
 
-## Editorial note 
+During the WG, the WG was presented with two possible interpretations for `dct:identifier`. The proposal in this document has been built on top of the chosen interpretation.
 
-During the WG, the WG was presented with two possible interpretations for dct:identifier. The proposal in this document has been built on top of the chosen interpretation.
+## Benefits applied to the usecases
 
+### application use case 1
+To detect that two datasets are the same one can rely on an assessment of `adms:identifier`. 
+If they contain the same identifier with the same metadata, then they can be considered the same. 
+Merging, metadata value priority selection, etc. can be based on a simple trusted basis.
+
+Note that this will not exclude the existence of similar (or equal) datasets in the catalogue network have complete disjoint identifiers. 
+Resolving this situation involves reaching out to the dataset owner.
+
+### application use case 2
+As harvesters propagate all dataset identifiers (the ones received from the source, plus those assigned by themselves) in adms:identifier, the case when a dataset is reaching a harvester catalogue via two routes is simpler to handle.
+
+Similar like in application use case 1, it is sufficient to assess `adms:identifier`, to find coïnciding datasets.
+
+Observe that now none of the above use cases solutions must rely on `dct:identifier`. 
+Nor it relies on an enforcement of a specific identifier representation.
+It relies on sharing detailed metadata in the catalogue network. 
 
 
 ## Example scenarios
+
+This section illustrates the above guidelines.
+
+
 
 Catalogue source 1: `ex:cat1`
 
