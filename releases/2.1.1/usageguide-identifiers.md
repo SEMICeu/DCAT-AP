@@ -351,11 +351,12 @@ ex:cat1 dcat:dataset [
 ```
 
 
-### Example Proposal 2
 
 
 
 ### harvesting scenarios
+
+#### harvesting scenario without proposal applied
 
 Catalogue source 1: `ex:cat1`
 
@@ -387,7 +388,9 @@ ex:cat2 dcat:dataset [
 
 ```
 
-The aggregated catalogue Aggr: `ex:cataggr` created from combining source 1 and source 2 result in the following
+The result of the aggregation process is open for interpretation in the current specification. Two possible outcomes are illustrated below.
+
+A) The aggregated catalogue Aggr: `ex:cataggr` created from combining source 1 and source 2 can result in the following
 ```
 ex:cataggr a dcat:Catalog.
 ex:cataggr dcat:dataset [
@@ -409,10 +412,28 @@ ex:cataggr dcat:dataset [
 
 As dct:identifier is the identifier assigned by the owner/publisher of the datasets `ex:cat1-d1` and `ex:cat2-d1` the freetext search on the aggregated catalogue will return 2 answers for the search for "Dataset 1".
 
+B) The aggregated catalogue Aggr: `ex:cataggr` created from combining source 1 and source 2 can result in the following
+```
+ex:cataggr a dcat:Catalog.
+ex:cataggr dcat:dataset [
 
-### example guideline harvesting 
+   [] a dcat:Dataset;
+              dct:identifier "Dataset 1",
 
-Now suppose the aggregated catalogue Aggr would need uniform identifiers for it search index, then the catalogue would enrich each dataset as follows
+   [] a dcat:Dataset;
+              dct:identifier "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d",
+
+   [] a dcat:Dataset;
+              dct:identifier "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f", 
+
+]
+
+```
+when the aggregation catalogue considers the `dct:identifier` sufficient for determining equality.
+
+#### example guideline: add aggregator identifiers 
+
+Now suppose the aggregated catalogue Aggr would need uniform identifiers for it search index, then the catalogue should enrich each dataset as follows
 ```
 ex:cataggr a dcat:Catalog.
 ex:cataggr dcat:dataset [
@@ -448,13 +469,15 @@ ex:cataggr dcat:dataset [
 
 ```
 This illustrates that the guideline is an additive. The original content is not changed.
-At the same time, the search index can be constructed from the adms:identifiers with as creator `ex:cataggr`. 
+At the same time, it offers implementation support for the aggregation catalogue: the search index can be constructed from the `adms:identifier` with as creator `ex:cataggr`. 
 
 
 
-### example guideline "main identifier" and "identifiers"
+### example guideline: share metadata of all identifiers
 
 The guidelines advice that instead of sharing the main identifier solely as a literal, also to share metadata about it.
+In case a harvesting process encounters a _main identifier_ without the metadata information, the harvester is recommended to add the information within it capabilities. 
+
 ```
 ex:cat1 a dcat:Catalog.
 ex:cat1 dcat:dataset [
@@ -462,29 +485,16 @@ ex:cat1 dcat:dataset [
    ex:cat1-d1 a dcat:Dataset;
               dct:identifier "Dataset 1";
               adms:identifier [
-                     skos:notation "Dataset 1";
+                     skos:notation "ex:cat1-d1";
                      dct:creator ex:org1 
                      ],
 
-   ex:cat1-d2 a dcat:Dataset;
-              dct:identifier "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d";
-              adms:identifier [
-                     skos:notation "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d";
-                     dct:creator ex:inspireportal
-                     ],
-
-   ex:cat1-d3 a dcat:Dataset;
-              dct:identifier "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f";
-              adms:identifier [
-                     skos:notation "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f"
-                     dct:creator <http://data.europa.eu>
-                     ],
-
+ 
 ]
 
 ```
 
-In case a harvesting process encounters a _main identifier_ without the metadata information, the harvester is recommended to add the following information
+
 ```
 ex:cataggr a dcat:Catalog.
 ex:cataggr dcat:dataset [
@@ -492,29 +502,20 @@ ex:cataggr dcat:dataset [
    ex:cat1-d1 a dcat:Dataset;
               dct:identifier "Dataset 1";
               adms:identifier [
+                     skos:notation "ex:cat1-d1";
+                     dct:creator ex:org1 ,
+                     
                      skos:notation "Dataset 1";
                      dct:creator ex:cat1
                      ],
 
-   ex:cat1-d2 a dcat:Dataset;
-              dct:identifier "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d";
-              adms:identifier [
-                     skos:notation "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d";
-                     dct:creator ex:cat1
-                     ],
-
-   ex:cat1-d3 a dcat:Dataset;
-              dct:identifier "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f";
-              adms:identifier [
-                     skos:notation "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f"
-                     dct:creator ex:cat1
-                     ],
+   
 
 ]
 
 ```
 
-### harvesting network 
+### example: catalogue network benefit
 By sharing the identifier descriptions throughout the catalogue network, a harvester gets insight in the correlations, and can make smart decisions.
 
 
@@ -631,7 +632,7 @@ In the Semantic Web community the data format RDF is a corner stone.
 RDF is a data format that comes with explicit and implicit principles on identifiers:
   - (explicit) a node in an RDF graph is either named (in the form of a URI) or without an identifier (blank nodes).
   - (implicit) URIs are preferrable stable, persistent and dereferenceable 
-  - (implicit) when processing RDF graphs a node is not changed from name.
+  - (implicit) when processing RDF graphs a named node does not change name, but blank nodes do.
 
 When considering identifiers in a local processing context (within a single data portal) then the above principles might be interpreted very loose.
 From the moment one considers a network of catalogues the interpretation is becomes stricter, otherwise the reuser (harvester) will not know what operations are valid.
@@ -798,22 +799,26 @@ ex:global dcat:dataset [
 ]
 
 ```
-In this case harvesters contribute to the increase of datasets because now ex:global contains 4 datasets instead of 3. 
+In this case harvesters contribute to the increase of datasets in the catalogue network because now ex:global contains 4 datasets instead of 3. 
 
 Observe that solely on the value of `dct:identifier` disambiguation is not thrustworthy. As this value is given by the publisher and the same value might be assigned by another publisher.
 The `adms:identifier` however is more trustable. Because the metadata assigns a scope and unless the scope (creator) is incoherent with itselves, the value is unique within that scope.
 
-Thus with blank nodes, harvesters need additional information to do post-processing to reach the intended result. 
-The provided guidelines on `dct:identifier` and  `adms:identifier` provide that context.
+Thus with blank nodes, harvesters need additional information to apply a post-processing to reach the intended result. 
+The provided guideline on sharing information via `adms:identifier` provide that reliable input to implemented a trusted merge operation.
 
-
+When using the natural aggregation power of RDF via named nodes: information that is attached in the same named node in two sources is merged to create one view. 
 Unfortunately the fact that an RDF node is named with a URI does not provide any indication whether this URI (identifier) is created 
 with the objective to create just a coherent RDF or with the objective to support persistent stable identificators for datasets.
 The value `http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f` is from the represenatation perspective as good as 'https://example.com/d/23213'. 
 One cannot tell the difference in objective just from the representation.
 
-In general treating URIs as blank nodes and replacing the URIs from the datasets with catalogue specific URIs is considered bad practice. 
-Thus the following should be avoided:
+In general, treating named nodes (URIs) as blank nodes and replacing the URIs from the datasets with catalogue specific URIs goes against best practices in the Semantic Web community.  
+This has several reasons: (a) source providers might have invested in PURIs and this ignores the whole effort, (b) the source PURI might be lost if the replacement process does not add them, so a copy of the same dataset appear and (c) the ownership of the information seems transferred. In the Semantic Web the PURI implicitely claims ownership of the entity it refers to. In this case the PURI refers to a dataset, and thus replacing the PURI seem to shift ownership. Which is an unwanted effect.
+These arguments are also underlying in the guideline proposal of the `dct:identifier`. By encouraging the owner or first publisher of the dataset to use PURIs for their datasets then this PURI can be used as named node. In that case, the named node in the RDF representation also corresponds to the 'main identifier'. And that is in line with the Semantic Web best practices. 
+
+
+Thus the following catalogue should be avoided:
 ```
 ex:cataggr a dcat:Catalog.
 ex:cataggr dcat:dataset [
@@ -832,6 +837,11 @@ ex:cataggr dcat:dataset [
 ]
 
 ```
+Replacing the named nodes might also have underdesirable effects on the catalogue network. 
+When the above catalogue is again combined with ex:cat1 then the aggregator faces the difficult choice to decide which named node to take as preference. 
+Or when no duplicate detection is applied (post processing) this injects the same data again in the catalogue network.
+
+
 Not only because the creation of the new URI `ex:cataggr1` is might be subject to less reliable design decisions 
 (e.g. based on a hash of the title), but typically these rules are only known to the aggregating catalogue. 
 In order to have correct execution of these rules, the aggregation catalogue might consider imposing editing rules on source catalogues, 
