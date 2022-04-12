@@ -695,29 +695,29 @@
 :Distribution_Shape
     a sh:NodeShape ;
     sh:name "Distribution"@en ;
-    sh:property :Distribution_Property_adms_status
-    sh:property :Distribution_Property_dcat_accessService
-    sh:property :Distribution_Property_dcat_accessURL
-    sh:property :Distribution_Property_dcat_byteSize
-    sh:property :Distribution_Property_dcat_compressFormat
-    sh:property :Distribution_Property_dcat_downloadURL
-    sh:property :Distribution_Property_dcat_mediaType
-    sh:property :Distribution_Property_dcat_packageFormat
-    sh:property :Distribution_Property_dcat_spatialResolutionInMeters
-    sh:property :Distribution_Property_dcat_temporalResolution
-    sh:property :Distribution_Property_dcatap_availability
-    sh:property :Distribution_Property_dct_conformsTo
-    sh:property :Distribution_Property_dct_description
-    sh:property :Distribution_Property_dct_format
-    sh:property :Distribution_Property_dct_issued
-    sh:property :Distribution_Property_dct_language
-    sh:property :Distribution_Property_dct_license
-    sh:property :Distribution_Property_dct_modified
-    sh:property :Distribution_Property_dct_rights
-    sh:property :Distribution_Property_dct_title
-    sh:property :Distribution_Property_foaf_page
-    sh:property :Distribution_Property_odrl_hasPolicy
-    sh:property :Distribution_Property_spdx_checksum
+    sh:property :Distribution_Property_adms_status ;
+    sh:property :Distribution_Property_dcat_accessService ;
+    sh:property :Distribution_Property_dcat_accessURL ;
+    sh:property :Distribution_Property_dcat_byteSize ;
+    sh:property :Distribution_Property_dcat_compressFormat ;
+    sh:property :Distribution_Property_dcat_downloadURL ;
+    sh:property :Distribution_Property_dcat_mediaType ;
+    sh:property :Distribution_Property_dcat_packageFormat ;
+    sh:property :Distribution_Property_dcat_spatialResolutionInMeters ;
+    sh:property :Distribution_Property_dcat_temporalResolution ;
+    sh:property :Distribution_Property_dcatap_availability ;
+    sh:property :Distribution_Property_dct_conformsTo ;
+    sh:property :Distribution_Property_dct_description ;
+    sh:property :Distribution_Property_dct_format ;
+    sh:property :Distribution_Property_dct_issued ;
+    sh:property :Distribution_Property_dct_language ;
+    sh:property :Distribution_Property_dct_license ;
+    sh:property :Distribution_Property_dct_modified ;
+    sh:property :Distribution_Property_dct_rights ;
+    sh:property :Distribution_Property_dct_title ;
+    sh:property :Distribution_Property_foaf_page ;
+    sh:property :Distribution_Property_odrl_hasPolicy ;
+    sh:property :Distribution_Property_spdx_checksum ;
     sh:targetClass dcat:Distribution .
 
 
