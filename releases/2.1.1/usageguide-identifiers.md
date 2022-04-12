@@ -3,43 +3,69 @@
 DCAT-AP is an application profile for (open) data portals. 
 It describes catalogues of (open) datasets and data services.
 The profile provide means to express identifiers for the entities in the catalogue using the properties `dct:identifier` and `adms:identifier`.
-But besides highlighting that identifiers should be of high quality (e.g. by following the [10 rules for persistent identifiers](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/document/10-rules-persistent-uris) ), the recommendations are limited.
+But besides highlighting that identifiers should be qualityful (e.g. by following the [10 rules for persistent identifiers](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/document/10-rules-persistent-uris) ), the recommendations are limited.
 
-This provides individual catalogue implementors with a lot of freedom. But makes the work for catalogues that want to reuse the content of other catalogues harder.
+This provides individual catalogue implementors with a lot of freedom. But it makes the usage harder. Harvesters which aggregate content from different sources face different interpretations. Data researchers that browse two data portals also have to adapt to the differences.
+
+The following guidelines are proposed to clarify 
+
 These guidelines are proposed with as main objective to support the reuse of datasets and data services throughout the catalogue network.
 
+
+### Problem case
+Inspecting today (i.e april 2022) the usage of `dct:identifier`, one observes:
+
+  - that only 60% has it assigned, and
+  - that the variety of possible values is high: roughy 50% has an http(s) URI assigned, for others it is some other value.
+
+This means that today implementers neither the presence, nor the representation can reliably use to build decisions upon.
+
+In addition the usage note for dct:identifier gives implementers the choice to either provide the value the catalogue is assigning or the value the first publisher/owner of the dataset (description) has given. These are two distinct values.
+
+The alternative `adms:identifier` which provides metadata about an identifier, e.g. the agency that is responsible for assigning the identifier, is even less applied that dct:identifier. 
+The DCAT-AP specification hints that these are *other identifiers*, additional secondary identifiers.  
+
+Thirdly there are the RDF URIs. As many data catalogues exchange the catalogue content in RDF format, the datasets might get a URI assigned. 
+This identifier may or may not included by the catalogue also as `dct:identifier` or `adms:identifier`. 
+
+### Application use case 1
+
+Deciding whether two datasets are the same based on the identifying information provided is thus a complicated algorithm, of which the success is uncertain. 
+
+### Application use case 2
 
 The catalogue network is a (virtual) network of interconnected catalogues which is establised via two activities:
 
   - *referencing from one entity in one catalogue to another catalogue.* 
          For example, a EU MS dataset on population could express it is a part of the Eurostat dataset on populations (using `dct:isPartOf`).
-  - *harvesting.*  Harvesting is the process of aggregating source catalogues into a singe larger catalogue.
+  - *harvesting.*  Harvesting is the process of aggregating (copying) source catalogues into a singe larger catalogue.
 
 From the above the second is today the most frequent occurring case.
 
-Harvesting is a technical process, but the following expectations are commonly expected from the process:
-
-  - Harvested datasets should be easily retrievable in the aggregation. 
-  - Harvesters should not be required to impose cross-source requirements like sources are disjoint
-  - Harvesters should not contribute to the creation of duplicates
-  - Harvesters should not claim *ownership* of the sources. There should be ways that users of the aggregated catalogue can find back the original source. 
-  - Harvesting should require *minimal effort*: both for dataset owners as for the harvesters
-
-## Editorial note 
-
-During the WG, the WG was presented with two possible interpretations for dct:identifier. The proposal in this document has been built on top of the chosen interpretation.
+It is incorrect to assume that the catalogue network is a tree of disjoint catalogues. 
+This means that the same dataset may reach a catalogue throughout different routes in the network.
+When this happens the identifying information should be supportive to detect this. 
+Today the DCAT-AP specification and implementations do not guarantee that detecting this is simple and can be done with minimal effort.
 
 
 ## Proposal
+
+The proposal consists of two parts. First, and foremost, the focus on sharing more metadata on identifiers. 
+In all application use cases the lack of (complete) knowledge on identification is underlying to ability to provide simple decision making.
+So the proposal will encourage sharing more identifying information in the catalogue network.
+
+The second part expresses a longer term vision, which is shared by the community. But it represents a semantical usage change. 
+
+### Proposal 1 - share metadata on identifiers
+
+In short, the proposal is enlarge the use of `adms:identifier` not only for secondary identifiers, but for all identifiers assigned to the dataset throughout processing and sharing of that dataset in the catalogue network. 
+
 
 For a Dataset(*1)
 
 |Property        | URI           | Range   | Cardinality | definition | Usage Note |
 |----------------|---------------|---------|-------------|------------|------------|
-|main identifier | dct:identifier| Literal | 0..1        | The main identifier for the Dataset | the value is assigned by the owner/publisher of the Dataset |
-|identifier | adms:identifier | adms:Identifier | 0..n | described identifiers for the Dataset | the value describes the identifier of a Dataset. |
-
-If the _main identifier_ has a value, the full description is also part of the identifiers (adms:identifier).
+|identifier | adms:identifier | adms:Identifier | 0..n | described identifier for the Dataset | each identifier a catalogue or a process assigns and which is publicly accessible (e.g. via a data portal) should be included |
 
 To ensure that the meta information about the identifier is not solely the identifier value, 
 the proposal also includes additional requirements for [adms:Identifier](https://www.w3.org/TR/vocab-adms/#identifier).
@@ -52,15 +78,36 @@ the proposal also includes additional requirements for [adms:Identifier](https:/
 
 Besides the above properties other properties could be suggested to be added to adms:Identifier.
 
+_Open Discussion_
+
 (*1) The proposal can be applied to other (critical) entities in the application profile too. Obviously dcat:Dataservice, but also for dcat:Catalog, dcat:CatalogRecord, dcat:Distribution or foaf:Agent.
 
 (*2) at least one of the forms should be present. Either by making one property mandatory or by making the union mandatory.
+
+_CHANGELOG_
+
+- label change: "other identifier" -> "identifier"
+- usage note change: "This property refers to a secondary identifier of the Dataset" -> "described identifier for the Dataset"
+- 
+
+### Proposal 2 - main identifier
+
+For a Dataset(*1)
+
+|Property        | URI           | Range   | Cardinality | definition | Usage Note |
+|----------------|---------------|---------|-------------|------------|------------|
+|main identifier | dct:identifier| Literal | 0..1        | The main identifier for the Dataset | the value is assigned by the owner/publisher of the Dataset |
+
+If the _main identifier_ has a value, the full description is also part of the identifiers (adms:identifier).
 
 *Harvesting guidelines*
 
 When the services on a catalogue (like search, UI representation, statistics, ...) require identifiers in a coherent and consistent representation (e.g. a uuid), then the harvesting process will add these identifiers as part of the adms:identifier property. 
 This enrichment is also shared with the catalogue network.
 
+## Editorial note 
+
+During the WG, the WG was presented with two possible interpretations for dct:identifier. The proposal in this document has been built on top of the chosen interpretation.
 
 
 
