@@ -511,7 +511,7 @@
 
 :Dataset_Property_prov_qualifiedAttribution
     sh:path prov:qualifiedAttribution ;
-    sh:severity sh:Violation
+    sh:severity sh:Violation .
 
 :Dataset_Property_prov_wasGeneratedBy
     sh:path prov:wasGeneratedBy ;
