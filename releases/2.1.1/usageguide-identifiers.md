@@ -5,7 +5,7 @@ It describes catalogues of (open) datasets and data services.
 The profile provide means to express identifiers for the entities in the catalogue using the properties `dct:identifier` and `adms:identifier`.
 But besides highlighting that identifiers should be qualityful (e.g. by following the [10 rules for persistent identifiers](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/document/10-rules-persistent-uris) ), the recommendations are limited.
 
-This provides individual catalogue implementors with a lot of freedom. But it makes the usage harder. Harvesters which aggregate content from different sources face different interpretations. Data researchers that browse two data portals also have to adapt to the differences.
+This provides individual catalogue implementors with a lot of freedom. But it makes the usage harder. Harvesters which aggregate content from different sources face different interpretations. Data researchers that browse two data portals must adapt their search and use to the distinct rules of the data portals.
 
 These guidelines are proposed with as main objective to support the reuse of datasets and data services throughout the catalogue network. 
 
