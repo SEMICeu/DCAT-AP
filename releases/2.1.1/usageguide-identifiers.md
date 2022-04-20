@@ -16,7 +16,7 @@ Inspecting today (i.e april 2022) the usage of `dct:identifier`, one observes:
   - that only 60% has it assigned, and
   - that the variety of possible values is high: roughy 50% has an http(s) URI assigned, for others it is some other value.
 
-This means that today implementers neither the presence, nor the representation can reliably use to build decisions upon.
+This means that today implementers cannot use neither the presence, nor the representation, as reliable source to build decisions upon.
 
 In addition the usage note for dct:identifier gives implementers the choice to either provide the value the catalogue is assigning or the value the first publisher/owner of the dataset (description) has given. These are two distinct values.
 
