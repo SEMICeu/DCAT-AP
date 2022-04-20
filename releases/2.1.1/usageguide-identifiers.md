@@ -809,7 +809,7 @@ The natural aggregation power of RDF via named nodes is as follows: information 
 
 Unfortunately the fact that an RDF node is named with a URI does not provide any indication whether this URI (identifier) is created 
 with the objective to create just a coherent RDF or with the objective to support persistent stable identificators for datasets.
-The value `http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f` is from the representation perspective as good as 'https://example.com/d/23213'. 
+The value `http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f` is from the representation perspective as good as `https://example.com/d/23213`. 
 One cannot tell the difference in objective just from the representation.
 
 In general, treating named nodes (URIs) as blank nodes and replacing the URIs from the datasets with catalogue specific URIs goes against best practices in the Semantic Web community.  
