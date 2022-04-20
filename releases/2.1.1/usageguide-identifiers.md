@@ -435,11 +435,11 @@ ex:cataggr dcat:dataset
 
 
 ```
-when the aggregation catalogue considers the `dct:identifier` sufficient for determining equality.
+when the aggregation catalogue considers the `dct:identifier` sufficient and sole basis for determining equality.
 
 #### example guideline: add aggregator identifiers 
 
-Now suppose the aggregated catalogue Aggr would need uniform identifiers for it search index, then the catalogue should enrich each dataset as follows
+When the aggregated catalogue Aggr would need uniform identifiers for it search index, then the catalogue should enrich each dataset as follows (considering the result according situation A above):
 ```
 ex:cataggr a dcat:Catalog.
 ex:cataggr dcat:dataset ex:cat1-d1, ex:cat1-d2, ex:cat1-d3, ex:cat2-d1.
@@ -482,7 +482,7 @@ At the same time, it offers implementation support for the aggregation catalogue
 ### example guideline: share metadata of all identifiers
 
 The guidelines advice that instead of sharing the main identifier solely as a literal, also to share metadata about it.
-In case a harvesting process encounters a _main identifier_ without the metadata information, the harvester is recommended to add the information within it capabilities. 
+In case when the harvesting process encounters a _main identifier_ without the metadata information, the harvester is recommended to add the information within it capabilities. 
 
 ```
 ex:cat1 a dcat:Catalog.
@@ -519,7 +519,7 @@ ex:cataggr dcat:dataset ex:cat1-d1.
 By sharing the identifier descriptions throughout the catalogue network, a harvester gets insight in the correlations, and can make smart decisions.
 
 
-Consider that the source catalogue 1 is harvested by 2 harvesters: `ex:cataggr` which selects all datasets and `ex:catthema` which only selects the datasets that match a particalur thema (e.g. Mobility).
+Consider that the source catalogue `ex:cat1` is harvested by two harvesters: `ex:cataggr` which selects all datasets and `ex:catthema` which only selects the datasets that match a particalur thema (e.g. Mobility).
 The content of both will be:
 
 ```
@@ -580,10 +580,9 @@ ex:catthema dcat:dataset ex:cat1-d3.
 
 ```
 
-
-Suppose a third harvester `ex:global` harvests both aggregated catalogues.
+Suppose that a third harvester `ex:global` harvests both aggregated catalogues.
 According to the expectations expressed for harvesting, the aggregation should result in 3 datasets instead of 4.
-One would expect that the same dataset `ex:cat1-d3` present in both portals `cataggr` and `catthema` will be treated as the same dataset, and not as distinct ones. 
+One would expect that the dataset `ex:cat1-d3` present in both portals `cataggr` and `catthema` will be treated as the same dataset as it originates from the same source catalogue.
 The desired result is shown below: 
 
 ```
@@ -677,7 +676,7 @@ ex:cat2 dcat:dataset
 
 ```
 
-The aggregated catalogue Aggr: `ex:cataggr` created from combining source 1 and source 2 will result in the following
+The aggregated catalogue Aggr: `ex:cataggr` created from combining (by RDF concatination) source 1 and source 2 will result in the following
 ```
 ex:cataggr a dcat:Catalog.
 ex:cataggr dcat:dataset 
@@ -699,117 +698,41 @@ ex:cataggr dcat:dataset
 
 ```
 
-This is as one expects.
+This is as one expects, namely that there are two distinct datasets having the same dct:identifier.
 
-But lets consider now the creation of ex:global, where the blank node dataset "Dataset1" in the first catalogue is also harvested into a second catalogue catthema:
-
+Lets now consider an additional aggregator `ex:catthema` which also harvests the first catalogue `ex:cat1`, but only maintains the datasets with thema Mobility.
 
 ```
-ex:cataggr a dcat:Catalog.
-ex:cataggr dcat:dataset [
-
-   [ a dcat:Dataset;
-              dct:identifier "Dataset 1";
-              adms:identifier [
-                     skos:notation "Dataset 1";
-                     dct:creator ex:cat1 
-                     ],
-                     [
-                     skos:notation "http://catalogue.aggregation/id/dataset/123-121";
-                     dct:creator ex:cataggr
-                     ]
-   ],
-   [ a dcat:Dataset;
-              dct:identifier "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d";
-              adms:identifier [
-                     skos:notation "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d";
-                     dct:creator ex:cat1
-                     ],
-                     [
-                     skos:notation "http://catalogue.aggregation/id/dataset/123-468";
-                     dct:creator ex:cataggr
-                     ]
-   ],
-   [ a dcat:Dataset;
-              dct:identifier "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f";
-              adms:identifier [
-                     skos:notation "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f";
-                     dct:creator ex:cat1 
-                     ],
-                     [
-                     skos:notation "http://catalogue.aggregation/id/dataset/995-123";
-                     dct:creator ex:cataggr
-                     ]
-   ].
-
 ex:catthema a dcat:Catalog.
 ex:catthema dcat:dataset 
    [ a dcat:Dataset;
-              dct:identifier "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f";
-              adms:identifier [
-                     skos:notation "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f"
-                     dct:creator ex:cat1
-                     ],
-                     [
-                     skos:notation "http://thema.catalogue.org/data/dataset/321321";
-                     dct:creator ex:catthema
-                     ]
+              dct:identifier "Dataset 1";
    ].
 ```
 
-The RDF based aggregation will still result in 4 datasets instead of the expected 3.
-
+Let the catalogue `ex:global` be the result from harvesting (RDF concatination) `ex:catAggr` and `ex:catthema.
 
 ```
-ex:global a dcat:Catalog.
-ex:global dcat:dataset
+ex:catglobal a dcat:Catalog.
+ex:catglobal dcat:dataset
+   [ a dcat:Dataset;
+              dct:identifier "Dataset 1"
+              ],
+   [ a dcat:Dataset;
+              dct:identifier "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d"
+              ],
+   [ a dcat:Dataset;
+              dct:identifier "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f"
+              ], 
+   [ a dcat:Dataset;
+              dct:identifier "Dataset 1"
+              ],
    [ a dcat:Dataset;
               dct:identifier "Dataset 1";
-              adms:identifier [
-                     skos:notation "Dataset 1";
-                     dct:creator ex:cat1 
-                     ], 
-                     [
-                     skos:notation "http://catalogue.aggregation/id/dataset/123-121";
-                     dct:creator ex:cataggr
-                     ]
-   ],
-   [ a dcat:Dataset;
-              dct:identifier "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d";
-              adms:identifier [
-                     skos:notation "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d";
-                     dct:creator ex:cat1
-                     ],
-                     [
-                     skos:notation "http://catalogue.aggregation/id/dataset/123-468";
-                     dct:creator ex:cataggr
-                     ]                 
-   ],
-   [ a dcat:Dataset;
-              dct:identifier "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f";
-              adms:identifier [
-                     skos:notation "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f";
-                     dct:creator ex:cat1
-                     ],
-                     [
-                     skos:notation "http://catalogue.aggregation/id/dataset/995-123";
-                     dct:creator ex:cataggr
-                     ]
-   ],
-   [ a dcat:Dataset;
-              dct:identifier "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f";
-              adms:identifier [
-                     skos:notation "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f";
-                     dct:creator ex:cat1 
-                     ],
-                     [
-                     skos:notation "http://thema.catalogue.org/data/dataset/321321";
-                     dct:creator ex:catthema
-                     ]
    ].
-
 ```
-In this case harvesters contribute to the increase of datasets in the catalogue network because now ex:global contains 4 datasets instead of 3. 
+
+In this case harvesters _contribute to the increase of datasets_ in the catalogue network because now ex:global contains 5 datasets instead of 4.
 
 Observe that solely on the value of `dct:identifier` disambiguation is not thrustworthy. As this value is given by the publisher and the same value might be assigned by another publisher to another dataset.
 The `adms:identifier` however is more trustable. Because the metadata assigns a scope and unless the scope (creator) is incoherent with itselves, the value is unique within that scope.
@@ -817,48 +740,119 @@ The `adms:identifier` however is more trustable. Because the metadata assigns a 
 Thus with blank nodes, harvesters need additional information to apply a post-processing to reach the intended result. 
 The provided guideline on sharing information via `adms:identifier` provide that reliable input to implemented a trusted merge operation.
 
-When using the natural aggregation power of RDF via named nodes: information that is attached in the same named node in two sources is merged to create one view. 
+With the guidelines applied the content of the catalogue `ex:global` is
+
+```
+ex:catglobal a dcat:Catalog.
+ex:catglobal dcat:dataset
+   [ a dcat:Dataset;
+              dct:identifier "Dataset 1"
+              adms:identifier [
+                     skos:notation "Dataset 1";
+                     dct:creator ex:cat1
+                     ],
+                     [
+                     skos:notation "http://catalogue.aggregation/id/dataset/123-121";
+                     dct:creator ex:cataggr
+                     ]
+              ],
+   [ a dcat:Dataset;
+              dct:identifier "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d";
+              adms:identifier [
+                     skos:notation "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d";
+                     dct:creator ex:cat1
+                     ],
+                     [
+                     skos:notation "http://catalogue.aggregation/id/dataset/123-468";
+                     dct:creator ex:cataggr
+                     ]        
+              ],
+   [ a dcat:Dataset;
+              dct:identifier "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f";
+              adms:identifier [
+                     skos:notation "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f";
+                     dct:creator ex:cat1
+                     ],
+                     [
+                     skos:notation "http://catalogue.aggregation/id/dataset/995-123";
+                     dct:creator ex:cataggr
+                     ]
+              ], 
+   [ a dcat:Dataset;
+              dct:identifier "Dataset 1";
+              adms:identifier [
+                     skos:notation "Dataset 1"
+                     dct:creator ex:cat2
+                     ],
+                     [
+                     skos:notation "http://catalogue.aggregation/id/dataset/800-232";
+                     dct:creator ex:cataggr
+                     ]
+              ],
+   [ a dcat:Dataset;
+              dct:identifier "Dataset 1";
+              adms:identifier [
+                     skos:notation "Dataset 1"
+                     dct:creator ex:cat1
+                     ],
+                     [
+                     skos:notation "http://thema.catalogue.org/data/dataset/321321231";
+                     dct:creator ex:catthema
+                     ]
+   ].
+```
+When inspecting the adms:identifier values one can see that the last entry and the first entry of the dataset having als dct:identifier "Dataset 1" are coinciding.
+The identity equivalence check becomes straightforward. 
+
+### named nodes 
+The natural aggregation power of RDF via named nodes is as follows: information that is attached in the same named node in two sources is merged to create one view. 
+
 Unfortunately the fact that an RDF node is named with a URI does not provide any indication whether this URI (identifier) is created 
 with the objective to create just a coherent RDF or with the objective to support persistent stable identificators for datasets.
-The value `http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f` is from the represenatation perspective as good as 'https://example.com/d/23213'. 
+The value `http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f` is from the representation perspective as good as 'https://example.com/d/23213'. 
 One cannot tell the difference in objective just from the representation.
 
 In general, treating named nodes (URIs) as blank nodes and replacing the URIs from the datasets with catalogue specific URIs goes against best practices in the Semantic Web community.  
-This has several reasons: (a) source providers might have invested in PURIs and this ignores the whole effort, (b) the source PURI might be lost if the replacement process does not add them, so a copy of the same dataset appear and (c) the ownership of the information seems transferred. In the Semantic Web the PURI implicitely claims ownership of the entity it refers to. In this case the PURI refers to a dataset, and thus replacing the PURI seem to shift ownership. Which is an unwanted effect.
+This has several reasons: (a) source providers might have invested in Persistent URIs (PURIs) and this ignores the whole effort, (b) the source PURI might be lost if the replacement process does not add them, so a copy of the same dataset appear and (c) the ownership of the information seems transferred. In the Semantic Web the PURI implicitely claims ownership of the entity it refers to. In this case the PURI refers to a dataset, and thus replacing the PURI seem to shift ownership. Which is an unwanted effect.
+
 These arguments are also underlying in the guideline proposal of the `dct:identifier`. By encouraging the owner or first publisher of the dataset to use PURIs for their datasets then this PURI can be used as named node. In that case, the named node in the RDF representation also corresponds to the 'main identifier'. And that is in line with the Semantic Web best practices. 
 
 
-Thus the following catalogue should be avoided:
+Thus the following catalogue after harvesting should be avoided:
 ```
 ex:cataggr a dcat:Catalog.
-ex:cataggr dcat:dataset [
+ex:cataggr dcat:dataset ex:cataggr1, ex:cataggr2, ex:cataggr3, ex:cataggr4.
 
    ex:cataggr1 a dcat:Dataset;
-              dct:identifier "Dataset 1",
+              dct:identifier "Dataset 1".
 
    ex:cataggr2 a dcat:Dataset;
-              dct:identifier "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d",
+              dct:identifier "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d".
 
    ex:cataggr3 a dcat:Dataset;
-              dct:identifier "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f", 
+              dct:identifier "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f".
 
    ex:cataggr4 a dcat:Dataset;
-              dct:identifier "Dataset 1"
-]
+              dct:identifier "Dataset 1".
 
 ```
-Replacing the named nodes might also have underdesirable effects on the catalogue network. 
-When the above catalogue is again combined with ex:cat1 then the aggregator faces the difficult choice to decide which named node to take as preference. 
-Or when no duplicate detection is applied (post processing) this injects the same data again in the catalogue network.
+Replacing the named nodes might have the same underdesirable effects on the catalogue network as sharing blank nodes: namely it can be the source of injecting the same data again in the network.
 
+Claiming *being unharvestable* as solution to this problem by data catalogues is neither adviced.  
 
-Not only because the creation of the new URI `ex:cataggr1` is might be subject to less reliable design decisions 
-(e.g. based on a hash of the title), but typically these rules are only known to the aggregating catalogue. 
-In order to have correct execution of these rules, the aggregation catalogue might consider imposing editing rules on source catalogues, 
-something that best is avoided when possible.  
-This approach also materizalizes acccidental merging of two datasets that shouldn't be merged. 
-That is problematic because this interpretation error might propagate throughout the catalogue network.
-Finally the knowledge of the URI `ex:cat1-d1` is lost, and harvesters should avoid to loose identification data.
+**Open discussion:**
+
+A sole exception to this approach is the naming of blank node dataset. 
+In many EU Memberstates data portals will collect data from organisations that do not assign a quality main identifier. 
+In that case the catalogue could (or even adviced to) generate a PURI and replace the blank node with the PURI. 
+
+_Persistence_ is important here, because the harvester catalogue is faced with defining when a dataset is deprecated/deleted or the same when the metadata content changes. E.g. is a dataset title change a change in the dataset, or a landingspage change, etc. 
+If any metadata content change is resulting in a new URI, then the catalogue network maybe is better of sharing the dataset as a blank node, because one cannot rely on the URI for persistency.
+
+Applying this process as close as possible to the owner/first publisher of the dataset is in line with the guidelines.
+Observe that if the publisher catalogue with the blank nodes is harvested by another catalogue the same dataset might appear in the catalogue network.
+When this is detected the first time harvesters could encourage the publisher catalogue to introduce a quality main identifier.
+
 
 Based on these possible negative impact on the catalogue network the following guideline proposal is given:
 
@@ -869,11 +863,4 @@ On harvesting, the URI of the RDF node is maintained as is in the aggregated cat
 However, harvesters must still implement postprocessing to ensure that they not accidently inject duplicates into the catalogue network.
 
 
-# implementation note
-The above guidelines impact most editorial processes and most current harvesting practices *minimally*. 
-As before, dataset publishers are not forced to follow one centrally decided identifier schema.
-Harvesters can add their catalogue specific identifiers as a non-intrusive addition.
-And globally the catalogue network becomes more mature and stable.
-
-Of-course 
 
