@@ -137,9 +137,9 @@ Resolving this situation involves reaching out to the dataset owner.
 ### application use case 2
 As harvesters propagate all dataset identifiers (the ones received from the source, plus those assigned by themselves) in adms:identifier, the case when a dataset is reaching a harvester catalogue via two routes is simpler to handle.
 
-Similar like in application use case 1, it is sufficient to assess `adms:identifier`, to find coïnciding datasets.
+Similar like in application use case 1, it is sufficient to access `adms:identifier` to find coinciding datasets.
 
-Observe that now none of the above use cases solutions must rely on `dct:identifier`. 
+Observe that based on the guidelines none of the above use cases solutions must rely on `dct:identifier`. 
 Nor it relies on an enforcement of a specific identifier representation.
 It relies on sharing detailed metadata in the catalogue network. 
 
