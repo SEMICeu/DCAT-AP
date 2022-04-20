@@ -370,17 +370,17 @@ Catalogue source 1: `ex:cat1`
 
 ```
 ex:cat1 a dcat:Catalog.
-ex:cat1 dcat:dataset [
+ex:cat1 dcat:dataset ex:cat1-d1, ex:cat1-d2, ex:cat1-d3.
 
    ex:cat1-d1 a dcat:Dataset;
-              dct:identifier "Dataset 1",
+              dct:identifier "Dataset 1".
 
    ex:cat1-d2 a dcat:Dataset;
-              dct:identifier "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d",
+              dct:identifier "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d".
 
    ex:cat1-d3 a dcat:Dataset;
-              dct:identifier "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f"
-]
+              dct:identifier "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f".
+
 
 ```
 
@@ -388,11 +388,10 @@ Catalogue source 2: `ex:cat2`
 
 ```
 ex:cat2 a dcat:Catalog.
-ex:cat2 dcat:dataset [
+ex:cat2 dcat:dataset ex:cat2-d1.
 
    ex:cat2-d1 a dcat:Dataset;
-              dct:identifier "Dataset 1"
-]
+              dct:identifier "Dataset 1".
 
 ```
 
@@ -401,20 +400,19 @@ The result of the aggregation process is open for interpretation in the current 
 A) The aggregated catalogue Aggr: `ex:cataggr` created from combining source 1 and source 2 can result in the following
 ```
 ex:cataggr a dcat:Catalog.
-ex:cataggr dcat:dataset [
+ex:cataggr dcat:dataset ex:cat1-d1, ex:cat1-d2, ex:cat1-d3, ex:cat2-d1.
 
    ex:cat1-d1 a dcat:Dataset;
-              dct:identifier "Dataset 1",
+              dct:identifier "Dataset 1".
 
    ex:cat1-d2 a dcat:Dataset;
-              dct:identifier "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d",
+              dct:identifier "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d".
 
    ex:cat1-d3 a dcat:Dataset;
-              dct:identifier "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f", 
+              dct:identifier "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f".
 
    ex:cat2-d1 a dcat:Dataset;
-              dct:identifier "Dataset 1"
-]
+              dct:identifier "Dataset 1".
 
 ```
 
@@ -423,18 +421,18 @@ As dct:identifier is the identifier assigned by the owner/publisher of the datas
 B) The aggregated catalogue Aggr: `ex:cataggr` created from combining source 1 and source 2 can result in the following
 ```
 ex:cataggr a dcat:Catalog.
-ex:cataggr dcat:dataset [
+ex:cataggr dcat:dataset 
+   [ a dcat:Dataset;
+              dct:identifier "Dataset 1"
+              ],
+   [ a dcat:Dataset;
+              dct:identifier "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d"
+              ],
+   [ a dcat:Dataset;
+              dct:identifier "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f"
+              ].
 
-   [] a dcat:Dataset;
-              dct:identifier "Dataset 1",
 
-   [] a dcat:Dataset;
-              dct:identifier "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d",
-
-   [] a dcat:Dataset;
-              dct:identifier "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f", 
-
-]
 
 ```
 when the aggregation catalogue considers the `dct:identifier` sufficient for determining equality.
@@ -444,36 +442,36 @@ when the aggregation catalogue considers the `dct:identifier` sufficient for det
 Now suppose the aggregated catalogue Aggr would need uniform identifiers for it search index, then the catalogue should enrich each dataset as follows
 ```
 ex:cataggr a dcat:Catalog.
-ex:cataggr dcat:dataset [
+ex:cataggr dcat:dataset ex:cat1-d1, ex:cat1-d2, ex:cat1-d3, ex:cat2-d1.
 
    ex:cat1-d1 a dcat:Dataset;
               dct:identifier "Dataset 1";
               adms:identifier [
                      skos:notation "http://catalogue.aggregation/id/dataset/123-121";
                      dct:creator ex:cataggr
-                     ],
+                     ].
 
    ex:cat1-d2 a dcat:Dataset;
               dct:identifier "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d";
               adms:identifier [
                      skos:notation "http://catalogue.aggregation/id/dataset/123-468";
                      dct:creator ex:cataggr
-                     ],
+                     ].
 
    ex:cat1-d3 a dcat:Dataset;
               dct:identifier "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f";
               adms:identifier [
                      skos:notation "http://catalogue.aggregation/id/dataset/123-231";
                      dct:creator ex:cataggr
-                     ],
+                     ].
 
    ex:cat2-d1 a dcat:Dataset;
               dct:identifier "Dataset 1";
               adms:identifier [
                      skos:notation "http://catalogue.aggregation/id/dataset/995-123";
                      dct:creator ex:cataggr
-                     ]
-]
+                     ].
+
 
 ```
 This illustrates that the guideline is an additive. The original content is not changed.
@@ -488,39 +486,33 @@ In case a harvesting process encounters a _main identifier_ without the metadata
 
 ```
 ex:cat1 a dcat:Catalog.
-ex:cat1 dcat:dataset [
+ex:cat1 dcat:dataset ex:cat1-d1.
 
    ex:cat1-d1 a dcat:Dataset;
               dct:identifier "Dataset 1";
               adms:identifier [
                      skos:notation "ex:cat1-d1";
                      dct:creator ex:org1 
-                     ],
-
- 
-]
+                     ].
 
 ```
 
 
 ```
 ex:cataggr a dcat:Catalog.
-ex:cataggr dcat:dataset [
+ex:cataggr dcat:dataset ex:cat1-d1.
 
    ex:cat1-d1 a dcat:Dataset;
               dct:identifier "Dataset 1";
-              adms:identifier [
+              adms:identifier 
+                 [
                      skos:notation "ex:cat1-d1";
-                     dct:creator ex:org1 ,
-                     
+                     dct:creator ex:org1
+                     ],
+                     [
                      skos:notation "Dataset 1";
                      dct:creator ex:cat1
-                     ],
-
-   
-
-]
-
+                     ].
 ```
 
 ### example: catalogue network benefit
@@ -532,54 +524,58 @@ The content of both will be:
 
 ```
 ex:cataggr a dcat:Catalog.
-ex:cataggr dcat:dataset [
+ex:cataggr dcat:dataset ex:cat1-d1, ex:cat1-d2, ex:cat1-d3.
 
    ex:cat1-d1 a dcat:Dataset;
               dct:identifier "Dataset 1";
               adms:identifier [
                      skos:notation "Dataset 1";
-                     dct:creator ex:cat1,
-
+                     dct:creator ex:cat1
+                     ],
+[
                      skos:notation "http://catalogue.aggregation/id/dataset/123-121";
                      dct:creator ex:cataggr
-                     ],
+                     ].
 
    ex:cat1-d2 a dcat:Dataset;
               dct:identifier "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d";
               adms:identifier [
                      skos:notation "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d";
-                     dct:creator ex:cat1,
-
+                     dct:creator ex:cat1
+                     ],
+[
                      skos:notation "http://catalogue.aggregation/id/dataset/123-468";
                      dct:creator ex:cataggr
-                     ],
+                     ].
 
    ex:cat1-d3 a dcat:Dataset;
               dct:identifier "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f";
               adms:identifier [
-                     skos:notation "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f"
-                     dct:creator ex:cat1,
-
+                     skos:notation "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f";
+                     dct:creator ex:cat1
+                     ],
+[
                      skos:notation "http://catalogue.aggregation/id/dataset/995-123";
                      dct:creator ex:cataggr
-                     ],
+                     ].
 
-]
 
 ex:catthema a dcat:Catalog.
-ex:catthema dcat:dataset [
+ex:catthema dcat:dataset ex:cat1-d3.
 
    ex:cat1-d3 a dcat:Dataset;
               dct:identifier "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f";
-              adms:identifier [
-                     skos:notation "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f"
+              adms:identifier 
+              [
+                     skos:notation "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f";
                      dct:creator ex:cat1,
-
+                     ], 
+              [
                      skos:notation "http://thema.catalogue.org/data/dataset/321321";
                      dct:creator ex:catthema
-                     ],
+                     ].
 
-]
+
 
 
 ```
@@ -587,50 +583,53 @@ ex:catthema dcat:dataset [
 
 Suppose a third harvester `ex:global` harvests both aggregated catalogues.
 According to the expectations expressed for harvesting, the aggregation should result in 3 datasets instead of 4.
-
+One would expect that the same dataset `ex:cat1-d3` present in both portals `cataggr` and `catthema` will be treated as the same dataset, and not as distinct ones. 
+The desired result is shown below: 
 
 ```
 ex:global a dcat:Catalog.
-ex:global dcat:dataset [
+ex:global dcat:dataset  ex:cat1-d1, ex:cat1-d2, ex:cat1-d3.
 
    ex:cat1-d1 a dcat:Dataset;
               dct:identifier "Dataset 1";
               adms:identifier [
                      skos:notation "Dataset 1";
-                     dct:creator ex:cat1,
-
+                     dct:creator ex:cat1
+                     ],
+                     [
                      skos:notation "http://catalogue.aggregation/id/dataset/123-121";
                      dct:creator ex:cataggr
-                     ],
+                     ].
 
    ex:cat1-d2 a dcat:Dataset;
               dct:identifier "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d";
               adms:identifier [
                      skos:notation "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d";
-                     dct:creator ex:cat1,
-
+                     dct:creator ex:cat1
+                     ],
+                     [
                      skos:notation "http://catalogue.aggregation/id/dataset/123-468";
                      dct:creator ex:cataggr
-                     ],
+                     ].
 
    ex:cat1-d3 a dcat:Dataset;
               dct:identifier "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f";
-              adms:identifier [
-                     skos:notation "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f"
+              adms:identifier 
+                     skos:notation "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f";
                      dct:creator ex:cat1,
-
+                     ],
+                     [
                      skos:notation "http://catalogue.aggregation/id/dataset/995-123";
-                     dct:creator ex:cataggr,
-
+                     dct:creator ex:cataggr
+                     ],
+                     [
                      skos:notation "http://thema.catalogue.org/data/dataset/321321";
                      dct:creator ex:catthema
-                     ],
-
-]
+                     ].
 
 ```
-A detailed look to the last dataset shows that all the identifier information is concatenated. To a certain extend this forms a trace of where the dataset has been exposed.
-
+A detailed look to the last dataset shows that all the identifier information is concatenated, describing a trace of where the dataset has been exposed.
+In the following section, this trace can be used to create trustworthy merging of metadata. 
 
 
 ## Identifiers and RDF
@@ -648,168 +647,171 @@ From the moment one considers a network of catalogues the interpretation is beco
 Lets consider the first example scenario aggregating source 1 and source 2 but with blank nodes:
 
 
-Catalogue source 1: `ex:cat1`
+**Catalogue source 1: `ex:cat1`**
 
 ```
 ex:cat1 a dcat:Catalog.
-ex:cat1 dcat:dataset [
+ex:cat1 dcat:dataset 
+   [ a dcat:Dataset;
+              dct:identifier "Dataset 1"
+              ],
 
-   [] a dcat:Dataset;
-              dct:identifier "Dataset 1",
+   [ a dcat:Dataset;
+              dct:identifier "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d"
+              ],
 
-   [] a dcat:Dataset;
-              dct:identifier "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d",
-
-   [] a dcat:Dataset;
+   [ a dcat:Dataset;
               dct:identifier "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f"
-]
+              ].
 
 ```
 
-Catalogue source 2: `ex:cat2`
+**Catalogue source 2: `ex:cat2`**
 
 ```
 ex:cat2 a dcat:Catalog.
-ex:cat2 dcat:dataset [
-
-   [] a dcat:Dataset;
+ex:cat2 dcat:dataset 
+   [ a dcat:Dataset;
               dct:identifier "Dataset 1"
-]
+   ].
 
 ```
 
 The aggregated catalogue Aggr: `ex:cataggr` created from combining source 1 and source 2 will result in the following
 ```
 ex:cataggr a dcat:Catalog.
-ex:cataggr dcat:dataset [
-
-   [] a dcat:Dataset;
-              dct:identifier "Dataset 1",
-
-   [] a dcat:Dataset;
-              dct:identifier "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d",
-
-   [] a dcat:Dataset;
-              dct:identifier "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f", 
-
-   [] a dcat:Dataset;
+ex:cataggr dcat:dataset 
+   [ a dcat:Dataset;
               dct:identifier "Dataset 1"
-]
+              ],
+
+   [ a dcat:Dataset;
+              dct:identifier "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d"
+              ],
+
+   [ a dcat:Dataset;
+              dct:identifier "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f"
+              ], 
+
+   [ a dcat:Dataset;
+              dct:identifier "Dataset 1"
+              ].
 
 ```
 
 This is as one expects.
-But lets consider now the creation of ex:global, using the same principles:
+
+But lets consider now the creation of ex:global, where the blank node dataset "Dataset1" in the first catalogue is also harvested into a second catalogue catthema:
 
 
 ```
 ex:cataggr a dcat:Catalog.
 ex:cataggr dcat:dataset [
 
-   [] a dcat:Dataset;
+   [ a dcat:Dataset;
               dct:identifier "Dataset 1";
               adms:identifier [
                      skos:notation "Dataset 1";
-                     dct:creator ex:cat1,
-
+                     dct:creator ex:cat1 
+                     ],
+                     [
                      skos:notation "http://catalogue.aggregation/id/dataset/123-121";
                      dct:creator ex:cataggr
-                     ],
-
-   [] a dcat:Dataset;
+                     ]
+   ],
+   [ a dcat:Dataset;
               dct:identifier "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d";
               adms:identifier [
                      skos:notation "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d";
-                     dct:creator ex:cat1,
-
+                     dct:creator ex:cat1
+                     ],
+                     [
                      skos:notation "http://catalogue.aggregation/id/dataset/123-468";
                      dct:creator ex:cataggr
-                     ],
-
-   [] a dcat:Dataset;
+                     ]
+   ],
+   [ a dcat:Dataset;
               dct:identifier "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f";
               adms:identifier [
-                     skos:notation "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f"
-                     dct:creator ex:cat1,
-
+                     skos:notation "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f";
+                     dct:creator ex:cat1 
+                     ],
+                     [
                      skos:notation "http://catalogue.aggregation/id/dataset/995-123";
                      dct:creator ex:cataggr
-                     ],
-
-]
+                     ]
+   ].
 
 ex:catthema a dcat:Catalog.
-ex:catthema dcat:dataset [
-
-   [] a dcat:Dataset;
+ex:catthema dcat:dataset 
+   [ a dcat:Dataset;
               dct:identifier "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f";
               adms:identifier [
                      skos:notation "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f"
-                     dct:creator ex:cat1,
-
+                     dct:creator ex:cat1
+                     ],
+                     [
                      skos:notation "http://thema.catalogue.org/data/dataset/321321";
                      dct:creator ex:catthema
-                     ],
-
-]
-
-
+                     ]
+   ].
 ```
 
-The aggregation will now result in 4 datasets instead of the expected 3.
+The RDF based aggregation will still result in 4 datasets instead of the expected 3.
 
 
 ```
 ex:global a dcat:Catalog.
-ex:global dcat:dataset [
-
-   [] a dcat:Dataset;
+ex:global dcat:dataset
+   [ a dcat:Dataset;
               dct:identifier "Dataset 1";
               adms:identifier [
                      skos:notation "Dataset 1";
-                     dct:creator ex:cat1,
-
+                     dct:creator ex:cat1 
+                     ], 
+                     [
                      skos:notation "http://catalogue.aggregation/id/dataset/123-121";
                      dct:creator ex:cataggr
-                     ],
-
-   [] a dcat:Dataset;
+                     ]
+   ],
+   [ a dcat:Dataset;
               dct:identifier "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d";
               adms:identifier [
                      skos:notation "urn:uuid:9a652678-4616-475d-af12-aca21cfbe06d";
-                     dct:creator ex:cat1,
-
+                     dct:creator ex:cat1
+                     ],
+                     [
                      skos:notation "http://catalogue.aggregation/id/dataset/123-468";
                      dct:creator ex:cataggr
-                     ],
-
-   [] a dcat:Dataset;
+                     ]                 
+   ],
+   [ a dcat:Dataset;
               dct:identifier "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f";
               adms:identifier [
                      skos:notation "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f";
-                     dct:creator ex:cat1,
-
+                     dct:creator ex:cat1
+                     ],
+                     [
                      skos:notation "http://catalogue.aggregation/id/dataset/995-123";
-                     dct:creator ex:cataggr,
-
-                     ],
-
-   [] a dcat:Dataset;
+                     dct:creator ex:cataggr
+                     ]
+   ],
+   [ a dcat:Dataset;
               dct:identifier "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f";
               adms:identifier [
                      skos:notation "http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f";
-                     dct:creator ex:cat1,
-
+                     dct:creator ex:cat1 
+                     ],
+                     [
                      skos:notation "http://thema.catalogue.org/data/dataset/321321";
                      dct:creator ex:catthema
-                     ],
-
-]
+                     ]
+   ].
 
 ```
 In this case harvesters contribute to the increase of datasets in the catalogue network because now ex:global contains 4 datasets instead of 3. 
 
-Observe that solely on the value of `dct:identifier` disambiguation is not thrustworthy. As this value is given by the publisher and the same value might be assigned by another publisher.
+Observe that solely on the value of `dct:identifier` disambiguation is not thrustworthy. As this value is given by the publisher and the same value might be assigned by another publisher to another dataset.
 The `adms:identifier` however is more trustable. Because the metadata assigns a scope and unless the scope (creator) is incoherent with itselves, the value is unique within that scope.
 
 Thus with blank nodes, harvesters need additional information to apply a post-processing to reach the intended result. 
