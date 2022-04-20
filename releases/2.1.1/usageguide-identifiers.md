@@ -18,7 +18,7 @@ Inspecting today (i.e april 2022) the usage of `dct:identifier`, one observes:
 
 This means that today implementers cannot use neither the presence, nor the representation, as reliable source to build decisions upon.
 
-In addition the usage note for dct:identifier gives implementers the choice to either provide the value the catalogue is assigning or the value the first publisher/owner of the dataset (description) has given. These are two distinct values.
+In addition the usage note for dct:identifier gives implementers the choice to either provide the value the catalogue is assigning or the value the first publisher/owner of the dataset (description) has given. These are two distinct values. Where the first is beneficial for the network of catalogues, the second is more important when building a nice frontend.
 
 The alternative `adms:identifier` which provides metadata about an identifier, e.g. the agency that is responsible for assigning the identifier, is even less applied that dct:identifier. 
 The DCAT-AP specification hints that these are *other identifiers*, additional secondary identifiers.  
