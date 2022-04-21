@@ -855,7 +855,8 @@ When this is detected the first time harvesters could encourage the publisher ca
 
 Although not the objective of these guidelines, the fusing of two datasets that are identified to be equal, is also subject to the way what harvesters treat the other metadata. 
 When harvesters do not alter the metadata of a dataset (_replace_ e.g. the landingpage or description with other values) then a fusion of two DCAT-AP conform datasets is expected to be also DCAT-AP conform, but when catalogues do replace metadata simply fusing datasets together is not guaranteed to be DCAT-AP conform. 
-Therefore only additive changes are DCAT-AP catalogue network safe.
+Studying the impact of these changes and building up guidelines to create a coherent fusion/merging is beyond scope of these guidelines. 
+
 
 Based on these possible negative impact on the catalogue network the following guideline proposal is given:
 
