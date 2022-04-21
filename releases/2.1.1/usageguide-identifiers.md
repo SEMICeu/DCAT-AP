@@ -710,7 +710,7 @@ ex:catthema dcat:dataset
    ].
 ```
 
-Let the catalogue `ex:global` be the result from harvesting (RDF concatination) `ex:catAggr` and `ex:catthema.
+Let the catalogue `ex:global` be the result from harvesting (RDF concatination) `ex:catAggr` and `ex:catthema`.
 
 ```
 ex:catglobal a dcat:Catalog.
@@ -801,7 +801,7 @@ ex:catglobal dcat:dataset
                      ]
    ].
 ```
-When inspecting the adms:identifier values one can see that the last entry and the first entry of the dataset having als dct:identifier "Dataset 1" are coinciding.
+When inspecting the `adms:identifier` values one can see that the last entry and the first entry of the dataset having als `dct:identifier` "Dataset 1" are coinciding.
 The identity equivalence check becomes straightforward. 
 
 ### named nodes 
@@ -812,7 +812,7 @@ with the objective to create just a coherent RDF or with the objective to suppor
 The value `http://data.europa.eu/88u/dataset/1735eaaf-afe6-4d90-af67-488c4c37b91f` is from the representation perspective as good as `https://example.com/d/23213`. 
 One cannot tell the difference in objective just from the representation.
 
-In general, treating named nodes (URIs) as blank nodes and replacing the URIs from the datasets with catalogue specific URIs goes against best practices in the Semantic Web community.  
+In general, treating named nodes (URIs) as blank nodes and replacing the URIs from the datasets with catalogue specific URIs goes against the natural expectations by the Semantic Web community.  
 This has several reasons: (a) source providers might have invested in Persistent URIs (PURIs) and this ignores the whole effort, (b) the source PURI might be lost if the replacement process does not add them, so a copy of the same dataset appear and (c) the ownership of the information seems transferred. In the Semantic Web the PURI implicitely claims ownership of the entity it refers to. In this case the PURI refers to a dataset, and thus replacing the PURI seem to shift ownership. Which is an unwanted effect.
 
 These arguments are also underlying in the guideline proposal of the `dct:identifier`. By encouraging the owner or first publisher of the dataset to use PURIs for their datasets then this PURI can be used as named node. In that case, the named node in the RDF representation also corresponds to the 'main identifier'. And that is in line with the Semantic Web best practices. 
@@ -836,7 +836,7 @@ ex:cataggr dcat:dataset ex:cataggr1, ex:cataggr2, ex:cataggr3, ex:cataggr4.
               dct:identifier "Dataset 1".
 
 ```
-Replacing the named nodes might have the same underdesirable effects on the catalogue network as sharing blank nodes: namely it can be the source of injecting the same data again in the network.
+Indeed, replacing the named nodes can have the same underdesirable effects on the catalogue network as sharing blank nodes: namely it can be the source of injecting the same data again in the network.
 
 Claiming *being unharvestable* as solution to this problem by data catalogues is neither adviced.  
 
@@ -853,14 +853,21 @@ Applying this process as close as possible to the owner/first publisher of the d
 Observe that if the publisher catalogue with the blank nodes is harvested by another catalogue the same dataset might appear in the catalogue network.
 When this is detected the first time harvesters could encourage the publisher catalogue to introduce a quality main identifier.
 
+Although not the objective of these guidelines, the fusing of two datasets that are identified to be equal, is also subject to the way what harvesters treat the other metadata. 
+When harvesters do not alter the metadata of a dataset (_replace_ e.g. the landingpage or description with other values) then a fusion of two DCAT-AP conform datasets is expected to be also DCAT-AP conform, but when catalogues do replace metadata simply fusing datasets together is not guaranteed to be DCAT-AP conform. 
+Therefore only additive changes are DCAT-AP catalogue network safe.
 
 Based on these possible negative impact on the catalogue network the following guideline proposal is given:
 
 *Guideline proposal*
 
-Only use URIs for RDF nodes as name in case the catalogue also wants to share this as a persistent indentifier in the catalogue network.
+Only use URIs for RDF nodes as name in case the catalogue also wants to share this as a persistent identifier in the catalogue network.
 On harvesting, the URI of the RDF node is maintained as is in the aggregated catalogue. 
-However, harvesters must still implement postprocessing to ensure that they not accidently inject duplicates into the catalogue network.
+
+However, harvesters are adviced to still implement postprocessing to ensure that they not accidently inject duplicates into the catalogue network.
+This postprocessing should be based on the `adms:identifier`: when two datasets have the same `adms:Identifier`, the datasets can be considered as identical entities and a merging strategy should be applied. 
+Merging can be by dropping one of the dataset descriptions, or by fusing both together.
+
 
 
 
