@@ -744,19 +744,19 @@
     sh:targetClass dct:LicenseDocument .
 
 
-:Location_Shape_Property_dcat_bbox
+:Location_Property_dcat_bbox
     sh:maxCount 1 ;
     sh:nodeKind sh:Literal ;
     sh:path dcat:bbox ;
     sh:severity sh:Violation .
 
-:Location_Shape_Property_dcat_centroid
+:Location_Property_dcat_centroid
     sh:maxCount 1 ;
     sh:nodeKind sh:Literal ;
     sh:path dcat:centroid ;
     sh:severity sh:Violation .
 
-:Location_Shape_Property_locn_geometry
+:Location_Property_locn_geometry
     sh:maxCount 1 ;
     sh:nodeKind sh:Literal ;
     sh:path locn:geometry ;
@@ -765,9 +765,9 @@
 :Location_Shape
     a sh:NodeShape ;
     sh:name "Location"@en ;
-    sh:property :Location_Shape_Property_dcat_bbox ;
-    sh:property :Location_Shape_Property_dcat_centroid ;
-    sh:property :Location_Shape_Property_locn_geometry ;
+    sh:property :Location_Property_dcat_bbox ;
+    sh:property :Location_Property_dcat_centroid ;
+    sh:property :Location_Property_locn_geometry ;
     sh:targetClass dct:Location .
 
 
