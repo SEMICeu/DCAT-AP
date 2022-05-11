@@ -343,7 +343,7 @@
     sh:path dct:description ;
     sh:severity sh:Violation .
 
-:DataService_Property_dcat:endpointDescription
+:DataService_Property_dcat_endpointDescription
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path dcat:endpointDescription ;
     sh:severity sh:Violation .
