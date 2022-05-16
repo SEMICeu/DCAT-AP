@@ -26,6 +26,7 @@ The DCAT-AP specification hints that these are *other identifiers*, additional s
 Thirdly there are the RDF URIs. As many data catalogues exchange the catalogue content in RDF format, the datasets might get a URI assigned. 
 This identifier may or may not included by the catalogue as `dct:identifier` or `adms:identifier`. 
 
+
 ### Application use case 1
 
 Deciding whether two datasets are the same based on the identifying information provided today is thus a complicated algorithm, of which the success is uncertain. 
@@ -55,6 +56,15 @@ So the proposal will encourage sharing more identifying information in the catal
 
 The second part expresses a longer term vision, which is shared by the community. But it represents a semantical usage change. 
 
+During WG 26 April 2022, some participants questioned the need for the proposal because DCAT-AP already has a well-established mechanism for unique identification.
+Namely the URI of the entities in the RDF representation.
+The editors agree to a large extend with this statement, however the practice shows that the application in the catalogue network is low and not always in the same way. 
+In addition the usage of the URI in the RDF representation does not address the multitude of identifiers that might be associated to a dataset within the network. 
+And it neither addresses how to ensure that the identification is not lost using data exchanges that do not use RDF based (e.g. REST JSON APIs). 
+This proposal can be considered as an overall approach to bring the catalogue network to an better situations with an acceptable effort for all catalogues.
+For those that are fully RDF based, while at the same time for those who aren't.
+
+
 ### Proposal 1 - share metadata on identifiers
 
 In short, the proposal is enlarge the use of `adms:identifier` not only for secondary identifiers, but for all identifiers assigned to the dataset throughout processing and sharing of that dataset in the catalogue network.
@@ -67,7 +77,7 @@ For a Dataset(*1)
 
 |Property        | URI           | Range   | Cardinality | definition | Usage Note |
 |----------------|---------------|---------|-------------|------------|------------|
-|identifier | adms:identifier | adms:Identifier | 0..n  (*3)| described identifier for the Dataset | Each identifier a catalogue or a process assigns and which is publicly accessible (e.g. via a data portal) should be included.  |
+|identifier | adms:identifier | adms:Identifier | 0..n  (*3)| described identifier for the Dataset | This property refers to each identifier that a catalogue or a process (i.e. harvesting) assigns. |
 
 On the completeness:
    - the value of `dct:identifier` should be included
@@ -89,7 +99,16 @@ _Open Discussion_
 
 (*1) The proposal can be applied to other (critical) entities in the application profile too. Obviously dcat:Dataservice, but also for dcat:Catalog, dcat:CatalogRecord, dcat:Distribution or foaf:Agent.
 
+During the WG 26 April 2022, no final conclusion on this topic was made. 
+There were expressions of interest to apply good and common identifier management for Data Services, Distributions, Agents and Catalogues, but then first the WG should agree on the guidelines to follow. 
+
 (*2) at least one of the forms should be present. Either by making one property mandatory or by making the union mandatory.
+
+During the WG 2 April 2022 some participants expressed that they are using `adms:identifier` without metadata additional descriptions.
+They have guidelines to use `dct:identifier` for one kind of identifier, and use adms:identifier to collect the others contextless.
+This makes that when this guideline becomes in force, their catalogue is not anymore DCAT-AP compliant. 
+They estimate that it is substantial work for their editors to adapt this.
+
 
 (*3) The minimum cardinality will be defacto 1 since managing a dataset without any identifier in a catalogue would be a rarity.  
 
@@ -112,7 +131,12 @@ For a Dataset(*1)
 
 |Property        | URI           | Range   | Cardinality | definition | Usage Note |
 |----------------|---------------|---------|-------------|------------|------------|
-|main identifier | dct:identifier| Literal | 0..1        | The main identifier for the Dataset | the value is assigned by the owner/publisher of the Dataset |
+|main identifier | dct:identifier| Literal | 0..1        | The main identifier for the Dataset | The value is assigned by the main responsible of the Dataset, i.e. the owner or publisher.  |
+
+The objective of main identifier is to capture the identification used by the (main) responsible of the dataset. 
+And preferably in a representation that can be used publicly and is globally unique.
+Often the owner and the publisher are the same agent, but in some cases the dataset is published by an agent (the publisher) on behalve of another agent (the owner). 
+It can be expected that in that case, it is a joined effort to determin the identification. Sometimes this is even done in collaboration with the agent managing the DCAT-AP metadata descriptions. 
 
 It is strongly recommended that owners and the orinal publishers of the datasets consider the use persistent identifiers for this. 
 
@@ -142,6 +166,8 @@ Similar like in application use case 1, it is sufficient to access `adms:identif
 Observe that based on the guidelines none of the above use cases solutions must rely on `dct:identifier`. 
 Nor it relies on an enforcement of a specific identifier representation.
 It relies on sharing detailed metadata in the catalogue network. 
+
+
 
 
 ## Example scenarios
@@ -868,6 +894,49 @@ On harvesting, the URI of the RDF node is maintained as is in the aggregated cat
 However, harvesters are adviced to still implement postprocessing to ensure that they not accidently inject duplicates into the catalogue network.
 This postprocessing should be based on the `adms:identifier`: when two datasets have the same `adms:Identifier`, the datasets can be considered as identical entities and a merging strategy should be applied. 
 Merging can be by dropping one of the dataset descriptions, or by fusing both together.
+
+## Changing metadata
+
+During WG 26 April 2022, participants expressed that they are unconfortable with 'changing' metadata. 
+They prefer that during the processing the metadata, the original collected content is maintained unaltered.
+Despite it is not solely related to this proposal, this vision may block the adoption of the proposal because the proposal is illustrated with processing examples that according to a strict interpretation of this vision as changing metadata.
+
+In this vision the metadata should be considered as a immutable block and any enrichment or derived knowledge that a processor wants to share, must be shared seperately from from the original block.
+The new information is somehow connected with the orginal block, for instance using identifiers. 
+
+Applying this approach to DCAT the challenges are 
+  - to determine what is the im
+  - mutable block (the whole source catalogue, an dataset, a distribution of a dataset, ...)
+  - to decide how to share the enriched data. This can be via the build-in provenance possilities from DCAT (Catalogue and catalogue records) or by applying [Verifiable Claims](https://www.w3.org/TR/vc-data-model/))
+
+Imposing a common (harvesting) processing based on an elaborated approach for the above challenges is more impacting than what the examples illustrate. 
+This discussion is beyond the objectives of the proposed of these guidelines.
+
+However underlying the sentiment, there is a valid concern that a harvester should not alter the semantics or usage conditions of a dataset, while at the same time the harvester's task is to make the dataset more findable and attract (new) audience for it.
+For the first objective the original metadata as is should be unaltered, while for the latter it should be adapted to an extend. For example, translations or visualisations could be added.
+
+The proposed guidelines provides both: 
+  1. DCAT-AP supports various ways to find the original metadata. 
+     This proposal stregthens one way: via the identifiers. 
+     The main identifier (dct:identifier) is in this proposal the identifier assigned by the owner of the dataset.
+     If that identifier is dereferenceable an direct link to the original metadata is found, otherwise the user might explore `adms:identifier` to find via the  metadata context of the identifier the original metadata. 
+     Independent of this identifier perspective, the user always can exploit the roles ( i.e. contact point, publisher or owner) to retrieve the original metadata.
+  2. Permitting sharing derived information (e.g. new identifiers, translations, classifications, new distributions, derived datasets, ...) in the catalogue network using the natural Semantic Web enrichment possibility (i.e. the Open World Assumption) creates a distributed collaboration throughout the catalogue network.
+     This proposal promotes the  addition of new `adms:identifier` statements.
+     Because of the first ability of the DCAT-AP catalogue network, harvesters or any other enrichment processes should not be concerned with the possible _legal implications_.   
+     It is the user that has to ensure that its use of a dataset is legally acceptable, not the data catalogue. 
+     And they can do this because users can retrieve the original metadata.
+     
+Because many of the benefits of a strict processing using immutable blocks are already present in DCAT-AP catalogue network and made even more stronger with this proposal, the editors do not see the need to adapt the proposal. 
+     
+ 
+
+
+
+
+
+
+
 
 
 
