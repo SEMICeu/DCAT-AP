@@ -58,7 +58,7 @@ The second part expresses a longer term vision, which is shared by the community
 
 During WG 26 April 2022, some participants questioned the need for the proposal because DCAT-AP already has a well-established mechanism for unique identification.
 Namely the URI of the entities in the RDF representation.
-The editors agree to a large extend with this statement, however the practice shows that the application in the catalogue network is low and not always in the same way. 
+The editors agree to a large extend with this statement, however the practice shows that the application in the catalogue network is low and not always done in the same way. 
 In addition the usage of the URI in the RDF representation does not address the multitude of identifiers that might be associated to a dataset within the network. 
 And it neither addresses how to ensure that the identification is not lost using data exchanges that do not use RDF based (e.g. REST JSON APIs). 
 This proposal can be considered as an overall approach to bring the catalogue network to an better situations with an acceptable effort for all catalogues.
