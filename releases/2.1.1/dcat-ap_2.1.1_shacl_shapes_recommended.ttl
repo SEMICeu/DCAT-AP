@@ -22,8 +22,6 @@
 @prefix dcatap: <http://data.europa.eu/r5r> .
 
 <http://data.europa.eu/r5r/shacl_shapes>
-    dcat:accessURL <https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe/distribution/dcat-ap-200-shacl-shapes>;
-    dcat:downloadURL <https://github.com/SEMICeu/DCAT-AP/raw/cea5a96bb4a6f120c20b7a2b3fb4d86bcd725952/releases/2.0.0/Draft/dcat-ap_2.0.0_shacl_shapes.ttl> ;
     dcatap:availability <http://data.europa.eu/r5r/stable> ;
     dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
     dct:conformsTo <https://www.w3.org/TR/shacl> ;
@@ -60,13 +58,10 @@
     ] ;
     dct:license <https://creativecommons.org/licenses/by/4.0> ;
     cc:attributionURL <http://ec.europa.eu/> ;
-    dct:modified "2021-12-01"^^xsd:date ;
     dct:publisher <http://publications.europa.eu/resource/authority/corporate-body/DIGIT> ;
-    dct:relation <https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/210> ;
     dct:description "This document specifies the constraints on properties and classes expressed by DCAT-AP in SHACL."@en ;
     dct:title "The constraints of DCAT Application Profile for Data Portals in Europe"@en ;
     owl:versionInfo "2.1.1" ;
-    foaf:homepage <https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/210> ;
     foaf:maker [
         foaf:mbox <mailto:contact@semic.eu> ;
         foaf:name "DCAT-AP Working Group" ;
@@ -162,27 +157,31 @@
     sh:targetClass dcat:Catalog .
 
 
+#
+# Outcommented because no constraint is present 
+# and according to the W3C spec sh:property expects at least a sh:path
+# 
 
-:CategoryScheme_Shape
-    a sh:NodeShape ;
-    sh:name "Category Scheme"@en ;
-    sh:property [
-    ] ;
-    sh:targetClass skos:ConceptScheme .
-
-:Category_Shape
-    a sh:NodeShape ;
-    sh:name "Category"@en ;
-    sh:property [
-    ] ;
-    sh:targetClass skos:Concept .
-
-:Checksum_Shape
-    a sh:NodeShape ;
-    sh:name "Checksum"@en ;
-    sh:property [
-    ] ;
-    sh:targetClass spdx:Checksum .
+#:CategoryScheme_Shape
+#    a sh:NodeShape ;
+#    sh:name "Category Scheme"@en ;
+#    sh:property [
+#    ] ;
+#    sh:targetClass skos:ConceptScheme .
+#
+#:Category_Shape
+#    a sh:NodeShape ;
+#    sh:name "Category"@en ;
+#    sh:property [
+#    ] ;
+#    sh:targetClass skos:Concept .
+#
+#:Checksum_Shape
+#    a sh:NodeShape ;
+#    sh:name "Checksum"@en ;
+#    sh:property [
+#    ] ;
+#    sh:targetClass spdx:Checksum .
 
 :DataService_Shape
     a sh:NodeShape ;
@@ -283,12 +282,12 @@
     ] ;
     sh:targetClass dcat:Distribution .
 
-:Identifier_Shape
-    a sh:NodeShape ;
-    sh:name "Identifier"@en ;
-    sh:property [
-    ] ;
-    sh:targetClass adms:Identifier .
+#:Identifier_Shape
+#    a sh:NodeShape ;
+#    sh:name "Identifier"@en ;
+#    sh:property [
+#    ] ;
+#    sh:targetClass adms:Identifier .
 
 :LicenceDocument_Shape
     a sh:NodeShape ;
@@ -328,10 +327,10 @@
     ] ;
     sh:targetClass dct:PeriodOfTime .
 
-:Relationship_Shape
-    a sh:NodeShape ;
-    sh:name "Relationship"@en ;
-    sh:property [
-    ] ;
-    sh:targetClass dcat:Relationship .
+#:Relationship_Shape
+#    a sh:NodeShape ;
+#    sh:name "Relationship"@en ;
+#    sh:property [
+#    ] ;
+#    sh:targetClass dcat:Relationship .
 
