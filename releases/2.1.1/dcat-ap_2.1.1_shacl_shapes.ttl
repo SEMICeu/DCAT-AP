@@ -112,7 +112,7 @@
     sh:minCount 1 ;
     sh:path dct:modified ;
     sh:severity sh:Violation ;
-    sh:shape :DateOrDateTimeDataType_Shape .
+    sh:node :DateOrDateTimeDataType_Shape .
 
 :CatalogRecord_Property_dct_conformsTo
     sh:maxCount 1 ;
@@ -443,7 +443,7 @@
 :Dataset_Property_dct_issued
     sh:maxCount 1 ;
     sh:path dct:issued ;
-    sh:shape :DateOrDateTimeDataType_Shape ;
+    sh:node :DateOrDateTimeDataType_Shape ;
     sh:severity sh:Violation .
 
 :Dataset_Property_dct_language
@@ -453,7 +453,7 @@
 :Dataset_Property_dct_modified
     sh:maxCount 1 ;
     sh:path dct:modified ;
-    sh:shape :DateOrDateTimeDataType_Shape ;
+    sh:node :DateOrDateTimeDataType_Shape ;
     sh:severity sh:Violation .
 
 :Dataset_Property_dct_provenance
@@ -775,13 +775,13 @@
     sh:maxCount 1 ;
     sh:path dcat:startDate ;
     sh:severity sh:Violation ;
-    sh:shape :DateOrDateTimeDataType_Shape .
+    sh:node :DateOrDateTimeDataType_Shape .
 
 :PeriodOfTime_Property_dcat_endDate
     sh:maxCount 1 ;
     sh:path dcat:endDate ;
     sh:severity sh:Violation ;
-    sh:shape :DateOrDateTimeDataType_Shape .
+    sh:node :DateOrDateTimeDataType_Shape .
 
 :PeriodOfTime_Property_time_hasBeginning
     sh:maxCount 1 ;
