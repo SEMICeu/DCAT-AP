@@ -19,7 +19,7 @@
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dcatap: <http://data.europa.eu/r5r> .
+@prefix dcatap: <http://data.europa.eu/r5r/> .
 
 <http://data.europa.eu/r5r/shacl_shapes>
     dcat:accessURL <https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe/distribution/dcat-ap-200-shacl-shapes>;
@@ -110,7 +110,7 @@
         sh:minCount 1 ;
         sh:path dct:modified ;
         sh:severity sh:Violation ;
-        sh:shape :DateOrDateTimeDataType_Shape
+        sh:node :DateOrDateTimeDataType_Shape
     ], [
         sh:maxCount 1 ;
         sh:path dct:conformsTo ;
@@ -352,7 +352,7 @@
         sh:maxCount 1 ;
         sh:path dct:issued ;
         sh:severity sh:Violation ;
-        sh:shape :DateOrDateTimeDataType_Shape
+        sh:node :DateOrDateTimeDataType_Shape
     ], [
         sh:path dct:language ;
         sh:severity sh:Violation
@@ -360,7 +360,7 @@
         sh:maxCount 1 ;
         sh:path dct:modified ;
         sh:severity sh:Violation ;
-        sh:shape :DateOrDateTimeDataType_Shape
+        sh:node :DateOrDateTimeDataType_Shape
     ], [
         sh:path dct:provenance ;
         sh:severity sh:Violation
@@ -606,7 +606,7 @@
         sh:maxCount 1 ;
         sh:path dcat:endDate ;
         sh:severity sh:Violation ;
-        sh:shape :DateOrDateTimeDataType_Shape
+        sh:node :DateOrDateTimeDataType_Shape
     ], [
         sh:maxCount 1 ;
         sh:path time:hasBeginning ;
@@ -619,7 +619,7 @@
         sh:maxCount 1 ;
         sh:path dcat:startDate ;
         sh:severity sh:Violation ;
-        sh:shape :DateOrDateTimeDataType_Shape
+        sh:node :DateOrDateTimeDataType_Shape
     ] ;
     sh:targetClass dct:PeriodOfTime .
 
