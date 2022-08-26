@@ -90,7 +90,6 @@
     a sh:NodeShape ;
     sh:name "Catalog Record"@en ;
     sh:property [
-    ], [
         sh:minCount 1 ;
         sh:path dct:conformsTo ;
         sh:severity sh:Warning

@@ -4,3 +4,6 @@
 - issue #226: fix cardinality dcat:dataset in UML model figure
 - issue #222: fix typo is in RDF representation 
 - issue #216: fix SHACL expressions: sh:property should not be empty.
+- issue #229: fix SHACL sh:shape => sh:node
+- issue #199: fix prefix dcatap reference
+- validated the shapes according to https://www.itb.ec.europa.eu/shacl/shacl/upload W3C Core level

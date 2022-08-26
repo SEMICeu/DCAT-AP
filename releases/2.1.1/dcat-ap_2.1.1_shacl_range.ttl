@@ -391,7 +391,6 @@
     a sh:NodeShape ;
     sh:name "PeriodOfTime"@en ;
     sh:property [
-    ], [
         sh:class time:Instant ;
         sh:path time:hasBeginning ;
         sh:severity sh:Violation
