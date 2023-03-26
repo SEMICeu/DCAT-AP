@@ -1,0 +1,14 @@
+13-09-2022 
+ - initialise DCAT-AP profile
+06-03-2023
+ - transform the usage definitions into definitions and usage notes, remove the words "this property refers to" from the definition.
+ - update the sections to perform proper cross-references.
+
+10-03-2023
+ - align the diagram and specification text
+	+ add the optional property temporal coverage which was shown on the diagram to the specification. 
+            This carries also the additional information that for Catalogues this is optional while for Datasets it is recommended. 
+        + the diagram showed correctly the usage of primary topic to Dataset and Data Service. 
+            However that representation made the max-cardinality expression ambigous. Therefore now the range is set to the abstract super class Catalogued Resource.
+27-03-2023
+ - initial publication
