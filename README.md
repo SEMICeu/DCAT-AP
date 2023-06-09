@@ -1,3 +1,4 @@
+![SEMIC Core Vocabulary](/semic-icon-small.png)
 # DCAT-AP
 
 This is the issue tracker for the maintenance of DCAT-AP.
@@ -16,4 +17,4 @@ Any problems encountered, or suggestions for new functionalities can be submitte
 
 ## Licence
 
-DCAT-AP releases are distributed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+Copyright © 2023 European Union. All material in this repository is published under the licence CC-BY 4.0, unless explicitly otherwise mentioned. Any problems encountered, or suggestions for new functionalities can be submitted as issues on the DCAT-AP repository on GitHub.
