@@ -90,12 +90,19 @@
 	
 		]
 
+  function quickreference() {
+	$('#table-quickoverview').DataTable();
+		};
+
+
+
 
     var respecConfig = {
+      postProcess: [quickreference],
       edDraftURI: "https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd",
-      latestVersion: "https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd",
-      specStatus: "unofficial",
-      publishDate: "2023-03-26",
+      latestVersion: "",
+      specStatus: "LS",
+      publishDate: "2023-06-19",
       editors: myeditors,
       authors: myauthors,
       github: "SEMICeu/DCAT-AP",
@@ -103,7 +110,7 @@
       xref: "web-platform",
       doJsonLd: true,
       logos: [{
-        src: "https://github.com/SEMICeu/Core-Person-Vocabulary/blob/v2.0.0/releases/2.00/html/semic-icon.png",
+        src: "https://semiceu.github.io/CPOV/releases/2.1.0/html/semic-icon.png",
         url: "https://semic.eu",
         alt: "SEMIC",
         width: 154,
@@ -128,13 +135,52 @@
           "title":"Interoperability solutions for public administrations, businesses and citizens (ISA²). Improving semantic interoperability in European eGovernment systems",
           "publisher":"European Commission"
          },
+        "DEU" : {
+          "href":"https://data.europa.eu",
+          "title":"The official portal for European data",
+          "publisher":"European Commission"
+        },
+       "ADMS1" : {
+	  "href" : "https://joinup.ec.europa.eu/collection/support-centre/solution/asset-description-metadata-schema-adms/release/100",
+          "title" : "ADMS 1.00, 1ste version of ADMS as defined by the European Commission ISA Programme",
+	  "publisher" : "European Commission"
+	},
+       "WG-GLD" : {
+	  "href" : "http://www.w3.org/2011/gld/",
+          "title" : "Government Linked Data Working Group (Closed community group)",
+          "publisher" : "W3C"
+        },
+       "NAL-FileType" : {
+	  "href" : "http://publications.europa.eu/resource/authority/file-type",
+          "title" : "Named Authority List File Type",
+	  "publisher" : "Publication Office of the EU, EU Vocabularies"
+	},
+       "NAL-Licence" : {
+	  "href" : "http://publications.europa.eu/resource/authority/licence",
+          "title" : "Named Authority List Licence", 
+	  "publisher" : "Publication Office of the EU, EU Vocabularies"
+	},
+       "codelist-adms" : {
+	  "href" : "purl.org/adms/",
+          "title" : "Controlled Vocabularies supporting the ADMS vocabulary.",
+	  "publisher" : "European Commission, Interoperable Europe"
+	},
         "IdentifierGuidelines":{
           "href":"https://github.com/SEMICeu/DCAT-AP/blob/2.x.y-draft/releases/2.x.y/usageguide-identifiers.md",
           "title":"Guidelines on the management of identifiers",
           "publisher":"European Commission"
-         }
+         },
+        "HVD" : {
+           "href":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0138",
+           "title" : "Implementing Regulation for High Value Datasets",
+           "publisher":"European Commission"
+        }
+
       }
     };
+
+
+
     </script>
     <style>
       .figure img, .sidefigure img, figure img, .figure object, .sidefigure object, figure object, img, .img {
@@ -166,31 +212,31 @@
     </h2>
     
 <h3>Context</h3>
-In light of the growing importance of data, the European Commission has adopted an <href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0138">implementing act</a> focused on high-value datasets on 21 December 2022. 
+In light of the growing importance of data, the European Commission has adopted an <href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0138">implementing act</a> focused on High-Value Datasets on 21 December 2022 [[HVD]]. 
 The implementing regulation groups the datasets in a list of six high-value datasets thematic categories: geospatial, earth observation and environment, meteorological, statistics, companies and company ownership, and mobility. 
-The <a href="https://data.europa.eu">Portal for European Data</a> has published an easy to read <a href="https://data.europa.eu/en/publications/datastories/high-value-datasets-overview-through-visualisation"> overview</a>.
+The <a href="https://data.europa.eu">Portal for European Data</a> [[DEU]] has published an easy-to-read <a href="https://data.europa.eu/en/publications/datastories/high-value-datasets-overview-through-visualisation"> overview</a>.
 
 <h3>Scope</h3>
 <p>
-This document provides the guidelines for how to use DCAT-AP for a dataset that is subject to the requirements imposed by the high-value dataset implementing act.
-The document is called the "usage guidelines of DCAT-AP for High Value Datasets", in short DCAT-AP HVD.
+This document provides the guidelines on how to use DCAT-AP for a dataset that is subject to the requirements imposed by the High-Value dataset implementing regulation (HVD IR).
+The document is called the "usage guidelines of DCAT-AP for High-Value Datasets", in short DCAT-AP HVD.
 
 </p><p>
-To understand these guidelines it is important to realize that the High-Value Dataset implementing regulation applies 
+To understand these guidelines, it is important to realise that the HVD IR applies 
 to a subset of all the datasets that are collected by (Open) Data Portals in Europe.
-A single catalogue contains catalogued resources which are within and outside scope of the High-Value Dataset implementing regulation.
+A single catalogue contains catalogued resources which are within and outside scope of the HVD IR.
 
 </p><p>
 This document supports the need for a common usage of DCAT-AP for catalogued resources within the scope of the High-Value Dataset implementing regulation.
-When conforming to these guidelines a dataset within the scope of the regulation will have satisfied the minimum metadata requirements to be included in the mandatory reporting of the regulation.
-It, however,  does not mean an automated compliance with the regulation because certains aspects are beyond DCAT-AP.
-For instance, the regulation imposes certain data aspects to be present, or the licencing requires to be more permissive as CC-BY 4.0. 
+When conforming to these guidelines, a dataset within the scope of the regulation will have satisfied the minimum metadata requirements to be included in the mandatory reporting of the regulation.
+It, however,  does not mean an automated compliance with the regulation because certain aspects are beyond DCAT-AP.
+For instance, the regulation imposes certain data aspects to be present, or the licencing requires to be more permissive than CC-BY 4.0. 
 Such requirements cannot be verified by just inspecting the DCAT-AP description, but the DCAT-AP description will assist in the assessment.
 
 </p><p>
 DCAT-AP HVD supports the implementers of the regulation in their assessment of their state of play. 
-When applying the guidelines to the metadata of their datasets, that are in scope of the regulation, this will raise the necessary attention points to drive towards conformance.
-And at the same time, this effort will create an immediate benefit the European citizens and businesses.
+When applying the guidelines to the metadata of their datasets, which are in scope of the regulation, the necessary attention will be raised to drive towards conformance.
+At the same time, this effort will create an immediate benefit for the European citizens and businesses.
 Any improvement of the metadata will immediately flow throughout the European network of (Open) Data Portals and thus increase the level of metadata quality.
 
 </p>
@@ -204,22 +250,21 @@ Any improvement of the metadata will immediately flow throughout the European ne
 <section id="abstract">
     <h2>Meeting minutes</h2>
     <ul>
-    <li>Webinar 21 Februar 2023 (<a href="https://joinup.ec.europa.eu/sites/default/files/event/attachment/2023-03/20230224%20Webinar%20DCAT-AP%20for%20HVD.pdf">Meeting Minutes</a>,<a href="https://www.youtube.com/watch?v=koJKgjyfIWc"> recording</a>) </li>
-    <li>Webinar 30 March 2023 () </li>
+    <li>Webinar 24 Februar 2023 (<a href="https://joinup.ec.europa.eu/sites/default/files/event/attachment/2023-03/20230224%20Webinar%20DCAT-AP%20for%20HVD.pdf">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=koJKgjyfIWc">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/webinar_24_Feb_2022_HVD_v3.1.pdf">slides</a>) </li>
+    <li>Webinar 30 March 2023 (<a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/20230330%20Webinar%20DCAT-AP%20for%20HVD.pdf">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=mBXLW2jOA3I">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/webinar_30_mar_2022_HVD_finalpdf.pdf">slides</a>) </li>
     </ul>
 </section>
 
 
 
+<!--  should support https://www.w3.org/2021/Process-20211102/, mostly like https://www.w3.org/2021/Process-20211102/#maturity-levels -->
 <section id="specstatus">
     <h2>Status</h2>
         <p>
-            This DCAT-AP HVD has the status <a href="https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard">Working Draft</a> published at 2023-03-26. 
+            This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsCR">Candidate Recommendation</a> published at 2023-06-19.
         </p>
         <p>
             Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://github.com/SEMICeu/DCAT-AP">Changelog</a>.
-        </p>
-        <p>
         </p>
 </section>
 
@@ -240,7 +285,7 @@ Any improvement of the metadata will immediately flow throughout the European ne
 		  This specification </span> of <a rel="cc:attributionURL" property="cc:attributionName" href="ORGANISATION" xmlns:cc="http://creativecommons.org/ns#">ORGANISATION </a> 
 	          is published under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">"CC0"</a>.
 	-->
-             Copyright © 2021 European Union. All material in this repository is published under the license CC-BY 4.0, unless explicitly otherwise mentioned.
+             Copyright © 2023 European Union. All material in this repository is published under the license CC-BY 4.0, unless explicitly otherwise mentioned.
         </p>
     
 </section>
@@ -249,24 +294,43 @@ Any improvement of the metadata will immediately flow throughout the European ne
 
 
 
-<section id="specterminology">
-    <h2>Terminology</h2>
-<p>
-An <strong>Application Profile</strong> is a specification that re-uses terms from one or more base standards, adding more specificity by identifying mandatory, recommended and optional elements to be used for a particular application, as well as recommendations for controlled vocabularies to be used.
-</p><p>
-A <strong>Dataset</strong> is a collection of data, published or curated by a single source, and available for access or download in one or more formats.
-A <strong>Data Portal</strong> is a Web-based system that contains a data catalogue with descriptions of datasets and provides services enabling discovery and re-use of the datasets.
-In the following sections, classes and properties are grouped under headings ‘mandatory’, ‘recommended’ and ‘optional’. These terms have the following meaning.
-<ul>
-<li>Mandatory property: a receiver MUST be able to process the information for that property; a sender MUST provide the information for that property.</li>
-<li>Recommended property: a receiver MUST be able to process the information for that property; a sender SHOULD provide the information for that property if it is available.</li>
-<li>Optional property: a receiver MUST be able to process the information for that property; a sender MAY provide the information for that property but is not obliged to do so.</li>
-<li>Deprecated property: a receiver SHOULD be able to process information about instances of that property; a sender SHOULD NOT provide the information about instances of that property.</li>
-</ul>
-The meaning of the terms MUST, MUST NOT, SHOULD and MAY in this section and in the following sections are as defined in RFC 2119 [rfc2119].
-In the given context, the term "processing" means that receivers must accept incoming data and transparently provide these data to applications and services. It does neither imply nor prescribe what applications and services finally do with the data (parse, convert, store, make searchable, display to users, etc.).
 
-<h3>Used Prefixes</h3>
+<section id="conformance" class="informative">
+<h2>Conformance Statement</h2>
+
+In order for applications to conform to DCAT-AP HVD, it MUST conform to DCAT-AP. 
+In addition, the application must conform to the mentioned constraints and usage guidelines following similar conformance statements as specifief in DCAT-AP.
+
+<h3>Provider requirements</h3>
+In order to conform to this Application Profile, an application that provides metadata MUST:
+<ul>
+<li>Provide a description of the Catalogue, including at least the mandatory properties specified for the class <a href="#Catalogue">Catalogue</a>.</li>
+<li>Provide descriptions of Datasets in the Catalogue, including at least the mandatory properties for the class <a href="#Dataset">Dataset</a>.</li>
+<li>Provide descriptions of Distributions, if any, of Datasets in the Catalogue, including at least the mandatory properties for the class <a href="#Distribution">Distribution</a>.</li>
+<li>Provide descriptions of Data Services, if any, in the Catalogue, including at least the mandatory properties for the class <a href="#DataService">Data Service</a>.</li>
+<li>Provide descriptions of all other classes such as Agents, Contact Points,  Licences, etc.
+</ul>
+The application of the controlled vocabularies as described in section [[[#controlled-vocs]]].
+
+
+<h3>Receiver requirements</h3>
+In order to conform to this Application Profile, an application that receives metadata MUST be able to:
+<li>Process information for all classes and properties specified in section [[[#quick-reference]]].</li>
+<li>Process information for all controlled vocabularies specified in section [[[#controlled-vocs]]].</li>
+"Processing" means that receivers must accept incoming data and transparently provide these data to applications and services. 
+It does neither imply nor prescribe what applications and services finally do with the data (parse, convert, store, make searchable, display to users, etc.).
+</section>
+
+
+<section id="specterminology">
+<h2>Terminology</h2>
+<p>
+An <strong>Application Profile</strong> is a specification that reuses terms from one or more base standards, adding more specificity by identifying mandatory, recommended and optional elements to be used for a particular application, as well as recommendations for controlled vocabularies to be used.
+</p><p>
+An <strong>Annex to an Application Profile</strong> is a specification that precises the use of some aspects of the Application Profile for a specific context.
+</p>
+
+This specification uses the following prefixes to shorten the URIs for readibility.
 
 
         <table id="table-namespaces" class="simple">
@@ -279,14 +343,10 @@ In the given context, the term "processing" means that receivers must accept inc
             <tr><td><code>dctype</code></td><td><code>http://purl.org/dc/dcmitype/</code></td></tr>
             <tr><td><code>foaf</code></td><td><code>http://xmlns.com/foaf/0.1/</code></td></tr>
             <tr><td><code>locn</code></td><td><code>http://www.w3.org/ns/locn#</code></td></tr>
-            <tr><td><code>odrl</code></td><td><code>http://www.w3.org/ns/odrl/2/</code></td></tr>
             <tr><td><code>owl</code></td><td><code>http://www.w3.org/2002/07/owl#</code></td></tr>
-            <tr><td><code>prov</code></td><td><code>http://www.w3.org/ns/prov#</code></td></tr>
             <tr><td><code>rdf</code></td><td><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></td></tr>
             <tr><td><code>rdfs</code></td><td><code>http://www.w3.org/2000/01/rdf-schema#</code></td></tr>
             <tr><td><code>skos</code></td><td><code>http://www.w3.org/2004/02/skos/core#</code></td></tr>
-            <tr><td><code>spdx</code></td><td><code>http://spdx.org/rdf/terms#</code></td></tr>
-            <tr><td><code>time</code></td><td><code>http://www.w3.org/2006/time#</code></td></tr>
             <tr><td><code>vcard</code></td><td><code>http://www.w3.org/2006/vcard/ns#</code></td></tr>
             <tr><td><code>xsd</code></td><td><code>http://www.w3.org/2001/XMLSchema#</code></td></tr>
             </tbody>
@@ -300,9 +360,9 @@ In the given context, the term "processing" means that receivers must accept inc
     
 <p>
 DCAT-AP HVD is an annex to DCAT-AP. 
-It describes additional usage of the DCAT-AP to satisfy the High-Value Dataset regulation.
-In this document only the additional information that is required for the catalogued resources which are within scope of the regulation, is included.
-In any other case, the guidelines of DCAT-AP are applicable.
+It describes additional usage of the DCAT-AP to satisfy the High-Value Dataset implementing regulation (HVD IR).
+In this document only the additional information, that is required for the catalogued resources which are within scope of the regulation, is included.
+In any other case, the guidelines of DCAT-AP itself are applicable.
 </p>
 
 
@@ -312,13 +372,12 @@ An overview of DCAT-AP HVD is shown by the UML diagram below.
 The UML diagram illustrates the specification described in this document. 
 For readability purposes the representation has been condensed as follows:
 <ul>
-<li> no ranges for data properties are shown, because some of them are expressed as unions of XSD types</li>
-<li> The figure contain the key classes with some important supporting classes. Other object properties (relationships) are listed as properties on the UML class with there target range.</li>
-<li> The class dcat:Resource has been included to ease to see the connection with W3C DCAT. DCAT-AP treats it as an abstract notion. </li>
+<li> The figure contains the key classes with some important supporting classes. Other object properties (relationships) are listed as properties on the UML class with their target range.</li>
+<li> The class dcat:Resource has been included more easily see the connection with W3C DCAT. DCAT-AP treats it as an abstract notion. </li>
 </ul>
 The cardinalities and qualifications are included in the figure.
 </p><p>
-For readibility of the document are the core relationships between classes included.
+For readibility of this document as an annex to DCAT-AP, the core relationships between classes are included.
 </p>
 
     <div id="overview">
@@ -333,7 +392,7 @@ For readibility of the document are the core relationships between classes inclu
 			      <a href="#CataloguedResource">Catalogued Resource</a> |
 			      <a href="#DataService">Data Service</a> |
 			      <a href="#Dataset">Dataset</a> |
-			      <a href="#Distribution">Distribution  </a> |
+			      <a href="#Distribution">Distribution</a> |
 			      <a href="#Kind">Kind</a> |
 			      <a href="#LicenceDocument">Licence Document</a> |
                         </p>
@@ -352,17 +411,11 @@ For readibility of the document are the core relationships between classes inclu
                         </p>
                 
                 
-                        <p>
-                            And supported by these datatypes:
-                            <br />
-                            | <a href="#MediaType">Media Type</a> | <a href="#MediaTypeorExtent">Media Type or Extent</a> |
-                        </p>
-                
     </div>
     <div>
-        <a href="/DCAT-AP/releases/2.2.0-hvd/html/overview.jpg"
+        <a href="https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/2.2.0-hvd/html/overview.jpg"
            target="_blank">
-            <img src="/DCAT-AP/releases/2.2.0-hvd/html/overview.jpg"/>
+            <img src="https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/2.2.0-hvd/html/overview.jpg"/>
         </a>
     </div>
 </section>
@@ -390,9 +443,11 @@ The main entities are those that form the core of the Application Profile.
 
             </h3>
 	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20Agent&body=Explain%20your%20issue"}}>
                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
 		</a>
+		-->
             <dl>
                 <dt>
                     Definition
@@ -422,7 +477,7 @@ The main entities are those that form the core of the Application Profile.
                     </dt>
                     
                     <dd>
-                        No properties have been defined for this entity.
+                        This specification does not impose any additional requirements to properties for this entity.
                     </dd>
                 
             </dl>
@@ -445,9 +500,11 @@ The main entities are those that form the core of the Application Profile.
 
             </h3>
 	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20Catalogue&body=Explain%20your%20issue"}}>
                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
 		</a>
+		-->
             <dl>
                 <dt>
                     Definition
@@ -470,7 +527,8 @@ The main entities are those that form the core of the Application Profile.
                     </dt>
                     
                         <dd>
-                            For this entity the following properties are defined: <a href="#Catalogue.dataset">dataset</a>
+                            For this entity the following properties are defined: <a href="#Catalogue.applicablelegislation">applicable legislation</a>
+                            , <a href="#Catalogue.dataset">dataset</a>
                             , <a href="#Catalogue.licence">licence</a>
                             , <a href="#Catalogue.publisher">publisher</a>
                             , <a href="#Catalogue.record">record</a>
@@ -513,6 +571,51 @@ The main entities are those that form the core of the Application Profile.
                         </tr>
                     </thead>
                     <tbody class="supertype">
+                        
+                            <tr id="Catalogue.applicablelegislation"
+                                typeof="rdfs:Property"
+                                resource="http://data.europa.eu/r5r/applicableLegislation"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20applicable legislation%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd%23Catalogue.applicablelegislation" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://data.europa.eu/r5r/applicableLegislation"
+                                           data-toggle="tooltip"
+                                           data-content="http://data.europa.eu/r5r/applicableLegislation"
+                                           data-placement="right">
+                                        applicable legislation</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#LegalResource" data-placement="right">Legal Resource</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    The legislation that mandates the creation or management of the Catalogue.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    For HVD the value must include the ELI <a href="http://data.europa.eu/eli/reg_impl/2023/138/oj">http://data.europa.eu/eli/reg_impl/2023/138/oj</a>. 
+<br/>
+As multiple legislations may apply to the resource the maximum cardinality is not limited.
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
                         
                             <tr id="Catalogue.dataset"
                                 typeof="rdfs:Property"
@@ -750,9 +853,11 @@ The main entities are those that form the core of the Application Profile.
 
             </h3>
 	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20CatalogueRecord&body=Explain%20your%20issue"}}>
                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
 		</a>
+		-->
             <dl>
                 <dt>
                     Definition
@@ -879,9 +984,11 @@ The main entities are those that form the core of the Application Profile.
 
             </h3>
 	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20CataloguedResource&body=Explain%20your%20issue"}}>
                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
 		</a>
+		-->
             <dl>
                 <dt>
                     Definition
@@ -911,7 +1018,7 @@ The main entities are those that form the core of the Application Profile.
                     </dt>
                     
                     <dd>
-                        No properties have been defined for this entity.
+                        This specification does not impose any additional requirements to properties for this entity.
                     </dd>
                 
             </dl>
@@ -936,9 +1043,11 @@ The main entities are those that form the core of the Application Profile.
 
             </h3>
 	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20DataService&body=Explain%20your%20issue"}}>
                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
 		</a>
+		-->
             <dl>
                 <dt>
                     Definition
@@ -968,11 +1077,14 @@ The main entities are those that form the core of the Application Profile.
                     </dt>
                     
                         <dd>
-                            For this entity the following properties are defined: <a href="#DataService.endpointdescription">endpoint description</a>
+                            For this entity the following properties are defined: <a href="#DataService.applicablelegislation">applicable legislation</a>
+                            , <a href="#DataService.contactpoint">contact point</a>
+                            , <a href="#DataService.endpointdescription">endpoint description</a>
                             , <a href="#DataService.endpointURL">endpoint URL</a>
-                            , <a href="#DataService.HVDCategory">HVD Category</a>
-                            , <a href="#DataService.landingpage">landing page</a>
+                            , <a href="#DataService.HVDcategory">HVD category</a>
                             , <a href="#DataService.licence">licence</a>
+                            , <a href="#DataService.qualityofService">quality of Service</a>
+                            , <a href="#DataService.rights">rights</a>
                             , <a href="#DataService.servesdataset">serves dataset</a>
                             , <a href="#DataService.title">title</a>
                             .
@@ -1013,6 +1125,94 @@ The main entities are those that form the core of the Application Profile.
                         </tr>
                     </thead>
                     <tbody class="supertype">
+                        
+                            <tr id="DataService.applicablelegislation"
+                                typeof="rdfs:Property"
+                                resource="http://data.europa.eu/r5r/applicableLegislation"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20applicable legislation%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd%23DataService.applicablelegislation" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://data.europa.eu/r5r/applicableLegislation"
+                                           data-toggle="tooltip"
+                                           data-content="http://data.europa.eu/r5r/applicableLegislation"
+                                           data-placement="right">
+                                        applicable legislation</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#LegalResource" data-placement="right">Legal Resource</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    1..n
+                                </td>
+                                <td property="rdfs:comment">
+                                    The legislation that mandates the creation or management of the Data Service.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    For HVD the value must include the ELI <a href="http://data.europa.eu/eli/reg_impl/2023/138/oj">http://data.europa.eu/eli/reg_impl/2023/138/oj</a>. 
+<br/>
+As multiple legislations may apply to the resource the maximum cardinality is not limited.
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="DataService.contactpoint"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/ns/dcat#contactPoint"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20contact point%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd%23DataService.contactpoint" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/ns/dcat#contactPoint"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/ns/dcat#contactPoint"
+                                           data-placement="right">
+                                        contact point</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Kind" data-placement="right">Kind</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    1..n
+                                </td>
+                                <td property="rdfs:comment">
+                                    Contact information that can be used for sending comments about the Dataset.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_contact_point">Link</a>
+                                </td>
+                            </tr>
                         
                             <tr id="DataService.endpointdescription"
                                 typeof="rdfs:Property"
@@ -1100,12 +1300,12 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
                             </tr>
                         
-                            <tr id="DataService.HVDCategory"
+                            <tr id="DataService.HVDcategory"
                                 typeof="rdfs:Property"
                                 resource="http://data.europa.eu/r5r/hvdCategory"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20HVD Category%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd%23DataService.HVDCategory" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20HVD category%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd%23DataService.HVDcategory" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -1115,7 +1315,7 @@ The main entities are those that form the core of the Application Profile.
                                            data-toggle="tooltip"
                                            data-content="http://data.europa.eu/r5r/hvdCategory"
                                            data-placement="right">
-                                        HVD Category</a>
+                                        HVD category</a>
                                 </td>
                                 <td>
                                     
@@ -1128,53 +1328,10 @@ The main entities are those that form the core of the Application Profile.
                                     1..n
                                 </td>
                                 <td property="rdfs:comment">
-                                    The HDV category to which this Data Service belongs.
+                                    The HVD category to which this Data Service belongs.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        
-                            <tr id="DataService.landingpage"
-                                typeof="rdfs:Property"
-                                resource="http://www.w3.org/ns/dcat#landingPage"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20landing page%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd%23DataService.landingpage" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="http://www.w3.org/ns/dcat#landingPage"
-                                           data-toggle="tooltip"
-                                           data-content="http://www.w3.org/ns/dcat#landingPage"
-                                           data-placement="right">
-                                        landing page</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#Document" data-placement="right">Document</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    1..n
-                                </td>
-                                <td property="rdfs:comment">
-                                    A web page that provides access to the Data Service and/or additional information. 
-                                </td>
-                                <td property="skos:scopeNote">
-                                    The landingpage provides information about the Data Services performance, capacity and availability.
                                 </td>
 				<!--
                                 <td>
@@ -1226,6 +1383,92 @@ The main entities are those that form the core of the Application Profile.
 				-->
                                 <td>
                                     <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_license">Link</a>
+                                </td>
+                            </tr>
+                        
+                            <tr id="DataService.qualityofService"
+                                typeof="rdfs:Property"
+                                resource="http://xmlns.com/foaf/0.1/Page"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20quality of Service%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd%23DataService.qualityofService" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://xmlns.com/foaf/0.1/Page"
+                                           data-toggle="tooltip"
+                                           data-content="http://xmlns.com/foaf/0.1/Page"
+                                           data-placement="right">
+                                        quality of Service</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Document" data-placement="right">Document</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    1..n
+                                </td>
+                                <td property="rdfs:comment">
+                                    A web page that provides details the quality of service the Data Service provides and/or additional information.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    Quality of service covers a broad spectrum of aspects. The HVD regulation does not list any mandatory topic.
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="DataService.rights"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/rights"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20rights%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd%23DataService.rights" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/rights"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/rights"
+                                           data-placement="right">
+                                        rights</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Rightsstatement" data-placement="right">Rights statement</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..n
+                                </td>
+                                <td property="rdfs:comment">
+                                    A statement that specifies rights associated with the Distribution.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
                                 </td>
                             </tr>
                         
@@ -1336,9 +1579,11 @@ The main entities are those that form the core of the Application Profile.
 
             </h3>
 	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20Dataset&body=Explain%20your%20issue"}}>
                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
 		</a>
+		-->
             <dl>
                 <dt>
                     Definition
@@ -1375,7 +1620,6 @@ The main entities are those that form the core of the Application Profile.
                             , <a href="#Dataset.HVDCategory">HVD Category</a>
                             , <a href="#Dataset.otheridentifier">other identifier</a>
                             , <a href="#Dataset.publisher">publisher</a>
-                            , <a href="#Dataset.type">type</a>
                             .
                     </dd>
                 
@@ -1443,10 +1687,10 @@ The main entities are those that form the core of the Application Profile.
                                     1..n
                                 </td>
                                 <td property="rdfs:comment">
-                                    the legislation that is applicable to this resource.
+                                    The legislation that mandates the creation or management of the Data Service.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    For HVD the value must include the ELI http://data.europa.eu/eli/reg_impl/2023/138/oj. 
+                                    For HVD the value must include the ELI <a href="http://data.europa.eu/eli/reg_impl/2023/138/oj">http://data.europa.eu/eli/reg_impl/2023/138/oj</a>. 
 <br/>
 As multiple legislations may apply to the resource the maximum cardinality is not limited.
                                 </td>
@@ -1566,7 +1810,7 @@ As multiple legislations may apply to the resource the maximum cardinality is no
                                 <td>
                                     
                                         
-                                            <a href="#Distribution" data-placement="right">Distribution  </a>
+                                            <a href="#Distribution" data-placement="right">Distribution</a>
                                         
                                     
                                 </td>
@@ -1617,7 +1861,7 @@ As multiple legislations may apply to the resource the maximum cardinality is no
                                     1..n
                                 </td>
                                 <td property="rdfs:comment">
-                                    The HDV category to which this Dataset belongs.
+                                    The HVD category to which this Dataset belongs.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -1719,49 +1963,6 @@ This allows others to find datasets more easily back.
                                 </td>
                             </tr>
                         
-                            <tr id="Dataset.type"
-                                typeof="rdfs:Property"
-                                resource="http://purl.org/dc/terms/type"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20type%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd%23Dataset.type" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="http://purl.org/dc/terms/type"
-                                           data-toggle="tooltip"
-                                           data-content="http://purl.org/dc/terms/type"
-                                           data-placement="right">
-                                        type</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#Concept" data-placement="right">Concept</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    0..1
-                                </td>
-                                <td property="rdfs:comment">
-                                    A type of the Dataset.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    A recommended controlled vocabulary data-type is foreseen.
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_type">Link</a>
-                                </td>
-                            </tr>
-                        
                     </tbody>
                 </table>
             </div>
@@ -1779,13 +1980,15 @@ This allows others to find datasets more easily back.
                 <a href="http://www.w3.org/ns/dcat#Distribution"
                    data-toggle="tooltip"
                    data-content="http://www.w3.org/ns/dcat#Distribution"
-                   data-placement="right">Distribution  </a>
+                   data-placement="right">Distribution</a>
 
             </h3>
 	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20Distribution&body=Explain%20your%20issue"}}>
                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
 		</a>
+		-->
             <dl>
                 <dt>
                     Definition
@@ -1806,7 +2009,7 @@ This allows others to find datasets more easily back.
                         Usage Note
                     </dt>
                     <dd>
-                        Bulk downloads should be encoded as a Distribution. 
+                        Bulk downloads should be encoded as a Distribution.
                     </dd>
                 
                 
@@ -1817,6 +2020,7 @@ This allows others to find datasets more easily back.
                         <dd>
                             For this entity the following properties are defined: <a href="#Distribution.accessservice">access service</a>
                             , <a href="#Distribution.accessURL">access URL</a>
+                            , <a href="#Distribution.applicablelegislation">applicable legislation</a>
                             , <a href="#Distribution.HVDCategory">HVD Category</a>
                             , <a href="#Distribution.licence">licence</a>
                             , <a href="#Distribution.linkedschemas">linked schemas</a>
@@ -1864,7 +2068,7 @@ This allows others to find datasets more easily back.
                                 resource="http://www.w3.org/ns/dcat#accessService"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20access service%20in%20Distribution  &body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd%23Distribution.accessservice" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20access service%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd%23Distribution.accessservice" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -1907,7 +2111,7 @@ This allows others to find datasets more easily back.
                                 resource="http://www.w3.org/ns/dcat#accessURL"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20access URL%20in%20Distribution  &body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd%23Distribution.accessURL" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20access URL%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd%23Distribution.accessURL" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -1945,12 +2149,57 @@ This allows others to find datasets more easily back.
                                 </td>
                             </tr>
                         
+                            <tr id="Distribution.applicablelegislation"
+                                typeof="rdfs:Property"
+                                resource="http://data.europa.eu/r5r/applicableLegislation"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20applicable legislation%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd%23Distribution.applicablelegislation" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://data.europa.eu/r5r/applicableLegislation"
+                                           data-toggle="tooltip"
+                                           data-content="http://data.europa.eu/r5r/applicableLegislation"
+                                           data-placement="right">
+                                        applicable legislation</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#LegalResource" data-placement="right">Legal Resource</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    1..n
+                                </td>
+                                <td property="rdfs:comment">
+                                    The legislation that mandates the creation or management of the Data Service.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    For HVD the value must include the ELI <a href="http://data.europa.eu/eli/reg_impl/2023/138/oj">http://data.europa.eu/eli/reg_impl/2023/138/oj</a>. 
+<br/>
+As multiple legislations may apply to the resource the maximum cardinality is not limited.
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
                             <tr id="Distribution.HVDCategory"
                                 typeof="rdfs:Property"
                                 resource="http://data.europa.eu/r5r/hvdCategory"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20HVD Category%20in%20Distribution  &body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd%23Distribution.HVDCategory" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20HVD Category%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd%23Distribution.HVDCategory" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -1970,10 +2219,10 @@ This allows others to find datasets more easily back.
                                     
                                 </td>
                                 <td>
-                                    1..n
+                                    0..n
                                 </td>
                                 <td property="rdfs:comment">
-                                    The HDV category to which this Distribution belongs.
+                                    The HVD category to which this Distribution belongs.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -1993,7 +2242,7 @@ This allows others to find datasets more easily back.
                                 resource="http://purl.org/dc/terms/license"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20licence%20in%20Distribution  &body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd%23Distribution.licence" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20licence%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd%23Distribution.licence" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -2036,7 +2285,7 @@ This allows others to find datasets more easily back.
                                 resource="http://purl.org/dc/terms/conformsTo"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20linked schemas%20in%20Distribution  &body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd%23Distribution.linkedschemas" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20linked schemas%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd%23Distribution.linkedschemas" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -2099,9 +2348,11 @@ This allows others to find datasets more easily back.
 
             </h3>
 	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20Kind&body=Explain%20your%20issue"}}>
                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
 		</a>
+		-->
             <dl>
                 <dt>
                     Definition
@@ -2167,7 +2418,7 @@ This allows others to find datasets more easily back.
                         
                             <tr id="Kind.contactpage"
                                 typeof="rdfs:Property"
-                                resource="http://xmlns.com/foaf/0.1/page"
+                                resource="http://www.w3.org/2006/vcard/ns#hasURL"
                                 class="class mandatory">
                                 <td>
 				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20contact page%20in%20Kind&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd%23Kind.contactpage" target="_blank" rel="noopener noreferrer" >
@@ -2176,9 +2427,9 @@ This allows others to find datasets more easily back.
                                     </a>
                                 </td>
                                 <td>
-                                        <a href="http://xmlns.com/foaf/0.1/page"
+                                        <a href="http://www.w3.org/2006/vcard/ns#hasURL"
                                            data-toggle="tooltip"
-                                           data-content="http://xmlns.com/foaf/0.1/page"
+                                           data-content="http://www.w3.org/2006/vcard/ns#hasURL"
                                            data-placement="right">
                                         contact page</a>
                                 </td>
@@ -2275,9 +2526,11 @@ This allows others to find datasets more easily back.
 
             </h3>
 	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20LicenceDocument&body=Explain%20your%20issue"}}>
                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
 		</a>
+		-->
             <dl>
                 <dt>
                     Definition
@@ -2287,144 +2540,24 @@ This allows others to find datasets more easily back.
                 </dd>
                 
                 
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        The HVD regulation requires a machine readable representation of a Licence. The minimal data model to describe a licence Document is beyond this specification. Nevertheless in [[[#c3]]] some suggestions are made. 
+                    </dd>
+                
                 
                     <dt>
                         Properties
                     </dt>
                     
-                        <dd>
-                            For this entity the following properties are defined: <a href="#LicenceDocument.sameas">same as</a>
-                            , <a href="#LicenceDocument.type">type</a>
-                            .
+                    <dd>
+                        This specification does not impose any additional requirements to properties for this entity.
                     </dd>
                 
             </dl>
         </div>
-        
-            <div class="u-table-overflow">
-                <table class="data-table simple" id="table-mandatory-classes">
-                    <thead>
-                        <tr class="data-table__header">
-                            <th class="data-table__header-title--sortable" style="width:5%">
-                            </th>
-                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
-                                Property
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:12%">
-                                Range
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:6%">
-                                Card
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:30%">
-                                Definition 
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:30%">
-                                Usage
-                            </th>
-			    <!--
-                            <th class="data-table__header-title--sortable" style="width:3%">
-                                Codelist
-                            </th>
-			    -->
-                            <th class="data-table__header-title--sortable" style="width:5%">
-                                DCAT
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody class="supertype">
-                        
-                            <tr id="LicenceDocument.sameas"
-                                typeof="rdfs:Property"
-                                resource="http://www.w3.org/2002/07/owl#sameAs"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20same as%20in%20Licence Document&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd%23LicenceDocument.sameas" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="http://www.w3.org/2002/07/owl#sameAs"
-                                           data-toggle="tooltip"
-                                           data-content="http://www.w3.org/2002/07/owl#sameAs"
-                                           data-placement="right">
-                                        same as</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#LicenceDocument" data-placement="right">Licence Document</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    1
-                                </td>
-                                <td property="rdfs:comment">
-                                    The corresponding licence in the NAL licence.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    This property supports the assessment of the reuse conditions of the licence. 
-
-This property is mandatory in case the licence document is not a member of the NAL licence.
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        
-                            <tr id="LicenceDocument.type"
-                                typeof="rdfs:Property"
-                                resource="http://purl.org/dc/terms/type"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20type%20in%20Licence Document&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd%23LicenceDocument.type" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="http://purl.org/dc/terms/type"
-                                           data-toggle="tooltip"
-                                           data-content="http://purl.org/dc/terms/type"
-                                           data-placement="right">
-                                        type</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#Concept" data-placement="right">Concept</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    0..n
-                                </td>
-                                <td property="rdfs:comment">
-                                    A type of licence, e.g. indicating public domain or royalties required.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
         
     </div>
 </section>
@@ -2470,9 +2603,11 @@ They are included in the Application Profile because they form the range of prop
 
             </h3>
 	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20Concept&body=Explain%20your%20issue"}}>
                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
 		</a>
+		-->
             <dl>
                 <dt>
                     Definition
@@ -2487,93 +2622,12 @@ They are included in the Application Profile because they form the range of prop
                         Properties
                     </dt>
                     
-                        <dd>
-                            For this entity the following properties are defined: <a href="#Concept.preferredlabel">preferred label</a>
-                            .
+                    <dd>
+                        This specification does not impose any additional requirements to properties for this entity.
                     </dd>
                 
             </dl>
         </div>
-        
-            <div class="u-table-overflow">
-                <table class="data-table simple" id="table-mandatory-classes">
-                    <thead>
-                        <tr class="data-table__header">
-                            <th class="data-table__header-title--sortable" style="width:5%">
-                            </th>
-                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
-                                Property
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:12%">
-                                Range
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:6%">
-                                Card
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:30%">
-                                Definition 
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:30%">
-                                Usage
-                            </th>
-			    <!--
-                            <th class="data-table__header-title--sortable" style="width:3%">
-                                Codelist
-                            </th>
-			    -->
-                            <th class="data-table__header-title--sortable" style="width:5%">
-                                DCAT
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody class="supertype">
-                        
-                            <tr id="Concept.preferredlabel"
-                                typeof="rdfs:Property"
-                                resource="http://www.w3.org/2004/02/skos/core#prefLabel"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20preferred label%20in%20Concept&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd%23Concept.preferredlabel" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="http://www.w3.org/2004/02/skos/core#prefLabel"
-                                           data-toggle="tooltip"
-                                           data-content="http://www.w3.org/2004/02/skos/core#prefLabel"
-                                           data-placement="right">
-                                        preferred label</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#Literal" data-placement="right">Literal</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    1..n
-                                </td>
-                                <td property="rdfs:comment">
-                                    A preferred label of the category.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    This property can be repeated for parallel language versions of the label.
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
         
     </div>
 </section>
@@ -2598,9 +2652,11 @@ They are included in the Application Profile because they form the range of prop
 
             </h3>
 	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20Document&body=Explain%20your%20issue"}}>
                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
 		</a>
+		-->
             <dl>
                 <dt>
                     Definition
@@ -2616,7 +2672,7 @@ They are included in the Application Profile because they form the range of prop
                     </dt>
                     
                     <dd>
-                        No properties have been defined for this entity.
+                        This specification does not impose any additional requirements to properties for this entity.
                     </dd>
                 
             </dl>
@@ -2639,9 +2695,11 @@ They are included in the Application Profile because they form the range of prop
 
             </h3>
 	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20Identifier&body=Explain%20your%20issue"}}>
                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
 		</a>
+		-->
             <dl>
                 <dt>
                     Definition
@@ -2656,93 +2714,12 @@ They are included in the Application Profile because they form the range of prop
                         Properties
                     </dt>
                     
-                        <dd>
-                            For this entity the following properties are defined: <a href="#Identifier.notation">notation</a>
-                            .
+                    <dd>
+                        This specification does not impose any additional requirements to properties for this entity.
                     </dd>
                 
             </dl>
         </div>
-        
-            <div class="u-table-overflow">
-                <table class="data-table simple" id="table-mandatory-classes">
-                    <thead>
-                        <tr class="data-table__header">
-                            <th class="data-table__header-title--sortable" style="width:5%">
-                            </th>
-                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
-                                Property
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:12%">
-                                Range
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:6%">
-                                Card
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:30%">
-                                Definition 
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:30%">
-                                Usage
-                            </th>
-			    <!--
-                            <th class="data-table__header-title--sortable" style="width:3%">
-                                Codelist
-                            </th>
-			    -->
-                            <th class="data-table__header-title--sortable" style="width:5%">
-                                DCAT
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody class="supertype">
-                        
-                            <tr id="Identifier.notation"
-                                typeof="rdfs:Property"
-                                resource="http://www.w3.org/2004/02/skos/core#notation"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20notation%20in%20Identifier&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd%23Identifier.notation" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="http://www.w3.org/2004/02/skos/core#notation"
-                                           data-toggle="tooltip"
-                                           data-content="http://www.w3.org/2004/02/skos/core#notation"
-                                           data-placement="right">
-                                        notation</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#Literal" data-placement="right">Literal</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    0..1
-                                </td>
-                                <td property="rdfs:comment">
-                                    A string that is an identifier in the context of the identifier scheme referenced by its datatype.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
         
     </div>
 </section>
@@ -2763,9 +2740,11 @@ They are included in the Application Profile because they form the range of prop
 
             </h3>
 	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20LegalResource&body=Explain%20your%20issue"}}>
                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
 		</a>
+		-->
             <dl>
                 <dt>
                     Definition
@@ -2790,7 +2769,7 @@ In this data specification the use is restricted to instances of this class that
                     </dt>
                     
                     <dd>
-                        No properties have been defined for this entity.
+                        This specification does not impose any additional requirements to properties for this entity.
                     </dd>
                 
             </dl>
@@ -2815,9 +2794,11 @@ In this data specification the use is restricted to instances of this class that
 
             </h3>
 	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20Literal&body=Explain%20your%20issue"}}>
                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
 		</a>
+		-->
             <dl>
                 <dt>
                     Definition
@@ -2833,7 +2814,7 @@ In this data specification the use is restricted to instances of this class that
                     </dt>
                     
                     <dd>
-                        No properties have been defined for this entity.
+                        This specification does not impose any additional requirements to properties for this entity.
                     </dd>
                 
             </dl>
@@ -2856,9 +2837,11 @@ In this data specification the use is restricted to instances of this class that
 
             </h3>
 	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20Resource&body=Explain%20your%20issue"}}>
                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
 		</a>
+		-->
             <dl>
                 <dt>
                     Definition
@@ -2874,7 +2857,7 @@ In this data specification the use is restricted to instances of this class that
                     </dt>
                     
                     <dd>
-                        No properties have been defined for this entity.
+                        This specification does not impose any additional requirements to properties for this entity.
                     </dd>
                 
             </dl>
@@ -2897,9 +2880,11 @@ In this data specification the use is restricted to instances of this class that
 
             </h3>
 	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20RightsStatement&body=Explain%20your%20issue"}}>
                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
 		</a>
+		-->
             <dl>
                 <dt>
                     Definition
@@ -2915,7 +2900,7 @@ In this data specification the use is restricted to instances of this class that
                     </dt>
                     
                     <dd>
-                        No properties have been defined for this entity.
+                        This specification does not impose any additional requirements to properties for this entity.
                     </dd>
                 
             </dl>
@@ -2938,9 +2923,11 @@ In this data specification the use is restricted to instances of this class that
 
             </h3>
 	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20Standard&body=Explain%20your%20issue"}}>
                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
 		</a>
+		-->
             <dl>
                 <dt>
                     Definition
@@ -2956,7 +2943,7 @@ In this data specification the use is restricted to instances of this class that
                     </dt>
                     
                     <dd>
-                        No properties have been defined for this entity.
+                        This specification does not impose any additional requirements to properties for this entity.
                     </dd>
                 
             </dl>
@@ -2971,6 +2958,7 @@ In this data specification the use is restricted to instances of this class that
 
 </section>
 
+<!-- outcommented Datatypes as there are none in the HVD specification 
     <section>
         <h2>
             Datatypes
@@ -2993,43 +2981,12 @@ In this data specification the use is restricted to instances of this class that
 	    </thead>
 	    <tbody class="supertype">
             
-		<tr><td>
-                   <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20MediaType&body=Explain%20your%20issue"}}>
-                     <img src="html/callout.png" loading="lazy" alt="(create issue)" width="50" height="50"/>
-		   </a>
-		</td><td>
-                
-                    <div id="MediaType">
-                        <a href="http://purl.org/dc/terms/MediaType"
-                           data-toggle="tooltip"
-                           data-content="http://purl.org/dc/terms/MediaType"
-                           data-placement="right">Media Type</a>
-                    </div>
-                
-		</td><td>
-                    A file format or physical medium.
-		</td></tr>
-		<tr><td>
-                   <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20MediaTypeOrExtent&body=Explain%20your%20issue"}}>
-                     <img src="html/callout.png" loading="lazy" alt="(create issue)" width="50" height="50"/>
-		   </a>
-		</td><td>
-                
-                    <div id="MediaTypeorExtent">
-                        <a href="http://purl.org/dc/terms/MediaTypeOrExtent"
-                           data-toggle="tooltip"
-                           data-content="http://purl.org/dc/terms/MediaTypeOrExtent"
-                           data-placement="right">Media Type or Extent</a>
-                    </div>
-                
-		</td><td>
-                    A media type or extent.
-		</td></tr>
             </tbody>
 	</table>
 
 
 </section>
+-->
 
 <!--
 <section class="informative">
@@ -3076,965 +3033,1018 @@ In this data specification the use is restricted to instances of this class that
 -->
 
  
-  <section class="informative">
-  <h2>Legal information</h2>
-
-<p>
-
-Providing correct and sufficient legal information is important to create trust by candidate reusers. 
-While in the past legislation and initiatives such as Findable, Accessible, Interoperable and Reusable (FAIR) data stress the importance of this information, 
-recent legislations, such as the High Value Datasets regulation, have become more demanding by imposing a minimum level of reuse.
-
-<p></p>
-Within DCAT-AP properties licence, rights and access rights are used to share this information. 
-The basic guidelines for their usage are expressed in the <a href="https://w3c.github.io/dxwg/dcat/#license-rights">License and Rights statements</a> guideline in DCAT.
-DCAT-AP implementers SHOULD consult these, in addition with the additional advices for the DCAT-AP usage context provided in this section.
-
-<p></p>
-
-The general principle is that licences, rights and access rights are expressions in the context of a legislation. 
-It is possible (and allowed) that a EU Member State provides a licence as part of its legislation.
-And thus, publishers of that EU Member State will use that in the metadata descriptions.
-This diversity can be considered a hurdle for cross-border reuse, as the implications of the licence might not be understood by users from another EU Member State.
-
-<p></p>
-This creates a natural tendency to use licences (or rights) which have a wider adoption that national legislation.
-Unless restricted by national legislation, implementers are encouraged for that reason to use widely recognised licences such as Creative Commons licences.
-In particular it is adviced for FAIR data to consider CC BY 4.0 (the minimum limit set by the HVD regulation) or more permissive such as licences CC Zero.
-
-<p></p>
-
-An assessment of data.europa.eu in 2023 showed that there are different representations to indicate the same licence.
-To create a more harmonised experience throughout Europe, it is recommended to use the <a href="http://publications.europa.eu/resource/dataset/licence">NAL licence</a>
-maintained by the Publications Office for all licences that are equivalent in the local context.
-If local representations are used, then the equivalence with a licence in this NAL should be provided.
-By applying this recommendation, it is possible for a cross-border reuser to get an insight in the reuse conditions without a detailed understanding the local legislation.
-
-<p></p>
-To encourage publishers to provide legal information recommended to provide licence information. 
-However, in some EU Member States, the term licence has a specific interpretation; in that interpretation the to-be provided legal information cannot be supplied as a document for property <a href="TODO">licence</a>.
-In those legislative contexts it is adviced to translate this encouragement in appropriate rules for the targeted publishers.
+  <section id="controlled-vocs" class="informative">
+  <h2>Controlled Vocabularies</h2>
 
 
-<p></p>
-Since legal information may vary per distribution or service, DCAT-AP has adopted from its conception, the strategy to <b>only</b> express legal information at the most concrete level of sharing.
-Doing so one avoids the need for a conflict resolution between legal information at the level of a Dataset (or Dataset Series) and its associated Distributions or Data Services.
+The usage of controlled vocabularies in DCAT-AP HVD conforms and extends the usage defined by DCAT-AP.
+In addition, the following controlled vocabularies are defined to be used:
+
+<h3>Controlled vocabularies to be used</h3>
+In the table below, a number of properties are listed with controlled vocabularies that MUST be used for the listed properties. The declaration of the following controlled vocabularies as mandatory ensures a minimum level of interoperability.
+        <table id="table-cv" class="simple">
+            <thead><tr><th>Property URI</th><th>Used for Class</th><th>Vocabulary name</th><th>Vocabulary URI</th><th>Usage note</th></tr></thead>
+            <tbody>
+<tr><td>dcatap:hvdCategory</td><td><a href="#Dataset">Dataset</a></td><td>EU Vocabularies HVD Categories</td><td>TBD </td><td></td></tr>
+            </tbody>
+            </table>
 
 
 
+<h3>Licence controlled vocabularies</h3>
+The HVD regulation imposes quality requirements on the published legal conditions. 
+In line with the generic DCAT-AP guidelines for publishing controlled vocabularies, a licence controlled vocabulary SHOULD:
+<ul>
+<li>Be published under an open licence.</li>
+<li>Be operated and/or maintained by an institution of the European Union, by a recognised standards organisation or another trusted organisation.</li>
+<li>Be properly documented.</li>
+<li>Have labels in multiple languages, ideally in all official languages of the European Union.</li>
+<li>Have terms that are identified by URIs with each URI resolving to documentation about the term.</li>
+<li>Have associated persistence and versioning policies.</li>
+<li>Provide a human readable representation</li>
+<li>Provide a machine readable representation</li>
+<li>Include in the machine readable representation a mapping to the EU Vocabularies Licences [[NAL-Licence]]</li>
+</ul>
 
-<p></p>
-Despite the above examples provided here are a perfect fit for those that are in scope of 'Open Data', they apply also for data that is beyond the scope of 'Open Data'.
-E.g. the Data Governance Act requires to provide sufficient legal reuse information such as the fees that apply.
-
-</p>
 
 </section>
 
   <section class="informative">
-<h2>Guidelines on the mapping of the HVD regulation to DCAT-AP</h2>
+<h2>Mapping the HVD regulation to DCAT-AP</h2>
 
+This section provides recommendations how to encode descriptions required by the HVD implementation regulation (HVD IR) as a DCAT-AP metadata structure. Each topic is introduced first from the perspective of the HVD IR, followed by an assessment of the topic on the use of DCAT-AP. The selected interpretation is further elaborated, where appropriate, with implementation guidelines. 
+
+<h3 id="c-terminology">Alignment of terminology</h3>
 
 <p>
-This section provides general insights in how the HVD regulation is encoded as a DCAT-AP metadata structure.
-These insights for the basis of the DCAT-AP HVD.
+The HVD implementation regulation uses the terms Dataset, Bulk Download and API.
 
-<p></p>
-A bulk download in the HVD regulation is considered a Distribution.
+</p><p>
+In the context of DCAT-AP, a HVD Dataset is mapped on a Dataset, Bulk Download on a Distribution and API on a Data Service.
+To be conformant with the use of DCAT-AP in the context of the HVD regulation, this mapping MUST be followed.
 
-<p></p>
-
-An API in the HVD regulation is considered a Data Service.
-
-<p></p>
-
-
+</p><p>
+To make the text easier to read, with <strong>a HVD Dataset</strong> we mean a Dataset in scope of the HVD implementing regulation.
+The same pattern is applied to other entities.
 
 </p>
 
 
-
-<h3 id="c1">C1. In scope of HVD regulation</h3>
+<h3 id="c1">In scope of HVD regulation</h3>
 
 <p>
-A Dataset is a HVD dataset if and only if a MS has included it in its reporting.
-The HVD regulation circumscribes HVD datasets. 
-It may be possible that the same circumpscription applies to multiple entities. 
-In that case a MS should select according to the rules in the regulation the most appropriate one. 
-If the MS decides to include multiple entities in the reporting, then for all the HVD regulation requirements will apply.
+A Dataset is a HVD dataset if and only if a MS has included it in its reporting. 
+The HVD IR defines high-value datasets. It may be possible that the same definition applies to multiple entities. 
+In that case, a Member State should select the most appropriate one, according to the rules in the regulation. 
+If the Member State decides to include multiple entities in the reporting, the requirements set out in the HVD regulation will apply to all these entities.
+Also, if a Member State decides to include a dataset in the HVD reporting for which inclusion is not mandatory, then the requirements of the HVD regulation will apply. 
+The report is an engagement of the Member State to the European data community to sustain those datasets. 
 
-<p></p>
-If a reuser discovers a dataset that seems to be in scope of the HVD regulation, then the responsible MS should be able to provide an explanation why it is not included in the reporting.
-One response to this question could be by providing the relevant HVD corresponding to that dataset.
+</p><p>
+If a re-user discovers a dataset that seems to be in scope of the HVD regulation, then the responsible MS should be able to provide an explanation why it is not included in the reporting. 
+One response to this question could be by providing the relevant HVD dataset corresponding to that dataset. 
 
-<p></p>
-Each entity that is identified by a MS in scope of the HVD regulation should provide the following information
-
-<ul>
-   <li>The applicable legislation by referring to its ELI <http://data.europa.eu/eli/reg_impl/2023/138/oj>. </li>
-   <li>The data category to which the entity belongs </li>
-</ul>
-
-Each MS shall provide the EC a catalogue containing all elements that are within scope for the reporting of the HVD.
 </p>
 
-<h3 id="c2">C2. Identifiers</h3>
-<p>
-In general by following the best practices of DCAT-AP on identifiers the requirements of the HVD regulation are satisfied.
-According to HVD regulation the identifiers provided in the report should be an online reference to the metadata.
+<h4>Denoting a HVD dataset</h4>
+Each entity (Dataset, Data Service, Distribution, Catalogue) that is identified by a MS in scope of the HVD IR should provide the European Legislation Identifier (ELI) <code>http://data.europa.eu/eli/reg_impl/2023/138/oj</code> of the HVD regulation for the property <a href="">applicable legislation</a>.
 
-<p></p>
+For the reporting, a Member State can provide a catalogue containing all elements that are within scope for the reporting of the HVD IR. 
+In that case the catalogue should also set the value for the property applicable legislation to the ELI of the HVD.
+
+
+<h4>Special cases</h4>
+
+<p>
+<B>When a Dataset is within scope of HVD, it is not mandatory that all distributions are within scope of HVD.</B>
+
+<B>Existing metadata remains valid.</B> 
+Our recommendations ensure that existing metadata (specified in DCAT-AP or other frameworks like INSPIRE) remains valid. 
+Becoming a Dataset in scope of HVD is an additional operation. 
+
+</p><p>
+
+<B>When a Data Service offers access to multiple datasets and this Data Service fulfils the HVD requirements (e.g. the HVD API for that dataset) for a HVD then the HVD requirements apply only to that HVD.</B>
+
+It is common that the same API service endpoint (denoted by a dcat:DataService) provides access to multiple datasets. 
+As such, it is to be expected that only some of the datasets are within scope of HVD. 
+Like for Distributions, the HVD does not enforce that all Datasets associated with a Data Service must be in scope of HVD. 
+Nevertheless, it must be noted that the HVD requirements on a Data Service might indirectly impact the other datasets that are available through the same data service, because a Data Service will sharee the operational and service level requirements for all its associated datasets. 
+
+</p>
+
+<h3 id="c2">HVD data category</h3>
+The HVD IR defines six thematic data categories: geospatial, earth observation and environment, meteorological, statistics, companies and company ownership, and mobility. 
+A new property <a href="">HVD category</a> is introduced to indicate the HVD category to which an entity belongs.
+The code list will be created and maintained by the Publications Office.
+An entity may belong to more than one data category.
+
+
+
+<h3 id="c2">Identifiers</h3>
+<p>
+In general, the requirements of the HVD IR are satisfied when the best practices of DCAT-AP on identifiers are followed. 
+According to HVD regulation the identifiers provided in the report should be an online reference to the metadata. 
+
+</p><p>
 In short these are:
 <ul>
-  <li>Use managed URIs are indentifiers for the main entities (Catalogue, Dataset, Data Service and Distribution) </li>
-  <li>These URIs are dereferenceable, i.e. users are redirected to the metadata describing the entity. </li>
-  <li>URIs are well defined, i.e. follow the 10 principles for good URIs. </li>
-  <li>Data portals and harvesters implement the identifier guidelines to not loose information of alternative identifiers. </li> 
-  <li>When the metadata in DCAT-AP orginates from other metadata (e.g. INSPIRE) then a cross reference to that representation is included. This can be via using the same identifiers, but also via some relation like source.</li>
+  <li>Identifiers for the main entities (Catalogue, Dataset, Data Service and Distribution) are managed URIs.</li>
+  <li>These URIs are dereferenceable, i.e. users are redirected to the metadata describing the entity.</li>
+  <li>URIs are well defined, i.e. follow the 10 principles for good URIs.</li>
+  <li>Data portals and harvesters implement the identifier guidelines in order not to lose information of alternative identifiers.</li> 
+  <li>When the metadata in DCAT-AP originates from other metadata (e.g. INSPIRE) then a cross-reference to that original metadata is included. This can be done by using the same identifiers, but also using another relation like the one expressed using dct:source.</li>
 </ul>
 
-</p>
+In practice, multiple identifiers may have been assigned to a Dataset. 
+It is recommended to select a master identifier and use this one to implement the HVD regulation. 
+In general, harvesters and portals are advised to use and promote this identifier as the identifier for the HVD Dataset. 
+In addition it is recommended to augment the list of alternative identifiers (adms:identifier) with the encountered identifiers. 
+These identifier processing recommendations are made to ensure that the information in usages like the HVD reporting (i.e. a reference to a dataset) is interconnected with the real data. 
 
-<h3 id="c3">C3. Legal information</h3>
-<p>
-The HVD regulation imposes a high level of metadata quality for legal information.
-The information should be provided in machine and human readable format, using a persistent link. 
-And it should be possible to investigate whether or not the legal conditions are equal or more permissive than the reference CC-BY 4.0. 
-
-<p></p>
-Despite these strong requirements this does not alter the general use of DCAT-AP for legal information.
-The above HVD requirements extend or precise the rules on how the legal information technically is provided.
-
-<p></p>
-An investigation on Feb 2023 performed on data.europa.eu shows that most EU MSs have to adapt their approach.
-<p></p>
 
 </p>
-<h3 id="c5">C5. Persistent Link</h3>
+<h4 id="c5">Persistent identifiers</h4>
 <p>
-The HVD regulation requires as part of the reporting requirements (article 5.3) that Licensing Conditions and APIs have a persistent link.
+The HVD regulation requires as part of the reporting requirements (article 5.3), that Licensing Conditions and APIs have persistent links.
 
-<p></p>
-Persistency means that for these entities MemberStates take the responsibability to maintain the real world entity indefinitely and additionally reduce the accessibility challenge by maintaining the same name for that real world entity indefinitely.
-Thus for the enitities that MSs include in the reporting and for which the reporting requires a persistent link, a MS takes an engagement and commitment.
+</p><p>
+Persistence means that, for these entities, Member States take the responsibility to maintain the real world entity indefinitely and additionally reduce the accessibility challenge by maintaining the same name for that real world entity indefinitely.
+Thus for the entities that MSs include in the reporting and for which the reporting requires a persistent link, a MS makes a persistent commitment.
 
-<p></p>
-As DCAT-AP is a Semantic Web data specification, persistency has been associated with the use persistent URIs (PURIs) for the metadata descriptions.
-A general advice for DCAT-AP implementers is the use of PURIs for all entities, but in particular for Datasets and Data Services.
-The practice, though, shows that this is not commonly applied, and therefore guidelines on identifiers have proprosed which mitigate the existing practice and the ultimate situation [[IdentifierGuidelines]].
-Implementers of the HVD regulation are adviced to read these guidelines to understand how identity might or might not be preserved from one data portal to another.
-And based on this take the appropriate actions.
+</p><p>
+As DCAT-AP is a Semantic Web data specification, persistence is associated with the use persistent URIs (PURIs) for the metadata descriptions. 
+A general advice for DCAT-AP implementers is to use PURIs for all entities, but in particular for Datasets and Data Services. 
+The practice, though, shows that this is not commonly applied, and therefore we have proposed guidelines on identifiers [[IdentifierGuidelines]]. 
+Implementers of the HVD regulation are advised to read these guidelines to understand how identity might or might not be preserved from one data portal to another,  and take the appropriate actions. 
 
 
-<p></p>
-In article 5.3 the broad term Licensing Conditions is used, while in the other parts of the regulation the term Licence is used.
+</p><p>
+In article 5.3 of the HVD IR, the broad term Licensing Conditions is used, while in the other parts of the regulation the term Licence is used. 
 DCAT-AP provides several means to express legal information, notably the properties licence (dct:license) and rights (dct:rights). 
-This may lead to considerations whether or not <strong>rights</strong> are included by the reporting requirement.
-As the final objective is to provide a trusted legal statement it is considered that the requirement  for a persistent link applies to rights too.
+This may lead to questions whether <strong>rights</strong> are included by the reporting requirement. 
+As the final objective is to provide a trusted legal statement, it is considered that the requirement for a persistent link applies to rights too. 
 
-<p></p>
-The reporting requirement for a persistent link for APIs is from DCAT-AP perspective ambiguous. 
-In DCAT-AP there is the identifier for the Data Service, i.e. the description about the API, and the property endpoint URL, which is the technical endpoint via which the data exchange will happen.
+</p><p>
+The reporting requirement for a persistent link for APIs is ambiguous from the perspective of DCAT-AP. 
+In DCAT-AP, there is the identifier for the Data Service, i.e. the description about the API, and the property endpoint URL, which is the technical endpoint via which the data exchange will happen. 
 As the HVD regulation does not specify precisely which case it covers, both are considered in scope. 
 That means that each Dataset Service has a PURI and that the endpoint URL is persistent. 
-Thus when an API is shifted on a new platform (e.g. from a local API gateway to an organisation wide one), the original endpoint URL must be maintained, and also the metadata management must be maintained.
+Thus when an API is moved to a new platform (e.g. from a local API gateway to an organisation-wide one), the original endpoint URL must be maintained, and also the metadata management must be maintained. 
 
-<p></p>
-In general neither DCAT-AP nor DCAT do impose endpoint URL persistency. 
-They, however, expect a life cycle management of the API through meta data. 
-For that DCAT-AP includes a few properties for life cycle management.  
+</p><p>
+DCAT-AP does not impose persistent identification of an endpoint URL. 
+It, however, expects a life cycle management of the API through metadata. 
+For that, DCAT-AP includes a few properties for life cycle management.   
 
-<p></p>
-For example, conside an API which is end-of-life. 
-According to the general DCAT-AP the PURI of the Data Service could get the status deprecated/out-of-service and the endpoint url could me made void when the endpoint url is taken offline. 
-Any data portal user would understand that this Data Service is not to be used anymore. 
-If the meta data is augmented with the information about the successor of the Data Service, the data portal owner could be guided to the new Data Service.
+</p><p>
+For example, consider an API which is at the end of its lifecycle. 
+According to DCAT-AP, the PURI of the Data Service could get the status ‘deprecated’ and the endpoint URL could be made void when it is taken offline. 
+Any data portal user would understand that this Data Service should not to used anymore. 
+If the metadata is augmented with the information about the successor of the Data Service, the data portal owner can be guided to the new Data Service. 
 
-<p></p>
-The impact for an user of the endpoint url is higher: it may face a sudden inaccessibility and systems might get broken when the endpoint url is taken offline.
-This situation is the result of a shared responsability: either the publishers did not applied a decent life cycle management or the users did not informed the publisher about their critical dependency.
-The enforcement of a persistent link for the endpoint url will be reduce the occurrance of such cases, but it won't resolve all issues.
-For that reason, even if the API provides open data (in the most extreme meaning) users that want to establish a critical dependency of their application on it, are adviced to inform the publisher.
-But also, publishers must improve their life cycle management for these APIs so that reusers get the right information, and can take the evolution of the API into account in their roadmaps.
+</p><p>
+The impact for a user of the endpoint URL is higher: systems might get broken when the endpoint URL is taken offline. 
+This situation is the result of a shared responsibility: either the publishers did not apply a decent life cycle management, or the users did not inform the publisher about their critical dependency. 
+The enforcement of a persistent link for the endpoint URL will reduce the occurrence of such cases, but it will not make them disappear. 
+Because of this, even if the API gives access to open data users that are dependent on the API are advised to inform the publisher. 
+But also, publishers must improve their life cycle management for these APIs so that re-users get the right information and can take the change of the endpoint of the API into account in their roadmaps. 
 
-<p></p>
-Nevertheless this exhaustive analysis of the pros and contras the proposal is to have persistency for both aspects of the API: its metadata identifier as its endpoint URL.
+</p><p>
+In summary, the recommendation is to have persistency for both aspects of the API: its metadata identifier as its endpoint URL. 
 </p>
 
-<h3 id="c6">C6. Contact Point</h3>
+<h3 id="c3">Legal information</h3>
+<p>
+The HVD regulation requires a high level of metadata quality for legal information. 
+The information should be provided in machine and human readable format, using a persistent link. 
+Furthermore, it should be possible to investigate whether the legal conditions are equal or more permissive than the reference CC-BY 4.0. 
+
+</p><p>
+Despite these strong requirements, the HVD regulation does not alter the general use of DCAT-AP for legal information. 
+The HVD requirements extend or precise how the legal information technically should be provided. 
+In this documentation it is assumed that legal information corresponds to licences as rights expressions. 
+In currently allowed practice, licence information may be supplied by a collection of rights statements, in cases that national legislation does not allow to provide a licence document. 
+This is compatible with the HVD regulation, and in that case, the HVD requirements will also apply to the rights statements. HVD does not force to adapt the current DCAT-AP principle to indicate the legal information at the most precise level in the metadata description: i.e., Data Service and Distribution, therefore this principle is maintained. 
+</p><p>
+
+Catalogue owners are advised to assess the legal information provided by the publishers according to flows in the figures below. 
+For instance, if a publisher provides licence information referring to a licence document made online accessible by the publisher itself, then the publisher of that information must implement the HVD quality requirements for licence documents. 
+The decision trees in the figures allow to assess whether or not additional effort has to be performed.
+
+<figure id="flow-licences">
+   <a href="https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/2.2.0-hvd/html/flow-licenses.png"
+           target="_blank">
+            <img src="https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/2.2.0-hvd/html/flow-licenses.png"/>
+   </a>
+  <figcaption>The decision tree for licence information.</figcaption>
+</figure>
+<figure id="flow-rights">
+   <a href="https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/2.2.0-hvd/html/flow-rights.png"
+           target="_blank">
+            <img src="https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/2.2.0-hvd/html/flow-rights.png"/>
+   </a>
+  <figcaption>The decision tree for licence information.</figcaption>
+</figure>
+
+</p><p>
+To support the assessment whether the assigned legal conditions are equal or more permissive than the reference CC-BY 4.0, the recommendation is to augment the machine-readable publication of MS-specific or publisher-specific licences with mapping information on the Licence NAL. 
+It is recommended to use, in order of preference, the SKOS mapping properties, owl:sameAs or rdfs:seeAlso, to express this mapping. 
+</p><p>
+
+In the reporting requirements of the HVD regulation, the notion <strong>terms of use</strong> is used. 
+It has been agreed, by the Working Group for this documentation, that providing terms of use information is the same as providing legal information for a Data Service. 
+
+<h3 id="c6">Contact Point</h3>
 <p>
 The HVD regulation request a contact point for APIs. 
-<p></p>
-A contact point is mandatory for HVD DataServices and recommended for HVD Datasets either in the form of an (persistent) email-address or a webform address (service desk).
+</p><p>
+This requirement is implemented as the following recommendation. 
+A contact point is mandatory for HVD Data Services and recommended for HVD Datasets either in the form of a (persistent) email address or a link to a contact form on a webpage, e.g. to contact a service desk. 
 </p>
 
-<h3 id="c7">C7. Adhere to specific data requirements</h3>
+<h3 id="c7">Specific data requirements</h3>
 <p>
-The HVD regulation decribes in its Annex precisely the data elements that should be provided for a HVD dataset. It is expected that a HVD dataset should comply to such a description.
-<p></p>
-It is recommended to provide a reference to a public document (standard) that describes the internals of the Dataset (or Distribution) using the property conforms to.
-In ensures that the information about the content is made publicly accessible for reusers.
-Additionally it forms input for experts charged with the duty to perform a detailed assessement to verify if the Dataset matches the HVD requirements. 
+The HVD implementation regulation describes, in its Annex, precisely the data elements that should be provided for a HVD dataset. A HVD dataset must conform to the rules defined in the HVD IR. 
+</p><p>
+It is recommended to provide a reference to a public document (for instance: data standards) that describes the internals of the Dataset (or Distribution) using the property conforms to.
+This ensures that the information  is made publicly accessible for reusers.
+Additionally, it can be used by experts to verify if the Dataset matches the HVD requirements. 
 
 </p>
 
+<h3 id="c8">Reporting</h3>
+The HVD regulation requires EU Member States (reporter) to report the list of HVD datasets. 
+This objective can be achieved by providing to the European Commission (reporting authority) a catalogue containing all the metadata about all the Datasets, Distributions and Data Services that are in scope of the HVD.
+When a MS has all metadata collected in a national data catalogue, then the report can be created by querying the national catalogue for all entities that have <code>http://data.europa.eu/eli/reg_impl/2023/138/oj</code> as <a href="#Dataset.applicablelegislation">applicable legislation</a>.
+
+If the MS has assigned persistent identifiers, as explained in [[[#c5]]], to the metadata entities, then it is even possible for the reporting authority to collect the metadata by querying the MS national catalogue or even the Portal for European Data [[DEU]]. 
+This potential shows that this documentation and consensus reached during the Working Group for this specification aid in reducing the aggregation effort at MS level while at the same time re-enforcing the existing metadata practices.
+
+However, the used approach (format and process) for the reporting is beyond scope of this document.
 
 </section>
 
-  <section id="conformance" class="informative">
-<h2>Conformance Statement</h2>
-
-In order for applications to conform to DCAT-AP HVD, it MUST conform to DCAT-AP. 
-In addition, the application must conform to the mentioned constraints and usage guidelines following similar conformance statements as specifief in DCAT-AP.
-More precisely, these are:
-
-<h3>Provider requirements</h3>
-In order to conform to this Application Profile, an application that provides metadata MUST:
-<ul>
-<li>Provide a description of the Catalogue, including at least the mandatory properties specified for the class <a href="#Catalogue">Catalogue</a>.</li>
-<li>Provide descriptions of Datasets in the Catalogue, including at least the mandatory properties for the class <a href="#Dataset">Dataset</a>.</li>
-<li>Provide descriptions of Distributions, if any, of Datasets in the Catalogue, including at least the mandatory properties for the class <a href="#Distribution">Distribution</a>.</li>
-<li>Provide descriptions of Data Services, if any, in the Catalogue, including at least the mandatory properties for the class <a href="#DataService">Data Service</a>.</li>
-<li>Provide descriptions of all other classes such as Agents, Contact Points,  Licences, etc.
-</ul>
-The application of the controlled vocabularies as described in section [[[#controlled-vocs]]].
+  <section class="informative">
+<h2>Example</h2>
+In this section we illustrate the recommendations for DCAT-AP for the HVD implementing regulation.
+The examples in this section are fictitious; their sole purpose is to illustrate the metadata. 
 
 
-<h3>Receiver requirements</h3>
-In order to conform to this Application Profile, an application that receives metadata MUST be able to:
-<li>Process information for all classes and properties specified in section [[[#quick-reference]]].</li>
-<li>Process information for all controlled vocabularies specified in section [[[#controlled-vocs]]].</li>
-"Processing" means that receivers must accept incoming data and transparently provide these data to applications and services. 
-It does neither imply nor prescribe what applications and services finally do with the data (parse, convert, store, make searchable, display to users, etc.).
+<h3>Datasets in scope of HVD</h3>
+
+<p>Consider that a dataset "The population of bees" is within scope of the HVD while another dataset "The population of wasps" is not.
+Both datasets however, are in scope of the INSPIRE directive.</p>
+
+<div class="h3 examples" id="example-bees_wasps_dataset">Example 1 - Bees and wasps population datasets</div>
+
+
+<p>Both datasets are published by the Environment Agency of the EU Memberstate <code>ExampleMS</code> using a persistent identifier.</p>
+
+<div class="h3 examples" id="example-ms_dataset">Example 2 - MS dataset</div>
+
+
+<p>The datasets are published on the EU Memberstates national data portal <code>https://dataportal.exampleMS.gov</code>.
+This portal provides another identifier to the datasets. 
+Because that new identifier is not the master identifier, the portal avoids this by sharing this identifier in its published DCAT-AP catalogue by listing it as an additional identifier.</p>
+
+<div class="h3 examples" id="example-ms_dataset_2_identifiers">Example 3 - MS dataset with 2 identifiers</div>
+
+<h3>Bulk downloads for HVD datasets</h3>
+
+<p>The datasets are downloadable in various formats and level of detail. In our example, the data is available in two formats: RDF and ESRI shapefile format.
+According to the HVD regulation the datasets must minimally be available in bulk download with the granularity of 50 square kilometers and with a bi-yearly update frequency.
+It must also be available in an open format for geospatial data.
+Based on these requirements, the publisher of the dataset decides to indicate that the shape-based distribution is a HVD bulk download.</p>
+
+<div class="h3 examples" id="example-ms_dataset_2_distributions">Example 4 - MS dataset with 2 distributions</div>
+
+<p>The HVD regulation also specifies that the dataset should at least provide information about the number of bees, the calculation method, the amount of honey being harvested and the number of beekeepers active in the area.
+The publisher describes the data semantically using an application profile, and provides detailed data schema documentation for each distribution.</p>
+
+<div class="h3 examples" id="example-ms_dataset_hvd_profile">Example 5 - MS dataset conform to a profile </div>
+
+<h3>The HVD dataset is accessible via an API</h3>
+
+<p>According to the HVD regulation, the "bee population" dataset must be made available via an API. 
+The dataset publisher has an API platform deployed, via which data users have access to realtime data.
+This API platform supports all datasets of the publisher.</p>
+
+<div class="h3 examples" id="example-ms_dataset_data_service">Example 6 - MS dataset with data service </div>
+
+<p>Because the API platform is provided as the API for the "bee population" dataset, the HVD implementing regulation requirements apply.
+This means that the endpoint URL must be persistent. The publisher should perform maximal effort to keep the endpoint URL stable. 
+For instance, deploying a new API platform or changing organisation names should not impact the endpointURL.
+</p>
+<p>
+To provide information about the use of the API platform, the publisher provides OpenAPI technical documentation and an SLA to document the quality of service.</p>
+
+<div class="h3 examples" id="example-data_service_openapi_sla">Example 7 - MS data service with OpenAPI and SLA</div>
+
+<p>To address any questions by the users the publisher operates a service desk.</p>
+
+<div class="h3 examples" id="example-data_service_service_desk">Example 8 - MS data service with publisher service desk</div>
+
+<h3>Expressing legal conditions</h3>
+
+<p>The Member State (MS) imposes, via its legislation, to use national data licences for public bodies.
+Therefore, the dataset publisher is required to use one of them. 
+As support to the community, the MS has published the data licences as a SKOS taxonomy, using persistent URIs.
+
+For the "wasp population" dataset, a restrictive licence is chosen because the data is based on information that has commercial rights including fees.
+The "bee population" dataset is shared with a very permissive licence.</p>
+
+<div class="h3 examples" id="example-ms_dataset_2_licenses">Example 9 - MS dataset distributions with different licences</div>
+
+<p>In order to support the assessment of the used licences, the MS maps the licences to the NAL Licences [[NAL-Licence]].</p>
+
+
+<div class="h3 examples" id="example-map_licenses">Example 10 - Mapping licences</div>
+
+<p>
+The HVD regulation requires the licence for the Bee population dataset is at least as permissive as CC-BY 4.0.
+Since the Bee population licence is <code>https://data.exampleMS.gov/resource/FreeAndOpen</code> and it is an exact match with <code>http://publications.europa.eu/resource/authority/licence/CC0</code>, and this CC0 licence is more permissive than CC-BY-4.0, the HVD requirement is met.
+</p><p>
+Because in producing the RDF representation additional provenance information is included that is sensitive, the publisher changes the licence for that distribution to a more restrictive one.
+</p>
+
+<div class="h3 examples" id="example-restrict_licenses">Example 11 - Restricting licences</div>
+
+<p>
+Although this restricted licence <code>https://data.exampleMS.gov/resource/NoCommercialUseWithFees</code> does not meet the HVD requirements for the "bee population" dataset, the "bee population" dataset is still conformant to the HVD implementing regulation as the RDF distribution was not within scope of the HVD. 
+The same reasoning holds for the "wasp population" dataset.
+This illustrates the flexibility the DCAT-AP HVD specification offers to address complex and rare scenarios data publishers might face.
+</p><p>
+The Data Service <code>exampleMS:EAMS-APIplatform</code> provides access to both datasets. 
+The legal conditions on the usage of the platform for the "bee population" dataset is a combination of the API platform conditions (e.g. no misuse by triggering DDOS activities, no sharing of access tokens to third parties, etc. ) and the dataset conditions.
+The API request <code>https://orgea.exampleMS.gov/api/v2/beepopulation/</code> has thus different conditions than <code>https://orgea.exampleMS.gov/api/v2/wasppopulation/</code>.
+Therefore, the nature of the licence document, associated with a Data Service, is usually more oriented to the use of the API platform rather than to the use of the data it provides access too.</p><p>
+In the example the 'Terms of Use' for the API platform are mentioned as the license.
+In addition, the API platform can also indicate the SLA it offers. 
+</p>
+
+<div class="h3 examples" id="example-data_service_terms_sla">Example 12 - Data service with terms and SLA</div>
+
+<h3>Reporting</h3>
+
+<p>The MS reports its HVD conformance status by providing a catalogue containing all metadata in scope of HVD.
+To facilitate the conformance assessment, it will only include the Datasets, Data Services and Distributions that are in scope of HVD.
+The catalogue will also contain any additional supportive information such as ContactPoints, Agents and the mapping for the licences to the EU Licences.</p>
+
+<div class="h3 examples" id="example-ms_catalogue">Example 13 - MS Catalogue</div>
+
+<p>To reduce the risk of misinterpretation, the Catalogue Resource connecting properties such as <code>dcat:servesDataset</code> and <code>dcat:distribution</code> should be inspected to not refer to Catalogued Resources outside the scope of HVD. In the example below, the reference to the RDF distribution for the "bee population" and the "wasp population" dataset are removed from the reporting catalogue.</p>
+
+<div class="h3 examples" id="example-ms_catalogue_hvd">Example 14 - MS Catalogue in HVD scope</div>
+
+<p>Based on this catalogue the MS can be audited for its conformance. During the assessment it might occur that the supplied information is not sufficient, and that the assesement must follow the references outside the supplied catalogue. E.g., when assessing the permissiveness of the licences the details of the referenced EU Licence must be consulted.
+Crossing these bounderaries is a regular occurnce and it can be done during the assessment without impacting the results when the supplied data is based on persistent identifiers (PURIs).</p><p>
+The use of dereferenceable persistent identifiers could also lead to another agreemnent to supply a more condensed representation of the reporting catalogue.
+Under the condition that all catalogued resources in scope of HVD are in the Portal for European Data [[DEU]], then the MS could simply supply the reduced catalogue as:</p>
+
+<div class="h3 examples" id="example-ms_catalogue_simple">Example 15 - MS Catalogue reduced</div>
+
+This illustrates that when the dataset publishers provide the necessary information and this is well integrated in the network of sharing metadata through the MS to the Portal for European Data, the data exhange for the reporting can be reduced to a minimum.
+
 </section>
 
  
 
-<!--
 <section id="quick-reference" class="appendix">
 
 <h2>Quick Reference of Classes and Properties</h2>
 
+This section provides a condensed tabular overview of the mentioned classes and properties in this specification.
+The properties are grouped under headings <it>mandatory, recommended, optional</it> and <it>deprecated</it>. These terms have the following meaning.
+<ul>
+<li>Mandatory property: a receiver MUST be able to process the information for that property; a sender MUST provide the information for that property.</li>
+<li>Recommended property: a receiver MUST be able to process the information for that property; a sender SHOULD provide the information for that property if it is available.</li>
+<li>Optional property: a receiver MUST be able to process the information for that property; a sender MAY provide the information for that property but is not obliged to do so.</li>
+<li>Deprecated property: a receiver SHOULD be able to process information about instances of that property; a sender SHOULD NOT provide the information about instances of that property.</li>
+</ul>
 
-<table id="table-quickoverview" class="simple">
-<thead><tr><th>Class</th><th>Class IRI</th><th>Properties</th></tr></thead>
-<tbody>
-
-<tr><td>
-		<a href="#Agent">Agent</a>
-	</td><td>
-		<div class="shorten">
-		http://xmlns.com/foaf/0.1/Agent
-		</div>
-	</td><td>
-        
-
-<tr><td>
-		<a href="#Catalogue">Catalogue</a>
-	</td><td>
-		<div class="shorten">
-		http://www.w3.org/ns/dcat#Catalog
-		</div>
-	</td><td>
-        
-	<table class="simple">
-	<thead><th>Property</th><th>Property IRI</th></tr></thead>
+<table id="table-quickoverview" class="simple" style="width:100%; table-layout: fixed; word-wrap:break-word;">
+	<thead>
+		<tr><th>Class</th><th>Class IRI</th><th>Property Type</type><th>Property</th><th>Property IRI</th></tr>
+	</thead>
 	<tbody>
-        <tr> <td colspan="2">Mandatory </td> </tr>
-        
-	   
-        
-	   
-        
-	   
-	   <tr><td>
-	        <a href="#Catalogue.publisher">publisher </a>
-	     </td><td>
-		<div class="shorten">
-	       http://purl.org/dc/terms/publisher
-		</div>
-	   </td></tr>
-           
-        
-	   
-        
-	   
-        
-        <tr> <td colspan="2">Recommended</td> </tr>
-        
-	   
-	   <tr><td>
-	        <a href="#Catalogue.dataset">dataset </a>
-	     </td><td>
-		<div class="shorten">
-	       http://www.w3.org/ns/dcat#dataset
-		</div>
-	   </td></tr>
-           
-        
-	   
-	   <tr><td>
-	        <a href="#Catalogue.licence">licence </a>
-	     </td><td>
-		<div class="shorten">
-	       http://purl.org/dc/terms/license
-		</div>
-	   </td></tr>
-           
-        
-	   
-        
-	   
-        
-	   
-	   <tr><td>
-	        <a href="#Catalogue.service">service </a>
-	     </td><td>
-		<div class="shorten">
-	       http://www.w3.org/ns/dcat#service
-		</div>
-	   </td></tr>
-           
-        
-        <tr> <td colspan="2">Optional</td> </tr>
-        
-	   
-        
-	   
-        
-	   
-        
-	   
-	   <tr><td>
-	        <a href="#Catalogue.record">record </a>
-	     </td><td>
-		<div class="shorten">
-	       http://www.w3.org/ns/dcat#record 
-		</div>
-	   </td></tr>
-           
-        
-	   
-        
-        </tbody>
-	</table>
-        
-
-<tr><td>
-		<a href="#CatalogueRecord">Catalogue Record</a>
-	</td><td>
-		<div class="shorten">
-		http://www.w3.org/ns/dcat#CatalogRecord
-		</div>
-	</td><td>
-        
-	<table class="simple">
-	<thead><th>Property</th><th>Property IRI</th></tr></thead>
+		
+				
+					<tr>
+						<td><a href="#Agent">Agent</a></td>
+						<td><div class="shorten">http://xmlns.com/foaf/0.1/Agent</div></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				
+			</tr>
+		
+				
+					
+						
+							<tr>
+								<td><a href="#Catalogue">Catalogue</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#Catalog</div></td>
+								<td>Mandatory</td>
+								<td><a href="#Catalogue.applicablelegislation">applicable legislation </a></td>
+								<td><div class="shorten">http://data.europa.eu/r5r/applicableLegislation</div></td>
+							</tr>
+						
+					
+						
+					
+						
+					
+						
+							<tr>
+								<td><a href="#Catalogue">Catalogue</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#Catalog</div></td>
+								<td>Mandatory</td>
+								<td><a href="#Catalogue.publisher">publisher </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/publisher</div></td>
+							</tr>
+						
+					
+						
+					
+						
+					
+					
+						
+					
+						
+							<tr>
+								<td><a href="#Catalogue">Catalogue</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#Catalog</div></td>
+								<td>Recommended</td>
+								<td><a href="#Catalogue.dataset">dataset </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#dataset</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Catalogue">Catalogue</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#Catalog</div></td>
+								<td>Recommended</td>
+								<td><a href="#Catalogue.licence">licence </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/license</div></td>
+							</tr>
+						
+					
+						
+					
+						
+					
+						
+							<tr>
+								<td><a href="#Catalogue">Catalogue</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#Catalog</div></td>
+								<td>Recommended</td>
+								<td><a href="#Catalogue.service">service </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#service</div></td>
+							</tr>
+						
+					
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+							<tr>
+								<td><a href="#Catalogue">Catalogue</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#Catalog</div></td>
+								<td>Optional</td>
+								<td><a href="#Catalogue.record">record </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#record</div></td>
+							</tr>
+						
+					
+						
+					
+				
+			</tr>
+		
+				
+					
+						
+							<tr>
+								<td><a href="#CatalogueRecord">Catalogue Record</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#CatalogRecord</div></td>
+								<td>Mandatory</td>
+								<td><a href="#CatalogueRecord.primarytopic">primary topic </a></td>
+								<td><div class="shorten">http://xmlns.com/foaf/0.1/primaryTopic</div></td>
+							</tr>
+						
+					
+					
+						
+					
+					
+						
+					
+				
+			</tr>
+		
+				
+					<tr>
+						<td><a href="#CataloguedResource">Catalogued Resource</a></td>
+						<td><div class="shorten">http://www.w3.org/ns/dcat#Resource</div></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				
+			</tr>
+		
+				
+					<tr>
+						<td><a href="#Concept">Concept</a></td>
+						<td><div class="shorten">http://www.w3.org/2004/02/skos/core#Concept</div></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				
+			</tr>
+		
+				
+					
+						
+							<tr>
+								<td><a href="#DataService">Data Service</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#DataService</div></td>
+								<td>Mandatory</td>
+								<td><a href="#DataService.applicablelegislation">applicable legislation </a></td>
+								<td><div class="shorten">http://data.europa.eu/r5r/applicableLegislation</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#DataService">Data Service</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#DataService</div></td>
+								<td>Mandatory</td>
+								<td><a href="#DataService.contactpoint">contact point </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#contactPoint</div></td>
+							</tr>
+						
+					
+						
+					
+						
+							<tr>
+								<td><a href="#DataService">Data Service</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#DataService</div></td>
+								<td>Mandatory</td>
+								<td><a href="#DataService.endpointURL">endpoint URL </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#endpointURL</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#DataService">Data Service</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#DataService</div></td>
+								<td>Mandatory</td>
+								<td><a href="#DataService.HVDcategory">HVD category </a></td>
+								<td><div class="shorten">http://data.europa.eu/r5r/hvdCategory</div></td>
+							</tr>
+						
+					
+						
+					
+						
+							<tr>
+								<td><a href="#DataService">Data Service</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#DataService</div></td>
+								<td>Mandatory</td>
+								<td><a href="#DataService.qualityofService">quality of Service </a></td>
+								<td><div class="shorten">http://xmlns.com/foaf/0.1/Page</div></td>
+							</tr>
+						
+					
+						
+					
+						
+					
+						
+							<tr>
+								<td><a href="#DataService">Data Service</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#DataService</div></td>
+								<td>Mandatory</td>
+								<td><a href="#DataService.title">title </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/title</div></td>
+							</tr>
+						
+					
+					
+						
+					
+						
+					
+						
+							<tr>
+								<td><a href="#DataService">Data Service</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#DataService</div></td>
+								<td>Recommended</td>
+								<td><a href="#DataService.endpointdescription">endpoint description </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#endpointDescription</div></td>
+							</tr>
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+							<tr>
+								<td><a href="#DataService">Data Service</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#DataService</div></td>
+								<td>Recommended</td>
+								<td><a href="#DataService.servesdataset">serves dataset </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#servesDataset</div></td>
+							</tr>
+						
+					
+						
+					
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+							<tr>
+								<td><a href="#DataService">Data Service</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#DataService</div></td>
+								<td>Optional</td>
+								<td><a href="#DataService.licence">licence </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/license</div></td>
+							</tr>
+						
+					
+						
+					
+						
+							<tr>
+								<td><a href="#DataService">Data Service</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#DataService</div></td>
+								<td>Optional</td>
+								<td><a href="#DataService.rights">rights </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/rights</div></td>
+							</tr>
+						
+					
+						
+					
+						
+					
+				
+			</tr>
+		
+				
+					
+						
+							<tr>
+								<td><a href="#Dataset">Dataset</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></td>
+								<td>Mandatory</td>
+								<td><a href="#Dataset.applicablelegislation">applicable legislation </a></td>
+								<td><div class="shorten">http://data.europa.eu/r5r/applicableLegislation</div></td>
+							</tr>
+						
+					
+						
+					
+						
+					
+						
+					
+						
+							<tr>
+								<td><a href="#Dataset">Dataset</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></td>
+								<td>Mandatory</td>
+								<td><a href="#Dataset.HVDCategory">HVD Category </a></td>
+								<td><div class="shorten">http://data.europa.eu/r5r/hvdCategory</div></td>
+							</tr>
+						
+					
+						
+					
+						
+					
+					
+						
+					
+						
+					
+						
+							<tr>
+								<td><a href="#Dataset">Dataset</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></td>
+								<td>Recommended</td>
+								<td><a href="#Dataset.contactpoint">contact point </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#contactPoint</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Dataset">Dataset</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></td>
+								<td>Recommended</td>
+								<td><a href="#Dataset.datasetdistribution">dataset distribution </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#distribution</div></td>
+							</tr>
+						
+					
+						
+					
+						
+					
+						
+							<tr>
+								<td><a href="#Dataset">Dataset</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></td>
+								<td>Recommended</td>
+								<td><a href="#Dataset.publisher">publisher </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/publisher</div></td>
+							</tr>
+						
+					
+					
+						
+					
+						
+							<tr>
+								<td><a href="#Dataset">Dataset</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></td>
+								<td>Optional</td>
+								<td><a href="#Dataset.conformsto">conforms to </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/conformsTo</div></td>
+							</tr>
+						
+					
+						
+					
+						
+					
+						
+					
+						
+							<tr>
+								<td><a href="#Dataset">Dataset</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></td>
+								<td>Optional</td>
+								<td><a href="#Dataset.otheridentifier">other identifier </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/adms#identifier</div></td>
+							</tr>
+						
+					
+						
+					
+				
+			</tr>
+		
+				
+					
+						
+					
+						
+							<tr>
+								<td><a href="#Distribution">Distribution</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#Distribution</div></td>
+								<td>Mandatory</td>
+								<td><a href="#Distribution.accessURL">access URL </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#accessURL</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Distribution">Distribution</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#Distribution</div></td>
+								<td>Mandatory</td>
+								<td><a href="#Distribution.applicablelegislation">applicable legislation </a></td>
+								<td><div class="shorten">http://data.europa.eu/r5r/applicableLegislation</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Distribution">Distribution</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#Distribution</div></td>
+								<td>Mandatory</td>
+								<td><a href="#Distribution.HVDCategory">HVD Category </a></td>
+								<td><div class="shorten">http://data.europa.eu/r5r/hvdCategory</div></td>
+							</tr>
+						
+					
+						
+					
+						
+					
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+							<tr>
+								<td><a href="#Distribution">Distribution</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#Distribution</div></td>
+								<td>Recommended</td>
+								<td><a href="#Distribution.licence">licence </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/license</div></td>
+							</tr>
+						
+					
+						
+					
+					
+						
+							<tr>
+								<td><a href="#Distribution">Distribution</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#Distribution</div></td>
+								<td>Optional</td>
+								<td><a href="#Distribution.accessservice">access service </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#accessService</div></td>
+							</tr>
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+							<tr>
+								<td><a href="#Distribution">Distribution</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#Distribution</div></td>
+								<td>Optional</td>
+								<td><a href="#Distribution.linkedschemas">linked schemas </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/conformsTo</div></td>
+							</tr>
+						
+					
+				
+			</tr>
+		
+				
+					<tr>
+						<td><a href="#Document">Document</a></td>
+						<td><div class="shorten">http://xmlns.com/foaf/0.1/Document</div></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				
+			</tr>
+		
+				
+					<tr>
+						<td><a href="#Identifier">Identifier</a></td>
+						<td><div class="shorten">http://www.w3.org/ns/adms#identifier</div></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				
+			</tr>
+		
+				
+					
+						
+							<tr>
+								<td><a href="#Kind">Kind</a></td>
+								<td><div class="shorten">http://www.w3.org/2006/vcard/ns#Kind</div></td>
+								<td>Mandatory</td>
+								<td><a href="#Kind.contactpage">contact page </a></td>
+								<td><div class="shorten">http://www.w3.org/2006/vcard/ns#hasURL</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Kind">Kind</a></td>
+								<td><div class="shorten">http://www.w3.org/2006/vcard/ns#Kind</div></td>
+								<td>Mandatory</td>
+								<td><a href="#Kind.email">email </a></td>
+								<td><div class="shorten">http://www.w3.org/2006/vcard/ns#hasEmail</div></td>
+							</tr>
+						
+					
+					
+						
+					
+						
+					
+					
+						
+					
+						
+					
+				
+			</tr>
+		
+				
+					<tr>
+						<td><a href="#LegalResource">Legal Resource</a></td>
+						<td><div class="shorten">http://data.europa.eu/eli/ontology#LegalResource</div></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				
+			</tr>
+		
+				
+					<tr>
+						<td><a href="#LicenceDocument">Licence Document</a></td>
+						<td><div class="shorten">http://purl.org/dc/terms/LicenseDocument</div></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				
+			</tr>
+		
+				
+					<tr>
+						<td><a href="#Literal">Literal</a></td>
+						<td><div class="shorten">http://www.w3.org/2000/01/rdf-schema#Literal</div></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				
+			</tr>
+		
+				
+					<tr>
+						<td><a href="#Resource">Resource</a></td>
+						<td><div class="shorten">http://www.w3.org/2000/01/rdf-schema#Resource</div></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				
+			</tr>
+		
+				
+					<tr>
+						<td><a href="#Rightsstatement">Rights statement</a></td>
+						<td><div class="shorten">http://purl.org/dc/terms/RightsStatement</div></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				
+			</tr>
+		
+				
+					<tr>
+						<td><a href="#Standard">Standard</a></td>
+						<td><div class="shorten">http://purl.org/dc/terms/Standard</div></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				
+			</tr>
+		
 	<tbody>
-        <tr> <td colspan="2">Mandatory </td> </tr>
-        
-	   
-	   <tr><td>
-	        <a href="#CatalogueRecord.primarytopic">primary topic </a>
-	     </td><td>
-		<div class="shorten">
-	       http://xmlns.com/foaf/0.1/primaryTopic
-		</div>
-	   </td></tr>
-           
-        
-        <tr> <td colspan="2">Recommended</td> </tr>
-        
-	   
-        
-        <tr> <td colspan="2">Optional</td> </tr>
-        
-	   
-        
-        </tbody>
-	</table>
-        
-
-<tr><td>
-		<a href="#CataloguedResource">Catalogued Resource</a>
-	</td><td>
-		<div class="shorten">
-		http://www.w3.org/ns/dcat#Resource
-		</div>
-	</td><td>
-        
-
-<tr><td>
-		<a href="#Concept">Concept</a>
-	</td><td>
-		<div class="shorten">
-		http://www.w3.org/2004/02/skos/core#Concept
-		</div>
-	</td><td>
-        
-	<table class="simple">
-	<thead><th>Property</th><th>Property IRI</th></tr></thead>
-	<tbody>
-        <tr> <td colspan="2">Mandatory </td> </tr>
-        
-	   
-        
-        <tr> <td colspan="2">Recommended</td> </tr>
-        
-	   
-        
-        <tr> <td colspan="2">Optional</td> </tr>
-        
-	   
-	   <tr><td>
-	        <a href="#Concept.preferredlabel">preferred label </a>
-	     </td><td>
-		<div class="shorten">
-	       http://www.w3.org/2004/02/skos/core#prefLabel 
-		</div>
-	   </td></tr>
-           
-        
-        </tbody>
-	</table>
-        
-
-<tr><td>
-		<a href="#DataService">Data Service</a>
-	</td><td>
-		<div class="shorten">
-		http://www.w3.org/ns/dcat#DataService
-		</div>
-	</td><td>
-        
-	<table class="simple">
-	<thead><th>Property</th><th>Property IRI</th></tr></thead>
-	<tbody>
-        <tr> <td colspan="2">Mandatory </td> </tr>
-        
-	   
-        
-	   
-	   <tr><td>
-	        <a href="#DataService.endpointURL">endpoint URL </a>
-	     </td><td>
-		<div class="shorten">
-	       http://www.w3.org/ns/dcat#endpointURL
-		</div>
-	   </td></tr>
-           
-        
-	   
-        
-	   
-        
-	   
-        
-	   
-        
-	   
-	   <tr><td>
-	        <a href="#DataService.title">title </a>
-	     </td><td>
-		<div class="shorten">
-	       http://purl.org/dc/terms/title
-		</div>
-	   </td></tr>
-           
-        
-        <tr> <td colspan="2">Recommended</td> </tr>
-        
-	   
-	   <tr><td>
-	        <a href="#DataService.endpointdescription">endpoint description </a>
-	     </td><td>
-		<div class="shorten">
-	       http://www.w3.org/ns/dcat#endpointDescription
-		</div>
-	   </td></tr>
-           
-        
-	   
-        
-	   
-        
-	   
-        
-	   
-        
-	   
-	   <tr><td>
-	        <a href="#DataService.servesdataset">serves dataset </a>
-	     </td><td>
-		<div class="shorten">
-	       http://www.w3.org/ns/dcat#servesDataset
-		</div>
-	   </td></tr>
-           
-        
-	   
-        
-        <tr> <td colspan="2">Optional</td> </tr>
-        
-	   
-        
-	   
-        
-	   
-	   <tr><td>
-	        <a href="#DataService.HVDCategory">HVD Category </a>
-	     </td><td>
-		<div class="shorten">
-	       http://data.europa.eu/r5r/hvdCategory 
-		</div>
-	   </td></tr>
-           
-        
-	   
-	   <tr><td>
-	        <a href="#DataService.landingpage">landing page </a>
-	     </td><td>
-		<div class="shorten">
-	       http://www.w3.org/ns/dcat#landingPage 
-		</div>
-	   </td></tr>
-           
-        
-	   
-	   <tr><td>
-	        <a href="#DataService.licence">licence </a>
-	     </td><td>
-		<div class="shorten">
-	       http://purl.org/dc/terms/license 
-		</div>
-	   </td></tr>
-           
-        
-	   
-        
-	   
-        
-        </tbody>
-	</table>
-        
-
-<tr><td>
-		<a href="#Dataset">Dataset</a>
-	</td><td>
-		<div class="shorten">
-		http://www.w3.org/ns/dcat#Dataset
-		</div>
-	</td><td>
-        
-	<table class="simple">
-	<thead><th>Property</th><th>Property IRI</th></tr></thead>
-	<tbody>
-        <tr> <td colspan="2">Mandatory </td> </tr>
-        
-	   
-        
-	   
-        
-	   
-        
-	   
-        
-	   
-        
-	   
-        
-	   
-        
-	   
-        
-        <tr> <td colspan="2">Recommended</td> </tr>
-        
-	   
-        
-	   
-        
-	   
-	   <tr><td>
-	        <a href="#Dataset.contactpoint">contact point </a>
-	     </td><td>
-		<div class="shorten">
-	       http://www.w3.org/ns/dcat#contactPoint
-		</div>
-	   </td></tr>
-           
-        
-	   
-	   <tr><td>
-	        <a href="#Dataset.datasetdistribution">dataset distribution </a>
-	     </td><td>
-		<div class="shorten">
-	       http://www.w3.org/ns/dcat#distribution
-		</div>
-	   </td></tr>
-           
-        
-	   
-        
-	   
-        
-	   
-	   <tr><td>
-	        <a href="#Dataset.publisher">publisher </a>
-	     </td><td>
-		<div class="shorten">
-	       http://purl.org/dc/terms/publisher
-		</div>
-	   </td></tr>
-           
-        
-	   
-        
-        <tr> <td colspan="2">Optional</td> </tr>
-        
-	   
-	   <tr><td>
-	        <a href="#Dataset.applicablelegislation">applicable legislation </a>
-	     </td><td>
-		<div class="shorten">
-	       http://data.europa.eu/r5r/applicableLegislation 
-		</div>
-	   </td></tr>
-           
-        
-	   
-	   <tr><td>
-	        <a href="#Dataset.conformsto">conforms to </a>
-	     </td><td>
-		<div class="shorten">
-	       http://purl.org/dc/terms/conformsTo 
-		</div>
-	   </td></tr>
-           
-        
-	   
-        
-	   
-        
-	   
-	   <tr><td>
-	        <a href="#Dataset.HVDCategory">HVD Category </a>
-	     </td><td>
-		<div class="shorten">
-	       http://data.europa.eu/r5r/hvdCategory 
-		</div>
-	   </td></tr>
-           
-        
-	   
-	   <tr><td>
-	        <a href="#Dataset.otheridentifier">other identifier </a>
-	     </td><td>
-		<div class="shorten">
-	       http://www.w3.org/ns/adms#identifier 
-		</div>
-	   </td></tr>
-           
-        
-	   
-        
-	   
-	   <tr><td>
-	        <a href="#Dataset.type">type </a>
-	     </td><td>
-		<div class="shorten">
-	       http://purl.org/dc/terms/type 
-		</div>
-	   </td></tr>
-           
-        
-        </tbody>
-	</table>
-        
-
-<tr><td>
-		<a href="#Distribution">Distribution  </a>
-	</td><td>
-		<div class="shorten">
-		http://www.w3.org/ns/dcat#Distribution
-		</div>
-	</td><td>
-        
-	<table class="simple">
-	<thead><th>Property</th><th>Property IRI</th></tr></thead>
-	<tbody>
-        <tr> <td colspan="2">Mandatory </td> </tr>
-        
-	   
-        
-	   
-	   <tr><td>
-	        <a href="#Distribution.accessURL">access URL </a>
-	     </td><td>
-		<div class="shorten">
-	       http://www.w3.org/ns/dcat#accessURL
-		</div>
-	   </td></tr>
-           
-        
-	   
-        
-	   
-        
-	   
-        
-        <tr> <td colspan="2">Recommended</td> </tr>
-        
-	   
-        
-	   
-        
-	   
-        
-	   
-	   <tr><td>
-	        <a href="#Distribution.licence">licence </a>
-	     </td><td>
-		<div class="shorten">
-	       http://purl.org/dc/terms/license
-		</div>
-	   </td></tr>
-           
-        
-	   
-        
-        <tr> <td colspan="2">Optional</td> </tr>
-        
-	   
-	   <tr><td>
-	        <a href="#Distribution.accessservice">access service </a>
-	     </td><td>
-		<div class="shorten">
-	       http://www.w3.org/ns/dcat#accessService 
-		</div>
-	   </td></tr>
-           
-        
-	   
-        
-	   
-	   <tr><td>
-	        <a href="#Distribution.HVDCategory">HVD Category </a>
-	     </td><td>
-		<div class="shorten">
-	       http://data.europa.eu/r5r/hvdCategory 
-		</div>
-	   </td></tr>
-           
-        
-	   
-        
-	   
-	   <tr><td>
-	        <a href="#Distribution.linkedschemas">linked schemas </a>
-	     </td><td>
-		<div class="shorten">
-	       http://purl.org/dc/terms/conformsTo 
-		</div>
-	   </td></tr>
-           
-        
-        </tbody>
-	</table>
-        
-
-<tr><td>
-		<a href="#Document">Document</a>
-	</td><td>
-		<div class="shorten">
-		http://xmlns.com/foaf/0.1/Document
-		</div>
-	</td><td>
-        
-
-<tr><td>
-		<a href="#Identifier">Identifier</a>
-	</td><td>
-		<div class="shorten">
-		http://www.w3.org/ns/adms#identifier
-		</div>
-	</td><td>
-        
-	<table class="simple">
-	<thead><th>Property</th><th>Property IRI</th></tr></thead>
-	<tbody>
-        <tr> <td colspan="2">Mandatory </td> </tr>
-        
-	   
-	   <tr><td>
-	        <a href="#Identifier.notation">notation </a>
-	     </td><td>
-		<div class="shorten">
-	       http://www.w3.org/2004/02/skos/core#notation
-		</div>
-	   </td></tr>
-           
-        
-        <tr> <td colspan="2">Recommended</td> </tr>
-        
-	   
-        
-        <tr> <td colspan="2">Optional</td> </tr>
-        
-	   
-        
-        </tbody>
-	</table>
-        
-
-<tr><td>
-		<a href="#Kind">Kind</a>
-	</td><td>
-		<div class="shorten">
-		http://www.w3.org/2006/vcard/ns#Kind
-		</div>
-	</td><td>
-        
-	<table class="simple">
-	<thead><th>Property</th><th>Property IRI</th></tr></thead>
-	<tbody>
-        <tr> <td colspan="2">Mandatory </td> </tr>
-        
-	   
-        
-	   
-        
-        <tr> <td colspan="2">Recommended</td> </tr>
-        
-	   
-        
-	   
-        
-        <tr> <td colspan="2">Optional</td> </tr>
-        
-	   
-	   <tr><td>
-	        <a href="#Kind.contactpage">contact page </a>
-	     </td><td>
-		<div class="shorten">
-	       http://xmlns.com/foaf/0.1/page 
-		</div>
-	   </td></tr>
-           
-        
-	   
-	   <tr><td>
-	        <a href="#Kind.email">email </a>
-	     </td><td>
-		<div class="shorten">
-	       http://www.w3.org/2006/vcard/ns#hasEmail 
-		</div>
-	   </td></tr>
-           
-        
-        </tbody>
-	</table>
-        
-
-<tr><td>
-		<a href="#LegalResource">Legal Resource</a>
-	</td><td>
-		<div class="shorten">
-		http://data.europa.eu/eli/ontology#LegalResource
-		</div>
-	</td><td>
-        
-
-<tr><td>
-		<a href="#LicenceDocument">Licence Document</a>
-	</td><td>
-		<div class="shorten">
-		http://purl.org/dc/terms/LicenseDocument
-		</div>
-	</td><td>
-        
-	<table class="simple">
-	<thead><th>Property</th><th>Property IRI</th></tr></thead>
-	<tbody>
-        <tr> <td colspan="2">Mandatory </td> </tr>
-        
-	   
-        
-	   
-        
-        <tr> <td colspan="2">Recommended</td> </tr>
-        
-	   
-        
-	   
-	   <tr><td>
-	        <a href="#LicenceDocument.type">type </a>
-	     </td><td>
-		<div class="shorten">
-	       http://purl.org/dc/terms/type
-		</div>
-	   </td></tr>
-           
-        
-        <tr> <td colspan="2">Optional</td> </tr>
-        
-	   
-	   <tr><td>
-	        <a href="#LicenceDocument.sameas">same as </a>
-	     </td><td>
-		<div class="shorten">
-	       http://www.w3.org/2002/07/owl#sameAs 
-		</div>
-	   </td></tr>
-           
-        
-	   
-        
-        </tbody>
-	</table>
-        
-
-<tr><td>
-		<a href="#Literal">Literal</a>
-	</td><td>
-		<div class="shorten">
-		http://www.w3.org/2000/01/rdf-schema#Literal
-		</div>
-	</td><td>
-        
-
-<tr><td>
-		<a href="#Resource">Resource</a>
-	</td><td>
-		<div class="shorten">
-		http://www.w3.org/2000/01/rdf-schema#Resource
-		</div>
-	</td><td>
-        
-
-<tr><td>
-		<a href="#Rightsstatement">Rights statement</a>
-	</td><td>
-		<div class="shorten">
-		http://purl.org/dc/terms/RightsStatement
-		</div>
-	</td><td>
-        
-
-<tr><td>
-		<a href="#Standard">Standard</a>
-	</td><td>
-		<div class="shorten">
-		http://purl.org/dc/terms/Standard
-		</div>
-	</td><td>
-        
-
-<tbody>	     
 </table>
 
 </section>
 
--->
 
 <section class="appendix">
 
@@ -4170,7 +4180,7 @@ Past and current contributors are :
 	 	Peter Isrealsson
 		, 
            
-	 	Fabian Kirstein Fraunhofer
+	 	Fabian Kirstein
 		, 
            
 	 	Michal Kitta
@@ -4378,6 +4388,7 @@ Past and current contributors are :
 {'pref':'spdx:', 'ns': 'http://spdx.org/rdf/terms#'},
 {'pref':'time:', 'ns': 'http://www.w3.org/2006/time#'},
 {'pref':'vcard:', 'ns': 'http://www.w3.org/2006/vcard/ns#'},
+{'pref':'eli:', 'ns' : 'http://data.europa.eu/eli/ontology#'},
 {'pref':'xsd:', 'ns': 'http://www.w3.org/2001/XMLSchema#'}
 				];
 
@@ -4398,4 +4409,75 @@ Past and current contributors are :
 	                selem.innerHTML = shorturl(selem.innerHTML.trim());
 			}
     </script>
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.css" />
+	<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css"> 
+	<!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js" ></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.js" ></script>
+    <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" ></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/mode/javascript/javascript.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/mode/turtle/turtle.min.js" ></script>
+    <script src="https://codemirror.net/5/mode/javascript/javascript.js" ></script>
+    <!--    <script src="https://semiceu.github.io/MLDCAT-AP/releases/1.0.0/example.js" ></script> -->
+    <script src="./html/example.js" ></script>
+	<script type="text/javascript">
+		function elementInView(elem){
+				goesIn = ($(window).height() + $(window).scrollTop()) > $(elem).offset().top;
+				goesOut = ($(window).scrollTop()) > ($(elem).offset().top + $(elem).height());
+				if (goesIn && !goesOut)
+					return 1;
+				else
+					return 0;
+			};
+
+		$(window).scroll(function(){
+			$('.CodeMirror').each(function(){
+				if (elementInView($(this))){
+					$(this).each(function(i, el){
+						el.CodeMirror.refresh();
+					});
+				}
+			});
+			
+		});
+	</script>
+	<style>
+		.CodeMirror {
+		  border: 1px solid #eee;
+		  height: auto;
+		}
+		.buttonsample {
+		cursor: pointer;
+		margin-top: 10px;
+		margin-left: 10px;
+		font-weight: 700;
+		border:0 outset buttonface;
+		background: #F5F6F8;
+		background-image: linear-gradient(to bottom,#F5F6F8,#DBDCDE);
+		border-radius:4px;
+		box-shadow:0 1px 3px #666;
+		font-family: Arial;
+		color: grey;
+		font-size: 14px;
+		padding: 10px 5px;
+		text-decoration: none;
+		float: right
+	}
+	.buttonsample:hover {color:#2a70d3}
+	.tabsstyle {
+		padding: 10px;
+		overflow: hidden;
+	}
+	li.ui-tabs-tab > a:hover {
+		background-color:dodgerblue;
+		color:white;
+	}
+  </style>
+
+    	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
 </html>

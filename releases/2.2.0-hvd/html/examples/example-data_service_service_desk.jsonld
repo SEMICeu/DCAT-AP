@@ -1,0 +1,55 @@
+{
+  "@context": {
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "vcard": "http://www.w3.org/2006/vcard/ns#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "exampleMS": "https://data.exampleMS.gov/id/dataset/",
+    "dcatap": "http://data.europa.eu/r5r/"
+  },
+  "@graph": [
+    {
+      "@id": "_:EAMS-APIplatform-contactpoint",
+      "@type": "vcard:Card",
+      "vcard:hasURL": {
+        "@id": "https://eams.jira.net/servicedesk"
+      }
+    },
+    {
+      "@id": "exampleMS:EAMS-APIplatform",
+      "@type": "dcat:DataService",
+      "dcatap:applicableLegislation": {
+        "@id": "http://data.europa.eu/eli/reg_impl/2023/138/oj"
+      },
+      "dcterms:description": {
+        "@language": "en",
+        "@value": "The EA API platform provides a uniform access to the real-time data collected by EA"
+      },
+      "dcterms:title": {
+        "@language": "en",
+        "@value": "EA API platform"
+      },
+      "dcat:contactPoint": {
+        "@id": "_:EAMS-APIplatform-contactpoint"
+      },
+      "dcat:endpointDescription": {
+        "@id": "https://orgea.exampleMS.gov/api/openAPI/index.html"
+      },
+      "dcat:endpointURL": {
+        "@id": "https://orgea.exampleMS.gov/api/v2/"
+      },
+      "dcat:servesDataset": [
+        {
+          "@id": "exampleMS:1T2p3o4B"
+        },
+        {
+          "@id": "exampleMS:1W2o3p4T"
+        }
+      ],
+      "foaf:page": {
+        "@id": "https://orgea.exampleMS.gov/api/sla.html"
+      }
+    }
+  ]
+}
