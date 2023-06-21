@@ -1,0 +1,8 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix example-ds: <https://data.gov.gr/id/dataset/> .
+@prefix nal-frequency: <http://publications.europa.eu/resource/authority/frequency/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+example-ds:BeePopulation a dcat:Dataset;
+  dcterms:accrualPeriodicity nal-frequency:ANNUAL .

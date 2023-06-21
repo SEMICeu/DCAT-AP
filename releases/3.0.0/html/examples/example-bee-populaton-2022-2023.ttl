@@ -1,0 +1,14 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix : <http://www.example.org/rdf#> .
+
+<http://data.gov.gr/id/dataset/BeePopulation2022> a dcat:Dataset ;
+   dct:title "Bee population 2022"@en;
+   dct:description "A dataset about bee population in Greece in 2022"@en;
+   dct:publisher :GreekEnvironmentAgency .
+
+
+<http://data.gov.gr/id/dataset/BeePopulation2023> a dcat:Dataset ;
+   dct:title "Bee population 2023"@en;
+   dct:description "A dataset about bee population in Greece in 2023"@en;
+   dct:publisher :GreekEnvironmentAgency .

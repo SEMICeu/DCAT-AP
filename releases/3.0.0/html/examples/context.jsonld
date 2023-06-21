@@ -1,0 +1,183 @@
+{
+  "@context": {
+    "@version": 1.1,
+
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "nal-frequency": "http://publications.europa.eu/resource/authority/frequency/",
+
+    "example": "https://data.gov.gr/",
+    "example-ds": "https://data.gov.gr/id/dataset/",
+    "example-cat": "https://data.gov.gr/id/catalog/",
+    "example-ser": "https://data.gov.gr/id/datasetseries/",
+    "example-ag": "https://agencies.gov.gr/id/",
+
+    "DatasetMemberOfADatasetSeries": {
+      "@context": {
+        "inSeries": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/dcat#inSeries",
+          "@type": "@id"
+        },
+        "next": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/dcat#next",
+          "@type": "@id"
+        },
+        "previous": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/dcat#prev",
+          "@type": "@id"
+        }
+      },
+      "@id": "http://www.w3.org/ns/dcat#Dataset"
+    },
+   "Dataset": {
+      "@context": {
+        "title": {
+          "@container": ["@set","@language"],
+          "@id": "http://purl.org/dc/terms/title"
+        },
+        "description": {
+          "@container": ["@set","@language"],
+          "@id": "http://purl.org/dc/terms/description"
+        },
+        "publisher": {
+          "@id": "http://purl.org/dc/terms/publisher",
+          "@type": "@id"
+        },
+        "releaseDate": {
+          "@id": "http://purl.org/dc/terms/issued",
+          "@type": "xsd:date"
+        },
+        "modificationDate": {
+          "@id": "http://purl.org/dc/terms/modified",
+          "@type": "xsd:date"
+        },
+        "frequency": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/accrualPeriodicity",
+          "@type": "@id"
+        },
+        "geographicalCoverage": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/spatial",
+          "@type": "@id"
+        },
+        "temporalCoverage": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/temporal",
+          "@type": "@id"
+        },
+        "datasetDistribution": {
+          "@id": "http://www.w3.org/ns/dcat#distribution",
+          "@type": "@id"
+        }
+      },
+      "@id": "http://www.w3.org/ns/dcat#Dataset"
+    },
+    "DatasetSeries": {
+      "@context": {
+        "contactPoint": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/dcat#contactPoint",
+          "@type": "@id"
+        },
+        "description": {
+          "@container": ["@set","@language"],
+          "@id": "http://purl.org/dc/terms/description"
+        },
+        "first": {
+          "@id": "http://www.w3.org/ns/dcat#first",
+          "@type": "@id"
+        },
+        "frequency": {
+          "@id": "http://purl.org/dc/terms/accrualPeriodicity",
+          "@type": "@id"
+        },
+        "geographicalCoverage": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/spatial",
+          "@type": "@id"
+        },
+        "last": {
+          "@id": "http://www.w3.org/ns/dcat#last",
+          "@type": "@id"
+        },
+        "modificationDate": {
+          "@id": "http://purl.org/dc/terms/modified",
+          "@type" : "xsd:date"
+        },
+        "publisher": {
+          "@id": "http://purl.org/dc/terms/publisher",
+          "@type": "@id"
+        },
+        "releaseDate": {
+          "@id": "http://purl.org/dc/terms/issued",
+          "@type": "xsd:date"
+        },
+        "seriesMember": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/dcat#seriesMember",
+          "@type": "@id"
+        },
+        "temporalCoverage": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/temporal",
+          "@type": "@id"
+        },
+        "title": {
+          "@container": ["@set","@language"],
+          "@id": "http://purl.org/dc/terms/title"
+        }
+      },
+      "@id": "http://www.w3.org/ns/dcat#DatasetSeries"
+    },
+  
+    "DataService":  {
+      "@context": {
+        "accessRights": {
+          "@id": "http://purl.org/dc/terms/accessRights",
+          "@type": "@id"
+        },
+        "description": {
+          "@container": ["@set","@language"],
+          "@id": "http://purl.org/dc/terms/description"
+        },
+        "endpointDescription": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/dcat#endpointDescription",
+          "@type": "@id"
+        },
+        "endpointUrl": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/dcat#endpointURL",
+          "@type": "@id"
+        },
+        "format": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/format",
+          "@type": "@id"
+        },
+        "licence": {
+          "@id": "http://purl.org/dc/terms/license",
+          "@type": "@id"
+        },
+        "servesDataset": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/dcat#servesDataset",
+          "@type": "@id"
+        },
+        "title": {
+          "@container": ["@set","@language"],
+          "@id": "http://purl.org/dc/terms/title"
+        }
+      },
+      "@id": "http://www.w3.org/ns/dcat#DataService"
+    },
+    "Distribution":  {
+      "@id": "http://www.w3.org/ns/dcat#Distribution"
+    }
+  }
+}
