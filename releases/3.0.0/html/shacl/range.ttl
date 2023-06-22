@@ -83,7 +83,7 @@
 
 :Agent_Shape
     a sh:NodeShape ;
-    sh:name "Agent"@en ;
+    rdfs:label "Agent"@en ;
     sh:property [
         sh:class skos:Concept ;
         sh:path dct:type ;
@@ -93,7 +93,7 @@
 
 :CatalogRecord_Shape
     a sh:NodeShape ;
-    sh:name "Catalog Record"@en ;
+    rdfs:label "Catalog Record"@en ;
     sh:property [
         sh:node :DcatResource_Shape ;
         sh:path foaf:primaryTopic ;
@@ -119,7 +119,7 @@
 
 :Catalog_Shape
     a sh:NodeShape ;
-    sh:name "Catalog"@en ;
+    rdfs:label "Catalog"@en ;
     sh:property [
         sh:class dct:LinguisticSystem ;
         sh:path dct:language ;
@@ -182,7 +182,7 @@
 
 :DataService_Shape
     a sh:NodeShape ;
-    sh:name "Data Service"@en ;
+    rdfs:label "Data Service"@en ;
     sh:property [
         sh:class dcat:Dataset ;
         sh:path dcat:servesDataset ;
@@ -200,7 +200,7 @@
 
 :Dataset_Shape
     a sh:NodeShape ;
-    sh:name "Dataset"@en ;
+    rdfs:label "Dataset"@en ;
     sh:property [
         sh:class vcard:Kind ;
         sh:path dcat:contactPoint ;
@@ -315,7 +315,7 @@
 
 :Distribution_Shape
     a sh:NodeShape ;
-    sh:name "Distribution"@en ;
+    rdfs:label "Distribution"@en ;
     sh:property [
         sh:class dct:Standard ;
         sh:path dct:conformsTo ;
@@ -378,7 +378,7 @@
 
 :LicenceDocument_Shape
     a sh:NodeShape ;
-    sh:name "Licence Document"@en ;
+    rdfs:label "Licence Document"@en ;
     sh:property [
         sh:class skos:Concept ;
         sh:path dct:type ;
@@ -389,7 +389,7 @@
 
 :PeriodOfTime_Shape
     a sh:NodeShape ;
-    sh:name "PeriodOfTime"@en ;
+    rdfs:label "PeriodOfTime"@en ;
     sh:property [
     ], [
         sh:class time:Instant ;
@@ -404,7 +404,7 @@
 
 :Relationship_Shape
     a sh:NodeShape ;
-    sh:name "Relationship"@en ;
+    rdfs:label "Relationship"@en ;
     sh:property [
         sh:node :DcatResource_Shape ;
         sh:path dct:relation ;

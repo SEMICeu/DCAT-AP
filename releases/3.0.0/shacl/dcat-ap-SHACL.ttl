@@ -59,7 +59,6 @@
   shacl:closed false;
   shacl:property <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetInSeriesShape/04d197dc40f01e87093bdd0446a9fdb1a9d44319>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetInSeriesShape/2bafdb207132d69d368b07c4749d2f13def080ae>,
-    <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetInSeriesShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetInSeriesShape/5c0c659834c1d6db145269ba427d0e7c8cbb7379>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetInSeriesShape/6247dca6cb6cf721fe403097f9880adf2a9b1512>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetInSeriesShape/63790d4374dda7d88681e2756e114a65082d9bfd>,
@@ -68,7 +67,6 @@
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetInSeriesShape/8335ef1071b18fbd6dac863013c6a9de3d057ab0>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetInSeriesShape/8f61614144aa7bca188b24f5976593dc08aad0e6>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetInSeriesShape/c43a74a9b5e93cc6d40339ffc6e25f1f4c999233>,
-    <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetInSeriesShape/d4d4f2399b8cf2f615ac658920373b714726bed0>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetInSeriesShape/d5d74574f70f9a979535f3624608f88180dd0c97>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetInSeriesShape/f1d864889254a8950dbca6e8836c6c796202980c>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetInSeriesShape/f8b02efd063b8089b72ce9677a1e4a3488eeb9a9>;
@@ -87,13 +85,6 @@
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path dcat:prev;
   <https://purl.eu/ns/shacl#message> "The expected value for previous is a rdfs:Resource (URI or blank node)"@en .
-
-<https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetInSeriesShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetInSeries%3Atitle";
-  shacl:class rdfs:Literal;
-  shacl:description "A name given to the Dataset."@en;
-  shacl:name "title"@en;
-  shacl:path dc:title;
-  <https://purl.eu/ns/shacl#message> "The range of title must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetInSeriesShape/5c0c659834c1d6db145269ba427d0e7c8cbb7379> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetInSeries%3Anext";
   shacl:class dcat:Dataset;
@@ -126,9 +117,9 @@
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetInSeriesShape/6cae9880e515253132af1452a38a8a5827165149> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetInSeries%3Adescription";
   shacl:description "A free-text account of the Dataset."@en;
   shacl:name "description"@en;
-  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:nodeKind shacl:Literal;
   shacl:path dc:description;
-  <https://purl.eu/ns/shacl#message> "The expected value for description is a rdfs:Resource (URI or blank node)"@en .
+  <https://purl.eu/ns/shacl#message> "The expected value for description is a Literal"@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetInSeriesShape/8335ef1071b18fbd6dac863013c6a9de3d057ab0> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetInSeries%3Ain%20series";
   shacl:description "A dataset series of which the dataset is part."@en;
@@ -151,19 +142,12 @@
   shacl:path dcat:next;
   <https://purl.eu/ns/shacl#message> "The expected value for next is a rdfs:Resource (URI or blank node)"@en .
 
-<https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetInSeriesShape/d4d4f2399b8cf2f615ac658920373b714726bed0> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetInSeries%3Adescription";
-  shacl:class rdfs:Literal;
-  shacl:description "A free-text account of the Dataset."@en;
-  shacl:name "description"@en;
-  shacl:path dc:description;
-  <https://purl.eu/ns/shacl#message> "The range of description must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."@en .
-
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetInSeriesShape/d5d74574f70f9a979535f3624608f88180dd0c97> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetInSeries%3Atitle";
   shacl:description "A name given to the Dataset."@en;
   shacl:name "title"@en;
-  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:nodeKind shacl:Literal;
   shacl:path dc:title;
-  <https://purl.eu/ns/shacl#message> "The expected value for title is a rdfs:Resource (URI or blank node)"@en .
+  <https://purl.eu/ns/shacl#message> "The expected value for title is a Literal"@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetInSeriesShape/f1d864889254a8950dbca6e8836c6c796202980c> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetInSeries%3Ain%20series";
   shacl:description "A dataset series of which the dataset is part."@en;
@@ -190,23 +174,15 @@
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#adms:IdentifierShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property <https://semiceu.github.io//DCAT-AP/releases/3.0.0#adms:IdentifierShape/053d0ae3c4b213ae2f708e5e492b97e2cce08686>,
-    <https://semiceu.github.io//DCAT-AP/releases/3.0.0#adms:IdentifierShape/540857eb5364e19b19192903edb3521c4ca629d8>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#adms:IdentifierShape/e02208f9fa32c429dc5023f2799d03368703b974>;
   shacl:targetClass <http://www.w3.org/ns/adms#Identifier> .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#adms:IdentifierShape/053d0ae3c4b213ae2f708e5e492b97e2cce08686> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#adms%3AIdentifier%3Anotation";
   shacl:description "A string that is an identifier in the context of the identifier scheme referenced by its datatype."@en;
   shacl:name "notation"@en;
-  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:nodeKind shacl:Literal;
   shacl:path skos:notation;
-  <https://purl.eu/ns/shacl#message> "The expected value for notation is a rdfs:Resource (URI or blank node)"@en .
-
-<https://semiceu.github.io//DCAT-AP/releases/3.0.0#adms:IdentifierShape/540857eb5364e19b19192903edb3521c4ca629d8> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#adms%3AIdentifier%3Anotation";
-  shacl:class rdfs:Literal;
-  shacl:description "A string that is an identifier in the context of the identifier scheme referenced by its datatype."@en;
-  shacl:name "notation"@en;
-  shacl:path skos:notation;
-  <https://purl.eu/ns/shacl#message> "The range of notation must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."@en .
+  <https://purl.eu/ns/shacl#message> "The expected value for notation is a Literal"@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#adms:IdentifierShape/e02208f9fa32c429dc5023f2799d03368703b974> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#adms%3AIdentifier%3Anotation";
   shacl:description "A string that is an identifier in the context of the identifier scheme referenced by its datatype."@en;
@@ -223,7 +199,6 @@
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogRecordShape/31d5e2e3aa43e34f78e4557b9a8c4e7507c4948b>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogRecordShape/387c76a64757677cc2b899f0c4a20803263a0449>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogRecordShape/48302728c90d6c344ff17c41a12e9f1379d2a049>,
-    <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogRecordShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogRecordShape/4b28ec6b7000fa7ccd38127f115952dd990d7d9c>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogRecordShape/4ffca05d8646c0f94e4b5dc1e15e7757e7dd2843>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogRecordShape/65eafe0643a998b84fc2d253de401f9ad8355770>,
@@ -236,7 +211,6 @@
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogRecordShape/c65d45ed7195ead5f643ec8c8afd29c6dd9662bf>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogRecordShape/d1a2caf3f023345c142769faae4544a99834d255>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogRecordShape/d4c0539354cbf13f62e53a5a69e3f2b0e384f727>,
-    <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogRecordShape/d4d4f2399b8cf2f615ac658920373b714726bed0>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogRecordShape/d5d74574f70f9a979535f3624608f88180dd0c97>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogRecordShape/db878f1cb93930f64561d0504123c66feacfad5a>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogRecordShape/e8c47b5e12cdd191207184aca1060a81f327e18a>,
@@ -285,13 +259,6 @@
   shacl:path dc:source;
   <https://purl.eu/ns/shacl#message> "Maximally 1 values allowed for source metadata"@en .
 
-<https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogRecordShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ACatalogRecord%3Atitle";
-  shacl:class rdfs:Literal;
-  shacl:description "A name given to the Catalogue Record."@en;
-  shacl:name "title"@en;
-  shacl:path dc:title;
-  <https://purl.eu/ns/shacl#message> "The range of title must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."@en .
-
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogRecordShape/4b28ec6b7000fa7ccd38127f115952dd990d7d9c> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ACatalogRecord%3Achange%20type";
   shacl:class skos:Concept;
   shacl:description "The status of the catalogue record in the context of editorial flow of the dataset and data service descriptions."@en;
@@ -323,9 +290,9 @@
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogRecordShape/6cae9880e515253132af1452a38a8a5827165149> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ACatalogRecord%3Adescription";
   shacl:description "A free-text account of the record. This property can be repeated for parallel language versions of the description."@en;
   shacl:name "description"@en;
-  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:nodeKind shacl:Literal;
   shacl:path dc:description;
-  <https://purl.eu/ns/shacl#message> "The expected value for description is a rdfs:Resource (URI or blank node)"@en .
+  <https://purl.eu/ns/shacl#message> "The expected value for description is a Literal"@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogRecordShape/8c70e4513eeeeacaf9fdbc9e2cf3df16973e24c0> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ACatalogRecord%3Achange%20type";
   shacl:description "The status of the catalogue record in the context of editorial flow of the dataset and data service descriptions."@en;
@@ -376,19 +343,12 @@
   shacl:path dc:issued;
   <https://purl.eu/ns/shacl#message> "The expected value for listing date is a Literal"@en .
 
-<https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogRecordShape/d4d4f2399b8cf2f615ac658920373b714726bed0> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ACatalogRecord%3Adescription";
-  shacl:class rdfs:Literal;
-  shacl:description "A free-text account of the record. This property can be repeated for parallel language versions of the description."@en;
-  shacl:name "description"@en;
-  shacl:path dc:description;
-  <https://purl.eu/ns/shacl#message> "The range of description must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."@en .
-
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogRecordShape/d5d74574f70f9a979535f3624608f88180dd0c97> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ACatalogRecord%3Atitle";
   shacl:description "A name given to the Catalogue Record."@en;
   shacl:name "title"@en;
-  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:nodeKind shacl:Literal;
   shacl:path dc:title;
-  <https://purl.eu/ns/shacl#message> "The expected value for title is a rdfs:Resource (URI or blank node)"@en .
+  <https://purl.eu/ns/shacl#message> "The expected value for title is a Literal"@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogRecordShape/db878f1cb93930f64561d0504123c66feacfad5a> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ACatalogRecord%3Alanguage";
   shacl:description "A language used in the textual metadata describing titles, descriptions, etc. of the Dataset."@en;
@@ -423,7 +383,6 @@
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogShape/337cf55721093cc585693a5397601643d59a4c46>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogShape/34db0dabef6e2aa992eab790fc3e8d1e3f83bc12>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogShape/3844f5a8620973800a0f9d6121572dbe0082c955>,
-    <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogShape/49cd6ad5fefbffaf348db14bfe47600981dd12c8>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogShape/4be37093e4c3ba0d5b5a18ef6b97778d6d689392>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogShape/5d3b501368b0e6230133103390ac50e7385e214a>,
@@ -451,7 +410,6 @@
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogShape/c1d40f7102c8201949576e76be48b991b47958d9>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogShape/c26f8a3ac6445e9f36176f951acd9d235af5ffd9>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogShape/c8cbca0f9dd8797f331150a9e22d9e3ca53ab372>,
-    <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogShape/d4d4f2399b8cf2f615ac658920373b714726bed0>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogShape/d5d74574f70f9a979535f3624608f88180dd0c97>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogShape/da28472666d298998330cb159b2c1e90b4446250>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogShape/db878f1cb93930f64561d0504123c66feacfad5a>,
@@ -532,13 +490,6 @@
   shacl:path dc:rights;
   <https://purl.eu/ns/shacl#message> "Maximally 1 values allowed for rights"@en .
 
-<https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ACatalog%3Atitle";
-  shacl:class rdfs:Literal;
-  shacl:description "A name given to the Catalogue."@en;
-  shacl:name "title"@en;
-  shacl:path dc:title;
-  <https://purl.eu/ns/shacl#message> "The range of title must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."@en .
-
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogShape/49cd6ad5fefbffaf348db14bfe47600981dd12c8> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ACatalog%3Acatalogue";
   shacl:class dcat:Catalog;
   shacl:description "A catalogue whose contents are of interest in the context of this catalogue."@en;
@@ -584,9 +535,9 @@
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogShape/6cae9880e515253132af1452a38a8a5827165149> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ACatalog%3Adescription";
   shacl:description "A free-text account of the Catalogue."@en;
   shacl:name "description"@en;
-  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:nodeKind shacl:Literal;
   shacl:path dc:description;
-  <https://purl.eu/ns/shacl#message> "The expected value for description is a rdfs:Resource (URI or blank node)"@en .
+  <https://purl.eu/ns/shacl#message> "The expected value for description is a Literal"@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogShape/7b94c69361e00163d16d78016cd994668c7fccda> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ACatalog%3Adataset";
   shacl:class dcat:Dataset;
@@ -728,19 +679,12 @@
   shacl:path dc:hasPart;
   <https://purl.eu/ns/shacl#message> "The range of has part must be of type <http://www.w3.org/ns/dcat#Catalog>."@en .
 
-<https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogShape/d4d4f2399b8cf2f615ac658920373b714726bed0> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ACatalog%3Adescription";
-  shacl:class rdfs:Literal;
-  shacl:description "A free-text account of the Catalogue."@en;
-  shacl:name "description"@en;
-  shacl:path dc:description;
-  <https://purl.eu/ns/shacl#message> "The range of description must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."@en .
-
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogShape/d5d74574f70f9a979535f3624608f88180dd0c97> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ACatalog%3Atitle";
   shacl:description "A name given to the Catalogue."@en;
   shacl:name "title"@en;
-  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:nodeKind shacl:Literal;
   shacl:path dc:title;
-  <https://purl.eu/ns/shacl#message> "The expected value for title is a rdfs:Resource (URI or blank node)"@en .
+  <https://purl.eu/ns/shacl#message> "The expected value for title is a Literal"@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogShape/da28472666d298998330cb159b2c1e90b4446250> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ACatalog%3Ahomepage";
   shacl:description "A web page that acts as the main page for the Catalogue."@en;
@@ -796,7 +740,6 @@
   shacl:property <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DataServiceShape/10c0ca4deadefb51c529f56ee01caf9bd2639ef4>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DataServiceShape/1a61f733fafb015548fe0e21203d559c9cb4d228>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DataServiceShape/3bde2663aaca96d953765ac2e525ef64710bf4d6>,
-    <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DataServiceShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DataServiceShape/63240e11f1eb66f636413d1dbb134f0ff9066a7c>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DataServiceShape/6cae9880e515253132af1452a38a8a5827165149>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DataServiceShape/737cd5f1c9f0e13c35eb82b7f0d2b2f76a9a82c7>,
@@ -805,7 +748,6 @@
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DataServiceShape/9eaae476a881de13b9430537ace6e70da7327dbd>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DataServiceShape/c1577bd231c71b0b1910272999755d3414867cfd>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DataServiceShape/ca2bd10c893237fa342edb75240b08731acda92f>,
-    <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DataServiceShape/d4d4f2399b8cf2f615ac658920373b714726bed0>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DataServiceShape/d5d74574f70f9a979535f3624608f88180dd0c97>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DataServiceShape/dbcf2adef675735c48b532392359af27af5e8b71>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DataServiceShape/dc08f4dca4377fade57f89454e3fa06a8389d314>,
@@ -836,13 +778,6 @@
   shacl:path dcat:endpointURL;
   <https://purl.eu/ns/shacl#message> "The expected value for endpoint URL is a rdfs:Resource (URI or blank node)"@en .
 
-<https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DataServiceShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataService%3Atitle";
-  shacl:class rdfs:Literal;
-  shacl:description "A name given to the Data Service."@en;
-  shacl:name "title"@en;
-  shacl:path dc:title;
-  <https://purl.eu/ns/shacl#message> "The range of title must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."@en .
-
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DataServiceShape/63240e11f1eb66f636413d1dbb134f0ff9066a7c> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataService%3Aendpoint%20description";
   shacl:description "A description of the services available via the end-points, including their operations, parameters etc."@en;
   shacl:name "endpoint description"@en;
@@ -853,9 +788,9 @@
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DataServiceShape/6cae9880e515253132af1452a38a8a5827165149> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataService%3Adescription";
   shacl:description "A free-text account of the Data Service."@en;
   shacl:name "description"@en;
-  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:nodeKind shacl:Literal;
   shacl:path dc:description;
-  <https://purl.eu/ns/shacl#message> "The expected value for description is a rdfs:Resource (URI or blank node)"@en .
+  <https://purl.eu/ns/shacl#message> "The expected value for description is a Literal"@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DataServiceShape/737cd5f1c9f0e13c35eb82b7f0d2b2f76a9a82c7> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataService%3Aformat";
   shacl:class dc:MediaTypeOrExtent;
@@ -899,19 +834,12 @@
   shacl:path dcat:servesDataset;
   <https://purl.eu/ns/shacl#message> "The expected value for serves dataset is a rdfs:Resource (URI or blank node)"@en .
 
-<https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DataServiceShape/d4d4f2399b8cf2f615ac658920373b714726bed0> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataService%3Adescription";
-  shacl:class rdfs:Literal;
-  shacl:description "A free-text account of the Data Service."@en;
-  shacl:name "description"@en;
-  shacl:path dc:description;
-  <https://purl.eu/ns/shacl#message> "The range of description must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."@en .
-
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DataServiceShape/d5d74574f70f9a979535f3624608f88180dd0c97> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataService%3Atitle";
   shacl:description "A name given to the Data Service."@en;
   shacl:name "title"@en;
-  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:nodeKind shacl:Literal;
   shacl:path dc:title;
-  <https://purl.eu/ns/shacl#message> "The expected value for title is a rdfs:Resource (URI or blank node)"@en .
+  <https://purl.eu/ns/shacl#message> "The expected value for title is a Literal"@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DataServiceShape/dbcf2adef675735c48b532392359af27af5e8b71> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataService%3Alicence";
   shacl:class dc:LicenseDocument;
@@ -960,7 +888,6 @@
   shacl:property <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/00a99d55cbc03165373a8348d5a88402ea4f239a>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/04d197dc40f01e87093bdd0446a9fdb1a9d44319>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/0ae098d41aaf0ee928ce42d578bb24d57f072a50>,
-    <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/4be37093e4c3ba0d5b5a18ef6b97778d6d689392>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/5e679249734bfdf8af5274a8c84f06efee02cd24>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/63a8cf23801ef605734507c621693524f22476dd>,
@@ -982,7 +909,6 @@
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/b362d2bdbbe8ba1c689e5554cca2bcbd295546de>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/b3ec0655204c62a2531244aaeab12f1a2c5e5b5d>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/c0c971561157ce744b3b12b9248c9ebe8cf8ff52>,
-    <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/d4d4f2399b8cf2f615ac658920373b714726bed0>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/d5d74574f70f9a979535f3624608f88180dd0c97>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/d88723730b0c5004b934de417a58db632a02a60e>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/ec52636bd8d7ac5471323428f4fd952c70581493>,
@@ -1009,13 +935,6 @@
   shacl:name "series member"@en;
   shacl:path dcat:seriesMember;
   <https://purl.eu/ns/shacl#message> "The range of series member must be of type <http://www.w3.org/ns/dcat#Dataset>."@en .
-
-<https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADatasetSeries%3Atitle";
-  shacl:class rdfs:Literal;
-  shacl:description "A name given to the Dataset Series."@en;
-  shacl:name "title"@en;
-  shacl:path dc:title;
-  <https://purl.eu/ns/shacl#message> "The range of title must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/4be37093e4c3ba0d5b5a18ef6b97778d6d689392> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADatasetSeries%3Arelease%20date";
   shacl:description "The date of formal issuance (e.g., publication) of the Dataset Series."@en;
@@ -1055,9 +974,9 @@
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/6cae9880e515253132af1452a38a8a5827165149> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADatasetSeries%3Adescription";
   shacl:description "A free-text account of the Dataset Series."@en;
   shacl:name "description"@en;
-  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:nodeKind shacl:Literal;
   shacl:path dc:description;
-  <https://purl.eu/ns/shacl#message> "The expected value for description is a rdfs:Resource (URI or blank node)"@en .
+  <https://purl.eu/ns/shacl#message> "The expected value for description is a Literal"@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/75f282ab9d40c191ecec85e07df38e38afb0d406> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADatasetSeries%3Afirst";
   shacl:description "The first resource in an ordered collection or series of resources, to which the current resource belongs."@en;
@@ -1164,19 +1083,12 @@
   shacl:path dcat:first;
   <https://purl.eu/ns/shacl#message> "The range of first must be of type <http://www.w3.org/ns/dcat#Dataset>."@en .
 
-<https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/d4d4f2399b8cf2f615ac658920373b714726bed0> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADatasetSeries%3Adescription";
-  shacl:class rdfs:Literal;
-  shacl:description "A free-text account of the Dataset Series."@en;
-  shacl:name "description"@en;
-  shacl:path dc:description;
-  <https://purl.eu/ns/shacl#message> "The range of description must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."@en .
-
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/d5d74574f70f9a979535f3624608f88180dd0c97> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADatasetSeries%3Atitle";
   shacl:description "A name given to the Dataset Series."@en;
   shacl:name "title"@en;
-  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:nodeKind shacl:Literal;
   shacl:path dc:title;
-  <https://purl.eu/ns/shacl#message> "The expected value for title is a rdfs:Resource (URI or blank node)"@en .
+  <https://purl.eu/ns/shacl#message> "The expected value for title is a Literal"@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/d88723730b0c5004b934de417a58db632a02a60e> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADatasetSeries%3Alast";
   shacl:description "The last resource in an ordered collection or series."@en;
@@ -1207,7 +1119,6 @@
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/08118c51bfc41b71d11f3a58e9410da74e6480e6>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/0b40e829101914fa8381318b35a5205a2a465453>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/0bcb30d1f00a2e13ee04c77dbcb8018f2ef83d5b>,
-    <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/0c6b02433cfa73d8b8722f9924d10ba90a0a13ee>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/10c0ca4deadefb51c529f56ee01caf9bd2639ef4>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/21ff3c331383c15dedf63f9f30c0818ccac87497>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/236f0210baaf149903750c43bbe7012c21debb2a>,
@@ -1217,15 +1128,12 @@
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/2d388ed1a94fa93a83fb179a4ecb339b2566b790>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/30e78cd98aa6cd5dbc31678289abb5e0cc0b55c7>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/322371a77364a50f049d46180f6192532eea26dc>,
-    <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/33c1aef2d5f513df6f3c2e40c43297b18b2f556b>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/34ba47520d520f97bbcdea3c6fd3dc176d312689>,
-    <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/3894f9fa605c37b8ff4766859d3107f97cc5f934>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/397755646b3e9ed0cfae7a2a581d26251329edb7>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/3f1fe87dc7be37001827234cfe37b5314b16efcc>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/41f263bb74ca0c94c6c7a50c981cace98f35802d>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/42110293925ce8bdb81f82dee95d1f78b2fca91c>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/46a60c7d3d828d3006937a12f82c1958b94e6f76>,
-    <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/4918ff7a6c1c4b0eea6403dca4b992b87ee1f4ab>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/495a2bdea22c8a156f1a7926737cdf33529871fd>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/4be37093e4c3ba0d5b5a18ef6b97778d6d689392>,
@@ -1266,11 +1174,9 @@
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/c1d40f7102c8201949576e76be48b991b47958d9>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/c84f7330b9538a899ebb875c44dc23c9882e74ac>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/cee351ca7e459eb55734fce188a2216ea0cc2b6a>,
-    <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/d4d4f2399b8cf2f615ac658920373b714726bed0>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/d5d74574f70f9a979535f3624608f88180dd0c97>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/db878f1cb93930f64561d0504123c66feacfad5a>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/dede6a68a95ac0f43ca88def472d8fc001f86ebe>,
-    <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/e2017f72421063cd9ff494011ec78f35f9632a4a>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/e6d76f7de5d5b08e584d9cd40619631987a64a7c>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/ee60fdd4b8581460f5fc4077813b8bb3e3d77441>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/f17847e940bbcc6c79ef55ad620214918ca79c79>,
@@ -1321,13 +1227,6 @@
   shacl:name "provenance"@en;
   shacl:path dc:provenance;
   <https://purl.eu/ns/shacl#message> "The range of provenance must be of type <http://purl.org/dc/terms/ProvenanceStatement>."@en .
-
-<https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/0c6b02433cfa73d8b8722f9924d10ba90a0a13ee> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataset%3Aversion";
-  shacl:class rdfs:Literal;
-  shacl:description "The version indicator (name or identifier) of a resource."@en;
-  shacl:name "version"@en;
-  shacl:path dcat:version;
-  <https://purl.eu/ns/shacl#message> "The range of version must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/10c0ca4deadefb51c529f56ee01caf9bd2639ef4> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataset%3Aaccess%20rights";
   shacl:description "Information that indicates whether the Dataset is open data, has access restrictions or is not public."@en;
@@ -1392,26 +1291,12 @@
   shacl:path dc:type;
   <https://purl.eu/ns/shacl#message> "The range of type must be of type <http://www.w3.org/2004/02/skos/core#Concept>."@en .
 
-<https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/33c1aef2d5f513df6f3c2e40c43297b18b2f556b> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataset%3Aversion%20notes";
-  shacl:class rdfs:Literal;
-  shacl:description "A description of the differences between this version and a previous version of the Dataset."@en;
-  shacl:name "version notes"@en;
-  shacl:path <http://www.w3.org/ns/adms#versionNotes>;
-  <https://purl.eu/ns/shacl#message> "The range of version notes must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."@en .
-
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/34ba47520d520f97bbcdea3c6fd3dc176d312689> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataset%3Asample";
   shacl:description "A sample distribution of the dataset."@en;
   shacl:name "sample"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path <http://www.w3.org/ns/adms#sample>;
   <https://purl.eu/ns/shacl#message> "The expected value for sample is a rdfs:Resource (URI or blank node)"@en .
-
-<https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/3894f9fa605c37b8ff4766859d3107f97cc5f934> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataset%3Akeyword";
-  shacl:class rdfs:Literal;
-  shacl:description "A keyword or tag describing the Dataset."@en;
-  shacl:name "keyword"@en;
-  shacl:path dcat:keyword;
-  <https://purl.eu/ns/shacl#message> "The range of keyword must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/397755646b3e9ed0cfae7a2a581d26251329edb7> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataset%3Awas%20generated%20by";
   shacl:class prov:Activity;
@@ -1448,13 +1333,6 @@
   shacl:path dcat:spatialResolutionInMeters;
   <https://purl.eu/ns/shacl#message> "The expected value for spatial resolution is a Literal"@en .
 
-<https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataset%3Atitle";
-  shacl:class rdfs:Literal;
-  shacl:description "A name given to the Dataset."@en;
-  shacl:name "title"@en;
-  shacl:path dc:title;
-  <https://purl.eu/ns/shacl#message> "The range of title must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."@en .
-
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/4918ff7a6c1c4b0eea6403dca4b992b87ee1f4ab> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataset%3Arelated%20resource";
   shacl:class rdfs:Resource;
   shacl:description "A related resource."@en;
@@ -1486,16 +1364,16 @@
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/5ad428d8500be9b1d9580021b00aa767c33402bb> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataset%3Aversion%20notes";
   shacl:description "A description of the differences between this version and a previous version of the Dataset."@en;
   shacl:name "version notes"@en;
-  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:nodeKind shacl:Literal;
   shacl:path <http://www.w3.org/ns/adms#versionNotes>;
-  <https://purl.eu/ns/shacl#message> "The expected value for version notes is a rdfs:Resource (URI or blank node)"@en .
+  <https://purl.eu/ns/shacl#message> "The expected value for version notes is a Literal"@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/5bc739112726cd993c279f81380611cafc3a9857> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataset%3Akeyword";
   shacl:description "A keyword or tag describing the Dataset."@en;
   shacl:name "keyword"@en;
-  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:nodeKind shacl:Literal;
   shacl:path dcat:keyword;
-  <https://purl.eu/ns/shacl#message> "The expected value for keyword is a rdfs:Resource (URI or blank node)"@en .
+  <https://purl.eu/ns/shacl#message> "The expected value for keyword is a Literal"@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/5d09c2893875cc2183ee55dea57e9c61c07d8006> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataset%3Aprovenance";
   shacl:description "A statement about the lineage of a Dataset."@en;
@@ -1542,9 +1420,9 @@
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/6cae9880e515253132af1452a38a8a5827165149> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataset%3Adescription";
   shacl:description "A free-text account of the Dataset."@en;
   shacl:name "description"@en;
-  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:nodeKind shacl:Literal;
   shacl:path dc:description;
-  <https://purl.eu/ns/shacl#message> "The expected value for description is a rdfs:Resource (URI or blank node)"@en .
+  <https://purl.eu/ns/shacl#message> "The expected value for description is a Literal"@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/7a20e2eb5f5549088fd53fa93fab0958019f267e> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataset%3Aaccess%20rights";
   shacl:description "Information that indicates whether the Dataset is open data, has access restrictions or is not public."@en;
@@ -1682,9 +1560,9 @@
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/aadbd67a77a624f073be2076627fb9dc883cbe48> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataset%3Aidentifier";
   shacl:description "The main identifier for the Dataset, e.g. the URI or other unique identifier in the context of the Catalogue."@en;
   shacl:name "identifier"@en;
-  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:nodeKind shacl:Literal;
   shacl:path dc:identifier;
-  <https://purl.eu/ns/shacl#message> "The expected value for identifier is a rdfs:Resource (URI or blank node)"@en .
+  <https://purl.eu/ns/shacl#message> "The expected value for identifier is a Literal"@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/b362d2bdbbe8ba1c689e5554cca2bcbd295546de> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataset%3Arelease%20date";
   shacl:description "The date of formal issuance (e.g., publication) of the Dataset."@en;
@@ -1710,9 +1588,9 @@
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/bda64b6b9c27a850b8782b17019e888c5edd7ce0> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataset%3Aversion";
   shacl:description "The version indicator (name or identifier) of a resource."@en;
   shacl:name "version"@en;
-  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:nodeKind shacl:Literal;
   shacl:path dcat:version;
-  <https://purl.eu/ns/shacl#message> "The expected value for version is a rdfs:Resource (URI or blank node)"@en .
+  <https://purl.eu/ns/shacl#message> "The expected value for version is a Literal"@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/c1d40f7102c8201949576e76be48b991b47958d9> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataset%3Acreator";
   shacl:class foaf:Agent;
@@ -1735,19 +1613,12 @@
   shacl:path dcat:hasVersion;
   <https://purl.eu/ns/shacl#message> "The expected value for has version is a rdfs:Resource (URI or blank node)"@en .
 
-<https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/d4d4f2399b8cf2f615ac658920373b714726bed0> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataset%3Adescription";
-  shacl:class rdfs:Literal;
-  shacl:description "A free-text account of the Dataset."@en;
-  shacl:name "description"@en;
-  shacl:path dc:description;
-  <https://purl.eu/ns/shacl#message> "The range of description must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."@en .
-
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/d5d74574f70f9a979535f3624608f88180dd0c97> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataset%3Atitle";
   shacl:description "A name given to the Dataset."@en;
   shacl:name "title"@en;
-  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:nodeKind shacl:Literal;
   shacl:path dc:title;
-  <https://purl.eu/ns/shacl#message> "The expected value for title is a rdfs:Resource (URI or blank node)"@en .
+  <https://purl.eu/ns/shacl#message> "The expected value for title is a Literal"@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/db878f1cb93930f64561d0504123c66feacfad5a> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataset%3Alanguage";
   shacl:description "A language of the Dataset."@en;
@@ -1762,13 +1633,6 @@
   shacl:name "theme"@en;
   shacl:path dcat:theme;
   <https://purl.eu/ns/shacl#message> "The range of theme must be of type <http://www.w3.org/2004/02/skos/core#Concept>."@en .
-
-<https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/e2017f72421063cd9ff494011ec78f35f9632a4a> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataset%3Aidentifier";
-  shacl:class rdfs:Literal;
-  shacl:description "The main identifier for the Dataset, e.g. the URI or other unique identifier in the context of the Catalogue."@en;
-  shacl:name "identifier"@en;
-  shacl:path dc:identifier;
-  <https://purl.eu/ns/shacl#message> "The range of identifier must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/e6d76f7de5d5b08e584d9cd40619631987a64a7c> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataset%3Atemporal%20resolution";
   shacl:datatype xsd:duration;
@@ -1839,7 +1703,6 @@
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DistributionShape/42110293925ce8bdb81f82dee95d1f78b2fca91c>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DistributionShape/4546bd675f20c3ead3fabfd84682d9063fd2926a>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DistributionShape/46a60c7d3d828d3006937a12f82c1958b94e6f76>,
-    <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DistributionShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DistributionShape/4be37093e4c3ba0d5b5a18ef6b97778d6d689392>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DistributionShape/59cbd395c4b9167c030b3fd61001eeeee5034346>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DistributionShape/6311ab0f528a12e90a9d4be09bdec4ff36578b32>,
@@ -1867,7 +1730,6 @@
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DistributionShape/bbf361efc13fcb633496674f93db9d3cfb08732a>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DistributionShape/c1577bd231c71b0b1910272999755d3414867cfd>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DistributionShape/cde78c9a823f798f6a3de93270dde9283cc6e872>,
-    <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DistributionShape/d4d4f2399b8cf2f615ac658920373b714726bed0>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DistributionShape/d5d74574f70f9a979535f3624608f88180dd0c97>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DistributionShape/db878f1cb93930f64561d0504123c66feacfad5a>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DistributionShape/dbcf2adef675735c48b532392359af27af5e8b71>,
@@ -2007,13 +1869,6 @@
   shacl:path dcat:spatialResolutionInMeters;
   <https://purl.eu/ns/shacl#message> "The expected value for spatial resolution is a Literal"@en .
 
-<https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DistributionShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADistribution%3Atitle";
-  shacl:class rdfs:Literal;
-  shacl:description "A name given to the Distribution."@en;
-  shacl:name "title"@en;
-  shacl:path dc:title;
-  <https://purl.eu/ns/shacl#message> "The range of title must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."@en .
-
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DistributionShape/4be37093e4c3ba0d5b5a18ef6b97778d6d689392> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADistribution%3Arelease%20date";
   shacl:description "The date of formal issuance (e.g., publication) of the Distribution."@en;
   shacl:name "release date"@en;
@@ -2066,9 +1921,9 @@
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DistributionShape/6cae9880e515253132af1452a38a8a5827165149> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADistribution%3Adescription";
   shacl:description "A free-text account of the Distribution."@en;
   shacl:name "description"@en;
-  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:nodeKind shacl:Literal;
   shacl:path dc:description;
-  <https://purl.eu/ns/shacl#message> "The expected value for description is a rdfs:Resource (URI or blank node)"@en .
+  <https://purl.eu/ns/shacl#message> "The expected value for description is a Literal"@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DistributionShape/73765ca7a6e23ef17cf4e67a576e90a0c391f1c1> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADistribution%3Achecksum";
   shacl:description "A mechanism that can be used to verify that the contents of a distribution have not changed."@en;
@@ -2203,19 +2058,12 @@
   shacl:path dcat:packageFormat;
   <https://purl.eu/ns/shacl#message> "The expected value for packaging format is a rdfs:Resource (URI or blank node)"@en .
 
-<https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DistributionShape/d4d4f2399b8cf2f615ac658920373b714726bed0> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADistribution%3Adescription";
-  shacl:class rdfs:Literal;
-  shacl:description "A free-text account of the Distribution."@en;
-  shacl:name "description"@en;
-  shacl:path dc:description;
-  <https://purl.eu/ns/shacl#message> "The range of description must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."@en .
-
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DistributionShape/d5d74574f70f9a979535f3624608f88180dd0c97> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADistribution%3Atitle";
   shacl:description "A name given to the Distribution."@en;
   shacl:name "title"@en;
-  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:nodeKind shacl:Literal;
   shacl:path dc:title;
-  <https://purl.eu/ns/shacl#message> "The expected value for title is a rdfs:Resource (URI or blank node)"@en .
+  <https://purl.eu/ns/shacl#message> "The expected value for title is a Literal"@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DistributionShape/db878f1cb93930f64561d0504123c66feacfad5a> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADistribution%3Alanguage";
   shacl:description "A language used in the Distribution."@en;
@@ -2379,21 +2227,19 @@
   shacl:closed false;
   shacl:property <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dct:LocationShape/0ae2f89b0ca180c9b7eed510013f60fd9fa34f52>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dct:LocationShape/53c8e9f0fc79ab4ed706e31129a2b3e02f7edd22>,
-    <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dct:LocationShape/53e5ef9f230bd01e06ffbb904b03d2000aa15bb7>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dct:LocationShape/ac645171f7bc10bfce0730166a193316727dcdf3>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dct:LocationShape/caa9d15ad38096046fd527702c7620800aea178b>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dct:LocationShape/d0b958cd33e8ef1bc031edaf2859b44db128a644>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dct:LocationShape/d75cb3222eabce83fa3e236344cbf419e465f10e>,
-    <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dct:LocationShape/dde6f1d3b53e457ed56cd01d51f110aea62f5d72>,
-    <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dct:LocationShape/e43363a40306619f14d81eba3616cb846e82bc19>;
+    <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dct:LocationShape/dde6f1d3b53e457ed56cd01d51f110aea62f5d72>;
   shacl:targetClass dc:Location .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dct:LocationShape/0ae2f89b0ca180c9b7eed510013f60fd9fa34f52> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dct%3ALocation%3Abbox";
   shacl:description "The geographic bounding box of a resource."@en;
   shacl:name "bbox"@en;
-  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:nodeKind shacl:Literal;
   shacl:path dcat:bbox;
-  <https://purl.eu/ns/shacl#message> "The expected value for bbox is a rdfs:Resource (URI or blank node)"@en .
+  <https://purl.eu/ns/shacl#message> "The expected value for bbox is a Literal"@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dct:LocationShape/53c8e9f0fc79ab4ed706e31129a2b3e02f7edd22> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dct%3ALocation%3Ageometry";
   shacl:class <http://www.w3.org/ns/locn#Geometry>;
@@ -2402,19 +2248,12 @@
   shacl:path <http://www.w3.org/ns/locn#geometry>;
   <https://purl.eu/ns/shacl#message> "The range of geometry must be of type <http://www.w3.org/ns/locn#Geometry>."@en .
 
-<https://semiceu.github.io//DCAT-AP/releases/3.0.0#dct:LocationShape/53e5ef9f230bd01e06ffbb904b03d2000aa15bb7> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dct%3ALocation%3Abbox";
-  shacl:class rdfs:Literal;
-  shacl:description "The geographic bounding box of a resource."@en;
-  shacl:name "bbox"@en;
-  shacl:path dcat:bbox;
-  <https://purl.eu/ns/shacl#message> "The range of bbox must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."@en .
-
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dct:LocationShape/ac645171f7bc10bfce0730166a193316727dcdf3> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dct%3ALocation%3Acentroid";
   shacl:description "The geographic center (centroid) of a resource."@en;
   shacl:name "centroid"@en;
-  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:nodeKind shacl:Literal;
   shacl:path dcat:centroid;
-  <https://purl.eu/ns/shacl#message> "The expected value for centroid is a rdfs:Resource (URI or blank node)"@en .
+  <https://purl.eu/ns/shacl#message> "The expected value for centroid is a Literal"@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dct:LocationShape/caa9d15ad38096046fd527702c7620800aea178b> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dct%3ALocation%3Acentroid";
   shacl:description "The geographic center (centroid) of a resource."@en;
@@ -2443,13 +2282,6 @@
   shacl:name "geometry"@en;
   shacl:path <http://www.w3.org/ns/locn#geometry>;
   <https://purl.eu/ns/shacl#message> "Maximally 1 values allowed for geometry"@en .
-
-<https://semiceu.github.io//DCAT-AP/releases/3.0.0#dct:LocationShape/e43363a40306619f14d81eba3616cb846e82bc19> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dct%3ALocation%3Acentroid";
-  shacl:class rdfs:Literal;
-  shacl:description "The geographic center (centroid) of a resource."@en;
-  shacl:name "centroid"@en;
-  shacl:path dcat:centroid;
-  <https://purl.eu/ns/shacl#message> "The range of centroid must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#dct:MediaTypeOrExtentShape> a shacl:NodeShape;
   shacl:closed false;
@@ -2589,24 +2421,16 @@
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#skos:ConceptSchemeShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://semiceu.github.io//DCAT-AP/releases/3.0.0#skos:ConceptSchemeShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859>,
-    <https://semiceu.github.io//DCAT-AP/releases/3.0.0#skos:ConceptSchemeShape/d5d74574f70f9a979535f3624608f88180dd0c97>,
+  shacl:property <https://semiceu.github.io//DCAT-AP/releases/3.0.0#skos:ConceptSchemeShape/d5d74574f70f9a979535f3624608f88180dd0c97>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#skos:ConceptSchemeShape/f8b02efd063b8089b72ce9677a1e4a3488eeb9a9>;
   shacl:targetClass skos:ConceptScheme .
-
-<https://semiceu.github.io//DCAT-AP/releases/3.0.0#skos:ConceptSchemeShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#skos%3AConceptScheme%3Atitle";
-  shacl:class rdfs:Literal;
-  shacl:description "A name of the concept scheme."@en;
-  shacl:name "title"@en;
-  shacl:path dc:title;
-  <https://purl.eu/ns/shacl#message> "The range of title must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#skos:ConceptSchemeShape/d5d74574f70f9a979535f3624608f88180dd0c97> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#skos%3AConceptScheme%3Atitle";
   shacl:description "A name of the concept scheme."@en;
   shacl:name "title"@en;
-  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:nodeKind shacl:Literal;
   shacl:path dc:title;
-  <https://purl.eu/ns/shacl#message> "The expected value for title is a rdfs:Resource (URI or blank node)"@en .
+  <https://purl.eu/ns/shacl#message> "The expected value for title is a Literal"@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#skos:ConceptSchemeShape/f8b02efd063b8089b72ce9677a1e4a3488eeb9a9> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#skos%3AConceptScheme%3Atitle";
   shacl:description "A name of the concept scheme."@en;
@@ -2617,24 +2441,16 @@
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#skos:ConceptShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://semiceu.github.io//DCAT-AP/releases/3.0.0#skos:ConceptShape/322ac30abbb777e02239ab84ebf7d14ebde22688>,
-    <https://semiceu.github.io//DCAT-AP/releases/3.0.0#skos:ConceptShape/6cd0f0f5e19a1c8dce362ecbe8a196575b9cd85f>,
+  shacl:property <https://semiceu.github.io//DCAT-AP/releases/3.0.0#skos:ConceptShape/6cd0f0f5e19a1c8dce362ecbe8a196575b9cd85f>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#skos:ConceptShape/e4d44fb0d3c41df2a4042ee73fec8d83fc141a60>;
   shacl:targetClass skos:Concept .
-
-<https://semiceu.github.io//DCAT-AP/releases/3.0.0#skos:ConceptShape/322ac30abbb777e02239ab84ebf7d14ebde22688> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#skos%3AConcept%3Apreferred%20label";
-  shacl:class rdfs:Literal;
-  shacl:description "A preferred label of the concept."@en;
-  shacl:name "preferred label"@en;
-  shacl:path skos:prefLabel;
-  <https://purl.eu/ns/shacl#message> "The range of preferred label must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#skos:ConceptShape/6cd0f0f5e19a1c8dce362ecbe8a196575b9cd85f> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#skos%3AConcept%3Apreferred%20label";
   shacl:description "A preferred label of the concept."@en;
   shacl:name "preferred label"@en;
-  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:nodeKind shacl:Literal;
   shacl:path skos:prefLabel;
-  <https://purl.eu/ns/shacl#message> "The expected value for preferred label is a rdfs:Resource (URI or blank node)"@en .
+  <https://purl.eu/ns/shacl#message> "The expected value for preferred label is a Literal"@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#skos:ConceptShape/e4d44fb0d3c41df2a4042ee73fec8d83fc141a60> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#skos%3AConcept%3Apreferred%20label";
   shacl:description "A preferred label of the concept."@en;

@@ -136,7 +136,7 @@
         },
         "SEMIC":{
           "href":"https://joinup.ec.europa.eu/",
-          "title":"Joinup welcomes Interoperable Europe",
+          "title":"JoinUp welcomes Interoperable Europe",
           "publisher":"European Commission"
          },
         "DEU" : {
@@ -207,7 +207,7 @@ This Application Profile provides a minimal common basis within Europe to share 
 
 Around 2010, on behalf of the European Commission the access to public sector information was studied. These studies showed that businesses and citizens faced many difficulties in finding and re-using public sector information. 
 The studies indicated that the availability of the information in a machine-readable format as well as a thin layer of commonly agreed metadata could facilitate data cross-reference and interoperability and therefore considerably enhance its value for reuse.
-Therefore, to overcome these hurdles, the European Commission invested in policies [[PSI]], data interoperability[[SEMIC]]  and infrastructure [[DEU]]. 
+Therefore, to overcome these hurdles, the European Commission invested in policies [[PSI]], data interoperability [[SEMIC]]  and infrastructure [[DEU]]. 
 
 <p/>
 Interoperable Europe, within its mission to stimulate the data interoperability in Europe, manages this specification on the metadata agreements for sharing dataset descriptions between data portals. 
@@ -232,15 +232,53 @@ The section [[[#validation-of-dcat-ap]]] provides SHACL templates and references
 The Application Profile is intended to facilitate data exchange and therefore the classes and properties defined in this document are only relevant for the data to be exchanged; there are no requirements for communicating systems to implement specific technical environments. The only requirement is that the systems can export and import data in RDF in conformance with this Application Profile.
 </p>
 
+<p>
+As mentioned in the context, the prime objective of the Application Profile is to enhance data findability and promote reusability. 
+To achieve this goal, datasets should be coherently documented. 
+For that the Application Profile considers several essential aspects, including among others:
+<ul>
+	<li>Understanding the data or service structure, and how to get access to the data</li>
+	<li>Information on scope or purpose of the data</li>
+	<li>Legal information</li>
+	<li>Knowledge on data publishers, and any other agents involved</li>
+	<li>Knowledge of data availibility and change policies</li>
+</ul>
+These are addressed with the aim to facilitate effective data reuse, allowing users to locate, understand and utilise the available data resources more efficiently.
+</p>
+
 <h3>Revision history</h3>
 The first DCAT-AP specification was released in September 2013. The subsequent releases 1.1, 1.2 and 1.2.1 improved the specification. These specifications are in line with the first release of the W3C DCAT 1 recommendation [[vocab-dcat-1]]. They express DCAT-AP in terms of Catalogue, Datasets and Distributions.
 With the adoption of the W3C DCAT 2 recommendation [[vocab-dcat-2]], an alignment process for DCAT-AP was initiated. This resulted in a new release DCAT-AP 2.0.0.
 The years after this specification was further elaborated in new release 2.0.1, 2.1.0 and 2.1.1.
 W3C DCAT 2 restructured DCAT by introducing the notions of a generic Catalogued Resource of which Datasets and Data Services are special cases.
 In 2023, the adoption of W3C DCAT 3 [[vocab-dcat-3]] triggered a new alignment for DCAT-AP.
-W3C DCAT 3 extends the profile with the Dataset Series notion.
+W3C DCAT 3 extends the profile with the Dataset Series notion. 
 This document is the combination of addressing issues raised by the community and this alignment.
+
+<h4>Notes on alignment with DCAT 3</h4>
+The introduction of Dataset Series in DCAT is from semantical, data modeling perspective an additive operation. 
+Therefore the impact on exsting DCAT-AP 2.x exchanges is limited. 
+Nevertheless, publishers may face substantial impact on the existing catalogues as the new terminology for Dataset Series may require to revisit the publisher's metadata guidelines.
+For instance, if the publisher had chosen to document a Dataset Series as a Dataset with multiple Distributions, then the alignment with Dataset Series as expressed in this specification will require a substantial effort. 
+This impact is beyond the specification and dependent on the usage of the shared information.
+In the context of DCAT-AP and in line with the conformance expectations, a dataset series will be resources that are explicitly identified by the class Dataset Series. 
+The situation, as mentioned, where a Dataset has multiple Distributions, will be considered as a Dataset with multiple Distributions and not as a Dataset Series. 
+In this way recievers of DCAT-AP metadata can rely on the classes to process the metadata.
 <p/>
+The sole data model impact DCAT 3 creates, is by deprecating the use of some URIs and introducing new URIs in the DCAT namespace for the use case of dataset versioning.
+As these properties are optional and there is an equivalence between the deprecated and the new ones, catalogue owners can realign that quickly.
+
+
+
+<h3>Meeting minutes</h3>
+The following webinars have been held for the creation of this release
+    <ul>
+	<li>Webinar 25 November 2022 (<a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/MeetingMinutes.pdf">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=vpCu3wrBeso">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/Slides.pdf">slides</a>) </li>
+       <li>Webinar 2 February 2023 (<a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/20230202%20Webinar%20DCAT-AP.pdf">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=teUeMLwv4Ks">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/webinar_2_feb_2022_DCAT-AP_v.0.3.pdf">slides</a>) </li>
+   </ul>
+
+
+
 
 <!--
 DCAT is an RDF vocabulary designed to facilitate interoperability between data catalogues published on the Web. 
@@ -370,14 +408,14 @@ A <strong>Data Portal</strong> is a Web-based system that contains a data catalo
     <h2>Overview</h2>
     
 <p>
-DCAT-AP is a DCAT profile for sharing information about Catalogues containing Datasets and Data Services descriptions in Europe. The core classes of the Application Profile are thus the classes Catalogue, Dataset, Distribution and Data Service. DCAT-AP allows Catalogues of only Datasets, but also Catalogues of only Data Services, but usually it will be a mixture of both. To further organise the Datasets within a Catalogue Dataset Series are introduces. Datasets that are a member of a Dataset Series have additional constraints beyond those applicable for Dataset.
+DCAT-AP is a DCAT profile for sharing information about Catalogues containing Datasets and Data Services descriptions in Europe. The core classes of the Application Profile are thus the classes Catalogue, Dataset, Distribution and Data Service. DCAT-AP allows Catalogues of only Datasets, but also Catalogues of only Data Services, but usually it will be a mixture of both. To further organise the Datasets within a Catalogue Dataset Series are introduced. Datasets that are a member of a Dataset Series have additional constraints beyond those applicable for Dataset.
 These constraints are expressed in the class Dataset member of Dataset Series.
 </p><p>
 The properties of the core classes may enforce the existence of other classes. One such important class is the class Agent. However in contrast to the core classes, DCAT-AP leaves a lot of freedom to the implementors to shape them to their needs. Only minimal expectations are expressed by DCAT-AP.
 </p><p>
 Elaborated statements about the expectations are found in section [[[#conformance]]] describing DCAT-AP conformance.
 </p><p>
-To improve the coherency between shared Dataset, Distribution and Data Service, section [[[##usage-guide-on-datasets-distributions-and-data-services]]] provides additional guidelines.
+To improve the coherency between shared Dataset, Distribution and Data Service, section [[[#usage-guide-on-datasets-distributions-and-data-services]]] provides additional guidelines.
 
 </p><p>
 The list of included properties contain a selection of the properties from the W3C DCAT 3 specification [[vocab-dcat-3]]  on which DCAT-AP expresses additional constraints or on which DCAT-AP wants to emphasise their usage. Any property that is mentioned in DCAT applicable to a class but not explicitly is listed DCAT-AP is considered an optional field for DCAT-AP for that class. It means that for these properties DCAT-AP has no use cases that require additional usage considerations beyond ‘use the property as DCAT specifies’.
@@ -866,7 +904,7 @@ The main entities are those that form the core of the Application Profile.
                                     A Dataset that is part of the Catalogue.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    As empty Catalogues are usually indications of problems, this property should be combined with the next property service to implement an empty Catalogue check.
+                                    As empty Catalogues are usually indications of problems, this property should be combined with the property <a href="#Catalogue.service">service</a> to implement an empty Catalogue check.
                                 </td>
 				<!--
                                 <td>
@@ -1425,7 +1463,7 @@ The main entities are those that form the core of the Application Profile.
                                     A site or end-point (Data Service) that is listed in the Catalogue.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    As empty Catalogues are usually indications of problems, this property should be combined with the previous property dataset to implement an empty Catalogue check.
+                                    As empty Catalogues are usually indications of problems, this property should be combined with the property <a href="#Catalogue.dataset">dataset</a> to implement an empty Catalogue check.
                                 </td>
 				<!--
                                 <td>
@@ -5429,7 +5467,6 @@ This is not equal to the release date of the oldest dataset in the collection of
                             , <a href="#Distribution.licence">licence</a>
                             , <a href="#Distribution.linkedschemas">linked schemas</a>
                             , <a href="#Distribution.mediatype">media type</a>
-                            , <a href="#Distribution.mediatype">media type</a>
                             , <a href="#Distribution.modificationdate">modification date</a>
                             , <a href="#Distribution.packagingformat">packaging format</a>
                             , <a href="#Distribution.releasedate">release date</a>
@@ -6099,49 +6136,6 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 <td>
                                     
                                         
-                                            <a href="#Mediatype" data-placement="right">Media type</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    0..1
-                                </td>
-                                <td property="rdfs:comment">
-                                    The media type of the Distribution as defined in the official register of media types managed by IANA.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_media_type">Link</a>
-                                </td>
-                            </tr>
-                        
-                            <tr id="Distribution.mediatype"
-                                typeof="rdfs:Property"
-                                resource="http://www.w3.org/ns/dcat#mediaType"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20media type%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23Distribution.mediatype" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="http://www.w3.org/ns/dcat#mediaType"
-                                           data-toggle="tooltip"
-                                           data-content="http://www.w3.org/ns/dcat#mediaType"
-                                           data-placement="right">
-                                        media type</a>
-                                </td>
-                                <td>
-                                    
-                                        
                                             <a href="#MediaType" data-placement="right">Media Type</a>
                                         
                                     
@@ -6726,7 +6720,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                     Definition
                 </dt>
                 <dd>
-                    A spatial region or named place. It can be represented using a controlled vocabulary or with geographic coordinates. In the latter case, the use of the &lt;a href=&quot;https://semiceu.github.io/Core-Location-Vocabulary/&quot;&gt;Core Location Vocabulary&lt;/a&gt; is recommended, following the approach described in the GeoDCAT-AP specification.
+                    A spatial region or named place. 
                 </dd>
                 
 		<dt>
@@ -6736,6 +6730,13 @@ This is not equal to the release date of the oldest dataset in the collection of
 		    <a href="https://w3c.github.io/dxwg/dcat/#Class:Location">Link</a>
 		    </dd>
 		
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        It can be represented using a controlled vocabulary or with geographic coordinates. In the latter case, the use of the <a href="https://semiceu.github.io/Core-Location-Vocabulary/">Core Location Vocabulary</a> is recommended, following the approach described in the GeoDCAT-AP specification.
+                    </dd>
                 
                 
                     <dt>
@@ -8708,14 +8709,14 @@ These criteria do not intend to define a set of requirements for controlled voca
 <p>In the table below, a number of properties are listed with controlled vocabularies that MAY be used for the listed properties. The declaration of the following controlled vocabularies as recommended stimulates interoperability.</p>
 
 <table id="table-cv" class="simple">
-    <thead><tr><th>Property URI</th><th>Used for Class</th><th>Vocabulary name</th><th>Vocabulary URI</th><th>Usage note</th></tr></thead>
+    <thead><tr><th>Property URI</th><th>Used for Class</th><th>Vocabulary name</th><th>Usage note</th></tr></thead>
     <tbody>
-<tr><td>dct:type</td><rd><a href="#Dataset">Dataset</a></td><td>Dataset-type authority table</td><td>http://publications.europa.eu/resource/dataset/dataset-type</td><td>This list of terms provide types of datasets. Its main scope is to support dataset categorisation of the EU Open Data Portal.</td></tr>
+<tr><td>dct:type</td><rd><a href="#Dataset">Dataset</a></td><td><a href="http://publications.europa.eu/resource/dataset/dataset-type">Dataset-type authority table</a></td><td>This list of terms provide types of datasets. Its main scope is to support dataset categorisation of the EU Open Data Portal.</td></tr>
     </tbody>
 </table>
 
 <h3>Other controlled vocabularies</h3>
-In addition to the proposed common controlled vocabularies, which are mandatory to ensure minimal interoperability, implementers are encouraged to publish and to use further region or domain-specific vocabularies that are available online. While those may not be recognised by general implementations of the Application Profile, they may serve to increase interoperability across applications in the same region or domain. Examples are the full set of concepts in EuroVoc, the CERIF standard vocabularies, the Dewey Decimal Classification and numerous other schemes.
+In addition to the proposed common controlled vocabularies, which are mandatory to ensure minimal interoperability, implementers are encouraged to publish and to use further region or domain-specific vocabularies that are available online. While those may not be recognised by general implementations of the Application Profile, they may serve to increase interoperability across applications in the same region or domain. Examples are the full set of concepts in <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/eurovoc">EuroVoc</a>, <a href="https://dspacecris.eurocris.org/">the CERIF standard vocabularies</a>, <a href="http://www.oclc.org/content/dam/oclc/dewey/versions/print/intro.pdf">the Dewey Decimal Classification</a> and numerous other schemes.
 
 </section>
 
@@ -8860,6 +8861,54 @@ Orthogonal to the nature clarification of distributions and data services, there
 </p><p>
 These guidelines will be able to capture many access patterns, corresponding to most users' expectations. However there might be cases that are more vague. In that case the DCAT(-AP) community can be questioned for a recommended approach.
 </p>
+
+
+<h3>Usage guide on Dataset Series</h3>
+Dataset Series can be considered as message from the publisher that the data of a dataset evolves according to one or more dimensions and that this evolution is available via a collection of independent, yet closely related, datasets.
+<p/>
+The need for sharing this grouping explicitly is strongly use case dependent, and therefore as this will require additional metadata management effort by the publisher, the use of Dataset Series is optional.
+It should fit the objectives.
+For instance, if a publisher is sharing an active updated dataset accessible via an API, that provides current as historic data, then it is not mandatory to created metadata records for each snapshot per year. Only if these snapshots are created intentionally and the publisher wants to share the life cycle of them with the public, then Dataset Series come into the picture.
+<p/>
+In order to harmonise the use of Dataset Series, the following guidelines are to be considered:
+<ul>
+<li>To introduce a Dataset Series only if the publisher has the intend to manage a collection of datasets. Dataset Series with a single dataset in the collection should be avoided.
+</li>
+<li>Dataset Series without a dataset in the collection should be avoided. In that case, publishers should ensure that the metadata, in particular, the life cycle metadata is up to date. 
+For instance, if dataset get retracted and as consequence the collection becomes empty, then publishers should consider to retract also the Dataset Series.
+In case, publishers use persistent identifiers, then this should be reflected in the status of the Dataset Series.
+</li>
+<li>A Dataset Series is an conceptual dataset without distributions.
+When interpreting a Dataset Series as a Dataset, then it is expected that the directly associated Distributions contain the data that is the union of all Datasets in the collection. 
+But the presence of these Distributions raise semantical conflicts such as whether the property of the Dataset Series <code>frequency</code> refers to the update frequency of the associated Distributions or the update frequency of the collection. To avoid these semantical conflicts, it is recommended not to associate distributions with a Dataset Series.
+</li>
+<li>The members of a Dataset Series should be described in such a way that without the knowledge of the Dataset Series, the metadata is interpreted correctly. The existance of a dataset should not be based on the membership in a Dataset Series. The interpretation of a member with its associated Distributions and Data Services is conform the above guidelines.
+</li>
+<li>A Dataset Series is a special kind of Dataset. It is recommended to apply the same metadata quality of Datasets to Dataset Series (see [[[#quick-reference]]] ). The dedicated usage guidelines for Dataset Series and the Dataset members of a Dataset Series take priority over the generic DCAT-AP Dataset guidelines.
+</li>
+</ul>
+
+<p/>
+In general it is expected that the members of Dataset Series are strongly connected. 
+However, there are no common criteria or rules how this connection should be determined.
+Usually, the shared characteristics are expressed as a data domain, e.g. the population of bees, and some evolution in space and time, e.g. in Greece for the period of 2019-2023, and published by a single publisher.
+Nevertheless, other characteristics could give raise to the creation of a Dataset Series.
+<p/>
+In case the connection is very strong or the result of an automated process, versioning terminology is a natural way to express the connection between the Datasets in the Dataset Series collection.
+For guidelines on expressing versioning information in DCAT-AP, consult the <a href="https://w3c.github.io/dxwg/dcat/#version-history">DCAT guidelines on versioning</a>.
+As versioning is not always the most appropriate terminology, DCAT introduces properties <a href="https://w3c.github.io/dxwg/dcat/#ex-dataset-series-containment">(e.g. next, previous, inSeries, last, etc.)</a> to interconnect the Dataset Series with its members and among the members themselves. 
+It is recommended to use always these properties in combination with Dataset Series, and versioning when appropriate.
+<p/>
+The membership in a Dataset Series may influence the (descriptive) metadata to highlight differences from other Datasets in the collection. 
+For instance, a usual adaption is the addition of the release data in the title.
+
+
+
+
+
+
+
+
 </section>
 
   <section class="informative">
@@ -10564,8 +10613,6 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
-						
-					
 					
 						
 					
@@ -10607,8 +10654,6 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td><a href="#Distribution.licence">licence </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/license</div></td>
 							</tr>
-						
-					
 						
 					
 						
@@ -10745,16 +10790,6 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td>Optional</td>
 								<td><a href="#Distribution.linkedschemas">linked schemas </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/conformsTo</div></td>
-							</tr>
-						
-					
-						
-							<tr>
-								<td><a href="#Distribution">Distribution</a></td>
-								<td><div class="shorten">http://www.w3.org/ns/dcat#Distribution</div></td>
-								<td>Optional</td>
-								<td><a href="#Distribution.mediatype">media type </a></td>
-								<td><div class="shorten">http://www.w3.org/ns/dcat#mediaType</div></td>
 							</tr>
 						
 					

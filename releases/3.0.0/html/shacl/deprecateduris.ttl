@@ -28,9 +28,9 @@
 # 
 #-------------------------------------------------------------------------
 
-:PeriodOfTime_Shape
+:PeriodOfTimeDeprecation_Shape
     a sh:NodeShape ;
-    sh:name "PeriodOfTime"@en ;
+    rdfs:label "PeriodOfTime Deprecation properties"@en ;
     sh:property [
         sh:path schema:endDate ;
         sh:severity sh:Warning ;
@@ -54,6 +54,7 @@
 
 :DatasetDeprecation_Shape
     a sh:NodeShape ;
+    rdfs:label "Dataset Deprecation properties"@en ;
     sh:property [
        sh:path dct:hasVersion ;
         sh:severity sh:Warning ;

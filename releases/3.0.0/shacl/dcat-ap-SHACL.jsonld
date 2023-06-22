@@ -168,10 +168,10 @@
           "sh:name": {
             "en": "bbox"
           },
-          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://www.w3.org/ns/dcat#bbox",
           "vl:message": {
-            "en": "The expected value for bbox is a rdfs:Resource (URI or blank node)"
+            "en": "The expected value for bbox is a Literal"
           }
         },
         {
@@ -190,21 +190,6 @@
           }
         },
         {
-          "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dct:LocationShape/53e5ef9f230bd01e06ffbb904b03d2000aa15bb7",
-          "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dct%3ALocation%3Abbox",
-          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "The geographic bounding box of a resource."
-          },
-          "sh:name": {
-            "en": "bbox"
-          },
-          "sh:path": "http://www.w3.org/ns/dcat#bbox",
-          "vl:message": {
-            "en": "The range of bbox must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."
-          }
-        },
-        {
           "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dct:LocationShape/ac645171f7bc10bfce0730166a193316727dcdf3",
           "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dct%3ALocation%3Acentroid",
           "sh:description": {
@@ -213,10 +198,10 @@
           "sh:name": {
             "en": "centroid"
           },
-          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://www.w3.org/ns/dcat#centroid",
           "vl:message": {
-            "en": "The expected value for centroid is a rdfs:Resource (URI or blank node)"
+            "en": "The expected value for centroid is a Literal"
           }
         },
         {
@@ -277,21 +262,6 @@
           "sh:path": "http://www.w3.org/ns/locn#geometry",
           "vl:message": {
             "en": "Maximally 1 values allowed for geometry"
-          }
-        },
-        {
-          "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dct:LocationShape/e43363a40306619f14d81eba3616cb846e82bc19",
-          "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dct%3ALocation%3Acentroid",
-          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "The geographic center (centroid) of a resource."
-          },
-          "sh:name": {
-            "en": "centroid"
-          },
-          "sh:path": "http://www.w3.org/ns/dcat#centroid",
-          "vl:message": {
-            "en": "The range of centroid must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."
           }
         }
       ],
@@ -694,21 +664,6 @@
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#skos:ConceptShape/322ac30abbb777e02239ab84ebf7d14ebde22688",
-          "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#skos%3AConcept%3Apreferred%20label",
-          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "A preferred label of the concept."
-          },
-          "sh:name": {
-            "en": "preferred label"
-          },
-          "sh:path": "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "vl:message": {
-            "en": "The range of preferred label must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."
-          }
-        },
-        {
           "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#skos:ConceptShape/6cd0f0f5e19a1c8dce362ecbe8a196575b9cd85f",
           "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#skos%3AConcept%3Apreferred%20label",
           "sh:description": {
@@ -717,10 +672,10 @@
           "sh:name": {
             "en": "preferred label"
           },
-          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://www.w3.org/2004/02/skos/core#prefLabel",
           "vl:message": {
-            "en": "The expected value for preferred label is a rdfs:Resource (URI or blank node)"
+            "en": "The expected value for preferred label is a Literal"
           }
         },
         {
@@ -747,21 +702,6 @@
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#skos:ConceptSchemeShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859",
-          "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#skos%3AConceptScheme%3Atitle",
-          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "A name of the concept scheme."
-          },
-          "sh:name": {
-            "en": "title"
-          },
-          "sh:path": "http://purl.org/dc/terms/title",
-          "vl:message": {
-            "en": "The range of title must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."
-          }
-        },
-        {
           "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#skos:ConceptSchemeShape/d5d74574f70f9a979535f3624608f88180dd0c97",
           "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#skos%3AConceptScheme%3Atitle",
           "sh:description": {
@@ -770,10 +710,10 @@
           "sh:name": {
             "en": "title"
           },
-          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/title",
           "vl:message": {
-            "en": "The expected value for title is a rdfs:Resource (URI or blank node)"
+            "en": "The expected value for title is a Literal"
           }
         },
         {
@@ -822,25 +762,10 @@
           "sh:name": {
             "en": "notation"
           },
-          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://www.w3.org/2004/02/skos/core#notation",
           "vl:message": {
-            "en": "The expected value for notation is a rdfs:Resource (URI or blank node)"
-          }
-        },
-        {
-          "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#adms:IdentifierShape/540857eb5364e19b19192903edb3521c4ca629d8",
-          "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#adms%3AIdentifier%3Anotation",
-          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "A string that is an identifier in the context of the identifier scheme referenced by its datatype."
-          },
-          "sh:name": {
-            "en": "notation"
-          },
-          "sh:path": "http://www.w3.org/2004/02/skos/core#notation",
-          "vl:message": {
-            "en": "The range of notation must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."
+            "en": "The expected value for notation is a Literal"
           }
         },
         {
@@ -1017,21 +942,6 @@
           }
         },
         {
-          "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859",
-          "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ACatalog%3Atitle",
-          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "A name given to the Catalogue."
-          },
-          "sh:name": {
-            "en": "title"
-          },
-          "sh:path": "http://purl.org/dc/terms/title",
-          "vl:message": {
-            "en": "The range of title must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."
-          }
-        },
-        {
           "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogShape/49cd6ad5fefbffaf348db14bfe47600981dd12c8",
           "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ACatalog%3Acatalogue",
           "sh:class": "http://www.w3.org/ns/dcat#Catalog",
@@ -1130,10 +1040,10 @@
           "sh:name": {
             "en": "description"
           },
-          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
-            "en": "The expected value for description is a rdfs:Resource (URI or blank node)"
+            "en": "The expected value for description is a Literal"
           }
         },
         {
@@ -1437,21 +1347,6 @@
           }
         },
         {
-          "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
-          "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ACatalog%3Adescription",
-          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "A free-text account of the Catalogue."
-          },
-          "sh:name": {
-            "en": "description"
-          },
-          "sh:path": "http://purl.org/dc/terms/description",
-          "vl:message": {
-            "en": "The range of description must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."
-          }
-        },
-        {
           "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogShape/d5d74574f70f9a979535f3624608f88180dd0c97",
           "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ACatalog%3Atitle",
           "sh:description": {
@@ -1460,10 +1355,10 @@
           "sh:name": {
             "en": "title"
           },
-          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/title",
           "vl:message": {
-            "en": "The expected value for title is a rdfs:Resource (URI or blank node)"
+            "en": "The expected value for title is a Literal"
           }
         },
         {
@@ -1670,21 +1565,6 @@
           }
         },
         {
-          "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogRecordShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859",
-          "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ACatalogRecord%3Atitle",
-          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "A name given to the Catalogue Record."
-          },
-          "sh:name": {
-            "en": "title"
-          },
-          "sh:path": "http://purl.org/dc/terms/title",
-          "vl:message": {
-            "en": "The range of title must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."
-          }
-        },
-        {
           "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogRecordShape/4b28ec6b7000fa7ccd38127f115952dd990d7d9c",
           "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ACatalogRecord%3Achange%20type",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -1753,10 +1633,10 @@
           "sh:name": {
             "en": "description"
           },
-          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
-            "en": "The expected value for description is a rdfs:Resource (URI or blank node)"
+            "en": "The expected value for description is a Literal"
           }
         },
         {
@@ -1865,21 +1745,6 @@
           }
         },
         {
-          "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogRecordShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
-          "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ACatalogRecord%3Adescription",
-          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "A free-text account of the record. This property can be repeated for parallel language versions of the description."
-          },
-          "sh:name": {
-            "en": "description"
-          },
-          "sh:path": "http://purl.org/dc/terms/description",
-          "vl:message": {
-            "en": "The range of description must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."
-          }
-        },
-        {
           "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:CatalogRecordShape/d5d74574f70f9a979535f3624608f88180dd0c97",
           "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ACatalogRecord%3Atitle",
           "sh:description": {
@@ -1888,10 +1753,10 @@
           "sh:name": {
             "en": "title"
           },
-          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/title",
           "vl:message": {
-            "en": "The expected value for title is a rdfs:Resource (URI or blank node)"
+            "en": "The expected value for title is a Literal"
           }
         },
         {
@@ -1993,21 +1858,6 @@
           }
         },
         {
-          "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DataServiceShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859",
-          "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataService%3Atitle",
-          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "A name given to the Data Service."
-          },
-          "sh:name": {
-            "en": "title"
-          },
-          "sh:path": "http://purl.org/dc/terms/title",
-          "vl:message": {
-            "en": "The range of title must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."
-          }
-        },
-        {
           "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DataServiceShape/63240e11f1eb66f636413d1dbb134f0ff9066a7c",
           "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataService%3Aendpoint%20description",
           "sh:description": {
@@ -2031,10 +1881,10 @@
           "sh:name": {
             "en": "description"
           },
-          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
-            "en": "The expected value for description is a rdfs:Resource (URI or blank node)"
+            "en": "The expected value for description is a Literal"
           }
         },
         {
@@ -2128,21 +1978,6 @@
           }
         },
         {
-          "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DataServiceShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
-          "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataService%3Adescription",
-          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "A free-text account of the Data Service."
-          },
-          "sh:name": {
-            "en": "description"
-          },
-          "sh:path": "http://purl.org/dc/terms/description",
-          "vl:message": {
-            "en": "The range of description must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."
-          }
-        },
-        {
           "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DataServiceShape/d5d74574f70f9a979535f3624608f88180dd0c97",
           "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataService%3Atitle",
           "sh:description": {
@@ -2151,10 +1986,10 @@
           "sh:name": {
             "en": "title"
           },
-          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/title",
           "vl:message": {
-            "en": "The expected value for title is a rdfs:Resource (URI or blank node)"
+            "en": "The expected value for title is a Literal"
           }
         },
         {
@@ -2346,21 +2181,6 @@
           }
         },
         {
-          "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/0c6b02433cfa73d8b8722f9924d10ba90a0a13ee",
-          "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataset%3Aversion",
-          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "The version indicator (name or identifier) of a resource."
-          },
-          "sh:name": {
-            "en": "version"
-          },
-          "sh:path": "http://www.w3.org/ns/dcat#version",
-          "vl:message": {
-            "en": "The range of version must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."
-          }
-        },
-        {
           "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/10c0ca4deadefb51c529f56ee01caf9bd2639ef4",
           "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataset%3Aaccess%20rights",
           "sh:description": {
@@ -2496,21 +2316,6 @@
           }
         },
         {
-          "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/33c1aef2d5f513df6f3c2e40c43297b18b2f556b",
-          "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataset%3Aversion%20notes",
-          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "A description of the differences between this version and a previous version of the Dataset."
-          },
-          "sh:name": {
-            "en": "version notes"
-          },
-          "sh:path": "http://www.w3.org/ns/adms#versionNotes",
-          "vl:message": {
-            "en": "The range of version notes must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."
-          }
-        },
-        {
           "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/34ba47520d520f97bbcdea3c6fd3dc176d312689",
           "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataset%3Asample",
           "sh:description": {
@@ -2523,21 +2328,6 @@
           "sh:path": "http://www.w3.org/ns/adms#sample",
           "vl:message": {
             "en": "The expected value for sample is a rdfs:Resource (URI or blank node)"
-          }
-        },
-        {
-          "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/3894f9fa605c37b8ff4766859d3107f97cc5f934",
-          "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataset%3Akeyword",
-          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "A keyword or tag describing the Dataset."
-          },
-          "sh:name": {
-            "en": "keyword"
-          },
-          "sh:path": "http://www.w3.org/ns/dcat#keyword",
-          "vl:message": {
-            "en": "The range of keyword must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."
           }
         },
         {
@@ -2616,21 +2406,6 @@
           }
         },
         {
-          "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859",
-          "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataset%3Atitle",
-          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "A name given to the Dataset."
-          },
-          "sh:name": {
-            "en": "title"
-          },
-          "sh:path": "http://purl.org/dc/terms/title",
-          "vl:message": {
-            "en": "The range of title must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."
-          }
-        },
-        {
           "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/4918ff7a6c1c4b0eea6403dca4b992b87ee1f4ab",
           "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataset%3Arelated%20resource",
           "sh:class": "http://www.w3.org/2000/01/rdf-schema#Resource",
@@ -2699,10 +2474,10 @@
           "sh:name": {
             "en": "version notes"
           },
-          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://www.w3.org/ns/adms#versionNotes",
           "vl:message": {
-            "en": "The expected value for version notes is a rdfs:Resource (URI or blank node)"
+            "en": "The expected value for version notes is a Literal"
           }
         },
         {
@@ -2714,10 +2489,10 @@
           "sh:name": {
             "en": "keyword"
           },
-          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://www.w3.org/ns/dcat#keyword",
           "vl:message": {
-            "en": "The expected value for keyword is a rdfs:Resource (URI or blank node)"
+            "en": "The expected value for keyword is a Literal"
           }
         },
         {
@@ -2819,10 +2594,10 @@
           "sh:name": {
             "en": "description"
           },
-          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
-            "en": "The expected value for description is a rdfs:Resource (URI or blank node)"
+            "en": "The expected value for description is a Literal"
           }
         },
         {
@@ -3119,10 +2894,10 @@
           "sh:name": {
             "en": "identifier"
           },
-          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "The expected value for identifier is a rdfs:Resource (URI or blank node)"
+            "en": "The expected value for identifier is a Literal"
           }
         },
         {
@@ -3179,10 +2954,10 @@
           "sh:name": {
             "en": "version"
           },
-          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://www.w3.org/ns/dcat#version",
           "vl:message": {
-            "en": "The expected value for version is a rdfs:Resource (URI or blank node)"
+            "en": "The expected value for version is a Literal"
           }
         },
         {
@@ -3231,21 +3006,6 @@
           }
         },
         {
-          "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
-          "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataset%3Adescription",
-          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "A free-text account of the Dataset."
-          },
-          "sh:name": {
-            "en": "description"
-          },
-          "sh:path": "http://purl.org/dc/terms/description",
-          "vl:message": {
-            "en": "The range of description must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."
-          }
-        },
-        {
           "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/d5d74574f70f9a979535f3624608f88180dd0c97",
           "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataset%3Atitle",
           "sh:description": {
@@ -3254,10 +3014,10 @@
           "sh:name": {
             "en": "title"
           },
-          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/title",
           "vl:message": {
-            "en": "The expected value for title is a rdfs:Resource (URI or blank node)"
+            "en": "The expected value for title is a Literal"
           }
         },
         {
@@ -3288,21 +3048,6 @@
           "sh:path": "http://www.w3.org/ns/dcat#theme",
           "vl:message": {
             "en": "The range of theme must be of type <http://www.w3.org/2004/02/skos/core#Concept>."
-          }
-        },
-        {
-          "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetShape/e2017f72421063cd9ff494011ec78f35f9632a4a",
-          "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADataset%3Aidentifier",
-          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "The main identifier for the Dataset, e.g. the URI or other unique identifier in the context of the Catalogue."
-          },
-          "sh:name": {
-            "en": "identifier"
-          },
-          "sh:path": "http://purl.org/dc/terms/identifier",
-          "vl:message": {
-            "en": "The range of identifier must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."
           }
         },
         {
@@ -3449,21 +3194,6 @@
           }
         },
         {
-          "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetInSeriesShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859",
-          "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetInSeries%3Atitle",
-          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "A name given to the Dataset."
-          },
-          "sh:name": {
-            "en": "title"
-          },
-          "sh:path": "http://purl.org/dc/terms/title",
-          "vl:message": {
-            "en": "The range of title must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."
-          }
-        },
-        {
           "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetInSeriesShape/5c0c659834c1d6db145269ba427d0e7c8cbb7379",
           "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetInSeries%3Anext",
           "sh:class": "http://www.w3.org/ns/dcat#Dataset",
@@ -3532,10 +3262,10 @@
           "sh:name": {
             "en": "description"
           },
-          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
-            "en": "The expected value for description is a rdfs:Resource (URI or blank node)"
+            "en": "The expected value for description is a Literal"
           }
         },
         {
@@ -3584,21 +3314,6 @@
           }
         },
         {
-          "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetInSeriesShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
-          "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetInSeries%3Adescription",
-          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "A free-text account of the Dataset."
-          },
-          "sh:name": {
-            "en": "description"
-          },
-          "sh:path": "http://purl.org/dc/terms/description",
-          "vl:message": {
-            "en": "The range of description must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."
-          }
-        },
-        {
           "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetInSeriesShape/d5d74574f70f9a979535f3624608f88180dd0c97",
           "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetInSeries%3Atitle",
           "sh:description": {
@@ -3607,10 +3322,10 @@
           "sh:name": {
             "en": "title"
           },
-          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/title",
           "vl:message": {
-            "en": "The expected value for title is a rdfs:Resource (URI or blank node)"
+            "en": "The expected value for title is a Literal"
           }
         },
         {
@@ -3697,21 +3412,6 @@
           }
         },
         {
-          "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859",
-          "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADatasetSeries%3Atitle",
-          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "A name given to the Dataset Series."
-          },
-          "sh:name": {
-            "en": "title"
-          },
-          "sh:path": "http://purl.org/dc/terms/title",
-          "vl:message": {
-            "en": "The range of title must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."
-          }
-        },
-        {
           "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/4be37093e4c3ba0d5b5a18ef6b97778d6d689392",
           "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADatasetSeries%3Arelease%20date",
           "sh:description": {
@@ -3795,10 +3495,10 @@
           "sh:name": {
             "en": "description"
           },
-          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
-            "en": "The expected value for description is a rdfs:Resource (URI or blank node)"
+            "en": "The expected value for description is a Literal"
           }
         },
         {
@@ -4027,21 +3727,6 @@
           }
         },
         {
-          "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
-          "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADatasetSeries%3Adescription",
-          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "A free-text account of the Dataset Series."
-          },
-          "sh:name": {
-            "en": "description"
-          },
-          "sh:path": "http://purl.org/dc/terms/description",
-          "vl:message": {
-            "en": "The range of description must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."
-          }
-        },
-        {
           "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/d5d74574f70f9a979535f3624608f88180dd0c97",
           "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADatasetSeries%3Atitle",
           "sh:description": {
@@ -4050,10 +3735,10 @@
           "sh:name": {
             "en": "title"
           },
-          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/title",
           "vl:message": {
-            "en": "The expected value for title is a rdfs:Resource (URI or blank node)"
+            "en": "The expected value for title is a Literal"
           }
         },
         {
@@ -4109,21 +3794,6 @@
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
-        {
-          "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DistributionShape/06ed12d1071a78728d10628eb2d072781559eb75",
-          "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADistribution%3Amedia%20type",
-          "sh:class": "http://purl.org/dc/terms/MediaType",
-          "sh:description": {
-            "en": "The media type of the Distribution as defined in the official register of media types managed by IANA."
-          },
-          "sh:name": {
-            "en": "media type"
-          },
-          "sh:path": "http://www.w3.org/ns/dcat#mediaType",
-          "vl:message": {
-            "en": "The range of media type must be of type <http://purl.org/dc/terms/MediaType>."
-          }
-        },
         {
           "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DistributionShape/06ed12d1071a78728d10628eb2d072781559eb75",
           "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADistribution%3Amedia%20type",
@@ -4380,21 +4050,6 @@
           }
         },
         {
-          "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DistributionShape/4546bd675f20c3ead3fabfd84682d9063fd2926a",
-          "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADistribution%3Amedia%20type",
-          "sh:description": {
-            "en": "The media type of the Distribution as defined in the official register of media types managed by IANA."
-          },
-          "sh:name": {
-            "en": "media type"
-          },
-          "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "http://www.w3.org/ns/dcat#mediaType",
-          "vl:message": {
-            "en": "The expected value for media type is a rdfs:Resource (URI or blank node)"
-          }
-        },
-        {
           "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DistributionShape/46a60c7d3d828d3006937a12f82c1958b94e6f76",
           "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADistribution%3Aspatial%20resolution",
           "sh:description": {
@@ -4407,21 +4062,6 @@
           "sh:path": "http://www.w3.org/ns/dcat#spatialResolutionInMeters",
           "vl:message": {
             "en": "The expected value for spatial resolution is a Literal"
-          }
-        },
-        {
-          "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DistributionShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859",
-          "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADistribution%3Atitle",
-          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "A name given to the Distribution."
-          },
-          "sh:name": {
-            "en": "title"
-          },
-          "sh:path": "http://purl.org/dc/terms/title",
-          "vl:message": {
-            "en": "The range of title must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."
           }
         },
         {
@@ -4515,21 +4155,6 @@
           }
         },
         {
-          "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DistributionShape/69c8fdb6db25c5ad1f8a47366c19adb834924ae0",
-          "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADistribution%3Amedia%20type",
-          "sh:description": {
-            "en": "The media type of the Distribution as defined in the official register of media types managed by IANA."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "en": "media type"
-          },
-          "sh:path": "http://www.w3.org/ns/dcat#mediaType",
-          "vl:message": {
-            "en": "Maximally 1 values allowed for media type"
-          }
-        },
-        {
           "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DistributionShape/6b7242b6b89977700c05e4875131fbb975c4235e",
           "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADistribution%3Amodification%20date",
           "sh:description": {
@@ -4553,10 +4178,10 @@
           "sh:name": {
             "en": "description"
           },
-          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
-            "en": "The expected value for description is a rdfs:Resource (URI or blank node)"
+            "en": "The expected value for description is a Literal"
           }
         },
         {
@@ -4845,21 +4470,6 @@
           }
         },
         {
-          "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DistributionShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
-          "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADistribution%3Adescription",
-          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "A free-text account of the Distribution."
-          },
-          "sh:name": {
-            "en": "description"
-          },
-          "sh:path": "http://purl.org/dc/terms/description",
-          "vl:message": {
-            "en": "The range of description must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."
-          }
-        },
-        {
           "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat:DistributionShape/d5d74574f70f9a979535f3624608f88180dd0c97",
           "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#dcat%3ADistribution%3Atitle",
           "sh:description": {
@@ -4868,10 +4478,10 @@
           "sh:name": {
             "en": "title"
           },
-          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/title",
           "vl:message": {
-            "en": "The expected value for title is a rdfs:Resource (URI or blank node)"
+            "en": "The expected value for title is a Literal"
           }
         },
         {
@@ -5188,21 +4798,6 @@
           }
         },
         {
-          "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#foaf: AgentShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc",
-          "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#foaf%3A%20Agent%3Aname",
-          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "A name of the agent."
-          },
-          "sh:name": {
-            "en": "name"
-          },
-          "sh:path": "http://xmlns.com/foaf/0.1/name",
-          "vl:message": {
-            "en": "The range of name must be of type <http://www.w3.org/2000/01/rdf-schema#Literal>."
-          }
-        },
-        {
           "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#foaf: AgentShape/322371a77364a50f049d46180f6192532eea26dc",
           "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#foaf%3A%20Agent%3Atype",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -5256,10 +4851,10 @@
           "sh:name": {
             "en": "name"
           },
-          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://xmlns.com/foaf/0.1/name",
           "vl:message": {
-            "en": "The expected value for name is a rdfs:Resource (URI or blank node)"
+            "en": "The expected value for name is a Literal"
           }
         }
       ],

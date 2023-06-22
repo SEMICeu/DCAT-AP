@@ -82,7 +82,7 @@
 
 :Agent_Shape
     a sh:NodeShape ;
-    sh:name "Agent"@en ;
+    rdfs:label "Agent"@en ;
     sh:property [
         sh:minCount 1 ;
         sh:nodeKind sh:Literal ;
@@ -97,7 +97,7 @@
 
 :CatalogRecord_Shape
     a sh:NodeShape ;
-    sh:name "Catalog Record"@en ;
+    rdfs:label "Catalog Record"@en ;
     sh:property [
         sh:maxCount 1 ;
         sh:minCount 1 ;
@@ -143,7 +143,7 @@
 
 :Catalog_Shape
     a sh:NodeShape ;
-    sh:name "Catalog"@en ;
+    rdfs:label "Catalog"@en ;
     sh:property [
         sh:path dct:language ;
         sh:severity sh:Violation
@@ -217,7 +217,7 @@
 
 :CategoryScheme_Shape
     a sh:NodeShape ;
-    sh:name "Category Scheme"@en ;
+    rdfs:label "Category Scheme"@en ;
     sh:property [
         sh:minCount 1 ;
         sh:nodeKind sh:Literal ;
@@ -228,7 +228,7 @@
 
 :Category_Shape
     a sh:NodeShape ;
-    sh:name "Category"@en ;
+    rdfs:label "Category"@en ;
     sh:property [
         sh:minCount 1 ;
         sh:nodeKind sh:Literal ;
@@ -239,7 +239,7 @@
 
 :Checksum_Shape
     a sh:NodeShape ;
-    sh:name "Checksum"@en ;
+    rdfs:label "Checksum"@en ;
     sh:property [
         sh:hasValue spdx:checksumAlgorithm_sha1 ;
         sh:maxCount 1 ;
@@ -257,7 +257,7 @@
 
 :DataService_Shape
     a sh:NodeShape ;
-    sh:name "Data Service"@en ;
+    rdfs:label "Data Service"@en ;
     sh:property [
         sh:minCount 1 ;
         sh:nodeKind sh:Literal ;
@@ -292,7 +292,7 @@
 
 :Dataset_Shape
     a sh:NodeShape ;
-    sh:name "Dataset"@en ;
+    rdfs:label "Dataset"@en ;
     sh:property [
         sh:minCount 1 ;
         sh:nodeKind sh:Literal ;
@@ -460,7 +460,7 @@
 
 :Distribution_Shape
     a sh:NodeShape ;
-    sh:name "Distribution"@en ;
+    rdfs:label "Distribution"@en ;
     sh:property [
         sh:path dct:conformsTo ;
         sh:severity sh:Violation
@@ -560,7 +560,7 @@
 
 :Identifier_Shape
     a sh:NodeShape ;
-    sh:name "Identifier"@en ;
+    rdfs:label "Identifier"@en ;
     sh:property [
         sh:maxCount 1 ;
         sh:path skos:notation ;
@@ -570,7 +570,7 @@
 
 :LicenceDocument_Shape
     a sh:NodeShape ;
-    sh:name "Licence Document"@en ;
+    rdfs:label "Licence Document"@en ;
     sh:property [
         sh:path dct:type ;
         sh:severity sh:Violation
@@ -579,7 +579,7 @@
 
 :Location_Shape
     a sh:NodeShape ;
-    sh:name "Location"@en ;
+    rdfs:label "Location"@en ;
     sh:property [
         sh:maxCount 1 ;
         sh:nodeKind sh:Literal ;
@@ -600,7 +600,7 @@
 
 :PeriodOfTime_Shape
     a sh:NodeShape ;
-    sh:name "PeriodOfTime"@en ;
+    rdfs:label "PeriodOfTime"@en ;
     sh:property [
         sh:maxCount 1 ;
         sh:path dcat:endDate ;
@@ -624,7 +624,7 @@
 
 :Relationship_Shape
     a sh:NodeShape ;
-    sh:name "Relationship"@en ;
+    rdfs:label "Relationship"@en ;
     sh:property [
         sh:minCount 1 ;
         sh:path dct:relation ;
@@ -640,7 +640,7 @@
 # Duplication is required to handle the inverse of the dcat:inSeries property.
 :DatasetInSeries_Shape
     a sh:NodeShape ;
-    sh:name "Dataset in Series"@en ;
+    rdfs:label "Dataset in Series"@en ;
     sh:property [
   	sh:path dcat:prev;
   	sh:nodeKind sh:BlankNodeOrIRI;
@@ -675,13 +675,13 @@
 
 :DatasetInSeries_ShapeClass
     a sh:NodeShape ;
-    sh:name "Dataset in Series"@en ;
+    rdfs:label "Dataset in Series"@en ;
     sh:node :DatasetInSeries_Shape ;
     sh:targetSubjectsOf <http://www.w3.org/ns/dcat#inSeries>.
 
 :DatasetSeries_Shape
     a sh:NodeShape ;
-    sh:name "Dataset Series"@en ;
+    rdfs:label "Dataset Series"@en ;
     sh:property [
 	sh:path dcat:seriesMember;
   	sh:node :DatasetInSeries_Shape ;

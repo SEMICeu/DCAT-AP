@@ -83,7 +83,7 @@
 
 :Agent_Shape
     a sh:NodeShape ;
-    sh:name "Agent"@en ;
+    rdfs:label "Agent"@en ;
     sh:property [
         sh:minCount 1 ;
         sh:path dct:type ;
@@ -93,7 +93,7 @@
 
 :CatalogRecord_Shape
     a sh:NodeShape ;
-    sh:name "Catalog Record"@en ;
+    rdfs:label "Catalog Record"@en ;
     sh:property [
     ], [
         sh:minCount 1 ;
@@ -113,7 +113,7 @@
 
 :Catalog_Shape
     a sh:NodeShape ;
-    sh:name "Catalog"@en ;
+    rdfs:label "Catalog"@en ;
     sh:property [
         sh:minCount 1 ;
         sh:path dct:language ;
@@ -147,7 +147,7 @@
 	
 :Catalog_Shape2
     a sh:NodeShape ;
-    sh:name "Catalog"@en ;
+    rdfs:label "Catalog"@en ;
     sh:or (
 		[
 			sh:path dcat:dataset ;
@@ -165,28 +165,28 @@
 
 :CategoryScheme_Shape
     a sh:NodeShape ;
-    sh:name "Category Scheme"@en ;
+    rdfs:label "Category Scheme"@en ;
     sh:property [
     ] ;
     sh:targetClass skos:ConceptScheme .
 
 :Category_Shape
     a sh:NodeShape ;
-    sh:name "Category"@en ;
+    rdfs:label "Category"@en ;
     sh:property [
     ] ;
     sh:targetClass skos:Concept .
 
 :Checksum_Shape
     a sh:NodeShape ;
-    sh:name "Checksum"@en ;
+    rdfs:label "Checksum"@en ;
     sh:property [
     ] ;
     sh:targetClass spdx:Checksum .
 
 :DataService_Shape
     a sh:NodeShape ;
-    sh:name "Data Service"@en ;
+    rdfs:label "Data Service"@en ;
     sh:property [
         sh:minCount 1 ;
         sh:path dcat:servesDataset ;
@@ -200,7 +200,7 @@
 
 :Dataset_Shape
     a sh:NodeShape ;
-    sh:name "Dataset"@en ;
+    rdfs:label "Dataset"@en ;
     sh:property [
         sh:minCount 1 ;
         sh:path dcat:contactPoint ;
@@ -263,7 +263,7 @@
 
 :Distribution_Shape
     a sh:NodeShape ;
-    sh:name "Distribution"@en ;
+    rdfs:label "Distribution"@en ;
     sh:property [
         sh:minCount 1 ;
         sh:path dct:description ;
@@ -285,14 +285,14 @@
 
 :Identifier_Shape
     a sh:NodeShape ;
-    sh:name "Identifier"@en ;
+    rdfs:label "Identifier"@en ;
     sh:property [
     ] ;
     sh:targetClass adms:Identifier .
 
 :LicenceDocument_Shape
     a sh:NodeShape ;
-    sh:name "Licence Document"@en ;
+    rdfs:label "Licence Document"@en ;
     sh:property [
         sh:minCount 1 ;
         sh:path dct:type ;
@@ -302,7 +302,7 @@
 
 :Location_Shape
     a sh:NodeShape ;
-    sh:name "Location"@en ;
+    rdfs:label "Location"@en ;
     sh:property [
         sh:minCount 1 ;
         sh:path dcat:bbox ;
@@ -316,7 +316,7 @@
 
 :PeriodOfTime_Shape
     a sh:NodeShape ;
-    sh:name "PeriodOfTime"@en ;
+    rdfs:label "PeriodOfTime"@en ;
     sh:property [
         sh:minCount 1 ;
         sh:path dcat:endDate ;
@@ -330,7 +330,7 @@
 
 :Relationship_Shape
     a sh:NodeShape ;
-    sh:name "Relationship"@en ;
+    rdfs:label "Relationship"@en ;
     sh:property [
     ] ;
     sh:targetClass dcat:Relationship .
