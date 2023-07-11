@@ -1,20 +1,20 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix example-ds: <https://data.gov.gr/id/dataset/> .
 @prefix example-ser: <https://data.gov.gr/id/datasetseries/> .
 @prefix nal-frequency: <http://publications.europa.eu/resource/authority/frequency/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 example-ds:BeePopulation2022 a dcat:Dataset;
-  dcterms:accrualPeriodicity nal-frequency:NEVER;
+  dct:accrualPeriodicity nal-frequency:NEVER;
   dcat:inSeries example-ser:BeePopulation .
 
 example-ds:BeePopulation2023 a dcat:Dataset;
-  dcterms:accrualPeriodicity nal-frequency:NEVER;
+  dct:accrualPeriodicity nal-frequency:NEVER;
   dcat:inSeries example-ser:BeePopulation;
   dcat:prev example-ds:BeePopulation2022 .
 
 example-ser:BeePopulation a dcat:DatasetSeries;
-  dcterms:title "Bee population"@en;
-  dcterms:accrualPeriodicity nal-frequency:ANNUAL;
+  dct:title "Bee population"@en;
+  dct:accrualPeriodicity nal-frequency:ANNUAL;
   dcat:last example-ds:BeePopulation2022 .

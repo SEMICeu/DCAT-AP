@@ -1,4 +1,4 @@
-# Consolidated ChangeLog
+# Consolidated ChangeLog DCAT-AP 3.0.0
 
 ## Editorial changes
 
@@ -67,6 +67,9 @@
 
 ## SHACL
   - issue 245: replace sh:name with rdfs:label in shacl 
+  - issue 48: propose SHACL version with individual constraints: a proposal has been added. 
+           Each individual constraint gets is unique URI. In addition, an additional corresponding message is generated, and a reference to the specification.
+           These two additional information elements allow to create a more informed feedback.
 
 ## Other issue handling
 
@@ -74,13 +77,9 @@ issue 209: provided a new guideline for legal information
 
 
 ## specification agnostic issues or questions for information/assistance
-issue 56, 99i, 152: relate to the governance of the specification on GitHub. 
+issue 56, 99, 152: relate to the governance of the specification on GitHub. 
 issue 234: request for information on behaviour of dereferencable URIs of EU Vocabularies
 issue 261: question on DCAT-AP for agriculture
 issue 233: question to reach out on SEMIC conference
 
 
-
-## TODO
-issue 175: propose a guideline for expressing geospatical coverage
-issue 48: propose SHACL version with individual constraints

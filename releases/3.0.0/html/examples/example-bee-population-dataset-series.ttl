@@ -1,5 +1,5 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix example-ds: <https://data.gov.gr/id/dataset/> .
 @prefix example-ser: <https://data.gov.gr/id/datasetseries/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -11,4 +11,4 @@ example-ds:BeePopulation2023 a dcat:Dataset;
   dcat:inSeries example-ser:BeePopulation .
 
 example-ser:BeePopulation a dcat:DatasetSeries;
-  dcterms:title "Bee population"@en .
+  dct:title "Bee population"@en .

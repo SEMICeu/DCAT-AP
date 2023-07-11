@@ -167,7 +167,7 @@
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept"
     },
-    "Conceptscheme": {
+    "ConceptScheme": {
       "@context": {
         "title": {
           "@container": "@set",
@@ -656,11 +656,10 @@
     "Standard": "http://purl.org/dc/terms/Standard",
     "TemporalLiteral": "http://www.w3.org/2000/01/rdf-schema#Literal",
     "TimeInstant": "http://www.w3.org/2006/time#Instant",
-    "xsddateTime": "http://www.w3.org/2001/XMLSchema#dateTime",
-    "xsddecimal": "http://www.w3.org/2001/XMLSchema#decimal",
-    "xsdduration": "http://www.w3.org/2001/XMLSchema#duration",
-    "xsdhexBinary": "http://www.w3.org/2001/XMLSchema#hexBinary",
-    "xsdnonNegativeInteger": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
-    "xsd": "http://www.w3.org/2001/XMLSchema#"
+    "Xsd:dateTime": "http://www.w3.org/2001/XMLSchema#dateTime",
+    "Xsd:decimal": "http://www.w3.org/2001/XMLSchema#decimal",
+    "Xsd:duration": "http://www.w3.org/2001/XMLSchema#duration",
+    "Xsd:hexBinary": "http://www.w3.org/2001/XMLSchema#hexBinary",
+    "Xsd:nonNegativeInteger": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
   }
 }
