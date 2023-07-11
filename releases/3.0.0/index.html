@@ -100,7 +100,7 @@
       postProcess: [quickreference],
       edDraftURI: "https://semiceu.github.io//DCAT-AP/releases/3.0.0",
       latestVersion: "https://github.com/SEMICeu/DCAT-AP/tree/master/releases/2.1.1",
-      specStatus: "unofficial",
+      specStatus: "LD",
       publishDate: "2023-07-17",
       editors: myeditors,
       authors: myauthors,
@@ -8971,11 +8971,12 @@ The provided SHACL shapes allow to check whether an DCAT-AP catalogue expressed 
 As it should be possible for DCAT-AP conformance to transform the data exchange in RDF, these SHACL shapes can be used in any data exchange context.
 However, likewise the use of the JSON-LD context, the provided SHACL shapes provide only a start point for implementers. 
 <p/>
-On the one hand, the shapes may check situations that never occur in the implemented data exchange and result in messages that confuse publishers, or they are to general and more detailed checks should be implemented. 
+The shapes that can be derived from the DCAT-AP specification have the following usage limitations.
+Shapes may check situations that never occur in the implemented data exchange and result in messages that confuse publishers, or they are to general and more detailed checks should be implemented. 
 For example, the nature of a licence is recommended by DCAT-AP, but most DCAT-AP exchanges assume that based on the URI of the licence this information is known. 
-Thus the check that a licence should have a licence type is considered often not relevant for the individual publishers, but more for the catalogue maintainers to ensure they guide individual publishers to use well-documented licence URIs.
+Thus the check that a licence should have a licence type is considered often not relevant for the individual publishers. 
+However they might support catalogue maintainers to guide individual publishers to use well-documented licence URIs.
 The case that a title cannot be an empty string and must have a value is a specific language are examples of more detailed constraints that are not present in the provided DCAT-AP SHACL shapes.
-The provided SHACL shapes assist thus implementers in the creation of the SHACL shapes fit for purpose.
 <p/>
 More on the validation and the provided SHACL shapes can be found in section [[[#validation-of-dcat-ap]]].
 
