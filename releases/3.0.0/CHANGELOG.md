@@ -2,7 +2,7 @@
 
 ## Editorial changes
 
-  - turned PDF document into html representation (RESPEC style) (issue 150)
+  - turned PDF document into html representation (ReSpec style) (issue 150)
   - included all adopted guidelines and texts surrounding the DCAT-AP into the new document
   - added cross-references to existing texts so that readers can take benifit from the HTML representation
   
@@ -31,7 +31,7 @@
 
 ## Data model adaptations
 
-  - DCAT-AP 2.1.1 has no notion of definition and usage notes. Splitted the exiting desciptive texts in definitions and usage nodes according to the SEMIC best practices for definitions as advised by the SEMIC style guide.
+  - DCAT-AP 2.1.1 has no notion of definition and usage notes. Splitted the exiting desciptive texts in definitions and usage notes according to the SEMIC best practices for definitions as advised by the SEMIC style guide.
   - added for classes and properties that are explictly mentioned in DCAT 3 a direct link to the W3C specification
     Where appropriate we aligned the definitions and usage notes. (issue 128, 135, 179)
   - Reorganised the Application Profile in Main Entities, Supportive Entities and Datatypes in order to enhance the readibility.
