@@ -10,7 +10,7 @@
 ##  Adaptions to the different sections
 
   - Introduction: revised the introduction and context to be more up to date
-  - Conformance: reflect the html specification by cross-referencing, fit the RESPEC requirements, moved the steoreotype annotation definitions to the quick-reference section
+  - Conformance: reflect the html specification by cross-referencing, fit the ReSpec requirements, moved the steoreotype annotation definitions to the quick-reference section
   - Terminology: updated the list of prefixes
   - Formal data model presentation: introduced the notions of Main Entities, Supportive Entities and Datatypes to enhance the readibility
   - Controlled Vocabularies: removed the section on licence vocabularies as there is a new section on expressing legal information
