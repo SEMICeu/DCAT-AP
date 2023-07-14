@@ -14,7 +14,7 @@
   - Terminology: updated the list of prefixes
   - Formal data model presentation: introduced the notions of Main Entities, Supportive Entities and Datatypes to enhance the readibility
   - Controlled Vocabularies: removed the section on licence vocabularies as there is a new section on expressing legal information
-  - Legal information: new section on legal conditions, matching the use case of Czechia (issue 209, 
+  - Legal information: new section on legal conditions, matching the use case of Czechia (issue 209)
   - Agent roles: added paragraph to cross-reference to the guidelines in DCAT 3.
   - Accessibility and Multilingual Aspects: no change
   - Usage guide on Datasets, Distributions and Data Services: integrated this GitHub located section in the document
