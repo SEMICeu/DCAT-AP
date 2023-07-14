@@ -9,7 +9,7 @@
 
 ##  Adaptions to the different sections
 
-  - Introduction: revised the introduction and context to be more up to date
+  - Introduction: revised the introduction and context to be more up to date, added subsections including scope, context and a revision history
   - Conformance: reflect the html specification by cross-referencing, fit the ReSpec requirements, moved the steoreotype annotation definitions to the quick-reference section
   - Terminology: updated the list of prefixes
   - Formal data model presentation: introduced the notions of Main Entities, Supportive Entities and Datatypes to enhance the readibility
@@ -19,6 +19,7 @@
   - Accessibility and Multilingual Aspects: no change
   - Usage guide on Datasets, Distributions and Data Services: integrated this GitHub located section in the document
   - High Value Datasets: new section to create a reference to the guidelines for High Value Datasets
+  - Support for Implementation: a new section to provide references to JSON-LD context and any other topics related to implementations.
   - Validation of DCAT-AP: integrated this GitHub located section in the document
   - Example Dataset Series: new section containing examples for Dataset Series
   - Annex Quick Reference of Classes and Properties: 
@@ -38,7 +39,7 @@
   - Added the classes Dataset Series and Dataset member of a Dataset Series to reflect the new notions in DCAT 3 
   - applied the deprecation by replacing the mapping to the URIs for the impacted properties
 
-### detailed issues
+### Detailed issues
 
   - issue 177, 247: Range of locn:geometry is locn:Geometry  
   - Issue 228: Replace controlled vocabulary for Distribution status
@@ -52,8 +53,9 @@
 
 ## Alignement with DCAT 3
 
-### introduction Dataset Series
-(issue 155, 239, 240, 249): added a subsection to section 14 with summary of the webinar discussion and generic advices.
+### Introduction Dataset Series
+  - issues 155, 239, 240, 249: added a subsection to section 14 with summary of the webinar discussion and generic advices.
+  - add an section with examples on Dataset Series.
 
 ### other topics
 
@@ -76,7 +78,7 @@
   - issue 209: provided a new guideline for legal information
 
 
-## specification agnostic issues or questions for information/assistance
+## Specification agnostic issues or questions for information/assistance
 
   - issue 56, 99, 152: relate to the governance of the specification on GitHub. 
   - issue 234: request for information on behaviour of dereferencable URIs of EU Vocabularies
