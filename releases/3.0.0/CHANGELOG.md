@@ -73,13 +73,14 @@
 
 ## Other issue handling
 
-issue 209: provided a new guideline for legal information
+  - issue 209: provided a new guideline for legal information
 
 
 ## specification agnostic issues or questions for information/assistance
-issue 56, 99, 152: relate to the governance of the specification on GitHub. 
-issue 234: request for information on behaviour of dereferencable URIs of EU Vocabularies
-issue 261: question on DCAT-AP for agriculture
-issue 233: question to reach out on SEMIC conference
+
+  - issue 56, 99, 152: relate to the governance of the specification on GitHub. 
+  - issue 234: request for information on behaviour of dereferencable URIs of EU Vocabularies
+  - issue 261: question on DCAT-AP for agriculture
+  - issue 233: question to reach out on SEMIC conference
 
 
