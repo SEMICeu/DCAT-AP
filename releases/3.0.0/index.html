@@ -241,7 +241,7 @@ To enable this, the Application Profile considers several essential aspects, inc
 	<li>Information on scope or purpose of the data</li>
 	<li>Legal information</li>
 	<li>Knowledge on data publishers, and any other agents involved</li>
-	<li>Knowledge of data availibility and change policies</li>
+	<li>Knowledge of data availability and change policies</li>
 </ul>
 These are addressed with the aim to facilitate effective data reuse, allowing users to locate, understand and utilise the available data resources more efficiently.
 </p>
@@ -278,13 +278,25 @@ As these properties are optional and since there is an equivalence between the d
 <li>Add the property Data Service format</li>
 <li>Replaced mandatory Distribution status controlled vocabulary</li>
 </ul>
+
+To support the review, the changes are also highlighted on the diagram below.
+
+    <div>
+        <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/html/overview-annotated.jpg"
+           target="_blank">
+            <img src="https://semiceu.github.io/DCAT-AP/releases/3.0.0/html/overview-annotated.jpg"/>
+        </a>
+    </div>
 </div>
+
+
+
 
 <h3>Meeting minutes</h3>
 The following webinars have been held for the creation of this release
     <ul>
-	<li>Webinar 25 November 2022 (<a href="https://joinup.ec.europa.eu/sites/default/les/inline-files/MeetingMinutes.pdf">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=vpCu3wrBeso">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/Slides.pdf">slides</a>) </li>
-       <li>Webinar 2 February 2023 (<a href="https://joinup.ec.europa.eu/sites/default/les/inline-files/20230202%20Webinar%20DCAT-AP.pdf">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=teUeMLwv4Ks">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/webinar_2_feb_2022_DCAT-AP_v.0.3.pdf">slides</a>) </li>
+	<li>Webinar 25 November 2022 (<a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/MeetingMinutes.pdf">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=vpCu3wrBeso">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/Slides.pdf">slides</a>) </li>
+       <li>Webinar 2 February 2023 (<a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/20230202%20Webinar%20DCAT-AP.pdf">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=teUeMLwv4Ks">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/webinar_2_feb_2022_DCAT-AP_v.0.3.pdf">slides</a>) </li>
    </ul>
 
 
@@ -8890,7 +8902,7 @@ In case, publishers use persistent identifiers, then this should be reflected in
 When interpreting a Dataset Series as a Dataset, then it is expected that the directly associated Distributions contain the data that is the union of all Datasets in the collection. 
 But the presence of these Distributions raise semantical conflicts such as whether the property of the Dataset Series <code>frequency</code> refers to the update frequency of the associated Distributions or the update frequency of the collection. To avoid these semantical conflicts, it is recommended not to associate distributions with a Dataset Series.
 </li>
-<li>The members of a Dataset Series should be described in such a way that without the knowledge of the Dataset Series, the metadata is interpreted correctly. The existance of a dataset should not be based on the membership in a Dataset Series. The interpretation of a member with its associated Distributions and Data Services is conform the above guidelines.
+<li>The members of a Dataset Series should be described in such a way that without the knowledge of the Dataset Series, the metadata is interpreted correctly. The existence of a dataset should not be based on the membership in a Dataset Series. The interpretation of a member with its associated Distributions and Data Services is conform the above guidelines.
 </li>
 <li>A Dataset Series is a special kind of Dataset. It is recommended to apply the same metadata quality of Datasets to Dataset Series (see [[[#quick-reference]]] ). The dedicated usage guidelines for Dataset Series and the Dataset members of a Dataset Series take priority over the generic DCAT-AP Dataset guidelines.
 </li>
@@ -9164,6 +9176,8 @@ Nevertheless users usually expect that the datasets of a Dataset Series are stro
 Diverging too far from this interpretion is not recommended.
 The alternative for dataset series for grouping datasets are catalogues. 
 <p/>
+Thus to conclude the example of maintaining a Dataset Series, the Greek Environment Agency has created a Dataset Series about the Bee population in Greece.
+It contains the dataset with actual life data, the yearly snapshots for 2023 and 2022 and also the historic data of 2000 maintained by the National History Archives.
 <div class="h3 examples" id="example-bee-population-dataset-series-combined">Example 13 - Bee population dataset series</div>
 
 
