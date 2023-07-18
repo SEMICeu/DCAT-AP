@@ -1,0 +1,6 @@
+{
+  "@context": "https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/3.0.0/html/examples/context.jsonld",
+  "@id": "example-ds:BeePopulation",
+  "@type": "Dataset",
+  "frequency": "nal-frequency:ANNUAL"
+}

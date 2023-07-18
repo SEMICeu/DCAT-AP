@@ -1,0 +1,39 @@
+{
+  "@context": {
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  },
+  "@graph": [
+    {
+      "@id": "http://data.gov.gr/id/dataset/BeePopulation2022",
+      "@type": "dcat:Dataset",
+      "dcterms:description": {
+        "@language": "en",
+        "@value": "A dataset about bee population in Greece in 2022"
+      },
+      "dcterms:publisher": {
+        "@id": "http://www.example.org/rdf#GreekEnvironmentAgency"
+      },
+      "dcterms:title": {
+        "@language": "en",
+        "@value": "Bee population 2022"
+      }
+    },
+    {
+      "@id": "http://data.gov.gr/id/dataset/BeePopulation2023",
+      "@type": "dcat:Dataset",
+      "dcterms:description": {
+        "@language": "en",
+        "@value": "A dataset about bee population in Greece in 2023"
+      },
+      "dcterms:publisher": {
+        "@id": "http://www.example.org/rdf#GreekEnvironmentAgency"
+      },
+      "dcterms:title": {
+        "@language": "en",
+        "@value": "Bee population 2023"
+      }
+    }
+  ]
+}
