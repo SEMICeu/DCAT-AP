@@ -1,0 +1,43 @@
+{
+  "@context": "https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/3.0.0/html/examples/context.jsonld",
+  "@graph": [
+    {
+      "@id": "example-ds:BeePopulation2022",
+      "@type": ["Dataset", "DatasetMemberOfADatasetSeries"],
+      "releaseDate": "2022-03-01",
+      "geographicalCoverage": "https://sws.geonames.org/734077",
+      "title": {
+        "en": "Bee population 2022 in the region of Thessaloniki"
+      },
+      "inSeries": "example-ser:BeePopulation",
+      "previous": "example-ds:BeePopulation2000"
+    },
+    {
+      "@id": "example-ds:BeePopulation2023",
+      "@type": ["Dataset", "DatasetMemberOfADatasetSeries"],
+      "releaseDate": "2023-03-21",
+      "geographicalCoverage": [
+          "https://sws.geonames.org/734077",
+          "https://sws.geonames.org/264371"
+      ],
+      "title": {
+        "en": "Bee population 2023 in the region of Thessaloniki and Athens"
+      },
+      "inSeries": "example-ser:BeePopulation",
+      "previous": "example-ds:BeePopulation2022"
+    },
+    {
+      "@id": "example-ser:BeePopulation",
+      "@type": "DatasetSeries",
+      "releaseDate": "2022-04-01",
+      "geographicalCoverage": [
+          "https://sws.geonames.org/734077",
+          "https://sws.geonames.org/264371"
+      ],
+      "title": {
+        "en" : "Bee population"
+      },
+      "last": "example-ds:BeePopulation2022"
+    }
+  ]
+}
