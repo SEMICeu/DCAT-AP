@@ -17,6 +17,11 @@
     "Attribution": "http://www.w3.org/ns/prov#Attribution",
     "Catalogue": {
       "@context": {
+        "applicableLegislation": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/r5r/applicableLegislation",
+          "@type": "@id"
+        },
         "catalogue": {
           "@container": "@set",
           "@id": "http://www.w3.org/ns/dcat#catalog",
@@ -182,6 +187,11 @@
           "@id": "http://purl.org/dc/terms/accessRights",
           "@type": "@id"
         },
+        "applicableLegislation": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/r5r/applicableLegislation",
+          "@type": "@id"
+        },
         "description": {
           "@container": "@set",
           "@id": "http://purl.org/dc/terms/description"
@@ -221,6 +231,11 @@
       "@context": {
         "accessRights": {
           "@id": "http://purl.org/dc/terms/accessRights",
+          "@type": "@id"
+        },
+        "applicableLegislation": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/r5r/applicableLegislation",
           "@type": "@id"
         },
         "conformsTo": {
@@ -417,6 +432,11 @@
     },
     "DatasetSeries": {
       "@context": {
+        "applicableLegislation": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/r5r/applicableLegislation",
+          "@type": "@id"
+        },
         "contactPoint": {
           "@container": "@set",
           "@id": "http://www.w3.org/ns/dcat#contactPoint",
@@ -480,6 +500,11 @@
         "accessUrl": {
           "@container": "@set",
           "@id": "http://www.w3.org/ns/dcat#accessURL",
+          "@type": "@id"
+        },
+        "applicableLegislation": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/r5r/applicableLegislation",
           "@type": "@id"
         },
         "availability": {
@@ -585,6 +610,7 @@
       "@id": "http://www.w3.org/ns/adms#Identifier"
     },
     "Kind": "http://www.w3.org/2006/vcard/ns#Kind",
+    "LegalResource": "http://data.europa.eu/eli/ontology#LegalResource",
     "LicenceDocument": {
       "@context": {
         "type": {

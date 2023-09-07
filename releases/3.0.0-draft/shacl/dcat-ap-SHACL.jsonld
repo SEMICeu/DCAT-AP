@@ -103,6 +103,13 @@
   "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0",
   "shapes": [
     {
+      "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#LegalResourceShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://data.europa.eu/eli/ontology#LegalResource"
+    },
+    {
       "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#FrequencyShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
@@ -852,6 +859,21 @@
           }
         },
         {
+          "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#CatalogueShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb",
+          "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#Catalogue.applicablelegislation",
+          "sh:description": {
+            "en": "The legislation that mandates the creation or management of the Catalog."
+          },
+          "sh:name": {
+            "en": "applicable legislation"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/r5r/applicableLegislation",
+          "vl:message": {
+            "en": "The expected value for applicable legislation is a rdfs:Resource (URI or blank node)"
+          }
+        },
+        {
           "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#CatalogueShape/19f6de267036c30c67819273f5e8a4eedb68e228",
           "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#Catalogue.ispartof",
           "sh:description": {
@@ -1044,6 +1066,21 @@
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
             "en": "The expected value for description is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#CatalogueShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e",
+          "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#Catalogue.applicablelegislation",
+          "sh:class": "http://data.europa.eu/eli/ontology#LegalResource",
+          "sh:description": {
+            "en": "The legislation that mandates the creation or management of the Catalog."
+          },
+          "sh:name": {
+            "en": "applicable legislation"
+          },
+          "sh:path": "http://data.europa.eu/r5r/applicableLegislation",
+          "vl:message": {
+            "en": "The range of applicable legislation must be of type <http://data.europa.eu/eli/ontology#LegalResource>."
           }
         },
         {
@@ -1813,6 +1850,21 @@
       "sh:closed": false,
       "sh:property": [
         {
+          "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DataServiceShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb",
+          "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DataService.applicablelegislation",
+          "sh:description": {
+            "en": "The legislation that mandates the creation or management of the Data Service."
+          },
+          "sh:name": {
+            "en": "applicable legislation"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/r5r/applicableLegislation",
+          "vl:message": {
+            "en": "The expected value for applicable legislation is a rdfs:Resource (URI or blank node)"
+          }
+        },
+        {
           "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DataServiceShape/10c0ca4deadefb51c529f56ee01caf9bd2639ef4",
           "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DataService.accessrights",
           "sh:description": {
@@ -1885,6 +1937,21 @@
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
             "en": "The expected value for description is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DataServiceShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e",
+          "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DataService.applicablelegislation",
+          "sh:class": "http://data.europa.eu/eli/ontology#LegalResource",
+          "sh:description": {
+            "en": "The legislation that mandates the creation or management of the Data Service."
+          },
+          "sh:name": {
+            "en": "applicable legislation"
+          },
+          "sh:path": "http://data.europa.eu/r5r/applicableLegislation",
+          "vl:message": {
+            "en": "The range of applicable legislation must be of type <http://data.europa.eu/eli/ontology#LegalResource>."
           }
         },
         {
@@ -2148,6 +2215,21 @@
           "sh:path": "http://purl.org/dc/terms/conformsTo",
           "vl:message": {
             "en": "The expected value for conforms to is a rdfs:Resource (URI or blank node)"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb",
+          "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#Dataset.applicablelegislation",
+          "sh:description": {
+            "en": "The legislation that mandates the creation or management of the Dataset."
+          },
+          "sh:name": {
+            "en": "applicable legislation"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/r5r/applicableLegislation",
+          "vl:message": {
+            "en": "The expected value for applicable legislation is a rdfs:Resource (URI or blank node)"
           }
         },
         {
@@ -2598,6 +2680,21 @@
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
             "en": "The expected value for description is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e",
+          "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#Dataset.applicablelegislation",
+          "sh:class": "http://data.europa.eu/eli/ontology#LegalResource",
+          "sh:description": {
+            "en": "The legislation that mandates the creation or management of the Dataset."
+          },
+          "sh:name": {
+            "en": "applicable legislation"
+          },
+          "sh:path": "http://data.europa.eu/r5r/applicableLegislation",
+          "vl:message": {
+            "en": "The range of applicable legislation must be of type <http://data.europa.eu/eli/ontology#LegalResource>."
           }
         },
         {
@@ -3382,11 +3479,26 @@
           }
         },
         {
+          "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetSeriesShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb",
+          "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetSeries.applicablelegislation",
+          "sh:description": {
+            "en": "The legislation that mandates the creation or management of the Dataset Series."
+          },
+          "sh:name": {
+            "en": "applicable legislation"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/r5r/applicableLegislation",
+          "vl:message": {
+            "en": "The expected value for applicable legislation is a rdfs:Resource (URI or blank node)"
+          }
+        },
+        {
           "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetSeriesShape/0ae098d41aaf0ee928ce42d578bb24d57f072a50",
           "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetSeries.seriesmember",
           "sh:class": "http://www.w3.org/ns/dcat#Dataset",
           "sh:description": {
-            "en": "A member of the Dataset Series. "
+            "en": "A member of the Dataset Series."
           },
           "sh:name": {
             "en": "series member"
@@ -3415,7 +3527,7 @@
           "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetSeriesShape/5e679249734bfdf8af5274a8c84f06efee02cd24",
           "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetSeries.seriesmember",
           "sh:description": {
-            "en": "A member of the Dataset Series. "
+            "en": "A member of the Dataset Series."
           },
           "sh:name": {
             "en": "series member"
@@ -3484,6 +3596,21 @@
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
             "en": "The expected value for description is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetSeriesShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e",
+          "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetSeries.applicablelegislation",
+          "sh:class": "http://data.europa.eu/eli/ontology#LegalResource",
+          "sh:description": {
+            "en": "The legislation that mandates the creation or management of the Dataset Series."
+          },
+          "sh:name": {
+            "en": "applicable legislation"
+          },
+          "sh:path": "http://data.europa.eu/r5r/applicableLegislation",
+          "vl:message": {
+            "en": "The range of applicable legislation must be of type <http://data.europa.eu/eli/ontology#LegalResource>."
           }
         },
         {
@@ -3807,6 +3934,21 @@
           "sh:path": "http://data.europa.eu/r5r/availability",
           "vl:message": {
             "en": "The expected value for availability is a rdfs:Resource (URI or blank node)"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DistributionShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb",
+          "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#Distribution.applicablelegislation",
+          "sh:description": {
+            "en": "The legislation that mandates the creation or management of the Distribution."
+          },
+          "sh:name": {
+            "en": "applicable legislation"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/r5r/applicableLegislation",
+          "vl:message": {
+            "en": "The expected value for applicable legislation is a rdfs:Resource (URI or blank node)"
           }
         },
         {
@@ -4167,6 +4309,21 @@
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
             "en": "The expected value for description is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DistributionShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e",
+          "rdfs:seeAlso": "https://semiceu.github.io//DCAT-AP/releases/3.0.0#Distribution.applicablelegislation",
+          "sh:class": "http://data.europa.eu/eli/ontology#LegalResource",
+          "sh:description": {
+            "en": "The legislation that mandates the creation or management of the Distribution."
+          },
+          "sh:name": {
+            "en": "applicable legislation"
+          },
+          "sh:path": "http://data.europa.eu/r5r/applicableLegislation",
+          "vl:message": {
+            "en": "The range of applicable legislation must be of type <http://data.europa.eu/eli/ontology#LegalResource>."
           }
         },
         {

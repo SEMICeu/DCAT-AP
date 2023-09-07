@@ -485,6 +485,7 @@ The cardinalities and qualifications are included in the figure.
 			      <a href="#Frequency">Frequency</a> |
 			      <a href="#Geometry">Geometry</a> |
 			      <a href="#Identifier">Identifier</a> |
+			      <a href="#LegalResource">Legal Resource</a> |
 			      <a href="#Linguisticsystem">Linguistic system</a> |
 			      <a href="#Literal">Literal</a> |
 			      <a href="#Mediatype">Media type</a> |
@@ -555,7 +556,7 @@ The main entities are those that form the core of the Application Profile.
 		   Reference in DCAT
 		</dt>
 		    <dd>
-		    <a href="https://w3c.github.io/dxwg/dcat/#Class:Organization_Person">Link</a>
+		    <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Organization_Person">Link</a>
 		    </dd>
 		
                 
@@ -739,7 +740,7 @@ The main entities are those that form the core of the Application Profile.
 		   Reference in DCAT
 		</dt>
 		    <dd>
-		    <a href="https://w3c.github.io/dxwg/dcat/#Class:Catalog">Link</a>
+		    <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog">Link</a>
 		    </dd>
 		
                 
@@ -749,7 +750,8 @@ The main entities are those that form the core of the Application Profile.
                     </dt>
                     
                         <dd>
-                            For this entity the following properties are defined: <a href="#Catalogue.catalogue">catalogue</a>
+                            For this entity the following properties are defined: <a href="#Catalogue.applicablelegislation">applicable legislation</a>
+                            , <a href="#Catalogue.catalogue">catalogue</a>
                             , <a href="#Catalogue.creator">creator</a>
                             , <a href="#Catalogue.dataset">dataset</a>
                             , <a href="#Catalogue.description">description</a>
@@ -807,6 +809,49 @@ The main entities are those that form the core of the Application Profile.
                     </thead>
                     <tbody class="supertype">
                         
+                            <tr id="Catalogue.applicablelegislation"
+                                typeof="rdfs:Property"
+                                resource="http://data.europa.eu/r5r/applicableLegislation"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20applicable legislation%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23Catalogue.applicablelegislation" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://data.europa.eu/r5r/applicableLegislation"
+                                           data-toggle="tooltip"
+                                           data-content="http://data.europa.eu/r5r/applicableLegislation"
+                                           data-placement="right">
+                                        applicable legislation</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#LegalResource" data-placement="right">Legal Resource</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    The legislation that mandates the creation or management of the Catalog.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
                             <tr id="Catalogue.catalogue"
                                 typeof="rdfs:Property"
                                 resource="http://www.w3.org/ns/dcat#catalog"
@@ -846,7 +891,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:catalog_catalog">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_catalog">Link</a>
                                 </td>
                             </tr>
                         
@@ -889,7 +934,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_creator">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_creator">Link</a>
                                 </td>
                             </tr>
                         
@@ -932,7 +977,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:catalog_dataset">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_dataset">Link</a>
                                 </td>
                             </tr>
                         
@@ -975,7 +1020,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_description">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_description">Link</a>
                                 </td>
                             </tr>
                         
@@ -1018,7 +1063,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:dataset_spatial">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_spatial">Link</a>
                                 </td>
                             </tr>
                         
@@ -1061,7 +1106,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_has_part">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_has_part">Link</a>
                                 </td>
                             </tr>
                         
@@ -1104,7 +1149,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:catalog_homepage">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_homepage">Link</a>
                                 </td>
                             </tr>
                         
@@ -1190,7 +1235,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_language">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_language">Link</a>
                                 </td>
                             </tr>
                         
@@ -1233,7 +1278,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_license">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_license">Link</a>
                                 </td>
                             </tr>
                         
@@ -1276,7 +1321,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_update_date">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_update_date">Link</a>
                                 </td>
                             </tr>
                         
@@ -1319,7 +1364,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_publisher">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_publisher">Link</a>
                                 </td>
                             </tr>
                         
@@ -1362,7 +1407,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:catalog_catalog_record">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_catalog_record">Link</a>
                                 </td>
                             </tr>
                         
@@ -1405,7 +1450,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_release_date">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_release_date">Link</a>
                                 </td>
                             </tr>
                         
@@ -1448,7 +1493,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_rights">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_rights">Link</a>
                                 </td>
                             </tr>
                         
@@ -1491,7 +1536,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:catalog_service">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_service">Link</a>
                                 </td>
                             </tr>
                         
@@ -1534,7 +1579,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:dataset_temporal_resolution">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_temporal_resolution">Link</a>
                                 </td>
                             </tr>
                         
@@ -1577,7 +1622,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:catalog_themes">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_themes">Link</a>
                                 </td>
                             </tr>
                         
@@ -1620,7 +1665,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_title">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_title">Link</a>
                                 </td>
                             </tr>
                         
@@ -1662,7 +1707,7 @@ The main entities are those that form the core of the Application Profile.
 		   Reference in DCAT
 		</dt>
 		    <dd>
-		    <a href="https://w3c.github.io/dxwg/dcat/#Class:Catalog_Record">Link</a>
+		    <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog_Record">Link</a>
 		    </dd>
 		
                 
@@ -1759,7 +1804,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:record_conforms_to">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:record_conforms_to">Link</a>
                                 </td>
                             </tr>
                         
@@ -1845,7 +1890,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:record_description">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:record_description">Link</a>
                                 </td>
                             </tr>
                         
@@ -1931,7 +1976,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:record_listing_date">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:record_listing_date">Link</a>
                                 </td>
                             </tr>
                         
@@ -1974,7 +2019,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:record_update_date">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:record_update_date">Link</a>
                                 </td>
                             </tr>
                         
@@ -2017,7 +2062,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:record_primary_topic">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:record_primary_topic">Link</a>
                                 </td>
                             </tr>
                         
@@ -2103,7 +2148,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:record_title">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:record_title">Link</a>
                                 </td>
                             </tr>
                         
@@ -2145,7 +2190,7 @@ The main entities are those that form the core of the Application Profile.
 		   Reference in DCAT
 		</dt>
 		    <dd>
-		    <a href="https://w3c.github.io/dxwg/dcat/#Class:Resource">Link</a>
+		    <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Resource">Link</a>
 		    </dd>
 		
                 
@@ -2390,7 +2435,7 @@ The main entities are those that form the core of the Application Profile.
 		   Reference in DCAT
 		</dt>
 		    <dd>
-		    <a href="https://w3c.github.io/dxwg/dcat/#Class:Data_Service">Link</a>
+		    <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">Link</a>
 		    </dd>
 		
                 
@@ -2408,6 +2453,7 @@ The main entities are those that form the core of the Application Profile.
                     
                         <dd>
                             For this entity the following properties are defined: <a href="#DataService.accessrights">access rights</a>
+                            , <a href="#DataService.applicablelegislation">applicable legislation</a>
                             , <a href="#DataService.description">description</a>
                             , <a href="#DataService.endpointdescription">endpoint description</a>
                             , <a href="#DataService.endpointURL">endpoint URL</a>
@@ -2493,7 +2539,50 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_access_rights">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_access_rights">Link</a>
+                                </td>
+                            </tr>
+                        
+                            <tr id="DataService.applicablelegislation"
+                                typeof="rdfs:Property"
+                                resource="http://data.europa.eu/r5r/applicableLegislation"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20applicable legislation%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23DataService.applicablelegislation" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://data.europa.eu/r5r/applicableLegislation"
+                                           data-toggle="tooltip"
+                                           data-content="http://data.europa.eu/r5r/applicableLegislation"
+                                           data-placement="right">
+                                        applicable legislation</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#LegalResource" data-placement="right">Legal Resource</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    The legislation that mandates the creation or management of the Data Service.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
                                 </td>
                             </tr>
                         
@@ -2536,7 +2625,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_description">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_description">Link</a>
                                 </td>
                             </tr>
                         
@@ -2579,7 +2668,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:data_service_endpoint_description">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:data_service_endpoint_description">Link</a>
                                 </td>
                             </tr>
                         
@@ -2622,7 +2711,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:data_service_endpoint_url">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:data_service_endpoint_url">Link</a>
                                 </td>
                             </tr>
                         
@@ -2708,7 +2797,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_license">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_license">Link</a>
                                 </td>
                             </tr>
                         
@@ -2751,7 +2840,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:data_service_serves_dataset">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:data_service_serves_dataset">Link</a>
                                 </td>
                             </tr>
                         
@@ -2794,7 +2883,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_title">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_title">Link</a>
                                 </td>
                             </tr>
                         
@@ -2836,7 +2925,7 @@ The main entities are those that form the core of the Application Profile.
 		   Reference in DCAT
 		</dt>
 		    <dd>
-		    <a href="https://w3c.github.io/dxwg/dcat/#Class:Dataset">Link</a>
+		    <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset">Link</a>
 		    </dd>
 		
                 
@@ -2854,6 +2943,7 @@ The main entities are those that form the core of the Application Profile.
                     
                         <dd>
                             For this entity the following properties are defined: <a href="#Dataset.accessrights">access rights</a>
+                            , <a href="#Dataset.applicablelegislation">applicable legislation</a>
                             , <a href="#Dataset.conformsto">conforms to</a>
                             , <a href="#Dataset.contactpoint">contact point</a>
                             , <a href="#Dataset.creator">creator</a>
@@ -2966,7 +3056,50 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_access_rights">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_access_rights">Link</a>
+                                </td>
+                            </tr>
+                        
+                            <tr id="Dataset.applicablelegislation"
+                                typeof="rdfs:Property"
+                                resource="http://data.europa.eu/r5r/applicableLegislation"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20applicable legislation%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23Dataset.applicablelegislation" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://data.europa.eu/r5r/applicableLegislation"
+                                           data-toggle="tooltip"
+                                           data-content="http://data.europa.eu/r5r/applicableLegislation"
+                                           data-placement="right">
+                                        applicable legislation</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#LegalResource" data-placement="right">Legal Resource</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    The legislation that mandates the creation or management of the Dataset.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
                                 </td>
                             </tr>
                         
@@ -3009,7 +3142,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_conforms_to">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_conforms_to">Link</a>
                                 </td>
                             </tr>
                         
@@ -3052,7 +3185,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_contact_point">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_contact_point">Link</a>
                                 </td>
                             </tr>
                         
@@ -3095,7 +3228,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_creator">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_creator">Link</a>
                                 </td>
                             </tr>
                         
@@ -3138,7 +3271,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:dataset_distribution">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_distribution">Link</a>
                                 </td>
                             </tr>
                         
@@ -3181,7 +3314,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_description">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_description">Link</a>
                                 </td>
                             </tr>
                         
@@ -3267,7 +3400,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:dataset_frequency">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_frequency">Link</a>
                                 </td>
                             </tr>
                         
@@ -3310,7 +3443,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:dataset_spatial">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_spatial">Link</a>
                                 </td>
                             </tr>
                         
@@ -3396,7 +3529,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_identifier">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_identifier">Link</a>
                                 </td>
                             </tr>
                         
@@ -3439,7 +3572,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_is_referenced_by">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_is_referenced_by">Link</a>
                                 </td>
                             </tr>
                         
@@ -3525,7 +3658,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_keyword">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_keyword">Link</a>
                                 </td>
                             </tr>
                         
@@ -3568,7 +3701,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_landing_page">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_landing_page">Link</a>
                                 </td>
                             </tr>
                         
@@ -3611,7 +3744,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_language">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_language">Link</a>
                                 </td>
                             </tr>
                         
@@ -3654,7 +3787,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_update_date">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_update_date">Link</a>
                                 </td>
                             </tr>
                         
@@ -3697,7 +3830,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#dereferenceable-identifiers">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#dereferenceable-identifiers">Link</a>
                                 </td>
                             </tr>
                         
@@ -3783,7 +3916,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_publisher">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_publisher">Link</a>
                                 </td>
                             </tr>
                         
@@ -3826,7 +3959,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_qualified_attribution">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_qualified_attribution">Link</a>
                                 </td>
                             </tr>
                         
@@ -3869,7 +4002,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_qualified_relation">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_qualified_relation">Link</a>
                                 </td>
                             </tr>
                         
@@ -3912,7 +4045,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_relation">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_relation">Link</a>
                                 </td>
                             </tr>
                         
@@ -3955,7 +4088,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_release_date">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_release_date">Link</a>
                                 </td>
                             </tr>
                         
@@ -4084,7 +4217,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:dataset_spatial_resolution">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_spatial_resolution">Link</a>
                                 </td>
                             </tr>
                         
@@ -4127,7 +4260,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:dataset_temporal">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_temporal">Link</a>
                                 </td>
                             </tr>
                         
@@ -4170,7 +4303,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:dataset_temporal_resolution">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_temporal_resolution">Link</a>
                                 </td>
                             </tr>
                         
@@ -4213,7 +4346,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_theme">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_theme">Link</a>
                                 </td>
                             </tr>
                         
@@ -4256,7 +4389,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_title">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_title">Link</a>
                                 </td>
                             </tr>
                         
@@ -4299,7 +4432,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_type">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_type">Link</a>
                                 </td>
                             </tr>
                         
@@ -4342,7 +4475,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_version">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_version">Link</a>
                                 </td>
                             </tr>
                         
@@ -4428,7 +4561,7 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:dataset_was_generated_by">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_was_generated_by">Link</a>
                                 </td>
                             </tr>
                         
@@ -4574,7 +4707,7 @@ The description may indicate the dimension values.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_description">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_description">Link</a>
                                 </td>
                             </tr>
                         
@@ -4619,7 +4752,7 @@ E.g. A dataset budget 2020 with frequency yearly means that this dataset has an 
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:dataset_frequency">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_frequency">Link</a>
                                 </td>
                             </tr>
                         
@@ -4662,7 +4795,7 @@ E.g. A dataset budget 2020 with frequency yearly means that this dataset has an 
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:dataset_in_series">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_in_series">Link</a>
                                 </td>
                             </tr>
                         
@@ -4748,7 +4881,7 @@ E.g. A dataset budget 2020 with frequency yearly means that this dataset has an 
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_previous">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_previous">Link</a>
                                 </td>
                             </tr>
                         
@@ -4793,7 +4926,7 @@ The title may indicate the dimension values.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_title">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_title">Link</a>
                                 </td>
                             </tr>
                         
@@ -4835,7 +4968,7 @@ The title may indicate the dimension values.
 		   Reference in DCAT
 		</dt>
 		    <dd>
-		    <a href="https://w3c.github.io/dxwg/dcat/#Class:Dataset_Series">Link</a>
+		    <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series">Link</a>
 		    </dd>
 		
                 
@@ -4852,7 +4985,8 @@ The title may indicate the dimension values.
                     </dt>
                     
                         <dd>
-                            For this entity the following properties are defined: <a href="#DatasetSeries.contactpoint">contact point</a>
+                            For this entity the following properties are defined: <a href="#DatasetSeries.applicablelegislation">applicable legislation</a>
+                            , <a href="#DatasetSeries.contactpoint">contact point</a>
                             , <a href="#DatasetSeries.description">description</a>
                             , <a href="#DatasetSeries.first">first</a>
                             , <a href="#DatasetSeries.frequency">frequency</a>
@@ -4903,6 +5037,49 @@ The title may indicate the dimension values.
                     </thead>
                     <tbody class="supertype">
                         
+                            <tr id="DatasetSeries.applicablelegislation"
+                                typeof="rdfs:Property"
+                                resource="http://data.europa.eu/r5r/applicableLegislation"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20applicable legislation%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23DatasetSeries.applicablelegislation" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://data.europa.eu/r5r/applicableLegislation"
+                                           data-toggle="tooltip"
+                                           data-content="http://data.europa.eu/r5r/applicableLegislation"
+                                           data-placement="right">
+                                        applicable legislation</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#LegalResource" data-placement="right">Legal Resource</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    The legislation that mandates the creation or management of the Dataset Series.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
                             <tr id="DatasetSeries.contactpoint"
                                 typeof="rdfs:Property"
                                 resource="http://www.w3.org/ns/dcat#contactPoint"
@@ -4942,7 +5119,7 @@ The title may indicate the dimension values.
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_contact_point">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_contact_point">Link</a>
                                 </td>
                             </tr>
                         
@@ -4987,7 +5164,7 @@ It is recommended to provide an indication about the dimensions the Dataset Seri
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_description">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_description">Link</a>
                                 </td>
                             </tr>
                         
@@ -5030,7 +5207,7 @@ It is recommended to provide an indication about the dimensions the Dataset Seri
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_first">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_first">Link</a>
                                 </td>
                             </tr>
                         
@@ -5073,7 +5250,7 @@ It is recommended to provide an indication about the dimensions the Dataset Seri
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:dataset_frequency">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_frequency">Link</a>
                                 </td>
                             </tr>
                         
@@ -5116,7 +5293,7 @@ It is recommended to provide an indication about the dimensions the Dataset Seri
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:dataset_spatial">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_spatial">Link</a>
                                 </td>
                             </tr>
                         
@@ -5159,7 +5336,7 @@ It is recommended to provide an indication about the dimensions the Dataset Seri
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_last">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_last">Link</a>
                                 </td>
                             </tr>
                         
@@ -5202,7 +5379,7 @@ It is recommended to provide an indication about the dimensions the Dataset Seri
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_update_date">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_update_date">Link</a>
                                 </td>
                             </tr>
                         
@@ -5246,7 +5423,7 @@ E.g. a digital archive could take over the publishing of older datasets in the 
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_publisher">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_publisher">Link</a>
                                 </td>
                             </tr>
                         
@@ -5291,7 +5468,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_release_date">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_release_date">Link</a>
                                 </td>
                             </tr>
                         
@@ -5323,7 +5500,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    A member of the Dataset Series. 
+                                    A member of the Dataset Series.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -5377,7 +5554,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:dataset_temporal">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_temporal">Link</a>
                                 </td>
                             </tr>
                         
@@ -5420,7 +5597,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_title">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_title">Link</a>
                                 </td>
                             </tr>
                         
@@ -5462,7 +5639,7 @@ This is not equal to the release date of the oldest dataset in the collection of
 		   Reference in DCAT
 		</dt>
 		    <dd>
-		    <a href="https://w3c.github.io/dxwg/dcat/#Class:Distribution">Link</a>
+		    <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Distribution">Link</a>
 		    </dd>
 		
                 
@@ -5474,6 +5651,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                         <dd>
                             For this entity the following properties are defined: <a href="#Distribution.accessservice">access service</a>
                             , <a href="#Distribution.accessURL">access URL</a>
+                            , <a href="#Distribution.applicablelegislation">applicable legislation</a>
                             , <a href="#Distribution.availability">availability</a>
                             , <a href="#Distribution.bytesize">byte size</a>
                             , <a href="#Distribution.checksum">checksum</a>
@@ -5573,7 +5751,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_access_service">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_access_service">Link</a>
                                 </td>
                             </tr>
                         
@@ -5616,7 +5794,50 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_access_url">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_access_url">Link</a>
+                                </td>
+                            </tr>
+                        
+                            <tr id="Distribution.applicablelegislation"
+                                typeof="rdfs:Property"
+                                resource="http://data.europa.eu/r5r/applicableLegislation"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20applicable legislation%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23Distribution.applicablelegislation" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://data.europa.eu/r5r/applicableLegislation"
+                                           data-toggle="tooltip"
+                                           data-content="http://data.europa.eu/r5r/applicableLegislation"
+                                           data-placement="right">
+                                        applicable legislation</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#LegalResource" data-placement="right">Legal Resource</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    The legislation that mandates the creation or management of the Distribution.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
                                 </td>
                             </tr>
                         
@@ -5702,7 +5923,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_size">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_size">Link</a>
                                 </td>
                             </tr>
                         
@@ -5745,7 +5966,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_checksum">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_checksum">Link</a>
                                 </td>
                             </tr>
                         
@@ -5788,7 +6009,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_compression_format">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_compression_format">Link</a>
                                 </td>
                             </tr>
                         
@@ -5831,7 +6052,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_description">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_description">Link</a>
                                 </td>
                             </tr>
                         
@@ -5917,7 +6138,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_download_url">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_download_url">Link</a>
                                 </td>
                             </tr>
                         
@@ -5960,7 +6181,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_format">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_format">Link</a>
                                 </td>
                             </tr>
                         
@@ -6003,7 +6224,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_has_policy">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_has_policy">Link</a>
                                 </td>
                             </tr>
                         
@@ -6089,7 +6310,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_license">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_license">Link</a>
                                 </td>
                             </tr>
                         
@@ -6132,7 +6353,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_conforms_to">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_conforms_to">Link</a>
                                 </td>
                             </tr>
                         
@@ -6175,7 +6396,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_media_type">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_media_type">Link</a>
                                 </td>
                             </tr>
                         
@@ -6218,7 +6439,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_update_date">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_update_date">Link</a>
                                 </td>
                             </tr>
                         
@@ -6261,7 +6482,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_packaging_format">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_packaging_format">Link</a>
                                 </td>
                             </tr>
                         
@@ -6304,7 +6525,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_release_date">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_release_date">Link</a>
                                 </td>
                             </tr>
                         
@@ -6347,7 +6568,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_rights">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_rights">Link</a>
                                 </td>
                             </tr>
                         
@@ -6390,7 +6611,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_spatial_resolution">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_spatial_resolution">Link</a>
                                 </td>
                             </tr>
                         
@@ -6476,7 +6697,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_temporal_resolution">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_temporal_resolution">Link</a>
                                 </td>
                             </tr>
                         
@@ -6519,7 +6740,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_title">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_title">Link</a>
                                 </td>
                             </tr>
                         
@@ -6587,6 +6808,8 @@ This is not equal to the release date of the oldest dataset in the collection of
         
     </div>
 </section>
+
+
 
 
 
@@ -6740,14 +6963,14 @@ This is not equal to the release date of the oldest dataset in the collection of
                     Definition
                 </dt>
                 <dd>
-                    A spatial region or named place. 
+                    A spatial region or named place.
                 </dd>
                 
 		<dt>
 		   Reference in DCAT
 		</dt>
 		    <dd>
-		    <a href="https://w3c.github.io/dxwg/dcat/#Class:Location">Link</a>
+		    <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Location">Link</a>
 		    </dd>
 		
                 
@@ -6845,7 +7068,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:location_bbox">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:location_bbox">Link</a>
                                 </td>
                             </tr>
                         
@@ -6888,7 +7111,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:location_centroid">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:location_centroid">Link</a>
                                 </td>
                             </tr>
                         
@@ -6931,7 +7154,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:location_geometry">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:location_geometry">Link</a>
                                 </td>
                             </tr>
                         
@@ -7800,6 +8023,58 @@ They are included in the Application Profile because they form the range of prop
 
 
 
+   
+        <section>
+            <h3 id="LegalResource">
+                <a href="http://data.europa.eu/eli/ontology#LegalResource"
+                   data-toggle="tooltip"
+                   data-content="http://data.europa.eu/eli/ontology#LegalResource"
+                   data-placement="right">Legal Resource</a>
+
+            </h3>
+	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
+                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20LegalResource&body=Explain%20your%20issue"}}>
+                   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+		</a>
+		-->
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    This class represents the legislation,policy or policies that lie behind the Rules that govern the service.
+                </dd>
+                
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        The definition and properties of the Legal Resource class are aligned with the ontology included in "Council conclusions inviting the introduction of the European Legislation Identifier (ELI)". For describing the attributes of a Legal Resource (labels, preferred labels, alternative labels, definition, etc.) we refer to the ELI ontology.
+
+In this data specification the use is restricted to instances of this class that follow the ELI URI guidelines.
+                    </dd>
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                    <dd>
+                        This specification does not impose any additional requirements to properties for this entity.
+                    </dd>
+                
+            </dl>
+        </div>
+        
+    </div>
+</section>
+
+
+
+
+
 
 
    
@@ -7960,7 +8235,7 @@ They are included in the Application Profile because they form the range of prop
 		   Reference in DCAT
 		</dt>
 		    <dd>
-		    <a href="https://w3c.github.io/dxwg/dcat/#Class:Period_of_Time">Link</a>
+		    <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Period_of_Time">Link</a>
 		    </dd>
 		
                 
@@ -8052,7 +8327,7 @@ They are included in the Application Profile because they form the range of prop
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:period_has_beginning">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:period_has_beginning">Link</a>
                                 </td>
                             </tr>
                         
@@ -8095,7 +8370,7 @@ They are included in the Application Profile because they form the range of prop
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:period_has_end">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:period_has_end">Link</a>
                                 </td>
                             </tr>
                         
@@ -8138,7 +8413,7 @@ They are included in the Application Profile because they form the range of prop
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:period_end_date">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:period_end_date">Link</a>
                                 </td>
                             </tr>
                         
@@ -8181,7 +8456,7 @@ They are included in the Application Profile because they form the range of prop
                                 </td>
 				-->
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:period_start_date">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:period_start_date">Link</a>
                                 </td>
                             </tr>
                         
@@ -8731,7 +9006,7 @@ These criteria do not intend to define a set of requirements for controlled voca
 <table id="table-cv" class="simple">
     <thead><tr><th>Property URI</th><th>Used for Class</th><th>Vocabulary name</th><th>Usage note</th></tr></thead>
     <tbody>
-<tr><td>dct:type</td><rd><a href="#Dataset">Dataset</a></td><td><a href="http://publications.europa.eu/resource/dataset/dataset-type">Dataset-type authority table</a></td><td>This list of terms provide types of datasets. Its main scope is to support dataset categorisation of the EU Open Data Portal.</td></tr>
+<tr><td>dct:type</td><td><a href="#Dataset">Dataset</a></td><td><a href="http://publications.europa.eu/resource/dataset/dataset-type">Dataset-type authority table</a></td><td>This list of terms provide types of datasets. Its main scope is to support dataset categorisation of the EU Open Data Portal.</td></tr>
     </tbody>
 </table>
 
@@ -9271,6 +9546,8 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 						
 					
 						
+					
+						
 							<tr>
 								<td><a href="#Catalogue">Catalogue</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/dcat#Catalog</div></td>
@@ -9326,6 +9603,8 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							</tr>
 						
 					
+					
+						
 					
 						
 					
@@ -9437,6 +9716,16 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
+					
+						
+							<tr>
+								<td><a href="#Catalogue">Catalogue</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#Catalog</div></td>
+								<td>Optional</td>
+								<td><a href="#Catalogue.applicablelegislation">applicable legislation </a></td>
+								<td><div class="shorten">http://data.europa.eu/r5r/applicableLegislation</div></td>
+							</tr>
+						
 					
 						
 							<tr>
@@ -9776,6 +10065,8 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 						
 					
 						
+					
+						
 							<tr>
 								<td><a href="#DataService">Data Service</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/dcat#DataService</div></td>
@@ -9801,6 +10092,8 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							</tr>
 						
 					
+					
+						
 					
 						
 					
@@ -9842,6 +10135,16 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td>Optional</td>
 								<td><a href="#DataService.accessrights">access rights </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/accessRights</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#DataService">Data Service</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#DataService</div></td>
+								<td></td>
+								<td><a href="#DataService.applicablelegislation">applicable legislation </a></td>
+								<td><div class="shorten">http://data.europa.eu/r5r/applicableLegislation</div></td>
 							</tr>
 						
 					
@@ -9949,6 +10252,8 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 						
 					
 						
+					
+						
 							<tr>
 								<td><a href="#Dataset">Dataset</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></td>
@@ -9966,6 +10271,8 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
+					
+						
 					
 						
 					
@@ -10101,6 +10408,16 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td>Optional</td>
 								<td><a href="#Dataset.accessrights">access rights </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/accessRights</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Dataset">Dataset</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></td>
+								<td>Optional</td>
+								<td><a href="#Dataset.applicablelegislation">applicable legislation </a></td>
+								<td><div class="shorten">http://data.europa.eu/r5r/applicableLegislation</div></td>
 							</tr>
 						
 					
@@ -10499,6 +10816,8 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 						
 					
 						
+					
+						
 							<tr>
 								<td><a href="#DatasetSeries">Dataset Series</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/dcat#DatasetSeries</div></td>
@@ -10508,6 +10827,8 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							</tr>
 						
 					
+					
+						
 					
 						
 							<tr>
@@ -10565,6 +10886,16 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
+					
+						
+							<tr>
+								<td><a href="#DatasetSeries">Dataset Series</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#DatasetSeries</div></td>
+								<td>Optional</td>
+								<td><a href="#DatasetSeries.applicablelegislation">applicable legislation </a></td>
+								<td><div class="shorten">http://data.europa.eu/r5r/applicableLegislation</div></td>
+							</tr>
+						
 					
 						
 					
@@ -10705,6 +11036,10 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
+						
+					
+					
+						
 					
 						
 					
@@ -10779,6 +11114,16 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							</tr>
 						
 					
+						
+					
+						
+							<tr>
+								<td><a href="#Distribution">Distribution</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#Distribution</div></td>
+								<td>Optional</td>
+								<td><a href="#Distribution.applicablelegislation">applicable legislation </a></td>
+								<td><div class="shorten">http://data.europa.eu/r5r/applicableLegislation</div></td>
+							</tr>
 						
 					
 						
@@ -11036,6 +11381,17 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					<tr>
 						<td><a href="#Kind">Kind</a></td>
 						<td><div class="shorten">http://www.w3.org/2006/vcard/ns#Kind</div></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				
+			</tr>
+		
+				
+					<tr>
+						<td><a href="#LegalResource">Legal Resource</a></td>
+						<td><div class="shorten">http://data.europa.eu/eli/ontology#LegalResource</div></td>
 						<td></td>
 						<td></td>
 						<td></td>

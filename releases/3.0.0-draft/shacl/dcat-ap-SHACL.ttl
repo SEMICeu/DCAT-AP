@@ -9,7 +9,8 @@
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://semiceu.github.io//DCAT-AP/releases/3.0.0> rdfs:member <https://semiceu.github.io//DCAT-AP/releases/3.0.0#FrequencyShape>,
+<https://semiceu.github.io//DCAT-AP/releases/3.0.0> rdfs:member <https://semiceu.github.io//DCAT-AP/releases/3.0.0#LegalResourceShape>,
+    <https://semiceu.github.io//DCAT-AP/releases/3.0.0#FrequencyShape>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#LicenceDocumentShape>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#LinguisticsystemShape>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#LocationShape>,
@@ -290,6 +291,7 @@
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#CatalogueShape/00ac10319099fe2cccabf6b6e38a4876211b79f7>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#CatalogueShape/01d5c746936ff78bb5eb353a1b0e49303cb2fd31>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#CatalogueShape/077f69c4a4864ee33e52ce28b6ac87c96cdaea9d>,
+    <https://semiceu.github.io//DCAT-AP/releases/3.0.0#CatalogueShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#CatalogueShape/19f6de267036c30c67819273f5e8a4eedb68e228>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#CatalogueShape/28d4860d1ad14d789ffc09b841dfc4f9b27a0f4d>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#CatalogueShape/29ba27566ab1f32c8bb73f3492436d4bd868d3d2>,
@@ -303,6 +305,7 @@
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#CatalogueShape/67dcdb36167ca7969c0532898e11a98e9c2a80f5>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#CatalogueShape/6b7242b6b89977700c05e4875131fbb975c4235e>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#CatalogueShape/6cae9880e515253132af1452a38a8a5827165149>,
+    <https://semiceu.github.io//DCAT-AP/releases/3.0.0#CatalogueShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#CatalogueShape/7b94c69361e00163d16d78016cd994668c7fccda>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#CatalogueShape/7d4c667652f23f3a51353271e3800bca87ed3f68>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#CatalogueShape/81d9e81dce75ad228913796fb0f52470b14df56b>,
@@ -360,6 +363,13 @@
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path dcat:themeTaxonomy;
   <https://purl.eu/ns/shacl#message> "The expected value for themes is a rdfs:Resource (URI or blank node)"@en .
+
+<https://semiceu.github.io//DCAT-AP/releases/3.0.0#CatalogueShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#Catalogue.applicablelegislation";
+  shacl:description "The legislation that mandates the creation or management of the Catalog."@en;
+  shacl:name "applicable legislation"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/r5r/applicableLegislation>;
+  <https://purl.eu/ns/shacl#message> "The expected value for applicable legislation is a rdfs:Resource (URI or blank node)"@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#CatalogueShape/19f6de267036c30c67819273f5e8a4eedb68e228> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#Catalogue.ispartof";
   shacl:description "A related Catalogue in which the described Catalogue is physically or logically included."@en;
@@ -451,6 +461,13 @@
   shacl:nodeKind shacl:Literal;
   shacl:path dc:description;
   <https://purl.eu/ns/shacl#message> "The expected value for description is a Literal"@en .
+
+<https://semiceu.github.io//DCAT-AP/releases/3.0.0#CatalogueShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#Catalogue.applicablelegislation";
+  shacl:class <http://data.europa.eu/eli/ontology#LegalResource>;
+  shacl:description "The legislation that mandates the creation or management of the Catalog."@en;
+  shacl:name "applicable legislation"@en;
+  shacl:path <http://data.europa.eu/r5r/applicableLegislation>;
+  <https://purl.eu/ns/shacl#message> "The range of applicable legislation must be of type <http://data.europa.eu/eli/ontology#LegalResource>."@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#CatalogueShape/7b94c69361e00163d16d78016cd994668c7fccda> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#Catalogue.dataset";
   shacl:class dcat:Dataset;
@@ -766,11 +783,13 @@
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DataServiceShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DataServiceShape/10c0ca4deadefb51c529f56ee01caf9bd2639ef4>,
+  shacl:property <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DataServiceShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb>,
+    <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DataServiceShape/10c0ca4deadefb51c529f56ee01caf9bd2639ef4>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DataServiceShape/1a61f733fafb015548fe0e21203d559c9cb4d228>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DataServiceShape/3bde2663aaca96d953765ac2e525ef64710bf4d6>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DataServiceShape/63240e11f1eb66f636413d1dbb134f0ff9066a7c>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DataServiceShape/6cae9880e515253132af1452a38a8a5827165149>,
+    <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DataServiceShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DataServiceShape/737cd5f1c9f0e13c35eb82b7f0d2b2f76a9a82c7>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DataServiceShape/7a20e2eb5f5549088fd53fa93fab0958019f267e>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DataServiceShape/83ad7325cc6681e43e44550c269847065a95a14f>,
@@ -785,6 +804,13 @@
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DataServiceShape/f30149ffb6ec9d00dd5866b052105729fa27d02a>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DataServiceShape/f8b02efd063b8089b72ce9677a1e4a3488eeb9a9>;
   shacl:targetClass dcat:DataService .
+
+<https://semiceu.github.io//DCAT-AP/releases/3.0.0#DataServiceShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DataService.applicablelegislation";
+  shacl:description "The legislation that mandates the creation or management of the Data Service."@en;
+  shacl:name "applicable legislation"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/r5r/applicableLegislation>;
+  <https://purl.eu/ns/shacl#message> "The expected value for applicable legislation is a rdfs:Resource (URI or blank node)"@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DataServiceShape/10c0ca4deadefb51c529f56ee01caf9bd2639ef4> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DataService.accessrights";
   shacl:description "Information regarding access or restrictions based on privacy, security, or other policies."@en;
@@ -820,6 +846,13 @@
   shacl:nodeKind shacl:Literal;
   shacl:path dc:description;
   <https://purl.eu/ns/shacl#message> "The expected value for description is a Literal"@en .
+
+<https://semiceu.github.io//DCAT-AP/releases/3.0.0#DataServiceShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DataService.applicablelegislation";
+  shacl:class <http://data.europa.eu/eli/ontology#LegalResource>;
+  shacl:description "The legislation that mandates the creation or management of the Data Service."@en;
+  shacl:name "applicable legislation"@en;
+  shacl:path <http://data.europa.eu/r5r/applicableLegislation>;
+  <https://purl.eu/ns/shacl#message> "The range of applicable legislation must be of type <http://data.europa.eu/eli/ontology#LegalResource>."@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DataServiceShape/737cd5f1c9f0e13c35eb82b7f0d2b2f76a9a82c7> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DataService.format";
   shacl:class dc:MediaTypeOrExtent;
@@ -916,6 +949,7 @@
   shacl:closed false;
   shacl:property <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetSeriesShape/00a99d55cbc03165373a8348d5a88402ea4f239a>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetSeriesShape/04d197dc40f01e87093bdd0446a9fdb1a9d44319>,
+    <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetSeriesShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetSeriesShape/0ae098d41aaf0ee928ce42d578bb24d57f072a50>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetSeriesShape/4be37093e4c3ba0d5b5a18ef6b97778d6d689392>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetSeriesShape/5e679249734bfdf8af5274a8c84f06efee02cd24>,
@@ -923,6 +957,7 @@
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetSeriesShape/67dcdb36167ca7969c0532898e11a98e9c2a80f5>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetSeriesShape/6b7242b6b89977700c05e4875131fbb975c4235e>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetSeriesShape/6cae9880e515253132af1452a38a8a5827165149>,
+    <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetSeriesShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetSeriesShape/75f282ab9d40c191ecec85e07df38e38afb0d406>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetSeriesShape/75fc61eb9fa1738685f5091e7f120c8e74314127>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetSeriesShape/7b6713c1f4a52e964f5db57eabef294b6d04e90e>,
@@ -958,9 +993,16 @@
   shacl:path dc:accrualPeriodicity;
   <https://purl.eu/ns/shacl#message> "The range of frequency must be of type <http://purl.org/dc/terms/Frequency>."@en .
 
+<https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetSeriesShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetSeries.applicablelegislation";
+  shacl:description "The legislation that mandates the creation or management of the Dataset Series."@en;
+  shacl:name "applicable legislation"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/r5r/applicableLegislation>;
+  <https://purl.eu/ns/shacl#message> "The expected value for applicable legislation is a rdfs:Resource (URI or blank node)"@en .
+
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetSeriesShape/0ae098d41aaf0ee928ce42d578bb24d57f072a50> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetSeries.seriesmember";
   shacl:class dcat:Dataset;
-  shacl:description "A member of the Dataset Series. "@en;
+  shacl:description "A member of the Dataset Series."@en;
   shacl:name "series member"@en;
   shacl:path dcat:seriesMember;
   <https://purl.eu/ns/shacl#message> "The range of series member must be of type <http://www.w3.org/ns/dcat#Dataset>."@en .
@@ -973,7 +1015,7 @@
   <https://purl.eu/ns/shacl#message> "The expected value for release date is a Literal"@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetSeriesShape/5e679249734bfdf8af5274a8c84f06efee02cd24> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetSeries.seriesmember";
-  shacl:description "A member of the Dataset Series. "@en;
+  shacl:description "A member of the Dataset Series."@en;
   shacl:name "series member"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path dcat:seriesMember;
@@ -1006,6 +1048,13 @@
   shacl:nodeKind shacl:Literal;
   shacl:path dc:description;
   <https://purl.eu/ns/shacl#message> "The expected value for description is a Literal"@en .
+
+<https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetSeriesShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetSeries.applicablelegislation";
+  shacl:class <http://data.europa.eu/eli/ontology#LegalResource>;
+  shacl:description "The legislation that mandates the creation or management of the Dataset Series."@en;
+  shacl:name "applicable legislation"@en;
+  shacl:path <http://data.europa.eu/r5r/applicableLegislation>;
+  <https://purl.eu/ns/shacl#message> "The range of applicable legislation must be of type <http://data.europa.eu/eli/ontology#LegalResource>."@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetSeriesShape/75f282ab9d40c191ecec85e07df38e38afb0d406> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetSeries.first";
   shacl:description "The first resource in an ordered collection or series of resources, to which the current resource belongs."@en;
@@ -1146,6 +1195,7 @@
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetShape/016e621848f36eb558335ecb98b4b24cb2447d37>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetShape/04d197dc40f01e87093bdd0446a9fdb1a9d44319>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetShape/08118c51bfc41b71d11f3a58e9410da74e6480e6>,
+    <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetShape/0b40e829101914fa8381318b35a5205a2a465453>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetShape/0bcb30d1f00a2e13ee04c77dbcb8018f2ef83d5b>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetShape/10c0ca4deadefb51c529f56ee01caf9bd2639ef4>,
@@ -1176,6 +1226,7 @@
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetShape/68388ec47b77212d80036e8a02e9956f5ba0e0f5>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetShape/6b7242b6b89977700c05e4875131fbb975c4235e>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetShape/6cae9880e515253132af1452a38a8a5827165149>,
+    <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetShape/7a20e2eb5f5549088fd53fa93fab0958019f267e>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetShape/7b6713c1f4a52e964f5db57eabef294b6d04e90e>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetShape/7d4c667652f23f3a51353271e3800bca87ed3f68>,
@@ -1242,6 +1293,13 @@
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path dc:conformsTo;
   <https://purl.eu/ns/shacl#message> "The expected value for conforms to is a rdfs:Resource (URI or blank node)"@en .
+
+<https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#Dataset.applicablelegislation";
+  shacl:description "The legislation that mandates the creation or management of the Dataset."@en;
+  shacl:name "applicable legislation"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/r5r/applicableLegislation>;
+  <https://purl.eu/ns/shacl#message> "The expected value for applicable legislation is a rdfs:Resource (URI or blank node)"@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetShape/0b40e829101914fa8381318b35a5205a2a465453> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#Dataset.relatedresource";
   shacl:description "A related resource."@en;
@@ -1452,6 +1510,13 @@
   shacl:nodeKind shacl:Literal;
   shacl:path dc:description;
   <https://purl.eu/ns/shacl#message> "The expected value for description is a Literal"@en .
+
+<https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#Dataset.applicablelegislation";
+  shacl:class <http://data.europa.eu/eli/ontology#LegalResource>;
+  shacl:description "The legislation that mandates the creation or management of the Dataset."@en;
+  shacl:name "applicable legislation"@en;
+  shacl:path <http://data.europa.eu/r5r/applicableLegislation>;
+  <https://purl.eu/ns/shacl#message> "The range of applicable legislation must be of type <http://data.europa.eu/eli/ontology#LegalResource>."@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DatasetShape/7a20e2eb5f5549088fd53fa93fab0958019f267e> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#Dataset.accessrights";
   shacl:description "Information that indicates whether the Dataset is open data, has access restrictions or is not public."@en;
@@ -1816,6 +1881,7 @@
   shacl:closed false;
   shacl:property <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DistributionShape/06ed12d1071a78728d10628eb2d072781559eb75>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DistributionShape/0796df7f5520ac6500217e81e434f9a755f64afe>,
+    <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DistributionShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DistributionShape/0f6cb927d0d26f3819cba3fb903a075cd426180d>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DistributionShape/205ef114fb269b0d7632e25b317a3e579ffc3954>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DistributionShape/226b9cb0511ec6b8da045829e10d2676ddbb8375>,
@@ -1840,6 +1906,7 @@
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DistributionShape/69c8fdb6db25c5ad1f8a47366c19adb834924ae0>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DistributionShape/6b7242b6b89977700c05e4875131fbb975c4235e>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DistributionShape/6cae9880e515253132af1452a38a8a5827165149>,
+    <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DistributionShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DistributionShape/73765ca7a6e23ef17cf4e67a576e90a0c391f1c1>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DistributionShape/737cd5f1c9f0e13c35eb82b7f0d2b2f76a9a82c7>,
     <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DistributionShape/7434c99492683a2fb06dcdcf1f238671caf3d462>,
@@ -1885,6 +1952,13 @@
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path <http://data.europa.eu/r5r/availability>;
   <https://purl.eu/ns/shacl#message> "The expected value for availability is a rdfs:Resource (URI or blank node)"@en .
+
+<https://semiceu.github.io//DCAT-AP/releases/3.0.0#DistributionShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#Distribution.applicablelegislation";
+  shacl:description "The legislation that mandates the creation or management of the Distribution."@en;
+  shacl:name "applicable legislation"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/r5r/applicableLegislation>;
+  <https://purl.eu/ns/shacl#message> "The expected value for applicable legislation is a rdfs:Resource (URI or blank node)"@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DistributionShape/0f6cb927d0d26f3819cba3fb903a075cd426180d> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#Distribution.status";
   shacl:class skos:Concept;
@@ -2053,6 +2127,13 @@
   shacl:nodeKind shacl:Literal;
   shacl:path dc:description;
   <https://purl.eu/ns/shacl#message> "The expected value for description is a Literal"@en .
+
+<https://semiceu.github.io//DCAT-AP/releases/3.0.0#DistributionShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#Distribution.applicablelegislation";
+  shacl:class <http://data.europa.eu/eli/ontology#LegalResource>;
+  shacl:description "The legislation that mandates the creation or management of the Distribution."@en;
+  shacl:name "applicable legislation"@en;
+  shacl:path <http://data.europa.eu/r5r/applicableLegislation>;
+  <https://purl.eu/ns/shacl#message> "The range of applicable legislation must be of type <http://data.europa.eu/eli/ontology#LegalResource>."@en .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#DistributionShape/73765ca7a6e23ef17cf4e67a576e90a0c391f1c1> rdfs:seeAlso "https://semiceu.github.io//DCAT-AP/releases/3.0.0#Distribution.checksum";
   shacl:description "A mechanism that can be used to verify that the contents of a distribution have not changed."@en;
@@ -2299,6 +2380,10 @@
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#KindShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass vcard:Kind .
+
+<https://semiceu.github.io//DCAT-AP/releases/3.0.0#LegalResourceShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://data.europa.eu/eli/ontology#LegalResource> .
 
 <https://semiceu.github.io//DCAT-AP/releases/3.0.0#LicenceDocumentShape> a shacl:NodeShape;
   shacl:closed false;
