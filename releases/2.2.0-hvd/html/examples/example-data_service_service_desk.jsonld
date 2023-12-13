@@ -11,7 +11,7 @@
   "@graph": [
     {
       "@id": "_:EAMS-APIplatform-contactpoint",
-      "@type": "vcard:Card",
+      "@type": "vcard:Kind",
       "vcard:hasURL": {
         "@id": "https://eams.jira.net/servicedesk"
       }

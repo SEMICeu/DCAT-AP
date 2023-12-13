@@ -1,4 +1,5 @@
 prefix exampleMS: <https://data.exampleMS.gov/id/dataset/>
+prefix adms: <http://www.w3.org/ns/adms#>
 prefix dcat: <http://www.w3.org/ns/dcat#>
 prefix dcatap: <http://data.europa.eu/r5r/>
 prefix dct: <http://purl.org/dc/terms/>
@@ -52,7 +53,7 @@ exampleMS:EAMS-APIplatform a dcat:DataService;
    dcat:contactPoint _:EAMS-APIplatform-contactpoint ;
    dcat:servesDataset exampleMS:1T2p3o4B. 
 
-_:EAMS-APIplatform-contactpoint a vcard:Card ;
+_:EAMS-APIplatform-contactpoint a vcard:Kind;
    vcard:hasURL <https://eams.jira.net/servicedesk> .
 
 _:EA-MS a foaf:Agent;

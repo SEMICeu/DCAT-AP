@@ -51,7 +51,7 @@ exampleMS:EAMS-APIplatform a dcat:DataService;
    dcat:contactPoint _:EAMS-APIplatform-contactpoint ;
    dcat:servesDataset exampleMS:1T2p3o4B, exampleMS:1W2o3p4T .
 
-_:EAMS-APIplatform-contactpoint a vcard:Card ;
+_:EAMS-APIplatform-contactpoint a vcard:Kind;
    vcard:hasURL <https://eams.jira.net/servicedesk> .
 
 _:EA-MS a foaf:Agent;
