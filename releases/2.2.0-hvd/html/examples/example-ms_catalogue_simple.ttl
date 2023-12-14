@@ -1,0 +1,9 @@
+prefix exampleMS: <https://data.exampleMS.gov/id/dataset/>
+prefix dcat: <http://www.w3.org/ns/dcat#>
+prefix dct: <http://purl.org/dc/terms/>
+
+exampleMS:HVD-reporting-2023  a dcat:Catalogue;
+  dct:title "MS HVD Reporting 2023"@en;
+  dct:description "All information to provide the HVD conformance assessment for MS"@en;
+  dcat:dataset exampleMS:1T2p3o4B ;
+  dcat:service exampleMS:EAMS-APIplatform.
