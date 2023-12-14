@@ -1,3 +1,4 @@
+![SEMIC Core Vocabulary](/semic-icon-small.png)
 # DCAT-AP
 
 This is the issue tracker for the maintenance of DCAT-AP.
@@ -6,9 +7,15 @@ The DCAT Application profile for data portals in Europe (DCAT-AP) is a specifica
 
 The specification of the DCAT-AP was a joint initiative of DG CONNECT, the EU Publications Office and the ISA² Programme. The specification was elaborated by a multi-disciplinary Working Group with representatives from 16 European Member States, some European Institutions and the US.
 
-The latest version of DCAT-AP (v2.0.1) can be downloaded from from the [releases](https://github.com/SEMICeu/DCAT-AP/releases) or via [JoinUp](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/201-0)
+
+The latest version of DCAT-AP (candidate recommendation v3.0.0) can be downloaded from from the [releases](https://github.com/SEMICeu/DCAT-AP/releases) or via [JoinUp](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/releases).
+The HTML of this specification can be found [here](https://semiceu.github.io/DCAT-AP/releases/3.0.0/).
+
+The latest version of DCAT-AP Annex for High Value Datasets (recommendation v2.2.0) is also published [here](https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd).
+
 
 Any problems encountered, or suggestions for new functionalities can be submitted as issues on the DCAT-AP repository on GitHub. A short guideline for submitting issues can be found at https://github.com/SEMICeu/DCAT-AP/wiki/Submission-guidelines.
+
 
 ## Structure of the repository
 
@@ -16,4 +23,4 @@ Any problems encountered, or suggestions for new functionalities can be submitte
 
 ## Licence
 
-DCAT-AP releases are distributed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+Copyright © 2023 European Union. All material in this repository is published under the licence CC-BY 4.0, unless explicitly otherwise mentioned. Any problems encountered, or suggestions for new functionalities can be submitted as issues on the DCAT-AP repository on GitHub.
