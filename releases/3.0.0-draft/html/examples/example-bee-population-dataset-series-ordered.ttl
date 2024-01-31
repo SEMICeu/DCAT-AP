@@ -13,4 +13,4 @@ example-ds:BeePopulation2023 a dcat:Dataset;
 
 example-ser:BeePopulation a dcat:DatasetSeries;
   dct:title "Bee population"@en;
-  dcat:last example-ds:BeePopulation2022 .
+  dcat:last example-ds:BeePopulation2023 .
