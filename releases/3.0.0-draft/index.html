@@ -21,6 +21,16 @@
 	    
 		
 		   {
+		    name: "Jitse De Cock",
+		      
+		      
+		    company: "PwC EU Services",
+		      
+		      
+		    }
+		, 
+		
+		   {
 		    name: "Makx Dekkers",
 		      
 		      
@@ -32,28 +42,28 @@
 		    name: "Pavlina Fragkou",
 		      
 		      
-		    company: "SEMIC EU",
+		    company: "DG DIGIT",
 		      
 		      
 		    }
 		, 
 		
 		   {
-		    name: "Natasa Sofou",
+		    name: "Arthur Schiltz",
 		      
+		      
+		    company: "PwC EU Services",
 		      
 		      
 		    }
 		, 
 		
 		   {
-		    name: "Bert Van Nuffelen",
+		    name: "Anastasia Sofou",
 		      
 		      
-		    company: "TenForce",
+		    company: "Traysys International",
 		      
-		      
-		    mailto: "bert.van.nuffelen@tenforce.com"
 		      
 		    }
 		
@@ -72,11 +82,13 @@
 	    
 		
 		   {
-		    name: "Pavlina Fragkou",
+		    name: "Bert Van Nuffelen",
 		      
 		      
-		    company: "SEMIC EU",
+		    company: "Digitaal Vlaanderen",
 		      
+		      
+		    mailto: "bert.vannuffelen@vlaanderen.be"
 		      
 		    }
 		
@@ -89,7 +101,17 @@
 	
 	
 		]
-		
+	
+    var myowners = [
+            {
+                value: "SEMIC",
+                href: "https://joinup.ec.europa.eu/collection/semic-support-centre",
+            },
+            {
+                value: "Pavlina Fragkou (DG DIGIT)",
+            },
+		]
+
 	function quickreference() {
 		$('#table-quickoverview').DataTable();
 	};
@@ -104,6 +126,12 @@
       publishDate: "2024-01-15",
       editors: myeditors,
       authors: myauthors,
+      otherLinks: [
+        {
+          key: "Owners:",
+          data: myowners
+        }
+      ],
       github: "SEMICeu/DCAT-AP",
       shortName: "DCAT-AP 3.0",
       xref: "web-platform",
@@ -159,12 +187,12 @@
       "title" :  "Directive on open data and the re-use of public sector information (recast)",
       "publisher" : "European Union"
     },
-    "MAST/ADS" : {
+    "MASTADS" : {
       "href": "https://archive.stsci.edu/pub_dsn.html",
       "title" :  "Referencing Data Sets in Astronomical Literature",
       "publisher" : "MAST"
     },
-    "DataCite" : {
+    "DATACITE" : {
       "href": "http://www.datacite.org/",
       "title" :  "DataCite",
       "publisher" : "DataCite"
@@ -320,8 +348,12 @@ To support the review, the changes are also highlighted on the diagram below.
 <h3>Meeting minutes</h3>
 The following webinars have been held for the creation of this release
     <ul>
-	<li>Webinar 25 November 2022 (<a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/MeetingMinutes.pdf">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=vpCu3wrBeso">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/Slides.pdf">slides</a>) </li>
-       <li>Webinar 2 February 2023 (<a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/20230202%20Webinar%20DCAT-AP.pdf">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=teUeMLwv4Ks">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/webinar_2_feb_2022_DCAT-AP_v.0.3.pdf">slides</a>) </li>
+	    <li>Webinar 25 November 2022 (<a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/MeetingMinutes.pdf">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=vpCu3wrBeso">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/Slides.pdf">slides</a>) </li>
+      <li>Webinar 2 February 2023 (<a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/20230202%20Webinar%20DCAT-AP.pdf">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=teUeMLwv4Ks">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/webinar_2_feb_2022_DCAT-AP_v.0.3.pdf">slides</a>) </li>
+      <li>Webinar 4 October 2023 (<a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/20231004%20Webinar%20DCAT-AP%20for%20Data%20Spaces_Incorporated_Comments.pdf">Meeting Minutes</a>, <a href="https://youtu.be/HIQ-xFtZcxY">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/event/attachment/2023-10/DCAT-AP%20for%20Data%20Spaces%20Webinar.pdf">slides</a>) </li>
+      <li>Webinar 7 November 2023 (<a href="https://joinup.ec.europa.eu/sites/default/files/event/attachment/2023-12/20231107%20Webinar%20dedicated%20to%20the%20status%20and%20governance%20of%20DCAT-AP%20%281%29.pdf">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=lMMaUa4mrQE">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/event/attachment/2023-11/Webinar%20DCAT-AP%20Status%20%26%20Governance_0.pdf">slides</a>) </li>
+      <li>Webinar 21 November 2023 (<a href="https://joinup.ec.europa.eu/sites/default/files/event/attachment/2023-12/20231121%20Webinar%20DCAT-AP%20Technical%20Issues.pdf">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=X2rw2HWm23w">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/event/attachment/2023-11/Webinar%20DCAT-AP%2020231121%20v1.0.pdf">slides</a>) </li>
+      <li>Webinar 16 January 2024 (<a href="https://joinup.ec.europa.eu/sites/default/files/event/attachment/2023-12/20231107%20Webinar%20dedicated%20to%20the%20status%20and%20governance%20of%20DCAT-AP%20%281%29.pdf">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=lMMaUa4mrQE">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/event/attachment/2023-11/Webinar%20DCAT-AP%20Status%20%26%20Governance_0.pdf">slides</a>) </li>
    </ul>
 
 
@@ -383,7 +415,7 @@ This document is the result of the major semantic change release process describ
 </section>
 
 
-  <section id="conformance" class="informative">
+  <section id="conformance"> 
 <h2>Conformance Statement</h2>
 
 <h3>Provider requirements</h3>
@@ -467,6 +499,9 @@ To improve the coherency between shared Dataset, Distribution and Data Service, 
 
 </p><p>
 The list of included properties contain a selection of the properties from the W3C DCAT 3 specification [[vocab-dcat-3]]  on which DCAT-AP expresses additional constraints or on which DCAT-AP wants to emphasise their usage. Any property that is mentioned in DCAT applicable to a class but not explicitly is listed DCAT-AP is considered an optional field for DCAT-AP for that class. It means that for these properties DCAT-AP has no use cases that require additional usage considerations beyond ‘use the property as DCAT specifies’.
+Properties that are not explicitly listed in this specification have no conformance expectation. 
+From that perspective these are ignored.  DCAT-AP acts in this way as a filter for all the possibilities DCAT offers.  
+Nevertheless, to keep the DCAT-AP concise and to the point optional DCAT-AP properties that have no additional usage notes to DCAT may become subject for removal if the usage in the practice is sporadic.  
 </p>
 
 <h3>Application profile diagram</h3>
@@ -492,7 +527,6 @@ The cardinalities and qualifications are included in the figure.
 			      <a href="#Checksum">Checksum</a> |
 			      <a href="#DataService">Data Service</a> |
 			      <a href="#Dataset">Dataset</a> |
-			      <a href="#DatasetmemberofaDatasetSeries">Dataset member of a Dataset Series</a> |
 			      <a href="#DatasetSeries">Dataset Series</a> |
 			      <a href="#Distribution">Distribution</a> |
 			      <a href="#Kind">Kind</a> |
@@ -551,6 +585,7 @@ The cardinalities and qualifications are included in the figure.
 <h2>
    Main Entities
 </h2>
+<p>
 The main entities are those that form the core of the Application Profile. 
 The properties and their associated constraints that apply in the context of this profile are listed in a tabular form.
 Each row corresponds to one property. 
@@ -1867,7 +1902,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                     Definition
                 </dt>
                 <dd>
-                    A description of a Catalogued Resources entry in the Catalogue.
+                    A description of a Catalogued Resource&amp;#39;s entry in the Catalogue.
                 </dd>
                 
 		<dt>
@@ -1966,7 +2001,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    An Application Profile that the Catalogued Resources metadata conforms to.
+                                    An Application Profile that the Catalogued Resource&amp;#39;s metadata conforms to.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -2899,10 +2934,12 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    An Application Profile that the Catalogued Resources metadata conforms to.
+                                    An established (technical) standard to which the Data Service conforms.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    
+                                    The standards referred here SHOULD describe the Data Service and not the data it serves. The latter is provided by the dataset with which this Data Service is connected.
+
+For instance the data service adheres to the OGC WFS API standard, while the associated dataset adheres to the INSPIRE Address data model.
                                 </td>
 				<!--
                                 <td>
@@ -3055,7 +3092,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                     A description of the services available via the end-points, including their operations, parameters etc.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    The property gives specific details of the actual endpoint instances, while dct:conformsTo is used to indicate the general standard or specification that the endpoints implement.
+                                    The property gives specific details of the actual endpoint instances, while the property application profile (dct:conformsTo) is used to indicate the general standard or specification that the endpoints implement.
                                 </td>
 				<!--
                                 <td>
@@ -3606,8 +3643,8 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             , <a href="#Dataset.geographicalcoverage">geographical coverage</a>
                             , <a href="#Dataset.hasversion">has version</a>
                             , <a href="#Dataset.identifier">identifier</a>
+                            , <a href="#Dataset.inseries">in series</a>
                             , <a href="#Dataset.isreferencedby">is referenced by</a>
-                            , <a href="#Dataset.isversionof">is version of</a>
                             , <a href="#Dataset.keyword">keyword</a>
                             , <a href="#Dataset.landingpage">landing page</a>
                             , <a href="#Dataset.language">language</a>
@@ -3703,7 +3740,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                     0..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    Information that indicates whether the Dataset is open data, has access restrictions or is not public.
+                                    Information that indicates whether the Dataset is publicly accessible, has access restrictions or is not public.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -4280,6 +4317,57 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 </td>
                             </tr>
                         
+                            <tr id="Dataset.inseries"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/ns/dcat#inSeries"
+                                class="class mandatory">
+<!--
+                                <td>
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20in series%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.0%23Dataset.inseries" target="_blank" rel="noopener noreferrer" >
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+--->
+                                <td>
+                                        <a href="http://www.w3.org/ns/dcat#inSeries"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/ns/dcat#inSeries"
+                                           data-placement="right">
+                                        in series</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#DatasetSeries" data-placement="right">Dataset Series</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td property="rdfs:comment">
+                                    A dataset series of which the dataset is part.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_in_series">Link</a>
+                                </td>
+                                <td>
+                                    
+				       
+				        <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_in_series">E</a>
+				       
+                                    
+                                </td>
+                            </tr>
+                        
                             <tr id="Dataset.isreferencedby"
                                 typeof="rdfs:Property"
                                 resource="http://purl.org/dc/terms/isReferencedBy"
@@ -4328,55 +4416,6 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
 				        <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_is_referenced_by">A</a>
                                        
                                     
-                                </td>
-                            </tr>
-                        
-                            <tr id="Dataset.isversionof"
-                                typeof="rdfs:Property"
-                                resource="http://www.w3.org/ns/dcat#isVersionOf"
-                                class="class mandatory">
-<!--
-                                <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20is version of%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.0%23Dataset.isversionof" target="_blank" rel="noopener noreferrer" >
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
---->
-                                <td>
-                                        <a href="http://www.w3.org/ns/dcat#isVersionOf"
-                                           data-toggle="tooltip"
-                                           data-content="http://www.w3.org/ns/dcat#isVersionOf"
-                                           data-placement="right">
-                                        is version of</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#Dataset" data-placement="right">Dataset</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    0..*
-                                </td>
-                                <td property="rdfs:comment">
-                                    A related Dataset of which the described Dataset is a version, edition, or adaptation.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                                <td>
-                                    
-				       P
-				    
                                 </td>
                             </tr>
                         
@@ -4613,10 +4652,10 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    A secondary identifier of the Dataset, such as MAST/ADS17, DataCite18, DOI19, EZID20 or W3ID21.
+                                    A secondary identifier of the Dataset
                                 </td>
                                 <td property="skos:scopeNote">
-                                    
+                                    Examples are  MAST/ADS [[MASTADS]], DataCite [[DATACITE]], DOI [[DOI]], EZID [[EZID]] or W3ID [[W3ID]].
                                 </td>
 				<!--
                                 <td>
@@ -5507,422 +5546,6 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
 
    
         <section>
-            <h3 id="DatasetmemberofaDatasetSeries">
-                <a href="http://www.w3.org/ns/dcat#Dataset"
-                   data-toggle="tooltip"
-                   data-content="http://www.w3.org/ns/dcat#Dataset"
-                   data-placement="right">Dataset member of a Dataset Series</a>
-
-            </h3>
-	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
-		<!-- outcomment github feedback possibility
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20DatasetMemberOfADatasetSeries&body=Explain%20your%20issue"}}>
-                   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
-		</a>
-		-->
-            <dl>
-                <dt>
-                    Definition
-                </dt>
-                <dd>
-                    
-                </dd>
-                
-                
-                    <dt>
-                        Usage Note
-                    </dt>
-                    <dd>
-                        This class is introduced to capture the case when a Dataset is a member of a Dataset Series.
-Therefore this Dataset must be a member of a Dataset Series.
-                    </dd>
-                
-                
-                    <dt>
-                        Subclass of
-                        <dt>
-                            <dd> <a href="#Dataset">Dataset</a>
-                                
-                        </dd>
-                    
-                    <dt>
-                        Properties
-                    </dt>
-                    
-                        <dd>
-                            For this entity the following properties are defined: <a href="#DatasetmemberofaDatasetSeries.description">description</a>
-                            , <a href="#DatasetmemberofaDatasetSeries.frequency">frequency</a>
-                            , <a href="#DatasetmemberofaDatasetSeries.inseries">in series</a>
-                            , <a href="#DatasetmemberofaDatasetSeries.next">next</a>
-                            , <a href="#DatasetmemberofaDatasetSeries.previous">previous</a>
-                            , <a href="#DatasetmemberofaDatasetSeries.title">title</a>
-                            .
-                    </dd>
-                
-            </dl>
-        </div>
-        
-            <div class="u-table-overflow">
-                <table class="data-table simple" id="table-mandatory-classes">
-                    <thead>
-                        <tr class="data-table__header">
-<!--
-                            <th class="data-table__header-title--sortable" style="width:5%">
-                            </th>
---->
-                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
-                                Property
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:12%">
-                                Range
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:6%">
-                                Card
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:30%">
-                                Definition 
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:30%">
-                                Usage
-                            </th>
-			    <!--
-                            <th class="data-table__header-title--sortable" style="width:3%">
-                                Codelist
-                            </th>
-			    -->
-                            <th class="data-table__header-title--sortable" style="width:5%">
-                                DCAT
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:3%">
-                                Reuse
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody class="supertype">
-                        
-                            <tr id="DatasetmemberofaDatasetSeries.description"
-                                typeof="rdfs:Property"
-                                resource="http://purl.org/dc/terms/description"
-                                class="class mandatory">
-<!--
-                                <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20description%20in%20Dataset member of a Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.0%23DatasetmemberofaDatasetSeries.description" target="_blank" rel="noopener noreferrer" >
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
---->
-                                <td>
-                                        <a href="http://purl.org/dc/terms/description"
-                                           data-toggle="tooltip"
-                                           data-content="http://purl.org/dc/terms/description"
-                                           data-placement="right">
-                                        description</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#Literal" data-placement="right">Literal</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    1..n
-                                </td>
-                                <td property="rdfs:comment">
-                                    A free-text account of the Dataset.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    This property can be repeated for parallel language versions of the description.
-
-The description may indicate the dimension values.
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_description">Link</a>
-                                </td>
-                                <td>
-                                    
-				       
-				        <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_description">E</a>
-				       
-                                    
-                                </td>
-                            </tr>
-                        
-                            <tr id="DatasetmemberofaDatasetSeries.frequency"
-                                typeof="rdfs:Property"
-                                resource="http://purl.org/dc/terms/accrualPeriodicity"
-                                class="class mandatory">
-<!--
-                                <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20frequency%20in%20Dataset member of a Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.0%23DatasetmemberofaDatasetSeries.frequency" target="_blank" rel="noopener noreferrer" >
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
---->
-                                <td>
-                                        <a href="http://purl.org/dc/terms/accrualPeriodicity"
-                                           data-toggle="tooltip"
-                                           data-content="http://purl.org/dc/terms/accrualPeriodicity"
-                                           data-placement="right">
-                                        frequency</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#Frequency" data-placement="right">Frequency</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    0..n
-                                </td>
-                                <td property="rdfs:comment">
-                                    The frequency at which the Dataset is updated.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    The frequency of a dataset belonging to a dataset series  is not equal to the frequency of the dataset series. 
-
-E.g. A dataset budget 2020 with frequency yearly means that this dataset has an update in 2021, 2022, 2023, etc. 
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_frequency">Link</a>
-                                </td>
-                                <td>
-                                    
-				       
-				        <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_frequency">E</a>
-				       
-                                    
-                                </td>
-                            </tr>
-                        
-                            <tr id="DatasetmemberofaDatasetSeries.inseries"
-                                typeof="rdfs:Property"
-                                resource="http://www.w3.org/ns/dcat#inSeries"
-                                class="class mandatory">
-<!--
-                                <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20in series%20in%20Dataset member of a Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.0%23DatasetmemberofaDatasetSeries.inseries" target="_blank" rel="noopener noreferrer" >
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
---->
-                                <td>
-                                        <a href="http://www.w3.org/ns/dcat#inSeries"
-                                           data-toggle="tooltip"
-                                           data-content="http://www.w3.org/ns/dcat#inSeries"
-                                           data-placement="right">
-                                        in series</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#DatasetSeries" data-placement="right">Dataset Series</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    0..*
-                                </td>
-                                <td property="rdfs:comment">
-                                    A dataset series of which the dataset is part.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_in_series">Link</a>
-                                </td>
-                                <td>
-                                    
-				       
-				        <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_in_series">A</a>
-                                       
-                                    
-                                </td>
-                            </tr>
-                        
-                            <tr id="DatasetmemberofaDatasetSeries.next"
-                                typeof="rdfs:Property"
-                                resource="http://www.w3.org/ns/dcat#next"
-                                class="class mandatory">
-<!--
-                                <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20next%20in%20Dataset member of a Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.0%23DatasetmemberofaDatasetSeries.next" target="_blank" rel="noopener noreferrer" >
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
---->
-                                <td>
-                                        <a href="http://www.w3.org/ns/dcat#next"
-                                           data-toggle="tooltip"
-                                           data-content="http://www.w3.org/ns/dcat#next"
-                                           data-placement="right">
-                                        next</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#DatasetmemberofaDatasetSeries" data-placement="right">Dataset member of a Dataset Series</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    0..*
-                                </td>
-                                <td property="rdfs:comment">
-                                    The following resource (after the current one) in an ordered collection or series of resources.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                                <td>
-                                    
-				       P
-				    
-                                </td>
-                            </tr>
-                        
-                            <tr id="DatasetmemberofaDatasetSeries.previous"
-                                typeof="rdfs:Property"
-                                resource="http://www.w3.org/ns/dcat#prev"
-                                class="class mandatory">
-<!--
-                                <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20previous%20in%20Dataset member of a Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.0%23DatasetmemberofaDatasetSeries.previous" target="_blank" rel="noopener noreferrer" >
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
---->
-                                <td>
-                                        <a href="http://www.w3.org/ns/dcat#prev"
-                                           data-toggle="tooltip"
-                                           data-content="http://www.w3.org/ns/dcat#prev"
-                                           data-placement="right">
-                                        previous</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#DatasetmemberofaDatasetSeries" data-placement="right">Dataset member of a Dataset Series</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    0..*
-                                </td>
-                                <td property="rdfs:comment">
-                                    The previous resource (before the current one) in an ordered collection or series of resources.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    Unless the dataset is the last in the chain a dataset in a collection must have a previous one.
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_previous">Link</a>
-                                </td>
-                                <td>
-                                    
-				       
-				        <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_previous">E</a>
-				       
-                                    
-                                </td>
-                            </tr>
-                        
-                            <tr id="DatasetmemberofaDatasetSeries.title"
-                                typeof="rdfs:Property"
-                                resource="http://purl.org/dc/terms/title"
-                                class="class mandatory">
-<!--
-                                <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20title%20in%20Dataset member of a Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.0%23DatasetmemberofaDatasetSeries.title" target="_blank" rel="noopener noreferrer" >
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
---->
-                                <td>
-                                        <a href="http://purl.org/dc/terms/title"
-                                           data-toggle="tooltip"
-                                           data-content="http://purl.org/dc/terms/title"
-                                           data-placement="right">
-                                        title</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#Literal" data-placement="right">Literal</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    1..n
-                                </td>
-                                <td property="rdfs:comment">
-                                    A name given to the Dataset.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    This property can be repeated for parallel language versions of the name.
-
-The title may indicate the dimension values.
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_title">Link</a>
-                                </td>
-                                <td>
-                                    
-				       
-				        <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_title">E</a>
-				       
-                                    
-                                </td>
-                            </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
-        
-    </div>
-</section>
-
-
-
-
-
-   
-        <section>
             <h3 id="DatasetSeries">
                 <a href="http://www.w3.org/ns/dcat#DatasetSeries"
                    data-toggle="tooltip"
@@ -5952,6 +5575,13 @@ The title may indicate the dimension values.
 		    </dd>
 		
                 
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        It is recommended to avoid Dataset Series without a dataset in the collection. Therefore at least one Dataset should refer to a Dataset Series using the property in series (dcat:inSeries). 
+                    </dd>
+                
                 
                     <dt>
                         Subclass of
@@ -5968,14 +5598,11 @@ The title may indicate the dimension values.
                             For this entity the following properties are defined: <a href="#DatasetSeries.applicablelegislation">applicable legislation</a>
                             , <a href="#DatasetSeries.contactpoint">contact point</a>
                             , <a href="#DatasetSeries.description">description</a>
-                            , <a href="#DatasetSeries.first">first</a>
                             , <a href="#DatasetSeries.frequency">frequency</a>
                             , <a href="#DatasetSeries.geographicalcoverage">geographical coverage</a>
-                            , <a href="#DatasetSeries.last">last</a>
                             , <a href="#DatasetSeries.modificationdate">modification date</a>
                             , <a href="#DatasetSeries.publisher">publisher</a>
                             , <a href="#DatasetSeries.releasedate">release date</a>
-                            , <a href="#DatasetSeries.seriesmember">series member</a>
                             , <a href="#DatasetSeries.temporalcoverage">temporal coverage</a>
                             , <a href="#DatasetSeries.title">title</a>
                             .
@@ -6175,57 +5802,6 @@ It is recommended to provide an indication about the dimensions the Dataset Seri
                                 </td>
                             </tr>
                         
-                            <tr id="DatasetSeries.first"
-                                typeof="rdfs:Property"
-                                resource="http://www.w3.org/ns/dcat#first"
-                                class="class mandatory">
-<!--
-                                <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20first%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.0%23DatasetSeries.first" target="_blank" rel="noopener noreferrer" >
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
---->
-                                <td>
-                                        <a href="http://www.w3.org/ns/dcat#first"
-                                           data-toggle="tooltip"
-                                           data-content="http://www.w3.org/ns/dcat#first"
-                                           data-placement="right">
-                                        first</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#DatasetmemberofaDatasetSeries" data-placement="right">Dataset member of a Dataset Series</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    0..1
-                                </td>
-                                <td property="rdfs:comment">
-                                    The first resource in an ordered collection or series of resources, to which the current resource belongs.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_first">Link</a>
-                                </td>
-                                <td>
-                                    
-				       
-				        <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_first">A</a>
-                                       
-                                    
-                                </td>
-                            </tr>
-                        
                             <tr id="DatasetSeries.frequency"
                                 typeof="rdfs:Property"
                                 resource="http://purl.org/dc/terms/accrualPeriodicity"
@@ -6323,57 +5899,6 @@ It is recommended to provide an indication about the dimensions the Dataset Seri
                                     
 				       
 				        <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_spatial">A</a>
-                                       
-                                    
-                                </td>
-                            </tr>
-                        
-                            <tr id="DatasetSeries.last"
-                                typeof="rdfs:Property"
-                                resource="http://www.w3.org/ns/dcat#last"
-                                class="class mandatory">
-<!--
-                                <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20last%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.0%23DatasetSeries.last" target="_blank" rel="noopener noreferrer" >
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
---->
-                                <td>
-                                        <a href="http://www.w3.org/ns/dcat#last"
-                                           data-toggle="tooltip"
-                                           data-content="http://www.w3.org/ns/dcat#last"
-                                           data-placement="right">
-                                        last</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#DatasetmemberofaDatasetSeries" data-placement="right">Dataset member of a Dataset Series</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    0..1
-                                </td>
-                                <td property="rdfs:comment">
-                                    The last resource in an ordered collection or series.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_last">Link</a>
-                                </td>
-                                <td>
-                                    
-				       
-				        <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_last">A</a>
                                        
                                     
                                 </td>
@@ -6532,55 +6057,6 @@ This is not equal to the release date of the oldest dataset in the collection of
 				        <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_release_date">E</a>
 				       
                                     
-                                </td>
-                            </tr>
-                        
-                            <tr id="DatasetSeries.seriesmember"
-                                typeof="rdfs:Property"
-                                resource="http://www.w3.org/ns/dcat#seriesMember"
-                                class="class mandatory">
-<!--
-                                <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20series member%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.0%23DatasetSeries.seriesmember" target="_blank" rel="noopener noreferrer" >
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
---->
-                                <td>
-                                        <a href="http://www.w3.org/ns/dcat#seriesMember"
-                                           data-toggle="tooltip"
-                                           data-content="http://www.w3.org/ns/dcat#seriesMember"
-                                           data-placement="right">
-                                        series member</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#DatasetmemberofaDatasetSeries" data-placement="right">Dataset member of a Dataset Series</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    0..*
-                                </td>
-                                <td property="rdfs:comment">
-                                    A member of the Dataset Series.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                                <td>
-                                    
-				       P
-				    
                                 </td>
                             </tr>
                         
@@ -9121,8 +8597,6 @@ They are included in the Application Profile because they form the range of prop
 
 
 
-
-
    
         <section>
             <h3 id="Document">
@@ -9272,9 +8746,23 @@ They are included in the Application Profile because they form the range of prop
                     Definition
                 </dt>
                 <dd>
-                    An identifier in a particular context, consisting of the string that is the identifier; an optional identifier for the identifier scheme; an optional identifier for the version of the identifier scheme; an optional identifier for the agency that manages the identifier scheme.
+                    
+This is based on the UN/CEFACT Identifier class. 
                 </dd>
                 
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        An identifier in a particular context, consisting of the
+<ul>
+<li>content string that is the identifier;</li>
+<li>an optional identifier for the identifier scheme;</li>
+<li>an optional identifier for the version of the identifier scheme;</li>
+<li>an optional identifier for the agency that manages the identifier scheme.</li>
+</ul>
+                    </dd>
                 
                 
                     <dt>
@@ -9353,7 +8841,7 @@ They are included in the Application Profile because they form the range of prop
                                     
                                 </td>
                                 <td>
-                                    0..1
+                                    1
                                 </td>
                                 <td property="rdfs:comment">
                                     A string that is an identifier in the context of the identifier scheme referenced by its datatype.
@@ -10399,7 +9887,7 @@ These criteria do not intend to define a set of requirements for controlled voca
 		<tr><td>dct:type</td><td><a href="#Agent">Agent</a></td><td><a href="http://purl.org/adms/publishertype/1.0">ADMS publisher type</a> vocabulary</td><td> The list of terms in the ADMS publisher type vocabulary is included in the ADMS specification</td></tr>
 		<tr><td>dct:type</td><td><a href="#LicenceDocument">Licence Document</a></td><td><a href="http://purl.org/adms/licencetype/1.0">ADMS licence type vocabulary</a></td><td> The list of terms in the ADMS licence type vocabulary is included in the ADMS specification</td></tr>
 		<tr><td>dcatap:availability</td><td><a href="#Distribution">Distribution</a></td><td><a href="http://publications.europa.eu/resource/authority/planned-availability">Distribution availability vocabulary</a></td><td>The list of terms for the avalability levels of a dataset distribution in the DCAT-AP  specification.</td></tr>
-		<tr><td>spdx:algorithm</td><td><a href="#Checksum">Checksum</a></td><td><a href="https://spdx.org/rdf/terms/#d4e1968">Checksum algorithm members</a></td><td>The members listed are considered a controlled vocabulary of supported checksum algorithms.</td></tr>
+		<tr><td>spdx:algorithm</td><td><a href="#Checksum">Checksum</a></td><td><a href="https://spdx.org/rdf/terms/#d4e2129">Checksum algorithm members</a></td><td>The members listed are considered a controlled vocabulary of supported checksum algorithms.</td></tr>
 		<tr><td>dct:accessRights</td><td><a href="#Dataset">Dataset</a>, <a href="#DataService">Data Service</a></td><td><a href="http://publications.europa.eu/resource/authority/access-right">Access Rights Named Authority List</td><td>Use one of the following values (:public, :restricted, :non-public).</td></tr>
 	</tbody>
 </table>
@@ -10957,6 +10445,7 @@ SEMIC uses and will use the RDFS lexicalisation for all of its specifications. M
 <li> rdfs:label is used to provide a human-readable version of a resource's name.</li>
 <li> The usage of certain resource can be clarified in a skos:usageNote.</li>
 </ul>
+
 </section>
  
 
@@ -12071,8 +11560,8 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 								<td><a href="#Dataset">Dataset</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></td>
 								<td>Optional</td>
-								<td><a href="#Dataset.isreferencedby">is referenced by </a></td>
-								<td><div class="shorten">http://purl.org/dc/terms/isReferencedBy</div></td>
+								<td><a href="#Dataset.inseries">in series </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#inSeries</div></td>
 							</tr>
 						
 					
@@ -12081,8 +11570,8 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 								<td><a href="#Dataset">Dataset</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></td>
 								<td>Optional</td>
-								<td><a href="#Dataset.isversionof">is version of </a></td>
-								<td><div class="shorten">http://www.w3.org/ns/dcat#isVersionOf</div></td>
+								<td><a href="#Dataset.isreferencedby">is referenced by </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/isReferencedBy</div></td>
 							</tr>
 						
 					
@@ -12272,103 +11761,6 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 				
 					
 						
-							<tr>
-								<td><a href="#DatasetmemberofaDatasetSeries">Dataset member of a Dataset Series</a></td>
-								<td><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></td>
-								<td>Mandatory</td>
-								<td><a href="#DatasetmemberofaDatasetSeries.description">description </a></td>
-								<td><div class="shorten">http://purl.org/dc/terms/description</div></td>
-							</tr>
-						
-					
-						
-					
-						
-					
-						
-					
-						
-					
-						
-							<tr>
-								<td><a href="#DatasetmemberofaDatasetSeries">Dataset member of a Dataset Series</a></td>
-								<td><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></td>
-								<td>Mandatory</td>
-								<td><a href="#DatasetmemberofaDatasetSeries.title">title </a></td>
-								<td><div class="shorten">http://purl.org/dc/terms/title</div></td>
-							</tr>
-						
-					
-					
-						
-					
-						
-					
-						
-					
-						
-					
-						
-							<tr>
-								<td><a href="#DatasetmemberofaDatasetSeries">Dataset member of a Dataset Series</a></td>
-								<td><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></td>
-								<td>Recommended</td>
-								<td><a href="#DatasetmemberofaDatasetSeries.previous">previous </a></td>
-								<td><div class="shorten">http://www.w3.org/ns/dcat#prev</div></td>
-							</tr>
-						
-					
-						
-					
-					
-						
-					
-						
-							<tr>
-								<td><a href="#DatasetmemberofaDatasetSeries">Dataset member of a Dataset Series</a></td>
-								<td><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></td>
-								<td>Optional</td>
-								<td><a href="#DatasetmemberofaDatasetSeries.frequency">frequency </a></td>
-								<td><div class="shorten">http://purl.org/dc/terms/accrualPeriodicity</div></td>
-							</tr>
-						
-					
-						
-							<tr>
-								<td><a href="#DatasetmemberofaDatasetSeries">Dataset member of a Dataset Series</a></td>
-								<td><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></td>
-								<td>Optional</td>
-								<td><a href="#DatasetmemberofaDatasetSeries.inseries">in series </a></td>
-								<td><div class="shorten">http://www.w3.org/ns/dcat#inSeries</div></td>
-							</tr>
-						
-					
-						
-							<tr>
-								<td><a href="#DatasetmemberofaDatasetSeries">Dataset member of a Dataset Series</a></td>
-								<td><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></td>
-								<td>Optional</td>
-								<td><a href="#DatasetmemberofaDatasetSeries.next">next </a></td>
-								<td><div class="shorten">http://www.w3.org/ns/dcat#next</div></td>
-							</tr>
-						
-					
-						
-					
-						
-					
-				
-			</tr>
-		
-				
-					
-						
-					
-						
-					
-						
-					
-						
 					
 						
 					
@@ -12414,8 +11806,6 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 						
 					
 						
-					
-						
 							<tr>
 								<td><a href="#DatasetSeries">Dataset Series</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/dcat#DatasetSeries</div></td>
@@ -12428,8 +11818,6 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 						
 					
 						
-					
-						
 							<tr>
 								<td><a href="#DatasetSeries">Dataset Series</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/dcat#DatasetSeries</div></td>
@@ -12437,8 +11825,6 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 								<td><a href="#DatasetSeries.publisher">publisher </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/publisher</div></td>
 							</tr>
-						
-					
 						
 					
 						
@@ -12483,31 +11869,11 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 								<td><a href="#DatasetSeries">Dataset Series</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/dcat#DatasetSeries</div></td>
 								<td>Optional</td>
-								<td><a href="#DatasetSeries.first">first </a></td>
-								<td><div class="shorten">http://www.w3.org/ns/dcat#first</div></td>
-							</tr>
-						
-					
-						
-							<tr>
-								<td><a href="#DatasetSeries">Dataset Series</a></td>
-								<td><div class="shorten">http://www.w3.org/ns/dcat#DatasetSeries</div></td>
-								<td>Optional</td>
 								<td><a href="#DatasetSeries.frequency">frequency </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/accrualPeriodicity</div></td>
 							</tr>
 						
 					
-						
-					
-						
-							<tr>
-								<td><a href="#DatasetSeries">Dataset Series</a></td>
-								<td><div class="shorten">http://www.w3.org/ns/dcat#DatasetSeries</div></td>
-								<td>Optional</td>
-								<td><a href="#DatasetSeries.last">last </a></td>
-								<td><div class="shorten">http://www.w3.org/ns/dcat#last</div></td>
-							</tr>
 						
 					
 						
@@ -12529,16 +11895,6 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 								<td>Optional</td>
 								<td><a href="#DatasetSeries.releasedate">release date </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/issued</div></td>
-							</tr>
-						
-					
-						
-							<tr>
-								<td><a href="#DatasetSeries">Dataset Series</a></td>
-								<td><div class="shorten">http://www.w3.org/ns/dcat#DatasetSeries</div></td>
-								<td>Optional</td>
-								<td><a href="#DatasetSeries.seriesmember">series member </a></td>
-								<td><div class="shorten">http://www.w3.org/ns/dcat#seriesMember</div></td>
 							</tr>
 						
 					
@@ -13261,11 +12617,11 @@ To identify these deprecations, a <a href="./html/shacl/deprecateduris.ttl"  >SH
 <h2>Acknowledgments</h2>
 
 The editors gratefully acknowledge the contributions made to this document by all members of the working group.
-
+<p/>
 This work was elaborated by a Working Group under SEMIC by Interoperable Europe.
-Interoperable Europe of the European Commission was represented by Pavlina Fragkou and Seth Van Hooland.
-Natasa Sofou, Makx Dekkers and Bert Van Nuffelen were the editors of the specification.
-
+Interoperable Europe of the European Commission was represented by Pavlina Fragkou.
+Bert Van Nuffelen, Makx Dekkers, Pavlina Fragkou, Jitse De Cock, Arthur Schiltz, Anastasia Sofou were the editors of the specification.
+<p/>
 Past and current contributors are :
 
 
@@ -13306,9 +12662,6 @@ Past and current contributors are :
 	 	Luis Daniel Ibáñez
 		, 
            
-	 	Jitse De Cock
-		, 
-           
 	 	Ine De Visser
 		, 
            
@@ -13331,6 +12684,9 @@ Past and current contributors are :
 		, 
            
 	 	Casper Gras
+		, 
+           
+	 	Hagar:Lowenthal 
 		, 
            
 	 	Bart Hanssens

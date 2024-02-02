@@ -281,14 +281,14 @@
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/identifier"
     },
+    "Dataset.inSeries": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/dcat#inSeries",
+      "@type": "@id"
+    },
     "Dataset.isReferencedBy": {
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/isReferencedBy",
-      "@type": "@id"
-    },
-    "Dataset.isVersionOf": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/dcat#isVersionOf",
       "@type": "@id"
     },
     "Dataset.keyword": {
@@ -391,35 +391,6 @@
       "@id": "http://www.w3.org/ns/prov#wasGeneratedBy",
       "@type": "@id"
     },
-    "DatasetMemberOfADatasetSeries": "http://www.w3.org/ns/dcat#Dataset",
-    "DatasetMemberOfADatasetSeries.description": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/description"
-    },
-    "DatasetMemberOfADatasetSeries.frequency": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/accrualPeriodicity",
-      "@type": "@id"
-    },
-    "DatasetMemberOfADatasetSeries.inSeries": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/dcat#inSeries",
-      "@type": "@id"
-    },
-    "DatasetMemberOfADatasetSeries.next": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/dcat#next",
-      "@type": "@id"
-    },
-    "DatasetMemberOfADatasetSeries.previous": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/dcat#prev",
-      "@type": "@id"
-    },
-    "DatasetMemberOfADatasetSeries.title": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/title"
-    },
     "DatasetSeries": "http://www.w3.org/ns/dcat#DatasetSeries",
     "DatasetSeries.applicableLegislation": {
       "@container": "@set",
@@ -435,10 +406,6 @@
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/description"
     },
-    "DatasetSeries.first": {
-      "@id": "http://www.w3.org/ns/dcat#first",
-      "@type": "@id"
-    },
     "DatasetSeries.frequency": {
       "@id": "http://purl.org/dc/terms/accrualPeriodicity",
       "@type": "@id"
@@ -446,10 +413,6 @@
     "DatasetSeries.geographicalCoverage": {
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/spatial",
-      "@type": "@id"
-    },
-    "DatasetSeries.last": {
-      "@id": "http://www.w3.org/ns/dcat#last",
       "@type": "@id"
     },
     "DatasetSeries.modificationDate": {
@@ -461,11 +424,6 @@
     },
     "DatasetSeries.releaseDate": {
       "@id": "http://purl.org/dc/terms/issued"
-    },
-    "DatasetSeries.seriesMember": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/dcat#seriesMember",
-      "@type": "@id"
     },
     "DatasetSeries.temporalCoverage": {
       "@container": "@set",

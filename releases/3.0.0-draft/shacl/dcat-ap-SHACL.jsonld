@@ -524,6 +524,18 @@
       "sh:closed": false,
       "sh:property": [
         {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#adms:IdentifierShape/3b534bf26cc294dd6e8dc80832da269189e4cbf3",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Identifier.notation",
+          "sh:description": {
+            "en": "A string that is an identifier in the context of the identifier scheme referenced by its datatype."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "notation"
+          },
+          "sh:path": "http://www.w3.org/2004/02/skos/core#notation"
+        },
+        {
           "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#adms:IdentifierShape/e02208f9fa32c429dc5023f2799d03368703b974",
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Identifier.notation",
           "sh:description": {
@@ -892,7 +904,7 @@
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#CatalogueRecord.applicationprofile",
           "sh:class": "http://purl.org/dc/terms/Standard",
           "sh:description": {
-            "en": "An Application Profile that the Catalogued Resources metadata conforms to."
+            "en": "An Application Profile that the Catalogued Resource&#39;s metadata conforms to."
           },
           "sh:name": {
             "en": "application profile"
@@ -1020,7 +1032,7 @@
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.applicationprofile",
           "sh:class": "http://purl.org/dc/terms/Standard",
           "sh:description": {
-            "en": "An Application Profile that the Catalogued Resources metadata conforms to."
+            "en": "An established (technical) standard to which the Data Service conforms."
           },
           "sh:name": {
             "en": "application profile"
@@ -1372,6 +1384,18 @@
           "sh:path": "http://www.w3.org/ns/adms#sample"
         },
         {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DatasetShape/63790d4374dda7d88681e2756e114a65082d9bfd",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.inseries",
+          "sh:class": "http://www.w3.org/ns/dcat#DatasetSeries",
+          "sh:description": {
+            "en": "A dataset series of which the dataset is part."
+          },
+          "sh:name": {
+            "en": "in series"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#inSeries"
+        },
+        {
           "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DatasetShape/67dcdb36167ca7969c0532898e11a98e9c2a80f5",
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.publisher",
           "sh:description": {
@@ -1411,7 +1435,7 @@
           "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DatasetShape/7a20e2eb5f5549088fd53fa93fab0958019f267e",
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.accessrights",
           "sh:description": {
-            "en": "Information that indicates whether the Dataset is open data, has access restrictions or is not public."
+            "en": "Information that indicates whether the Dataset is publicly accessible, has access restrictions or is not public."
           },
           "sh:maxCount": "1",
           "sh:name": {
@@ -1508,7 +1532,7 @@
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.otheridentifier",
           "sh:class": "http://www.w3.org/ns/adms#Identifier",
           "sh:description": {
-            "en": "A secondary identifier of the Dataset, such as MAST/ADS17, DataCite18, DOI19, EZID20 or W3ID21."
+            "en": "A secondary identifier of the Dataset"
           },
           "sh:name": {
             "en": "other identifier"
@@ -1592,24 +1616,12 @@
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.accessrights",
           "sh:class": "http://purl.org/dc/terms/RightsStatement",
           "sh:description": {
-            "en": "Information that indicates whether the Dataset is open data, has access restrictions or is not public."
+            "en": "Information that indicates whether the Dataset is publicly accessible, has access restrictions or is not public."
           },
           "sh:name": {
             "en": "access rights"
           },
           "sh:path": "http://purl.org/dc/terms/accessRights"
-        },
-        {
-          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DatasetShape/f17847e940bbcc6c79ef55ad620214918ca79c79",
-          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.isversionof",
-          "sh:class": "http://www.w3.org/ns/dcat#Dataset",
-          "sh:description": {
-            "en": "A related Dataset of which the described Dataset is a version, edition, or adaptation."
-          },
-          "sh:name": {
-            "en": "is version of"
-          },
-          "sh:path": "http://www.w3.org/ns/dcat#isVersionOf"
         },
         {
           "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DatasetShape/f8b02efd063b8089b72ce9677a1e4a3488eeb9a9",
@@ -1651,86 +1663,6 @@
       "sh:targetClass": "http://www.w3.org/ns/dcat#Dataset"
     },
     {
-      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetInSeriesShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [
-        {
-          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetInSeriesShape/04d197dc40f01e87093bdd0446a9fdb1a9d44319",
-          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetmemberofaDatasetSeries.frequency",
-          "sh:class": "http://purl.org/dc/terms/Frequency",
-          "sh:description": {
-            "en": "The frequency at which the Dataset is updated."
-          },
-          "sh:name": {
-            "en": "frequency"
-          },
-          "sh:path": "http://purl.org/dc/terms/accrualPeriodicity"
-        },
-        {
-          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetInSeriesShape/5c0c659834c1d6db145269ba427d0e7c8cbb7379",
-          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetmemberofaDatasetSeries.next",
-          "sh:class": "http://www.w3.org/ns/dcat#Dataset",
-          "sh:description": {
-            "en": "The following resource (after the current one) in an ordered collection or series of resources."
-          },
-          "sh:name": {
-            "en": "next"
-          },
-          "sh:path": "http://www.w3.org/ns/dcat#next"
-        },
-        {
-          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetInSeriesShape/6247dca6cb6cf721fe403097f9880adf2a9b1512",
-          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetmemberofaDatasetSeries.previous",
-          "sh:class": "http://www.w3.org/ns/dcat#Dataset",
-          "sh:description": {
-            "en": "The previous resource (before the current one) in an ordered collection or series of resources."
-          },
-          "sh:name": {
-            "en": "previous"
-          },
-          "sh:path": "http://www.w3.org/ns/dcat#prev"
-        },
-        {
-          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetInSeriesShape/63790d4374dda7d88681e2756e114a65082d9bfd",
-          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetmemberofaDatasetSeries.inseries",
-          "sh:class": "http://www.w3.org/ns/dcat#DatasetSeries",
-          "sh:description": {
-            "en": "A dataset series of which the dataset is part."
-          },
-          "sh:name": {
-            "en": "in series"
-          },
-          "sh:path": "http://www.w3.org/ns/dcat#inSeries"
-        },
-        {
-          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetInSeriesShape/8f61614144aa7bca188b24f5976593dc08aad0e6",
-          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetmemberofaDatasetSeries.description",
-          "sh:description": {
-            "en": "A free-text account of the Dataset."
-          },
-          "sh:minCount": "1",
-          "sh:name": {
-            "en": "description"
-          },
-          "sh:path": "http://purl.org/dc/terms/description"
-        },
-        {
-          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetInSeriesShape/f8b02efd063b8089b72ce9677a1e4a3488eeb9a9",
-          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetmemberofaDatasetSeries.title",
-          "sh:description": {
-            "en": "A name given to the Dataset."
-          },
-          "sh:minCount": "1",
-          "sh:name": {
-            "en": "title"
-          },
-          "sh:path": "http://purl.org/dc/terms/title"
-        }
-      ],
-      "sh:targetClass": "http://www.w3.org/ns/dcat#Dataset"
-    },
-    {
       "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
@@ -1760,18 +1692,6 @@
           "sh:path": "http://purl.org/dc/terms/accrualPeriodicity"
         },
         {
-          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/0ae098d41aaf0ee928ce42d578bb24d57f072a50",
-          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetSeries.seriesmember",
-          "sh:class": "http://www.w3.org/ns/dcat#Dataset",
-          "sh:description": {
-            "en": "A member of the Dataset Series."
-          },
-          "sh:name": {
-            "en": "series member"
-          },
-          "sh:path": "http://www.w3.org/ns/dcat#seriesMember"
-        },
-        {
           "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/67dcdb36167ca7969c0532898e11a98e9c2a80f5",
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetSeries.publisher",
           "sh:description": {
@@ -1794,18 +1714,6 @@
             "en": "applicable legislation"
           },
           "sh:path": "http://data.europa.eu/r5r/applicableLegislation"
-        },
-        {
-          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/75f282ab9d40c191ecec85e07df38e38afb0d406",
-          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetSeries.first",
-          "sh:description": {
-            "en": "The first resource in an ordered collection or series of resources, to which the current resource belongs."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "en": "first"
-          },
-          "sh:path": "http://www.w3.org/ns/dcat#first"
         },
         {
           "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/7b6713c1f4a52e964f5db57eabef294b6d04e90e",
@@ -1890,42 +1798,6 @@
             "en": "publisher"
           },
           "sh:path": "http://purl.org/dc/terms/publisher"
-        },
-        {
-          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/c0c971561157ce744b3b12b9248c9ebe8cf8ff52",
-          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetSeries.first",
-          "sh:class": "http://www.w3.org/ns/dcat#Dataset",
-          "sh:description": {
-            "en": "The first resource in an ordered collection or series of resources, to which the current resource belongs."
-          },
-          "sh:name": {
-            "en": "first"
-          },
-          "sh:path": "http://www.w3.org/ns/dcat#first"
-        },
-        {
-          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/d88723730b0c5004b934de417a58db632a02a60e",
-          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetSeries.last",
-          "sh:description": {
-            "en": "The last resource in an ordered collection or series."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "en": "last"
-          },
-          "sh:path": "http://www.w3.org/ns/dcat#last"
-        },
-        {
-          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/ec52636bd8d7ac5471323428f4fd952c70581493",
-          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetSeries.last",
-          "sh:class": "http://www.w3.org/ns/dcat#Dataset",
-          "sh:description": {
-            "en": "The last resource in an ordered collection or series."
-          },
-          "sh:name": {
-            "en": "last"
-          },
-          "sh:path": "http://www.w3.org/ns/dcat#last"
         },
         {
           "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/f8b02efd063b8089b72ce9677a1e4a3488eeb9a9",
