@@ -123,7 +123,7 @@
       edDraftURI: "https://semiceu.github.io/DCAT-AP/releases/3.0.0",
       latestVersion: "https://github.com/SEMICeu/DCAT-AP/tree/master/releases/2.1.1",
       specStatus: "base",
-      publishDate: "2024-01-15",
+      publishDate: "2024-02-12",
       editors: myeditors,
       authors: myauthors,
       otherLinks: [
@@ -211,7 +211,17 @@
       "href": "https://w3id.org/",
       "title" :  "Permanent Identifiers for the Web",
       "publisher" : "W3C Permanent Identifier Community Group"
-    }
+    },
+    "ODRL" : {
+      "href": "https://www.w3.org/ns/odrl/2/",
+      "title" :  "The Open Digital Rights Language Ontology Version 2.2",
+      "publisher" : "W3C POE Working Group"
+    },
+    "FAIR" : {
+      "href": "https://www.openaire.eu/how-to-make-your-data-fair",
+      "title" :  "How to make your data FAIR",
+      "publisher" : "OpenAire"
+    }    
     }
     };
 
@@ -247,7 +257,7 @@
     <h2>Abstract</h2>
 DCAT-AP is a DCAT profile for sharing information about Catalogues containing Datasets and Data Services descriptions in Europe, under maintenance by the SEMIC action, Interoperable Europe.
 <p/>
-This Application Profile provides a minimal common basis within Europe to share Dataset and Data Services cross-border and cross-domain.
+This Application Profile provides a minimal common basis within Europe to share Datasets and Data Services cross-border and cross-domain.
 </section>
 
 
@@ -383,9 +393,9 @@ This document is the result of the major semantic change release process describ
     <h2>Status</h2>
         <p>
 <!-- readd when SEMIC has a codelist about it process 
-	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsCR">Candidate Recommendation</a> published at 2024-01-15.
+	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsCR">Candidate Recommendation</a> published at 2024-02-12.
 -->
-	This application profile has the status Candidate Recommendation published at 2024-01-15.
+	This application profile has the status Candidate Recommendation published at 2024-02-12.
         </p>
         <p>
             Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/CHANGELOG.html">Changelog</a>.
@@ -569,9 +579,9 @@ The cardinalities and qualifications are included in the figure.
                 
     </div>
     <div>
-        <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-draft/html/overview.jpg"
+        <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/html/overview.jpg"
            target="_blank">
-            <img src="https://semiceu.github.io/DCAT-AP/releases/3.0.0-draft/html/overview.jpg"/>
+            <img src="https://semiceu.github.io/DCAT-AP/releases/3.0.0/html/overview.jpg"/>
         </a>
     </div>
 </section>
@@ -1902,7 +1912,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                     Definition
                 </dt>
                 <dd>
-                    A description of a Catalogued Resource&amp;#39;s entry in the Catalogue.
+                    A description of a Catalogued Resource&#39;s entry in the Catalogue.
                 </dd>
                 
 		<dt>
@@ -2001,7 +2011,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    An Application Profile that the Catalogued Resource&amp;#39;s metadata conforms to.
+                                    An Application Profile that the Catalogued Resource&#39;s metadata conforms to.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -2939,7 +2949,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                 <td property="skos:scopeNote">
                                     The standards referred here SHOULD describe the Data Service and not the data it serves. The latter is provided by the dataset with which this Data Service is connected.
 
-For instance the data service adheres to the OGC WFS API standard, while the associated dataset adheres to the INSPIRE Address data model.
+For instance the data service adheres to the OGC WFS API standard, while the associated dataset adheres to the <a href="https://knowledge-base.inspire.ec.europa.eu/index_en">INSPIRE</a> Address data model.
                                 </td>
 				<!--
                                 <td>
@@ -6612,7 +6622,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                     The format of the file in which the data is contained in a compressed form, e.g. to reduce the size of the downloadable file.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    It SHOULD be expressed using a media type as defined in the official register of media types managed by IANA.
+                                    It SHOULD be expressed using a media type as defined in the official register of media types managed by <a href="https://www.iana.org/">IANA</a>.
                                 </td>
 				<!--
                                 <td>
@@ -6862,7 +6872,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                     0..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    The policy expressing the rights associated with the distribution if using the ODRL vocabulary.
+                                    The policy expressing the rights associated with the distribution if using the [[ODRL]] vocabulary.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -7169,7 +7179,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                     The format of the file in which one or more data files are grouped together, e.g. to enable a set of related files to be downloaded together.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    It SHOULD be expressed using a media type as defined in the official register of media types managed by IANA.
+                                    It SHOULD be expressed using a media type as defined in the official register of media types managed by <a href="https://www.iana.org/">IANA</a>.
                                 </td>
 				<!--
                                 <td>
@@ -7539,7 +7549,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                         Usage Note
                     </dt>
                     <dd>
-                        Note that the class Kind is the parent class for the four explicit types of vCards (Individual, Organization, Location, Group).
+                        Note that the class Kind is the parent class for the four explicit types of <a href="https://www.rfc-editor.org/rfc/rfc6350.html">vCard</a> (Individual, Organization, Location, Group).
                     </dd>
                 
                 
@@ -7667,7 +7677,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    A type of licence, e.g. indicating &#39;public domain&#39; or &#39;royalties required&#39;.
+                                    A type of licence, e.g. indicating 'public domain' or 'royalties required'.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -8905,9 +8915,9 @@ This is based on the UN/CEFACT Identifier class.
                         Usage Note
                     </dt>
                     <dd>
-                        The definition and properties of the Legal Resource class are aligned with the ontology included in "Council conclusions inviting the introduction of the European Legislation Identifier (ELI)". For describing the attributes of a Legal Resource (labels, preferred labels, alternative labels, definition, etc.) we refer to the ELI ontology.
+                        The definition and properties of the Legal Resource class are aligned with the ontology included in "Council conclusions inviting the introduction of the European Legislation Identifier (<a href="https://eur-lex.europa.eu/eli-register/about.html">ELI</a>)". For describing the attributes of a Legal Resource (labels, preferred labels, alternative labels, definition, etc.) we refer to the (<a href="https://op.europa.eu/en/web/eu-vocabularies/eli">ELI</a>) ontology.
 
-In this data specification the use is restricted to instances of this class that follow the ELI URI guidelines.
+In this data specification the use is restricted to instances of this class that follow the (<a href="https://op.europa.eu/en/web/eu-vocabularies/eli">ELI</a>) URI guidelines.
                     </dd>
                 
                 
@@ -8994,7 +9004,7 @@ In this data specification the use is restricted to instances of this class that
                     Definition
                 </dt>
                 <dd>
-                    A literal value such as a string or integer; Literals may be typed, e.g. as a date according to xsd:date. Literals that contain human-readable text have an optional language tag as defined by BCP 4715.
+                    A literal value such as a string or integer; Literals may be typed, e.g. as a date according to xsd:date. Literals that contain human-readable text have an optional language tag as defined by BCP 47 [[rfc5646]].
                 </dd>
                 
                 
@@ -9706,7 +9716,7 @@ In this data specification the use is restricted to instances of this class that
                     </div>
                 
 		</td><td>
-                    rdfs:Literal encoded using the relevant ISO 8601 Date and Time compliant string and typed using the appropriate XML Schema datatype (xsd:gYear, xsd:gYearMonth, xsd:date, or xsd:dateTime).
+                    rdfs:Literal encoded using the relevant [[ISO8601]] Date and Time compliant string and typed using the appropriate XML Schema datatype (xsd:gYear, xsd:gYearMonth, xsd:date, or xsd:dateTime).
 		</td></tr>
 		<tr><td>
                    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20TimeInstant&body=Explain%20your%20issue"}}>
@@ -9754,7 +9764,7 @@ In this data specification the use is restricted to instances of this class that
                     </div>
                 
 		</td><td>
-                    Decimal represents a subset of the real numbers, which can be represented by decimal numerals. The ·value space· of decimal is the set of numbers that can be obtained by multiplying an integer by a non-positive power of ten, i.e., expressible as i × 10^-n where i and n are integers and n &gt;= 0.
+                    Decimal represents a subset of the real numbers, which can be represented by decimal numerals. The ·value space· of decimal is the set of numbers that can be obtained by multiplying an integer by a non-positive power of ten, i.e., expressible as i × 10^-n where i and n are integers and n >= 0.
 		</td></tr>
 		<tr><td>
                    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20Xsd:duration&body=Explain%20your%20issue"}}>
@@ -9913,8 +9923,8 @@ In addition to the proposed common controlled vocabularies, which are mandatory 
 
 Providing correct and sufficient legal information is important to create trust by candidate reusers.
 Without explicit legal information there is a risk involved in the reuse of data, because one has no way of knowing what is allowed. 
-While in the past legislation and initiatives such as Findable, Accessible, Interoperable and Reusable (FAIR) data stress the importance of this information, 
-recent legislations, such as the High Value Datasets regulation, have become more demanding by imposing a minimum level of reuse.
+While in the past legislation and initiatives such as Findable, Accessible, Interoperable and Reusable [[FAIR]] data stress the importance of this information, 
+recent legislations, such as the <a href="https://eur-lex.europa.eu/eli/reg_impl/2023/138/oj">High Value Datasets regulation</a>, have become more demanding by imposing a minimum level of reuse.
 As a general principle, it is recommended that publishers consult their legal services to provide the appropriate values.
 
 <p></p>
@@ -9932,7 +9942,7 @@ This diversity can be considered a hurdle for cross-border reuse, as the implica
 <p></p>
 This creates a natural tendency to use licences (or rights) which have a wider adoption than national legislation.
 Unless restricted by national legislation, implementers are encouraged for that reason to use widely recognised licences such as Creative Commons licences.
-In particular it is advised for FAIR data to consider CC BY 4.0 (the minimum limit set by the HVD implementing regulation) or more permissive such as licences CC Zero.
+In particular it is advised for [[FAIR]] data to consider CC BY 4.0 (the minimum limit set by the HVD implementing regulation) or more permissive such as licences CC Zero.
 
 <p></p>
 
@@ -9972,7 +9982,7 @@ E.g. the Data Governance Act requires to provide sufficient legal reuse informat
 <p>
 The first version of DCAT Application Profile [[vocab-dcat-1]] had a single property to relate an Agent (typically, an organisation) to a Dataset.
 The only such ‘agent role’ that could be expressed in that version of the profile is through the property <a href="#Dataset.publisher">publisher</a>, defined as “An entity responsible for making the dataset available”.
-A second property is available in that DCAT recommendation [[vocab-dcat-1]], <a href="#Dataset.contactpoint">contact point</a>, defined as “Link a dataset to relevant contact information which is provided using VCard”, but this is not an agent role as the value of this property is contact data, rather than a representation of the organisation as such.
+A second property is available in that DCAT recommendation [[vocab-dcat-1]], <a href="#Dataset.contactpoint">contact point</a>, defined as “Link a dataset to relevant contact information which is provided using <a href="https://www.rfc-editor.org/rfc/rfc6350.html">vCard</a>”, but this is not an agent role as the value of this property is contact data, rather than a representation of the organisation as such.
 In specific cases, for example in exchanging data among domain-specific portals, it may be useful to express other, more specific agent roles.
 In such cases, extensions to DCAT-AP may be defined using additional properties with more specific meanings.
 </p><p>
@@ -9980,10 +9990,10 @@ Two possible approaches have been discussed, particular in the context of the de
 The first possible approach is based on the use of a predicate vocabulary that provides a set of properties that represent additional types of relationships between Datasets and Agents.
 For example, properties could be defined, such as foo:owner, foo:curator or foo:responsibleParty, in addition to the use of existing well-known properties, such as dct:creator and dct:rightsHolder.
 A possible source for such additional properties is the Roles Named Authority List  maintained by the Publications Office of the EU.
-Other domain-specific sources for additional properties are the INSPIRE Responsible Party roles , the Library of Congress’ MARC relators  and DataCite’s contributor types.
+Other domain-specific sources for additional properties are the <a href="https://knowledge-base.inspire.ec.europa.eu/index_en">INSPIRE</a> Responsible Party roles ,<a href="https://www.loc.gov/marc/relators/relaterm.html">the Library of Congress’ MARC relators</a> and <a href="https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#:~:text=Foo%20Data%20Center-,7.a%20contributorType,-Occurrence%3A%201">DataCite’s contributor types</a>.
 To enable the use of such properties, they must be defined as RDF properties with URIs in a well-managed namespace. 
 </p><p>
-A second approach is based on the use of W3C’s PROV ontology [[prov-o]]  which provides a powerful mechanism to express a set of classes, properties, and restrictions that can be used to represent and interchange provenance information generated in different systems and under different contexts. In the context of work on GeoDCAT-AP, a PROV-conformant solution for expressing agent roles was agreed . This solution uses prov:qualifiedAttribution in combination with a dct:type assertion pointing to the code list for Responsible Party Role in the INSPIRE registry. To enable the use of such types, they must be defined with URIs in a well-managed namespace. 
+A second approach is based on the use of W3C’s PROV ontology [[prov-o]]  which provides a powerful mechanism to express a set of classes, properties, and restrictions that can be used to represent and interchange provenance information generated in different systems and under different contexts. In the context of work on GeoDCAT-AP, a PROV-conformant solution for expressing agent roles was agreed . This solution uses prov:qualifiedAttribution in combination with a dct:type assertion pointing to the code list for Responsible Party Role in the <a href="https://knowledge-base.inspire.ec.europa.eu/index_en">INSPIRE</a> registry. To enable the use of such types, they must be defined with URIs in a well-managed namespace. 
 </p><p>
 Based on the experience gained with the use of domain-specific extensions for additional ‘agent roles’ in the exchange of information about Datasets and on the requests of implementors and stakeholders, the DCAT Application Profile release 2.0.0  is extended with additional roles as proposed by DCAT Version 2 [[vocab-dcat-2]] that have proven to be useful across domains. Precisely, properties <a href="#Dataset.creator">creator</a>, <a href="#Dataset.qualifiedattribution">qualified attribution</a> and <a href="#Dataset.qualifiedrelation">qualified relation</a> have been added to <a href="#Dataset">Dataset</a> class to further facilitate relationships between datasets and agents. 
 </p><p>

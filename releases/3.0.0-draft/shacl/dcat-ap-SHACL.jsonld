@@ -1895,7 +1895,7 @@
           "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DistributionShape/36b68d0f06c0eacbbddd0d2891379c6d005dc861",
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.haspolicy",
           "sh:description": {
-            "en": "The policy expressing the rights associated with the distribution if using the ODRL vocabulary."
+            "en": "The policy expressing the rights associated with the distribution if using the [[ODRL]] vocabulary."
           },
           "sh:maxCount": "1",
           "sh:name": {
@@ -2040,7 +2040,7 @@
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.haspolicy",
           "sh:class": "http://www.w3.org/ns/odrl/2/Policy",
           "sh:description": {
-            "en": "The policy expressing the rights associated with the distribution if using the ODRL vocabulary."
+            "en": "The policy expressing the rights associated with the distribution if using the [[ODRL]] vocabulary."
           },
           "sh:name": {
             "en": "has policy"

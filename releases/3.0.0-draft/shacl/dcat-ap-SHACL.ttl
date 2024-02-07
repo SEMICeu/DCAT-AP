@@ -891,7 +891,7 @@
   shacl:path <http://www.w3.org/ns/adms#status> .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DistributionShape/36b68d0f06c0eacbbddd0d2891379c6d005dc861> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.haspolicy";
-  shacl:description "The policy expressing the rights associated with the distribution if using the ODRL vocabulary."@en;
+  shacl:description "The policy expressing the rights associated with the distribution if using the [[ODRL]] vocabulary."@en;
   shacl:maxCount 1;
   shacl:name "has policy"@en;
   shacl:path <http://www.w3.org/ns/odrl/2/hasPolicy> .
@@ -964,7 +964,7 @@
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DistributionShape/8c1e0d1ac55cc7da56ed33785c09a2980899a997> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.haspolicy";
   shacl:class <http://www.w3.org/ns/odrl/2/Policy>;
-  shacl:description "The policy expressing the rights associated with the distribution if using the ODRL vocabulary."@en;
+  shacl:description "The policy expressing the rights associated with the distribution if using the [[ODRL]] vocabulary."@en;
   shacl:name "has policy"@en;
   shacl:path <http://www.w3.org/ns/odrl/2/hasPolicy> .
 
