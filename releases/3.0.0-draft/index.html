@@ -10081,6 +10081,10 @@ But the presence of these Distributions raise semantical conflicts such as wheth
 </li>
 <li>The members of a Dataset Series should be described in such a way that without the knowledge of the Dataset Series, the metadata is interpreted correctly. The existence of a dataset should not be based on the membership in a Dataset Series. The interpretation of a member with its associated Distributions and Data Services is conform the above guidelines.
 </li>
+<li>Whenever a Data Service is providing access to all the data of a Dataset Series, i.e. the union of all datasets in the collection of the Dataset Series, 
+    then the Data Service should refer to the Dataset Series using <a href="#DataService.servesdataset">serves dataset</a>. 
+    The ensures that whenever in the future the Dataset Series is extended with new Datasets the Data Service description does not need to be adapted.
+</li>      
 <li>Keep the usage simple. Complex nesting such as Dataset Series being a member of Dataset Series, or Dataset belonging to multiple Dataset Series are to be handled with care. 
 While from a data knowlegde graph these nestings are feasible and not so problematic, it must be realised that these complicate the presentation on a webpage. 
 Since data portal representations are the main communication from metadata owners to potential data consumers and there is no clear expectations
