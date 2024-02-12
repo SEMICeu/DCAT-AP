@@ -1,5 +1,5 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix : <http://data.europa.eu/r5r#> .
+@prefix : <http://data.europa.eu/r5r/shacl_shapes#> .
 @prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
@@ -46,16 +46,6 @@
         org:memberOf <http://ami-consult.com/#id> ;
         foaf:homepage <http://makxdekkers.com/> ;
         foaf:name "Makx Dekkers"
-    ], [
-        rdfs:seeAlso <http://nikosloutas.com/> ;
-        org:memberOf <http://www.pwc.com/gx/en/eu-institutions-services> ;
-        foaf:homepage <http://nikosloutas.com/> ;
-        foaf:name "Nikolaos Loutas"
-    ], [
-        rdfs:seeAlso <http://www.deri.ie/users/vassilios-peristeras/> ;
-        org:memberOf <http://publications.europa.eu/resource/authority/corporate-body/COM> ;
-        foaf:homepage <http://www.deri.ie/users/vassilios-peristeras/> ;
-        foaf:name "Vassilios Peristeras"
     ] ;
     dct:license <https://creativecommons.org/licenses/by/4.0> ;
     cc:attributionURL <http://ec.europa.eu/> ;
@@ -64,7 +54,7 @@
     dct:relation <https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/210> ;
     dct:description "This document specifies the constraints on properties and classes expressed by DCAT-AP in SHACL."@en ;
     dct:title "The constraints of DCAT Application Profile for Data Portals in Europe"@en ;
-    owl:versionInfo "2.1.1" ;
+    owl:versionInfo "3.0.0" ;
     foaf:homepage <https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/210> ;
     foaf:maker [
         foaf:mbox <mailto:contact@semic.eu> ;
@@ -146,6 +136,10 @@
     rdfs:label "Catalog"@en ;
     sh:property [
         sh:path dct:language ;
+        sh:severity sh:Violation
+    ], [
+  	sh:path dcatap:applicableLegislation;
+  	sh:nodeKind sh:IRI;
         sh:severity sh:Violation
     ], [
         sh:maxCount 1 ;
@@ -264,6 +258,10 @@
         sh:path dct:title ;
         sh:severity sh:Violation
     ], [
+  	sh:path dcatap:applicableLegislation;
+  	sh:nodeKind sh:IRI;
+        sh:severity sh:Violation
+    ], [
         sh:minCount 1 ;
         sh:nodeKind sh:BlankNodeOrIRI ;
         sh:path dcat:endpointURL ;
@@ -297,6 +295,10 @@
         sh:minCount 1 ;
         sh:nodeKind sh:Literal ;
         sh:path dct:description ;
+        sh:severity sh:Violation
+    ], [
+  	sh:path dcatap:applicableLegislation;
+  	sh:nodeKind sh:IRI;
         sh:severity sh:Violation
     ], [
         sh:minCount 1 ;
@@ -463,6 +465,10 @@
     rdfs:label "Distribution"@en ;
     sh:property [
         sh:path dct:conformsTo ;
+        sh:severity sh:Violation
+    ], [
+  	sh:path dcatap:applicableLegislation;
+  	sh:nodeKind sh:IRI;
         sh:severity sh:Violation
     ], [
         sh:maxCount 1 ;
@@ -637,65 +643,27 @@
     sh:targetClass dcat:Relationship .
 
 #
-# Duplication is required to handle the inverse of the dcat:inSeries property.
-:DatasetInSeries_Shape
-    a sh:NodeShape ;
-    rdfs:label "Dataset in Series"@en ;
-    sh:property [
-  	sh:path dcat:prev;
-  	sh:nodeKind sh:BlankNodeOrIRI;
-        sh:severity sh:Violation
-    ], [
-  	sh:path dcat:next;
-  	sh:nodeKind sh:BlankNodeOrIRI;
-        sh:severity sh:Violation
-    ], [
-  	sh:path dct:title;
-  	sh:nodeKind sh:Literal ;
-  	sh:minCount 1;
-        sh:severity sh:Violation
-    ], [
-   	sh:path dcat:inSeries;
-  	sh:class dcat:DatasetSeries;
-	sh:nodeKind sh:BlankNodeOrIRI;
-        sh:severity sh:Violation
-    ], [
-	sh:path dct:accrualPeriodicity;
-	sh:nodeKind sh:BlankNodeOrIRI;
-        sh:severity sh:Violation
-	
-    ], [
-	sh:path dct:description;
-  	sh:nodeKind sh:Literal ;
-  	sh:minCount 1;
-        sh:severity sh:Violation
-    ] .
+# 
 
-
-
-:DatasetInSeries_ShapeClass
-    a sh:NodeShape ;
-    rdfs:label "Dataset in Series"@en ;
-    sh:node :DatasetInSeries_Shape ;
-    sh:targetSubjectsOf <http://www.w3.org/ns/dcat#inSeries>.
 
 :DatasetSeries_Shape
     a sh:NodeShape ;
     rdfs:label "Dataset Series"@en ;
     sh:property [
-	sh:path dcat:seriesMember;
-  	sh:node :DatasetInSeries_Shape ;
-	sh:minCount 1;
-	sh:nodeKind sh:BlankNodeOrIRI;
+       sh:inversePath dcat:inSeries;
+       sh:minCount 1;
+       sh:nodeKind sh:BlankNodeOrIRI;
+       sh:severity sh:Warning
+    ], [
+  	sh:path dcatap:applicableLegislation;
+  	sh:nodeKind sh:IRI;
         sh:severity sh:Violation
     ], [
   	sh:path dct:spatial;
-  	sh:class dct:Location;
   	sh:nodeKind sh:BlankNodeOrIRI;
         sh:severity sh:Violation
     ], [
 	sh:path dct:accrualPeriodicity;
-  	sh:class dct:Frequency;
   	sh:maxCount 1;
   	sh:nodeKind sh:BlankNodeOrIRI;
         sh:severity sh:Violation
@@ -722,31 +690,17 @@
   	sh:maxCount 1;
         sh:severity sh:Violation
     ], [
-  	sh:path dcat:first;
-  	sh:node :DatasetInSeries_Shape ;
-  	sh:nodeKind sh:BlankNodeOrIRI;
-  	sh:maxCount 1;
-        sh:severity sh:Violation
-    ], [
-  	sh:path dcat:last;
-  	sh:node :DatasetInSeries_Shape ;
-  	sh:nodeKind sh:BlankNodeOrIRI;
-  	sh:maxCount 1;
-        sh:severity sh:Violation
-    ], [
-        sh:maxCount 1 ;
         sh:path dct:publisher ;
+        sh:maxCount 1 ;
   	sh:nodeKind sh:BlankNodeOrIRI;
         sh:severity sh:Violation
     ], [
   	sh:path dcat:contactPoint;
   	sh:nodeKind sh:BlankNodeOrIRI;
-  	sh:class vcard:Kind;
         sh:severity sh:Violation
     ], [
   	sh:path dct:temporal;
   	sh:nodeKind sh:BlankNodeOrIRI;
-  	sh:class dct:PeriodOfTime;
         sh:severity sh:Violation
 	 ] ;
     sh:targetClass dcat:DatasetSeries .	
