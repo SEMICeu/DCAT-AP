@@ -14,13 +14,38 @@
     {
       "@type": "foaf:Person",
       "affiliation": {
-        "foaf:name": "SEMIC EU"
+        "foaf:name": "Digitaal Vlaanderen"
       },
-      "foaf:firstName": "Pavlina",
-      "foaf:lastName": "Fragkou"
+      "foaf:firstName": "Bert",
+      "foaf:lastName": "Van Nuffelen",
+      "foaf:mbox": "mailto:bert.vannuffelen@vlaanderen.be"
     }
   ],
   "editors": [
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "Trasys International"
+      },
+      "foaf:firstName": "Anastasia",
+      "foaf:lastName": "Sofou"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "PwC EU Services"
+      },
+      "foaf:firstName": "Arthur",
+      "foaf:lastName": "Schiltz"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "DG DIGIT"
+      },
+      "foaf:firstName": "Pavlina",
+      "foaf:lastName": "Fragkou"
+    },
     {
       "@type": "foaf:Person",
       "foaf:firstName": "Makx",
@@ -29,46 +54,287 @@
     {
       "@type": "foaf:Person",
       "affiliation": {
-        "foaf:name": "SEMIC EU"
+        "foaf:name": "PwC EU Services"
       },
-      "foaf:firstName": "Pavlina",
-      "foaf:lastName": "Fragkou"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Natasa",
-      "foaf:lastName": "Sofou"
-    },
-    {
-      "@type": "foaf:Person",
-      "affiliation": {
-        "foaf:name": "TenForce"
-      },
-      "foaf:firstName": "Bert",
-      "foaf:lastName": "Van Nuffelen",
-      "foaf:mbox": "mailto:bert.van.nuffelen@tenforce.com"
+      "foaf:firstName": "Jitse",
+      "foaf:lastName": "De Cock"
     }
   ],
   "contributors": [
     {
       "@type": "foaf:Person",
+      "foaf:firstName": "Øystein",
+      "foaf:lastName": "Åsnes"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Joeri",
+      "foaf:lastName": "van der Velde"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Agnieszka",
+      "foaf:lastName": "Zajac"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Christian",
+      "foaf:lastName": "Wittig"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Suzanne",
+      "foaf:lastName": "Wigard"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Thomas",
+      "foaf:lastName": "Weber"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "William",
+      "foaf:lastName": "Verbeeck"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Bert",
+      "foaf:lastName": "Van Nuffelen"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Sander",
+      "foaf:lastName": "Van Dooren"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Kristine",
+      "foaf:lastName": "Ulander"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Thomas",
+      "foaf:lastName": "Tursics"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Kees",
+      "foaf:lastName": "Trautwein"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Igor",
+      "foaf:lastName": "Stefelin"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Emidio",
+      "foaf:lastName": "Stani"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Michele",
+      "foaf:lastName": "Spichtig"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Sebastian",
+      "foaf:lastName": "Sklarß"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Maxime",
+      "foaf:lastName": "Servais"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Giampaolo",
+      "foaf:lastName": "Sellitto"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Fabian",
+      "foaf:lastName": "Santi"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Maik",
+      "foaf:lastName": "Roth"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Daniele",
+      "foaf:lastName": "Rizzi"
+    },
+    {
+      "@type": "foaf:Person",
       "foaf:firstName": "Ludger",
-      "foaf:lastName": "A. Rinsche"
+      "foaf:lastName": "Rinsche"
     },
     {
       "@type": "foaf:Person",
-      "foaf:firstName": "Kuldar",
-      "foaf:lastName": "Aasaga"
+      "foaf:firstName": "Taavi",
+      "foaf:lastName": "Ploompuu"
     },
     {
       "@type": "foaf:Person",
-      "foaf:firstName": "Anssi",
-      "foaf:lastName": "Ahlberg"
+      "foaf:firstName": "Andrea",
+      "foaf:lastName": "Perego"
     },
     {
       "@type": "foaf:Person",
-      "foaf:firstName": "Matej",
-      "foaf:lastName": "Alic"
+      "foaf:firstName": "Andrea",
+      "foaf:lastName": "Perego"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Matthias",
+      "foaf:lastName": "Palmer"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Frederik",
+      "foaf:lastName": "Nordlander"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Geraldine",
+      "foaf:lastName": "Nolf"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Anastasija",
+      "foaf:lastName": "Nikiforova"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Lina",
+      "foaf:lastName": "Molinas Comet"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Peter",
+      "foaf:lastName": "Lubrich"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Giorgia",
+      "foaf:lastName": "Lodi"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Anja",
+      "foaf:lastName": "Loddenkemper"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Petros",
+      "foaf:lastName": "Likidis"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Christoph",
+      "foaf:lastName": "Lange"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Christine",
+      "foaf:lastName": "Laaboudi-Spoiden"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Andreas",
+      "foaf:lastName": "Kuckartz"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Nataliia",
+      "foaf:lastName": "Kovalchuk"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Jakub",
+      "foaf:lastName": "Klímek"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Fabian",
+      "foaf:lastName": "Kirstein"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Agnieszka",
+      "foaf:lastName": "Jasiczek"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Bart",
+      "foaf:lastName": "Hanssens"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Bart",
+      "foaf:lastName": "Hanssens"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Casper",
+      "foaf:lastName": "Gras"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Stijn",
+      "foaf:lastName": "Goedertier"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Dietmar",
+      "foaf:lastName": "Gattwinkel"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Adina",
+      "foaf:lastName": "Dragan"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Ulrika",
+      "foaf:lastName": "Domellöf Mattsson"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Jean",
+      "foaf:lastName": "Delahousse"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Makx",
+      "foaf:lastName": "Dekkers"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Ine",
+      "foaf:lastName": "De Visser"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Luis",
+      "foaf:lastName": "Daniel Ibáñez"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Peter",
+      "foaf:lastName": "Burian"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Oystein",
+      "foaf:lastName": "Asnes"
+    },
+    {
+      "@type": "foaf:Person",
+      "foaf:firstName": "Stefano",
+      "foaf:lastName": "Ambrogio"
     },
     {
       "@type": "foaf:Person",
@@ -82,302 +348,56 @@
     },
     {
       "@type": "foaf:Person",
-      "foaf:firstName": "Stefano",
-      "foaf:lastName": "Ambrogio"
+      "foaf:firstName": "Matej",
+      "foaf:lastName": "Alic"
     },
     {
       "@type": "foaf:Person",
-      "foaf:firstName": "Oystein",
-      "foaf:lastName": "Asnes"
+      "foaf:firstName": "Anssi",
+      "foaf:lastName": "Ahlberg"
     },
     {
       "@type": "foaf:Person",
-      "foaf:firstName": "Peter",
-      "foaf:lastName": "Burian"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Luis",
-      "foaf:lastName": "Daniel Ibáñez"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Jitse",
-      "foaf:lastName": "De Cock"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Ine",
-      "foaf:lastName": "De Visser"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Makx",
-      "foaf:lastName": "Dekkers"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Jean",
-      "foaf:lastName": "Delahousse"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Ulrika",
-      "foaf:lastName": "Domellöf Mattsson"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Adina",
-      "foaf:lastName": "Dragan"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Dietmar",
-      "foaf:lastName": "Gattwinkel"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Stijn",
-      "foaf:lastName": "Goedertier"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Casper",
-      "foaf:lastName": "Gras"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Bart",
-      "foaf:lastName": "Hanssens"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Bart",
-      "foaf:lastName": "Hanssens"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Agnieszka",
-      "foaf:lastName": "Jasiczek"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Fabian",
-      "foaf:lastName": "Kirstein"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Jakub",
-      "foaf:lastName": "Klímek"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Nataliia",
-      "foaf:lastName": "Kovalchuk"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Andreas",
-      "foaf:lastName": "Kuckartz"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Christine",
-      "foaf:lastName": "Laaboudi-Spoiden"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Christoph",
-      "foaf:lastName": "Lange"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Petros",
-      "foaf:lastName": "Likidis"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Anja",
-      "foaf:lastName": "Loddenkemper"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Giorgia",
-      "foaf:lastName": "Lodi"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Peter",
-      "foaf:lastName": "Lubrich"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Lina",
-      "foaf:lastName": "Molinas Comet"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Anastasija",
-      "foaf:lastName": "Nikiforova"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Geraldine",
-      "foaf:lastName": "Nolf"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Frederik",
-      "foaf:lastName": "Nordlander"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Matthias",
-      "foaf:lastName": "Palmer"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Andrea",
-      "foaf:lastName": "Perego"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Taavi",
-      "foaf:lastName": "Ploompuu"
+      "foaf:firstName": "Kuldar",
+      "foaf:lastName": "Aasaga"
     },
     {
       "@type": "foaf:Person",
       "foaf:firstName": "Ludger",
-      "foaf:lastName": "Rinsche"
+      "foaf:lastName": "A. Rinsche"
     },
     {
       "@type": "foaf:Person",
-      "foaf:firstName": "Daniele",
-      "foaf:lastName": "Rizzi"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Maik",
-      "foaf:lastName": "Roth"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Fabian",
-      "foaf:lastName": "Santi"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Giampaolo",
-      "foaf:lastName": "Sellitto"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Maxime",
-      "foaf:lastName": "Servais"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Sebastian",
-      "foaf:lastName": "Sklarß"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Michele",
-      "foaf:lastName": "Spichtig"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Emidio",
-      "foaf:lastName": "Stani"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Igor",
-      "foaf:lastName": "Stefelin"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Kees",
-      "foaf:lastName": "Trautwein"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Thomas",
-      "foaf:lastName": "Tursics"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Kristine",
-      "foaf:lastName": "Ulander"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Sander",
-      "foaf:lastName": "Van Dooren"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Bert",
-      "foaf:lastName": "Van Nuffelen"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "William",
-      "foaf:lastName": "Verbeeck"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Thomas",
-      "foaf:lastName": "Weber"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Suzanne",
-      "foaf:lastName": "Wigard"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Christian",
-      "foaf:lastName": "Wittig"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Agnieszka",
-      "foaf:lastName": "Zajac"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Joeri",
-      "foaf:lastName": "van der Velde"
-    },
-    {
-      "@type": "foaf:Person",
-      "foaf:firstName": "Øystein",
-      "foaf:lastName": "Åsnes"
+      "foaf:firstName": "Hagar:Lowenthal"
     }
   ],
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "issued": "TODO",
-  "navigation": {},
+  "navigation": {
+    "prev": "https://semiceu.github.io/DCAT-AP/r5r/release/3.0.0"
+  },
   "publication-state": "https://www.w3.org/2021/Process-20211102/#RecsWD",
-  "publication-date": "2023-08-24",
+  "publication-date": "2024-02-12",
   "classes": [],
   "externals": [],
   "properties": [
     {
-      "@id": "http://data.europa.eu/r5r/applicableLegislation",
+      "@id": "http://data.europa.eu/r5r/hvdCategory",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
-        "en": "applicable legislation"
+        "en": "HVD category"
       },
       "definition": {
-        "en": "the legislation that is applicable to this resource."
+        "en": "A data category defined in the High Value Dataset Implementing Regulation."
+      },
+      "usage": {
+        "en": "For the possible values consult the regulation at <a href=\"http://data.europa.eu/eli/reg_impl/2023/138/oj\">http://data.europa.eu/eli/reg_impl/2023/138/oj</a>. \r\nOr consulted the controlled vocabulary derived from it."
       },
       "domain": [
         "http://www.w3.org/2000/01/rdf-schema#Resource"
       ],
       "range": [
-        "http://data.europa.eu/eli/ontology#LegalResource"
+        "http://www.w3.org/2004/02/skos/core#Concept"
       ],
       "generalization": []
     },
@@ -399,22 +419,19 @@
       "generalization": []
     },
     {
-      "@id": "http://data.europa.eu/r5r/hvdCategory",
+      "@id": "http://data.europa.eu/r5r/applicableLegislation",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
-        "en": "HVD category"
+        "en": "applicable legislation"
       },
       "definition": {
-        "en": "A data category defined in the High Value Dataset Implementing Regulation."
-      },
-      "usage": {
-        "en": "For the possible values consult the regulation at <a href=\"http://data.europa.eu/eli/reg_impl/2023/138/oj\">http://data.europa.eu/eli/reg_impl/2023/138/oj</a>. \r\nOr consulted the controlled vocabulary derived from it."
+        "en": "the legislation that is applicable to this resource."
       },
       "domain": [
         "http://www.w3.org/2000/01/rdf-schema#Resource"
       ],
       "range": [
-        "http://www.w3.org/2004/02/skos/core#Concept"
+        "http://data.europa.eu/eli/ontology#LegalResource"
       ],
       "generalization": []
     }

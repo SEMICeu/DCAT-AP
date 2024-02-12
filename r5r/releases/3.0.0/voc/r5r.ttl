@@ -36,20 +36,224 @@ Or consulted the controlled vocabulary derived from it."""@en .
     "r5r"@nl;
   dc:contributor [
     a foaf:Person;
+    foaf:firstName "Øystein";
+    foaf:lastName "Åsnes"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Joeri";
+    foaf:lastName "van der Velde"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Agnieszka";
+    foaf:lastName "Zajac"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Christian";
+    foaf:lastName "Wittig"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Suzanne";
+    foaf:lastName "Wigard"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Thomas";
+    foaf:lastName "Weber"
+  ], [
+    a foaf:Person;
+    foaf:firstName "William";
+    foaf:lastName "Verbeeck"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Bert";
+    foaf:lastName "Van Nuffelen"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Sander";
+    foaf:lastName "Van Dooren"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Kristine";
+    foaf:lastName "Ulander"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Thomas";
+    foaf:lastName "Tursics"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Kees";
+    foaf:lastName "Trautwein"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Igor";
+    foaf:lastName "Stefelin"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Emidio";
+    foaf:lastName "Stani"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Michele";
+    foaf:lastName "Spichtig"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Sebastian";
+    foaf:lastName "Sklarß"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Maxime";
+    foaf:lastName "Servais"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Giampaolo";
+    foaf:lastName "Sellitto"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Fabian";
+    foaf:lastName "Santi"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Maik";
+    foaf:lastName "Roth"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Daniele";
+    foaf:lastName "Rizzi"
+  ], [
+    a foaf:Person;
     foaf:firstName "Ludger";
-    foaf:lastName "A. Rinsche"
+    foaf:lastName "Rinsche"
   ], [
     a foaf:Person;
-    foaf:firstName "Kuldar";
-    foaf:lastName "Aasaga"
+    foaf:firstName "Taavi";
+    foaf:lastName "Ploompuu"
   ], [
     a foaf:Person;
-    foaf:firstName "Anssi";
-    foaf:lastName "Ahlberg"
+    foaf:firstName "Andrea";
+    foaf:lastName "Perego"
   ], [
     a foaf:Person;
-    foaf:firstName "Matej";
-    foaf:lastName "Alic"
+    foaf:firstName "Andrea";
+    foaf:lastName "Perego"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Matthias";
+    foaf:lastName "Palmer"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Frederik";
+    foaf:lastName "Nordlander"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Geraldine";
+    foaf:lastName "Nolf"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Anastasija";
+    foaf:lastName "Nikiforova"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Lina";
+    foaf:lastName "Molinas Comet"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Peter";
+    foaf:lastName "Lubrich"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Giorgia";
+    foaf:lastName "Lodi"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Anja";
+    foaf:lastName "Loddenkemper"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Petros";
+    foaf:lastName "Likidis"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Christoph";
+    foaf:lastName "Lange"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Christine";
+    foaf:lastName "Laaboudi-Spoiden"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Andreas";
+    foaf:lastName "Kuckartz"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Nataliia";
+    foaf:lastName "Kovalchuk"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Jakub";
+    foaf:lastName "Klímek"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Fabian";
+    foaf:lastName "Kirstein"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Agnieszka";
+    foaf:lastName "Jasiczek"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Bart";
+    foaf:lastName "Hanssens"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Bart";
+    foaf:lastName "Hanssens"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Casper";
+    foaf:lastName "Gras"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Stijn";
+    foaf:lastName "Goedertier"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Dietmar";
+    foaf:lastName "Gattwinkel"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Adina";
+    foaf:lastName "Dragan"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Ulrika";
+    foaf:lastName "Domellöf Mattsson"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Jean";
+    foaf:lastName "Delahousse"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Makx";
+    foaf:lastName "Dekkers"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Ine";
+    foaf:lastName "De Visser"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Luis";
+    foaf:lastName "Daniel Ibáñez"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Peter";
+    foaf:lastName "Burian"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Oystein";
+    foaf:lastName "Asnes"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Stefano";
+    foaf:lastName "Ambrogio"
   ], [
     a foaf:Person;
     foaf:firstName "Martin";
@@ -60,226 +264,25 @@ Or consulted the controlled vocabulary derived from it."""@en .
     foaf:lastName "Alvarez"
   ], [
     a foaf:Person;
-    foaf:firstName "Stefano";
-    foaf:lastName "Ambrogio"
+    foaf:firstName "Matej";
+    foaf:lastName "Alic"
   ], [
     a foaf:Person;
-    foaf:firstName "Oystein";
-    foaf:lastName "Asnes"
+    foaf:firstName "Anssi";
+    foaf:lastName "Ahlberg"
   ], [
     a foaf:Person;
-    foaf:firstName "Peter";
-    foaf:lastName "Burian"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Luis";
-    foaf:lastName "Daniel Ibáñez"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Jitse";
-    foaf:lastName "De Cock"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Ine";
-    foaf:lastName "De Visser"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Makx";
-    foaf:lastName "Dekkers"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Jean";
-    foaf:lastName "Delahousse"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Ulrika";
-    foaf:lastName "Domellöf Mattsson"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Adina";
-    foaf:lastName "Dragan"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Dietmar";
-    foaf:lastName "Gattwinkel"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Stijn";
-    foaf:lastName "Goedertier"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Casper";
-    foaf:lastName "Gras"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Bart";
-    foaf:lastName "Hanssens"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Bart";
-    foaf:lastName "Hanssens"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Agnieszka";
-    foaf:lastName "Jasiczek"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Fabian";
-    foaf:lastName "Kirstein"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Jakub";
-    foaf:lastName "Klímek"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Nataliia";
-    foaf:lastName "Kovalchuk"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Andreas";
-    foaf:lastName "Kuckartz"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Christine";
-    foaf:lastName "Laaboudi-Spoiden"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Christoph";
-    foaf:lastName "Lange"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Petros";
-    foaf:lastName "Likidis"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Anja";
-    foaf:lastName "Loddenkemper"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Giorgia";
-    foaf:lastName "Lodi"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Peter";
-    foaf:lastName "Lubrich"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Lina";
-    foaf:lastName "Molinas Comet"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Anastasija";
-    foaf:lastName "Nikiforova"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Geraldine";
-    foaf:lastName "Nolf"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Frederik";
-    foaf:lastName "Nordlander"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Matthias";
-    foaf:lastName "Palmer"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Andrea";
-    foaf:lastName "Perego"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Taavi";
-    foaf:lastName "Ploompuu"
+    foaf:firstName "Kuldar";
+    foaf:lastName "Aasaga"
   ], [
     a foaf:Person;
     foaf:firstName "Ludger";
-    foaf:lastName "Rinsche"
+    foaf:lastName "A. Rinsche"
   ], [
     a foaf:Person;
-    foaf:firstName "Daniele";
-    foaf:lastName "Rizzi"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Maik";
-    foaf:lastName "Roth"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Fabian";
-    foaf:lastName "Santi"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Giampaolo";
-    foaf:lastName "Sellitto"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Maxime";
-    foaf:lastName "Servais"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Sebastian";
-    foaf:lastName "Sklarß"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Michele";
-    foaf:lastName "Spichtig"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Emidio";
-    foaf:lastName "Stani"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Igor";
-    foaf:lastName "Stefelin"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Kees";
-    foaf:lastName "Trautwein"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Thomas";
-    foaf:lastName "Tursics"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Kristine";
-    foaf:lastName "Ulander"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Sander";
-    foaf:lastName "Van Dooren"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Bert";
-    foaf:lastName "Van Nuffelen"
-  ], [
-    a foaf:Person;
-    foaf:firstName "William";
-    foaf:lastName "Verbeeck"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Thomas";
-    foaf:lastName "Weber"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Suzanne";
-    foaf:lastName "Wigard"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Christian";
-    foaf:lastName "Wittig"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Agnieszka";
-    foaf:lastName "Zajac"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Joeri";
-    foaf:lastName "van der Velde"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Øystein";
-    foaf:lastName "Åsnes"
+    foaf:firstName "Hagar:Lowenthal"
   ];
-  dc:issued "2023-08-24";
+  dc:issued "2024-02-12";
   dc:license <https://creativecommons.org/licenses/by/4.0/>;
   dc:mediator [
     foaf:homepage <https://semic.eu>;
@@ -287,27 +290,33 @@ Or consulted the controlled vocabulary derived from it."""@en .
   ];
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;
+    foaf:firstName "Anastasia";
+    foaf:lastName "Sofou";
+    schemas:affiliation [foaf:name "Trasys International"]
+  ], [
+    a foaf:Person;
+    foaf:firstName "Arthur";
+    foaf:lastName "Schiltz";
+    schemas:affiliation [foaf:name "PwC EU Services"]
+  ], [
+    a foaf:Person;
+    foaf:firstName "Pavlina";
+    foaf:lastName "Fragkou";
+    schemas:affiliation [foaf:name "DG DIGIT"]
+  ], [
+    a foaf:Person;
     foaf:firstName "Makx";
     foaf:lastName "Dekkers"
   ], [
     a foaf:Person;
-    foaf:firstName "Pavlina";
-    foaf:lastName "Fragkou";
-    schemas:affiliation [foaf:name "SEMIC EU"]
-  ], [
-    a foaf:Person;
-    foaf:firstName "Natasa";
-    foaf:lastName "Sofou"
-  ], [
-    a foaf:Person;
-    foaf:firstName "Bert";
-    foaf:lastName "Van Nuffelen";
-    foaf:mbox <mailto:bert.van.nuffelen@tenforce.com>;
-    schemas:affiliation [foaf:name "TenForce"]
+    foaf:firstName "Jitse";
+    foaf:lastName "De Cock";
+    schemas:affiliation [foaf:name "PwC EU Services"]
   ];
   foaf:maker [
     a foaf:Person;
-    foaf:firstName "Pavlina";
-    foaf:lastName "Fragkou";
-    schemas:affiliation [foaf:name "SEMIC EU"]
+    foaf:firstName "Bert";
+    foaf:lastName "Van Nuffelen";
+    foaf:mbox <mailto:bert.vannuffelen@vlaanderen.be>;
+    schemas:affiliation [foaf:name "Digitaal Vlaanderen"]
   ] .

@@ -21,6 +21,16 @@
 	    
 		
 		   {
+		    name: "Jitse De Cock",
+		      
+		      
+		    company: "PwC EU Services",
+		      
+		      
+		    }
+		, 
+		
+		   {
 		    name: "Makx Dekkers",
 		      
 		      
@@ -32,28 +42,28 @@
 		    name: "Pavlina Fragkou",
 		      
 		      
-		    company: "SEMIC EU",
+		    company: "DG DIGIT",
 		      
 		      
 		    }
 		, 
 		
 		   {
-		    name: "Natasa Sofou",
+		    name: "Arthur Schiltz",
 		      
+		      
+		    company: "PwC EU Services",
 		      
 		      
 		    }
 		, 
 		
 		   {
-		    name: "Bert Van Nuffelen",
+		    name: "Anastasia Sofou",
 		      
 		      
-		    company: "TenForce",
+		    company: "Trasys International",
 		      
-		      
-		    mailto: "bert.van.nuffelen@tenforce.com"
 		      
 		    }
 		
@@ -72,11 +82,13 @@
 	    
 		
 		   {
-		    name: "Pavlina Fragkou",
+		    name: "Bert Van Nuffelen",
 		      
 		      
-		    company: "SEMIC EU",
+		    company: "Digitaal Vlaanderen",
 		      
+		      
+		    mailto: "bert.vannuffelen@vlaanderen.be"
 		      
 		    }
 		
@@ -90,16 +102,33 @@
 	
 		]
 
+    var myowners = [
+            {
+                value: "SEMIC",
+                href: "https://joinup.ec.europa.eu/collection/semic-support-centre",
+            },
+            {
+                value: "Pavlina Fragkou (DG DIGIT)",
+            },
+		]
+
+
 
    
 
     var respecConfig = {
       edDraftURI: "https://semiceu.github.io/r5r/release/3.0.0",
-      latestVersion: "",
-      specStatus: "LD",
-      publishDate: "2023-08-24",
+      latestVersion: "https://semiceu.github.io/DCAT-AP/r5r/release/3.0.0",
+      specStatus: "base",
+      publishDate: "2024-02-12",
       editors: myeditors,
       authors: myauthors,
+      otherLinks: [
+        {
+          key: "Owners:",
+          data: myowners
+        }
+      ],
       github: "SEMICeu/DCAT-AP",
       shortName: "DCAT-AP vocabulary, the r5r namespace",
       xref: "web-platform",
@@ -216,8 +245,12 @@ The creation of an annex of DCAT-AP for High Value Datasets, DCAT-AP HVD [[DCAT-
 <h3>Meeting minutes</h3>
 The following webinars have been held for the creation of this release
     <ul>
-	<li>Webinar 25 November 2022 (<a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/MeetingMinutes.pdf">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=vpCu3wrBeso">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/Slides.pdf">slides</a>) </li>
-       <li>Webinar 2 February 2023 (<a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/20230202%20Webinar%20DCAT-AP.pdf">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=teUeMLwv4Ks">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/webinar_2_feb_2022_DCAT-AP_v.0.3.pdf">slides</a>) </li>
+	    <li>Webinar 25 November 2022 (<a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/MeetingMinutes.pdf">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=vpCu3wrBeso">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/Slides.pdf">slides</a>) </li>
+      <li>Webinar 2 February 2023 (<a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/20230202%20Webinar%20DCAT-AP.pdf">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=teUeMLwv4Ks">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/webinar_2_feb_2022_DCAT-AP_v.0.3.pdf">slides</a>) </li>
+      <li>Webinar 4 October 2023 (<a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/20231004%20Webinar%20DCAT-AP%20for%20Data%20Spaces_Incorporated_Comments.pdf">Meeting Minutes</a>, <a href="https://youtu.be/HIQ-xFtZcxY">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/event/attachment/2023-10/DCAT-AP%20for%20Data%20Spaces%20Webinar.pdf">slides</a>) </li>
+      <li>Webinar 7 November 2023 (<a href="https://joinup.ec.europa.eu/sites/default/files/event/attachment/2023-12/20231107%20Webinar%20dedicated%20to%20the%20status%20and%20governance%20of%20DCAT-AP%20%281%29.pdf">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=lMMaUa4mrQE">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/event/attachment/2023-11/Webinar%20DCAT-AP%20Status%20%26%20Governance_0.pdf">slides</a>) </li>
+      <li>Webinar 21 November 2023 (<a href="https://joinup.ec.europa.eu/sites/default/files/event/attachment/2023-12/20231121%20Webinar%20DCAT-AP%20Technical%20Issues.pdf">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=X2rw2HWm23w">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/event/attachment/2023-11/Webinar%20DCAT-AP%2020231121%20v1.0.pdf">slides</a>) </li>
+      <li>Webinar 16 January 2024 (<a href="https://joinup.ec.europa.eu/sites/default/files/event/attachment/2023-12/20231107%20Webinar%20dedicated%20to%20the%20status%20and%20governance%20of%20DCAT-AP%20%281%29.pdf">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=lMMaUa4mrQE">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/event/attachment/2023-11/Webinar%20DCAT-AP%20Status%20%26%20Governance_0.pdf">slides</a>) </li>
    </ul>
 
 
@@ -242,10 +275,10 @@ It is under maintenance by the SEMIC action, Interoperable Europe.
 <section id="specstatus">
     <h2>Status</h2>
         <p>
-            This vocabulary has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsWD">Working Draft</a> published at 2023-08-24.
+            This vocabulary has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsWD">Candidate Release</a> published at 2024-02-12.
         </p>
         <p>
-            Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/CHANGELOG.html">Changelog</a>.
+            Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://semiceu.github.io/DCAT-AP/r5r/releases/3.0.0/CHANGELOG.html">Changelog</a>.
         </p>
 </section>
 
@@ -698,9 +731,6 @@ Past and current contributors are :
 	 	Luis Daniel Ibáñez
 		, 
            
-	 	Jitse De Cock
-		, 
-           
 	 	Ine De Visser
 		, 
            
@@ -782,6 +812,9 @@ Past and current contributors are :
 	 	Andrea Perego
 		, 
            
+	 	Andrea Perego
+		, 
+           
 	 	Taavi Ploompuu
 		, 
            
@@ -849,6 +882,9 @@ Past and current contributors are :
 		, 
            
 	 	Øystein Åsnes
+		, 
+           
+	 	Hagar:Lowenthal 
 		
           
      
