@@ -1,0 +1,973 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+ 
+
+
+
+<head>
+    
+	
+    <meta charset="utf-8" />
+    <title>DCAT-AP vocabulary, the r5r namespace</title>
+    <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
+    <script class="remove">
+    // All config options at https://respec.org/docs/
+
+	var myeditors = [
+	
+	
+	
+	
+	    
+	    
+		
+		   {
+		    name: "Makx Dekkers",
+		      
+		      
+		      
+		    }
+		, 
+		
+		   {
+		    name: "Pavlina Fragkou",
+		      
+		      
+		    company: "SEMIC EU",
+		      
+		      
+		    }
+		, 
+		
+		   {
+		    name: "Natasa Sofou",
+		      
+		      
+		      
+		    }
+		, 
+		
+		   {
+		    name: "Bert Van Nuffelen",
+		      
+		      
+		    company: "TenForce",
+		      
+		      
+		    mailto: "bert.van.nuffelen@tenforce.com"
+		      
+		    }
+		
+		
+             
+        
+	
+	
+	
+		]
+
+	var myauthors = [
+	
+	
+	    
+	    
+		
+		   {
+		    name: "Pavlina Fragkou",
+		      
+		      
+		    company: "SEMIC EU",
+		      
+		      
+		    }
+		
+		
+             
+        
+	
+	
+	
+	
+	
+		]
+
+
+   
+
+    var respecConfig = {
+      edDraftURI: "https://semiceu.github.io/r5r/release/3.0.0",
+      latestVersion: "",
+      specStatus: "LD",
+      publishDate: "2023-08-24",
+      editors: myeditors,
+      authors: myauthors,
+      github: "SEMICeu/DCAT-AP",
+      shortName: "DCAT-AP vocabulary, the r5r namespace",
+      xref: "web-platform",
+      doJsonLd: true,
+      logos: [{
+        src: "https://semiceu.github.io/CPOV/releases/2.1.0/html/semic-icon.png",
+        url: "https://semic.eu",
+        alt: "SEMIC",
+        width: 154,
+        height: 140,
+        id: "semic-logo",
+      },],
+      generatedSubtitle: "",
+      additionalCopyrightHolders: "",
+      localBiblio: {
+        "DXWG": {
+          "href" : "https://www.w3.org/2017/dxwg/wiki/Main_Page",
+          "title" : "Dataset Exchange Working Group",
+          "publisher" : "W3C"
+          },
+        "ISA":{
+           "href":"https://ec.europa.eu/isa/",
+           "title":"Interoperability Solutions for European Public Administrations (ISA)",
+           "publisher":"European Commission"
+          },
+        "ISA2":{
+          "href":"https://ec.europa.eu/isa2/",
+          "title":"Interoperability solutions for public administrations, businesses and citizens (ISA²)",
+          "publisher":"European Commission"
+        },
+        "SEMIC":{
+          "href":"https://joinup.ec.europa.eu/",
+          "title":"JoinUp welcomes Interoperable Europe",
+          "publisher":"European Commission"
+         },
+        "DEU" : {
+          "href":"https://data.europa.eu",
+          "title":"The official portal for European data",
+          "publisher":"European Commission"
+        },
+		"HVD" : {
+		  "href":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0138",
+		  "title":"Implementing Regulation for High Value Datasets",
+		  "publisher":"European Union"
+		},
+		"DCAT-AP-HVD" : {
+		  "href":"https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/2.2.0-hvd/",
+		  "title":"Usage Guidelines of DCAT-AP for High-Value Datasets",
+		  "publisher":"European Commission"
+		},
+		"DCAT-AP" : {
+		  "href":"https://semiceu.github.io/DCAT-AP/releases/3.0.0/",
+		  "title":"DCAT-AP, a DCAT profile for European data portals",
+		  "publisher":"European Commission"
+		},
+                "PSI" : {
+                  "href": "https://eur-lex.europa.eu/eli/dir/2019/1024/oj",
+                  "title" :  "Directive on open data and the re-use of public sector information (recast)",
+                  "publisher" : "European Union"
+                }
+      }
+    };
+
+
+
+    </script>
+    <style>
+      .figure img, .sidefigure img, figure img, .figure object, .sidefigure object, figure object, img, .img {
+      max-width: 100%;
+      margin: auto;
+      height: auto;
+      }
+    </style>
+     
+    <p class="copyright">
+        Copyright © 2022
+    </p>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="msapplication-TileColor" content="#7ED956" />
+</head>
+<body>
+    
+
+    <!-- Start page content -->
+
+
+
+<section id="specintro">
+    <h2>
+        Introduction
+    </h2>
+    
+<h3>Context</h3>
+
+This vocabulary is <strong>supporting</strong> DCAT-AP, the DCAT application profile for European data portals [[DCAT-AP]]. 
+The terms defined in this namespace are defined as broad as possible for wider reuse but are scoped to the needs of DCAT-AP. 
+All terms in this vocabulary have therefore a strong connection with DCAT-AP.
+<p/>
+
+
+<h3>Revision history</h3>
+The property <div class="shorten">http://data.europa.eu/r5r/availability</div> has been introduced in DCAT-AP release 2.x.
+
+The creation of an annex of DCAT-AP for High Value Datasets, DCAT-AP HVD [[DCAT-AP-HVD]], introduced 2 new properties 
+<ul>
+<li><div class="shorten">http://data.europa.eu/r5r/applicableLegislation</div></li>
+<li><div class="shorten">http://data.europa.eu/r5r/hvdCategory</div></li>
+</ul>
+
+
+<h3>Meeting minutes</h3>
+The following webinars have been held for the creation of this release
+    <ul>
+	<li>Webinar 25 November 2022 (<a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/MeetingMinutes.pdf">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=vpCu3wrBeso">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/Slides.pdf">slides</a>) </li>
+       <li>Webinar 2 February 2023 (<a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/20230202%20Webinar%20DCAT-AP.pdf">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=teUeMLwv4Ks">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/webinar_2_feb_2022_DCAT-AP_v.0.3.pdf">slides</a>) </li>
+   </ul>
+
+
+</p>
+
+
+
+
+</section>
+
+
+<section id="abstract">
+    <h2>Abstract</h2>
+The DCAT-AP vocabulary supports the <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP profile</a>. 
+The namespace for this vocabulary is <code>http://data.europa.eu/r5r/</code> . 
+It is under maintenance by the SEMIC action, Interoperable Europe.
+</section>
+
+
+
+<!--  should support https://www.w3.org/2021/Process-20211102/, mostly like https://www.w3.org/2021/Process-20211102/#maturity-levels -->
+<section id="specstatus">
+    <h2>Status</h2>
+        <p>
+            This vocabulary has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsWD">Working Draft</a> published at 2023-08-24.
+        </p>
+        <p>
+            Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/CHANGELOG.html">Changelog</a>.
+        </p>
+</section>
+
+
+
+
+<section id="speclicence">
+    <h2>
+        License
+    </h2>
+    
+        <p>
+	<!--
+            <span rel="dct:type"
+                  property="dct:title"
+                  href="http://purl.org/dc/dcmitype/Text"
+                  xmlns:dct="http://purl.org/dc/terms/">
+		  This specification </span> of <a rel="cc:attributionURL" property="cc:attributionName" href="ORGANISATION" xmlns:cc="http://creativecommons.org/ns#">ORGANISATION </a> 
+	          is published under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">"CC0"</a>.
+	-->
+             Copyright © 2023 European Union. All material in this repository is published under the license CC-BY 4.0, unless explicitly otherwise mentioned.
+        </p>
+    
+</section>
+
+
+  <section id="conformance" class="informative">
+<h2>Conformance Statement</h2>
+
+In order to conform to this vocabulary the usage of the terms MUST:
+<ul>
+<li>Be in line with the provided definitions</li>
+<li>Satisfy the formal constraints such as domain and ranges restrictions, if present</li>
+</ul>
+
+When reusing the terms, the reuse principles of the SEMIC styleguide SHOULD be followed.
+<p/>
+To make the properties widely reuseable the domain and ranges are usually very open. For any kind of entity, the class rdfs:Resource is used.
+For any kind of value, rdfs:Literal is used. 
+In the RDF ecosystem these are the universal denominators. 
+
+
+
+
+</section>
+
+
+
+
+<section id="specterminology">
+    <h2>Terminology</h2>
+
+The namespace for this vocabulary is <code>http://data.europa.eu/r5r/</code> . 
+<p>
+<h3>Used Prefixes</h3>
+
+
+        <table id="table-namespaces" class="simple">
+            <thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
+            <tbody>
+            <tr><td><code>dcat</code></td><td><code>http://www.w3.org/ns/dcat#</code></td></tr>
+            <tr><td><code>dcatap</code></td><td><code>http://data.europa.eu/r5r/</code></td></tr>
+            <tr><td><code>rdf</code></td><td><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></td></tr>
+            <tr><td><code>rdfs</code></td><td><code>http://www.w3.org/2000/01/rdf-schema#</code></td></tr>
+            <tr><td><code>skos</code></td><td><code>http://www.w3.org/2004/02/skos/core#</code></td></tr>
+            <tr><td><code>xsd</code></td><td><code>http://www.w3.org/2001/XMLSchema#</code></td></tr>
+            </tbody>
+        </table>
+
+</section>
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+
+
+<section>
+<h1>Vocabulary Overview</h1>
+
+    <div id="overview">
+                
+                
+    </div>
+    <div>
+        <a href="https://semiceu.github.io/uri.semic.eu-generated/r5r/release/3.0.0/html/overview.jpg"
+           target="_blank">
+            <img src="https://semiceu.github.io/uri.semic.eu-generated/r5r/release/3.0.0/html/overview.jpg"/>
+        </a>
+    </div>
+
+
+<h2>
+   Classes
+</h2>
+This section lists the classes matching the base namespace of this vocabulary.
+
+
+
+<h2>
+   Properties
+</h2>
+This section lists the properties matching the base namespace of this vocabulary.
+
+
+
+   
+
+    <h3 id="applicableLegislation">applicable legislation</h3>
+    <table class="def" id="table-term-applicableLegislation">
+                    <thead>
+                        <tr >
+                            <th class="" style="width:5%">
+					<a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20applicableLegislation&body=Explain%20your%20issue"}}>
+					   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+					</a>
+                            </th>
+                            <th class="" style="width:20%">
+                                Property
+                            </th>
+                            <th class="" style="width:75%">
+				<a href="http://data.europa.eu/r5r/applicableLegislation"
+					   data-toggle="tooltip"
+					   data-content="http://data.europa.eu/r5r/applicableLegislation"
+					   data-placement="right">applicable legislation</a>
+                            </th> 
+                        </tr>
+                    </thead>
+		    <tbody> 
+                        <tr id="applicablelegislation.uri">
+                                <td></td>
+                                <td>
+				   URI
+				</td>
+				<td>
+				http://data.europa.eu/r5r/applicableLegislation
+				</td>
+			</tr>
+                        <tr id="applicablelegislation.label">
+                                <td></td>
+                                <td>
+				   label
+				</td>
+				<td>
+				applicable legislation
+				</td>
+			</tr>
+                        <tr id="applicablelegislation.definition">
+                                <td></td>
+                                <td>
+				   definition
+				</td>
+				<td>
+				the legislation that is applicable to this resource.
+				</td>
+			</tr>
+			
+			
+                        <tr id="applicablelegislation.domain">
+                                <td></td>
+                                <td>
+				   domain
+				</td>
+				<td> 
+				<a href="http://www.w3.org/2000/01/rdf-schema#Resource"><div class="shorten">http://www.w3.org/2000/01/rdf-schema#Resource</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+                        <tr id="applicablelegislation.range">
+                                <td></td>
+                                <td>
+				   range
+				</td>
+				<td> 
+				<a href="http://data.europa.eu/eli/ontology#LegalResource"><div class="shorten">http://data.europa.eu/eli/ontology#LegalResource</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+		    </tbody>
+        </table>
+	<p/>
+
+     
+
+   
+
+    <h3 id="availability">availability</h3>
+    <table class="def" id="table-term-availability">
+                    <thead>
+                        <tr >
+                            <th class="" style="width:5%">
+					<a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20availability&body=Explain%20your%20issue"}}>
+					   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+					</a>
+                            </th>
+                            <th class="" style="width:20%">
+                                Property
+                            </th>
+                            <th class="" style="width:75%">
+				<a href="http://data.europa.eu/r5r/availability"
+					   data-toggle="tooltip"
+					   data-content="http://data.europa.eu/r5r/availability"
+					   data-placement="right">availability</a>
+                            </th> 
+                        </tr>
+                    </thead>
+		    <tbody> 
+                        <tr id="availability.uri">
+                                <td></td>
+                                <td>
+				   URI
+				</td>
+				<td>
+				http://data.europa.eu/r5r/availability
+				</td>
+			</tr>
+                        <tr id="availability.label">
+                                <td></td>
+                                <td>
+				   label
+				</td>
+				<td>
+				availability
+				</td>
+			</tr>
+                        <tr id="availability.definition">
+                                <td></td>
+                                <td>
+				   definition
+				</td>
+				<td>
+				An indication how long it is planned to keep the Distribution of the Dataset available.
+				</td>
+			</tr>
+			
+			
+                        <tr id="availability.domain">
+                                <td></td>
+                                <td>
+				   domain
+				</td>
+				<td> 
+				<a href="http://www.w3.org/ns/dcat#Distribution"><div class="shorten">http://www.w3.org/ns/dcat#Distribution</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+                        <tr id="availability.range">
+                                <td></td>
+                                <td>
+				   range
+				</td>
+				<td> 
+				<a href="http://www.w3.org/2004/02/skos/core#Concept"><div class="shorten">http://www.w3.org/2004/02/skos/core#Concept</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+		    </tbody>
+        </table>
+	<p/>
+
+     
+
+   
+
+    <h3 id="hvdCategory">HVD category</h3>
+    <table class="def" id="table-term-hvdCategory">
+                    <thead>
+                        <tr >
+                            <th class="" style="width:5%">
+					<a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20hvdCategory&body=Explain%20your%20issue"}}>
+					   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+					</a>
+                            </th>
+                            <th class="" style="width:20%">
+                                Property
+                            </th>
+                            <th class="" style="width:75%">
+				<a href="http://data.europa.eu/r5r/hvdCategory"
+					   data-toggle="tooltip"
+					   data-content="http://data.europa.eu/r5r/hvdCategory"
+					   data-placement="right">HVD category</a>
+                            </th> 
+                        </tr>
+                    </thead>
+		    <tbody> 
+                        <tr id="HVDcategory.uri">
+                                <td></td>
+                                <td>
+				   URI
+				</td>
+				<td>
+				http://data.europa.eu/r5r/hvdCategory
+				</td>
+			</tr>
+                        <tr id="HVDcategory.label">
+                                <td></td>
+                                <td>
+				   label
+				</td>
+				<td>
+				HVD category
+				</td>
+			</tr>
+                        <tr id="HVDcategory.definition">
+                                <td></td>
+                                <td>
+				   definition
+				</td>
+				<td>
+				A data category defined in the High Value Dataset Implementing Regulation.
+				</td>
+			</tr>
+			
+                        <tr id="HVDcategory.usage">
+                                <td></td>
+                                <td>
+				   usage 
+				</td>
+				<td>
+				For the possible values consult the regulation at <a href="http://data.europa.eu/eli/reg_impl/2023/138/oj">http://data.europa.eu/eli/reg_impl/2023/138/oj</a>. 
+Or consulted the controlled vocabulary derived from it.
+				</td>
+			</tr>
+			
+			
+                        <tr id="HVDcategory.domain">
+                                <td></td>
+                                <td>
+				   domain
+				</td>
+				<td> 
+				<a href="http://www.w3.org/2000/01/rdf-schema#Resource"><div class="shorten">http://www.w3.org/2000/01/rdf-schema#Resource</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+                        <tr id="HVDcategory.range">
+                                <td></td>
+                                <td>
+				   range
+				</td>
+				<td> 
+				<a href="http://www.w3.org/2004/02/skos/core#Concept"><div class="shorten">http://www.w3.org/2004/02/skos/core#Concept</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+		    </tbody>
+        </table>
+	<p/>
+
+     
+
+</section>
+
+<!--
+<section>
+<h2>
+   External terms
+</h2>
+This section lists the classes and properties that are mapped on external URIs.
+Either these are reused as-is, i.e. with no formal additional constraints compared to those retrievable via dereferencing the URI, or they are reused with terminological changes, i.e. having additional changes restricting the use to the needs of this vocabulary context.
+
+
+
+
+</section>
+-->
+
+
+ 
+  <section id="controlled-vocs" class="informative">
+  <h2>Controlled Vocabularies</h2>
+
+In the past, when the property <div class="shorten">http://data.europa.eu/r5r/availability</div> was introduced also a corresponding controlled vocabulary was defined in this namespace. 
+Today this controlled vocabulary is maintained by the EU Vocabularies as the <a href="http://publications.europa.eu/resource/authority/planned-availability">Distribution availability vocabulary</a>.
+The historic controlled vocabulary is deprecated. And therefore not anymore included in this document. 
+
+
+</section>
+
+ 
+
+
+<section class="appendix">
+
+<h2>Acknowledgments</h2>
+<p>
+The editors gratefully acknowledge the contributions made to this document by all members of the working group.
+</p><p>
+This work was elaborated by a Working Group under SEMIC by Interoperable Europe.
+Interoperable Europe of the European Commission was represented by Pavlina Fragkou and Seth Van Hooland.
+Bert Van Nuffelen was the editor of this specification.
+</p><p>
+
+Past and current contributors are :
+
+
+
+
+
+
+     
+     
+           
+	 	Ludger A. Rinsche
+		, 
+           
+	 	Kuldar Aasaga
+		, 
+           
+	 	Anssi Ahlberg
+		, 
+           
+	 	Matej Alic
+		, 
+           
+	 	Miguel Alvarez
+		, 
+           
+	 	Martin Alvarez-Espinar
+		, 
+           
+	 	Stefano Ambrogio
+		, 
+           
+	 	Oystein Asnes
+		, 
+           
+	 	Peter Burian
+		, 
+           
+	 	Luis Daniel Ibáñez
+		, 
+           
+	 	Jitse De Cock
+		, 
+           
+	 	Ine De Visser
+		, 
+           
+	 	Makx Dekkers
+		, 
+           
+	 	Jean Delahousse
+		, 
+           
+	 	Ulrika Domellöf Mattsson
+		, 
+           
+	 	Adina Dragan
+		, 
+           
+	 	Dietmar Gattwinkel
+		, 
+           
+	 	Stijn Goedertier
+		, 
+           
+	 	Casper Gras
+		, 
+           
+	 	Bart Hanssens
+		, 
+           
+	 	Bart Hanssens
+		, 
+           
+	 	Agnieszka Jasiczek
+		, 
+           
+	 	Fabian Kirstein
+		, 
+           
+	 	Jakub Klímek
+		, 
+           
+	 	Nataliia Kovalchuk
+		, 
+           
+	 	Andreas Kuckartz
+		, 
+           
+	 	Christine Laaboudi-Spoiden
+		, 
+           
+	 	Christoph Lange
+		, 
+           
+	 	Petros Likidis
+		, 
+           
+	 	Anja Loddenkemper
+		, 
+           
+	 	Giorgia Lodi
+		, 
+           
+	 	Peter Lubrich
+		, 
+           
+	 	Lina Molinas Comet
+		, 
+           
+	 	Anastasija Nikiforova
+		, 
+           
+	 	Geraldine Nolf
+		, 
+           
+	 	Frederik Nordlander
+		, 
+           
+	 	Matthias Palmer
+		, 
+           
+	 	Andrea Perego
+		, 
+           
+	 	Taavi Ploompuu
+		, 
+           
+	 	Ludger Rinsche
+		, 
+           
+	 	Daniele Rizzi
+		, 
+           
+	 	Maik Roth
+		, 
+           
+	 	Fabian Santi
+		, 
+           
+	 	Giampaolo Sellitto
+		, 
+           
+	 	Maxime Servais
+		, 
+           
+	 	Sebastian Sklarß
+		, 
+           
+	 	Michele Spichtig
+		, 
+           
+	 	Emidio Stani
+		, 
+           
+	 	Igor Stefelin
+		, 
+           
+	 	Kees Trautwein
+		, 
+           
+	 	Thomas Tursics
+		, 
+           
+	 	Kristine Ulander
+		, 
+           
+	 	Joeri van der Velde
+		, 
+           
+	 	Sander Van Dooren
+		, 
+           
+	 	Bert Van Nuffelen
+		, 
+           
+	 	William Verbeeck
+		, 
+           
+	 	Thomas Weber
+		, 
+           
+	 	Suzanne Wigard
+		, 
+           
+	 	Christian Wittig
+		, 
+           
+	 	Agnieszka Zajac
+		, 
+           
+	 	Øystein Åsnes
+		
+          
+     
+
+.
+
+
+</section>
+<!-- End page content -->
+</body>
+
+<!-- This must be at the end of the template, to ensure that the iterator properly works -->
+    <script defer>
+
+
+	    var prefixes = [ 
+{'pref':'adms:', 'ns': 'http://www.w3.org/ns/adms#'},
+{'pref':'dcat:', 'ns': 'http://www.w3.org/ns/dcat#'},
+{'pref':'dcatap:', 'ns': 'http://data.europa.eu/r5r/'},
+{'pref':'dcterms:', 'ns': 'http://purl.org/dc/terms/'},
+{'pref':'dctype:', 'ns': 'http://purl.org/dc/dcmitype/'},
+{'pref':'eli:', 'ns': 'http://data.europa.eu/eli/ontology#'},
+{'pref':'foaf:', 'ns': 'http://xmlns.com/foaf/0.1/'},
+{'pref':'locn:', 'ns': 'http://www.w3.org/ns/locn#'},
+{'pref':'odrl:', 'ns': 'http://www.w3.org/ns/odrl/2/'},
+{'pref':'owl:', 'ns': 'http://www.w3.org/2002/07/owl#'},
+{'pref':'prov:', 'ns': 'http://www.w3.org/ns/prov#'},
+{'pref':'rdf:', 'ns': 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'},
+{'pref':'rdfs:', 'ns': 'http://www.w3.org/2000/01/rdf-schema#'},
+{'pref':'skos:', 'ns': 'http://www.w3.org/2004/02/skos/core#'},
+{'pref':'spdx:', 'ns': 'http://spdx.org/rdf/terms#'},
+{'pref':'time:', 'ns': 'http://www.w3.org/2006/time#'},
+{'pref':'vcard:', 'ns': 'http://www.w3.org/2006/vcard/ns#'},
+{'pref':'xhv:', 'ns': 'http://www.w3.org/1999/xhtml/vocab#'},
+{'pref':'xsd:', 'ns': 'http://www.w3.org/2001/XMLSchema#'}
+				];
+
+	    function shorturl (url) {
+				var short = url;
+				for (e in prefixes) {
+				   var elem = prefixes[e];
+				   if (short.startsWith(elem.ns)) {
+  					short = elem.pref + short.slice(elem.ns.length);
+					}
+				};
+				return short;
+			};
+
+	    var shorten = document.getElementsByClassName("shorten");
+	    for (k=0;k < shorten.length ; k++){
+			var selem = shorten[k];	
+	                selem.innerHTML = shorturl(selem.innerHTML.trim());
+			}
+    </script>
+    <script defer>
+	    document.getElementById("w3c-state").insertAdjacentText("afterbegin", "SEMIC Recommendation ");
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/mode/javascript/javascript.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/mode/turtle/turtle.min.js" ></script>
+    <script src="https://codemirror.net/5/mode/javascript/javascript.js" ></script>
+    <script src="./html/example.js" ></script>
+	<script type="text/javascript">
+		function elementInView(elem){
+				goesIn = ($(window).height() + $(window).scrollTop()) > $(elem).offset().top;
+				goesOut = ($(window).scrollTop()) > ($(elem).offset().top + $(elem).height());
+				if (goesIn && !goesOut)
+					return 1;
+				else
+					return 0;
+			};
+
+		$(window).scroll(function(){
+			$('.CodeMirror').each(function(){
+				if (elementInView($(this))){
+					$(this).each(function(i, el){
+						el.CodeMirror.refresh();
+					});
+				}
+			});
+			
+		});
+	</script>
+	<style>
+		.CodeMirror {
+		  border: 1px solid #eee;
+		  height: auto;
+		}
+		.buttonsample {
+		cursor: pointer;
+		margin-top: 10px;
+		margin-left: 10px;
+		font-weight: 700;
+		border:0 outset buttonface;
+		background: #F5F6F8;
+		background-image: linear-gradient(to bottom,#F5F6F8,#DBDCDE);
+		border-radius:4px;
+		box-shadow:0 1px 3px #666;
+		font-family: Arial;
+		color: grey;
+		font-size: 14px;
+		padding: 10px 5px;
+		text-decoration: none;
+		float: right
+	}
+	.buttonsample:hover {color:#2a70d3}
+	.tabsstyle {
+		padding: 10px;
+		overflow: hidden;
+	}
+	li.ui-tabs-tab > a:hover {
+		background-color:dodgerblue;
+		color:white;
+	}
+  </style>
+</html>

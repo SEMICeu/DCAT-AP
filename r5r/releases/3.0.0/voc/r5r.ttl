@@ -1,0 +1,313 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schemas: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://data.europa.eu/r5r/applicableLegislation> a owl:ObjectProperty;
+  rdfs:label "applicable legislation"@en;
+  rdfs:comment "the legislation that is applicable to this resource."@en;
+  rdfs:domain rdfs:Resource;
+  rdfs:isDefinedBy <http://data.europa.eu/r5r>;
+  rdfs:range <http://data.europa.eu/eli/ontology#LegalResource> .
+
+<http://data.europa.eu/r5r/availability> a owl:ObjectProperty;
+  rdfs:label "availability"@en;
+  rdfs:comment "An indication how long it is planned to keep the Distribution of the Dataset available."@en;
+  rdfs:domain dcat:Distribution;
+  rdfs:isDefinedBy <http://data.europa.eu/r5r>;
+  rdfs:range skos:Concept .
+
+<http://data.europa.eu/r5r/hvdCategory> a owl:ObjectProperty;
+  rdfs:label "HVD category"@en;
+  rdfs:comment "A data category defined in the High Value Dataset Implementing Regulation."@en;
+  rdfs:domain rdfs:Resource;
+  rdfs:isDefinedBy <http://data.europa.eu/r5r>;
+  rdfs:range skos:Concept;
+  skos:scopeNote """For the possible values consult the regulation at <a href=\"http://data.europa.eu/eli/reg_impl/2023/138/oj\">http://data.europa.eu/eli/reg_impl/2023/138/oj</a>. 
+Or consulted the controlled vocabulary derived from it."""@en .
+
+<http://data.europa.eu/r5r> a owl:Ontology;
+  rdfs:label "r5r"@en,
+    "r5r"@nl;
+  dc:contributor [
+    a foaf:Person;
+    foaf:firstName "Ludger";
+    foaf:lastName "A. Rinsche"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Kuldar";
+    foaf:lastName "Aasaga"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Anssi";
+    foaf:lastName "Ahlberg"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Matej";
+    foaf:lastName "Alic"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Martin";
+    foaf:lastName "Alvarez-Espinar"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Miguel";
+    foaf:lastName "Alvarez"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Stefano";
+    foaf:lastName "Ambrogio"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Oystein";
+    foaf:lastName "Asnes"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Peter";
+    foaf:lastName "Burian"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Luis";
+    foaf:lastName "Daniel Ibáñez"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Jitse";
+    foaf:lastName "De Cock"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Ine";
+    foaf:lastName "De Visser"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Makx";
+    foaf:lastName "Dekkers"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Jean";
+    foaf:lastName "Delahousse"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Ulrika";
+    foaf:lastName "Domellöf Mattsson"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Adina";
+    foaf:lastName "Dragan"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Dietmar";
+    foaf:lastName "Gattwinkel"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Stijn";
+    foaf:lastName "Goedertier"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Casper";
+    foaf:lastName "Gras"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Bart";
+    foaf:lastName "Hanssens"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Bart";
+    foaf:lastName "Hanssens"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Agnieszka";
+    foaf:lastName "Jasiczek"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Fabian";
+    foaf:lastName "Kirstein"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Jakub";
+    foaf:lastName "Klímek"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Nataliia";
+    foaf:lastName "Kovalchuk"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Andreas";
+    foaf:lastName "Kuckartz"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Christine";
+    foaf:lastName "Laaboudi-Spoiden"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Christoph";
+    foaf:lastName "Lange"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Petros";
+    foaf:lastName "Likidis"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Anja";
+    foaf:lastName "Loddenkemper"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Giorgia";
+    foaf:lastName "Lodi"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Peter";
+    foaf:lastName "Lubrich"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Lina";
+    foaf:lastName "Molinas Comet"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Anastasija";
+    foaf:lastName "Nikiforova"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Geraldine";
+    foaf:lastName "Nolf"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Frederik";
+    foaf:lastName "Nordlander"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Matthias";
+    foaf:lastName "Palmer"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Andrea";
+    foaf:lastName "Perego"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Taavi";
+    foaf:lastName "Ploompuu"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Ludger";
+    foaf:lastName "Rinsche"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Daniele";
+    foaf:lastName "Rizzi"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Maik";
+    foaf:lastName "Roth"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Fabian";
+    foaf:lastName "Santi"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Giampaolo";
+    foaf:lastName "Sellitto"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Maxime";
+    foaf:lastName "Servais"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Sebastian";
+    foaf:lastName "Sklarß"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Michele";
+    foaf:lastName "Spichtig"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Emidio";
+    foaf:lastName "Stani"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Igor";
+    foaf:lastName "Stefelin"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Kees";
+    foaf:lastName "Trautwein"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Thomas";
+    foaf:lastName "Tursics"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Kristine";
+    foaf:lastName "Ulander"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Sander";
+    foaf:lastName "Van Dooren"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Bert";
+    foaf:lastName "Van Nuffelen"
+  ], [
+    a foaf:Person;
+    foaf:firstName "William";
+    foaf:lastName "Verbeeck"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Thomas";
+    foaf:lastName "Weber"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Suzanne";
+    foaf:lastName "Wigard"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Christian";
+    foaf:lastName "Wittig"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Agnieszka";
+    foaf:lastName "Zajac"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Joeri";
+    foaf:lastName "van der Velde"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Øystein";
+    foaf:lastName "Åsnes"
+  ];
+  dc:issued "2023-08-24";
+  dc:license <https://creativecommons.org/licenses/by/4.0/>;
+  dc:mediator [
+    foaf:homepage <https://semic.eu>;
+    foaf:name "Semantic Interoperability Community (SEMIC)"
+  ];
+  <http://www.w3.org/2001/02pd/rec54#editor> [
+    a foaf:Person;
+    foaf:firstName "Makx";
+    foaf:lastName "Dekkers"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Pavlina";
+    foaf:lastName "Fragkou";
+    schemas:affiliation [foaf:name "SEMIC EU"]
+  ], [
+    a foaf:Person;
+    foaf:firstName "Natasa";
+    foaf:lastName "Sofou"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Bert";
+    foaf:lastName "Van Nuffelen";
+    foaf:mbox <mailto:bert.van.nuffelen@tenforce.com>;
+    schemas:affiliation [foaf:name "TenForce"]
+  ];
+  foaf:maker [
+    a foaf:Person;
+    foaf:firstName "Pavlina";
+    foaf:lastName "Fragkou";
+    schemas:affiliation [foaf:name "SEMIC EU"]
+  ] .

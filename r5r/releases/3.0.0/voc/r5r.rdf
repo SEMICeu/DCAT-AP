@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:dc="http://purl.org/dc/terms/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:ns0="http://www.w3.org/2001/02pd/rec54#" xmlns:dcat="http://www.w3.org/ns/dcat#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:schemas="https://schema.org/">
+  <owl:ObjectProperty rdf:about="http://data.europa.eu/r5r/applicableLegislation">
+    <rdfs:isDefinedBy>
+      <owl:Ontology rdf:about="http://data.europa.eu/r5r">
+        <dc:mediator>
+          <rdf:Description rdf:nodeID="g454720">
+            <foaf:homepage rdf:resource="https://semic.eu"/>
+            <foaf:name>Semantic Interoperability Community (SEMIC)</foaf:name>
+          </rdf:Description>
+        </dc:mediator>
+        <rdfs:label xml:lang="en">r5r</rdfs:label>
+        <rdfs:label xml:lang="nl">r5r</rdfs:label>
+        <foaf:maker>
+          <foaf:Person rdf:nodeID="g454740">
+            <schemas:affiliation>
+              <rdf:Description rdf:nodeID="g454760">
+                <foaf:name>SEMIC EU</foaf:name>
+              </rdf:Description>
+            </schemas:affiliation>
+            <foaf:firstName>Pavlina</foaf:firstName>
+            <foaf:lastName>Fragkou</foaf:lastName>
+          </foaf:Person>
+        </foaf:maker>
+        <ns0:editor>
+          <foaf:Person rdf:nodeID="g454780">
+            <foaf:firstName>Makx</foaf:firstName>
+            <foaf:lastName>Dekkers</foaf:lastName>
+          </foaf:Person>
+        </ns0:editor>
+        <ns0:editor>
+          <foaf:Person rdf:nodeID="g454800">
+            <schemas:affiliation>
+              <rdf:Description rdf:nodeID="g454820">
+                <foaf:name>SEMIC EU</foaf:name>
+              </rdf:Description>
+            </schemas:affiliation>
+            <foaf:firstName>Pavlina</foaf:firstName>
+            <foaf:lastName>Fragkou</foaf:lastName>
+          </foaf:Person>
+        </ns0:editor>
+        <ns0:editor>
+          <foaf:Person rdf:nodeID="g454840">
+            <foaf:firstName>Natasa</foaf:firstName>
+            <foaf:lastName>Sofou</foaf:lastName>
+          </foaf:Person>
+        </ns0:editor>
+        <ns0:editor>
+          <foaf:Person rdf:nodeID="g454860">
+            <schemas:affiliation>
+              <rdf:Description rdf:nodeID="g454880">
+                <foaf:name>TenForce</foaf:name>
+              </rdf:Description>
+            </schemas:affiliation>
+            <foaf:firstName>Bert</foaf:firstName>
+            <foaf:lastName>Van Nuffelen</foaf:lastName>
+            <foaf:mbox rdf:resource="mailto:bert.van.nuffelen@tenforce.com"/>
+          </foaf:Person>
+        </ns0:editor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g454900">
+            <foaf:firstName>Ludger</foaf:firstName>
+            <foaf:lastName>A. Rinsche</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g454920">
+            <foaf:firstName>Kuldar</foaf:firstName>
+            <foaf:lastName>Aasaga</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g454940">
+            <foaf:firstName>Anssi</foaf:firstName>
+            <foaf:lastName>Ahlberg</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g454960">
+            <foaf:firstName>Matej</foaf:firstName>
+            <foaf:lastName>Alic</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g454980">
+            <foaf:firstName>Martin</foaf:firstName>
+            <foaf:lastName>Alvarez-Espinar</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455000">
+            <foaf:firstName>Miguel</foaf:firstName>
+            <foaf:lastName>Alvarez</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455020">
+            <foaf:firstName>Stefano</foaf:firstName>
+            <foaf:lastName>Ambrogio</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455040">
+            <foaf:firstName>Oystein</foaf:firstName>
+            <foaf:lastName>Asnes</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455060">
+            <foaf:firstName>Peter</foaf:firstName>
+            <foaf:lastName>Burian</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455080">
+            <foaf:firstName>Luis</foaf:firstName>
+            <foaf:lastName>Daniel Ibáñez</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455100">
+            <foaf:firstName>Jitse</foaf:firstName>
+            <foaf:lastName>De Cock</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455120">
+            <foaf:firstName>Ine</foaf:firstName>
+            <foaf:lastName>De Visser</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455140">
+            <foaf:firstName>Makx</foaf:firstName>
+            <foaf:lastName>Dekkers</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455160">
+            <foaf:firstName>Jean</foaf:firstName>
+            <foaf:lastName>Delahousse</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455180">
+            <foaf:firstName>Ulrika</foaf:firstName>
+            <foaf:lastName>Domellöf Mattsson</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455200">
+            <foaf:firstName>Adina</foaf:firstName>
+            <foaf:lastName>Dragan</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455220">
+            <foaf:firstName>Dietmar</foaf:firstName>
+            <foaf:lastName>Gattwinkel</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455240">
+            <foaf:firstName>Stijn</foaf:firstName>
+            <foaf:lastName>Goedertier</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455260">
+            <foaf:firstName>Casper</foaf:firstName>
+            <foaf:lastName>Gras</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455280">
+            <foaf:firstName>Bart</foaf:firstName>
+            <foaf:lastName>Hanssens</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455300">
+            <foaf:firstName>Bart</foaf:firstName>
+            <foaf:lastName>Hanssens</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455320">
+            <foaf:firstName>Agnieszka</foaf:firstName>
+            <foaf:lastName>Jasiczek</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455340">
+            <foaf:firstName>Fabian</foaf:firstName>
+            <foaf:lastName>Kirstein</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455360">
+            <foaf:firstName>Jakub</foaf:firstName>
+            <foaf:lastName>Klímek</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455380">
+            <foaf:firstName>Nataliia</foaf:firstName>
+            <foaf:lastName>Kovalchuk</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455400">
+            <foaf:firstName>Andreas</foaf:firstName>
+            <foaf:lastName>Kuckartz</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455420">
+            <foaf:firstName>Christine</foaf:firstName>
+            <foaf:lastName>Laaboudi-Spoiden</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455440">
+            <foaf:firstName>Christoph</foaf:firstName>
+            <foaf:lastName>Lange</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455460">
+            <foaf:firstName>Petros</foaf:firstName>
+            <foaf:lastName>Likidis</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455480">
+            <foaf:firstName>Anja</foaf:firstName>
+            <foaf:lastName>Loddenkemper</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455500">
+            <foaf:firstName>Giorgia</foaf:firstName>
+            <foaf:lastName>Lodi</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455520">
+            <foaf:firstName>Peter</foaf:firstName>
+            <foaf:lastName>Lubrich</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455540">
+            <foaf:firstName>Lina</foaf:firstName>
+            <foaf:lastName>Molinas Comet</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455560">
+            <foaf:firstName>Anastasija</foaf:firstName>
+            <foaf:lastName>Nikiforova</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455580">
+            <foaf:firstName>Geraldine</foaf:firstName>
+            <foaf:lastName>Nolf</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455600">
+            <foaf:firstName>Frederik</foaf:firstName>
+            <foaf:lastName>Nordlander</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455620">
+            <foaf:firstName>Matthias</foaf:firstName>
+            <foaf:lastName>Palmer</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455640">
+            <foaf:firstName>Andrea</foaf:firstName>
+            <foaf:lastName>Perego</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455660">
+            <foaf:firstName>Taavi</foaf:firstName>
+            <foaf:lastName>Ploompuu</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455680">
+            <foaf:firstName>Ludger</foaf:firstName>
+            <foaf:lastName>Rinsche</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455700">
+            <foaf:firstName>Daniele</foaf:firstName>
+            <foaf:lastName>Rizzi</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455720">
+            <foaf:firstName>Maik</foaf:firstName>
+            <foaf:lastName>Roth</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455740">
+            <foaf:firstName>Fabian</foaf:firstName>
+            <foaf:lastName>Santi</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455760">
+            <foaf:firstName>Giampaolo</foaf:firstName>
+            <foaf:lastName>Sellitto</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455780">
+            <foaf:firstName>Maxime</foaf:firstName>
+            <foaf:lastName>Servais</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455800">
+            <foaf:firstName>Sebastian</foaf:firstName>
+            <foaf:lastName>Sklarß</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455820">
+            <foaf:firstName>Michele</foaf:firstName>
+            <foaf:lastName>Spichtig</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455840">
+            <foaf:firstName>Emidio</foaf:firstName>
+            <foaf:lastName>Stani</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455860">
+            <foaf:firstName>Igor</foaf:firstName>
+            <foaf:lastName>Stefelin</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455880">
+            <foaf:firstName>Kees</foaf:firstName>
+            <foaf:lastName>Trautwein</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455900">
+            <foaf:firstName>Thomas</foaf:firstName>
+            <foaf:lastName>Tursics</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455920">
+            <foaf:firstName>Kristine</foaf:firstName>
+            <foaf:lastName>Ulander</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455940">
+            <foaf:firstName>Sander</foaf:firstName>
+            <foaf:lastName>Van Dooren</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455960">
+            <foaf:firstName>Bert</foaf:firstName>
+            <foaf:lastName>Van Nuffelen</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g455980">
+            <foaf:firstName>William</foaf:firstName>
+            <foaf:lastName>Verbeeck</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g456000">
+            <foaf:firstName>Thomas</foaf:firstName>
+            <foaf:lastName>Weber</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g456020">
+            <foaf:firstName>Suzanne</foaf:firstName>
+            <foaf:lastName>Wigard</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g456040">
+            <foaf:firstName>Christian</foaf:firstName>
+            <foaf:lastName>Wittig</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g456060">
+            <foaf:firstName>Agnieszka</foaf:firstName>
+            <foaf:lastName>Zajac</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g456080">
+            <foaf:firstName>Joeri</foaf:firstName>
+            <foaf:lastName>van der Velde</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g456100">
+            <foaf:firstName>Øystein</foaf:firstName>
+            <foaf:lastName>Åsnes</foaf:lastName>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <dc:issued>2023-08-24</dc:issued>
+      </owl:Ontology>
+    </rdfs:isDefinedBy>
+    <rdfs:label xml:lang="en">applicable legislation</rdfs:label>
+    <rdfs:comment xml:lang="en">the legislation that is applicable to this resource.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:range rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://data.europa.eu/r5r/availability">
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/r5r"/>
+    <rdfs:label xml:lang="en">availability</rdfs:label>
+    <rdfs:comment xml:lang="en">An indication how long it is planned to keep the Distribution of the Dataset available.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://data.europa.eu/r5r/hvdCategory">
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/r5r"/>
+    <rdfs:label xml:lang="en">HVD category</rdfs:label>
+    <rdfs:comment xml:lang="en">A data category defined in the High Value Dataset Implementing Regulation.</rdfs:comment>
+    <skos:scopeNote xml:lang="en">For the possible values consult the regulation at &lt;a href="http://data.europa.eu/eli/reg_impl/2023/138/oj"&gt;http://data.europa.eu/eli/reg_impl/2023/138/oj&lt;/a&gt;. 
+Or consulted the controlled vocabulary derived from it.</skos:scopeNote>
+    <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:ObjectProperty>
+</rdf:RDF>
