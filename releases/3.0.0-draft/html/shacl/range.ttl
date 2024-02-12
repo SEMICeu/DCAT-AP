@@ -188,6 +188,10 @@
         sh:path dcat:servesDataset ;
         sh:severity sh:Violation
     ], [
+  	sh:path dcatap:applicableLegislation;
+  	sh:class <http://data.europa.eu/eli/ontology#LegalResource>;
+        sh:severity sh:Violation
+    ], [
         sh:class dct:LicenseDocument ;
         sh:path dct:license ;
         sh:severity sh:Violation
@@ -197,6 +201,7 @@
         sh:severity sh:Violation
     ] ;
     sh:targetClass dcat:DataService .
+
 
 :Dataset_Shape
     a sh:NodeShape ;
@@ -416,3 +421,35 @@
     ] ;
     sh:targetClass dcat:Relationship .
 
+:DatasetSeries_Shape
+    a sh:NodeShape ;
+    rdfs:label "Dataset Series"@en ;
+    sh:property [
+       sh:inversePath dcat:inSeries;
+       sh:severity sh:Warning
+    ], [
+  	sh:path dcatap:applicableLegislation;
+  	sh:class <http://data.europa.eu/eli/ontology#LegalResource>;
+        sh:severity sh:Violation
+    ], [
+  	sh:path dct:spatial;
+  	sh:class dct:Location;
+        sh:severity sh:Violation
+    ], [
+	sh:path dct:accrualPeriodicity;
+  	sh:class dct:Frequency;
+        sh:severity sh:Violation
+    ], [
+        sh:path dct:publisher ;
+  	sh:class foaf:Agent;
+        sh:severity sh:Violation
+    ], [
+  	sh:path dcat:contactPoint;
+  	sh:class vcard:Kind;
+        sh:severity sh:Violation
+    ], [
+  	sh:path dct:temporal;
+  	sh:class dct:PeriodOfTime;
+        sh:severity sh:Violation
+	 ] ;
+    sh:targetClass dcat:DatasetSeries .	

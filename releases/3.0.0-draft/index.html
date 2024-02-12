@@ -334,12 +334,15 @@ As these properties are optional and since there is an equivalence between the d
 <div class="ednote" title="Data model adaptations">
 <ul>
 <li>Added class Dataset Series, alignment with DCAT 3.0</li>
-<li>Added class Dataset member of a Dataset Series, to support the special case of Datasets that are a member of a Dataset Series</li>
 <li>Replaced the URI mapping for the Dataset properties hasVersion, isVersionOf and version, alignment with DCAT 3.0</li>
 <li>Fixed the range for Distribution bytesize, alignment with DCAT 3.0</li>
 <li>Changed the range for Location geometry, alignment with DCAT 3.0</li>
-<li>Add the property Data Service format</li>
+<li>Add the properties publisher and format to Data Service</li>
 <li>Replaced mandatory Distribution status controlled vocabulary</li>
+<li>Adapted the definition for property type of Agent</li>
+<li>Adapted the definition for property access rights for Dataset</li>
+<li>Lift the max cardinality for property application profile for Catalogue Record</li>
+<li>Add new property applicable legislation as generic approach to indicate the legislation under which a dataset is made available.</li>
 </ul>
 
 To support the review, the changes are also highlighted on the diagram below.
@@ -10082,8 +10085,9 @@ But the presence of these Distributions raise semantical conflicts such as wheth
 <li>The members of a Dataset Series should be described in such a way that without the knowledge of the Dataset Series, the metadata is interpreted correctly. The existence of a dataset should not be based on the membership in a Dataset Series. The interpretation of a member with its associated Distributions and Data Services is conform the above guidelines.
 </li>
 <li>Whenever a Data Service is providing access to all the data of a Dataset Series, i.e. the union of all datasets in the collection of the Dataset Series, 
-    then the Data Service should refer to the Dataset Series using <a href="#DataService.servesdataset">serves dataset</a>. 
+    then the Data Service may refer to the Dataset Series using <a href="#DataService.servesdataset">serves dataset</a>. 
     The ensures that whenever in the future the Dataset Series is extended with new Datasets the Data Service description does not need to be adapted.
+    In that case the Dataset Series should also be considered as a DCAT-AP Dataset.
 </li>      
 <li>Keep the usage simple. Complex nesting such as Dataset Series being a member of Dataset Series, or Dataset belonging to multiple Dataset Series are to be handled with care. 
 While from a data knowlegde graph these nestings are feasible and not so problematic, it must be realised that these complicate the presentation on a webpage. 

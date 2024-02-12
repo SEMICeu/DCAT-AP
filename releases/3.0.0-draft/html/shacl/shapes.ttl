@@ -138,6 +138,10 @@
         sh:path dct:language ;
         sh:severity sh:Violation
     ], [
+  	sh:path dcatap:applicableLegislation;
+  	sh:nodeKind sh:IRI;
+        sh:severity sh:Violation
+    ], [
         sh:maxCount 1 ;
         sh:path dct:license ;
         sh:severity sh:Violation
@@ -254,6 +258,10 @@
         sh:path dct:title ;
         sh:severity sh:Violation
     ], [
+  	sh:path dcatap:applicableLegislation;
+  	sh:nodeKind sh:IRI;
+        sh:severity sh:Violation
+    ], [
         sh:minCount 1 ;
         sh:nodeKind sh:BlankNodeOrIRI ;
         sh:path dcat:endpointURL ;
@@ -287,6 +295,10 @@
         sh:minCount 1 ;
         sh:nodeKind sh:Literal ;
         sh:path dct:description ;
+        sh:severity sh:Violation
+    ], [
+  	sh:path dcatap:applicableLegislation;
+  	sh:nodeKind sh:IRI;
         sh:severity sh:Violation
     ], [
         sh:minCount 1 ;
@@ -453,6 +465,10 @@
     rdfs:label "Distribution"@en ;
     sh:property [
         sh:path dct:conformsTo ;
+        sh:severity sh:Violation
+    ], [
+  	sh:path dcatap:applicableLegislation;
+  	sh:nodeKind sh:IRI;
         sh:severity sh:Violation
     ], [
         sh:maxCount 1 ;
@@ -644,12 +660,10 @@
         sh:severity sh:Violation
     ], [
   	sh:path dct:spatial;
-  	sh:class dct:Location;
   	sh:nodeKind sh:BlankNodeOrIRI;
         sh:severity sh:Violation
     ], [
 	sh:path dct:accrualPeriodicity;
-  	sh:class dct:Frequency;
   	sh:maxCount 1;
   	sh:nodeKind sh:BlankNodeOrIRI;
         sh:severity sh:Violation
@@ -678,18 +692,15 @@
     ], [
         sh:path dct:publisher ;
         sh:maxCount 1 ;
-  	sh:class foaf:Agent;
   	sh:nodeKind sh:BlankNodeOrIRI;
         sh:severity sh:Violation
     ], [
   	sh:path dcat:contactPoint;
   	sh:nodeKind sh:BlankNodeOrIRI;
-  	sh:class vcard:Kind;
         sh:severity sh:Violation
     ], [
   	sh:path dct:temporal;
   	sh:nodeKind sh:BlankNodeOrIRI;
-  	sh:class dct:PeriodOfTime;
         sh:severity sh:Violation
 	 ] ;
     sh:targetClass dcat:DatasetSeries .	
