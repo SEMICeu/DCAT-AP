@@ -45,7 +45,7 @@ The impact of the alignment with W3C DCAT 3 is provided below.
   - Added a direct link to the W3C specification for classes and properties that are explictly mentioned in DCAT 3 to indicate the relation of a property with W3C DCAT in a more precise way.
     Where appropriate we aligned the definitions and usage notes. (issue [128](https://github.com/SEMICeu/dcat-ap/issues/128), [135](https://github.com/SEMICeu/dcat-ap/issues/135), [179](https://github.com/SEMICeu/dcat-ap/issues/179))
   - Reorganised the Application Profile in Main Entities, Supportive Entities and Datatypes in order to enhance the readibility.
-  - Added the classes Dataset Series to reflect the new notions in DCAT 3.
+  - Added the class Dataset Series to reflect the new notions in DCAT 3.
   - The notion Dataset member of a Dataset Series which was present during the first Candidate Recommendation has been removed. 
   - Applied the deprecation by replacing the mapping to the URIs for the impacted properties.
   - Integrated DCAT-AP HVD specific aspects as general approach in DCAT-AP so that this is available for other profiles.
@@ -70,6 +70,10 @@ The impact of the alignment with W3C DCAT 3 is provided below.
   - issue [237](https://github.com/SEMICeu/dcat-ap/issues/236): introduction adapted to reflect a more recent view. 
   - issue [272](https://github.com/SEMICeu/dcat-ap/issues/272): a request to enlarge the adopted properties for Data Services. 
                A poll has been done during a Webinar: the result is available for discussion at issue XXX.
+  - issue [360](https://github.com/SEMICeu/dcat-ap/issues/360): fix the cardinality of dct:type for  dcat:Dataset (missed transition bug)
+  - issue [352](https://github.com/SEMICeu/dcat-ap/issues/352): add missing property foaf:page for dcat:DataService
+  - issue [344](https://github.com/SEMICeu/dcat-ap/issues/344): generalise definition dct:source for dcat:CatalogRecord
+  - issue [345](https://github.com/SEMICeu/dcat-ap/issues/345): generalise definition dct:Standard
 
 
 
@@ -92,6 +96,9 @@ Users that want to use them can still do in line with the approach on extending 
 Various aspects of this alignment have been discussed in the issues [155](https://github.com/SEMICeu/dcat-ap/issues/155), [239](https://github.com/SEMICeu/dcat-ap/issues/239), [240](https://github.com/SEMICeu/dcat-ap/issues/240), [249](https://github.com/SEMICeu/dcat-ap/issues/249), [289](https://github.com/SEMICeu/dcat-ap/issues/289), [296](https://github.com/SEMICeu/dcat-ap/issues/296), [278](https://github.com/SEMICeu/dcat-ap/issues/278), [277](https://github.com/SEMICeu/dcat-ap/issues/277), [276](https://github.com/SEMICeu/dcat-ap/issues/276), [275](https://github.com/SEMICeu/dcat-ap/issues/275). 
 The Working Group did an attempt to categorise different cases of Dataset Series and tried to give them a unique name (identified with dct:type).
 That work did not resulted in a clear path forward, ready to be included in DCAT-AP.
+
+
+In issue [353](https://github.com/SEMICeu/dcat-ap/issues/353) reported the need for further improvements on the usage guidelines for Dataset Series.
 
 
 ## Other Alignment Topics
@@ -128,6 +135,7 @@ That work did not resulted in a clear path forward, ready to be included in DCAT
   - issue [233](https://github.com/SEMICeu/dcat-ap/issues/233): question to reach out on SEMIC conference.
   - issue [189](https://github.com/SEMICeu/dcat-ap/issues/189): during the Webinar of 16 jan 2024 an improved handling of GitHub issues has been presented. 
        This is now also documented in [Policies-Governance-Maintenance-Communication](https://github.com/SEMICeu/Policies-Governance-Maintenance-Communication).
+  - issue [351](https://github.com/SEMICeu/dcat-ap/issues/351): provide feedback to difference in name giving DCAT-AP HVD as Annex versus the use of Profile
 
 # Bug fixes
 
