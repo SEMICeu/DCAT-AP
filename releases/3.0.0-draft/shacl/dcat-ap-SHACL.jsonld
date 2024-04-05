@@ -915,7 +915,7 @@
           "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:CatalogRecordShape/48302728c90d6c344ff17c41a12e9f1379d2a049",
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#CatalogueRecord.sourcemetadata",
           "sh:description": {
-            "en": "The original metadata that was used in creating metadata for the Dataset."
+            "en": "The original metadata that was used in creating metadata for the Dataset, Data Service or Dataset Series."
           },
           "sh:maxCount": "1",
           "sh:name": {
@@ -964,7 +964,7 @@
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#CatalogueRecord.sourcemetadata",
           "sh:class": "http://www.w3.org/ns/dcat#CatalogRecord",
           "sh:description": {
-            "en": "The original metadata that was used in creating metadata for the Dataset."
+            "en": "The original metadata that was used in creating metadata for the Dataset, Data Service or Dataset Series."
           },
           "sh:name": {
             "en": "source metadata"
@@ -1052,6 +1052,18 @@
           "sh:path": "http://purl.org/dc/terms/publisher"
         },
         {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DataServiceShape/68388ec47b77212d80036e8a02e9956f5ba0e0f5",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.documentation",
+          "sh:class": "http://xmlns.com/foaf/0.1/Document",
+          "sh:description": {
+            "en": "A page or document about this Data Service"
+          },
+          "sh:name": {
+            "en": "documentation"
+          },
+          "sh:path": "http://xmlns.com/foaf/0.1/page"
+        },
+        {
           "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DataServiceShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e",
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.applicablelegislation",
           "sh:class": "http://data.europa.eu/eli/ontology#LegalResource",
@@ -1112,6 +1124,18 @@
           "sh:path": "http://www.w3.org/ns/dcat#endpointURL"
         },
         {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DataServiceShape/8521ebd386ec388c4cf09933c419e3fe7668f29d",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.documentation",
+          "sh:description": {
+            "en": "A page or document about this Data Service"
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "documentation"
+          },
+          "sh:path": "http://xmlns.com/foaf/0.1/page"
+        },
+        {
           "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DataServiceShape/9eaae476a881de13b9430537ace6e70da7327dbd",
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.licence",
           "sh:description": {
@@ -1134,6 +1158,18 @@
             "en": "publisher"
           },
           "sh:path": "http://purl.org/dc/terms/publisher"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DataServiceShape/b86dee5bb20a5e396c2d60cbc5b660f4cadb2f05",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.documentation",
+          "sh:description": {
+            "en": "A page or document about this Data Service"
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "documentation"
+          },
+          "sh:path": "http://xmlns.com/foaf/0.1/page"
         },
         {
           "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DataServiceShape/dbcf2adef675735c48b532392359af27af5e8b71",
@@ -1262,18 +1298,6 @@
             "en": "provenance"
           },
           "sh:path": "http://purl.org/dc/terms/provenance"
-        },
-        {
-          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DatasetShape/236f0210baaf149903750c43bbe7012c21debb2a",
-          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.type",
-          "sh:description": {
-            "en": "A type of the Dataset."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "en": "type"
-          },
-          "sh:path": "http://purl.org/dc/terms/type"
         },
         {
           "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DatasetShape/29ba27566ab1f32c8bb73f3492436d4bd868d3d2",

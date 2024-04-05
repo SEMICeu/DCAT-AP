@@ -62,7 +62,7 @@
 		    name: "Anastasia Sofou",
 		      
 		      
-		    company: "Traysys International",
+		    company: "Trasys International",
 		      
 		      
 		    }
@@ -285,7 +285,7 @@ In the past decade, DCAT-AP has grown from a single specification to a whole eco
 
 <h3>Scope of the Application Profile</h3>
 <p>
-The Application Profile specified in this document is based on the specification of the Data Catalog Vocabulary (DCAT) [[vocab-dcat-3]] developed under the responsibility of the Dataset Exchange Working Group (DXWG) at W3C [[[DXWG]]]. 
+The Application Profile specified in this document is based on the specification of the Data Catalog Vocabulary (DCAT) [[vocab-dcat-3]] developed under the responsibility of the [[[DXWG]]] (DXWG) at W3C. 
 </p><p>
 The objective of this work is to produce a profile of DCAT based on numerous requests for change coming from real-world implementations of the specification listed on GitHub since the previous release. For that the DCAT specification is extended with improved definitions, usage notes and usages constraints such as cardinalities for properties and the usage of controlled vocabularies.  Additional classes and properties from other well-known vocabularies are re-used where necessary.
 </p><p>
@@ -2367,7 +2367,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                     0..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    The original metadata that was used in creating metadata for the Dataset.
+                                    The original metadata that was used in creating metadata for the Dataset, Data Service or Dataset Series.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -2764,6 +2764,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                             , <a href="#DataService.applicationprofile">application profile</a>
                             , <a href="#DataService.contactpoint">contact point</a>
                             , <a href="#DataService.description">description</a>
+                            , <a href="#DataService.documentation">documentation</a>
                             , <a href="#DataService.endpointdescription">endpoint description</a>
                             , <a href="#DataService.endpointURL">endpoint URL</a>
                             , <a href="#DataService.format">format</a>
@@ -3070,6 +3071,55 @@ For instance the data service adheres to the OGC WFS API standard, while the ass
 				        <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_description">E</a>
 				       
                                     
+                                </td>
+                            </tr>
+                        
+                            <tr id="DataService.documentation"
+                                typeof="rdfs:Property"
+                                resource="http://xmlns.com/foaf/0.1/page"
+                                class="class mandatory">
+<!--
+                                <td>
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20documentation%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.0%23DataService.documentation" target="_blank" rel="noopener noreferrer" >
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+--->
+                                <td>
+                                        <a href="http://xmlns.com/foaf/0.1/page"
+                                           data-toggle="tooltip"
+                                           data-content="http://xmlns.com/foaf/0.1/page"
+                                           data-placement="right">
+                                        documentation</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Document" data-placement="right">Document</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    A page or document about this Data Service
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+				       P
+				    
                                 </td>
                             </tr>
                         
@@ -3627,7 +3677,7 @@ For instance the data service adheres to the OGC WFS API standard, while the ass
                         Usage Note
                     </dt>
                     <dd>
-                        If a Dataset is used as part of a Dataset Series, the properties listed below can be used additionally, or slightly differently to those listed for the Dataset outside of a Dataset Series.
+                        If a Dataset is used as part of a Dataset Series, the usage of the properties listed below must be coherent with the associated Dataset Series.
 For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                     </dd>
                 
@@ -4668,7 +4718,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                     A secondary identifier of the Dataset
                                 </td>
                                 <td property="skos:scopeNote">
-                                    Examples are  MAST/ADS [[MASTADS]], DataCite [[DATACITE]], DOI [[DOI]], EZID [[EZID]] or W3ID [[W3ID]].
+                                    Examples are  MAST/ADS [[MASTADS]], DOI [[DOI]], EZID [[EZID]] or W3ID [[W3ID]].
                                 </td>
 				<!--
                                 <td>
@@ -5370,7 +5420,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                     
                                 </td>
                                 <td>
-                                    0..1
+                                    0..*
                                 </td>
                                 <td property="rdfs:comment">
                                     A type of the Dataset.
@@ -9626,7 +9676,7 @@ In this data specification the use is restricted to instances of this class that
                     Definition
                 </dt>
                 <dd>
-                    A standard or other specification to which a Dataset or Distribution conforms.
+                    A standard or other specification to which a resource conforms.
                 </dd>
                 
                 
@@ -9901,7 +9951,7 @@ These criteria do not intend to define a set of requirements for controlled voca
 		<tr><td>dct:type</td><td><a href="#LicenceDocument">Licence Document</a></td><td><a href="http://purl.org/adms/licencetype/1.0">ADMS licence type vocabulary</a></td><td> The list of terms in the ADMS licence type vocabulary is included in the ADMS specification</td></tr>
 		<tr><td>dcatap:availability</td><td><a href="#Distribution">Distribution</a></td><td><a href="http://publications.europa.eu/resource/authority/planned-availability">Distribution availability vocabulary</a></td><td>The list of terms for the avalability levels of a dataset distribution in the DCAT-AP  specification.</td></tr>
 		<tr><td>spdx:algorithm</td><td><a href="#Checksum">Checksum</a></td><td><a href="https://spdx.org/rdf/terms/#d4e2129">Checksum algorithm members</a></td><td>The members listed are considered a controlled vocabulary of supported checksum algorithms.</td></tr>
-		<tr><td>dct:accessRights</td><td><a href="#Dataset">Dataset</a>, <a href="#DataService">Data Service</a></td><td><a href="http://publications.europa.eu/resource/authority/access-right">Access Rights Named Authority List</td><td>Use one of the following values (:public, :restricted, :non-public).</td></tr>
+		<tr><td>dct:accessRights</td><td><a href="#Dataset">Dataset</a>, <a href="#DataService">Data Service</a></td><td><a href="http://publications.europa.eu/resource/authority/access-right">Access Rights Named Authority List</td><td>Use one of the following values (:PUBLIC, :RESTRICTED, :NON_PUBLIC).</td></tr>
 	</tbody>
 </table>
 
@@ -10397,7 +10447,7 @@ In line with these guidelines with the objective to reduce the burden of impleme
 When a property is subject to this W3C guideline then DCAT-AP will include only the use of this property and not the inverse.
 Implementers are still free to use the inverse to optimise their data management. 
 <p/>
-As note to this discussion: when exhanging DCAT as an RDF graph the impact of the directionality is reduced because
+As note to this discussion: when exchanging DCAT as an RDF graph the impact of the directionality is reduced because
 <ul>
 <li> RDF statements are non-ordered and grouping according to directionality is more for human readibility than technically enforced. 
 </li>
@@ -10963,46 +11013,48 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 				
 					
 						
-					
-					
-						
-					
-					
-						
 							<tr>
 								<td><a href="#Concept">Concept</a></td>
 								<td><div class="shorten">http://www.w3.org/2004/02/skos/core#Concept</div></td>
-								<td></td>
+								<td>Mandatory</td>
 								<td><a href="#Concept.preferredlabel">preferred label </a></td>
 								<td><div class="shorten">http://www.w3.org/2004/02/skos/core#prefLabel</div></td>
 							</tr>
 						
 					
+					
+						
+					
+					
+						
+					
 				
 			</tr>
 		
 				
-					
-						
-					
-					
-						
-					
 					
 						
 							<tr>
 								<td><a href="#ConceptScheme">Concept Scheme</a></td>
 								<td><div class="shorten">http://www.w3.org/2004/02/skos/core#ConceptScheme</div></td>
-								<td></td>
+								<td>Mandatory</td>
 								<td><a href="#ConceptScheme.title">title </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/title</div></td>
 							</tr>
+						
+					
+					
+						
+					
+					
 						
 					
 				
 			</tr>
 		
 				
+					
+						
 					
 						
 					
@@ -11073,6 +11125,8 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 								<td><a href="#DataService.contactpoint">contact point </a></td>
 								<td><div class="shorten">http://www.w3.org/ns/dcat#contactPoint</div></td>
 							</tr>
+						
+					
 						
 					
 						
@@ -11152,7 +11206,7 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 							<tr>
 								<td><a href="#DataService">Data Service</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/dcat#DataService</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#DataService.applicablelegislation">applicable legislation </a></td>
 								<td><div class="shorten">http://data.europa.eu/r5r/applicableLegislation</div></td>
 							</tr>
@@ -11169,6 +11223,16 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 								<td>Optional</td>
 								<td><a href="#DataService.description">description </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/description</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#DataService">Data Service</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#DataService</div></td>
+								<td>Optional</td>
+								<td><a href="#DataService.documentation">documentation </a></td>
+								<td><div class="shorten">http://xmlns.com/foaf/0.1/page</div></td>
 							</tr>
 						
 					
@@ -12658,12 +12722,6 @@ Past and current contributors are :
 	 	Casper Gras
 		, 
            
-	 	Hagar:Lowenthal 
-		, 
-           
-	 	Bart Hanssens
-		, 
-           
 	 	Bart Hanssens
 		, 
            
@@ -12697,6 +12755,9 @@ Past and current contributors are :
 	 	Giorgia Lodi
 		, 
            
+	 	Hagar Lowenthal
+		, 
+           
 	 	Peter Lubrich
 		, 
            
@@ -12713,9 +12774,6 @@ Past and current contributors are :
 		, 
            
 	 	Matthias Palmer
-		, 
-           
-	 	Andrea Perego
 		, 
            
 	 	Andrea Perego

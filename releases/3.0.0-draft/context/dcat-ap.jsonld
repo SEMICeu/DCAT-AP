@@ -178,6 +178,10 @@
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/description"
     },
+    "DataService.documentation": {
+      "@id": "http://xmlns.com/foaf/0.1/page",
+      "@type": "@id"
+    },
     "DataService.endpointDescription": {
       "@container": "@set",
       "@id": "http://www.w3.org/ns/dcat#endpointDescription",
@@ -375,6 +379,7 @@
       "@id": "http://purl.org/dc/terms/title"
     },
     "Dataset.type": {
+      "@container": "@set",
       "@id": "http://purl.org/dc/terms/type",
       "@type": "@id"
     },

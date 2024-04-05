@@ -123,7 +123,7 @@
   shacl:path dc:conformsTo .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:CatalogRecordShape/48302728c90d6c344ff17c41a12e9f1379d2a049> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.0#CatalogueRecord.sourcemetadata";
-  shacl:description "The original metadata that was used in creating metadata for the Dataset."@en;
+  shacl:description "The original metadata that was used in creating metadata for the Dataset, Data Service or Dataset Series."@en;
   shacl:maxCount 1;
   shacl:name "source metadata"@en;
   shacl:path dc:source .
@@ -148,7 +148,7 @@
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:CatalogRecordShape/95cb7d74c8710526cdd4a980d92ce3cf74d7a38f> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.0#CatalogueRecord.sourcemetadata";
   shacl:class dcat:CatalogRecord;
-  shacl:description "The original metadata that was used in creating metadata for the Dataset."@en;
+  shacl:description "The original metadata that was used in creating metadata for the Dataset, Data Service or Dataset Series."@en;
   shacl:name "source metadata"@en;
   shacl:path dc:source .
 
@@ -354,13 +354,16 @@
   shacl:property <https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DataServiceShape/1a61f733fafb015548fe0e21203d559c9cb4d228>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DataServiceShape/31d5e2e3aa43e34f78e4557b9a8c4e7507c4948b>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DataServiceShape/67dcdb36167ca7969c0532898e11a98e9c2a80f5>,
+    <https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DataServiceShape/68388ec47b77212d80036e8a02e9956f5ba0e0f5>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DataServiceShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DataServiceShape/737cd5f1c9f0e13c35eb82b7f0d2b2f76a9a82c7>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DataServiceShape/7a20e2eb5f5549088fd53fa93fab0958019f267e>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DataServiceShape/7b6713c1f4a52e964f5db57eabef294b6d04e90e>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DataServiceShape/83ad7325cc6681e43e44550c269847065a95a14f>,
+    <https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DataServiceShape/8521ebd386ec388c4cf09933c419e3fe7668f29d>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DataServiceShape/9eaae476a881de13b9430537ace6e70da7327dbd>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DataServiceShape/b3ec0655204c62a2531244aaeab12f1a2c5e5b5d>,
+    <https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DataServiceShape/b86dee5bb20a5e396c2d60cbc5b660f4cadb2f05>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DataServiceShape/dbcf2adef675735c48b532392359af27af5e8b71>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DataServiceShape/dc08f4dca4377fade57f89454e3fa06a8389d314>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DataServiceShape/dede6a68a95ac0f43ca88def472d8fc001f86ebe>,
@@ -387,6 +390,12 @@
   shacl:maxCount 1;
   shacl:name "publisher"@en;
   shacl:path dc:publisher .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DataServiceShape/68388ec47b77212d80036e8a02e9956f5ba0e0f5> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.documentation";
+  shacl:class foaf:Document;
+  shacl:description "A page or document about this Data Service"@en;
+  shacl:name "documentation"@en;
+  shacl:path foaf:page .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DataServiceShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.applicablelegislation";
   shacl:class <http://data.europa.eu/eli/ontology#LegalResource>;
@@ -418,6 +427,12 @@
   shacl:name "endpoint URL"@en;
   shacl:path dcat:endpointURL .
 
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DataServiceShape/8521ebd386ec388c4cf09933c419e3fe7668f29d> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.documentation";
+  shacl:description "A page or document about this Data Service"@en;
+  shacl:minCount 1;
+  shacl:name "documentation"@en;
+  shacl:path foaf:page .
+
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DataServiceShape/9eaae476a881de13b9430537ace6e70da7327dbd> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.licence";
   shacl:description "A licence under which the Data service is made available."@en;
   shacl:maxCount 1;
@@ -429,6 +444,12 @@
   shacl:description "An entity (organisation) responsible for making the Data Service available."@en;
   shacl:name "publisher"@en;
   shacl:path dc:publisher .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DataServiceShape/b86dee5bb20a5e396c2d60cbc5b660f4cadb2f05> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.documentation";
+  shacl:description "A page or document about this Data Service"@en;
+  shacl:maxCount 1;
+  shacl:name "documentation"@en;
+  shacl:path foaf:page .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DataServiceShape/dbcf2adef675735c48b532392359af27af5e8b71> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.licence";
   shacl:class dc:LicenseDocument;
@@ -565,7 +586,6 @@
   shacl:property <https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DatasetShape/00a99d55cbc03165373a8348d5a88402ea4f239a>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DatasetShape/04d197dc40f01e87093bdd0446a9fdb1a9d44319>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DatasetShape/0bcb30d1f00a2e13ee04c77dbcb8018f2ef83d5b>,
-    <https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DatasetShape/236f0210baaf149903750c43bbe7012c21debb2a>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DatasetShape/29ba27566ab1f32c8bb73f3492436d4bd868d3d2>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DatasetShape/2ab9813b47309d4af98fdfe34189ea24baecc8cd>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DatasetShape/2d388ed1a94fa93a83fb179a4ecb339b2566b790>,
@@ -617,12 +637,6 @@
   shacl:description "A statement about the lineage of a Dataset."@en;
   shacl:name "provenance"@en;
   shacl:path dc:provenance .
-
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DatasetShape/236f0210baaf149903750c43bbe7012c21debb2a> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.type";
-  shacl:description "A type of the Dataset."@en;
-  shacl:maxCount 1;
-  shacl:name "type"@en;
-  shacl:path dc:type .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0#dcat:DatasetShape/29ba27566ab1f32c8bb73f3492436d4bd868d3d2> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.language";
   shacl:class dc:LinguisticSystem;
