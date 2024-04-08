@@ -70,3 +70,24 @@
        sh:message "replace owl:versionInfo with dcat:version"@en
     ];
     sh:targetClass dcat:Dataset .
+
+
+#-------------------------------------------------------------------------
+# The shapes in this file cover all URI changes that require attention
+# by the catalogue owner.
+#
+# deprecated by the transition from version 2.x to 3.x
+# 
+#-------------------------------------------------------------------------
+
+
+:DatasetInverseProperties_Shape
+    a sh:NodeShape ;
+    rdfs:label "Dataset Deprecation properties"@en ;
+    sh:property [
+       sh:path dcat:isVersionOf ;
+       sh:severity sh:Warning ;
+       sh:message "dcat:isVersionOf is an inverse property and should only be used if dcat:hasVersion is present."@en
+    ];
+    sh:targetClass dcat:Dataset .
+
