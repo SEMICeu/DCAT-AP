@@ -390,7 +390,6 @@
     a sh:NodeShape ;
     rdfs:label "PeriodOfTime"@en ;
     sh:property [
-    ], [
         sh:class time:Instant ;
         sh:path time:hasBeginning ;
         sh:severity sh:Violation
