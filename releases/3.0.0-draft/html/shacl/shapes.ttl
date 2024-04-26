@@ -302,7 +302,7 @@
         sh:severity sh:Violation
     ], [
         sh:nodeKind sh:IRI ;
-  	sh:class <http://data.europa.eu/eli/ontology#LegalResource>;
+  	sh:path dcatap:applicableLegislation;
         sh:severity sh:Violation
     ], [
         sh:nodeKind sh:BlankNodeOrIRI ;
@@ -692,7 +692,7 @@
     sh:property [
         sh:minCount 1;
         sh:nodeKind sh:BlankNodeOrIRI;
-        sh:inversePath dcat:inSeries;
+        sh:path [ sh:inversePath dcat:inSeries; ];
         sh:severity sh:Warning
     ], [
   	sh:nodeKind sh:IRI;

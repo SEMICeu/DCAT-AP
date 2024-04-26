@@ -179,6 +179,7 @@
       "@id": "http://purl.org/dc/terms/description"
     },
     "DataService.documentation": {
+      "@container": "@set",
       "@id": "http://xmlns.com/foaf/0.1/page",
       "@type": "@id"
     },
@@ -384,7 +385,6 @@
       "@type": "@id"
     },
     "Dataset.version": {
-      "@container": "@set",
       "@id": "http://www.w3.org/ns/dcat#version"
     },
     "Dataset.versionNotes": {

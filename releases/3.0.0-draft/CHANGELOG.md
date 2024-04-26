@@ -118,6 +118,7 @@ In issue [353](https://github.com/SEMICeu/dcat-ap/issues/353) reported the need 
 # SHACL
   - issue [245](https://github.com/SEMICeu/dcat-ap/issues/245): replace sh:name with rdfs:label in shacl.
   - issue [48](https://github.com/SEMICeu/dcat-ap/issues/48): provide a shacl file with unique identifiers for each constraint.
+  - issue [361](https://github.com/SEMICeu/dcat-ap/issues/361): bug fixing shacls
 
 # Other issue handling
 
@@ -125,6 +126,7 @@ In issue [353](https://github.com/SEMICeu/dcat-ap/issues/353) reported the need 
   - issue [223](https://github.com/SEMICeu/dcat-ap/issues/223): closed the issue as the reference to past assessment of Identifiers is included in the DCAT-AP guideline on identifiers.
     The assessment is not uplifted as guideline, but it is now more accessible from the specification. 
     A placeholder issue is not needed anymore.
+  
      
 
 # Specification agnostic issues or questions for information/assistance
@@ -153,4 +155,6 @@ These are issues that point out editorial improvements.
   - issue [291](https://github.com/SEMICeu/dcat-ap/issues/391): incorrect conversion from PDF to HMTL: reapply the agreed cardinality for Dataset creator.
   - issue [285](https://github.com/SEMICeu/dcat-ap/issues/285): correct URL to specification.
   - issue [267](https://github.com/SEMICeu/dcat-ap/issues/267): fix malformed table for recommended Controlled Vocabularies.
+  - issue [363](https://github.com/SEMICeu/dcat-ap/issues/363): fix dereferenceable URIs
+  - issue [366](https://github.com/SEMICeu/dcat-ap/issues/366): fix shacl shape bugs
 
