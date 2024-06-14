@@ -501,8 +501,7 @@ A <strong>Data Portal</strong> is a Web-based system that contains a data catalo
     <h2>Overview</h2>
     
 <p>
-DCAT-AP is a DCAT profile for sharing information about Catalogues containing Datasets and Data Services descriptions in Europe. The core classes of the Application Profile are thus the classes Catalogue, Dataset, Distribution and Data Service. DCAT-AP allows Catalogues of only Datasets, but also Catalogues of only Data Services, but usually it will be a mixture of both. Dataset Series are introduced to further organise the Datasets within a Catalogue. Datasets that are a member of a Dataset Series have additional constraints beyond those applicable for Dataset.
-These constraints are expressed in the class Dataset member of Dataset Series.
+DCAT-AP is a DCAT profile for sharing information about Catalogues containing Datasets and Data Services descriptions in Europe. The core classes of the Application Profile are thus the classes Catalogue, Dataset, Distribution and Data Service. DCAT-AP allows Catalogues of only Datasets, but also Catalogues of only Data Services, but usually it will be a mixture of both. Dataset Series are introduced to further organise the Datasets within a Catalogue. 
 </p><p>
 The properties of the core classes may enforce the existence of other classes. One such important class is the class Agent. However in contrast to the core classes, DCAT-AP leaves a lot of freedom to the implementors to shape them to their needs. Only minimal expectations are expressed by DCAT-AP.
 </p><p>
@@ -564,6 +563,8 @@ The cardinalities and qualifications are included in the figure.
 			      <a href="#Linguisticsystem">Linguistic system</a> |
 			      <a href="#Literal">Literal</a> |
 			      <a href="#Mediatype">Media type</a> |
+			      <a href="#MediaType">Media Type</a> |
+			      <a href="#MediaTypeorExtent">Media Type or Extent</a> |
 			      <a href="#Periodoftime">Period of time</a> |
 			      <a href="#Policy">Policy</a> |
 			      <a href="#ProvenanceStatement">Provenance Statement</a> |
@@ -577,7 +578,7 @@ The cardinalities and qualifications are included in the figure.
                         <p>
                             And supported by these datatypes:
                             <br />
-                            | <a href="#MediaType">Media Type</a> | <a href="#MediaTypeorExtent">Media Type or Extent</a> | <a href="#TemporalLiteral">Temporal Literal</a> | <a href="#Timeinstant">Time instant</a> | <a href="#xsd%3AdateTime">xsd:dateTime</a> | <a href="#xsd%3Adecimal">xsd:decimal</a> | <a href="#xsd%3Aduration">xsd:duration</a> | <a href="#xsd%3AhexBinary">xsd:hexBinary</a> | <a href="#xsd%3AnonNegativeInteger">xsd:nonNegativeInteger</a> |
+                            | <a href="#TemporalLiteral">Temporal Literal</a> | <a href="#Timeinstant">Time instant</a> | <a href="#xsd%3AdateTime">xsd:dateTime</a> | <a href="#xsd%3Adecimal">xsd:decimal</a> | <a href="#xsd%3Aduration">xsd:duration</a> | <a href="#xsd%3AhexBinary">xsd:hexBinary</a> | <a href="#xsd%3AnonNegativeInteger">xsd:nonNegativeInteger</a> |
                         </p>
                 
     </div>
@@ -6664,7 +6665,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 <td>
                                     
                                         
-                                            <a href="#Mediatype" data-placement="right">Media type</a>
+                                            <a href="#MediaType" data-placement="right">Media Type</a>
                                         
                                     
                                 </td>
@@ -8028,6 +8029,10 @@ This is not equal to the release date of the oldest dataset in the collection of
 
 
 
+
+
+
+
    
         <section>
             <h3 id="Relationship">
@@ -8402,9 +8407,16 @@ They are included in the Application Profile because they form the range of prop
                     Definition
                 </dt>
                 <dd>
-                    
+                    An idea or notion; a unit of thought. 
                 </dd>
                 
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        In DCAT-AP, a Concept is used to denote codes within a codelist. In section [[[#controlled-vocs]]] the expectations are elaborated in more detail.
+                    </dd>
                 
                 
                     <dt>
@@ -8537,9 +8549,16 @@ They are included in the Application Profile because they form the range of prop
                     Definition
                 </dt>
                 <dd>
-                    
+                    An aggregation of one or more SKOS concepts.
                 </dd>
                 
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        In DCAT-AP, a Concept Scheme is used to denote a codelist. In section [[[#controlled-vocs]]] the expectations are elaborated in more detail.
+                    </dd>
                 
                 
                     <dt>
@@ -9103,6 +9122,92 @@ In this data specification the use is restricted to instances of this class that
                 </dt>
                 <dd>
                     A media type, e.g. the format of a computer file.
+                </dd>
+                
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                    <dd>
+                        This specification does not impose any additional requirements to properties for this entity.
+                    </dd>
+                
+            </dl>
+        </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="MediaType">
+                <a href="http://purl.org/dc/terms/MediaType"
+                   data-toggle="tooltip"
+                   data-content="http://purl.org/dc/terms/MediaType"
+                   data-placement="right">Media Type</a>
+
+            </h3>
+	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
+                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20MediaType&body=Explain%20your%20issue"}}>
+                   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+		</a>
+		-->
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    A file format or physical medium.
+                </dd>
+                
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                    <dd>
+                        This specification does not impose any additional requirements to properties for this entity.
+                    </dd>
+                
+            </dl>
+        </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="MediaTypeorExtent">
+                <a href="http://purl.org/dc/terms/MediaTypeOrExtent"
+                   data-toggle="tooltip"
+                   data-content="http://purl.org/dc/terms/MediaTypeOrExtent"
+                   data-placement="right">Media Type or Extent</a>
+
+            </h3>
+	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
+                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20MediaTypeOrExtent&body=Explain%20your%20issue"}}>
+                   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+		</a>
+		-->
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    A media type or extent.
                 </dd>
                 
                 
@@ -9724,38 +9829,6 @@ In this data specification the use is restricted to instances of this class that
 	    <tbody class="supertype">
             
 		<tr><td>
-                   <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20MediaType&body=Explain%20your%20issue"}}>
-                     <img src="html/callout.png" loading="lazy" alt="(create issue)" width="50" height="50"/>
-		   </a>
-		</td><td>
-                
-                    <div id="MediaType">
-                        <a href="http://purl.org/dc/terms/MediaType"
-                           data-toggle="tooltip"
-                           data-content="http://purl.org/dc/terms/MediaType"
-                           data-placement="right">Media Type</a>
-                    </div>
-                
-		</td><td>
-                    A file format or physical medium.
-		</td></tr>
-		<tr><td>
-                   <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20MediaTypeOrExtent&body=Explain%20your%20issue"}}>
-                     <img src="html/callout.png" loading="lazy" alt="(create issue)" width="50" height="50"/>
-		   </a>
-		</td><td>
-                
-                    <div id="MediaTypeorExtent">
-                        <a href="http://purl.org/dc/terms/MediaTypeOrExtent"
-                           data-toggle="tooltip"
-                           data-content="http://purl.org/dc/terms/MediaTypeOrExtent"
-                           data-placement="right">Media Type or Extent</a>
-                    </div>
-                
-		</td><td>
-                    A media type or extent.
-		</td></tr>
-		<tr><td>
                    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20TemporalLiteral&body=Explain%20your%20issue"}}>
                      <img src="html/callout.png" loading="lazy" alt="(create issue)" width="50" height="50"/>
 		   </a>
@@ -9940,11 +10013,11 @@ These criteria do not intend to define a set of requirements for controlled voca
 	<thead><tr><th>Property URI</th><th>Used for Class</th><th>Vocabulary name</th><th>Usage note</th></tr></thead>
 	<tbody>
 		<tr><td>dcat:mediaType</td><td><a href="#Distribution">Distribution</a></td><td><a href="http://www.iana.org/assignments/media-types/media-types.xhtml">IANA Media Types</a></td><td></td></tr>
-		<tr><td>dcat:theme</td><td><a href="#Dataset">Dataset</a></td><td><a href="http://publications.europa.eu/resource/authority/data-theme">Dataset Theme Vocabulary</a></td><td>The values to be used for this property are the URIs of the concepts in the vocabulary.</td></tr>
+		<tr><td>dcat:theme</td><td><a href="#Dataset">Dataset</a>, <a href="#DataService">Data Service</a>, <a href="#Catalogue">Catalogue</a></td><td><a href="http://publications.europa.eu/resource/authority/data-theme">Dataset Theme Vocabulary</a></td><td>The values to be used for this property are the URIs of the concepts in the vocabulary.</td></tr>
 		<tr><td>dct:accrualPeriodicity</td><td><a href="#Dataset">Dataset</a>,<a href="#DatasetSeries">Dataset Series</a></td><td><a href="http://publications.europa.eu/resource/authority/frequency">EU Vocabularies Frequency Named Authority List</a></td><td></td></tr>
 		<tr><td>dct:format</td><td><a href="#Distribution">Distribution</a>,<a href="#DataService">Data Service </a></td><td><a href="http://publications.europa.eu/resource/authority/file-type">EU Vocabularies File Type Named Authority List</a></td><td></td></tr>
 		<tr><td>dct:language</td><td><a href="#Catalogue">Catalogue</a>,<a href="#Dataset">Dataset</a>, <a href="#CatalogueRecord">Catalogue Records</a>, <a href="#Distribution">Distribution</a></td><td><a href="http://publications.europa.eu/resource/authority/language">EU Vocabularies Languages Named Authority List</a></td><td></td></tr>
-		<tr><td>dct:publisher</td><td><a href="#Catalogue">Catalogue</a>,<a href="#Dataset">Dataset</a>,<a href="#DatasetSeries">Dataset Series</a></td><td><a href="http://publications.europa.eu/resource/authority/corporate-body">EU Vocabularies Corporate bodies Named Authority List</a></td><td>The Corporate bodies NAL must be used for European institutions and a small set of international organisations. In case of other types of organisations, national, regional or local vocabularies should be used.</td></tr>
+		<tr><td>dct:publisher</td><td><a href="#Catalogue">Catalogue</a>,<a href="#Dataset">Dataset</a>,<a href="#DatasetSeries">Dataset Series</a>,<a href="#DataService">Data Service</a></td><td><a href="http://publications.europa.eu/resource/authority/corporate-body">EU Vocabularies Corporate bodies Named Authority List</a></td><td>The Corporate bodies NAL must be used for European institutions and a small set of international organisations. In case of other types of organisations, national, regional or local vocabularies should be used.</td></tr>
 		<tr><td>dct:spatial</td><td><a href="#Catalogue">Catalogue</a>,<a href="#Dataset">Dataset</a>,<a href="#DatasetSeries">Dataset Series</a></td><td><a href="http://publications.europa.eu/resource/authority/continent/">EU Vocabularies Continents Named Authority List</a>, <a href="http://publications.europa.eu/resource/authority/country">EU Vocabularies Countries Named Authority List</a>, <a href="http://publications.europa.eu/resource/authority/place/">EU Vocabularies Places Named Authority List</a>, <a href="http://sws.geonames.org/">Geonames</a></td><td> The EU Vocabularies Name Authority Lists must be used for continents, countries and places that are in those lists; if a particular location is not in one of the mentioned Named Authority Lists, Geonames URIs must be used.</td></tr>
 		<tr><td>adms:status</td><td><a href="#Distribution">Distribution</a></td><td><a href="http://publications.europa.eu/resource/authority/distribution-status">EU Vocabularies Distribution Status</a></td><td></td></tr>
 		<tr><td>dct:type</td><td><a href="#Agent">Agent</a></td><td><a href="http://purl.org/adms/publishertype/1.0">ADMS publisher type</a> vocabulary</td><td> The list of terms in the ADMS publisher type vocabulary is included in the ADMS specification</td></tr>
@@ -9960,7 +10033,7 @@ These criteria do not intend to define a set of requirements for controlled voca
 <table id="table-cv" class="simple">
     <thead><tr><th>Property URI</th><th>Used for Class</th><th>Vocabulary name</th><th>Usage note</th></tr></thead>
     <tbody>
-<tr><td>dct:type</td><td><a href="#Dataset">Dataset</a></td><td><a href="http://publications.europa.eu/resource/dataset/dataset-type">Dataset-type authority table</a></td><td>This list of terms provide types of datasets. Its main scope is to support dataset categorisation of the EU Open Data Portal.</td></tr>
+<tr><td>dct:type</td><td><a href="#Dataset">Dataset</a></td><td><a href="http://publications.europa.eu/resource/authority/dataset-type">Dataset-type authority table</a></td><td>This list of terms provide types of datasets. Its main scope is to support dataset categorisation of the EU Open Data Portal.</td></tr>
     </tbody>
 </table>
 
@@ -10000,7 +10073,7 @@ In particular it is advised for [[FAIR]] data to consider CC BY 4.0 (the minimum
 <p></p>
 
 An assessment of data.europa.eu [[DEU]] in 2023 showed that there are different representations to indicate the same licence.
-To create a more harmonised experience throughout Europe, it is recommended to use the <a href="http://publications.europa.eu/resource/dataset/licence">NAL licence</a>
+To create a more harmonised experience throughout Europe, it is recommended to use the <a href="https://publications.europa.eu/resource/authority/licence">NAL licence</a>
 maintained by the Publications Office if allowed by national legislation.
 If local representations are used, then the equivalence with a licence in this NAL should be provided.
 This mapping is expressed as metadata to local representation.
@@ -10433,7 +10506,7 @@ It contains the dataset with actual life data, the yearly snapshots for 2023 and
   <section class="informative">
   <h2>Inverse properties</h2>
 
-The W3C DCAT specification introduces for some relationships two properties which are eachothers inverse. 
+The W3C DCAT specification introduces for some relationships two properties which are each other's inverse. 
 In general, this may lead to situations that data exchanges based on different DCAT profiles require reasoning to align. 
 
 <p/>
@@ -12456,6 +12529,28 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 					<tr>
 						<td><a href="#Mediatype">Media type</a></td>
 						<td><div class="shorten">http://purl.org/dc/terms/MediaType</div></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				
+			</tr>
+		
+				
+					<tr>
+						<td><a href="#MediaType">Media Type</a></td>
+						<td><div class="shorten">http://purl.org/dc/terms/MediaType</div></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				
+			</tr>
+		
+				
+					<tr>
+						<td><a href="#MediaTypeorExtent">Media Type or Extent</a></td>
+						<td><div class="shorten">http://purl.org/dc/terms/MediaTypeOrExtent</div></td>
 						<td></td>
 						<td></td>
 						<td></td>
