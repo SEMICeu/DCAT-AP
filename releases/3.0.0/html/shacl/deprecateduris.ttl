@@ -70,3 +70,54 @@
        sh:message "replace owl:versionInfo with dcat:version"@en
     ];
     sh:targetClass dcat:Dataset .
+
+
+#-------------------------------------------------------------------------
+# The shapes in this file cover all URI changes that require attention
+# by the catalogue owner.
+#
+# deprecated by the transition from version 2.x to 3.x
+# 
+#-------------------------------------------------------------------------
+
+
+:DatasetInverseProperties_Shape
+    a sh:NodeShape ;
+    rdfs:label "Dataset Deprecation properties"@en ;
+    sh:property [
+       sh:path dcat:isVersionOf ;
+       sh:severity sh:Warning ;
+       sh:message "dcat:isVersionOf is an inverse property and should only be used if dcat:hasVersion is present."@en
+    ];
+    sh:targetClass dcat:Dataset .
+
+
+
+<http://data.europa.eu/r5r/codelist_imports>
+  rdf:type owl:Ontology ;
+  owl:imports <https://github.com/SEMICeu/ADMS-AP/raw/master/purl.org/ADMS_SKOS_v1.00.rdf> .
+
+
+:StatusRestrictionADMS
+    a sh:NodeShape ;
+    rdfs:comment "Status restriction" ;
+    rdfs:label "Status restriction" ;
+    sh:property [
+        sh:class skos:ConceptScheme ;
+        sh:hasValue <http://purl.org/adms/status/1.0> ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:path skos:inScheme
+    ] .
+
+
+:Distribution_ShapeCV
+    a sh:NodeShape ;
+    sh:property [
+        sh:node :StatusRestrictionADMS ;
+        sh:nodeKind sh:IRI ;
+        sh:path adms:status ;
+	sh:description "The codelist of adms:status has changed from DCAT-AP 2.1 to DCAT-AP 3.0.0" ; 
+        sh:severity sh:Warning 
+    ] ;
+    sh:targetClass dcat:Distribution.

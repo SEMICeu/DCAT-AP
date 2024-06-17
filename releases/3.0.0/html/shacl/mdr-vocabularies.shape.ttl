@@ -174,16 +174,12 @@
         sh:path skos:inScheme
     ] .
 
-:GeoNamesRestriction
+:GeoNamesRestrictionRegexURI
+    rdfs:comment "Geonames restriction - base itself on URI structure" ;
+    rdfs:label "Geonames restriction" ;
     a sh:NodeShape ;
-    rdfs:comment "Geo names restriction" ;
-    rdfs:label "Geo names restriction" ;
-    sh:property [
-        sh:hasValue <http://sws.geonames.org> ;
-        sh:minCount 1 ;
-        sh:nodeKind sh:IRI ;
-        sh:path skos:inScheme
-    ] .
+    sh:pattern "^https://sws.geonames.org" .
+
 
 :LanguageRestriction
     a sh:NodeShape ;
@@ -231,13 +227,19 @@
         sh:path skos:inScheme
     ] .
 
+:IANARestrictionRegexURI
+    rdfs:comment "IANA restriction - base itself on URL structure" ;
+    rdfs:label "IANA restriction" ;
+    a sh:NodeShape ;
+    sh:pattern "^http.*://www.iana.org/assignments/media-types/" .
+
 :StatusRestriction
     a sh:NodeShape ;
     rdfs:comment "Status restriction" ;
     rdfs:label "Status restriction" ;
     sh:property [
         sh:class skos:ConceptScheme ;
-        sh:hasValue <http://purl.org/adms/status/1.0> ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/distribution-status> ;
         sh:minCount 1 ;
         sh:nodeKind sh:IRI ;
         sh:path skos:inScheme
@@ -247,7 +249,8 @@
     a sh:NodeShape ;
     rdfs:comment "Checksum algorithm restriction" ;
     rdfs:label "Checksum algorithm restriction" ;
-	sh:class <http://spdx.org/rdf/terms#ChecksumAlgorithm>.
+    sh:pattern "^https://spdx.org/rdf/terms" ;
+    sh:class <http://spdx.org/rdf/terms#ChecksumAlgorithm>.
 
 :Checksum_ShapeCV
     a sh:NodeShape ;
@@ -290,7 +293,7 @@
             sh:or (:CountryRestriction
                 :PlaceRestriction
                 :ContinentRestriction
-                :GeoNamesRestriction
+                :GeoNamesRestrictionRegexURI
             )
         ] ;
         sh:nodeKind sh:IRI ;
@@ -333,7 +336,7 @@
             sh:or (:CountryRestriction
                 :PlaceRestriction
                 :ContinentRestriction
-                :GeoNamesRestriction
+                :GeoNamesRestrictionRegexURI
             )
         ] ;
         sh:nodeKind sh:IRI ;
@@ -363,7 +366,9 @@
 
 # ------------------------------------------------------------------------------------------------------------------
 # The constraints for dcat:mediaType, dcat:compressFormat, dcat:packageFormat which are limited to the IANA codelist 
-# cannot be expressed in SHACL unless a copy in RDF for the IANA codelist is being created
+# cannot be expressed in SHACL unless a copy in RDF for the IANA codelist is being created.
+# A less formal check is provided based upon the assumption that the IANIA codelist is hosted on a known URL domain.
+# This check is sensitive to the publication strategy of IANA.
 # ------------------------------------------------------------------------------------------------------------------
 :Distribution_ShapeCV
     a sh:NodeShape ;
@@ -391,6 +396,24 @@
         sh:path dcatap:availability ;
 	sh:description "A non EU managed concept is used to indicate the availability of the distribution. If no corresponding can be found inform the maintainer of the DCAT-AP availability codelist." ; 
         sh:severity sh:Violation
+    ], [
+        sh:node :IANARestrictionRegexURI;
+        sh:nodeKind sh:IRI ;
+        sh:path dcat:mediaType ;
+	sh:description "A mediaType expects a value from IANA. This check uses the URLs from IANA to perform the check as there is no IANA codelist downloadable." ; 
+        sh:severity sh:Warning
+    ], [
+        sh:node :IANARestrictionRegexURI;
+        sh:nodeKind sh:IRI ;
+        sh:path dcat:compressFormat ;
+	sh:description "A compressFormat expects a value from IANA. This check uses the URLs from IANA to perform the check as there is no IANA codelist downloadable." ; 
+        sh:severity sh:Warning
+    ], [
+        sh:node :IANARestrictionRegexURI;
+        sh:nodeKind sh:IRI ;
+        sh:path dcat:packageFormat ;
+	sh:description "A packageFormat expects a value from IANA. This check uses the URLs from IANA to perform the check as there is no IANA codelist downloadable." ; 
+        sh:severity sh:Warning
     ] ;
     sh:targetClass dcat:Distribution.
 

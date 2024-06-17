@@ -95,7 +95,6 @@
     a sh:NodeShape ;
     rdfs:label "Catalog Record"@en ;
     sh:property [
-    ], [
         sh:minCount 1 ;
         sh:path dct:conformsTo ;
         sh:severity sh:Warning
@@ -161,29 +160,6 @@
     sh:severity sh:Warning;	
     sh:targetClass dcat:Catalog .
 
-
-
-:CategoryScheme_Shape
-    a sh:NodeShape ;
-    rdfs:label "Category Scheme"@en ;
-    sh:property [
-    ] ;
-    sh:targetClass skos:ConceptScheme .
-
-:Category_Shape
-    a sh:NodeShape ;
-    rdfs:label "Category"@en ;
-    sh:property [
-    ] ;
-    sh:targetClass skos:Concept .
-
-:Checksum_Shape
-    a sh:NodeShape ;
-    rdfs:label "Checksum"@en ;
-    sh:property [
-    ] ;
-    sh:targetClass spdx:Checksum .
-
 :DataService_Shape
     a sh:NodeShape ;
     rdfs:label "Data Service"@en ;
@@ -194,6 +170,26 @@
     ], [
         sh:minCount 1 ;
         sh:path dcat:endpointDescription ;
+        sh:severity sh:Warning
+    ], [
+        sh:minCount 1 ;
+        sh:path dcat:contactPoint ;
+        sh:severity sh:Warning
+    ], [
+        sh:minCount 1 ;
+        sh:path dct:publisher ;
+        sh:severity sh:Warning
+    ], [
+        sh:minCount 1 ;
+        sh:path dcat:theme ;
+        sh:severity sh:Warning
+    ], [
+        sh:minCount 1 ;
+        sh:path dct:conformsTo ;
+        sh:severity sh:Warning
+    ], [
+        sh:minCount 1 ;
+        sh:path dcat:keyword ;
         sh:severity sh:Warning
     ] ;
     sh:targetClass dcat:DataService .
@@ -232,6 +228,20 @@
     ] ;
     sh:targetClass dcat:Dataset .
 
+:DatasetSeries_Shape
+    a sh:NodeShape ;
+    rdfs:label "Dataset"@en ;
+    sh:property [
+        sh:minCount 1 ;
+        sh:path dcat:contactPoint ;
+        sh:severity sh:Warning
+    ], [
+        sh:minCount 1 ;
+        sh:path dct:publisher ;
+        sh:severity sh:Warning
+    ] ;
+    sh:targetClass dcat:DatasetSeries .
+
 :DateOrDateTimeDataType_Shape
     a sh:NodeShape ;
     rdfs:comment "Date time date disjunction shape checks that a datatype property receives a date or a dateTime literal" ;
@@ -259,6 +269,9 @@
         [
             sh:class dcat:DataService
         ]
+        [
+            sh:class dcat:DatasetSeries
+        ]
     ) .
 
 :Distribution_Shape
@@ -282,13 +295,6 @@
         sh:severity sh:Warning
     ] ;
     sh:targetClass dcat:Distribution .
-
-:Identifier_Shape
-    a sh:NodeShape ;
-    rdfs:label "Identifier"@en ;
-    sh:property [
-    ] ;
-    sh:targetClass adms:Identifier .
 
 :LicenceDocument_Shape
     a sh:NodeShape ;
@@ -328,10 +334,4 @@
     ] ;
     sh:targetClass dct:PeriodOfTime .
 
-:Relationship_Shape
-    a sh:NodeShape ;
-    rdfs:label "Relationship"@en ;
-    sh:property [
-    ] ;
-    sh:targetClass dcat:Relationship .
 

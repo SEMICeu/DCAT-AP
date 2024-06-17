@@ -3,11 +3,12 @@
 @prefix example-ds: <https://data.gov.gr/id/dataset/> .
 @prefix example-ser: <https://data.gov.gr/id/datasetseries/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 
 example-ds:BeePopulationLive a dcat:Dataset;
   dct:title "life counts of the Bee population in Greece"@en;
-  dct:issued "2023-03-21"^^<xsd:date>;
+  dct:issued "2023-03-21"^^xsd:date;
   dct:spatial <https://www.geonames.org/390903>;
   dcat:inSeries example-ser:BeePopulation;
   dcat:prev example-ds:BeePopulation2023 .

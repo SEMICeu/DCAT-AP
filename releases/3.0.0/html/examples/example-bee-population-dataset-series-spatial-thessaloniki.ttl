@@ -12,4 +12,4 @@ example-ds:BeePopulation2022 a dcat:Dataset;
 example-ser:BeePopulation a dcat:DatasetSeries;
   dct:title "Bee population"@en;
   dct:spatial <https://www.geonames.org/734077>;
-  dcat:last example-ds:BeePopulation2022 .
+  dcat:last example-ds:BeePopulation2023 .

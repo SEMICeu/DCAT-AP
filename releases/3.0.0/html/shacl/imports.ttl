@@ -11,7 +11,7 @@
 #   owl:imports <https://www.w3.org/ns/odrl/2/ODRL22.ttl> ; import is excluded because the shacl shape for Category applies to all instances of skos:Concept and the skos:Concepts in the ODRL do not comply to this. 
 
 
-<http://data.europa.eu/r5r/>
+<http://data.europa.eu/r5r>
   rdf:type owl:Ontology ;
   owl:imports <https://www.w3.org/ns/dcat2.ttl> ;
   owl:imports <http://dublincore.org/2020/01/20/dublin_core_terms.ttl> ;
