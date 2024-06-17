@@ -554,11 +554,11 @@
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb>,
+  shacl:property <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/08118c51bfc41b71d11f3a58e9410da74e6480e6>,
+    <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/10c0ca4deadefb51c529f56ee01caf9bd2639ef4>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/1a61f733fafb015548fe0e21203d559c9cb4d228>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/30e78cd98aa6cd5dbc31678289abb5e0cc0b55c7>,
-    <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/31d5e2e3aa43e34f78e4557b9a8c4e7507c4948b>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/3bde2663aaca96d953765ac2e525ef64710bf4d6>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/5bc739112726cd993c279f81380611cafc3a9857>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/63240e11f1eb66f636413d1dbb134f0ff9066a7c>,
@@ -572,12 +572,12 @@
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/83ad7325cc6681e43e44550c269847065a95a14f>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/93f73e69bb03d2928fcf758a253ef316becdf9b9>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/9678e29dc284ba14312bf01cd0a581b960b77a08>,
-    <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/97b367051882750fe2df0bc6fff5dd50ff0c94bd>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/998ce689a5bcc3e2764ff84a05255e34d91e8102>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/9adf9f5890592909cf3e67021ae7ab4f895a7745>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/9eaae476a881de13b9430537ace6e70da7327dbd>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/b3ec0655204c62a2531244aaeab12f1a2c5e5b5d>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/c1577bd231c71b0b1910272999755d3414867cfd>,
+    <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/c84f7330b9538a899ebb875c44dc23c9882e74ac>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/ca2bd10c893237fa342edb75240b08731acda92f>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/d5d74574f70f9a979535f3624608f88180dd0c97>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/dbcf2adef675735c48b532392359af27af5e8b71>,
@@ -589,6 +589,12 @@
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/f8b02efd063b8089b72ce9677a1e4a3488eeb9a9>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/ffbbcd28b1fd92213d8350e1b6418d3d998c7197>;
   shacl:targetClass dcat:DataService .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/08118c51bfc41b71d11f3a58e9410da74e6480e6> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.conformsto";
+  shacl:description "An established (technical) standard to which the Data Service conforms."@en;
+  shacl:name "conforms to"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path dc:conformsTo .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.applicablelegislation";
   shacl:description "The legislation that mandates the creation or management of the Data Service."@en;
@@ -613,12 +619,6 @@
   shacl:name "landing page"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path dcat:landingPage .
-
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/31d5e2e3aa43e34f78e4557b9a8c4e7507c4948b> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.applicationprofile";
-  shacl:class dc:Standard;
-  shacl:description "An established (technical) standard to which the Data Service conforms."@en;
-  shacl:name "application profile"@en;
-  shacl:path dc:conformsTo .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/3bde2663aaca96d953765ac2e525ef64710bf4d6> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.endpointURL";
   shacl:description "The root location or primary endpoint of the service (an IRI)."@en;
@@ -698,12 +698,6 @@
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path dcat:theme .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/97b367051882750fe2df0bc6fff5dd50ff0c94bd> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.applicationprofile";
-  shacl:description "An established (technical) standard to which the Data Service conforms."@en;
-  shacl:name "application profile"@en;
-  shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path dc:conformsTo .
-
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/998ce689a5bcc3e2764ff84a05255e34d91e8102> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.documentation";
   shacl:description "A page or document about this Data Service"@en;
   shacl:name "documentation"@en;
@@ -733,6 +727,12 @@
   shacl:name "format"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path dc:format .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/c84f7330b9538a899ebb875c44dc23c9882e74ac> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.conformsto";
+  shacl:class dc:Standard;
+  shacl:description "An established (technical) standard to which the Data Service conforms."@en;
+  shacl:name "conforms to"@en;
+  shacl:path dc:conformsTo .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/ca2bd10c893237fa342edb75240b08731acda92f> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.servesdataset";
   shacl:description "This property refers to a collection of data that this data service can distribute."@en;

@@ -164,7 +164,7 @@
       "@id": "http://data.europa.eu/r5r/applicableLegislation",
       "@type": "@id"
     },
-    "DataService.applicationProfile": {
+    "DataService.conformsTo": {
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/conformsTo",
       "@type": "@id"

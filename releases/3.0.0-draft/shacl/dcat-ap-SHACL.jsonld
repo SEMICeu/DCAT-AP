@@ -1508,6 +1508,18 @@
       "sh:closed": false,
       "sh:property": [
         {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/08118c51bfc41b71d11f3a58e9410da74e6480e6",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.conformsto",
+          "sh:description": {
+            "en": "An established (technical) standard to which the Data Service conforms."
+          },
+          "sh:name": {
+            "en": "conforms to"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/conformsTo"
+        },
+        {
           "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb",
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.applicablelegislation",
           "sh:description": {
@@ -1554,18 +1566,6 @@
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://www.w3.org/ns/dcat#landingPage"
-        },
-        {
-          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/31d5e2e3aa43e34f78e4557b9a8c4e7507c4948b",
-          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.applicationprofile",
-          "sh:class": "http://purl.org/dc/terms/Standard",
-          "sh:description": {
-            "en": "An established (technical) standard to which the Data Service conforms."
-          },
-          "sh:name": {
-            "en": "application profile"
-          },
-          "sh:path": "http://purl.org/dc/terms/conformsTo"
         },
         {
           "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/3bde2663aaca96d953765ac2e525ef64710bf4d6",
@@ -1724,18 +1724,6 @@
           "sh:path": "http://www.w3.org/ns/dcat#theme"
         },
         {
-          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/97b367051882750fe2df0bc6fff5dd50ff0c94bd",
-          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.applicationprofile",
-          "sh:description": {
-            "en": "An established (technical) standard to which the Data Service conforms."
-          },
-          "sh:name": {
-            "en": "application profile"
-          },
-          "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "http://purl.org/dc/terms/conformsTo"
-        },
-        {
           "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/998ce689a5bcc3e2764ff84a05255e34d91e8102",
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.documentation",
           "sh:description": {
@@ -1794,6 +1782,18 @@
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://purl.org/dc/terms/format"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/c84f7330b9538a899ebb875c44dc23c9882e74ac",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.conformsto",
+          "sh:class": "http://purl.org/dc/terms/Standard",
+          "sh:description": {
+            "en": "An established (technical) standard to which the Data Service conforms."
+          },
+          "sh:name": {
+            "en": "conforms to"
+          },
+          "sh:path": "http://purl.org/dc/terms/conformsTo"
         },
         {
           "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/ca2bd10c893237fa342edb75240b08731acda92f",
