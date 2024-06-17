@@ -62,7 +62,7 @@
 		    name: "Anastasia Sofou",
 		      
 		      
-		    company: "Traysys International",
+		    company: "Trasys International",
 		      
 		      
 		    }
@@ -123,7 +123,7 @@
       edDraftURI: "https://semiceu.github.io/DCAT-AP/releases/3.0.0",
       latestVersion: "https://github.com/SEMICeu/DCAT-AP/tree/master/releases/2.1.1",
       specStatus: "base",
-      publishDate: "2024-02-12",
+      publishDate: "2024-06-14",
       editors: myeditors,
       authors: myauthors,
       otherLinks: [
@@ -285,7 +285,7 @@ In the past decade, DCAT-AP has grown from a single specification to a whole eco
 
 <h3>Scope of the Application Profile</h3>
 <p>
-The Application Profile specified in this document is based on the specification of the Data Catalog Vocabulary (DCAT) [[vocab-dcat-3]] developed under the responsibility of the Dataset Exchange Working Group (DXWG) at W3C [[[DXWG]]]. 
+The Application Profile specified in this document is based on the specification of the Data Catalog Vocabulary (DCAT) [[vocab-dcat-3]] developed under the responsibility of the [[[DXWG]]] (DXWG) at W3C. 
 </p><p>
 The objective of this work is to produce a profile of DCAT based on numerous requests for change coming from real-world implementations of the specification listed on GitHub since the previous release. For that the DCAT specification is extended with improved definitions, usage notes and usages constraints such as cardinalities for properties and the usage of controlled vocabularies.  Additional classes and properties from other well-known vocabularies are re-used where necessary.
 </p><p>
@@ -396,9 +396,9 @@ This document is the result of the major semantic change release process describ
     <h2>Status</h2>
         <p>
 <!-- readd when SEMIC has a codelist about it process 
-	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsCR">Candidate Recommendation</a> published at 2024-02-12.
+	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsW3C">SEMIC Recommendation</a> published at 2024-06-14.
 -->
-	This application profile has the status Candidate Recommendation published at 2024-02-12.
+	This application profile has the status SEMIC Recommendation published at 2024-06-14.
         </p>
         <p>
             Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/CHANGELOG.html">Changelog</a>.
@@ -501,8 +501,7 @@ A <strong>Data Portal</strong> is a Web-based system that contains a data catalo
     <h2>Overview</h2>
     
 <p>
-DCAT-AP is a DCAT profile for sharing information about Catalogues containing Datasets and Data Services descriptions in Europe. The core classes of the Application Profile are thus the classes Catalogue, Dataset, Distribution and Data Service. DCAT-AP allows Catalogues of only Datasets, but also Catalogues of only Data Services, but usually it will be a mixture of both. Dataset Series are introduced to further organise the Datasets within a Catalogue. Datasets that are a member of a Dataset Series have additional constraints beyond those applicable for Dataset.
-These constraints are expressed in the class Dataset member of Dataset Series.
+DCAT-AP is a DCAT profile for sharing information about Catalogues containing Datasets and Data Services descriptions in Europe. The core classes of the Application Profile are thus the classes Catalogue, Dataset, Distribution and Data Service. DCAT-AP allows Catalogues of only Datasets, but also Catalogues of only Data Services, but usually it will be a mixture of both. Dataset Series are introduced to further organise the Datasets within a Catalogue. 
 </p><p>
 The properties of the core classes may enforce the existence of other classes. One such important class is the class Agent. However in contrast to the core classes, DCAT-AP leaves a lot of freedom to the implementors to shape them to their needs. Only minimal expectations are expressed by DCAT-AP.
 </p><p>
@@ -564,6 +563,8 @@ The cardinalities and qualifications are included in the figure.
 			      <a href="#Linguisticsystem">Linguistic system</a> |
 			      <a href="#Literal">Literal</a> |
 			      <a href="#Mediatype">Media type</a> |
+			      <a href="#MediaType">Media Type</a> |
+			      <a href="#MediaTypeorExtent">Media Type or Extent</a> |
 			      <a href="#Periodoftime">Period of time</a> |
 			      <a href="#Policy">Policy</a> |
 			      <a href="#ProvenanceStatement">Provenance Statement</a> |
@@ -577,7 +578,7 @@ The cardinalities and qualifications are included in the figure.
                         <p>
                             And supported by these datatypes:
                             <br />
-                            | <a href="#MediaType">Media Type</a> | <a href="#MediaTypeorExtent">Media Type or Extent</a> | <a href="#TemporalLiteral">Temporal Literal</a> | <a href="#Timeinstant">Time instant</a> | <a href="#xsd%3AdateTime">xsd:dateTime</a> | <a href="#xsd%3Adecimal">xsd:decimal</a> | <a href="#xsd%3Aduration">xsd:duration</a> | <a href="#xsd%3AhexBinary">xsd:hexBinary</a> | <a href="#xsd%3AnonNegativeInteger">xsd:nonNegativeInteger</a> |
+                            | <a href="#TemporalLiteral">Temporal Literal</a> | <a href="#Timeinstant">Time instant</a> | <a href="#xsd%3AdateTime">xsd:dateTime</a> | <a href="#xsd%3Adecimal">xsd:decimal</a> | <a href="#xsd%3Aduration">xsd:duration</a> | <a href="#xsd%3AhexBinary">xsd:hexBinary</a> | <a href="#xsd%3AnonNegativeInteger">xsd:nonNegativeInteger</a> |
                         </p>
                 
     </div>
@@ -2367,7 +2368,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                     0..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    The original metadata that was used in creating metadata for the Dataset.
+                                    The original metadata that was used in creating metadata for the Dataset, Data Service or Dataset Series.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -2761,9 +2762,10 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                         <dd>
                             For this entity the following properties are defined: <a href="#DataService.accessrights">access rights</a>
                             , <a href="#DataService.applicablelegislation">applicable legislation</a>
-                            , <a href="#DataService.applicationprofile">application profile</a>
+                            , <a href="#DataService.conformsto">conforms to</a>
                             , <a href="#DataService.contactpoint">contact point</a>
                             , <a href="#DataService.description">description</a>
+                            , <a href="#DataService.documentation">documentation</a>
                             , <a href="#DataService.endpointdescription">endpoint description</a>
                             , <a href="#DataService.endpointURL">endpoint URL</a>
                             , <a href="#DataService.format">format</a>
@@ -2918,13 +2920,13 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                 </td>
                             </tr>
                         
-                            <tr id="DataService.applicationprofile"
+                            <tr id="DataService.conformsto"
                                 typeof="rdfs:Property"
                                 resource="http://purl.org/dc/terms/conformsTo"
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20application profile%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.0%23DataService.applicationprofile" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20conforms to%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.0%23DataService.conformsto" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -2934,7 +2936,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                            data-toggle="tooltip"
                                            data-content="http://purl.org/dc/terms/conformsTo"
                                            data-placement="right">
-                                        application profile</a>
+                                        conforms to</a>
                                 </td>
                                 <td>
                                     
@@ -3070,6 +3072,55 @@ For instance the data service adheres to the OGC WFS API standard, while the ass
 				        <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_description">E</a>
 				       
                                     
+                                </td>
+                            </tr>
+                        
+                            <tr id="DataService.documentation"
+                                typeof="rdfs:Property"
+                                resource="http://xmlns.com/foaf/0.1/page"
+                                class="class mandatory">
+<!--
+                                <td>
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20documentation%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.0%23DataService.documentation" target="_blank" rel="noopener noreferrer" >
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+--->
+                                <td>
+                                        <a href="http://xmlns.com/foaf/0.1/page"
+                                           data-toggle="tooltip"
+                                           data-content="http://xmlns.com/foaf/0.1/page"
+                                           data-placement="right">
+                                        documentation</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Document" data-placement="right">Document</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    A page or document about this Data Service
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+				       P
+				    
                                 </td>
                             </tr>
                         
@@ -3627,7 +3678,7 @@ For instance the data service adheres to the OGC WFS API standard, while the ass
                         Usage Note
                     </dt>
                     <dd>
-                        If a Dataset is used as part of a Dataset Series, the properties listed below can be used additionally, or slightly differently to those listed for the Dataset outside of a Dataset Series.
+                        If a Dataset is used as part of a Dataset Series, the usage of the properties listed below must be coherent with the associated Dataset Series.
 For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                     </dd>
                 
@@ -4356,7 +4407,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                     
                                 </td>
                                 <td>
-                                    
+                                    0..*
                                 </td>
                                 <td property="rdfs:comment">
                                     A dataset series of which the dataset is part.
@@ -4668,7 +4719,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                     A secondary identifier of the Dataset
                                 </td>
                                 <td property="skos:scopeNote">
-                                    Examples are  MAST/ADS [[MASTADS]], DataCite [[DATACITE]], DOI [[DOI]], EZID [[EZID]] or W3ID [[W3ID]].
+                                    Examples are  MAST/ADS [[MASTADS]], DOI [[DOI]], EZID [[EZID]] or W3ID [[W3ID]].
                                 </td>
 				<!--
                                 <td>
@@ -5115,7 +5166,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                     
                                 </td>
                                 <td>
-                                    0..*
+                                    0..1
                                 </td>
                                 <td property="rdfs:comment">
                                     The minimum spatial separation resolvable in a dataset, measured in meters.
@@ -5217,7 +5268,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                     
                                 </td>
                                 <td>
-                                    0..*
+                                    0..1
                                 </td>
                                 <td property="rdfs:comment">
                                     The minimum time period resolvable in the dataset.
@@ -5370,7 +5421,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                     
                                 </td>
                                 <td>
-                                    0..1
+                                    0..*
                                 </td>
                                 <td property="rdfs:comment">
                                     A type of the Dataset.
@@ -5421,7 +5472,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                     
                                 </td>
                                 <td>
-                                    0..*
+                                    0..1
                                 </td>
                                 <td property="rdfs:comment">
                                     The version indicator (name or identifier) of a resource.
@@ -6614,7 +6665,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 <td>
                                     
                                         
-                                            <a href="#Mediatype" data-placement="right">Media type</a>
+                                            <a href="#MediaType" data-placement="right">Media Type</a>
                                         
                                     
                                 </td>
@@ -7329,7 +7380,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                     
                                 </td>
                                 <td>
-                                    0..*
+                                    0..1
                                 </td>
                                 <td property="rdfs:comment">
                                     The minimum spatial separation resolvable in a dataset distribution, measured in meters.
@@ -7429,7 +7480,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                     
                                 </td>
                                 <td>
-                                    0..*
+                                    0..1
                                 </td>
                                 <td property="rdfs:comment">
                                     The minimum time period resolvable in the dataset distribution.
@@ -7978,6 +8029,10 @@ This is not equal to the release date of the oldest dataset in the collection of
 
 
 
+
+
+
+
    
         <section>
             <h3 id="Relationship">
@@ -8352,9 +8407,16 @@ They are included in the Application Profile because they form the range of prop
                     Definition
                 </dt>
                 <dd>
-                    
+                    An idea or notion; a unit of thought. 
                 </dd>
                 
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        In DCAT-AP, a Concept is used to denote codes within a codelist. In section [[[#controlled-vocs]]] the expectations are elaborated in more detail.
+                    </dd>
                 
                 
                     <dt>
@@ -8487,9 +8549,16 @@ They are included in the Application Profile because they form the range of prop
                     Definition
                 </dt>
                 <dd>
-                    
+                    An aggregation of one or more SKOS concepts.
                 </dd>
                 
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        In DCAT-AP, a Concept Scheme is used to denote a codelist. In section [[[#controlled-vocs]]] the expectations are elaborated in more detail.
+                    </dd>
                 
                 
                     <dt>
@@ -9077,6 +9146,92 @@ In this data specification the use is restricted to instances of this class that
 
    
         <section>
+            <h3 id="MediaType">
+                <a href="http://purl.org/dc/terms/MediaType"
+                   data-toggle="tooltip"
+                   data-content="http://purl.org/dc/terms/MediaType"
+                   data-placement="right">Media Type</a>
+
+            </h3>
+	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
+                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20MediaType&body=Explain%20your%20issue"}}>
+                   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+		</a>
+		-->
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    A file format or physical medium.
+                </dd>
+                
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                    <dd>
+                        This specification does not impose any additional requirements to properties for this entity.
+                    </dd>
+                
+            </dl>
+        </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="MediaTypeorExtent">
+                <a href="http://purl.org/dc/terms/MediaTypeOrExtent"
+                   data-toggle="tooltip"
+                   data-content="http://purl.org/dc/terms/MediaTypeOrExtent"
+                   data-placement="right">Media Type or Extent</a>
+
+            </h3>
+	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
+                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20MediaTypeOrExtent&body=Explain%20your%20issue"}}>
+                   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+		</a>
+		-->
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    A media type or extent.
+                </dd>
+                
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                    <dd>
+                        This specification does not impose any additional requirements to properties for this entity.
+                    </dd>
+                
+            </dl>
+        </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
             <h3 id="Periodoftime">
                 <a href="http://purl.org/dc/terms/PeriodOfTime"
                    data-toggle="tooltip"
@@ -9626,7 +9781,7 @@ In this data specification the use is restricted to instances of this class that
                     Definition
                 </dt>
                 <dd>
-                    A standard or other specification to which a Dataset or Distribution conforms.
+                    A standard or other specification to which a resource conforms.
                 </dd>
                 
                 
@@ -9673,38 +9828,6 @@ In this data specification the use is restricted to instances of this class that
 	    </thead>
 	    <tbody class="supertype">
             
-		<tr><td>
-                   <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20MediaType&body=Explain%20your%20issue"}}>
-                     <img src="html/callout.png" loading="lazy" alt="(create issue)" width="50" height="50"/>
-		   </a>
-		</td><td>
-                
-                    <div id="MediaType">
-                        <a href="http://purl.org/dc/terms/MediaType"
-                           data-toggle="tooltip"
-                           data-content="http://purl.org/dc/terms/MediaType"
-                           data-placement="right">Media Type</a>
-                    </div>
-                
-		</td><td>
-                    A file format or physical medium.
-		</td></tr>
-		<tr><td>
-                   <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20MediaTypeOrExtent&body=Explain%20your%20issue"}}>
-                     <img src="html/callout.png" loading="lazy" alt="(create issue)" width="50" height="50"/>
-		   </a>
-		</td><td>
-                
-                    <div id="MediaTypeorExtent">
-                        <a href="http://purl.org/dc/terms/MediaTypeOrExtent"
-                           data-toggle="tooltip"
-                           data-content="http://purl.org/dc/terms/MediaTypeOrExtent"
-                           data-placement="right">Media Type or Extent</a>
-                    </div>
-                
-		</td><td>
-                    A media type or extent.
-		</td></tr>
 		<tr><td>
                    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20TemporalLiteral&body=Explain%20your%20issue"}}>
                      <img src="html/callout.png" loading="lazy" alt="(create issue)" width="50" height="50"/>
@@ -9890,18 +10013,18 @@ These criteria do not intend to define a set of requirements for controlled voca
 	<thead><tr><th>Property URI</th><th>Used for Class</th><th>Vocabulary name</th><th>Usage note</th></tr></thead>
 	<tbody>
 		<tr><td>dcat:mediaType</td><td><a href="#Distribution">Distribution</a></td><td><a href="http://www.iana.org/assignments/media-types/media-types.xhtml">IANA Media Types</a></td><td></td></tr>
-		<tr><td>dcat:theme</td><td><a href="#Dataset">Dataset</a></td><td><a href="http://publications.europa.eu/resource/authority/data-theme">Dataset Theme Vocabulary</a></td><td>The values to be used for this property are the URIs of the concepts in the vocabulary.</td></tr>
+		<tr><td>dcat:theme</td><td><a href="#Dataset">Dataset</a>, <a href="#DataService">Data Service</a>, <a href="#Catalogue">Catalogue</a></td><td><a href="http://publications.europa.eu/resource/authority/data-theme">Dataset Theme Vocabulary</a></td><td>The values to be used for this property are the URIs of the concepts in the vocabulary.</td></tr>
 		<tr><td>dct:accrualPeriodicity</td><td><a href="#Dataset">Dataset</a>,<a href="#DatasetSeries">Dataset Series</a></td><td><a href="http://publications.europa.eu/resource/authority/frequency">EU Vocabularies Frequency Named Authority List</a></td><td></td></tr>
 		<tr><td>dct:format</td><td><a href="#Distribution">Distribution</a>,<a href="#DataService">Data Service </a></td><td><a href="http://publications.europa.eu/resource/authority/file-type">EU Vocabularies File Type Named Authority List</a></td><td></td></tr>
 		<tr><td>dct:language</td><td><a href="#Catalogue">Catalogue</a>,<a href="#Dataset">Dataset</a>, <a href="#CatalogueRecord">Catalogue Records</a>, <a href="#Distribution">Distribution</a></td><td><a href="http://publications.europa.eu/resource/authority/language">EU Vocabularies Languages Named Authority List</a></td><td></td></tr>
-		<tr><td>dct:publisher</td><td><a href="#Catalogue">Catalogue</a>,<a href="#Dataset">Dataset</a>,<a href="#DatasetSeries">Dataset Series</a></td><td><a href="http://publications.europa.eu/resource/authority/corporate-body">EU Vocabularies Corporate bodies Named Authority List</a></td><td>The Corporate bodies NAL must be used for European institutions and a small set of international organisations. In case of other types of organisations, national, regional or local vocabularies should be used.</td></tr>
+		<tr><td>dct:publisher</td><td><a href="#Catalogue">Catalogue</a>,<a href="#Dataset">Dataset</a>,<a href="#DatasetSeries">Dataset Series</a>,<a href="#DataService">Data Service</a></td><td><a href="http://publications.europa.eu/resource/authority/corporate-body">EU Vocabularies Corporate bodies Named Authority List</a></td><td>The Corporate bodies NAL must be used for European institutions and a small set of international organisations. In case of other types of organisations, national, regional or local vocabularies should be used.</td></tr>
 		<tr><td>dct:spatial</td><td><a href="#Catalogue">Catalogue</a>,<a href="#Dataset">Dataset</a>,<a href="#DatasetSeries">Dataset Series</a></td><td><a href="http://publications.europa.eu/resource/authority/continent/">EU Vocabularies Continents Named Authority List</a>, <a href="http://publications.europa.eu/resource/authority/country">EU Vocabularies Countries Named Authority List</a>, <a href="http://publications.europa.eu/resource/authority/place/">EU Vocabularies Places Named Authority List</a>, <a href="http://sws.geonames.org/">Geonames</a></td><td> The EU Vocabularies Name Authority Lists must be used for continents, countries and places that are in those lists; if a particular location is not in one of the mentioned Named Authority Lists, Geonames URIs must be used.</td></tr>
 		<tr><td>adms:status</td><td><a href="#Distribution">Distribution</a></td><td><a href="http://publications.europa.eu/resource/authority/distribution-status">EU Vocabularies Distribution Status</a></td><td></td></tr>
 		<tr><td>dct:type</td><td><a href="#Agent">Agent</a></td><td><a href="http://purl.org/adms/publishertype/1.0">ADMS publisher type</a> vocabulary</td><td> The list of terms in the ADMS publisher type vocabulary is included in the ADMS specification</td></tr>
 		<tr><td>dct:type</td><td><a href="#LicenceDocument">Licence Document</a></td><td><a href="http://purl.org/adms/licencetype/1.0">ADMS licence type vocabulary</a></td><td> The list of terms in the ADMS licence type vocabulary is included in the ADMS specification</td></tr>
 		<tr><td>dcatap:availability</td><td><a href="#Distribution">Distribution</a></td><td><a href="http://publications.europa.eu/resource/authority/planned-availability">Distribution availability vocabulary</a></td><td>The list of terms for the avalability levels of a dataset distribution in the DCAT-AP  specification.</td></tr>
 		<tr><td>spdx:algorithm</td><td><a href="#Checksum">Checksum</a></td><td><a href="https://spdx.org/rdf/terms/#d4e2129">Checksum algorithm members</a></td><td>The members listed are considered a controlled vocabulary of supported checksum algorithms.</td></tr>
-		<tr><td>dct:accessRights</td><td><a href="#Dataset">Dataset</a>, <a href="#DataService">Data Service</a></td><td><a href="http://publications.europa.eu/resource/authority/access-right">Access Rights Named Authority List</td><td>Use one of the following values (:public, :restricted, :non-public).</td></tr>
+		<tr><td>dct:accessRights</td><td><a href="#Dataset">Dataset</a>, <a href="#DataService">Data Service</a></td><td><a href="http://publications.europa.eu/resource/authority/access-right">Access Rights Named Authority List</td><td>Use one of the following values (:PUBLIC, :RESTRICTED, :NON_PUBLIC).</td></tr>
 	</tbody>
 </table>
 
@@ -9910,7 +10033,7 @@ These criteria do not intend to define a set of requirements for controlled voca
 <table id="table-cv" class="simple">
     <thead><tr><th>Property URI</th><th>Used for Class</th><th>Vocabulary name</th><th>Usage note</th></tr></thead>
     <tbody>
-<tr><td>dct:type</td><td><a href="#Dataset">Dataset</a></td><td><a href="http://publications.europa.eu/resource/dataset/dataset-type">Dataset-type authority table</a></td><td>This list of terms provide types of datasets. Its main scope is to support dataset categorisation of the EU Open Data Portal.</td></tr>
+<tr><td>dct:type</td><td><a href="#Dataset">Dataset</a></td><td><a href="http://publications.europa.eu/resource/authority/dataset-type">Dataset-type authority table</a></td><td>This list of terms provide types of datasets. Its main scope is to support dataset categorisation of the EU Open Data Portal.</td></tr>
     </tbody>
 </table>
 
@@ -9950,7 +10073,7 @@ In particular it is advised for [[FAIR]] data to consider CC BY 4.0 (the minimum
 <p></p>
 
 An assessment of data.europa.eu [[DEU]] in 2023 showed that there are different representations to indicate the same licence.
-To create a more harmonised experience throughout Europe, it is recommended to use the <a href="http://publications.europa.eu/resource/dataset/licence">NAL licence</a>
+To create a more harmonised experience throughout Europe, it is recommended to use the <a href="https://publications.europa.eu/resource/authority/licence">NAL licence</a>
 maintained by the Publications Office if allowed by national legislation.
 If local representations are used, then the equivalence with a licence in this NAL should be provided.
 This mapping is expressed as metadata to local representation.
@@ -10383,7 +10506,7 @@ It contains the dataset with actual life data, the yearly snapshots for 2023 and
   <section class="informative">
   <h2>Inverse properties</h2>
 
-The W3C DCAT specification introduces for some relationships two properties which are eachothers inverse. 
+The W3C DCAT specification introduces for some relationships two properties which are each other's inverse. 
 In general, this may lead to situations that data exchanges based on different DCAT profiles require reasoning to align. 
 
 <p/>
@@ -10397,7 +10520,7 @@ In line with these guidelines with the objective to reduce the burden of impleme
 When a property is subject to this W3C guideline then DCAT-AP will include only the use of this property and not the inverse.
 Implementers are still free to use the inverse to optimise their data management. 
 <p/>
-As note to this discussion: when exhanging DCAT as an RDF graph the impact of the directionality is reduced because
+As note to this discussion: when exchanging DCAT as an RDF graph the impact of the directionality is reduced because
 <ul>
 <li> RDF statements are non-ordered and grouping according to directionality is more for human readibility than technically enforced. 
 </li>
@@ -10963,46 +11086,48 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 				
 					
 						
-					
-					
-						
-					
-					
-						
 							<tr>
 								<td><a href="#Concept">Concept</a></td>
 								<td><div class="shorten">http://www.w3.org/2004/02/skos/core#Concept</div></td>
-								<td></td>
+								<td>Mandatory</td>
 								<td><a href="#Concept.preferredlabel">preferred label </a></td>
 								<td><div class="shorten">http://www.w3.org/2004/02/skos/core#prefLabel</div></td>
 							</tr>
 						
 					
+					
+						
+					
+					
+						
+					
 				
 			</tr>
 		
 				
-					
-						
-					
-					
-						
-					
 					
 						
 							<tr>
 								<td><a href="#ConceptScheme">Concept Scheme</a></td>
 								<td><div class="shorten">http://www.w3.org/2004/02/skos/core#ConceptScheme</div></td>
-								<td></td>
+								<td>Mandatory</td>
 								<td><a href="#ConceptScheme.title">title </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/title</div></td>
 							</tr>
+						
+					
+					
+						
+					
+					
 						
 					
 				
 			</tr>
 		
 				
+					
+						
 					
 						
 					
@@ -11060,7 +11185,7 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 								<td><a href="#DataService">Data Service</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/dcat#DataService</div></td>
 								<td>Recommended</td>
-								<td><a href="#DataService.applicationprofile">application profile </a></td>
+								<td><a href="#DataService.conformsto">conforms to </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/conformsTo</div></td>
 							</tr>
 						
@@ -11073,6 +11198,8 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 								<td><a href="#DataService.contactpoint">contact point </a></td>
 								<td><div class="shorten">http://www.w3.org/ns/dcat#contactPoint</div></td>
 							</tr>
+						
+					
 						
 					
 						
@@ -11152,7 +11279,7 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 							<tr>
 								<td><a href="#DataService">Data Service</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/dcat#DataService</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#DataService.applicablelegislation">applicable legislation </a></td>
 								<td><div class="shorten">http://data.europa.eu/r5r/applicableLegislation</div></td>
 							</tr>
@@ -11169,6 +11296,16 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 								<td>Optional</td>
 								<td><a href="#DataService.description">description </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/description</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#DataService">Data Service</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#DataService</div></td>
+								<td>Optional</td>
+								<td><a href="#DataService.documentation">documentation </a></td>
+								<td><div class="shorten">http://xmlns.com/foaf/0.1/page</div></td>
 							</tr>
 						
 					
@@ -11737,6 +11874,14 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 						
 					
 						
+							<tr>
+								<td><a href="#DatasetSeries">Dataset Series</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#DatasetSeries</div></td>
+								<td>Mandatory</td>
+								<td><a href="#DatasetSeries.description">description </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/description</div></td>
+							</tr>
+						
 					
 						
 					
@@ -11802,14 +11947,6 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 						
 					
 						
-							<tr>
-								<td><a href="#DatasetSeries">Dataset Series</a></td>
-								<td><div class="shorten">http://www.w3.org/ns/dcat#DatasetSeries</div></td>
-								<td>Recommended</td>
-								<td><a href="#DatasetSeries.temporalcoverage">temporal coverage </a></td>
-								<td><div class="shorten">http://purl.org/dc/terms/temporal</div></td>
-							</tr>
-						
 					
 						
 					
@@ -11826,14 +11963,6 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 					
 						
 					
-						
-							<tr>
-								<td><a href="#DatasetSeries">Dataset Series</a></td>
-								<td><div class="shorten">http://www.w3.org/ns/dcat#DatasetSeries</div></td>
-								<td>Optional</td>
-								<td><a href="#DatasetSeries.description">description </a></td>
-								<td><div class="shorten">http://purl.org/dc/terms/description</div></td>
-							</tr>
 						
 					
 						
@@ -11870,6 +11999,14 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 							</tr>
 						
 					
+						
+							<tr>
+								<td><a href="#DatasetSeries">Dataset Series</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#DatasetSeries</div></td>
+								<td>Optional</td>
+								<td><a href="#DatasetSeries.temporalcoverage">temporal coverage </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/temporal</div></td>
+							</tr>
 						
 					
 						
@@ -11943,13 +12080,29 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 						
 					
 						
-					
+							<tr>
+								<td><a href="#Distribution">Distribution</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#Distribution</div></td>
+								<td>Recommended</td>
+								<td><a href="#Distribution.availability">availability </a></td>
+								<td><div class="shorten">http://data.europa.eu/r5r/availability</div></td>
+							</tr>
 						
 					
 						
 					
 						
 					
+						
+					
+						
+							<tr>
+								<td><a href="#Distribution">Distribution</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#Distribution</div></td>
+								<td>Recommended</td>
+								<td><a href="#Distribution.description">description </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/description</div></td>
+							</tr>
 						
 					
 						
@@ -12024,14 +12177,6 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 						
 					
 						
-							<tr>
-								<td><a href="#Distribution">Distribution</a></td>
-								<td><div class="shorten">http://www.w3.org/ns/dcat#Distribution</div></td>
-								<td>Optional</td>
-								<td><a href="#Distribution.availability">availability </a></td>
-								<td><div class="shorten">http://data.europa.eu/r5r/availability</div></td>
-							</tr>
-						
 					
 						
 							<tr>
@@ -12063,14 +12208,6 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 							</tr>
 						
 					
-						
-							<tr>
-								<td><a href="#Distribution">Distribution</a></td>
-								<td><div class="shorten">http://www.w3.org/ns/dcat#Distribution</div></td>
-								<td>Optional</td>
-								<td><a href="#Distribution.description">description </a></td>
-								<td><div class="shorten">http://purl.org/dc/terms/description</div></td>
-							</tr>
 						
 					
 						
@@ -12400,6 +12537,28 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 			</tr>
 		
 				
+					<tr>
+						<td><a href="#MediaType">Media Type</a></td>
+						<td><div class="shorten">http://purl.org/dc/terms/MediaType</div></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				
+			</tr>
+		
+				
+					<tr>
+						<td><a href="#MediaTypeorExtent">Media Type or Extent</a></td>
+						<td><div class="shorten">http://purl.org/dc/terms/MediaTypeOrExtent</div></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				
+			</tr>
+		
+				
 					
 						
 					
@@ -12658,12 +12817,6 @@ Past and current contributors are :
 	 	Casper Gras
 		, 
            
-	 	Hagar:Lowenthal 
-		, 
-           
-	 	Bart Hanssens
-		, 
-           
 	 	Bart Hanssens
 		, 
            
@@ -12697,6 +12850,9 @@ Past and current contributors are :
 	 	Giorgia Lodi
 		, 
            
+	 	Hagar Lowenthal
+		, 
+           
 	 	Peter Lubrich
 		, 
            
@@ -12713,9 +12869,6 @@ Past and current contributors are :
 		, 
            
 	 	Matthias Palmer
-		, 
-           
-	 	Andrea Perego
 		, 
            
 	 	Andrea Perego

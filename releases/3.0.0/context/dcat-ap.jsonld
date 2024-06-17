@@ -164,7 +164,7 @@
       "@id": "http://data.europa.eu/r5r/applicableLegislation",
       "@type": "@id"
     },
-    "DataService.applicationProfile": {
+    "DataService.conformsTo": {
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/conformsTo",
       "@type": "@id"
@@ -177,6 +177,11 @@
     "DataService.description": {
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/description"
+    },
+    "DataService.documentation": {
+      "@container": "@set",
+      "@id": "http://xmlns.com/foaf/0.1/page",
+      "@type": "@id"
     },
     "DataService.endpointDescription": {
       "@container": "@set",
@@ -351,7 +356,6 @@
       "@type": "@id"
     },
     "Dataset.spatialResolution": {
-      "@container": "@set",
       "@id": "http://www.w3.org/ns/dcat#spatialResolutionInMeters",
       "@type": "http://www.w3.org/2001/XMLSchema#decimal"
     },
@@ -361,7 +365,6 @@
       "@type": "@id"
     },
     "Dataset.temporalResolution": {
-      "@container": "@set",
       "@id": "http://www.w3.org/ns/dcat#temporalResolution",
       "@type": "http://www.w3.org/2001/XMLSchema#duration"
     },
@@ -375,11 +378,11 @@
       "@id": "http://purl.org/dc/terms/title"
     },
     "Dataset.type": {
+      "@container": "@set",
       "@id": "http://purl.org/dc/terms/type",
       "@type": "@id"
     },
     "Dataset.version": {
-      "@container": "@set",
       "@id": "http://www.w3.org/ns/dcat#version"
     },
     "Dataset.versionNotes": {
@@ -521,7 +524,6 @@
       "@type": "@id"
     },
     "Distribution.spatialResolution": {
-      "@container": "@set",
       "@id": "http://www.w3.org/ns/dcat#spatialResolutionInMeters",
       "@type": "http://www.w3.org/2001/XMLSchema#decimal"
     },
@@ -530,7 +532,6 @@
       "@type": "@id"
     },
     "Distribution.temporalResolution": {
-      "@container": "@set",
       "@id": "http://www.w3.org/ns/dcat#temporalResolution",
       "@type": "http://www.w3.org/2001/XMLSchema#duration"
     },
