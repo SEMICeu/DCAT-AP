@@ -18,7 +18,7 @@
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dcatap: <http://data.europa.eu/r5r> .
+@prefix dcatap: <http://data.europa.eu/r5r/> .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/html/shacl/shapes.ttl> 
     dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
