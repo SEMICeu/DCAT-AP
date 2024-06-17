@@ -356,7 +356,6 @@
       "@type": "@id"
     },
     "Dataset.spatialResolution": {
-      "@container": "@set",
       "@id": "http://www.w3.org/ns/dcat#spatialResolutionInMeters",
       "@type": "http://www.w3.org/2001/XMLSchema#decimal"
     },
@@ -366,7 +365,6 @@
       "@type": "@id"
     },
     "Dataset.temporalResolution": {
-      "@container": "@set",
       "@id": "http://www.w3.org/ns/dcat#temporalResolution",
       "@type": "http://www.w3.org/2001/XMLSchema#duration"
     },
@@ -526,7 +524,6 @@
       "@type": "@id"
     },
     "Distribution.spatialResolution": {
-      "@container": "@set",
       "@id": "http://www.w3.org/ns/dcat#spatialResolutionInMeters",
       "@type": "http://www.w3.org/2001/XMLSchema#decimal"
     },
@@ -535,7 +532,6 @@
       "@type": "@id"
     },
     "Distribution.temporalResolution": {
-      "@container": "@set",
       "@id": "http://www.w3.org/ns/dcat#temporalResolution",
       "@type": "http://www.w3.org/2001/XMLSchema#duration"
     },

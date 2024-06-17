@@ -962,6 +962,7 @@
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/0b40e829101914fa8381318b35a5205a2a465453>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/0bcb30d1f00a2e13ee04c77dbcb8018f2ef83d5b>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/10c0ca4deadefb51c529f56ee01caf9bd2639ef4>,
+    <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/1522e6818f6f9d132e873991b42dd4567fccc6cf>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/1e2ff89f72ca069b1668489d90cb44ba553353d5>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/21ff3c331383c15dedf63f9f30c0818ccac87497>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/2961dd5b80e9c0f6242da8cf9eea53ad610d7602>,
@@ -1025,6 +1026,7 @@
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/f6f077451f13ccf5d721838425fcc37f6cebfe48>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/f8b02efd063b8089b72ce9677a1e4a3488eeb9a9>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/fb900ce4a3c69358a055e1f0d365fba049164374>,
+    <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/fcf80b3465d802bf69af0e66cf87973c64d4130a>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/ffbbcd28b1fd92213d8350e1b6418d3d998c7197>;
   shacl:targetClass dcat:Dataset .
 
@@ -1075,6 +1077,12 @@
   shacl:name "access rights"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path dc:accessRights .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/1522e6818f6f9d132e873991b42dd4567fccc6cf> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.temporalresolution";
+  shacl:description "The minimum time period resolvable in the dataset."@en;
+  shacl:maxCount 1;
+  shacl:name "temporal resolution"@en;
+  shacl:path dcat:temporalResolution .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/1e2ff89f72ca069b1668489d90cb44ba553353d5> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.version";
   shacl:description "The version indicator (name or identifier) of a resource."@en;
@@ -1454,6 +1462,12 @@
   shacl:name "qualified relation"@en;
   shacl:path dcat:qualifiedRelation .
 
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/fcf80b3465d802bf69af0e66cf87973c64d4130a> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.spatialresolution";
+  shacl:description "The minimum spatial separation resolvable in a dataset, measured in meters."@en;
+  shacl:maxCount 1;
+  shacl:name "spatial resolution"@en;
+  shacl:path dcat:spatialResolutionInMeters .
+
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/ffbbcd28b1fd92213d8350e1b6418d3d998c7197> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.landingpage";
   shacl:class foaf:Document;
   shacl:description "A web page that provides access to the Dataset, its Distributions and/or additional information."@en;
@@ -1466,6 +1480,7 @@
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/0796df7f5520ac6500217e81e434f9a755f64afe>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/0f6cb927d0d26f3819cba3fb903a075cd426180d>,
+    <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/1522e6818f6f9d132e873991b42dd4567fccc6cf>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/205ef114fb269b0d7632e25b317a3e579ffc3954>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/226b9cb0511ec6b8da045829e10d2676ddbb8375>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/23d4c038584493decec780192681ef61694bff7c>,
@@ -1519,7 +1534,8 @@
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/ed8e40725c55813428b73d8e5042c6affe821ea2>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/f30149ffb6ec9d00dd5866b052105729fa27d02a>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/f635b26fbf54b0114a70dd22929ed87f5f34b230>,
-    <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/f64ea9c4b32a8afd45dc2afdcea6722b56707974>;
+    <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/f64ea9c4b32a8afd45dc2afdcea6722b56707974>,
+    <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/fcf80b3465d802bf69af0e66cf87973c64d4130a>;
   shacl:targetClass dcat:Distribution .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/06ed12d1071a78728d10628eb2d072781559eb75> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.mediatype";
@@ -1545,6 +1561,12 @@
   shacl:description "The status of the distribution in the context of maturity lifecycle."@en;
   shacl:name "status"@en;
   shacl:path <http://www.w3.org/ns/adms#status> .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/1522e6818f6f9d132e873991b42dd4567fccc6cf> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.temporalresolution";
+  shacl:description "The minimum time period resolvable in the dataset distribution."@en;
+  shacl:maxCount 1;
+  shacl:name "temporal resolution"@en;
+  shacl:path dcat:temporalResolution .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/205ef114fb269b0d7632e25b317a3e579ffc3954> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.compressionformat";
   shacl:description "The format of the file in which the data is contained in a compressed form, e.g. to reduce the size of the downloadable file."@en;
@@ -1869,6 +1891,12 @@
   shacl:name "has policy"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path <http://www.w3.org/ns/odrl/2/hasPolicy> .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/fcf80b3465d802bf69af0e66cf87973c64d4130a> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.spatialresolution";
+  shacl:description "The minimum spatial separation resolvable in a dataset distribution, measured in meters."@en;
+  shacl:maxCount 1;
+  shacl:name "spatial resolution"@en;
+  shacl:path dcat:spatialResolutionInMeters .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:RelationshipShape> a shacl:NodeShape;
   shacl:closed false;

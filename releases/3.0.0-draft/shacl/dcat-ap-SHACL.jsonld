@@ -2020,6 +2020,18 @@
           "sh:path": "http://purl.org/dc/terms/accessRights"
         },
         {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/1522e6818f6f9d132e873991b42dd4567fccc6cf",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.temporalresolution",
+          "sh:description": {
+            "en": "The minimum time period resolvable in the dataset."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "temporal resolution"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#temporalResolution"
+        },
+        {
           "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/1e2ff89f72ca069b1668489d90cb44ba553353d5",
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.version",
           "sh:description": {
@@ -2776,6 +2788,18 @@
           "sh:path": "http://www.w3.org/ns/dcat#qualifiedRelation"
         },
         {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/fcf80b3465d802bf69af0e66cf87973c64d4130a",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.spatialresolution",
+          "sh:description": {
+            "en": "The minimum spatial separation resolvable in a dataset, measured in meters."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "spatial resolution"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#spatialResolutionInMeters"
+        },
+        {
           "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/ffbbcd28b1fd92213d8350e1b6418d3d998c7197",
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.landingpage",
           "sh:class": "http://xmlns.com/foaf/0.1/Document",
@@ -3114,6 +3138,18 @@
             "en": "status"
           },
           "sh:path": "http://www.w3.org/ns/adms#status"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/1522e6818f6f9d132e873991b42dd4567fccc6cf",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.temporalresolution",
+          "sh:description": {
+            "en": "The minimum time period resolvable in the dataset distribution."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "temporal resolution"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#temporalResolution"
         },
         {
           "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/205ef114fb269b0d7632e25b317a3e579ffc3954",
@@ -3762,6 +3798,18 @@
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://www.w3.org/ns/odrl/2/hasPolicy"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/fcf80b3465d802bf69af0e66cf87973c64d4130a",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.spatialresolution",
+          "sh:description": {
+            "en": "The minimum spatial separation resolvable in a dataset distribution, measured in meters."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "spatial resolution"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#spatialResolutionInMeters"
         }
       ],
       "sh:targetClass": "http://www.w3.org/ns/dcat#Distribution"
