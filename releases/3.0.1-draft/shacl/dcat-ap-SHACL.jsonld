@@ -1,0 +1,4015 @@
+{
+  "@context": {
+    "@vocab": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl",
+    "qb": "http://purl.org/linked-data/cube#",
+    "qb:codeList": {
+      "@id": "qb:codeList",
+      "@type": "@id"
+    },
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdf:first": {
+      "@type": "@id"
+    },
+    "rdf:rest": {
+      "@type": "@id"
+    },
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "rdfs:comment": {
+      "@id": "rdfs:comment"
+    },
+    "sh": "http://www.w3.org/ns/shacl#",
+    "sh:and": {
+      "@container": "@set",
+      "@id": "sh:and",
+      "@type": "@id"
+    },
+    "sh:class": {
+      "@id": "sh:class",
+      "@type": "@id"
+    },
+    "sh:datatype": {
+      "@id": "sh:datatype",
+      "@type": "@id"
+    },
+    "sh:description": {
+      "@container": "@language",
+      "@id": "sh:description"
+    },
+    "sh:hasValue": {
+      "@id": "sh:hasValue",
+      "@type": "@id"
+    },
+    "sh:in": {
+      "@container": "@set",
+      "@id": "sh:in",
+      "@type": "@id"
+    },
+    "sh:maxCount": {
+      "@id": "sh:maxCount",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "sh:minCount": {
+      "@id": "sh:minCount",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "sh:name": {
+      "@container": "@language",
+      "@id": "sh:name"
+    },
+    "sh:node": {
+      "@id": "sh:node",
+      "@type": "@id"
+    },
+    "sh:nodeKind": {
+      "@id": "sh:nodeKind",
+      "@type": "@id"
+    },
+    "sh:or": {
+      "@container": "@set",
+      "@id": "sh:or",
+      "@type": "@id"
+    },
+    "sh:path": {
+      "@id": "sh:path",
+      "@type": "@id"
+    },
+    "sh:property": {
+      "@id": "sh:property",
+      "@type": "@id"
+    },
+    "sh:severity": {
+      "@id": "sh:severity",
+      "@type": "@id"
+    },
+    "sh:targetClass": {
+      "@id": "sh:targetClass",
+      "@type": "@id"
+    },
+    "sh:uniqueLang": {
+      "@id": "sh:uniqueLang",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "shapes": {
+      "@id": "rdfs:member",
+      "@type": "@id"
+    },
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vl": "https://purl.eu/ns/shacl#",
+    "vl:message": {
+      "@container": "@language",
+      "@id": "vl:message"
+    }
+  },
+  "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl",
+  "shapes": [
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#eli:LegalResourceShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://data.europa.eu/eli/ontology#LegalResource"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:FrequencyShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://purl.org/dc/terms/Frequency"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LicenseDocumentShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LicenseDocumentShape/322371a77364a50f049d46180f6192532eea26dc",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#LicenceDocument.type",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "en": "A type of licence, e.g. indicating 'public domain' or 'royalties required'."
+          },
+          "sh:name": {
+            "en": "type"
+          },
+          "sh:path": "http://purl.org/dc/terms/type"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LicenseDocumentShape/4f381639bb6e021939f65b4f41409d1edaeade9b",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#LicenceDocument.type",
+          "sh:description": {
+            "en": "A type of licence, e.g. indicating 'public domain' or 'royalties required'."
+          },
+          "sh:name": {
+            "en": "type"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/type"
+        }
+      ],
+      "sh:targetClass": "http://purl.org/dc/terms/LicenseDocument"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LinguisticSystemShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://purl.org/dc/terms/LinguisticSystem"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LocationShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LocationShape/0ae2f89b0ca180c9b7eed510013f60fd9fa34f52",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Location.bbox",
+          "sh:description": {
+            "en": "The geographic bounding box of a resource."
+          },
+          "sh:name": {
+            "en": "bbox"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/dcat#bbox"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LocationShape/53c8e9f0fc79ab4ed706e31129a2b3e02f7edd22",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Location.geometry",
+          "sh:class": "http://www.w3.org/ns/locn#Geometry",
+          "sh:description": {
+            "en": "The corresponding geometry for a resource."
+          },
+          "sh:name": {
+            "en": "geometry"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#geometry"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LocationShape/ac645171f7bc10bfce0730166a193316727dcdf3",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Location.centroid",
+          "sh:description": {
+            "en": "The geographic center (centroid) of a resource."
+          },
+          "sh:name": {
+            "en": "centroid"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/dcat#centroid"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LocationShape/caa9d15ad38096046fd527702c7620800aea178b",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Location.centroid",
+          "sh:description": {
+            "en": "The geographic center (centroid) of a resource."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "centroid"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#centroid"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LocationShape/d0b958cd33e8ef1bc031edaf2859b44db128a644",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Location.geometry",
+          "sh:description": {
+            "en": "The corresponding geometry for a resource."
+          },
+          "sh:name": {
+            "en": "geometry"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/locn#geometry"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LocationShape/d75cb3222eabce83fa3e236344cbf419e465f10e",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Location.bbox",
+          "sh:description": {
+            "en": "The geographic bounding box of a resource."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "bbox"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#bbox"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LocationShape/dde6f1d3b53e457ed56cd01d51f110aea62f5d72",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Location.geometry",
+          "sh:description": {
+            "en": "The corresponding geometry for a resource."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "geometry"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#geometry"
+        }
+      ],
+      "sh:targetClass": "http://purl.org/dc/terms/Location"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:MediaTypeShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://purl.org/dc/terms/MediaType"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:mediaTypeShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://purl.org/dc/terms/MediaType"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:MediaTypeOrExtentShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://purl.org/dc/terms/MediaTypeOrExtent"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:PeriodOfTimeShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:PeriodOfTimeShape/238fde7d71612ea8f00826d9c60106d3ef9c4063",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Periodoftime.beginning",
+          "sh:description": {
+            "en": "The beginning of a period or interval."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "beginning"
+          },
+          "sh:path": "http://www.w3.org/2006/time#hasBeginning"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:PeriodOfTimeShape/343620e6c6e38873922b5acfdb46382ab0be183a",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Periodoftime.beginning",
+          "sh:description": {
+            "en": "The beginning of a period or interval."
+          },
+          "sh:name": {
+            "en": "beginning"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/2006/time#hasBeginning"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:PeriodOfTimeShape/3648a78b9b0570b660934474f131e41284725cd8",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Periodoftime.end",
+          "sh:description": {
+            "en": "The end of a period or interval."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "end"
+          },
+          "sh:path": "http://www.w3.org/2006/time#hasEnd"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:PeriodOfTimeShape/59fdfa4abfd9413716ffbdf9a27b9fdbf23d7772",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Periodoftime.startdate",
+          "sh:description": {
+            "en": "The start of the period."
+          },
+          "sh:name": {
+            "en": "start date"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/dcat#startDate"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:PeriodOfTimeShape/734ca37cb57eb7386e624ca5375d566ae94864ef",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Periodoftime.enddate",
+          "sh:description": {
+            "en": "The end of the period."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "end date"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#endDate"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:PeriodOfTimeShape/9053142781444816deeb00f184b765d8cb15b929",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Periodoftime.end",
+          "sh:class": "http://www.w3.org/2006/time#Instant",
+          "sh:description": {
+            "en": "The end of a period or interval."
+          },
+          "sh:name": {
+            "en": "end"
+          },
+          "sh:path": "http://www.w3.org/2006/time#hasEnd"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:PeriodOfTimeShape/c7fb86be0667a2402b275afe51fe509a49d6e4af",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Periodoftime.end",
+          "sh:description": {
+            "en": "The end of a period or interval."
+          },
+          "sh:name": {
+            "en": "end"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/2006/time#hasEnd"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:PeriodOfTimeShape/de859f6cb226ad795bc5b0dfa9777c0f6352efaf",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Periodoftime.enddate",
+          "sh:description": {
+            "en": "The end of the period."
+          },
+          "sh:name": {
+            "en": "end date"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/dcat#endDate"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:PeriodOfTimeShape/eb883e24d5d0a294a30545021f24e485d59d1e47",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Periodoftime.beginning",
+          "sh:class": "http://www.w3.org/2006/time#Instant",
+          "sh:description": {
+            "en": "The beginning of a period or interval."
+          },
+          "sh:name": {
+            "en": "beginning"
+          },
+          "sh:path": "http://www.w3.org/2006/time#hasBeginning"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:PeriodOfTimeShape/f72c3efebeb551122e98eb731aa0ec8af8b4c1b7",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Periodoftime.startdate",
+          "sh:description": {
+            "en": "The start of the period."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "start date"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#startDate"
+        }
+      ],
+      "sh:targetClass": "http://purl.org/dc/terms/PeriodOfTime"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:ProvenanceStatementShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://purl.org/dc/terms/ProvenanceStatement"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:RightsStatementShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://purl.org/dc/terms/RightsStatement"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:StandardShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://purl.org/dc/terms/Standard"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#spdx:ChecksumShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#spdx:ChecksumShape/18334d9daf21fe247c499aab3d04ddd1d4f391b7",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Checksum.checksumvalue",
+          "sh:description": {
+            "en": "A lower case hexadecimal encoded digest value produced using a specific algorithm."
+          },
+          "sh:name": {
+            "en": "checksum value"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://spdx.org/rdf/terms#checksumValue"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#spdx:ChecksumShape/3eab73d86ca644be3c17cec9470a00ee097d8515",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Checksum.checksumvalue",
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#hexBinary",
+          "sh:description": {
+            "en": "A lower case hexadecimal encoded digest value produced using a specific algorithm."
+          },
+          "sh:name": {
+            "en": "checksum value"
+          },
+          "sh:path": "http://spdx.org/rdf/terms#checksumValue"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#spdx:ChecksumShape/842b9830971c91bb7d9da12b52e0b63ac999367d",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Checksum.checksumvalue",
+          "sh:description": {
+            "en": "A lower case hexadecimal encoded digest value produced using a specific algorithm."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "checksum value"
+          },
+          "sh:path": "http://spdx.org/rdf/terms#checksumValue"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#spdx:ChecksumShape/9ab7a34ae99cd75fd914a221bacfffd1bb9cde4c",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Checksum.algorithm",
+          "sh:description": {
+            "en": "The algorithm used to produce the subject Checksum."
+          },
+          "sh:name": {
+            "en": "algorithm"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://spdx.org/rdf/terms#algorithm"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#spdx:ChecksumShape/9eeeae00a6e87149f282ea21e521ffb5231213ec",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Checksum.algorithm",
+          "sh:description": {
+            "en": "The algorithm used to produce the subject Checksum."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "algorithm"
+          },
+          "sh:path": "http://spdx.org/rdf/terms#algorithm"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#spdx:ChecksumShape/b3831d3cf6e8caed0030a127020e18b940a718c3",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Checksum.algorithm",
+          "sh:description": {
+            "en": "The algorithm used to produce the subject Checksum."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "algorithm"
+          },
+          "sh:path": "http://spdx.org/rdf/terms#algorithm"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#spdx:ChecksumShape/c0f60a484249a358c0632ef47551529f01cd5833",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Checksum.checksumvalue",
+          "sh:description": {
+            "en": "A lower case hexadecimal encoded digest value produced using a specific algorithm."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "checksum value"
+          },
+          "sh:path": "http://spdx.org/rdf/terms#checksumValue"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#spdx:ChecksumShape/d9bbeace53175a03bb5a338cafcf57eb351166d2",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Checksum.algorithm",
+          "sh:class": "http://spdx.org/rdf/terms#ChecksumAlgorithm",
+          "sh:description": {
+            "en": "The algorithm used to produce the subject Checksum."
+          },
+          "sh:name": {
+            "en": "algorithm"
+          },
+          "sh:path": "http://spdx.org/rdf/terms#algorithm"
+        }
+      ],
+      "sh:targetClass": "http://spdx.org/rdf/terms#Checksum"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#ChecksumAlgorithmShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://spdx.org/rdf/terms#ChecksumAlgorithm"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#rdfs:LiteralShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#TemporalLiteralShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#rdfs:ResourceShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2000/01/rdf-schema#Resource"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:dateTimeShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:decimalShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:durationShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2001/XMLSchema#duration"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:hexBinaryShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2001/XMLSchema#hexBinary"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:nonNegativeIntegerShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#skos:ConceptShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#skos:ConceptShape/6cd0f0f5e19a1c8dce362ecbe8a196575b9cd85f",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Concept.preferredlabel",
+          "sh:description": {
+            "en": "A preferred label of the concept."
+          },
+          "sh:name": {
+            "en": "preferred label"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/2004/02/skos/core#prefLabel"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#skos:ConceptShape/e4d44fb0d3c41df2a4042ee73fec8d83fc141a60",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Concept.preferredlabel",
+          "sh:description": {
+            "en": "A preferred label of the concept."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "preferred label"
+          },
+          "sh:path": "http://www.w3.org/2004/02/skos/core#prefLabel"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#skos:ConceptSchemeShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#skos:ConceptSchemeShape/d5d74574f70f9a979535f3624608f88180dd0c97",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#ConceptScheme.title",
+          "sh:description": {
+            "en": "A name of the concept scheme."
+          },
+          "sh:name": {
+            "en": "title"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/title"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#skos:ConceptSchemeShape/f8b02efd063b8089b72ce9677a1e4a3488eeb9a9",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#ConceptScheme.title",
+          "sh:description": {
+            "en": "A name of the concept scheme."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "title"
+          },
+          "sh:path": "http://purl.org/dc/terms/title"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#TimeInstantShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2006/time#Instant"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#vcard:KindShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2006/vcard/ns#Kind"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#adms:IdentifierShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#adms:IdentifierShape/053d0ae3c4b213ae2f708e5e492b97e2cce08686",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Identifier.notation",
+          "sh:description": {
+            "en": "A string that is an identifier in the context of the identifier scheme referenced by its datatype."
+          },
+          "sh:name": {
+            "en": "notation"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/2004/02/skos/core#notation"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#adms:IdentifierShape/3b534bf26cc294dd6e8dc80832da269189e4cbf3",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Identifier.notation",
+          "sh:description": {
+            "en": "A string that is an identifier in the context of the identifier scheme referenced by its datatype."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "notation"
+          },
+          "sh:path": "http://www.w3.org/2004/02/skos/core#notation"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#adms:IdentifierShape/e02208f9fa32c429dc5023f2799d03368703b974",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Identifier.notation",
+          "sh:description": {
+            "en": "A string that is an identifier in the context of the identifier scheme referenced by its datatype."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "notation"
+          },
+          "sh:path": "http://www.w3.org/2004/02/skos/core#notation"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/adms#Identifier"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/00a99d55cbc03165373a8348d5a88402ea4f239a",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.geographicalcoverage",
+          "sh:class": "http://purl.org/dc/terms/Location",
+          "sh:description": {
+            "en": "A geographical area covered by the Catalogue."
+          },
+          "sh:name": {
+            "en": "geographical coverage"
+          },
+          "sh:path": "http://purl.org/dc/terms/spatial"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/00ac10319099fe2cccabf6b6e38a4876211b79f7",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.haspart",
+          "sh:description": {
+            "en": "A related Catalogue that is part of the described Catalogue."
+          },
+          "sh:name": {
+            "en": "has part"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/hasPart"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/01d5c746936ff78bb5eb353a1b0e49303cb2fd31",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.dataset",
+          "sh:description": {
+            "en": "A Dataset that is part of the Catalogue."
+          },
+          "sh:name": {
+            "en": "dataset"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#dataset"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/077f69c4a4864ee33e52ce28b6ac87c96cdaea9d",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.themes",
+          "sh:description": {
+            "en": "A knowledge organization system used to classify the Resources that are in the Catalogue."
+          },
+          "sh:name": {
+            "en": "themes"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#themeTaxonomy"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.applicablelegislation",
+          "sh:description": {
+            "en": "The legislation that mandates the creation or management of the Catalog."
+          },
+          "sh:name": {
+            "en": "applicable legislation"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/r5r/applicableLegislation"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/29ba27566ab1f32c8bb73f3492436d4bd868d3d2",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.language",
+          "sh:class": "http://purl.org/dc/terms/LinguisticSystem",
+          "sh:description": {
+            "en": "A language used in the textual metadata describing titles, descriptions, etc. of the Datasets in the Catalogue."
+          },
+          "sh:name": {
+            "en": "language"
+          },
+          "sh:path": "http://purl.org/dc/terms/language"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/337cf55721093cc585693a5397601643d59a4c46",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.record",
+          "sh:class": "http://www.w3.org/ns/dcat#CatalogRecord",
+          "sh:description": {
+            "en": "A Catalogue Record that is part of the Catalogue."
+          },
+          "sh:name": {
+            "en": "record"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#record"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/34db0dabef6e2aa992eab790fc3e8d1e3f83bc12",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.record",
+          "sh:description": {
+            "en": "A Catalogue Record that is part of the Catalogue."
+          },
+          "sh:name": {
+            "en": "record"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#record"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/3844f5a8620973800a0f9d6121572dbe0082c955",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.rights",
+          "sh:description": {
+            "en": "A statement that specifies rights associated with the Catalogue."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "rights"
+          },
+          "sh:path": "http://purl.org/dc/terms/rights"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/49cd6ad5fefbffaf348db14bfe47600981dd12c8",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.catalogue",
+          "sh:class": "http://www.w3.org/ns/dcat#Catalog",
+          "sh:description": {
+            "en": "A catalogue whose contents are of interest in the context of this catalogue."
+          },
+          "sh:name": {
+            "en": "catalogue"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#catalog"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/4be37093e4c3ba0d5b5a18ef6b97778d6d689392",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.releasedate",
+          "sh:description": {
+            "en": "The date of formal issuance (e.g., publication) of the Catalogue."
+          },
+          "sh:name": {
+            "en": "release date"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/issued"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/6051cd8d6a1acfcf4d6721f241fff56a0b42ebf9",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.themes",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "sh:description": {
+            "en": "A knowledge organization system used to classify the Resources that are in the Catalogue."
+          },
+          "sh:name": {
+            "en": "themes"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#themeTaxonomy"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/67dcdb36167ca7969c0532898e11a98e9c2a80f5",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.publisher",
+          "sh:description": {
+            "en": "An entity (organisation) responsible for making the Catalogue available."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "publisher"
+          },
+          "sh:path": "http://purl.org/dc/terms/publisher"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/6b7242b6b89977700c05e4875131fbb975c4235e",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.modificationdate",
+          "sh:description": {
+            "en": "The most recent date on which the Catalogue was modified."
+          },
+          "sh:name": {
+            "en": "modification date"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/modified"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/6cae9880e515253132af1452a38a8a5827165149",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.description",
+          "sh:description": {
+            "en": "A free-text account of the Catalogue."
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.applicablelegislation",
+          "sh:class": "http://data.europa.eu/eli/ontology#LegalResource",
+          "sh:description": {
+            "en": "The legislation that mandates the creation or management of the Catalog."
+          },
+          "sh:name": {
+            "en": "applicable legislation"
+          },
+          "sh:path": "http://data.europa.eu/r5r/applicableLegislation"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/7b94c69361e00163d16d78016cd994668c7fccda",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.dataset",
+          "sh:class": "http://www.w3.org/ns/dcat#Dataset",
+          "sh:description": {
+            "en": "A Dataset that is part of the Catalogue."
+          },
+          "sh:name": {
+            "en": "dataset"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#dataset"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/7d4c667652f23f3a51353271e3800bca87ed3f68",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.creator",
+          "sh:description": {
+            "en": "An entity responsible for the creation of the catalogue."
+          },
+          "sh:name": {
+            "en": "creator"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/creator"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/81d9e81dce75ad228913796fb0f52470b14df56b",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.temporalcoverage",
+          "sh:description": {
+            "en": "A temporal period that the Catalogue covers."
+          },
+          "sh:name": {
+            "en": "temporal coverage"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/temporal"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/8772a17b46da88b8aa26c30e24bc3d9ef17fb940",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.creator",
+          "sh:description": {
+            "en": "An entity responsible for the creation of the catalogue."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "creator"
+          },
+          "sh:path": "http://purl.org/dc/terms/creator"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/8d36a62f83db7f94097e27edb51306e17e0d40f3",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.homepage",
+          "sh:description": {
+            "en": "A web page that acts as the main page for the Catalogue."
+          },
+          "sh:name": {
+            "en": "homepage"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://xmlns.com/foaf/0.1/homepage"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/8e3b1c0888909beb09cd832b3145ad1f7abb1caa",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.temporalcoverage",
+          "sh:class": "http://purl.org/dc/terms/PeriodOfTime",
+          "sh:description": {
+            "en": "A temporal period that the Catalogue covers."
+          },
+          "sh:name": {
+            "en": "temporal coverage"
+          },
+          "sh:path": "http://purl.org/dc/terms/temporal"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/8f61614144aa7bca188b24f5976593dc08aad0e6",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.description",
+          "sh:description": {
+            "en": "A free-text account of the Catalogue."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/93f73e69bb03d2928fcf758a253ef316becdf9b9",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.publisher",
+          "sh:description": {
+            "en": "An entity (organisation) responsible for making the Catalogue available."
+          },
+          "sh:name": {
+            "en": "publisher"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/publisher"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/95015004529c652bcb276060d84ed7423c4a9b08",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.geographicalcoverage",
+          "sh:description": {
+            "en": "A geographical area covered by the Catalogue."
+          },
+          "sh:name": {
+            "en": "geographical coverage"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/spatial"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/99435c17158fbaa12d1d955b8886d5bf935ab016",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.rights",
+          "sh:class": "http://purl.org/dc/terms/RightsStatement",
+          "sh:description": {
+            "en": "A statement that specifies rights associated with the Catalogue."
+          },
+          "sh:name": {
+            "en": "rights"
+          },
+          "sh:path": "http://purl.org/dc/terms/rights"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/9e9d878c1c354206edc1d411f33c82d4d01e5a8f",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.modificationdate",
+          "sh:description": {
+            "en": "The most recent date on which the Catalogue was modified."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "modification date"
+          },
+          "sh:path": "http://purl.org/dc/terms/modified"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/9eaae476a881de13b9430537ace6e70da7327dbd",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.licence",
+          "sh:description": {
+            "en": "A licence under which the Catalogue can be used or reused."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "licence"
+          },
+          "sh:path": "http://purl.org/dc/terms/license"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/a0ccdf3bd7f5d161d07f375a26e68c18ca91dc19",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.publisher",
+          "sh:description": {
+            "en": "An entity (organisation) responsible for making the Catalogue available."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "publisher"
+          },
+          "sh:path": "http://purl.org/dc/terms/publisher"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/b362d2bdbbe8ba1c689e5554cca2bcbd295546de",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.releasedate",
+          "sh:description": {
+            "en": "The date of formal issuance (e.g., publication) of the Catalogue."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "release date"
+          },
+          "sh:path": "http://purl.org/dc/terms/issued"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/b3ec0655204c62a2531244aaeab12f1a2c5e5b5d",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.publisher",
+          "sh:class": "http://xmlns.com/foaf/0.1/Agent",
+          "sh:description": {
+            "en": "An entity (organisation) responsible for making the Catalogue available."
+          },
+          "sh:name": {
+            "en": "publisher"
+          },
+          "sh:path": "http://purl.org/dc/terms/publisher"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/b4c4138f0581e7240ec4dd866004c56407b3705a",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.rights",
+          "sh:description": {
+            "en": "A statement that specifies rights associated with the Catalogue."
+          },
+          "sh:name": {
+            "en": "rights"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/rights"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/ba6ef1d6ab1be8f620759998659fb2e547832d82",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.catalogue",
+          "sh:description": {
+            "en": "A catalogue whose contents are of interest in the context of this catalogue."
+          },
+          "sh:name": {
+            "en": "catalogue"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#catalog"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/c1d40f7102c8201949576e76be48b991b47958d9",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.creator",
+          "sh:class": "http://xmlns.com/foaf/0.1/Agent",
+          "sh:description": {
+            "en": "An entity responsible for the creation of the catalogue."
+          },
+          "sh:name": {
+            "en": "creator"
+          },
+          "sh:path": "http://purl.org/dc/terms/creator"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/c26f8a3ac6445e9f36176f951acd9d235af5ffd9",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.service",
+          "sh:class": "http://www.w3.org/ns/dcat#DataService",
+          "sh:description": {
+            "en": "A site or end-point (Data Service) that is listed in the Catalogue."
+          },
+          "sh:name": {
+            "en": "service"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#service"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/c8cbca0f9dd8797f331150a9e22d9e3ca53ab372",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.haspart",
+          "sh:class": "http://www.w3.org/ns/dcat#Catalog",
+          "sh:description": {
+            "en": "A related Catalogue that is part of the described Catalogue."
+          },
+          "sh:name": {
+            "en": "has part"
+          },
+          "sh:path": "http://purl.org/dc/terms/hasPart"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/d5d74574f70f9a979535f3624608f88180dd0c97",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.title",
+          "sh:description": {
+            "en": "A name given to the Catalogue."
+          },
+          "sh:name": {
+            "en": "title"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/title"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/da28472666d298998330cb159b2c1e90b4446250",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.homepage",
+          "sh:description": {
+            "en": "A web page that acts as the main page for the Catalogue."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "homepage"
+          },
+          "sh:path": "http://xmlns.com/foaf/0.1/homepage"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/db878f1cb93930f64561d0504123c66feacfad5a",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.language",
+          "sh:description": {
+            "en": "A language used in the textual metadata describing titles, descriptions, etc. of the Datasets in the Catalogue."
+          },
+          "sh:name": {
+            "en": "language"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/language"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/dbcf2adef675735c48b532392359af27af5e8b71",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.licence",
+          "sh:class": "http://purl.org/dc/terms/LicenseDocument",
+          "sh:description": {
+            "en": "A licence under which the Catalogue can be used or reused."
+          },
+          "sh:name": {
+            "en": "licence"
+          },
+          "sh:path": "http://purl.org/dc/terms/license"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/e9a8f5414305eafd449b87a38bfe0c974341c9ac",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.service",
+          "sh:description": {
+            "en": "A site or end-point (Data Service) that is listed in the Catalogue."
+          },
+          "sh:name": {
+            "en": "service"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#service"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/f30149ffb6ec9d00dd5866b052105729fa27d02a",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.licence",
+          "sh:description": {
+            "en": "A licence under which the Catalogue can be used or reused."
+          },
+          "sh:name": {
+            "en": "licence"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/license"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/f8b02efd063b8089b72ce9677a1e4a3488eeb9a9",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.title",
+          "sh:description": {
+            "en": "A name given to the Catalogue."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "title"
+          },
+          "sh:path": "http://purl.org/dc/terms/title"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/fb8568b313de736f9184db23272b6317700e9e7e",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Catalogue.homepage",
+          "sh:class": "http://xmlns.com/foaf/0.1/Document",
+          "sh:description": {
+            "en": "A web page that acts as the main page for the Catalogue."
+          },
+          "sh:name": {
+            "en": "homepage"
+          },
+          "sh:path": "http://xmlns.com/foaf/0.1/homepage"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/dcat#Catalog"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogRecordShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogRecordShape/06293023d38e0a3f6d84479e2c37726cc226bcf6",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#CatalogueRecord.modificationdate",
+          "sh:description": {
+            "en": "The most recent date on which the Catalogue entry was changed or modified."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "modification date"
+          },
+          "sh:path": "http://purl.org/dc/terms/modified"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogRecordShape/1c4ac0cf94e6a9152035ed86f73590b6b516dfef",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#CatalogueRecord.changetype",
+          "sh:description": {
+            "en": "The status of the catalogue record in the context of editorial flow of the dataset and data service descriptions."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "change type"
+          },
+          "sh:path": "http://www.w3.org/ns/adms#status"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogRecordShape/29ba27566ab1f32c8bb73f3492436d4bd868d3d2",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#CatalogueRecord.language",
+          "sh:class": "http://purl.org/dc/terms/LinguisticSystem",
+          "sh:description": {
+            "en": "A language used in the textual metadata describing titles, descriptions, etc. of the Catalogued Resource."
+          },
+          "sh:name": {
+            "en": "language"
+          },
+          "sh:path": "http://purl.org/dc/terms/language"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogRecordShape/31d5e2e3aa43e34f78e4557b9a8c4e7507c4948b",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#CatalogueRecord.applicationprofile",
+          "sh:class": "http://purl.org/dc/terms/Standard",
+          "sh:description": {
+            "en": "An Application Profile that the Catalogued Resource&#39;s metadata conforms to."
+          },
+          "sh:name": {
+            "en": "application profile"
+          },
+          "sh:path": "http://purl.org/dc/terms/conformsTo"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogRecordShape/387c76a64757677cc2b899f0c4a20803263a0449",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#CatalogueRecord.primarytopic",
+          "sh:description": {
+            "en": "A link to the Dataset, Data service or Catalog described in the record."
+          },
+          "sh:name": {
+            "en": "primary topic"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://xmlns.com/foaf/0.1/primaryTopic"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogRecordShape/48302728c90d6c344ff17c41a12e9f1379d2a049",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#CatalogueRecord.sourcemetadata",
+          "sh:description": {
+            "en": "The original metadata that was used in creating metadata for the Dataset, Data Service or Dataset Series."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "source metadata"
+          },
+          "sh:path": "http://purl.org/dc/terms/source"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogRecordShape/4b28ec6b7000fa7ccd38127f115952dd990d7d9c",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#CatalogueRecord.changetype",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "en": "The status of the catalogue record in the context of editorial flow of the dataset and data service descriptions."
+          },
+          "sh:name": {
+            "en": "change type"
+          },
+          "sh:path": "http://www.w3.org/ns/adms#status"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogRecordShape/4ffca05d8646c0f94e4b5dc1e15e7757e7dd2843",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#CatalogueRecord.listingdate",
+          "sh:description": {
+            "en": "The date on which the description of the Resource was included in the Catalogue."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "listing date"
+          },
+          "sh:path": "http://purl.org/dc/terms/issued"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogRecordShape/65eafe0643a998b84fc2d253de401f9ad8355770",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#CatalogueRecord.primarytopic",
+          "sh:description": {
+            "en": "A link to the Dataset, Data service or Catalog described in the record."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "primary topic"
+          },
+          "sh:path": "http://xmlns.com/foaf/0.1/primaryTopic"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogRecordShape/6b7242b6b89977700c05e4875131fbb975c4235e",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#CatalogueRecord.modificationdate",
+          "sh:description": {
+            "en": "The most recent date on which the Catalogue entry was changed or modified."
+          },
+          "sh:name": {
+            "en": "modification date"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/modified"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogRecordShape/6cae9880e515253132af1452a38a8a5827165149",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#CatalogueRecord.description",
+          "sh:description": {
+            "en": "A free-text account of the record. This property can be repeated for parallel language versions of the description."
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogRecordShape/8c70e4513eeeeacaf9fdbc9e2cf3df16973e24c0",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#CatalogueRecord.changetype",
+          "sh:description": {
+            "en": "The status of the catalogue record in the context of editorial flow of the dataset and data service descriptions."
+          },
+          "sh:name": {
+            "en": "change type"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/adms#status"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogRecordShape/95cb7d74c8710526cdd4a980d92ce3cf74d7a38f",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#CatalogueRecord.sourcemetadata",
+          "sh:class": "http://www.w3.org/ns/dcat#CatalogRecord",
+          "sh:description": {
+            "en": "The original metadata that was used in creating metadata for the Dataset, Data Service or Dataset Series."
+          },
+          "sh:name": {
+            "en": "source metadata"
+          },
+          "sh:path": "http://purl.org/dc/terms/source"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogRecordShape/97b367051882750fe2df0bc6fff5dd50ff0c94bd",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#CatalogueRecord.applicationprofile",
+          "sh:description": {
+            "en": "An Application Profile that the Catalogued Resource&#39;s metadata conforms to."
+          },
+          "sh:name": {
+            "en": "application profile"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/conformsTo"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogRecordShape/9e9d878c1c354206edc1d411f33c82d4d01e5a8f",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#CatalogueRecord.modificationdate",
+          "sh:description": {
+            "en": "The most recent date on which the Catalogue entry was changed or modified."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "modification date"
+          },
+          "sh:path": "http://purl.org/dc/terms/modified"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogRecordShape/c65d45ed7195ead5f643ec8c8afd29c6dd9662bf",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#CatalogueRecord.primarytopic",
+          "sh:class": "http://www.w3.org/ns/dcat#Resource",
+          "sh:description": {
+            "en": "A link to the Dataset, Data service or Catalog described in the record."
+          },
+          "sh:name": {
+            "en": "primary topic"
+          },
+          "sh:path": "http://xmlns.com/foaf/0.1/primaryTopic"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogRecordShape/d1a2caf3f023345c142769faae4544a99834d255",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#CatalogueRecord.sourcemetadata",
+          "sh:description": {
+            "en": "The original metadata that was used in creating metadata for the Dataset, Data Service or Dataset Series."
+          },
+          "sh:name": {
+            "en": "source metadata"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/source"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogRecordShape/d4c0539354cbf13f62e53a5a69e3f2b0e384f727",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#CatalogueRecord.listingdate",
+          "sh:description": {
+            "en": "The date on which the description of the Resource was included in the Catalogue."
+          },
+          "sh:name": {
+            "en": "listing date"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/issued"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogRecordShape/d5d74574f70f9a979535f3624608f88180dd0c97",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#CatalogueRecord.title",
+          "sh:description": {
+            "en": "A name given to the Catalogue Record."
+          },
+          "sh:name": {
+            "en": "title"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/title"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogRecordShape/db878f1cb93930f64561d0504123c66feacfad5a",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#CatalogueRecord.language",
+          "sh:description": {
+            "en": "A language used in the textual metadata describing titles, descriptions, etc. of the Catalogued Resource."
+          },
+          "sh:name": {
+            "en": "language"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/language"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogRecordShape/edc684c84677aa4924b66988491caddda1a1e68b",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#CatalogueRecord.primarytopic",
+          "sh:description": {
+            "en": "A link to the Dataset, Data service or Catalog described in the record."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "primary topic"
+          },
+          "sh:path": "http://xmlns.com/foaf/0.1/primaryTopic"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/dcat#CatalogRecord"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/08118c51bfc41b71d11f3a58e9410da74e6480e6",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.conformsto",
+          "sh:description": {
+            "en": "An established (technical) standard to which the Data Service conforms."
+          },
+          "sh:name": {
+            "en": "conforms to"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/conformsTo"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.applicablelegislation",
+          "sh:description": {
+            "en": "The legislation that mandates the creation or management of the Data Service."
+          },
+          "sh:name": {
+            "en": "applicable legislation"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/r5r/applicableLegislation"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/10c0ca4deadefb51c529f56ee01caf9bd2639ef4",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.accessrights",
+          "sh:description": {
+            "en": "Information regarding access or restrictions based on privacy, security, or other policies."
+          },
+          "sh:name": {
+            "en": "access rights"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/accessRights"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/1a61f733fafb015548fe0e21203d559c9cb4d228",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.servesdataset",
+          "sh:class": "http://www.w3.org/ns/dcat#Dataset",
+          "sh:description": {
+            "en": "This property refers to a collection of data that this data service can distribute."
+          },
+          "sh:name": {
+            "en": "serves dataset"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#servesDataset"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/30e78cd98aa6cd5dbc31678289abb5e0cc0b55c7",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.landingpage",
+          "sh:description": {
+            "en": "A web page that provides access to the Data Service and/or additional information."
+          },
+          "sh:name": {
+            "en": "landing page"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#landingPage"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/3bde2663aaca96d953765ac2e525ef64710bf4d6",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.endpointURL",
+          "sh:description": {
+            "en": "The root location or primary endpoint of the service (an IRI)."
+          },
+          "sh:name": {
+            "en": "endpoint URL"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#endpointURL"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/5bc739112726cd993c279f81380611cafc3a9857",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.keyword",
+          "sh:description": {
+            "en": "A keyword or tag describing the Data Service."
+          },
+          "sh:name": {
+            "en": "keyword"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/dcat#keyword"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/63240e11f1eb66f636413d1dbb134f0ff9066a7c",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.endpointdescription",
+          "sh:description": {
+            "en": "A description of the services available via the end-points, including their operations, parameters etc."
+          },
+          "sh:name": {
+            "en": "endpoint description"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#endpointDescription"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/67dcdb36167ca7969c0532898e11a98e9c2a80f5",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.publisher",
+          "sh:description": {
+            "en": "An entity (organisation) responsible for making the Data Service available."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "publisher"
+          },
+          "sh:path": "http://purl.org/dc/terms/publisher"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/68388ec47b77212d80036e8a02e9956f5ba0e0f5",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.documentation",
+          "sh:class": "http://xmlns.com/foaf/0.1/Document",
+          "sh:description": {
+            "en": "A page or document about this Data Service"
+          },
+          "sh:name": {
+            "en": "documentation"
+          },
+          "sh:path": "http://xmlns.com/foaf/0.1/page"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/6cae9880e515253132af1452a38a8a5827165149",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.description",
+          "sh:description": {
+            "en": "A free-text account of the Data Service."
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.applicablelegislation",
+          "sh:class": "http://data.europa.eu/eli/ontology#LegalResource",
+          "sh:description": {
+            "en": "The legislation that mandates the creation or management of the Data Service."
+          },
+          "sh:name": {
+            "en": "applicable legislation"
+          },
+          "sh:path": "http://data.europa.eu/r5r/applicableLegislation"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/737cd5f1c9f0e13c35eb82b7f0d2b2f76a9a82c7",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.format",
+          "sh:class": "http://purl.org/dc/terms/MediaTypeOrExtent",
+          "sh:description": {
+            "en": "The structure that can be returned by querying the endpointURL."
+          },
+          "sh:name": {
+            "en": "format"
+          },
+          "sh:path": "http://purl.org/dc/terms/format"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/7a20e2eb5f5549088fd53fa93fab0958019f267e",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.accessrights",
+          "sh:description": {
+            "en": "Information regarding access or restrictions based on privacy, security, or other policies."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "access rights"
+          },
+          "sh:path": "http://purl.org/dc/terms/accessRights"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/7b6713c1f4a52e964f5db57eabef294b6d04e90e",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.contactpoint",
+          "sh:class": "http://www.w3.org/2006/vcard/ns#Kind",
+          "sh:description": {
+            "en": "Contact information that can be used for sending comments about the Data Service."
+          },
+          "sh:name": {
+            "en": "contact point"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#contactPoint"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/83ad7325cc6681e43e44550c269847065a95a14f",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.endpointURL",
+          "sh:description": {
+            "en": "The root location or primary endpoint of the service (an IRI)."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "endpoint URL"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#endpointURL"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/93f73e69bb03d2928fcf758a253ef316becdf9b9",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.publisher",
+          "sh:description": {
+            "en": "An entity (organisation) responsible for making the Data Service available."
+          },
+          "sh:name": {
+            "en": "publisher"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/publisher"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/9678e29dc284ba14312bf01cd0a581b960b77a08",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.theme",
+          "sh:description": {
+            "en": "A category of the Data Service."
+          },
+          "sh:name": {
+            "en": "theme"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#theme"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/998ce689a5bcc3e2764ff84a05255e34d91e8102",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.documentation",
+          "sh:description": {
+            "en": "A page or document about this Data Service"
+          },
+          "sh:name": {
+            "en": "documentation"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://xmlns.com/foaf/0.1/page"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/9adf9f5890592909cf3e67021ae7ab4f895a7745",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.contactpoint",
+          "sh:description": {
+            "en": "Contact information that can be used for sending comments about the Data Service."
+          },
+          "sh:name": {
+            "en": "contact point"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#contactPoint"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/9eaae476a881de13b9430537ace6e70da7327dbd",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.licence",
+          "sh:description": {
+            "en": "A licence under which the Data service is made available."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "licence"
+          },
+          "sh:path": "http://purl.org/dc/terms/license"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/b3ec0655204c62a2531244aaeab12f1a2c5e5b5d",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.publisher",
+          "sh:class": "http://xmlns.com/foaf/0.1/Agent",
+          "sh:description": {
+            "en": "An entity (organisation) responsible for making the Data Service available."
+          },
+          "sh:name": {
+            "en": "publisher"
+          },
+          "sh:path": "http://purl.org/dc/terms/publisher"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/c1577bd231c71b0b1910272999755d3414867cfd",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.format",
+          "sh:description": {
+            "en": "The structure that can be returned by querying the endpointURL."
+          },
+          "sh:name": {
+            "en": "format"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/format"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/c84f7330b9538a899ebb875c44dc23c9882e74ac",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.conformsto",
+          "sh:class": "http://purl.org/dc/terms/Standard",
+          "sh:description": {
+            "en": "An established (technical) standard to which the Data Service conforms."
+          },
+          "sh:name": {
+            "en": "conforms to"
+          },
+          "sh:path": "http://purl.org/dc/terms/conformsTo"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/ca2bd10c893237fa342edb75240b08731acda92f",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.servesdataset",
+          "sh:description": {
+            "en": "This property refers to a collection of data that this data service can distribute."
+          },
+          "sh:name": {
+            "en": "serves dataset"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#servesDataset"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/d5d74574f70f9a979535f3624608f88180dd0c97",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.title",
+          "sh:description": {
+            "en": "A name given to the Data Service."
+          },
+          "sh:name": {
+            "en": "title"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/title"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/dbcf2adef675735c48b532392359af27af5e8b71",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.licence",
+          "sh:class": "http://purl.org/dc/terms/LicenseDocument",
+          "sh:description": {
+            "en": "A licence under which the Data service is made available."
+          },
+          "sh:name": {
+            "en": "licence"
+          },
+          "sh:path": "http://purl.org/dc/terms/license"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/dc08f4dca4377fade57f89454e3fa06a8389d314",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.endpointdescription",
+          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Resource",
+          "sh:description": {
+            "en": "A description of the services available via the end-points, including their operations, parameters etc."
+          },
+          "sh:name": {
+            "en": "endpoint description"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#endpointDescription"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/dede6a68a95ac0f43ca88def472d8fc001f86ebe",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.theme",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "en": "A category of the Data Service."
+          },
+          "sh:name": {
+            "en": "theme"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#theme"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/eb3ac4e4fdde2e2588a9502c5956060a18c5c99f",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.endpointURL",
+          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Resource",
+          "sh:description": {
+            "en": "The root location or primary endpoint of the service (an IRI)."
+          },
+          "sh:name": {
+            "en": "endpoint URL"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#endpointURL"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/ee60fdd4b8581460f5fc4077813b8bb3e3d77441",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.accessrights",
+          "sh:class": "http://purl.org/dc/terms/RightsStatement",
+          "sh:description": {
+            "en": "Information regarding access or restrictions based on privacy, security, or other policies."
+          },
+          "sh:name": {
+            "en": "access rights"
+          },
+          "sh:path": "http://purl.org/dc/terms/accessRights"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/f30149ffb6ec9d00dd5866b052105729fa27d02a",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.licence",
+          "sh:description": {
+            "en": "A licence under which the Data service is made available."
+          },
+          "sh:name": {
+            "en": "licence"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/license"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/f8b02efd063b8089b72ce9677a1e4a3488eeb9a9",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.title",
+          "sh:description": {
+            "en": "A name given to the Data Service."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "title"
+          },
+          "sh:path": "http://purl.org/dc/terms/title"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/ffbbcd28b1fd92213d8350e1b6418d3d998c7197",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DataService.landingpage",
+          "sh:class": "http://xmlns.com/foaf/0.1/Document",
+          "sh:description": {
+            "en": "A web page that provides access to the Data Service and/or additional information."
+          },
+          "sh:name": {
+            "en": "landing page"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#landingPage"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/dcat#DataService"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/00a99d55cbc03165373a8348d5a88402ea4f239a",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.geographicalcoverage",
+          "sh:class": "http://purl.org/dc/terms/Location",
+          "sh:description": {
+            "en": "A geographic region that is covered by the Dataset."
+          },
+          "sh:name": {
+            "en": "geographical coverage"
+          },
+          "sh:path": "http://purl.org/dc/terms/spatial"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/016e621848f36eb558335ecb98b4b24cb2447d37",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.otheridentifier",
+          "sh:description": {
+            "en": "A secondary identifier of the Dataset"
+          },
+          "sh:name": {
+            "en": "other identifier"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/adms#identifier"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/04d197dc40f01e87093bdd0446a9fdb1a9d44319",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.frequency",
+          "sh:class": "http://purl.org/dc/terms/Frequency",
+          "sh:description": {
+            "en": "The frequency at which the Dataset is updated."
+          },
+          "sh:name": {
+            "en": "frequency"
+          },
+          "sh:path": "http://purl.org/dc/terms/accrualPeriodicity"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/08118c51bfc41b71d11f3a58e9410da74e6480e6",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.conformsto",
+          "sh:description": {
+            "en": "An implementing rule or other specification."
+          },
+          "sh:name": {
+            "en": "conforms to"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/conformsTo"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.applicablelegislation",
+          "sh:description": {
+            "en": "The legislation that mandates the creation or management of the Dataset."
+          },
+          "sh:name": {
+            "en": "applicable legislation"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/r5r/applicableLegislation"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/0b40e829101914fa8381318b35a5205a2a465453",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.relatedresource",
+          "sh:description": {
+            "en": "A related resource."
+          },
+          "sh:name": {
+            "en": "related resource"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/relation"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/0bcb30d1f00a2e13ee04c77dbcb8018f2ef83d5b",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.provenance",
+          "sh:class": "http://purl.org/dc/terms/ProvenanceStatement",
+          "sh:description": {
+            "en": "A statement about the lineage of a Dataset."
+          },
+          "sh:name": {
+            "en": "provenance"
+          },
+          "sh:path": "http://purl.org/dc/terms/provenance"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/10c0ca4deadefb51c529f56ee01caf9bd2639ef4",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.accessrights",
+          "sh:description": {
+            "en": "Information that indicates whether the Dataset is publicly accessible, has access restrictions or is not public."
+          },
+          "sh:name": {
+            "en": "access rights"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/accessRights"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/1522e6818f6f9d132e873991b42dd4567fccc6cf",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.temporalresolution",
+          "sh:description": {
+            "en": "The minimum time period resolvable in the dataset."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "temporal resolution"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#temporalResolution"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/1e2ff89f72ca069b1668489d90cb44ba553353d5",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.version",
+          "sh:description": {
+            "en": "The version indicator (name or identifier) of a resource."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "version"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#version"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/21ff3c331383c15dedf63f9f30c0818ccac87497",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.wasgeneratedby",
+          "sh:description": {
+            "en": "An activity that generated, or provides the business context for, the creation of the dataset."
+          },
+          "sh:name": {
+            "en": "was generated by"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/prov#wasGeneratedBy"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/2961dd5b80e9c0f6242da8cf9eea53ad610d7602",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.temporalresolution",
+          "sh:description": {
+            "en": "The minimum time period resolvable in the dataset."
+          },
+          "sh:name": {
+            "en": "temporal resolution"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/dcat#temporalResolution"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/29ba27566ab1f32c8bb73f3492436d4bd868d3d2",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.language",
+          "sh:class": "http://purl.org/dc/terms/LinguisticSystem",
+          "sh:description": {
+            "en": "A language of the Dataset."
+          },
+          "sh:name": {
+            "en": "language"
+          },
+          "sh:path": "http://purl.org/dc/terms/language"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/2ab9813b47309d4af98fdfe34189ea24baecc8cd",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.datasetdistribution",
+          "sh:class": "http://www.w3.org/ns/dcat#Distribution",
+          "sh:description": {
+            "en": "An available Distribution for the Dataset."
+          },
+          "sh:name": {
+            "en": "dataset distribution"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#distribution"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/2d388ed1a94fa93a83fb179a4ecb339b2566b790",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.source",
+          "sh:class": "http://www.w3.org/ns/dcat#Dataset",
+          "sh:description": {
+            "en": "A related Dataset from which the described Dataset is derived."
+          },
+          "sh:name": {
+            "en": "source"
+          },
+          "sh:path": "http://purl.org/dc/terms/source"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/30e78cd98aa6cd5dbc31678289abb5e0cc0b55c7",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.landingpage",
+          "sh:description": {
+            "en": "A web page that provides access to the Dataset, its Distributions and/or additional information."
+          },
+          "sh:name": {
+            "en": "landing page"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#landingPage"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/322371a77364a50f049d46180f6192532eea26dc",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.type",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "en": "A type of the Dataset."
+          },
+          "sh:name": {
+            "en": "type"
+          },
+          "sh:path": "http://purl.org/dc/terms/type"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/34ba47520d520f97bbcdea3c6fd3dc176d312689",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.sample",
+          "sh:description": {
+            "en": "A sample distribution of the dataset."
+          },
+          "sh:name": {
+            "en": "sample"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/adms#sample"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/397755646b3e9ed0cfae7a2a581d26251329edb7",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.wasgeneratedby",
+          "sh:class": "http://www.w3.org/ns/prov#Activity",
+          "sh:description": {
+            "en": "An activity that generated, or provides the business context for, the creation of the dataset."
+          },
+          "sh:name": {
+            "en": "was generated by"
+          },
+          "sh:path": "http://www.w3.org/ns/prov#wasGeneratedBy"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/3f1fe87dc7be37001827234cfe37b5314b16efcc",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.isreferencedby",
+          "sh:description": {
+            "en": "A related resource, such as a publication, that references, cites, or otherwise points to the dataset."
+          },
+          "sh:name": {
+            "en": "is referenced by"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/isReferencedBy"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/41f263bb74ca0c94c6c7a50c981cace98f35802d",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.qualifiedrelation",
+          "sh:description": {
+            "en": "A description of a relationship with another resource."
+          },
+          "sh:name": {
+            "en": "qualified relation"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#qualifiedRelation"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/42110293925ce8bdb81f82dee95d1f78b2fca91c",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.spatialresolution",
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+          "sh:description": {
+            "en": "The minimum spatial separation resolvable in a dataset, measured in meters."
+          },
+          "sh:name": {
+            "en": "spatial resolution"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#spatialResolutionInMeters"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/46a60c7d3d828d3006937a12f82c1958b94e6f76",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.spatialresolution",
+          "sh:description": {
+            "en": "The minimum spatial separation resolvable in a dataset, measured in meters."
+          },
+          "sh:name": {
+            "en": "spatial resolution"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/dcat#spatialResolutionInMeters"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/4918ff7a6c1c4b0eea6403dca4b992b87ee1f4ab",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.relatedresource",
+          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Resource",
+          "sh:description": {
+            "en": "A related resource."
+          },
+          "sh:name": {
+            "en": "related resource"
+          },
+          "sh:path": "http://purl.org/dc/terms/relation"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/495a2bdea22c8a156f1a7926737cdf33529871fd",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.hasversion",
+          "sh:class": "http://www.w3.org/ns/dcat#Dataset",
+          "sh:description": {
+            "en": "A related Dataset that is a version, edition, or adaptation of the described Dataset."
+          },
+          "sh:name": {
+            "en": "has version"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#hasVersion"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/4be37093e4c3ba0d5b5a18ef6b97778d6d689392",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.releasedate",
+          "sh:description": {
+            "en": "The date of formal issuance (e.g., publication) of the Dataset."
+          },
+          "sh:name": {
+            "en": "release date"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/issued"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/4f381639bb6e021939f65b4f41409d1edaeade9b",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.type",
+          "sh:description": {
+            "en": "A type of the Dataset."
+          },
+          "sh:name": {
+            "en": "type"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/type"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/5ad428d8500be9b1d9580021b00aa767c33402bb",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.versionnotes",
+          "sh:description": {
+            "en": "A description of the differences between this version and a previous version of the Dataset."
+          },
+          "sh:name": {
+            "en": "version notes"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/adms#versionNotes"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/5bc739112726cd993c279f81380611cafc3a9857",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.keyword",
+          "sh:description": {
+            "en": "A keyword or tag describing the Dataset."
+          },
+          "sh:name": {
+            "en": "keyword"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/dcat#keyword"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/5d09c2893875cc2183ee55dea57e9c61c07d8006",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.provenance",
+          "sh:description": {
+            "en": "A statement about the lineage of a Dataset."
+          },
+          "sh:name": {
+            "en": "provenance"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/provenance"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/5f12b6f065bf83b81d077ee38954b6ad5c4b2b6b",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.sample",
+          "sh:class": "http://www.w3.org/ns/dcat#Distribution",
+          "sh:description": {
+            "en": "A sample distribution of the dataset."
+          },
+          "sh:name": {
+            "en": "sample"
+          },
+          "sh:path": "http://www.w3.org/ns/adms#sample"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/63790d4374dda7d88681e2756e114a65082d9bfd",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.inseries",
+          "sh:class": "http://www.w3.org/ns/dcat#DatasetSeries",
+          "sh:description": {
+            "en": "A dataset series of which the dataset is part."
+          },
+          "sh:name": {
+            "en": "in series"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#inSeries"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/63a8cf23801ef605734507c621693524f22476dd",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.frequency",
+          "sh:description": {
+            "en": "The frequency at which the Dataset is updated."
+          },
+          "sh:name": {
+            "en": "frequency"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/accrualPeriodicity"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/67dcdb36167ca7969c0532898e11a98e9c2a80f5",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.publisher",
+          "sh:description": {
+            "en": "An entity (organisation) responsible for making the Dataset available."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "publisher"
+          },
+          "sh:path": "http://purl.org/dc/terms/publisher"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/68388ec47b77212d80036e8a02e9956f5ba0e0f5",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.documentation",
+          "sh:class": "http://xmlns.com/foaf/0.1/Document",
+          "sh:description": {
+            "en": "A page or document about this Dataset."
+          },
+          "sh:name": {
+            "en": "documentation"
+          },
+          "sh:path": "http://xmlns.com/foaf/0.1/page"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/6b7242b6b89977700c05e4875131fbb975c4235e",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.modificationdate",
+          "sh:description": {
+            "en": "The most recent date on which the Dataset was changed or modified."
+          },
+          "sh:name": {
+            "en": "modification date"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/modified"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/6cae9880e515253132af1452a38a8a5827165149",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.description",
+          "sh:description": {
+            "en": "A free-text account of the Dataset."
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.applicablelegislation",
+          "sh:class": "http://data.europa.eu/eli/ontology#LegalResource",
+          "sh:description": {
+            "en": "The legislation that mandates the creation or management of the Dataset."
+          },
+          "sh:name": {
+            "en": "applicable legislation"
+          },
+          "sh:path": "http://data.europa.eu/r5r/applicableLegislation"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/7a20e2eb5f5549088fd53fa93fab0958019f267e",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.accessrights",
+          "sh:description": {
+            "en": "Information that indicates whether the Dataset is publicly accessible, has access restrictions or is not public."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "access rights"
+          },
+          "sh:path": "http://purl.org/dc/terms/accessRights"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/7b6713c1f4a52e964f5db57eabef294b6d04e90e",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.contactpoint",
+          "sh:class": "http://www.w3.org/2006/vcard/ns#Kind",
+          "sh:description": {
+            "en": "Contact information that can be used for sending comments about the Dataset."
+          },
+          "sh:name": {
+            "en": "contact point"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#contactPoint"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/7d4c667652f23f3a51353271e3800bca87ed3f68",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.creator",
+          "sh:description": {
+            "en": "An entity responsible for producing the dataset."
+          },
+          "sh:name": {
+            "en": "creator"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/creator"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/8178a43200b0efd5b41e7309efb017f24bb8ef41",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.source",
+          "sh:description": {
+            "en": "A related Dataset from which the described Dataset is derived."
+          },
+          "sh:name": {
+            "en": "source"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/source"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/81d9e81dce75ad228913796fb0f52470b14df56b",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.temporalcoverage",
+          "sh:description": {
+            "en": "A temporal period that the Dataset covers."
+          },
+          "sh:name": {
+            "en": "temporal coverage"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/temporal"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/8335ef1071b18fbd6dac863013c6a9de3d057ab0",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.inseries",
+          "sh:description": {
+            "en": "A dataset series of which the dataset is part."
+          },
+          "sh:name": {
+            "en": "in series"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#inSeries"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/837b9dc79bed1a4d15f6f9094b596dd177944ab6",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.qualifiedattribution",
+          "sh:class": "http://www.w3.org/ns/prov#Attribution",
+          "sh:description": {
+            "en": "An Agent having some form of responsibility for the resource."
+          },
+          "sh:name": {
+            "en": "qualified attribution"
+          },
+          "sh:path": "http://www.w3.org/ns/prov#qualifiedAttribution"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/84229f2224810ba9c70b4b27f756414cc0353324",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.frequency",
+          "sh:description": {
+            "en": "The frequency at which the Dataset is updated."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "frequency"
+          },
+          "sh:path": "http://purl.org/dc/terms/accrualPeriodicity"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/8e3b1c0888909beb09cd832b3145ad1f7abb1caa",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.temporalcoverage",
+          "sh:class": "http://purl.org/dc/terms/PeriodOfTime",
+          "sh:description": {
+            "en": "A temporal period that the Dataset covers."
+          },
+          "sh:name": {
+            "en": "temporal coverage"
+          },
+          "sh:path": "http://purl.org/dc/terms/temporal"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/8f61614144aa7bca188b24f5976593dc08aad0e6",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.description",
+          "sh:description": {
+            "en": "A free-text account of the Dataset."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/93f73e69bb03d2928fcf758a253ef316becdf9b9",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.publisher",
+          "sh:description": {
+            "en": "An entity (organisation) responsible for making the Dataset available."
+          },
+          "sh:name": {
+            "en": "publisher"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/publisher"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/95015004529c652bcb276060d84ed7423c4a9b08",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.geographicalcoverage",
+          "sh:description": {
+            "en": "A geographic region that is covered by the Dataset."
+          },
+          "sh:name": {
+            "en": "geographical coverage"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/spatial"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/95c69c99a1e3ade043911b51b942f206dea0e68d",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.isreferencedby",
+          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Resource",
+          "sh:description": {
+            "en": "A related resource, such as a publication, that references, cites, or otherwise points to the dataset."
+          },
+          "sh:name": {
+            "en": "is referenced by"
+          },
+          "sh:path": "http://purl.org/dc/terms/isReferencedBy"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/9678e29dc284ba14312bf01cd0a581b960b77a08",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.theme",
+          "sh:description": {
+            "en": "A category of the Dataset."
+          },
+          "sh:name": {
+            "en": "theme"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#theme"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/998ce689a5bcc3e2764ff84a05255e34d91e8102",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.documentation",
+          "sh:description": {
+            "en": "A page or document about this Dataset."
+          },
+          "sh:name": {
+            "en": "documentation"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://xmlns.com/foaf/0.1/page"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/9adf9f5890592909cf3e67021ae7ab4f895a7745",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.contactpoint",
+          "sh:description": {
+            "en": "Contact information that can be used for sending comments about the Dataset."
+          },
+          "sh:name": {
+            "en": "contact point"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#contactPoint"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/9e9d878c1c354206edc1d411f33c82d4d01e5a8f",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.modificationdate",
+          "sh:description": {
+            "en": "The most recent date on which the Dataset was changed or modified."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "modification date"
+          },
+          "sh:path": "http://purl.org/dc/terms/modified"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/9fe7c5889615d19dd4849fb66a5664fc016aa598",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.otheridentifier",
+          "sh:class": "http://www.w3.org/ns/adms#Identifier",
+          "sh:description": {
+            "en": "A secondary identifier of the Dataset"
+          },
+          "sh:name": {
+            "en": "other identifier"
+          },
+          "sh:path": "http://www.w3.org/ns/adms#identifier"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/aadbd67a77a624f073be2076627fb9dc883cbe48",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.identifier",
+          "sh:description": {
+            "en": "The main identifier for the Dataset, e.g. the URI or other unique identifier in the context of the Catalogue."
+          },
+          "sh:name": {
+            "en": "identifier"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/identifier"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/b362d2bdbbe8ba1c689e5554cca2bcbd295546de",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.releasedate",
+          "sh:description": {
+            "en": "The date of formal issuance (e.g., publication) of the Dataset."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "release date"
+          },
+          "sh:path": "http://purl.org/dc/terms/issued"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/b3ec0655204c62a2531244aaeab12f1a2c5e5b5d",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.publisher",
+          "sh:class": "http://xmlns.com/foaf/0.1/Agent",
+          "sh:description": {
+            "en": "An entity (organisation) responsible for making the Dataset available."
+          },
+          "sh:name": {
+            "en": "publisher"
+          },
+          "sh:path": "http://purl.org/dc/terms/publisher"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/baaa3d4a8f33f8b2b8c1d19c8d2817a75377145d",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.qualifiedattribution",
+          "sh:description": {
+            "en": "An Agent having some form of responsibility for the resource."
+          },
+          "sh:name": {
+            "en": "qualified attribution"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/prov#qualifiedAttribution"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/bda64b6b9c27a850b8782b17019e888c5edd7ce0",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.version",
+          "sh:description": {
+            "en": "The version indicator (name or identifier) of a resource."
+          },
+          "sh:name": {
+            "en": "version"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/dcat#version"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/c1d40f7102c8201949576e76be48b991b47958d9",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.creator",
+          "sh:class": "http://xmlns.com/foaf/0.1/Agent",
+          "sh:description": {
+            "en": "An entity responsible for producing the dataset."
+          },
+          "sh:name": {
+            "en": "creator"
+          },
+          "sh:path": "http://purl.org/dc/terms/creator"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/c84f7330b9538a899ebb875c44dc23c9882e74ac",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.conformsto",
+          "sh:class": "http://purl.org/dc/terms/Standard",
+          "sh:description": {
+            "en": "An implementing rule or other specification."
+          },
+          "sh:name": {
+            "en": "conforms to"
+          },
+          "sh:path": "http://purl.org/dc/terms/conformsTo"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/cee351ca7e459eb55734fce188a2216ea0cc2b6a",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.hasversion",
+          "sh:description": {
+            "en": "A related Dataset that is a version, edition, or adaptation of the described Dataset."
+          },
+          "sh:name": {
+            "en": "has version"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#hasVersion"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/d5d74574f70f9a979535f3624608f88180dd0c97",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.title",
+          "sh:description": {
+            "en": "A name given to the Dataset."
+          },
+          "sh:name": {
+            "en": "title"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/title"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/db878f1cb93930f64561d0504123c66feacfad5a",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.language",
+          "sh:description": {
+            "en": "A language of the Dataset."
+          },
+          "sh:name": {
+            "en": "language"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/language"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/dede6a68a95ac0f43ca88def472d8fc001f86ebe",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.theme",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "en": "A category of the Dataset."
+          },
+          "sh:name": {
+            "en": "theme"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#theme"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/e6d76f7de5d5b08e584d9cd40619631987a64a7c",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.temporalresolution",
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#duration",
+          "sh:description": {
+            "en": "The minimum time period resolvable in the dataset."
+          },
+          "sh:name": {
+            "en": "temporal resolution"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#temporalResolution"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/ee60fdd4b8581460f5fc4077813b8bb3e3d77441",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.accessrights",
+          "sh:class": "http://purl.org/dc/terms/RightsStatement",
+          "sh:description": {
+            "en": "Information that indicates whether the Dataset is publicly accessible, has access restrictions or is not public."
+          },
+          "sh:name": {
+            "en": "access rights"
+          },
+          "sh:path": "http://purl.org/dc/terms/accessRights"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/f6f077451f13ccf5d721838425fcc37f6cebfe48",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.datasetdistribution",
+          "sh:description": {
+            "en": "An available Distribution for the Dataset."
+          },
+          "sh:name": {
+            "en": "dataset distribution"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#distribution"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/f8b02efd063b8089b72ce9677a1e4a3488eeb9a9",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.title",
+          "sh:description": {
+            "en": "A name given to the Dataset."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "title"
+          },
+          "sh:path": "http://purl.org/dc/terms/title"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/fb900ce4a3c69358a055e1f0d365fba049164374",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.qualifiedrelation",
+          "sh:class": "http://www.w3.org/ns/dcat#Relationship",
+          "sh:description": {
+            "en": "A description of a relationship with another resource."
+          },
+          "sh:name": {
+            "en": "qualified relation"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#qualifiedRelation"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/fcf80b3465d802bf69af0e66cf87973c64d4130a",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.spatialresolution",
+          "sh:description": {
+            "en": "The minimum spatial separation resolvable in a dataset, measured in meters."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "spatial resolution"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#spatialResolutionInMeters"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/ffbbcd28b1fd92213d8350e1b6418d3d998c7197",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Dataset.landingpage",
+          "sh:class": "http://xmlns.com/foaf/0.1/Document",
+          "sh:description": {
+            "en": "A web page that provides access to the Dataset, its Distributions and/or additional information."
+          },
+          "sh:name": {
+            "en": "landing page"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#landingPage"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/dcat#Dataset"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetSeriesShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetSeriesShape/00a99d55cbc03165373a8348d5a88402ea4f239a",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetSeries.geographicalcoverage",
+          "sh:class": "http://purl.org/dc/terms/Location",
+          "sh:description": {
+            "en": "A geographic region that is covered by the Dataset Series."
+          },
+          "sh:name": {
+            "en": "geographical coverage"
+          },
+          "sh:path": "http://purl.org/dc/terms/spatial"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetSeriesShape/04d197dc40f01e87093bdd0446a9fdb1a9d44319",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetSeries.frequency",
+          "sh:class": "http://purl.org/dc/terms/Frequency",
+          "sh:description": {
+            "en": "The frequency at which the Dataset Series is updated."
+          },
+          "sh:name": {
+            "en": "frequency"
+          },
+          "sh:path": "http://purl.org/dc/terms/accrualPeriodicity"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetSeriesShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetSeries.applicablelegislation",
+          "sh:description": {
+            "en": "The legislation that mandates the creation or management of the Dataset Series."
+          },
+          "sh:name": {
+            "en": "applicable legislation"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/r5r/applicableLegislation"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetSeriesShape/4be37093e4c3ba0d5b5a18ef6b97778d6d689392",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetSeries.releasedate",
+          "sh:description": {
+            "en": "The date of formal issuance (e.g., publication) of the Dataset Series."
+          },
+          "sh:name": {
+            "en": "release date"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/issued"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetSeriesShape/63a8cf23801ef605734507c621693524f22476dd",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetSeries.frequency",
+          "sh:description": {
+            "en": "The frequency at which the Dataset Series is updated."
+          },
+          "sh:name": {
+            "en": "frequency"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/accrualPeriodicity"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetSeriesShape/67dcdb36167ca7969c0532898e11a98e9c2a80f5",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetSeries.publisher",
+          "sh:description": {
+            "en": "An entity (organisation) responsible for ensuring the coherency of the Dataset Series "
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "publisher"
+          },
+          "sh:path": "http://purl.org/dc/terms/publisher"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetSeriesShape/6b7242b6b89977700c05e4875131fbb975c4235e",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetSeries.modificationdate",
+          "sh:description": {
+            "en": "The most recent date on which the Dataset Series was changed or modified."
+          },
+          "sh:name": {
+            "en": "modification date"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/modified"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetSeriesShape/6cae9880e515253132af1452a38a8a5827165149",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetSeries.description",
+          "sh:description": {
+            "en": "A free-text account of the Dataset Series."
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetSeriesShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetSeries.applicablelegislation",
+          "sh:class": "http://data.europa.eu/eli/ontology#LegalResource",
+          "sh:description": {
+            "en": "The legislation that mandates the creation or management of the Dataset Series."
+          },
+          "sh:name": {
+            "en": "applicable legislation"
+          },
+          "sh:path": "http://data.europa.eu/r5r/applicableLegislation"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetSeriesShape/7b6713c1f4a52e964f5db57eabef294b6d04e90e",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetSeries.contactpoint",
+          "sh:class": "http://www.w3.org/2006/vcard/ns#Kind",
+          "sh:description": {
+            "en": "Contact information that can be used for sending comments about the Dataset Series."
+          },
+          "sh:name": {
+            "en": "contact point"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#contactPoint"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetSeriesShape/81d9e81dce75ad228913796fb0f52470b14df56b",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetSeries.temporalcoverage",
+          "sh:description": {
+            "en": "A temporal period that the Dataset Series covers."
+          },
+          "sh:name": {
+            "en": "temporal coverage"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/temporal"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetSeriesShape/84229f2224810ba9c70b4b27f756414cc0353324",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetSeries.frequency",
+          "sh:description": {
+            "en": "The frequency at which the Dataset Series is updated."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "frequency"
+          },
+          "sh:path": "http://purl.org/dc/terms/accrualPeriodicity"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetSeriesShape/8e3b1c0888909beb09cd832b3145ad1f7abb1caa",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetSeries.temporalcoverage",
+          "sh:class": "http://purl.org/dc/terms/PeriodOfTime",
+          "sh:description": {
+            "en": "A temporal period that the Dataset Series covers."
+          },
+          "sh:name": {
+            "en": "temporal coverage"
+          },
+          "sh:path": "http://purl.org/dc/terms/temporal"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetSeriesShape/8f61614144aa7bca188b24f5976593dc08aad0e6",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetSeries.description",
+          "sh:description": {
+            "en": "A free-text account of the Dataset Series."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetSeriesShape/93f73e69bb03d2928fcf758a253ef316becdf9b9",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetSeries.publisher",
+          "sh:description": {
+            "en": "An entity (organisation) responsible for ensuring the coherency of the Dataset Series "
+          },
+          "sh:name": {
+            "en": "publisher"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/publisher"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetSeriesShape/95015004529c652bcb276060d84ed7423c4a9b08",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetSeries.geographicalcoverage",
+          "sh:description": {
+            "en": "A geographic region that is covered by the Dataset Series."
+          },
+          "sh:name": {
+            "en": "geographical coverage"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/spatial"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetSeriesShape/9adf9f5890592909cf3e67021ae7ab4f895a7745",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetSeries.contactpoint",
+          "sh:description": {
+            "en": "Contact information that can be used for sending comments about the Dataset Series."
+          },
+          "sh:name": {
+            "en": "contact point"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#contactPoint"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetSeriesShape/9e9d878c1c354206edc1d411f33c82d4d01e5a8f",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetSeries.modificationdate",
+          "sh:description": {
+            "en": "The most recent date on which the Dataset Series was changed or modified."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "modification date"
+          },
+          "sh:path": "http://purl.org/dc/terms/modified"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetSeriesShape/b362d2bdbbe8ba1c689e5554cca2bcbd295546de",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetSeries.releasedate",
+          "sh:description": {
+            "en": "The date of formal issuance (e.g., publication) of the Dataset Series."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "release date"
+          },
+          "sh:path": "http://purl.org/dc/terms/issued"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetSeriesShape/b3ec0655204c62a2531244aaeab12f1a2c5e5b5d",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetSeries.publisher",
+          "sh:class": "http://xmlns.com/foaf/0.1/Agent",
+          "sh:description": {
+            "en": "An entity (organisation) responsible for ensuring the coherency of the Dataset Series "
+          },
+          "sh:name": {
+            "en": "publisher"
+          },
+          "sh:path": "http://purl.org/dc/terms/publisher"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetSeriesShape/d5d74574f70f9a979535f3624608f88180dd0c97",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetSeries.title",
+          "sh:description": {
+            "en": "A name given to the Dataset Series."
+          },
+          "sh:name": {
+            "en": "title"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/title"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetSeriesShape/f8b02efd063b8089b72ce9677a1e4a3488eeb9a9",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#DatasetSeries.title",
+          "sh:description": {
+            "en": "A name given to the Dataset Series."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "title"
+          },
+          "sh:path": "http://purl.org/dc/terms/title"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/dcat#DatasetSeries"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/06ed12d1071a78728d10628eb2d072781559eb75",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.mediatype",
+          "sh:class": "http://purl.org/dc/terms/MediaType",
+          "sh:description": {
+            "en": "The media type of the Distribution as defined in the official register of media types managed by IANA."
+          },
+          "sh:name": {
+            "en": "media type"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#mediaType"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/0796df7f5520ac6500217e81e434f9a755f64afe",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.availability",
+          "sh:description": {
+            "en": "An indication how long it is planned to keep the Distribution of the Dataset available."
+          },
+          "sh:name": {
+            "en": "availability"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/r5r/availability"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.applicablelegislation",
+          "sh:description": {
+            "en": "The legislation that mandates the creation or management of the Distribution."
+          },
+          "sh:name": {
+            "en": "applicable legislation"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/r5r/applicableLegislation"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/0f6cb927d0d26f3819cba3fb903a075cd426180d",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.status",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "en": "The status of the distribution in the context of maturity lifecycle."
+          },
+          "sh:name": {
+            "en": "status"
+          },
+          "sh:path": "http://www.w3.org/ns/adms#status"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/1522e6818f6f9d132e873991b42dd4567fccc6cf",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.temporalresolution",
+          "sh:description": {
+            "en": "The minimum time period resolvable in the dataset distribution."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "temporal resolution"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#temporalResolution"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/205ef114fb269b0d7632e25b317a3e579ffc3954",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.compressionformat",
+          "sh:description": {
+            "en": "The format of the file in which the data is contained in a compressed form, e.g. to reduce the size of the downloadable file."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "compression format"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#compressFormat"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/226b9cb0511ec6b8da045829e10d2676ddbb8375",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.linkedschemas",
+          "sh:class": "http://purl.org/dc/terms/Standard",
+          "sh:description": {
+            "en": "An established schema to which the described Distribution conforms."
+          },
+          "sh:name": {
+            "en": "linked schemas"
+          },
+          "sh:path": "http://purl.org/dc/terms/conformsTo"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/23d4c038584493decec780192681ef61694bff7c",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.accessservice",
+          "sh:description": {
+            "en": "A data service that gives access to the distribution of the dataset."
+          },
+          "sh:name": {
+            "en": "access service"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#accessService"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/27b3b10cebe804356667d0cfca6f658b01f83fbb",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.linkedschemas",
+          "sh:description": {
+            "en": "An established schema to which the described Distribution conforms."
+          },
+          "sh:name": {
+            "en": "linked schemas"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/conformsTo"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/27ee30c66ff3cd2714f73a4b488a5e0f6b64b7f6",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.downloadURL",
+          "sh:description": {
+            "en": "A URL that is a direct link to a downloadable file in a given format."
+          },
+          "sh:name": {
+            "en": "download URL"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#downloadURL"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/2961dd5b80e9c0f6242da8cf9eea53ad610d7602",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.temporalresolution",
+          "sh:description": {
+            "en": "The minimum time period resolvable in the dataset distribution."
+          },
+          "sh:name": {
+            "en": "temporal resolution"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/dcat#temporalResolution"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/29ba27566ab1f32c8bb73f3492436d4bd868d3d2",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.language",
+          "sh:class": "http://purl.org/dc/terms/LinguisticSystem",
+          "sh:description": {
+            "en": "A language used in the Distribution."
+          },
+          "sh:name": {
+            "en": "language"
+          },
+          "sh:path": "http://purl.org/dc/terms/language"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/2bc917d85a4ffccfa9de4268bf84b517c322ce2c",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.status",
+          "sh:description": {
+            "en": "The status of the distribution in the context of maturity lifecycle."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "status"
+          },
+          "sh:path": "http://www.w3.org/ns/adms#status"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/36b68d0f06c0eacbbddd0d2891379c6d005dc861",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.haspolicy",
+          "sh:description": {
+            "en": "The policy expressing the rights associated with the distribution if using the [[ODRL]] vocabulary."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "has policy"
+          },
+          "sh:path": "http://www.w3.org/ns/odrl/2/hasPolicy"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/3844f5a8620973800a0f9d6121572dbe0082c955",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.rights",
+          "sh:description": {
+            "en": "A statement that specifies rights associated with the Distribution."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "rights"
+          },
+          "sh:path": "http://purl.org/dc/terms/rights"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/39da16eecfc16996eed6a010f4203cdcec7c388d",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.packagingformat",
+          "sh:class": "http://purl.org/dc/terms/MediaType",
+          "sh:description": {
+            "en": "The format of the file in which one or more data files are grouped together, e.g. to enable a set of related files to be downloaded together."
+          },
+          "sh:name": {
+            "en": "packaging format"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#packageFormat"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/3c1ab2e1170c5050c8b7742e97810027ddc104b1",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.status",
+          "sh:description": {
+            "en": "The status of the distribution in the context of maturity lifecycle."
+          },
+          "sh:name": {
+            "en": "status"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/adms#status"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/42110293925ce8bdb81f82dee95d1f78b2fca91c",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.spatialresolution",
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+          "sh:description": {
+            "en": "The minimum spatial separation resolvable in a dataset distribution, measured in meters."
+          },
+          "sh:name": {
+            "en": "spatial resolution"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#spatialResolutionInMeters"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/4546bd675f20c3ead3fabfd84682d9063fd2926a",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.mediatype",
+          "sh:description": {
+            "en": "The media type of the Distribution as defined in the official register of media types managed by IANA."
+          },
+          "sh:name": {
+            "en": "media type"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#mediaType"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/46a60c7d3d828d3006937a12f82c1958b94e6f76",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.spatialresolution",
+          "sh:description": {
+            "en": "The minimum spatial separation resolvable in a dataset distribution, measured in meters."
+          },
+          "sh:name": {
+            "en": "spatial resolution"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/dcat#spatialResolutionInMeters"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/4be37093e4c3ba0d5b5a18ef6b97778d6d689392",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.releasedate",
+          "sh:description": {
+            "en": "The date of formal issuance (e.g., publication) of the Distribution."
+          },
+          "sh:name": {
+            "en": "release date"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/issued"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/59cbd395c4b9167c030b3fd61001eeeee5034346",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.bytesize",
+          "sh:description": {
+            "en": "The size of a Distribution in bytes."
+          },
+          "sh:name": {
+            "en": "byte size"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/dcat#byteSize"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/6311ab0f528a12e90a9d4be09bdec4ff36578b32",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.checksum",
+          "sh:class": "http://spdx.org/rdf/terms#Checksum",
+          "sh:description": {
+            "en": "A mechanism that can be used to verify that the contents of a distribution have not changed."
+          },
+          "sh:name": {
+            "en": "checksum"
+          },
+          "sh:path": "http://spdx.org/rdf/terms#checksum"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/653804840386e33525b3d39d205c174780be414b",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.accessURL",
+          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Resource",
+          "sh:description": {
+            "en": "A URL that gives access to a Distribution of the Dataset."
+          },
+          "sh:name": {
+            "en": "access URL"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#accessURL"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/68388ec47b77212d80036e8a02e9956f5ba0e0f5",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.documentation",
+          "sh:class": "http://xmlns.com/foaf/0.1/Document",
+          "sh:description": {
+            "en": "A page or document about this Distribution."
+          },
+          "sh:name": {
+            "en": "documentation"
+          },
+          "sh:path": "http://xmlns.com/foaf/0.1/page"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/69c8fdb6db25c5ad1f8a47366c19adb834924ae0",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.mediatype",
+          "sh:description": {
+            "en": "The media type of the Distribution as defined in the official register of media types managed by IANA."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "media type"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#mediaType"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/6b7242b6b89977700c05e4875131fbb975c4235e",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.modificationdate",
+          "sh:description": {
+            "en": "The most recent date on which the Distribution was changed or modified."
+          },
+          "sh:name": {
+            "en": "modification date"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/modified"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/6cae9880e515253132af1452a38a8a5827165149",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.description",
+          "sh:description": {
+            "en": "A free-text account of the Distribution."
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.applicablelegislation",
+          "sh:class": "http://data.europa.eu/eli/ontology#LegalResource",
+          "sh:description": {
+            "en": "The legislation that mandates the creation or management of the Distribution."
+          },
+          "sh:name": {
+            "en": "applicable legislation"
+          },
+          "sh:path": "http://data.europa.eu/r5r/applicableLegislation"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/73765ca7a6e23ef17cf4e67a576e90a0c391f1c1",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.checksum",
+          "sh:description": {
+            "en": "A mechanism that can be used to verify that the contents of a distribution have not changed."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "checksum"
+          },
+          "sh:path": "http://spdx.org/rdf/terms#checksum"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/737cd5f1c9f0e13c35eb82b7f0d2b2f76a9a82c7",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.format",
+          "sh:class": "http://purl.org/dc/terms/MediaTypeOrExtent",
+          "sh:description": {
+            "en": "The file format of the Distribution."
+          },
+          "sh:name": {
+            "en": "format"
+          },
+          "sh:path": "http://purl.org/dc/terms/format"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/7434c99492683a2fb06dcdcf1f238671caf3d462",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.accessservice",
+          "sh:class": "http://www.w3.org/ns/dcat#DataService",
+          "sh:description": {
+            "en": "A data service that gives access to the distribution of the dataset."
+          },
+          "sh:name": {
+            "en": "access service"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#accessService"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/767d3c883420029775eaa27192a9a4a004e31fce",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.compressionformat",
+          "sh:description": {
+            "en": "The format of the file in which the data is contained in a compressed form, e.g. to reduce the size of the downloadable file."
+          },
+          "sh:name": {
+            "en": "compression format"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#compressFormat"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/8c1e0d1ac55cc7da56ed33785c09a2980899a997",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.haspolicy",
+          "sh:class": "http://www.w3.org/ns/odrl/2/Policy",
+          "sh:description": {
+            "en": "The policy expressing the rights associated with the distribution if using the [[ODRL]] vocabulary."
+          },
+          "sh:name": {
+            "en": "has policy"
+          },
+          "sh:path": "http://www.w3.org/ns/odrl/2/hasPolicy"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/9484b608420ccb732e39ca34b588c57868c81181",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.format",
+          "sh:description": {
+            "en": "The file format of the Distribution."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "format"
+          },
+          "sh:path": "http://purl.org/dc/terms/format"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/99435c17158fbaa12d1d955b8886d5bf935ab016",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.rights",
+          "sh:class": "http://purl.org/dc/terms/RightsStatement",
+          "sh:description": {
+            "en": "A statement that specifies rights associated with the Distribution."
+          },
+          "sh:name": {
+            "en": "rights"
+          },
+          "sh:path": "http://purl.org/dc/terms/rights"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/998ce689a5bcc3e2764ff84a05255e34d91e8102",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.documentation",
+          "sh:description": {
+            "en": "A page or document about this Distribution."
+          },
+          "sh:name": {
+            "en": "documentation"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://xmlns.com/foaf/0.1/page"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/9a496b0d6c38eb05e46fa6c5ad11981f19fbbce4",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.availability",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "en": "An indication how long it is planned to keep the Distribution of the Dataset available."
+          },
+          "sh:name": {
+            "en": "availability"
+          },
+          "sh:path": "http://data.europa.eu/r5r/availability"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/9e9d878c1c354206edc1d411f33c82d4d01e5a8f",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.modificationdate",
+          "sh:description": {
+            "en": "The most recent date on which the Distribution was changed or modified."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "modification date"
+          },
+          "sh:path": "http://purl.org/dc/terms/modified"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/9eaae476a881de13b9430537ace6e70da7327dbd",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.licence",
+          "sh:description": {
+            "en": "A licence under which the Distribution is made available."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "licence"
+          },
+          "sh:path": "http://purl.org/dc/terms/license"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/a07d6e7a0a1790b89a1ce7ff602cbbd9ea835282",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.downloadURL",
+          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Resource",
+          "sh:description": {
+            "en": "A URL that is a direct link to a downloadable file in a given format."
+          },
+          "sh:name": {
+            "en": "download URL"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#downloadURL"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/a490981ff58636ec8601ca500e67bd9c575eaed9",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.accessURL",
+          "sh:description": {
+            "en": "A URL that gives access to a Distribution of the Dataset."
+          },
+          "sh:name": {
+            "en": "access URL"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#accessURL"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/b2f42c75fb59c422a82295439935cb6f63277c0b",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.availability",
+          "sh:description": {
+            "en": "An indication how long it is planned to keep the Distribution of the Dataset available."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "availability"
+          },
+          "sh:path": "http://data.europa.eu/r5r/availability"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/b362d2bdbbe8ba1c689e5554cca2bcbd295546de",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.releasedate",
+          "sh:description": {
+            "en": "The date of formal issuance (e.g., publication) of the Distribution."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "release date"
+          },
+          "sh:path": "http://purl.org/dc/terms/issued"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/b4c4138f0581e7240ec4dd866004c56407b3705a",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.rights",
+          "sh:description": {
+            "en": "A statement that specifies rights associated with the Distribution."
+          },
+          "sh:name": {
+            "en": "rights"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/rights"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/bbf361efc13fcb633496674f93db9d3cfb08732a",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.packagingformat",
+          "sh:description": {
+            "en": "The format of the file in which one or more data files are grouped together, e.g. to enable a set of related files to be downloaded together."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "packaging format"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#packageFormat"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/c1577bd231c71b0b1910272999755d3414867cfd",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.format",
+          "sh:description": {
+            "en": "The file format of the Distribution."
+          },
+          "sh:name": {
+            "en": "format"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/format"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/cde78c9a823f798f6a3de93270dde9283cc6e872",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.packagingformat",
+          "sh:description": {
+            "en": "The format of the file in which one or more data files are grouped together, e.g. to enable a set of related files to be downloaded together."
+          },
+          "sh:name": {
+            "en": "packaging format"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#packageFormat"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/d5d74574f70f9a979535f3624608f88180dd0c97",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.title",
+          "sh:description": {
+            "en": "A name given to the Distribution."
+          },
+          "sh:name": {
+            "en": "title"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/title"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/db878f1cb93930f64561d0504123c66feacfad5a",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.language",
+          "sh:description": {
+            "en": "A language used in the Distribution."
+          },
+          "sh:name": {
+            "en": "language"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/language"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/dbcf2adef675735c48b532392359af27af5e8b71",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.licence",
+          "sh:class": "http://purl.org/dc/terms/LicenseDocument",
+          "sh:description": {
+            "en": "A licence under which the Distribution is made available."
+          },
+          "sh:name": {
+            "en": "licence"
+          },
+          "sh:path": "http://purl.org/dc/terms/license"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/dc17e7a798aea475507009807c87717284c17830",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.checksum",
+          "sh:description": {
+            "en": "A mechanism that can be used to verify that the contents of a distribution have not changed."
+          },
+          "sh:name": {
+            "en": "checksum"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://spdx.org/rdf/terms#checksum"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/e0065293221c5851ec508ae96cd4ad03ffdedd19",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.accessURL",
+          "sh:description": {
+            "en": "A URL that gives access to a Distribution of the Dataset."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "access URL"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#accessURL"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/e093e156f972fa1af3526cd6d68f11bbdc8fa7c5",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.compressionformat",
+          "sh:class": "http://purl.org/dc/terms/MediaType",
+          "sh:description": {
+            "en": "The format of the file in which the data is contained in a compressed form, e.g. to reduce the size of the downloadable file."
+          },
+          "sh:name": {
+            "en": "compression format"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#compressFormat"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/e6d76f7de5d5b08e584d9cd40619631987a64a7c",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.temporalresolution",
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#duration",
+          "sh:description": {
+            "en": "The minimum time period resolvable in the dataset distribution."
+          },
+          "sh:name": {
+            "en": "temporal resolution"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#temporalResolution"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/ed8e40725c55813428b73d8e5042c6affe821ea2",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.bytesize",
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+          "sh:description": {
+            "en": "The size of a Distribution in bytes."
+          },
+          "sh:name": {
+            "en": "byte size"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#byteSize"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/f30149ffb6ec9d00dd5866b052105729fa27d02a",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.licence",
+          "sh:description": {
+            "en": "A licence under which the Distribution is made available."
+          },
+          "sh:name": {
+            "en": "licence"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/license"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/f635b26fbf54b0114a70dd22929ed87f5f34b230",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.bytesize",
+          "sh:description": {
+            "en": "The size of a Distribution in bytes."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "byte size"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#byteSize"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/f64ea9c4b32a8afd45dc2afdcea6722b56707974",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.haspolicy",
+          "sh:description": {
+            "en": "The policy expressing the rights associated with the distribution if using the [[ODRL]] vocabulary."
+          },
+          "sh:name": {
+            "en": "has policy"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/odrl/2/hasPolicy"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/fcf80b3465d802bf69af0e66cf87973c64d4130a",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Distribution.spatialresolution",
+          "sh:description": {
+            "en": "The minimum spatial separation resolvable in a dataset distribution, measured in meters."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "spatial resolution"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#spatialResolutionInMeters"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/dcat#Distribution"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:RelationshipShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:RelationshipShape/5871eb562969e2a4f395c8424314cc119686e019",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Relationship.relation",
+          "sh:description": {
+            "en": "A resource related to the source resource."
+          },
+          "sh:name": {
+            "en": "relation"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/relation"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:RelationshipShape/5945770a55865eb52bf4cbcac7847889d16a2926",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Relationship.hadrole",
+          "sh:description": {
+            "en": "A function of an entity or agent with respect to another entity or resource."
+          },
+          "sh:name": {
+            "en": "had role"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#hadRole"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:RelationshipShape/a64a849abcc67d2a79ccfbbc89f318fab6543c88",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Relationship.relation",
+          "sh:description": {
+            "en": "A resource related to the source resource."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "relation"
+          },
+          "sh:path": "http://purl.org/dc/terms/relation"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:RelationshipShape/a7737e15de2cea53610b34ef78cab0c2c9695a83",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Relationship.hadrole",
+          "sh:class": "http://www.w3.org/ns/dcat#Role",
+          "sh:description": {
+            "en": "A function of an entity or agent with respect to another entity or resource."
+          },
+          "sh:name": {
+            "en": "had role"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#hadRole"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:RelationshipShape/b7aa98e1befa5130659568aa62e7f38575dc17c1",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Relationship.relation",
+          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Resource",
+          "sh:description": {
+            "en": "A resource related to the source resource."
+          },
+          "sh:name": {
+            "en": "relation"
+          },
+          "sh:path": "http://purl.org/dc/terms/relation"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:RelationshipShape/d171b3a7f68dcad152dc11b8200997a366513e00",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Relationship.hadrole",
+          "sh:description": {
+            "en": "A function of an entity or agent with respect to another entity or resource."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "had role"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#hadRole"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/dcat#Relationship"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:ResourceShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/ns/dcat#Resource"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:RoleShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/ns/dcat#Role"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#locn:GeometryShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/ns/locn#Geometry"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#odrl:PolicyShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/ns/odrl/2/Policy"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#prov:ActivityShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/ns/prov#Activity"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#prov:AttributionShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/ns/prov#Attribution"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#foaf:AgentShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#foaf:AgentShape/236f0210baaf149903750c43bbe7012c21debb2a",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Agent.type",
+          "sh:description": {
+            "en": "The nature of the agent."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "type"
+          },
+          "sh:path": "http://purl.org/dc/terms/type"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#foaf:AgentShape/322371a77364a50f049d46180f6192532eea26dc",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Agent.type",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "en": "The nature of the agent."
+          },
+          "sh:name": {
+            "en": "type"
+          },
+          "sh:path": "http://purl.org/dc/terms/type"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#foaf:AgentShape/4f381639bb6e021939f65b4f41409d1edaeade9b",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Agent.type",
+          "sh:description": {
+            "en": "The nature of the agent."
+          },
+          "sh:name": {
+            "en": "type"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/type"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#foaf:AgentShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Agent.name",
+          "sh:description": {
+            "en": "A name of the agent."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "name"
+          },
+          "sh:path": "http://xmlns.com/foaf/0.1/name"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#foaf:AgentShape/9caf9e629daa0e64ece77788576468821d7cff8c",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0#Agent.name",
+          "sh:description": {
+            "en": "A name of the agent."
+          },
+          "sh:name": {
+            "en": "name"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://xmlns.com/foaf/0.1/name"
+        }
+      ],
+      "sh:targetClass": "http://xmlns.com/foaf/0.1/Agent"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#foaf:DocumentShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://xmlns.com/foaf/0.1/Document"
+    }
+  ]
+}
