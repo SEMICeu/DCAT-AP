@@ -1,0 +1,174 @@
+{
+  "@context": {
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vcard": "http://www.w3.org/2006/vcard/ns#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "adms": "http://www.w3.org/ns/adms#",
+    "exampleMS": "https://data.exampleMS.gov/id/dataset/",
+    "dcatap": "http://data.europa.eu/r5r/"
+  },
+  "@graph": [
+    {
+      "@id": "_:EA-MS",
+      "@type": "foaf:Agent",
+      "foaf:name": "MS Environmental Agency"
+    },
+    {
+      "@id": "_:EAMS-APIplatform-contactpoint",
+      "@type": "vcard:Kind",
+      "vcard:hasURL": {
+        "@id": "https://eams.jira.net/servicedesk"
+      }
+    },
+    {
+      "@id": "_:g0",
+      "dcterms:creator": {
+        "@id": "_:EA-MS"
+      },
+      "skos:notation": "https://data.exampleMS.gov/id/dataset/1T2p3o4B"
+    },
+    {
+      "@id": "_:g1",
+      "dcterms:creator": {
+        "@id": "https://dataportal.exampleMS.gov"
+      },
+      "skos:notation": "https://dataportal.exampleMS.gov/dataset/Thepopulationofbees"
+    },
+    {
+      "@id": "exampleMS:1T2p3o4B",
+      "@type": "dcat:Dataset",
+      "dcatap:applicableLegislation": [
+        {
+          "@id": "http://data.europa.eu/eli/reg_impl/2023/138/oj"
+        },
+        {
+          "@id": "http://data.europa.eu/eli/dir/2007/2/2019-06-26"
+        }
+      ],
+      "dcterms:accrualPeriodicity": {
+        "@id": "http://publications.europa.eu/resource/authority/frequency/BIENNIAL"
+      },
+      "dcterms:conformsTo": {
+        "@id": "https://orgea.exampleMS.gov/applicationprofile/populationOfInsects"
+      },
+      "dcterms:description": {
+        "@language": "en",
+        "@value": "This dataset provides the population of bees based on a yearly inquiry held among beekeepers and farmers in spring."
+      },
+      "dcterms:identifier": "https://data.exampleMS.gov/id/dataset/1T2p3o4B",
+      "dcterms:publisher": {
+        "@id": "_:EA-MS"
+      },
+      "dcterms:title": {
+        "@language": "en",
+        "@value": "The population of bees"
+      },
+      "adms:identifier": [
+        {
+          "@id": "_:g0"
+        },
+        {
+          "@id": "_:g1"
+        }
+      ],
+      "dcat:distribution": [
+        {
+          "@id": "exampleMS:1T2p3o4B-dist-SHP"
+        },
+        {
+          "@id": "exampleMS:1T2p3o4B-dist-RDF"
+        }
+      ]
+    },
+    {
+      "@id": "exampleMS:1T2p3o4B-dist-SHP",
+      "@type": "dcat:Distribution",
+      "dcatap:applicableLegislation": {
+        "@id": "http://data.europa.eu/eli/reg_impl/2023/138/oj"
+      },
+      "dcterms:conformsTo": {
+        "@id": "https://orgea.exampleMS.gov/dataset/1T2p3o4B/schema/shp"
+      },
+      "dcterms:format": {
+        "@id": "http://publications.europa.eu/resource/authority/file-type/SHP"
+      },
+      "dcterms:license": {
+        "@id": "https://data.exampleMS.gov/resource/FreeAndOpen"
+      },
+      "dcat:accessURL": {
+        "@id": "https://orgea.exampleMS.gov/files/1T2p3o4B.shp"
+      },
+      "dcat:spatialResolutionInMeters": {
+        "@type": "xsd:decimal",
+        "@value": "25000"
+      }
+    },
+    {
+      "@id": "exampleMS:EAMS-APIplatform",
+      "@type": "dcat:DataService",
+      "dcatap:applicableLegislation": {
+        "@id": "http://data.europa.eu/eli/reg_impl/2023/138/oj"
+      },
+      "dcterms:description": {
+        "@language": "en",
+        "@value": "The EA API platform provides a uniform access to the real-time data collected by EA"
+      },
+      "dcterms:license": {
+        "@id": "https://orgea.exampleMS.gov/api/documentation/TermsOfUse"
+      },
+      "dcterms:title": {
+        "@language": "en",
+        "@value": "EA API platform"
+      },
+      "dcat:contactPoint": {
+        "@id": "_:EAMS-APIplatform-contactpoint"
+      },
+      "dcat:endpointDescription": {
+        "@id": "https://orgea.exampleMS.gov/api/openAPI/index.html"
+      },
+      "dcat:endpointURL": {
+        "@id": "https://orgea.exampleMS.gov/api/v2/"
+      },
+      "dcat:servesDataset": [
+        {
+          "@id": "exampleMS:1T2p3o4B"
+        },
+        {
+          "@id": "exampleMS:1W2o3p4T"
+        }
+      ],
+      "foaf:page": {
+        "@id": "https://orgea.exampleMS.gov/api/sla.html"
+      }
+    },
+    {
+      "@id": "exampleMS:HVD-reporting-2023",
+      "@type": "dcat:Catalogue",
+      "dcterms:description": {
+        "@language": "en",
+        "@value": "All information to provide the HVD conformance assessment for MS"
+      },
+      "dcterms:title": {
+        "@language": "en",
+        "@value": "MS HVD Reporting 2023"
+      },
+      "dcat:dataset": {
+        "@id": "exampleMS:1T2p3o4B"
+      },
+      "dcat:service": {
+        "@id": "exampleMS:EAMS-APIplatform"
+      }
+    },
+    {
+      "@id": "https://data.exampleMS.gov/resource/FreeAndOpen",
+      "@type": "dcterms:LicenseDocument",
+      "skos:exactMatch": {
+        "@id": "http://publications.europa.eu/resource/authority/licence/CC0"
+      }
+    }
+  ]
+}
