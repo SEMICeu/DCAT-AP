@@ -10,7 +10,7 @@ The specification of the DCAT-AP was a joint initiative of DG CONNECT, the EU Pu
 The latest version of DCAT-AP (SEMIC Recommendation v3.0.0) can be downloaded from from the [releases](https://github.com/SEMICeu/DCAT-AP/releases) or via [JoinUp](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/releases).
 The HTML of this specification can be found [here](https://semiceu.github.io/DCAT-AP/releases/3.0.0/).
 
-The latest version of DCAT-AP Annex for High Value Datasets (recommendation v2.2.0) is also published [here](https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd).
+The latest version of DCAT-AP Annex for High Value Datasets (candidate recommendation v3.0.0) is also published [here](https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd/).
 
 
 Any problems encountered, or suggestions for new functionalities can be submitted as issues on the DCAT-AP repository on GitHub. A short guideline for submitting issues can be found at https://github.com/SEMICeu/DCAT-AP/wiki/Submission-guidelines.
