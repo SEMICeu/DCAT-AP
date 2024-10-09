@@ -56,7 +56,7 @@ The list below indicates all changes and differences compared to DCAT-AP 2.1.1. 
 - Issue [301](https://github.com/SEMICeu/dcat-ap/issues/301): adjust the definition of access rights for Dataset by replacing the policy notion ‘Open Data’ with a neutral term.
 - Issue [284](https://github.com/SEMICeu/dcat-ap/issues/284): lift the max cardinality of application profile (dct:conformsTo) for Catalogue Record.
 - issue [260](https://github.com/SEMICeu/dcat-ap/issues/260): include applicableLegislation as generic approach to indicate the legislation under which a dataset is made available.
-- issue [237](https://github.com/SEMICeu/dcat-ap/issues/236): introduction adapted to reflect a more recent view.
+- issue [237](https://github.com/SEMICeu/dcat-ap/issues/237): introduction adapted to reflect a more recent view.
 - issue [272](https://github.com/SEMICeu/dcat-ap/issues/272): a request to enlarge the adopted properties for Data Services.
 
 The following additional data model adaptations were performed during the most recent public review which took place in the first quarter of 2024:
