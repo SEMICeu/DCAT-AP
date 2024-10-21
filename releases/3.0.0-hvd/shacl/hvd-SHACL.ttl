@@ -326,7 +326,6 @@
   shacl:property <https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DatasetShape/08118c51bfc41b71d11f3a58e9410da74e6480e6>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DatasetShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DatasetShape/2ab9813b47309d4af98fdfe34189ea24baecc8cd>,
-    <https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DatasetShape/2f39bbd821cac86ab81596cd47c8798f3f60f0b9>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DatasetShape/63790d4374dda7d88681e2756e114a65082d9bfd>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DatasetShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DatasetShape/7b6713c1f4a52e964f5db57eabef294b6d04e90e>,
@@ -355,12 +354,6 @@
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DatasetShape/2ab9813b47309d4af98fdfe34189ea24baecc8cd> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Dataset.datasetdistribution";
   shacl:class dcat:Distribution;
   shacl:description "An available Distribution for the Dataset."@en;
-  shacl:name "dataset distribution"@en;
-  shacl:path dcat:distribution .
-
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DatasetShape/2f39bbd821cac86ab81596cd47c8798f3f60f0b9> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Dataset.datasetdistribution";
-  shacl:description "An available Distribution for the Dataset."@en;
-  shacl:minCount 1;
   shacl:name "dataset distribution"@en;
   shacl:path dcat:distribution .
 

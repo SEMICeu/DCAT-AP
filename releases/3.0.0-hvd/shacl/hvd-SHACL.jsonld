@@ -705,18 +705,6 @@
           "sh:path": "http://www.w3.org/ns/dcat#distribution"
         },
         {
-          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DatasetShape/2f39bbd821cac86ab81596cd47c8798f3f60f0b9",
-          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Dataset.datasetdistribution",
-          "sh:description": {
-            "en": "An available Distribution for the Dataset."
-          },
-          "sh:minCount": "1",
-          "sh:name": {
-            "en": "dataset distribution"
-          },
-          "sh:path": "http://www.w3.org/ns/dcat#distribution"
-        },
-        {
           "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DatasetShape/63790d4374dda7d88681e2756e114a65082d9bfd",
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Dataset.inseries",
           "sh:class": "http://www.w3.org/ns/dcat#DatasetSeries",
