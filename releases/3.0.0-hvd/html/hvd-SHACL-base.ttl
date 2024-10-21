@@ -344,12 +344,8 @@
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DistributionShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property <https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DistributionShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb>,
-    <https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DistributionShape/226b9cb0511ec6b8da045829e10d2676ddbb8375>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DistributionShape/23d4c038584493decec780192681ef61694bff7c>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DistributionShape/27b3b10cebe804356667d0cfca6f658b01f83fbb>,
-    <https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DistributionShape/653804840386e33525b3d39d205c174780be414b>,
-    <https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DistributionShape/7434c99492683a2fb06dcdcf1f238671caf3d462>,
-    <https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DistributionShape/99435c17158fbaa12d1d955b8886d5bf935ab016>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DistributionShape/9eaae476a881de13b9430537ace6e70da7327dbd>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DistributionShape/a490981ff58636ec8601ca500e67bd9c575eaed9>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DistributionShape/b4c4138f0581e7240ec4dd866004c56407b3705a>,

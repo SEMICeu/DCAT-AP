@@ -31,4 +31,12 @@ This Changelog provides an overview of the changes incorporated in DCAT-AP HVD 3
 
 ## **Detailed issue feedback**
 
-See the comments in the individual issues.
+- Issue [177](https://github.com/SEMICeu/dcat-ap/issues/177), [247](https://github.com/SEMICeu/dcat-ap/issues/247): Range of locn:geometry is locn:Geometry.
+- Issue [321](https://github.com/SEMICeu/dcat-ap/issues/321): HVD reporting guidelines are being presented to the community. References are added to the text.
+- Issue [322](https://github.com/SEMICeu/dcat-ap/issues/322): self declaration of comformity is added as a possibility. Yet a standardised dataformat has not been added, that will be done upon request of the community.
+- Issue [325](https://github.com/SEMICeu/DCAT-AP/issues/325),[376](https://github.com/SEMICeu/DCAT-AP/issues/376), [378](https://github.com/SEMICeu/DCAT-AP/issues/378), [396](https://github.com/SEMICeu/DCAT-AP/issues/396) : More explanation, usagenotes and guidelines are being added to the specifications to clarify the strong recommendation for a distribution.
+- Issue [375](https://github.com/SEMICeu/DCAT-AP/issues/375): improved examples with addition hvdCategory + checked against the provided validation SHACL rules
+- Issue [351](https://github.com/SEMICeu/DCAT-AP/issues/351): terminology clarification provided.
+- Issue [350](https://github.com/SEMICeu/DCAT-AP/issues/350), [381](https://github.com/SEMICeu/DCAT-AP/issues/381), [382](https://github.com/SEMICeu/DCAT-AP/issues/382), [383](https://github.com/SEMICeu/DCAT-AP/issues/383): editorial bug fixes
+- bugfix validation: the Distribution shape was pointing to non-existing constraints
+- adapted the reference to the HVD IR reporting guidelines

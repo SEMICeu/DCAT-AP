@@ -170,10 +170,19 @@
   shacl:description "HVD Datasets are accessible via an API."@en;
   shacl:name "API exists"@en;
   shacl:path  [ shacl:alternativePath ( [ shacl:inversePath dcat:servesDataset ]  ( dcat:distribution dcat:accessService ) )];
-  shacl:nodeKind shacl:IRI ; 
+  shacl:nodeKind shacl:BlankNodeOrIRI ; 
   shacl:minCount 1 ;
   shacl:severity shacl:Violation ;
   <https://purl.eu/ns/shacl#message> "A HVD dataset has an API"@en.
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DatasetShape/BulkDownload> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd/#Dataset.datasetdistribution";
+  shacl:description "HVD Datasets are accessible via a bulk download."@en;
+  shacl:name "Bulk download distribution is strongly recommended"@en;
+  shacl:path  dcat:distribution;
+  shacl:nodeKind shacl:BlankNodeOrIRI ; 
+  shacl:minCount 1 ;
+  shacl:severity shacl:Violation ;
+  <https://purl.eu/ns/shacl#message> "A HVD dataset mostly has a bulk download."@en.
 
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dct:LicenseDocumentShape/permissive> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd/#assessment-support-for-licences";

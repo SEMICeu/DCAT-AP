@@ -22,6 +22,9 @@
       "dcatap:applicableLegislation": {
         "@id": "http://data.europa.eu/eli/reg_impl/2023/138/oj"
       },
+      "dcatap:hvdCategory": {
+           "@id" :  "http://data.europa.eu/bna/c_b7f6a4f3"
+      },
       "dcterms:description": {
         "@language": "en",
         "@value": "The EA API platform provides a uniform access to the real-time data collected by EA"
