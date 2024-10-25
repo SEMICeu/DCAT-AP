@@ -1,0 +1,1125 @@
+{
+  "@context": {
+    "@vocab": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd",
+    "qb": "http://purl.org/linked-data/cube#",
+    "qb:codeList": {
+      "@id": "qb:codeList",
+      "@type": "@id"
+    },
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdf:first": {
+      "@type": "@id"
+    },
+    "rdf:rest": {
+      "@type": "@id"
+    },
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "rdfs:comment": {
+      "@id": "rdfs:comment"
+    },
+    "sh": "http://www.w3.org/ns/shacl#",
+    "sh:and": {
+      "@container": "@set",
+      "@id": "sh:and",
+      "@type": "@id"
+    },
+    "sh:class": {
+      "@id": "sh:class",
+      "@type": "@id"
+    },
+    "sh:datatype": {
+      "@id": "sh:datatype",
+      "@type": "@id"
+    },
+    "sh:description": {
+      "@container": "@language",
+      "@id": "sh:description"
+    },
+    "sh:hasValue": {
+      "@id": "sh:hasValue",
+      "@type": "@id"
+    },
+    "sh:in": {
+      "@container": "@set",
+      "@id": "sh:in",
+      "@type": "@id"
+    },
+    "sh:maxCount": {
+      "@id": "sh:maxCount",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "sh:minCount": {
+      "@id": "sh:minCount",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "sh:name": {
+      "@container": "@language",
+      "@id": "sh:name"
+    },
+    "sh:node": {
+      "@id": "sh:node",
+      "@type": "@id"
+    },
+    "sh:nodeKind": {
+      "@id": "sh:nodeKind",
+      "@type": "@id"
+    },
+    "sh:or": {
+      "@container": "@set",
+      "@id": "sh:or",
+      "@type": "@id"
+    },
+    "sh:path": {
+      "@id": "sh:path",
+      "@type": "@id"
+    },
+    "sh:property": {
+      "@id": "sh:property",
+      "@type": "@id"
+    },
+    "sh:severity": {
+      "@id": "sh:severity",
+      "@type": "@id"
+    },
+    "sh:targetClass": {
+      "@id": "sh:targetClass",
+      "@type": "@id"
+    },
+    "sh:uniqueLang": {
+      "@id": "sh:uniqueLang",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "shapes": {
+      "@id": "rdfs:member",
+      "@type": "@id"
+    },
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vl": "https://purl.eu/ns/shacl#",
+    "vl:message": {
+      "@container": "@language",
+      "@id": "vl:message"
+    }
+  },
+  "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd",
+  "shapes": [
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#eli:LegalResourceShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://data.europa.eu/eli/ontology#LegalResource"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dct:LicenseDocumentShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://purl.org/dc/terms/LicenseDocument"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dct:RightsStatementShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://purl.org/dc/terms/RightsStatement"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dct:StandardShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://purl.org/dc/terms/Standard"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#rdfs:LiteralShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#rdfs:ResourceShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2000/01/rdf-schema#Resource"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#skos:ConceptShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#vcard:KindShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#vcard:KindShape/8cf3e751730442052d1b2174336d21bb838e4aab",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Kind.email",
+          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Resource",
+          "sh:description": {
+            "en": "A email address via which contact can be made.\r\n"
+          },
+          "sh:name": {
+            "en": "email"
+          },
+          "sh:path": "http://www.w3.org/2006/vcard/ns#hasEmail"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#vcard:KindShape/95cf5318d1604f72f1c5d4d22a360ce268437bf0",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Kind.contactpage",
+          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Resource",
+          "sh:description": {
+            "en": "A webpage that either allows to make contact (i.e. a webform) or the information contains how to get into contact. "
+          },
+          "sh:name": {
+            "en": "contact page"
+          },
+          "sh:path": "http://www.w3.org/2006/vcard/ns#hasURL"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#vcard:KindShape/9b6ccc41bb0ced6f6b8f28a86e120bd9d73b32fb",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Kind.email",
+          "sh:description": {
+            "en": "A email address via which contact can be made.\r\n"
+          },
+          "sh:name": {
+            "en": "email"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/2006/vcard/ns#hasEmail"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#vcard:KindShape/a736c4b01ea7557518c0c146f3e311947ce00ccc",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Kind.contactpage",
+          "sh:description": {
+            "en": "A webpage that either allows to make contact (i.e. a webform) or the information contains how to get into contact. "
+          },
+          "sh:name": {
+            "en": "contact page"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/2006/vcard/ns#hasURL"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#vcard:KindShape/af064e842c8e058505005f10ba6025ee57ad168b",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Kind.contactpage",
+          "sh:description": {
+            "en": "A webpage that either allows to make contact (i.e. a webform) or the information contains how to get into contact. "
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "contact page"
+          },
+          "sh:path": "http://www.w3.org/2006/vcard/ns#hasURL"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#vcard:KindShape/df2e16526cd0f7cc796d3bb27ac1861737a35d91",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Kind.email",
+          "sh:description": {
+            "en": "A email address via which contact can be made.\r\n"
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "email"
+          },
+          "sh:path": "http://www.w3.org/2006/vcard/ns#hasEmail"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/2006/vcard/ns#Kind"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:CatalogShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:CatalogShape/01d5c746936ff78bb5eb353a1b0e49303cb2fd31",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Catalogue.dataset",
+          "sh:description": {
+            "en": "A Dataset that is part of the Catalogue."
+          },
+          "sh:name": {
+            "en": "dataset"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#dataset"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:CatalogShape/337cf55721093cc585693a5397601643d59a4c46",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Catalogue.record",
+          "sh:class": "http://www.w3.org/ns/dcat#CatalogRecord",
+          "sh:description": {
+            "en": "A Catalogue Record that is part of the Catalogue"
+          },
+          "sh:name": {
+            "en": "record"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#record"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:CatalogShape/34db0dabef6e2aa992eab790fc3e8d1e3f83bc12",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Catalogue.record",
+          "sh:description": {
+            "en": "A Catalogue Record that is part of the Catalogue"
+          },
+          "sh:name": {
+            "en": "record"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#record"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:CatalogShape/7b94c69361e00163d16d78016cd994668c7fccda",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Catalogue.dataset",
+          "sh:class": "http://www.w3.org/ns/dcat#Dataset",
+          "sh:description": {
+            "en": "A Dataset that is part of the Catalogue."
+          },
+          "sh:name": {
+            "en": "dataset"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#dataset"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:CatalogShape/c26f8a3ac6445e9f36176f951acd9d235af5ffd9",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Catalogue.service",
+          "sh:class": "http://www.w3.org/ns/dcat#DataService",
+          "sh:description": {
+            "en": "A site or end-point (Data Service) that is listed in the Catalogue."
+          },
+          "sh:name": {
+            "en": "service"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#service"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:CatalogShape/e9a8f5414305eafd449b87a38bfe0c974341c9ac",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Catalogue.service",
+          "sh:description": {
+            "en": "A site or end-point (Data Service) that is listed in the Catalogue."
+          },
+          "sh:name": {
+            "en": "service"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#service"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/dcat#Catalog"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:CatalogRecordShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:CatalogRecordShape/387c76a64757677cc2b899f0c4a20803263a0449",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#CatalogueRecord.primarytopic",
+          "sh:description": {
+            "en": "A link to the Dataset, Data service or Catalog described in the record."
+          },
+          "sh:name": {
+            "en": "primary topic"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://xmlns.com/foaf/0.1/primaryTopic"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:CatalogRecordShape/65eafe0643a998b84fc2d253de401f9ad8355770",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#CatalogueRecord.primarytopic",
+          "sh:description": {
+            "en": "A link to the Dataset, Data service or Catalog described in the record."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "primary topic"
+          },
+          "sh:path": "http://xmlns.com/foaf/0.1/primaryTopic"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:CatalogRecordShape/c65d45ed7195ead5f643ec8c8afd29c6dd9662bf",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#CatalogueRecord.primarytopic",
+          "sh:class": "http://www.w3.org/ns/dcat#Resource",
+          "sh:description": {
+            "en": "A link to the Dataset, Data service or Catalog described in the record."
+          },
+          "sh:name": {
+            "en": "primary topic"
+          },
+          "sh:path": "http://xmlns.com/foaf/0.1/primaryTopic"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:CatalogRecordShape/edc684c84677aa4924b66988491caddda1a1e68b",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#CatalogueRecord.primarytopic",
+          "sh:description": {
+            "en": "A link to the Dataset, Data service or Catalog described in the record."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "primary topic"
+          },
+          "sh:path": "http://xmlns.com/foaf/0.1/primaryTopic"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/dcat#CatalogRecord"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DataServiceShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DataServiceShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#DataService.applicablelegislation",
+          "sh:description": {
+            "en": "The legislation that mandates the creation or management of the Data Service."
+          },
+          "sh:name": {
+            "en": "applicable legislation"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/r5r/applicableLegislation"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DataServiceShape/1a61f733fafb015548fe0e21203d559c9cb4d228",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#DataService.servesdataset",
+          "sh:class": "http://www.w3.org/ns/dcat#Dataset",
+          "sh:description": {
+            "en": "This property refers to a collection of data that this data service can distribute."
+          },
+          "sh:name": {
+            "en": "serves dataset"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#servesDataset"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DataServiceShape/1aeb85e10acb27fafc68a1bc04adb4860ecbea59",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#DataService.HVDcategory",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "en": "The HVD category to which this Data Service belongs."
+          },
+          "sh:name": {
+            "en": "HVD category"
+          },
+          "sh:path": "http://data.europa.eu/r5r/hvdCategory"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DataServiceShape/3bde2663aaca96d953765ac2e525ef64710bf4d6",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#DataService.endpointURL",
+          "sh:description": {
+            "en": "The root location or primary endpoint of the service (an IRI)."
+          },
+          "sh:name": {
+            "en": "endpoint URL"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#endpointURL"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DataServiceShape/60675e8175395481680e343172eea5fcd3f82cd4",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#DataService.HVDcategory",
+          "sh:description": {
+            "en": "The HVD category to which this Data Service belongs."
+          },
+          "sh:name": {
+            "en": "HVD category"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/r5r/hvdCategory"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DataServiceShape/63240e11f1eb66f636413d1dbb134f0ff9066a7c",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#DataService.endpointdescription",
+          "sh:description": {
+            "en": "A description of the services available via the end-points, including their operations, parameters etc."
+          },
+          "sh:name": {
+            "en": "endpoint description"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#endpointDescription"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DataServiceShape/68388ec47b77212d80036e8a02e9956f5ba0e0f5",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#DataService.documentation",
+          "sh:class": "http://xmlns.com/foaf/0.1/Document",
+          "sh:description": {
+            "en": "A page that provides additional information about the Data Service."
+          },
+          "sh:name": {
+            "en": "documentation"
+          },
+          "sh:path": "http://xmlns.com/foaf/0.1/page"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DataServiceShape/68dc6d1df6d91b2d33990e6db3c5af31b3d51de8",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#DataService.contactpoint",
+          "sh:description": {
+            "en": "Contact information that can be used for sending comments about the Data Service."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "contact point"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#contactPoint"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DataServiceShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#DataService.applicablelegislation",
+          "sh:class": "http://data.europa.eu/eli/ontology#LegalResource",
+          "sh:description": {
+            "en": "The legislation that mandates the creation or management of the Data Service."
+          },
+          "sh:name": {
+            "en": "applicable legislation"
+          },
+          "sh:path": "http://data.europa.eu/r5r/applicableLegislation"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DataServiceShape/7b6713c1f4a52e964f5db57eabef294b6d04e90e",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#DataService.contactpoint",
+          "sh:class": "http://www.w3.org/2006/vcard/ns#Kind",
+          "sh:description": {
+            "en": "Contact information that can be used for sending comments about the Data Service."
+          },
+          "sh:name": {
+            "en": "contact point"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#contactPoint"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DataServiceShape/83ad7325cc6681e43e44550c269847065a95a14f",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#DataService.endpointURL",
+          "sh:description": {
+            "en": "The root location or primary endpoint of the service (an IRI)."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "endpoint URL"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#endpointURL"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DataServiceShape/8521ebd386ec388c4cf09933c419e3fe7668f29d",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#DataService.documentation",
+          "sh:description": {
+            "en": "A page that provides additional information about the Data Service."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "documentation"
+          },
+          "sh:path": "http://xmlns.com/foaf/0.1/page"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DataServiceShape/99435c17158fbaa12d1d955b8886d5bf935ab016",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#DataService.rights",
+          "sh:class": "http://purl.org/dc/terms/RightsStatement",
+          "sh:description": {
+            "en": "A statement that specifies rights associated with the Distribution."
+          },
+          "sh:name": {
+            "en": "rights"
+          },
+          "sh:path": "http://purl.org/dc/terms/rights"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DataServiceShape/998ce689a5bcc3e2764ff84a05255e34d91e8102",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#DataService.documentation",
+          "sh:description": {
+            "en": "A page that provides additional information about the Data Service."
+          },
+          "sh:name": {
+            "en": "documentation"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://xmlns.com/foaf/0.1/page"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DataServiceShape/9adf9f5890592909cf3e67021ae7ab4f895a7745",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#DataService.contactpoint",
+          "sh:description": {
+            "en": "Contact information that can be used for sending comments about the Data Service."
+          },
+          "sh:name": {
+            "en": "contact point"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#contactPoint"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DataServiceShape/9eaae476a881de13b9430537ace6e70da7327dbd",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#DataService.licence",
+          "sh:description": {
+            "en": "A licence under which the Data service is made available."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "licence"
+          },
+          "sh:path": "http://purl.org/dc/terms/license"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DataServiceShape/b4c4138f0581e7240ec4dd866004c56407b3705a",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#DataService.rights",
+          "sh:description": {
+            "en": "A statement that specifies rights associated with the Distribution."
+          },
+          "sh:name": {
+            "en": "rights"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/rights"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DataServiceShape/ca2bd10c893237fa342edb75240b08731acda92f",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#DataService.servesdataset",
+          "sh:description": {
+            "en": "This property refers to a collection of data that this data service can distribute."
+          },
+          "sh:name": {
+            "en": "serves dataset"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#servesDataset"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DataServiceShape/d36065836a29f463546e269c25db7b95b879b3fb",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#DataService.applicablelegislation",
+          "sh:description": {
+            "en": "The legislation that mandates the creation or management of the Data Service."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "applicable legislation"
+          },
+          "sh:path": "http://data.europa.eu/r5r/applicableLegislation"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DataServiceShape/dbcf2adef675735c48b532392359af27af5e8b71",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#DataService.licence",
+          "sh:class": "http://purl.org/dc/terms/LicenseDocument",
+          "sh:description": {
+            "en": "A licence under which the Data service is made available."
+          },
+          "sh:name": {
+            "en": "licence"
+          },
+          "sh:path": "http://purl.org/dc/terms/license"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DataServiceShape/dc08f4dca4377fade57f89454e3fa06a8389d314",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#DataService.endpointdescription",
+          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Resource",
+          "sh:description": {
+            "en": "A description of the services available via the end-points, including their operations, parameters etc."
+          },
+          "sh:name": {
+            "en": "endpoint description"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#endpointDescription"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DataServiceShape/eb3ac4e4fdde2e2588a9502c5956060a18c5c99f",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#DataService.endpointURL",
+          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Resource",
+          "sh:description": {
+            "en": "The root location or primary endpoint of the service (an IRI)."
+          },
+          "sh:name": {
+            "en": "endpoint URL"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#endpointURL"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DataServiceShape/f30149ffb6ec9d00dd5866b052105729fa27d02a",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#DataService.licence",
+          "sh:description": {
+            "en": "A licence under which the Data service is made available."
+          },
+          "sh:name": {
+            "en": "licence"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/license"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DataServiceShape/f514dbc668e2c9c457d61f1f2721c7fbcb22cb59",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#DataService.HVDcategory",
+          "sh:description": {
+            "en": "The HVD category to which this Data Service belongs."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "HVD category"
+          },
+          "sh:path": "http://data.europa.eu/r5r/hvdCategory"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/dcat#DataService"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DatasetShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DatasetShape/08118c51bfc41b71d11f3a58e9410da74e6480e6",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Dataset.conformsto",
+          "sh:description": {
+            "en": "An implementing rule or other specification."
+          },
+          "sh:name": {
+            "en": "conforms to"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/conformsTo"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DatasetShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Dataset.applicablelegislation",
+          "sh:description": {
+            "en": "The legislation that mandates the creation or management of the Dataset."
+          },
+          "sh:name": {
+            "en": "applicable legislation"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/r5r/applicableLegislation"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DatasetShape/2ab9813b47309d4af98fdfe34189ea24baecc8cd",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Dataset.datasetdistribution",
+          "sh:class": "http://www.w3.org/ns/dcat#Distribution",
+          "sh:description": {
+            "en": "An available Distribution for the Dataset."
+          },
+          "sh:name": {
+            "en": "dataset distribution"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#distribution"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DatasetShape/63790d4374dda7d88681e2756e114a65082d9bfd",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Dataset.inseries",
+          "sh:class": "http://www.w3.org/ns/dcat#DatasetSeries",
+          "sh:description": {
+            "en": "A dataset series of which the dataset is part."
+          },
+          "sh:name": {
+            "en": "in series"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#inSeries"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DatasetShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Dataset.applicablelegislation",
+          "sh:class": "http://data.europa.eu/eli/ontology#LegalResource",
+          "sh:description": {
+            "en": "The legislation that mandates the creation or management of the Dataset."
+          },
+          "sh:name": {
+            "en": "applicable legislation"
+          },
+          "sh:path": "http://data.europa.eu/r5r/applicableLegislation"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DatasetShape/7b6713c1f4a52e964f5db57eabef294b6d04e90e",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Dataset.contactpoint",
+          "sh:class": "http://www.w3.org/2006/vcard/ns#Kind",
+          "sh:description": {
+            "en": "Contact information that can be used for sending comments about the Dataset."
+          },
+          "sh:name": {
+            "en": "contact point"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#contactPoint"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DatasetShape/8335ef1071b18fbd6dac863013c6a9de3d057ab0",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Dataset.inseries",
+          "sh:description": {
+            "en": "A dataset series of which the dataset is part."
+          },
+          "sh:name": {
+            "en": "in series"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#inSeries"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DatasetShape/892bcf3c90199fdd741a47fc4559dc59d5a5b034",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Dataset.HVDCategory",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "en": "The HVD category to which this Dataset belongs."
+          },
+          "sh:name": {
+            "en": "HVD Category"
+          },
+          "sh:path": "http://data.europa.eu/r5r/hvdCategory"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DatasetShape/924bfd3702cf51f4a6bc11bd1b7e06790d5d2fbc",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Dataset.HVDCategory",
+          "sh:description": {
+            "en": "The HVD category to which this Dataset belongs."
+          },
+          "sh:name": {
+            "en": "HVD Category"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/r5r/hvdCategory"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DatasetShape/9adf9f5890592909cf3e67021ae7ab4f895a7745",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Dataset.contactpoint",
+          "sh:description": {
+            "en": "Contact information that can be used for sending comments about the Dataset."
+          },
+          "sh:name": {
+            "en": "contact point"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#contactPoint"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DatasetShape/9f9f581dcae4fbd1653141d8b35ba7f86b4cf740",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Dataset.HVDCategory",
+          "sh:description": {
+            "en": "The HVD category to which this Dataset belongs."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "HVD Category"
+          },
+          "sh:path": "http://data.europa.eu/r5r/hvdCategory"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DatasetShape/c84f7330b9538a899ebb875c44dc23c9882e74ac",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Dataset.conformsto",
+          "sh:class": "http://purl.org/dc/terms/Standard",
+          "sh:description": {
+            "en": "An implementing rule or other specification."
+          },
+          "sh:name": {
+            "en": "conforms to"
+          },
+          "sh:path": "http://purl.org/dc/terms/conformsTo"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DatasetShape/d36065836a29f463546e269c25db7b95b879b3fb",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Dataset.applicablelegislation",
+          "sh:description": {
+            "en": "The legislation that mandates the creation or management of the Dataset."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "applicable legislation"
+          },
+          "sh:path": "http://data.europa.eu/r5r/applicableLegislation"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DatasetShape/f6f077451f13ccf5d721838425fcc37f6cebfe48",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Dataset.datasetdistribution",
+          "sh:description": {
+            "en": "An available Distribution for the Dataset."
+          },
+          "sh:name": {
+            "en": "dataset distribution"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#distribution"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/dcat#Dataset"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DatasetSeriesShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DatasetSeriesShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#DatasetSeries.applicablelegislation",
+          "sh:description": {
+            "en": "The legislation that mandates the creation or management of the Dataset Series."
+          },
+          "sh:name": {
+            "en": "applicable legislation"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/r5r/applicableLegislation"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DatasetSeriesShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#DatasetSeries.applicablelegislation",
+          "sh:class": "http://data.europa.eu/eli/ontology#LegalResource",
+          "sh:description": {
+            "en": "The legislation that mandates the creation or management of the Dataset Series."
+          },
+          "sh:name": {
+            "en": "applicable legislation"
+          },
+          "sh:path": "http://data.europa.eu/r5r/applicableLegislation"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DatasetSeriesShape/892bcf3c90199fdd741a47fc4559dc59d5a5b034",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#DatasetSeries.HVDCategory",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "en": "The HVD category to which this Dataset belongs."
+          },
+          "sh:name": {
+            "en": "HVD Category"
+          },
+          "sh:path": "http://data.europa.eu/r5r/hvdCategory"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DatasetSeriesShape/924bfd3702cf51f4a6bc11bd1b7e06790d5d2fbc",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#DatasetSeries.HVDCategory",
+          "sh:description": {
+            "en": "The HVD category to which this Dataset belongs."
+          },
+          "sh:name": {
+            "en": "HVD Category"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/r5r/hvdCategory"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DatasetSeriesShape/9f9f581dcae4fbd1653141d8b35ba7f86b4cf740",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#DatasetSeries.HVDCategory",
+          "sh:description": {
+            "en": "The HVD category to which this Dataset belongs."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "HVD Category"
+          },
+          "sh:path": "http://data.europa.eu/r5r/hvdCategory"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DatasetSeriesShape/d36065836a29f463546e269c25db7b95b879b3fb",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#DatasetSeries.applicablelegislation",
+          "sh:description": {
+            "en": "The legislation that mandates the creation or management of the Dataset Series."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "applicable legislation"
+          },
+          "sh:path": "http://data.europa.eu/r5r/applicableLegislation"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/dcat#DatasetSeries"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DistributionShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DistributionShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Distribution.applicablelegislation",
+          "sh:description": {
+            "en": "The legislation that mandates the creation or management of the Distribution"
+          },
+          "sh:name": {
+            "en": "applicable legislation"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/r5r/applicableLegislation"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DistributionShape/226b9cb0511ec6b8da045829e10d2676ddbb8375",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Distribution.linkedschemas",
+          "sh:class": "http://purl.org/dc/terms/Standard",
+          "sh:description": {
+            "en": "An established schema to which the described Distribution conforms."
+          },
+          "sh:name": {
+            "en": "linked schemas"
+          },
+          "sh:path": "http://purl.org/dc/terms/conformsTo"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DistributionShape/23d4c038584493decec780192681ef61694bff7c",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Distribution.accessservice",
+          "sh:description": {
+            "en": "A data service that gives access to the distribution of the dataset"
+          },
+          "sh:name": {
+            "en": "access service"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#accessService"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DistributionShape/27b3b10cebe804356667d0cfca6f658b01f83fbb",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Distribution.linkedschemas",
+          "sh:description": {
+            "en": "An established schema to which the described Distribution conforms."
+          },
+          "sh:name": {
+            "en": "linked schemas"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/conformsTo"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DistributionShape/653804840386e33525b3d39d205c174780be414b",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Distribution.accessURL",
+          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Resource",
+          "sh:description": {
+            "en": "A URL that gives access to a Distribution of the Dataset."
+          },
+          "sh:name": {
+            "en": "access URL"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#accessURL"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DistributionShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Distribution.applicablelegislation",
+          "sh:class": "http://data.europa.eu/eli/ontology#LegalResource",
+          "sh:description": {
+            "en": "The legislation that mandates the creation or management of the Distribution"
+          },
+          "sh:name": {
+            "en": "applicable legislation"
+          },
+          "sh:path": "http://data.europa.eu/r5r/applicableLegislation"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DistributionShape/7434c99492683a2fb06dcdcf1f238671caf3d462",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Distribution.accessservice",
+          "sh:class": "http://www.w3.org/ns/dcat#DataService",
+          "sh:description": {
+            "en": "A data service that gives access to the distribution of the dataset"
+          },
+          "sh:name": {
+            "en": "access service"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#accessService"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DistributionShape/99435c17158fbaa12d1d955b8886d5bf935ab016",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Distribution.rights",
+          "sh:class": "http://purl.org/dc/terms/RightsStatement",
+          "sh:description": {
+            "en": "A statement that specifies rights associated with the Distribution."
+          },
+          "sh:name": {
+            "en": "rights"
+          },
+          "sh:path": "http://purl.org/dc/terms/rights"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DistributionShape/9eaae476a881de13b9430537ace6e70da7327dbd",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Distribution.licence",
+          "sh:description": {
+            "en": "A licence under which the Distribution is made available."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "licence"
+          },
+          "sh:path": "http://purl.org/dc/terms/license"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DistributionShape/a490981ff58636ec8601ca500e67bd9c575eaed9",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Distribution.accessURL",
+          "sh:description": {
+            "en": "A URL that gives access to a Distribution of the Dataset."
+          },
+          "sh:name": {
+            "en": "access URL"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/dcat#accessURL"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DistributionShape/b4c4138f0581e7240ec4dd866004c56407b3705a",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Distribution.rights",
+          "sh:description": {
+            "en": "A statement that specifies rights associated with the Distribution."
+          },
+          "sh:name": {
+            "en": "rights"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/rights"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DistributionShape/d36065836a29f463546e269c25db7b95b879b3fb",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Distribution.applicablelegislation",
+          "sh:description": {
+            "en": "The legislation that mandates the creation or management of the Distribution"
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "applicable legislation"
+          },
+          "sh:path": "http://data.europa.eu/r5r/applicableLegislation"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DistributionShape/dbcf2adef675735c48b532392359af27af5e8b71",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Distribution.licence",
+          "sh:class": "http://purl.org/dc/terms/LicenseDocument",
+          "sh:description": {
+            "en": "A licence under which the Distribution is made available."
+          },
+          "sh:name": {
+            "en": "licence"
+          },
+          "sh:path": "http://purl.org/dc/terms/license"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DistributionShape/e0065293221c5851ec508ae96cd4ad03ffdedd19",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Distribution.accessURL",
+          "sh:description": {
+            "en": "A URL that gives access to a Distribution of the Dataset."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "access URL"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#accessURL"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:DistributionShape/f30149ffb6ec9d00dd5866b052105729fa27d02a",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#Distribution.licence",
+          "sh:description": {
+            "en": "A licence under which the Distribution is made available."
+          },
+          "sh:name": {
+            "en": "licence"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/license"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/dcat#Distribution"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#dcat:ResourceShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/ns/dcat#Resource"
+    },
+    {
+      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd#foaf:DocumentShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://xmlns.com/foaf/0.1/Document"
+    }
+  ]
+}
