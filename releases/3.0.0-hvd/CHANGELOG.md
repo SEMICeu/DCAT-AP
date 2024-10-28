@@ -1,6 +1,6 @@
 # **Consolidated ChangeLog**  
   
-This Changelog provides an overview of the changes incorporated in DCAT-AP HVD 3.0.0. A complete list of the issues closed with this release is accessible on [GitHub](https://github.com/SEMICeu/DCAT-AP/issues?q=is%3Aissue+is%3Aopen+label%3AHVD).  
+This Changelog provides an overview of the changes incorporated in DCAT-AP HVD 3.0.0. A complete list of the issues closed with this release is accessible on [GitHub](https://github.com/SEMICeu/DCAT-AP/issues?q=is%3Aissue+label%3Arelease%3A3.0.0-hvd-oct2024+is%3Aclosed).  
   
 # **Editorial Changes**  
   
