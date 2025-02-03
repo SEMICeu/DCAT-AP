@@ -7,7 +7,7 @@
     
 	
     <meta charset="utf-8" />
-    <title>DCAT-AP 3.0</title>
+    <title>DCAT-AP 3.0.1</title>
     <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
     <script class="remove">
     // All config options at https://respec.org/docs/
@@ -133,7 +133,7 @@
         }
       ],
       github: "SEMICeu/DCAT-AP",
-      shortName: "DCAT-AP 3.0",
+      shortName: "DCAT-AP 3.0.1",
       xref: "web-platform",
       doJsonLd: true,
       logos: [{
@@ -396,9 +396,9 @@ This document is the result of the major semantic change release process describ
     <h2>Status</h2>
         <p>
 <!-- readd when SEMIC has a codelist about it process 
-	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsW3C">SEMIC Recommendation</a> published at 2025-01-27.
+	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsW3C">SEMIC Draft Specification</a> published at 2025-01-27.
 -->
-	This application profile has the status SEMIC Recommendation published at 2025-01-27.
+	This application profile has the status SEMIC Draft Specification published at 2025-01-27.
         </p>
         <p>
             Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/CHANGELOG.html">Changelog</a>.
@@ -422,7 +422,7 @@ This document is the result of the major semantic change release process describ
 		  This specification </span> of <a rel="cc:attributionURL" property="cc:attributionName" href="ORGANISATION" xmlns:cc="http://creativecommons.org/ns#">ORGANISATION </a> 
 	          is published under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">"CC0"</a>.
 	-->
-             Copyright © 2023 European Union. All material in this repository is published under the license CC-BY 4.0, unless explicitly otherwise mentioned.
+             Copyright © 2025 European Union. All material in this repository is published under the license CC-BY 4.0, unless explicitly otherwise mentioned.
         </p>
     
 </section>
@@ -10007,6 +10007,53 @@ Controlled vocabularies SHOULD:
 <li>Have associated persistence and versioning policies.</li>
 </ul>
 These criteria do not intend to define a set of requirements for controlled vocabularies in general; they are only intended to be used for the selection of the controlled vocabularies that are proposed for this Application Profile.
+
+<h3>Expected usage of controlled vocabularies</h3>
+
+To increase the interoperability, the value spaces of properties can be further harmonised using shared controlled vocabularies.
+This kind of restriction may be subject to a varying interpretation on what the expected usage of a controlled vocabulary is.
+To ensure a common interpretation the following expectations are defined:
+
+<ul>
+<li id="cv-a"> The property MUST use as range values codes from {codelist} <br/>
+This expectation results in that the value space is closed under the codelist. 
+Validation systems SHOULD produce errors.
+All profiles in the ecosystem MUST avoid conflicts by creating subproperties.
+
+</li>
+<li id="cv-b"> The property MUST have at least one value from {codelist} <br/>
+This expectation makes the value space minimally constrained.
+Validation systems SHOULD produce warnings.
+All profiles in the ecosystem MUST adopt this interpretation in case they want to restrict the value space.
+Adopting the former expectation will lead to cross-profile interpretations challenges.
+
+</li>
+<li id="cv-c"> The property IS RECOMMENDED to use as range values codes from {codelist} <br/>
+The value space is closed under the codelist, but other values are tolerated. 
+Recommending means expressing a strong preference. 
+To make this stronger direction towards harmonisation visible in the data exchanges, validation systems SHOULD produce warnings.
+
+</li>
+<li id="cv-d">The property MAY use as range values codes from {codelist} <br/>
+The value space is closed under the codelist, but other values are accepted.
+This expectation is more a hint to be used. 
+As there is no obligation nor strongly suggestion expressed here, the use of other codelists is valid is all cases.
+Therefore validation systems MAY produce warnings but users are free to ignore them.
+No validation in this case is also acceptable.
+</li>
+</ul>
+
+<p>
+The first two (and preferably also the others) SHOULD only be used for requirements that can be verified by a machine.
+If the validation can only be realised with the involvement of humans, then a less strong requirement (RECOMMMENDED or MAY) is used, 
+even if the intention is to be very strict.
+This is to ensure that the provided SHACL representations correspond closely to all use cases possible. 
+Stronger enforcements are left for implementations as they have control on actual data exchange.
+</p>
+
+
+
+
 
 <h3>Controlled vocabularies to be used</h3>
 <p>In the table below, a number of properties are listed with controlled vocabularies that MUST be used for the listed properties. The declaration of the following controlled vocabularies as mandatory ensures a minimum level of interoperability.</p>
