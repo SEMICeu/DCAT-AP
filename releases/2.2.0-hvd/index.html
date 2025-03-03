@@ -97,12 +97,22 @@
 
     var respecConfig = {
       postProcess: [quickreference],
-      edDraftURI: "https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd",
-      latestVersion: "https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd",
+      latestVersion: "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd",
       specStatus: "base",
       publishDate: "2023-12-14",
       editors: myeditors,
       authors: myauthors,
+      otherLinks: [
+        {
+	  key: "This version:",
+	  data: [ { value : "https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd", href : "https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd" } ]
+	},
+        {
+	  key: "Next version:",
+	  data: [ { value : "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd", href : "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd" } ]
+	}
+      ],
+
       github: "SEMICeu/DCAT-AP",
       shortName: "DCAT-AP High Value Datasets",
       xref: "web-platform",

@@ -120,8 +120,8 @@
 
     var respecConfig = {
       postProcess: [quickreference],
-      edDraftURI: "https://semiceu.github.io/DCAT-AP/releases/3.0.0",
-      latestVersion: "https://github.com/SEMICeu/DCAT-AP/tree/master/releases/2.1.1",
+      edDraftURI: "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft",
+      latestVersion: "https://semiceu.github.io/DCAT-AP/releases/3.0.0",
       specStatus: "base",
       publishDate: "2024-06-14",
       editors: myeditors,
@@ -130,7 +130,16 @@
         {
           key: "Owners:",
           data: myowners
+        },
+       {
+          key: "Previous version:",
+          data: [ { value : "https://semiceu.github.io/DCAT-AP/releases/2.1.1/", href : "https://semiceu.github.io/DCAT-AP/releases/2.1.1/" } ]
+        },
+        {
+          key: "This version:",
+          data: [ { value : "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft", href : "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft" } ]
         }
+
       ],
       github: "SEMICeu/DCAT-AP",
       shortName: "DCAT-AP 3.0",
