@@ -15,7 +15,6 @@
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dct:LinguisticSystemShape>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dct:LocationShape>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dct:MediaTypeShape>,
-    <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dct:mediaTypeShape>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dct:MediaTypeOrExtentShape>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dct:PeriodOfTimeShape>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dct:ProvenanceStatementShape>,
@@ -250,7 +249,6 @@
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:CatalogShape/29ba27566ab1f32c8bb73f3492436d4bd868d3d2>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:CatalogShape/337cf55721093cc585693a5397601643d59a4c46>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:CatalogShape/34db0dabef6e2aa992eab790fc3e8d1e3f83bc12>,
-    <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:CatalogShape/3844f5a8620973800a0f9d6121572dbe0082c955>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:CatalogShape/49cd6ad5fefbffaf348db14bfe47600981dd12c8>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:CatalogShape/4be37093e4c3ba0d5b5a18ef6b97778d6d689392>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:CatalogShape/6051cd8d6a1acfcf4d6721f241fff56a0b42ebf9>,
@@ -313,7 +311,7 @@
   shacl:path dcat:themeTaxonomy .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:CatalogShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Catalogue.applicablelegislation";
-  shacl:description "The legislation that mandates the creation or management of the Catalog."@en;
+  shacl:description "The legislation that mandates the creation or management of the Catalogue."@en;
   shacl:name "applicable legislation"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path <http://data.europa.eu/r5r/applicableLegislation> .
@@ -335,12 +333,6 @@
   shacl:name "record"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path dcat:record .
-
-<https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:CatalogShape/3844f5a8620973800a0f9d6121572dbe0082c955> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Catalogue.rights";
-  shacl:description "A statement that specifies rights associated with the Catalogue."@en;
-  shacl:maxCount 1;
-  shacl:name "rights"@en;
-  shacl:path dc:rights .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:CatalogShape/49cd6ad5fefbffaf348db14bfe47600981dd12c8> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Catalogue.catalogue";
   shacl:class dcat:Catalog;
@@ -380,7 +372,7 @@
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:CatalogShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Catalogue.applicablelegislation";
   shacl:class <http://data.europa.eu/eli/ontology#LegalResource>;
-  shacl:description "The legislation that mandates the creation or management of the Catalog."@en;
+  shacl:description "The legislation that mandates the creation or management of the Catalogue."@en;
   shacl:name "applicable legislation"@en;
   shacl:path <http://data.europa.eu/r5r/applicableLegislation> .
 
@@ -1026,7 +1018,6 @@
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DatasetShape/f6f077451f13ccf5d721838425fcc37f6cebfe48>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DatasetShape/f8b02efd063b8089b72ce9677a1e4a3488eeb9a9>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DatasetShape/fb900ce4a3c69358a055e1f0d365fba049164374>,
-    <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DatasetShape/fcf80b3465d802bf69af0e66cf87973c64d4130a>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DatasetShape/ffbbcd28b1fd92213d8350e1b6418d3d998c7197>;
   shacl:targetClass dcat:Dataset .
 
@@ -1462,12 +1453,6 @@
   shacl:name "qualified relation"@en;
   shacl:path dcat:qualifiedRelation .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DatasetShape/fcf80b3465d802bf69af0e66cf87973c64d4130a> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Dataset.spatialresolution";
-  shacl:description "The minimum spatial separation resolvable in a dataset, measured in meters."@en;
-  shacl:maxCount 1;
-  shacl:name "spatial resolution"@en;
-  shacl:path dcat:spatialResolutionInMeters .
-
 <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DatasetShape/ffbbcd28b1fd92213d8350e1b6418d3d998c7197> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Dataset.landingpage";
   shacl:class foaf:Document;
   shacl:description "A web page that provides access to the Dataset, its Distributions and/or additional information."@en;
@@ -1490,7 +1475,6 @@
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DistributionShape/29ba27566ab1f32c8bb73f3492436d4bd868d3d2>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DistributionShape/2bc917d85a4ffccfa9de4268bf84b517c322ce2c>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DistributionShape/36b68d0f06c0eacbbddd0d2891379c6d005dc861>,
-    <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DistributionShape/3844f5a8620973800a0f9d6121572dbe0082c955>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DistributionShape/39da16eecfc16996eed6a010f4203cdcec7c388d>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DistributionShape/3c1ab2e1170c5050c8b7742e97810027ddc104b1>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DistributionShape/42110293925ce8bdb81f82dee95d1f78b2fca91c>,
@@ -1621,12 +1605,6 @@
   shacl:maxCount 1;
   shacl:name "has policy"@en;
   shacl:path <http://www.w3.org/ns/odrl/2/hasPolicy> .
-
-<https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DistributionShape/3844f5a8620973800a0f9d6121572dbe0082c955> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Distribution.rights";
-  shacl:description "A statement that specifies rights associated with the Distribution."@en;
-  shacl:maxCount 1;
-  shacl:name "rights"@en;
-  shacl:path dc:rights .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DistributionShape/39da16eecfc16996eed6a010f4203cdcec7c388d> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Distribution.packagingformat";
   shacl:class dc:MediaType;
@@ -2124,10 +2102,6 @@
 <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dct:StandardShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass dc:Standard .
-
-<https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dct:mediaTypeShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass dc:MediaType .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#eli:LegalResourceShape> a shacl:NodeShape;
   shacl:closed false;

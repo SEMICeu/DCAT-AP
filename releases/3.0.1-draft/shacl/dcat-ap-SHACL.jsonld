@@ -255,13 +255,6 @@
       "sh:targetClass": "http://purl.org/dc/terms/MediaType"
     },
     {
-      "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dct:mediaTypeShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [],
-      "sh:targetClass": "http://purl.org/dc/terms/MediaType"
-    },
-    {
       "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dct:MediaTypeOrExtentShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
@@ -763,7 +756,7 @@
           "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:CatalogShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb",
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Catalogue.applicablelegislation",
           "sh:description": {
-            "en": "The legislation that mandates the creation or management of the Catalog."
+            "en": "The legislation that mandates the creation or management of the Catalogue."
           },
           "sh:name": {
             "en": "applicable legislation"
@@ -806,18 +799,6 @@
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://www.w3.org/ns/dcat#record"
-        },
-        {
-          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:CatalogShape/3844f5a8620973800a0f9d6121572dbe0082c955",
-          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Catalogue.rights",
-          "sh:description": {
-            "en": "A statement that specifies rights associated with the Catalogue."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "en": "rights"
-          },
-          "sh:path": "http://purl.org/dc/terms/rights"
         },
         {
           "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:CatalogShape/49cd6ad5fefbffaf348db14bfe47600981dd12c8",
@@ -896,7 +877,7 @@
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Catalogue.applicablelegislation",
           "sh:class": "http://data.europa.eu/eli/ontology#LegalResource",
           "sh:description": {
-            "en": "The legislation that mandates the creation or management of the Catalog."
+            "en": "The legislation that mandates the creation or management of the Catalogue."
           },
           "sh:name": {
             "en": "applicable legislation"
@@ -2788,18 +2769,6 @@
           "sh:path": "http://www.w3.org/ns/dcat#qualifiedRelation"
         },
         {
-          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DatasetShape/fcf80b3465d802bf69af0e66cf87973c64d4130a",
-          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Dataset.spatialresolution",
-          "sh:description": {
-            "en": "The minimum spatial separation resolvable in a dataset, measured in meters."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "en": "spatial resolution"
-          },
-          "sh:path": "http://www.w3.org/ns/dcat#spatialResolutionInMeters"
-        },
-        {
           "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DatasetShape/ffbbcd28b1fd92213d8350e1b6418d3d998c7197",
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Dataset.landingpage",
           "sh:class": "http://xmlns.com/foaf/0.1/Document",
@@ -3258,18 +3227,6 @@
             "en": "has policy"
           },
           "sh:path": "http://www.w3.org/ns/odrl/2/hasPolicy"
-        },
-        {
-          "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DistributionShape/3844f5a8620973800a0f9d6121572dbe0082c955",
-          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Distribution.rights",
-          "sh:description": {
-            "en": "A statement that specifies rights associated with the Distribution."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "en": "rights"
-          },
-          "sh:path": "http://purl.org/dc/terms/rights"
         },
         {
           "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DistributionShape/39da16eecfc16996eed6a010f4203cdcec7c388d",
