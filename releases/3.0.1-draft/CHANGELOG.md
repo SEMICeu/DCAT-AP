@@ -1,18 +1,22 @@
 # **Consolidated ChangeLog**
 
-This Changelog provides an overview of the changes incorporated in DCAT-AP 3.0.1 draft. A complete list of the issues closed with this release is accessible on [GitHub]().
+This Changelog provides an overview of the changes incorporated in DCAT-AP 3.0.1. A complete list of the issues closed with this release is accessible on [GitHub]().
 
 # **Editorial changes**
 
+- fixed the styling of the tables.
 - Improved navigation to point to previous version and current version.
 - removed the deprecated owl:versionInfo from the UML figure
 - validated the property reuse qualifications for the class Dataset.
 - removed the redundant link column in the properties table as the link used in the reuse table is the same.
   This creates more space for additional documentation.
 - removed the supporting annotation for posting issues on specific datatypes.
+- Adapted the version history text.
+
 
 # **Adaptations to the different sections**
 
+- update the controlled vocabularies usage qualifications according to the Webinar.
 
 # **Data model adaptations**
 

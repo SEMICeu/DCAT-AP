@@ -31,14 +31,6 @@
 		, 
 		
 		   {
-		    name: "Makx Dekkers",
-		      
-		      
-		      
-		    }
-		, 
-		
-		   {
 		    name: "Pavlina Fragkou",
 		      
 		      
@@ -123,7 +115,7 @@
       edDraftURI: "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft",
       latestVersion: "https://semiceu.github.io/DCAT-AP/releases/3.0.0/",
       specStatus: "base",
-      publishDate: "2025-01-27",
+      publishDate: "2025-03-05",
       editors: myeditors,
       authors: myauthors,
       otherLinks: [
@@ -324,57 +316,17 @@ The years after this specification was further elaborated in new release 2.0.1, 
 W3C DCAT 2 restructured DCAT by introducing the notions of a generic Catalogued Resource of which Datasets and Data Services are special cases.
 In 2023, the adoption of W3C DCAT 3 [[vocab-dcat-3]] triggered a new alignment for DCAT-AP.
 W3C DCAT 3 extends the profile with the Dataset Series notion.
-This document is the combination of addressing issues raised by the community and this alignment.
-
-<h4>Notes on alignment with DCAT 3</h4>
-The introduction of Dataset Series in DCAT is an additive operation from semantical, data modeling perspective. 
-Therefore the impact on existing DCAT-AP 2.x exchanges is limited. 
-Nevertheless, publishers may face substantial impact on the existing catalogues as the new terminology for Dataset Series may require to revisit the publisher's metadata guidelines.
-For instance, if the publisher had chosen to document a Dataset Series as a Dataset with multiple Distributions, then the alignment with Dataset Series as expressed in this specification will require a substantial effort. 
-This impact goes beyond the specification and dependent on the usage of the shared information.
-In the context of DCAT-AP and in line with the conformance expectations, the term Dataset Series will be solely used for resources that are explicitly identified by the class Dataset Series. 
-The situation, as mentioned, where a Dataset has multiple Distributions, will be considered as a Dataset with multiple Distributions and not as a Dataset Series. 
-This way, receivers of DCAT-AP metadata can rely on the classes to process the metadata.
+In the release <a href="">DCAT-AP 3.0</a> the alignment was made together with a number of community requests. 
+More information on the alignment and the applied changes in that context are found in that document.
 <p/>
-The sole data model impact DCAT 3 creates, is by deprecating the use of some URIs and introducing new URIs in the DCAT namespace for the use case of Dataset versioning.
-As these properties are optional and since there is an equivalence between the deprecated and the new ones, catalogue owners can easily realign.
-
-<div class="ednote" title="Data model adaptations">
-<ul>
-<li>Added class Dataset Series, alignment with DCAT 3.0</li>
-<li>Replaced the URI mapping for the Dataset properties hasVersion, isVersionOf and version, alignment with DCAT 3.0</li>
-<li>Fixed the range for Distribution bytesize, alignment with DCAT 3.0</li>
-<li>Changed the range for Location geometry, alignment with DCAT 3.0</li>
-<li>Add the properties publisher and format to Data Service</li>
-<li>Replaced mandatory Distribution status controlled vocabulary</li>
-<li>Adapted the definition for property type of Agent</li>
-<li>Adapted the definition for property access rights for Dataset</li>
-<li>Lift the max cardinality for property application profile for Catalogue Record</li>
-<li>Add new property applicable legislation as generic approach to indicate the legislation under which a dataset is made available.</li>
-</ul>
-
-To support the review, the changes are also highlighted on the diagram below.
-
-    <div>
-        <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/html/overview-annotated.jpg"
-           target="_blank">
-            <img src="https://semiceu.github.io/DCAT-AP/releases/3.0.0/html/overview-annotated.jpg"/>
-        </a>
-    </div>
-</div>
-
-
+This release addresses identified bugfixes and issues that have been identified. 
+For an overview we refer to the <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft/CHANGELOG.html">Changelog</a>.
 
 
 <h3>Meeting minutes</h3>
 The following webinars have been held for the creation of this release
     <ul>
-	    <li>Webinar 25 November 2022 (<a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/MeetingMinutes.pdf">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=vpCu3wrBeso">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/Slides.pdf">slides</a>) </li>
-      <li>Webinar 2 February 2023 (<a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/20230202%20Webinar%20DCAT-AP.pdf">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=teUeMLwv4Ks">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/webinar_2_feb_2022_DCAT-AP_v.0.3.pdf">slides</a>) </li>
-      <li>Webinar 4 October 2023 (<a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/20231004%20Webinar%20DCAT-AP%20for%20Data%20Spaces_Incorporated_Comments.pdf">Meeting Minutes</a>, <a href="https://youtu.be/HIQ-xFtZcxY">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/event/attachment/2023-10/DCAT-AP%20for%20Data%20Spaces%20Webinar.pdf">slides</a>) </li>
-      <li>Webinar 7 November 2023 (<a href="https://joinup.ec.europa.eu/sites/default/files/event/attachment/2023-12/20231107%20Webinar%20dedicated%20to%20the%20status%20and%20governance%20of%20DCAT-AP%20%281%29.pdf">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=lMMaUa4mrQE">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/event/attachment/2023-11/Webinar%20DCAT-AP%20Status%20%26%20Governance_0.pdf">slides</a>) </li>
-      <li>Webinar 21 November 2023 (<a href="https://joinup.ec.europa.eu/sites/default/files/event/attachment/2023-12/20231121%20Webinar%20DCAT-AP%20Technical%20Issues.pdf">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=X2rw2HWm23w">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/event/attachment/2023-11/Webinar%20DCAT-AP%2020231121%20v1.0.pdf">slides</a>) </li>
-      <li>Webinar 16 January 2024 (<a href="https://joinup.ec.europa.eu/sites/default/files/event/attachment/2023-12/20231107%20Webinar%20dedicated%20to%20the%20status%20and%20governance%20of%20DCAT-AP%20%281%29.pdf">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=lMMaUa4mrQE">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/event/attachment/2023-11/Webinar%20DCAT-AP%20Status%20%26%20Governance_0.pdf">slides</a>) </li>
+	    <li>Webinar 4 February 2025 (<a href="https://interoperable-europe.ec.europa.eu/sites/default/files/event/attachment/2025-03/20250204%20Meeting%20Minutes%20webinar%20on%20DCAT-AP_1.pdf">Meeting Minutes</a>, <a href="https://youtu.be/G2G5MrA5jp0?feature=shared">recording</a>, <a href="https://interoperable-europe.ec.europa.eu/sites/default/files/event/attachment/2025-03/Webinar%20DCAT-AP%2020250204%20v1.0.pdf">slides</a>) </li>
    </ul>
 
 
@@ -404,12 +356,12 @@ This document is the result of the major semantic change release process describ
     <h2>Status</h2>
         <p>
 <!-- readd when SEMIC has a codelist about it process 
-	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsW3C">SEMIC Draft Specification</a> published at 2025-01-27.
+	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsW3C">SEMIC Draft Specification</a> published at 2025-03-05.
 -->
-	This application profile has the status SEMIC Draft Specification published at 2025-01-27.
+	This application profile has the status SEMIC Draft Specification published at 2025-03-05.
         </p>
         <p>
-            Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/CHANGELOG.html">Changelog</a>.
+            Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft/CHANGELOG.html">Changelog</a>.
         </p>
 </section>
 
@@ -1548,7 +1500,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                     An entity (organisation) responsible for making the Catalogue available.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    
+                                    In case multiple organisations are considered the publishers of the catalogue, it is recommended to use foaf:Group to bundle them into one entity. 
                                 </td>
 				<!--
                                 <td>
@@ -10344,6 +10296,16 @@ Stronger enforcements are left for implementations as they have control on actua
 <h3>Controlled vocabularies to be used</h3>
 The tables below show the usage of the codelists with the expected qualification. 
 
+<div class="ednote" title="Proposal qualification of use of controlled vocabularies">
+This proposal is being discussed in 3 issues: 
+<a href="https://github.com/SEMICeu/DCAT-AP/issues/407">407</a>,
+<a href="https://github.com/SEMICeu/DCAT-AP/issues/408">408</a>,
+<a href="https://github.com/SEMICeu/DCAT-AP/issues/409">409</a>.
+
+The previous table can be found <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#controlled-vocabularies-to-be-used">here</a>.
+</div>
+
+
 <h4>Properties with controlled vocabularies that MUST be used for the listed properties</h4>
 
 <table id="table-cv" class="simple">
@@ -10356,10 +10318,14 @@ The tables below show the usage of the codelists with the expected qualification
 		<tr><td>adms:status</td><td><a href="#Distribution">Distribution</a></td><td><a href="http://publications.europa.eu/resource/authority/distribution-status">EU Vocabularies Distribution Status</a></td><td></td></tr>
 		<tr><td>dcatap:availability</td><td><a href="#Distribution">Distribution</a></td><td><a href="http://publications.europa.eu/resource/authority/planned-availability">Distribution availability vocabulary</a></td><td>The list of terms for the avalability levels of a dataset distribution in the DCAT-AP  specification.</td></tr>
 		<tr><td>spdx:algorithm</td><td><a href="#Checksum">Checksum</a></td><td><a href="https://spdx.org/rdf/terms/#d4e2129">Checksum algorithm members</a></td><td>The members listed are considered a controlled vocabulary of supported checksum algorithms.</td></tr>
-		<tr><td>dct:accessRights</td><td><a href="#Dataset">Dataset</a>, <a href="#DataService">Data Service</a></td><td><a href="http://publications.europa.eu/resource/authority/access-right">Access Rights Named Authority List</td><td>Use one of the following values (:PUBLIC, :RESTRICTED, :NON_PUBLIC).</td></tr>
 	</tbody>
 </table>
 <h4>Properties with AT LEAST 1 value from the controlled vocabularies</h4>
+<div class="ednote" title="dcat:theme CV usage qualification">
+During the last webinar this choice raised many questions and there was no consensus.
+There was no clear preference between the option shown below or keeping it under the above MUST qualification.
+Readers are expected to provide there feedback in issue 409.
+</div>
 <table id="table-cv" class="simple">
 	<thead><tr><th>Property URI</th><th>Used for Class</th><th>Vocabulary name</th><th>Usage note</th></tr></thead>
 	<tbody>
@@ -10373,6 +10339,7 @@ The tables below show the usage of the codelists with the expected qualification
 	<tbody>
 		<tr><td>dct:type</td><td><a href="#Agent">Agent</a></td><td><a href="http://purl.org/adms/publishertype/1.0">ADMS publisher type</a> vocabulary</td><td> The list of terms in the ADMS publisher type vocabulary is included in the ADMS specification</td></tr>
 		<tr><td>dct:type</td><td><a href="#LicenceDocument">Licence Document</a></td><td><a href="http://purl.org/adms/licencetype/1.0">ADMS licence type vocabulary</a></td><td> The list of terms in the ADMS licence type vocabulary is included in the ADMS specification</td></tr>
+		<tr><td>dct:accessRights</td><td><a href="#Dataset">Dataset</a>, <a href="#DataService">Data Service</a></td><td><a href="http://publications.europa.eu/resource/authority/access-right">Access Rights Named Authority List</td><td>Use one of the following values (:PUBLIC, :RESTRICTED, :NON_PUBLIC).</td></tr>
 	</tbody>
 </table>
 
@@ -10389,35 +10356,6 @@ The tables below show the usage of the codelists with the expected qualification
 
 
 
-<p>In the table below, a number of properties are listed with controlled vocabularies that MUST be used for the listed properties. The declaration of the following controlled vocabularies as mandatory ensures a minimum level of interoperability.</p>
-
-<table id="table-cv" class="simple">
-	<thead><tr><th>Property URI</th><th>Used for Class</th><th>Vocabulary name</th><th>Usage note</th></tr></thead>
-	<tbody>
-		<tr><td>dcat:mediaType</td><td><a href="#Distribution">Distribution</a></td><td><a href="http://www.iana.org/assignments/media-types/media-types.xhtml">IANA Media Types</a></td><td></td></tr>
-		<tr><td>dcat:theme</td><td><a href="#Dataset">Dataset</a>, <a href="#DataService">Data Service</a>, <a href="#Catalogue">Catalogue</a></td><td><a href="http://publications.europa.eu/resource/authority/data-theme">Dataset Theme Vocabulary</a></td><td>The values to be used for this property are the URIs of the concepts in the vocabulary.</td></tr>
-		<tr><td>dct:accrualPeriodicity</td><td><a href="#Dataset">Dataset</a>,<a href="#DatasetSeries">Dataset Series</a></td><td><a href="http://publications.europa.eu/resource/authority/frequency">EU Vocabularies Frequency Named Authority List</a></td><td></td></tr>
-		<tr><td>dct:format</td><td><a href="#Distribution">Distribution</a>,<a href="#DataService">Data Service </a></td><td><a href="http://publications.europa.eu/resource/authority/file-type">EU Vocabularies File Type Named Authority List</a></td><td></td></tr>
-		<tr><td>dct:language</td><td><a href="#Catalogue">Catalogue</a>,<a href="#Dataset">Dataset</a>, <a href="#CatalogueRecord">Catalogue Records</a>, <a href="#Distribution">Distribution</a></td><td><a href="http://publications.europa.eu/resource/authority/language">EU Vocabularies Languages Named Authority List</a></td><td></td></tr>
-		<tr><td>dct:publisher</td><td><a href="#Catalogue">Catalogue</a>,<a href="#Dataset">Dataset</a>,<a href="#DatasetSeries">Dataset Series</a>,<a href="#DataService">Data Service</a></td><td><a href="http://publications.europa.eu/resource/authority/corporate-body">EU Vocabularies Corporate bodies Named Authority List</a></td><td>The Corporate bodies NAL must be used for European institutions and a small set of international organisations. In case of other types of organisations, national, regional or local vocabularies should be used.</td></tr>
-		<tr><td>dct:spatial</td><td><a href="#Catalogue">Catalogue</a>,<a href="#Dataset">Dataset</a>,<a href="#DatasetSeries">Dataset Series</a></td><td><a href="http://publications.europa.eu/resource/authority/continent/">EU Vocabularies Continents Named Authority List</a>, <a href="http://publications.europa.eu/resource/authority/country">EU Vocabularies Countries Named Authority List</a>, <a href="http://publications.europa.eu/resource/authority/place/">EU Vocabularies Places Named Authority List</a>, <a href="http://sws.geonames.org/">Geonames</a></td><td> The EU Vocabularies Name Authority Lists must be used for continents, countries and places that are in those lists; if a particular location is not in one of the mentioned Named Authority Lists, Geonames URIs must be used.</td></tr>
-		<tr><td>adms:status</td><td><a href="#Distribution">Distribution</a></td><td><a href="http://publications.europa.eu/resource/authority/distribution-status">EU Vocabularies Distribution Status</a></td><td></td></tr>
-		<tr><td>dct:type</td><td><a href="#Agent">Agent</a></td><td><a href="http://purl.org/adms/publishertype/1.0">ADMS publisher type</a> vocabulary</td><td> The list of terms in the ADMS publisher type vocabulary is included in the ADMS specification</td></tr>
-		<tr><td>dct:type</td><td><a href="#LicenceDocument">Licence Document</a></td><td><a href="http://purl.org/adms/licencetype/1.0">ADMS licence type vocabulary</a></td><td> The list of terms in the ADMS licence type vocabulary is included in the ADMS specification</td></tr>
-		<tr><td>dcatap:availability</td><td><a href="#Distribution">Distribution</a></td><td><a href="http://publications.europa.eu/resource/authority/planned-availability">Distribution availability vocabulary</a></td><td>The list of terms for the avalability levels of a dataset distribution in the DCAT-AP  specification.</td></tr>
-		<tr><td>spdx:algorithm</td><td><a href="#Checksum">Checksum</a></td><td><a href="https://spdx.org/rdf/terms/#d4e2129">Checksum algorithm members</a></td><td>The members listed are considered a controlled vocabulary of supported checksum algorithms.</td></tr>
-		<tr><td>dct:accessRights</td><td><a href="#Dataset">Dataset</a>, <a href="#DataService">Data Service</a></td><td><a href="http://publications.europa.eu/resource/authority/access-right">Access Rights Named Authority List</td><td>Use one of the following values (:PUBLIC, :RESTRICTED, :NON_PUBLIC).</td></tr>
-	</tbody>
-</table>
-
-<p>In the table below, a number of properties are listed with controlled vocabularies that MAY be used for the listed properties. The declaration of the following controlled vocabularies as recommended stimulates interoperability.</p>
-
-<table id="table-cv" class="simple">
-    <thead><tr><th>Property URI</th><th>Used for Class</th><th>Vocabulary name</th><th>Usage note</th></tr></thead>
-    <tbody>
-<tr><td>dct:type</td><td><a href="#Dataset">Dataset</a></td><td><a href="http://publications.europa.eu/resource/authority/dataset-type">Dataset-type authority table</a></td><td>This list of terms provide types of datasets. Its main scope is to support dataset categorisation of the EU Open Data Portal.</td></tr>
-    </tbody>
-</table>
 
 <h3>Other controlled vocabularies</h3>
 In addition to the proposed common controlled vocabularies, which are mandatory to ensure minimal interoperability, implementers are encouraged to publish and to use further region or domain-specific vocabularies that are available online. While those may not be recognised by general implementations of the Application Profile, they may serve to increase interoperability across applications in the same region or domain. Examples are the full set of concepts in <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/eurovoc">EuroVoc</a>, <a href="https://dspacecris.eurocris.org/">the CERIF standard vocabularies</a>, <a href="http://www.oclc.org/content/dam/oclc/dewey/versions/print/intro.pdf">the Dewey Decimal Classification</a> and numerous other schemes.
