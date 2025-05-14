@@ -21,7 +21,7 @@ This Changelog provides an overview of the changes incorporated in DCAT-AP 3.0.1
 # **Data model adaptations**
 
 The list below indicates all changes and differences compared to DCAT-AP 3.0.0. 
-- Issue [370](https://github.com/SEMICeu/dcat-ap/issues/370): Relaxing the cardinality of dct:rights to 0..n for the existing occurrances in the classes Catalogue and Distribution. 
+- Issue [370](https://github.com/SEMICeu/dcat-ap/issues/370): Relaxing the cardinality of dct:rights to 0..n for the existing occurrences in the classes Catalogue and Distribution. 
     As consequence the reuse qualification changes from extended to as-is.
 - Issue [380](https://github.com/SEMICeu/dcat-ap/issues/380): Relaxing the cardinality of dcat:spatialresolution to 0..n for the classes Dataset. 
     Adapted the reuse qualification.
