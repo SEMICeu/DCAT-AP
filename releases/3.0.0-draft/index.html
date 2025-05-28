@@ -510,17 +510,17 @@ Elaborated statements about the expectations are found in section [[[#conformanc
 To improve the coherency between shared Dataset, Distribution and Data Service, section [[[#usage-guide-on-datasets-distributions-and-data-services]]] provides additional guidelines.
 
 </p><p>
-The list of included properties contain a selection of the properties from the W3C DCAT 3 specification [[vocab-dcat-3]]  on which DCAT-AP expresses additional constraints or on which DCAT-AP wants to emphasise their usage. Any property that is mentioned in DCAT applicable to a class but not explicitly is listed DCAT-AP is considered an optional field for DCAT-AP for that class. It means that for these properties DCAT-AP has no use cases that require additional usage considerations beyond ‘use the property as DCAT specifies’.
+The list of included properties contains a selection of the properties from the W3C DCAT 3 specification [[vocab-dcat-3]]  on which DCAT-AP expresses additional constraints or on which DCAT-AP wants to emphasise their usage. Any property that is mentioned in DCAT applicable to a class but not explicitly is listed DCAT-AP is considered an optional field for DCAT-AP for that class. It means that for these properties DCAT-AP has no use cases that require additional usage considerations beyond ‘use the property as DCAT specifies’.
 Properties that are not explicitly listed in this specification have no conformance expectation. 
 From that perspective these are ignored.  DCAT-AP acts in this way as a filter for all the possibilities DCAT offers.  
-Nevertheless, to keep the DCAT-AP concise and to the point optional DCAT-AP properties that have no additional usage notes to DCAT may become subject for removal if the usage in the practice is sporadic.  
+Nevertheless, to keep DCAT-AP concise and to the point, optional DCAT-AP properties that have no additional usage notes to DCAT may become subject for removal if the usage in the practice is sporadic.  
 </p>
 
 <h3>Application profile diagram</h3>
 
 An overview of DCAT-AP is shown by the UML diagram below. The UML diagram illustrates the specification described in this document. For readability purposes, the representation has been condensed as follows:
 <ul>
-<li> no ranges for data properties are shown, because some of them are expressed as unions of XSD types</li>
+<li> No ranges for data properties are shown, because some of them are expressed as unions of XSD types</li>
 <li> The figure contain the key classes with some important supporting classes. Other object properties (relationships) are listed as properties on the UML class with their target range.</li>
 <li> The class dcat:Resource has been included to ease to see the connection with W3C DCAT. DCAT-AP treats it as an abstract notion. </li>
 </ul>
@@ -10213,9 +10213,9 @@ But the presence of these Distributions raise semantical conflicts such as wheth
     In that case the Dataset Series should also be considered as a DCAT-AP Dataset.
 </li>      
 <li>Keep the usage simple. Complex nesting such as Dataset Series being a member of Dataset Series, or Dataset belonging to multiple Dataset Series are to be handled with care. 
-While from a data knowlegde graph these nestings are feasible and not so problematic, it must be realised that these complicate the presentation on a webpage. 
+While from a data knowledge graph these nestings are feasible and not so problematic, it must be realised that these complicate the presentation on a webpage. 
 Since data portal representations are the main communication from metadata owners to potential data consumers and there is no clear expectations
-on how to present the members of a Dataset Series in a UI (e.g. because orderning is not imposed), DCAT-AP users may not expect from other portals which harvest and process their Dataset Series, that these are more than a collection of Datasets.
+on how to present the members of a Dataset Series in a UI (e.g. because ordering is not imposed), DCAT-AP users may not expect from other portals which harvest and process their Dataset Series, that these are more than a collection of Datasets.
 Any interpretation, such as the collection is ordered, or grouped according to time or any wellknown dimension, is a specific expectation beyond the agreemenents made in DCAT-AP. 
 </li>
 <li>Conceptually, a Dataset Series is a special kind of Dataset. It is recommended to apply the same metadata quality of Datasets to Dataset Series (see [[[#quick-reference]]] ). The dedicated usage guidelines for Dataset Series and the Dataset members of a Dataset Series take priority over the generic DCAT-AP Dataset guidelines.
