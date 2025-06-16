@@ -1160,7 +1160,7 @@
   shacl:path dcat:spatialResolutionInMeters .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DatasetShape/4918ff7a6c1c4b0eea6403dca4b992b87ee1f4ab> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Dataset.relatedresource";
-  shacl:class rdfs:Resource;
+  shacl:nodeKind shacl:IRI;
   shacl:description "A related resource."@en;
   shacl:name "related resource"@en;
   shacl:path dc:relation .
@@ -1322,7 +1322,7 @@
   shacl:path dc:spatial .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DatasetShape/95c69c99a1e3ade043911b51b942f206dea0e68d> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Dataset.isreferencedby";
-  shacl:class rdfs:Resource;
+  shacl:nodeKind shacl:IRI;
   shacl:description "A related resource, such as a publication, that references, cites, or otherwise points to the dataset."@en;
   shacl:name "is referenced by"@en;
   shacl:path dc:isReferencedBy .
@@ -1655,7 +1655,7 @@
   shacl:path <http://spdx.org/rdf/terms#checksum> .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DistributionShape/653804840386e33525b3d39d205c174780be414b> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Distribution.accessURL";
-  shacl:class rdfs:Resource;
+  shacl:nodeKind shacl:IRI;
   shacl:description "A URL that gives access to a Distribution of the Dataset."@en;
   shacl:name "access URL"@en;
   shacl:path dcat:accessURL .
@@ -1757,7 +1757,7 @@
   shacl:path dc:license .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DistributionShape/a07d6e7a0a1790b89a1ce7ff602cbbd9ea835282> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Distribution.downloadURL";
-  shacl:class rdfs:Resource;
+  shacl:nodeKind shacl:IRI;
   shacl:description "A URL that is a direct link to a downloadable file in a given format."@en;
   shacl:name "download URL"@en;
   shacl:path dcat:downloadURL .
@@ -1911,7 +1911,7 @@
   shacl:path dcat:hadRole .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:RelationshipShape/b7aa98e1befa5130659568aa62e7f38575dc17c1> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Relationship.relation";
-  shacl:class rdfs:Resource;
+  shacl:nodeKind shacl:IRI;
   shacl:description "A resource related to the source resource."@en;
   shacl:name "relation"@en;
   shacl:path dc:relation .
@@ -2169,10 +2169,6 @@
 <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#rdfs:LiteralShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass rdfs:Literal .
-
-<https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#rdfs:ResourceShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass rdfs:Resource .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#skos:ConceptSchemeShape> a shacl:NodeShape;
   shacl:closed false;
