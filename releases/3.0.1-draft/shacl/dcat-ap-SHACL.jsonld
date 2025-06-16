@@ -268,7 +268,7 @@
       "sh:property": [
         {
           "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dct:PeriodOfTimeShape/238fde7d71612ea8f00826d9c60106d3ef9c4063",
-          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Periodoftime.beginning",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#PeriodofTime.beginning",
           "sh:description": {
             "en": "The beginning of a period or interval."
           },
@@ -280,7 +280,7 @@
         },
         {
           "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dct:PeriodOfTimeShape/343620e6c6e38873922b5acfdb46382ab0be183a",
-          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Periodoftime.beginning",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#PeriodofTime.beginning",
           "sh:description": {
             "en": "The beginning of a period or interval."
           },
@@ -292,7 +292,7 @@
         },
         {
           "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dct:PeriodOfTimeShape/3648a78b9b0570b660934474f131e41284725cd8",
-          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Periodoftime.end",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#PeriodofTime.end",
           "sh:description": {
             "en": "The end of a period or interval."
           },
@@ -304,7 +304,7 @@
         },
         {
           "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dct:PeriodOfTimeShape/59fdfa4abfd9413716ffbdf9a27b9fdbf23d7772",
-          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Periodoftime.startdate",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#PeriodofTime.startdate",
           "sh:description": {
             "en": "The start of the period."
           },
@@ -316,7 +316,7 @@
         },
         {
           "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dct:PeriodOfTimeShape/734ca37cb57eb7386e624ca5375d566ae94864ef",
-          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Periodoftime.enddate",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#PeriodofTime.enddate",
           "sh:description": {
             "en": "The end of the period."
           },
@@ -328,7 +328,7 @@
         },
         {
           "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dct:PeriodOfTimeShape/9053142781444816deeb00f184b765d8cb15b929",
-          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Periodoftime.end",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#PeriodofTime.end",
           "sh:class": "http://www.w3.org/2006/time#Instant",
           "sh:description": {
             "en": "The end of a period or interval."
@@ -340,7 +340,7 @@
         },
         {
           "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dct:PeriodOfTimeShape/c7fb86be0667a2402b275afe51fe509a49d6e4af",
-          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Periodoftime.end",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#PeriodofTime.end",
           "sh:description": {
             "en": "The end of a period or interval."
           },
@@ -352,7 +352,7 @@
         },
         {
           "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dct:PeriodOfTimeShape/de859f6cb226ad795bc5b0dfa9777c0f6352efaf",
-          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Periodoftime.enddate",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#PeriodofTime.enddate",
           "sh:description": {
             "en": "The end of the period."
           },
@@ -364,7 +364,7 @@
         },
         {
           "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dct:PeriodOfTimeShape/eb883e24d5d0a294a30545021f24e485d59d1e47",
-          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Periodoftime.beginning",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#PeriodofTime.beginning",
           "sh:class": "http://www.w3.org/2006/time#Instant",
           "sh:description": {
             "en": "The beginning of a period or interval."
@@ -376,7 +376,7 @@
         },
         {
           "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dct:PeriodOfTimeShape/f72c3efebeb551122e98eb731aa0ec8af8b4c1b7",
-          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Periodoftime.startdate",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#PeriodofTime.startdate",
           "sh:description": {
             "en": "The start of the period."
           },
