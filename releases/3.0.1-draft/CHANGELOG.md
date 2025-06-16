@@ -6,22 +6,23 @@ This Changelog provides an overview of the changes incorporated in DCAT-AP 3.0.1
 
 - fixed the styling of the tables.
 - Improved navigation to point to previous version and current version.
+- TODO: update affiliations
 - removed the deprecated owl:versionInfo from the UML figure
 - validated the property reuse qualifications for the class Dataset.
 - removed the redundant link column in the properties table as the link used in the reuse table is the same.
   This creates more space for additional documentation.
 - removed the supporting annotation for posting issues on specific datatypes.
 - Adapted the version history text.
+- fixed the diagram to the correct version
 
 
 # **Adaptations to the different sections**
 
-- update the controlled vocabularies usage qualifications according to the Webinar.
 
 # **Data model adaptations**
 
 The list below indicates all changes and differences compared to DCAT-AP 3.0.0. 
-- Issue [370](https://github.com/SEMICeu/dcat-ap/issues/370): Relaxing the cardinality of dct:rights to 0..n for the existing occurrances in the classes Catalogue and Distribution. 
+- Issue [370](https://github.com/SEMICeu/dcat-ap/issues/370): Relaxing the cardinality of dct:rights to 0..n for the existing occurrences in the classes Catalogue and Distribution. 
     As consequence the reuse qualification changes from extended to as-is.
 - Issue [380](https://github.com/SEMICeu/dcat-ap/issues/380): Relaxing the cardinality of dcat:spatialresolution to 0..n for the classes Dataset. 
     Adapted the reuse qualification.
@@ -37,6 +38,9 @@ The list below indicates all changes and differences compared to DCAT-AP 3.0.0.
 - Issue [416](https://github.com/SEMICeu/dcat-ap/issues/416): Use British english spelling for Catalogue.
 - Issue [418](https://github.com/SEMICeu/dcat-ap/issues/418): Data Service property conforms to link to DCAT corrected.
 - Issue [419](https://github.com/SEMICeu/dcat-ap/issues/419): Add reference to DCAT for Dataset property has version.
+- Issue [426](https://github.com/SEMICeu/dcat-ap/issues/426): fixed the diagram
+- Issue [432](https://github.com/SEMICeu/dcat-ap/issues/432): TODO: add the Iana codelists to the codelist tables
+- Issue [436](https://github.com/SEMICeu/dcat-ap/issues/432): Remove catalogue from the classes that use dcat:theme in section 10
 
 
  

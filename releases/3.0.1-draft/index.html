@@ -108,6 +108,41 @@
 		$('#table-quickoverview').DataTable();
 	};
 
+	var shaclfilepath = "shacl/dcat-ap-SHACL.ttl" ;
+	var folder = "./html/examples/";
+	var model = "dcat-ap" ;
+	var version_list = [
+      {
+		"type": "v3.0Base0",
+		"description": "DCAT-AP 3.0.0 Base Zero"
+	  },
+	  {
+		"type": "v3.0Range0",
+		"description": "DCAT-AP 3.0.0 Ranges Zero"
+	  },
+	  {
+		"type": "v3.0Base",
+		"description": "DCAT-AP 3.0.0 Base"
+	  },
+	  {
+		"type": "v3.0Range",
+		"description": "DCAT-AP 3.0.0 Ranges"
+	  },
+	  {
+		"type": "v3.0Rec",
+		"description": "DCAT-AP 3.0.0 Recommendations"
+	  },
+	  {
+		"type": "v3.Full",
+		"description": "DCAT-AP 3.0.0 Full"
+	  },
+	  {
+		"type": "v3.Full1",
+		"description": "DCAT-AP 3.0.0 Full (with constraints)"
+	  }
+	] ;
+	var linkinfo = "https://github.com/ISAITB/validator-resources-dcat-ap?tab=readme-ov-file#configured-options" ;
+	
    
 
     var respecConfig = {
@@ -472,17 +507,17 @@ Elaborated statements about the expectations are found in section [[[#conformanc
 To improve the coherency between shared Dataset, Distribution and Data Service, section [[[#usage-guide-on-datasets-distributions-and-data-services]]] provides additional guidelines.
 
 </p><p>
-The list of included properties contain a selection of the properties from the W3C DCAT 3 specification [[vocab-dcat-3]]  on which DCAT-AP expresses additional constraints or on which DCAT-AP wants to emphasise their usage. Any property that is mentioned in DCAT applicable to a class but not explicitly is listed DCAT-AP is considered an optional field for DCAT-AP for that class. It means that for these properties DCAT-AP has no use cases that require additional usage considerations beyond ‘use the property as DCAT specifies’.
+The list of included properties contains a selection of the properties from the W3C DCAT 3 specification [[vocab-dcat-3]]  on which DCAT-AP expresses additional constraints or on which DCAT-AP wants to emphasise their usage. Any property that is mentioned in DCAT applicable to a class but not explicitly is listed DCAT-AP is considered an optional field for DCAT-AP for that class. It means that for these properties DCAT-AP has no use cases that require additional usage considerations beyond ‘use the property as DCAT specifies’.
 Properties that are not explicitly listed in this specification have no conformance expectation. 
 From that perspective these are ignored.  DCAT-AP acts in this way as a filter for all the possibilities DCAT offers.  
-Nevertheless, to keep the DCAT-AP concise and to the point optional DCAT-AP properties that have no additional usage notes to DCAT may become subject for removal if the usage in the practice is sporadic.  
+Nevertheless, to keep DCAT-AP concise and to the point optional DCAT-AP properties that have no additional usage notes to DCAT may become subject for removal if the usage in the practice is sporadic.  
 </p>
 
 <h3>Application profile diagram</h3>
 
 An overview of DCAT-AP is shown by the UML diagram below. The UML diagram illustrates the specification described in this document. For readability purposes, the representation has been condensed as follows:
 <ul>
-<li> no ranges for data properties are shown, because some of them are expressed as unions of XSD types</li>
+<li> No ranges for data properties are shown, because some of them are expressed as unions of XSD types</li>
 <li> The figure contain the key classes with some important supporting classes. Other object properties (relationships) are listed as properties on the UML class with their target range.</li>
 <li> The class dcat:Resource has been included to ease to see the connection with W3C DCAT. DCAT-AP treats it as an abstract notion. </li>
 </ul>
@@ -671,7 +706,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                     <tbody class="supertype">
                         
                             <tr id="Agent.name"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://xmlns.com/foaf/0.1/name"
                                 class="class mandatory">
 <!--
@@ -722,7 +757,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                             </tr>
                         
                             <tr id="Agent.type"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/type"
                                 class="class mandatory">
 <!--
@@ -888,7 +923,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                     <tbody class="supertype">
                         
                             <tr id="Catalogue.applicablelegislation"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/r5r/applicableLegislation"
                                 class="class mandatory">
 <!--
@@ -939,7 +974,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                             </tr>
                         
                             <tr id="Catalogue.catalogue"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#catalog"
                                 class="class mandatory">
 <!--
@@ -992,7 +1027,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                             </tr>
                         
                             <tr id="Catalogue.creator"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/creator"
                                 class="class mandatory">
 <!--
@@ -1045,7 +1080,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                             </tr>
                         
                             <tr id="Catalogue.dataset"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#dataset"
                                 class="class mandatory">
 <!--
@@ -1098,7 +1133,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                             </tr>
                         
                             <tr id="Catalogue.description"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/description"
                                 class="class mandatory">
 <!--
@@ -1151,7 +1186,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                             </tr>
                         
                             <tr id="Catalogue.geographicalcoverage"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/spatial"
                                 class="class mandatory">
 <!--
@@ -1204,7 +1239,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                             </tr>
                         
                             <tr id="Catalogue.haspart"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/hasPart"
                                 class="class mandatory">
 <!--
@@ -1257,7 +1292,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                             </tr>
                         
                             <tr id="Catalogue.homepage"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://xmlns.com/foaf/0.1/homepage"
                                 class="class mandatory">
 <!--
@@ -1310,7 +1345,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                             </tr>
                         
                             <tr id="Catalogue.language"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/language"
                                 class="class mandatory">
 <!--
@@ -1363,7 +1398,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                             </tr>
                         
                             <tr id="Catalogue.licence"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/license"
                                 class="class mandatory">
 <!--
@@ -1416,7 +1451,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                             </tr>
                         
                             <tr id="Catalogue.modificationdate"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/modified"
                                 class="class mandatory">
 <!--
@@ -1469,7 +1504,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                             </tr>
                         
                             <tr id="Catalogue.publisher"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/publisher"
                                 class="class mandatory">
 <!--
@@ -1522,7 +1557,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                             </tr>
                         
                             <tr id="Catalogue.record"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#record"
                                 class="class mandatory">
 <!--
@@ -1575,7 +1610,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                             </tr>
                         
                             <tr id="Catalogue.releasedate"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/issued"
                                 class="class mandatory">
 <!--
@@ -1628,7 +1663,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                             </tr>
                         
                             <tr id="Catalogue.rights"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/rights"
                                 class="class mandatory">
 <!--
@@ -1681,7 +1716,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                             </tr>
                         
                             <tr id="Catalogue.service"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#service"
                                 class="class mandatory">
 <!--
@@ -1734,7 +1769,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                             </tr>
                         
                             <tr id="Catalogue.temporalcoverage"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/temporal"
                                 class="class mandatory">
 <!--
@@ -1787,7 +1822,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                             </tr>
                         
                             <tr id="Catalogue.themes"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#themeTaxonomy"
                                 class="class mandatory">
 <!--
@@ -1818,7 +1853,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                     A knowledge organization system used to classify the Resources that are in the Catalogue.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    This property refers to a knowledge organization system used to classify the Catalogue's Datasets. It must have at least the value NAL:data-theme as this is the manatory controlled vocabulary for dcat:theme.
+                                    This property refers to a knowledge organization system used to classify the Catalogue's Datasets. It must have at least the value NAL:data-theme as this is the mandatory controlled vocabulary for dcat:theme.
                                 </td>
 				<!--
                                 <td>
@@ -1840,7 +1875,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                             </tr>
                         
                             <tr id="Catalogue.title"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/title"
                                 class="class mandatory">
 <!--
@@ -1996,7 +2031,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                     <tbody class="supertype">
                         
                             <tr id="CatalogueRecord.applicationprofile"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/conformsTo"
                                 class="class mandatory">
 <!--
@@ -2049,7 +2084,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                             </tr>
                         
                             <tr id="CatalogueRecord.changetype"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/adms#status"
                                 class="class mandatory">
 <!--
@@ -2100,7 +2135,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                             </tr>
                         
                             <tr id="CatalogueRecord.description"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/description"
                                 class="class mandatory">
 <!--
@@ -2153,7 +2188,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                             </tr>
                         
                             <tr id="CatalogueRecord.language"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/language"
                                 class="class mandatory">
 <!--
@@ -2204,7 +2239,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                             </tr>
                         
                             <tr id="CatalogueRecord.listingdate"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/issued"
                                 class="class mandatory">
 <!--
@@ -2257,7 +2292,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                             </tr>
                         
                             <tr id="CatalogueRecord.modificationdate"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/modified"
                                 class="class mandatory">
 <!--
@@ -2310,7 +2345,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                             </tr>
                         
                             <tr id="CatalogueRecord.primarytopic"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://xmlns.com/foaf/0.1/primaryTopic"
                                 class="class mandatory">
 <!--
@@ -2341,7 +2376,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                     A link to the Dataset, Data service or Catalog described in the record.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    A catalogue record will refer to one entity in a catalogue. This can be either a Dataset or a Data Service. To ensure an unambigous reading of the cardinality the range is set to Catalogued Resource. However it is not the intend with this range to require the explicit use of the class Catalogued Record. As abstract class, an subclass should be used.
+                                    A catalogue record will refer to one entity in a catalogue. This can be either a Dataset or a Data Service. To ensure an unambigous reading of the cardinality the range is set to Catalogued Resource. However it is not the intent with this range to require the explicit use of the class Catalogued Record. As abstract class, an subclass should be used.
                                 </td>
 				<!--
                                 <td>
@@ -2363,7 +2398,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                             </tr>
                         
                             <tr id="CatalogueRecord.sourcemetadata"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/source"
                                 class="class mandatory">
 <!--
@@ -2414,7 +2449,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                             </tr>
                         
                             <tr id="CatalogueRecord.title"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/title"
                                 class="class mandatory">
 <!--
@@ -2627,7 +2662,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                     <tbody class="supertype">
                         
                             <tr id="Checksum.algorithm"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://spdx.org/rdf/terms#algorithm"
                                 class="class mandatory">
 <!--
@@ -2680,7 +2715,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                             </tr>
                         
                             <tr id="Checksum.checksumvalue"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://spdx.org/rdf/terms#checksumValue"
                                 class="class mandatory">
 <!--
@@ -2856,7 +2891,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                     <tbody class="supertype">
                         
                             <tr id="DataService.accessrights"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/accessRights"
                                 class="class mandatory">
 <!--
@@ -2909,7 +2944,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                             </tr>
                         
                             <tr id="DataService.applicablelegislation"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/r5r/applicableLegislation"
                                 class="class mandatory">
 <!--
@@ -2960,7 +2995,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                             </tr>
                         
                             <tr id="DataService.conformsto"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/conformsTo"
                                 class="class mandatory">
 <!--
@@ -3015,7 +3050,7 @@ For instance the data service adheres to the OGC WFS API standard, while the ass
                             </tr>
                         
                             <tr id="DataService.contactpoint"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#contactPoint"
                                 class="class mandatory">
 <!--
@@ -3068,7 +3103,7 @@ For instance the data service adheres to the OGC WFS API standard, while the ass
                             </tr>
                         
                             <tr id="DataService.description"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/description"
                                 class="class mandatory">
 <!--
@@ -3121,7 +3156,7 @@ For instance the data service adheres to the OGC WFS API standard, while the ass
                             </tr>
                         
                             <tr id="DataService.documentation"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://xmlns.com/foaf/0.1/page"
                                 class="class mandatory">
 <!--
@@ -3172,7 +3207,7 @@ For instance the data service adheres to the OGC WFS API standard, while the ass
                             </tr>
                         
                             <tr id="DataService.endpointdescription"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#endpointDescription"
                                 class="class mandatory">
 <!--
@@ -3225,7 +3260,7 @@ For instance the data service adheres to the OGC WFS API standard, while the ass
                             </tr>
                         
                             <tr id="DataService.endpointURL"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#endpointURL"
                                 class="class mandatory">
 <!--
@@ -3278,7 +3313,7 @@ For instance the data service adheres to the OGC WFS API standard, while the ass
                             </tr>
                         
                             <tr id="DataService.format"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/format"
                                 class="class mandatory">
 <!--
@@ -3329,7 +3364,7 @@ For instance the data service adheres to the OGC WFS API standard, while the ass
                             </tr>
                         
                             <tr id="DataService.keyword"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#keyword"
                                 class="class mandatory">
 <!--
@@ -3382,7 +3417,7 @@ For instance the data service adheres to the OGC WFS API standard, while the ass
                             </tr>
                         
                             <tr id="DataService.landingpage"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#landingPage"
                                 class="class mandatory">
 <!--
@@ -3435,7 +3470,7 @@ For instance the data service adheres to the OGC WFS API standard, while the ass
                             </tr>
                         
                             <tr id="DataService.licence"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/license"
                                 class="class mandatory">
 <!--
@@ -3488,7 +3523,7 @@ For instance the data service adheres to the OGC WFS API standard, while the ass
                             </tr>
                         
                             <tr id="DataService.publisher"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/publisher"
                                 class="class mandatory">
 <!--
@@ -3541,7 +3576,7 @@ For instance the data service adheres to the OGC WFS API standard, while the ass
                             </tr>
                         
                             <tr id="DataService.servesdataset"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#servesDataset"
                                 class="class mandatory">
 <!--
@@ -3594,7 +3629,7 @@ For instance the data service adheres to the OGC WFS API standard, while the ass
                             </tr>
                         
                             <tr id="DataService.theme"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#theme"
                                 class="class mandatory">
 <!--
@@ -3647,7 +3682,7 @@ For instance the data service adheres to the OGC WFS API standard, while the ass
                             </tr>
                         
                             <tr id="DataService.title"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/title"
                                 class="class mandatory">
 <!--
@@ -3845,7 +3880,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                     <tbody class="supertype">
                         
                             <tr id="Dataset.accessrights"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/accessRights"
                                 class="class mandatory">
 <!--
@@ -3898,7 +3933,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             </tr>
                         
                             <tr id="Dataset.applicablelegislation"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/r5r/applicableLegislation"
                                 class="class mandatory">
 <!--
@@ -3949,7 +3984,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             </tr>
                         
                             <tr id="Dataset.conformsto"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/conformsTo"
                                 class="class mandatory">
 <!--
@@ -4002,7 +4037,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             </tr>
                         
                             <tr id="Dataset.contactpoint"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#contactPoint"
                                 class="class mandatory">
 <!--
@@ -4055,7 +4090,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             </tr>
                         
                             <tr id="Dataset.creator"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/creator"
                                 class="class mandatory">
 <!--
@@ -4108,7 +4143,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             </tr>
                         
                             <tr id="Dataset.datasetdistribution"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#distribution"
                                 class="class mandatory">
 <!--
@@ -4161,7 +4196,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             </tr>
                         
                             <tr id="Dataset.description"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/description"
                                 class="class mandatory">
 <!--
@@ -4214,7 +4249,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             </tr>
                         
                             <tr id="Dataset.documentation"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://xmlns.com/foaf/0.1/page"
                                 class="class mandatory">
 <!--
@@ -4265,7 +4300,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             </tr>
                         
                             <tr id="Dataset.frequency"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/accrualPeriodicity"
                                 class="class mandatory">
 <!--
@@ -4318,7 +4353,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             </tr>
                         
                             <tr id="Dataset.geographicalcoverage"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/spatial"
                                 class="class mandatory">
 <!--
@@ -4371,7 +4406,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             </tr>
                         
                             <tr id="Dataset.hasversion"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#hasVersion"
                                 class="class mandatory">
 <!--
@@ -4424,7 +4459,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             </tr>
                         
                             <tr id="Dataset.identifier"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/identifier"
                                 class="class mandatory">
 <!--
@@ -4477,7 +4512,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             </tr>
                         
                             <tr id="Dataset.inseries"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#inSeries"
                                 class="class mandatory">
 <!--
@@ -4530,7 +4565,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             </tr>
                         
                             <tr id="Dataset.isreferencedby"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/isReferencedBy"
                                 class="class mandatory">
 <!--
@@ -4583,7 +4618,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             </tr>
                         
                             <tr id="Dataset.keyword"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#keyword"
                                 class="class mandatory">
 <!--
@@ -4636,7 +4671,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             </tr>
                         
                             <tr id="Dataset.landingpage"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#landingPage"
                                 class="class mandatory">
 <!--
@@ -4689,7 +4724,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             </tr>
                         
                             <tr id="Dataset.language"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/language"
                                 class="class mandatory">
 <!--
@@ -4742,7 +4777,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             </tr>
                         
                             <tr id="Dataset.modificationdate"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/modified"
                                 class="class mandatory">
 <!--
@@ -4795,7 +4830,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             </tr>
                         
                             <tr id="Dataset.otheridentifier"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/adms#identifier"
                                 class="class mandatory">
 <!--
@@ -4848,7 +4883,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             </tr>
                         
                             <tr id="Dataset.provenance"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/provenance"
                                 class="class mandatory">
 <!--
@@ -4899,7 +4934,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             </tr>
                         
                             <tr id="Dataset.publisher"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/publisher"
                                 class="class mandatory">
 <!--
@@ -4952,7 +4987,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             </tr>
                         
                             <tr id="Dataset.qualifiedattribution"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/prov#qualifiedAttribution"
                                 class="class mandatory">
 <!--
@@ -5005,7 +5040,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             </tr>
                         
                             <tr id="Dataset.qualifiedrelation"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#qualifiedRelation"
                                 class="class mandatory">
 <!--
@@ -5058,7 +5093,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             </tr>
                         
                             <tr id="Dataset.relatedresource"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/relation"
                                 class="class mandatory">
 <!--
@@ -5111,7 +5146,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             </tr>
                         
                             <tr id="Dataset.releasedate"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/issued"
                                 class="class mandatory">
 <!--
@@ -5164,7 +5199,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             </tr>
                         
                             <tr id="Dataset.sample"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/adms#sample"
                                 class="class mandatory">
 <!--
@@ -5215,7 +5250,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             </tr>
                         
                             <tr id="Dataset.source"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/source"
                                 class="class mandatory">
 <!--
@@ -5266,7 +5301,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             </tr>
                         
                             <tr id="Dataset.spatialresolution"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#spatialResolutionInMeters"
                                 class="class mandatory">
 <!--
@@ -5319,7 +5354,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             </tr>
                         
                             <tr id="Dataset.temporalcoverage"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/temporal"
                                 class="class mandatory">
 <!--
@@ -5372,7 +5407,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             </tr>
                         
                             <tr id="Dataset.temporalresolution"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#temporalResolution"
                                 class="class mandatory">
 <!--
@@ -5425,7 +5460,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             </tr>
                         
                             <tr id="Dataset.theme"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#theme"
                                 class="class mandatory">
 <!--
@@ -5478,7 +5513,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             </tr>
                         
                             <tr id="Dataset.title"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/title"
                                 class="class mandatory">
 <!--
@@ -5531,7 +5566,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             </tr>
                         
                             <tr id="Dataset.type"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/type"
                                 class="class mandatory">
 <!--
@@ -5584,7 +5619,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             </tr>
                         
                             <tr id="Dataset.version"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#version"
                                 class="class mandatory">
 <!--
@@ -5637,7 +5672,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             </tr>
                         
                             <tr id="Dataset.versionnotes"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/adms#versionNotes"
                                 class="class mandatory">
 <!--
@@ -5688,7 +5723,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             </tr>
                         
                             <tr id="Dataset.wasgeneratedby"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/prov#wasGeneratedBy"
                                 class="class mandatory">
 <!--
@@ -5859,7 +5894,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                     <tbody class="supertype">
                         
                             <tr id="DatasetSeries.applicablelegislation"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/r5r/applicableLegislation"
                                 class="class mandatory">
 <!--
@@ -5910,7 +5945,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             </tr>
                         
                             <tr id="DatasetSeries.contactpoint"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#contactPoint"
                                 class="class mandatory">
 <!--
@@ -5963,7 +5998,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             </tr>
                         
                             <tr id="DatasetSeries.description"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/description"
                                 class="class mandatory">
 <!--
@@ -6018,7 +6053,7 @@ It is recommended to provide an indication about the dimensions the Dataset Seri
                             </tr>
                         
                             <tr id="DatasetSeries.frequency"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/accrualPeriodicity"
                                 class="class mandatory">
 <!--
@@ -6071,7 +6106,7 @@ It is recommended to provide an indication about the dimensions the Dataset Seri
                             </tr>
                         
                             <tr id="DatasetSeries.geographicalcoverage"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/spatial"
                                 class="class mandatory">
 <!--
@@ -6124,7 +6159,7 @@ It is recommended to provide an indication about the dimensions the Dataset Seri
                             </tr>
                         
                             <tr id="DatasetSeries.modificationdate"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/modified"
                                 class="class mandatory">
 <!--
@@ -6177,7 +6212,7 @@ It is recommended to provide an indication about the dimensions the Dataset Seri
                             </tr>
                         
                             <tr id="DatasetSeries.publisher"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/publisher"
                                 class="class mandatory">
 <!--
@@ -6231,7 +6266,7 @@ E.g. a digital archive could take over the publishing of older datasets in the 
                             </tr>
                         
                             <tr id="DatasetSeries.releasedate"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/issued"
                                 class="class mandatory">
 <!--
@@ -6286,7 +6321,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                             </tr>
                         
                             <tr id="DatasetSeries.temporalcoverage"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/temporal"
                                 class="class mandatory">
 <!--
@@ -6339,7 +6374,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                             </tr>
                         
                             <tr id="DatasetSeries.title"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/title"
                                 class="class mandatory">
 <!--
@@ -6510,7 +6545,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                     <tbody class="supertype">
                         
                             <tr id="Distribution.accessservice"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#accessService"
                                 class="class mandatory">
 <!--
@@ -6563,7 +6598,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                             </tr>
                         
                             <tr id="Distribution.accessURL"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#accessURL"
                                 class="class mandatory">
 <!--
@@ -6616,7 +6651,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                             </tr>
                         
                             <tr id="Distribution.applicablelegislation"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/r5r/applicableLegislation"
                                 class="class mandatory">
 <!--
@@ -6667,7 +6702,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                             </tr>
                         
                             <tr id="Distribution.availability"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/r5r/availability"
                                 class="class mandatory">
 <!--
@@ -6718,7 +6753,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                             </tr>
                         
                             <tr id="Distribution.bytesize"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#byteSize"
                                 class="class mandatory">
 <!--
@@ -6771,7 +6806,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                             </tr>
                         
                             <tr id="Distribution.checksum"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://spdx.org/rdf/terms#checksum"
                                 class="class mandatory">
 <!--
@@ -6824,7 +6859,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                             </tr>
                         
                             <tr id="Distribution.compressionformat"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#compressFormat"
                                 class="class mandatory">
 <!--
@@ -6877,7 +6912,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                             </tr>
                         
                             <tr id="Distribution.description"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/description"
                                 class="class mandatory">
 <!--
@@ -6930,7 +6965,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                             </tr>
                         
                             <tr id="Distribution.documentation"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://xmlns.com/foaf/0.1/page"
                                 class="class mandatory">
 <!--
@@ -6981,7 +7016,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                             </tr>
                         
                             <tr id="Distribution.downloadURL"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#downloadURL"
                                 class="class mandatory">
 <!--
@@ -7034,7 +7069,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                             </tr>
                         
                             <tr id="Distribution.format"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/format"
                                 class="class mandatory">
 <!--
@@ -7087,7 +7122,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                             </tr>
                         
                             <tr id="Distribution.haspolicy"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/odrl/2/hasPolicy"
                                 class="class mandatory">
 <!--
@@ -7140,7 +7175,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                             </tr>
                         
                             <tr id="Distribution.language"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/language"
                                 class="class mandatory">
 <!--
@@ -7191,7 +7226,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                             </tr>
                         
                             <tr id="Distribution.licence"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/license"
                                 class="class mandatory">
 <!--
@@ -7244,7 +7279,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                             </tr>
                         
                             <tr id="Distribution.linkedschemas"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/conformsTo"
                                 class="class mandatory">
 <!--
@@ -7297,7 +7332,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                             </tr>
                         
                             <tr id="Distribution.mediatype"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#mediaType"
                                 class="class mandatory">
 <!--
@@ -7350,7 +7385,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                             </tr>
                         
                             <tr id="Distribution.modificationdate"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/modified"
                                 class="class mandatory">
 <!--
@@ -7403,7 +7438,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                             </tr>
                         
                             <tr id="Distribution.packagingformat"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#packageFormat"
                                 class="class mandatory">
 <!--
@@ -7456,7 +7491,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                             </tr>
                         
                             <tr id="Distribution.releasedate"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/issued"
                                 class="class mandatory">
 <!--
@@ -7509,7 +7544,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                             </tr>
                         
                             <tr id="Distribution.rights"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/rights"
                                 class="class mandatory">
 <!--
@@ -7562,7 +7597,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                             </tr>
                         
                             <tr id="Distribution.spatialresolution"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#spatialResolutionInMeters"
                                 class="class mandatory">
 <!--
@@ -7615,7 +7650,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                             </tr>
                         
                             <tr id="Distribution.status"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/adms#status"
                                 class="class mandatory">
 <!--
@@ -7666,7 +7701,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                             </tr>
                         
                             <tr id="Distribution.temporalresolution"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#temporalResolution"
                                 class="class mandatory">
 <!--
@@ -7719,7 +7754,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                             </tr>
                         
                             <tr id="Distribution.title"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/title"
                                 class="class mandatory">
 <!--
@@ -7920,7 +7955,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                     <tbody class="supertype">
                         
                             <tr id="LicenceDocument.type"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/type"
                                 class="class mandatory">
 <!--
@@ -8079,7 +8114,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                     <tbody class="supertype">
                         
                             <tr id="Location.bbox"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#bbox"
                                 class="class mandatory">
 <!--
@@ -8132,7 +8167,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                             </tr>
                         
                             <tr id="Location.centroid"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#centroid"
                                 class="class mandatory">
 <!--
@@ -8185,7 +8220,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                             </tr>
                         
                             <tr id="Location.geometry"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/locn#geometry"
                                 class="class mandatory">
 <!--
@@ -8344,7 +8379,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                     <tbody class="supertype">
                         
                             <tr id="Relationship.hadrole"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#hadRole"
                                 class="class mandatory">
 <!--
@@ -8397,7 +8432,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                             </tr>
                         
                             <tr id="Relationship.relation"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/relation"
                                 class="class mandatory">
 <!--
@@ -8703,7 +8738,7 @@ They are included in the Application Profile because they form the range of prop
                     <tbody class="supertype">
                         
                             <tr id="Concept.preferredlabel"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/2004/02/skos/core#prefLabel"
                                 class="class mandatory">
 <!--
@@ -8849,7 +8884,7 @@ They are included in the Application Profile because they form the range of prop
                     <tbody class="supertype">
                         
                             <tr id="ConceptScheme.title"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/title"
                                 class="class mandatory">
 <!--
@@ -9139,7 +9174,7 @@ This is based on the UN/CEFACT Identifier class.
                     <tbody class="supertype">
                         
                             <tr id="Identifier.notation"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/2004/02/skos/core#notation"
                                 class="class mandatory">
 <!--
@@ -9518,7 +9553,7 @@ In this data specification the use is restricted to instances of this class that
                     <tbody class="supertype">
                         
                             <tr id="Periodoftime.beginning"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/2006/time#hasBeginning"
                                 class="class mandatory">
 <!--
@@ -9571,7 +9606,7 @@ In this data specification the use is restricted to instances of this class that
                             </tr>
                         
                             <tr id="Periodoftime.end"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/2006/time#hasEnd"
                                 class="class mandatory">
 <!--
@@ -9624,7 +9659,7 @@ In this data specification the use is restricted to instances of this class that
                             </tr>
                         
                             <tr id="Periodoftime.enddate"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#endDate"
                                 class="class mandatory">
 <!--
@@ -9677,7 +9712,7 @@ In this data specification the use is restricted to instances of this class that
                             </tr>
                         
                             <tr id="Periodoftime.startdate"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/dcat#startDate"
                                 class="class mandatory">
 <!--
@@ -10329,7 +10364,7 @@ Readers are expected to provide there feedback in issue 409.
 <table id="table-cv" class="simple">
 	<thead><tr><th>Property URI</th><th>Used for Class</th><th>Vocabulary name</th><th>Usage note</th></tr></thead>
 	<tbody>
-		<tr><td>dcat:theme</td><td><a href="#Dataset">Dataset</a>, <a href="#DataService">Data Service</a>, <a href="#Catalogue">Catalogue</a></td><td><a href="http://publications.europa.eu/resource/authority/data-theme">Dataset Theme Vocabulary</a></td><td>The values to be used for this property are the URIs of the concepts in the vocabulary.</td></tr>
+		<tr><td>dcat:theme</td><td><a href="#Dataset">Dataset</a>, <a href="#DataService">Data Service</a> </td><td><a href="http://publications.europa.eu/resource/authority/data-theme">Dataset Theme Vocabulary</a></td><td>The values to be used for this property are the URIs of the concepts in the vocabulary.</td></tr>
 	</tbody>
 </table>
 
@@ -10494,8 +10529,8 @@ Many of the properties of distributions are file oriented (downloadURL, format, 
 The difference between downloading a file or accessing the data through a service have resulted in the following guidelines:
 <ul>
     <li>Datasets are the conceptual entity denoting a collection of data.</li>
-    <li>Distributions are specific representations of a dataset, described with the intend to facilitate the delivery of the data as file to a reuser. The access URL (preferably download URL) will provide a simple way to obtain (download) the content of the dataset in the representation specified by the distribution. The obtained (downloaded) content is fully determined by the publisher of the distribution. Only after obtaining the data the (re)user can change the data according to its needs.</li>
-    <li>Anything that has not the intend to provide a downloadable representation of a dataset is a data service. Data services offer smarter, more interactive ways to the data.</li>
+    <li>Distributions are specific representations of a dataset, described with the intent to facilitate the delivery of the data as file to a reuser. The access URL (preferably download URL) will provide a simple way to obtain (download) the content of the dataset in the representation specified by the distribution. The obtained (downloaded) content is fully determined by the publisher of the distribution. Only after obtaining the data the (re)user can change the data according to its needs.</li>
+    <li>Anything that has not the intent to provide a downloadable representation of a dataset is a data service. Data services offer smarter, more interactive ways to the data.</li>
 </ul>
 
 </p><p>
@@ -10515,7 +10550,7 @@ For instance, if a publisher is sharing an active updated dataset accessible via
 <p/>
 In order to harmonise the use of Dataset Series, the following guidelines are to be considered:
 <ul>
-<li>To introduce a Dataset Series only if the publisher has the intend to manage a collection of datasets. Dataset Series with a single dataset in the collection should be avoided.
+<li>To introduce a Dataset Series only if the publisher has the intent to manage a collection of datasets. Dataset Series with a single dataset in the collection should be avoided.
 </li>
 <li>Dataset Series without a dataset in the collection should be avoided. In that case, publishers should ensure that the metadata, in particular, the life cycle metadata is up to date. 
 For instance, if dataset get retracted and as consequence the collection becomes empty, then publishers should consider to retract also the Dataset Series.
@@ -10533,9 +10568,9 @@ But the presence of these Distributions raise semantical conflicts such as wheth
     In that case the Dataset Series should also be considered as a DCAT-AP Dataset.
 </li>      
 <li>Keep the usage simple. Complex nesting such as Dataset Series being a member of Dataset Series, or Dataset belonging to multiple Dataset Series are to be handled with care. 
-While from a data knowlegde graph these nestings are feasible and not so problematic, it must be realised that these complicate the presentation on a webpage. 
+While from a data knowledge graph these nestings are feasible and not so problematic, it must be realised that these complicate the presentation on a webpage. 
 Since data portal representations are the main communication from metadata owners to potential data consumers and there is no clear expectations
-on how to present the members of a Dataset Series in a UI (e.g. because orderning is not imposed), DCAT-AP users may not expect from other portals which harvest and process their Dataset Series, that these are more than a collection of Datasets.
+on how to present the members of a Dataset Series in a UI (e.g. because ordering is not imposed), DCAT-AP users may not expect from other portals which harvest and process their Dataset Series, that these are more than a collection of Datasets.
 Any interpretation, such as the collection is ordered, or grouped according to time or any wellknown dimension, is a specific expectation beyond the agreemenents made in DCAT-AP. 
 </li>
 <li>Conceptually, a Dataset Series is a special kind of Dataset. It is recommended to apply the same metadata quality of Datasets to Dataset Series (see [[[#quick-reference]]] ). The dedicated usage guidelines for Dataset Series and the Dataset members of a Dataset Series take priority over the generic DCAT-AP Dataset guidelines.
@@ -13314,7 +13349,8 @@ Past and current contributors are :
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/mode/javascript/javascript.min.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/mode/turtle/turtle.min.js" ></script>
     <script src="https://codemirror.net/5/mode/javascript/javascript.js" ></script>
-    <!--    <script src="https://semiceu.github.io/MLDCAT-AP/releases/1.0.0/example.js" ></script> -->
+    <script src="https://unpkg.com/n3@1.14.0/browser/n3.min.js"></script>
+	<script src="https://rdf.js.org/comunica-browser/versions/v4/engines/query-sparql/comunica-browser.js"></script>
     <script src="./html/example.js" ></script>
 	<script type="text/javascript">
 		function elementInView(elem){
@@ -13339,60 +13375,98 @@ Past and current contributors are :
 	</script>
 	<style>
 		.CodeMirror {
-		  border: 1px solid #eee;
-		  height: auto;
+			border: 1px solid #eee;
+			height: auto;
 		}
 		.buttonsample {
-		cursor: pointer;
-		margin-top: 10px;
-		margin-left: 10px;
-		font-weight: 700;
-		border:0 outset buttonface;
-		background: #F5F6F8;
-		background-image: linear-gradient(to bottom,#F5F6F8,#DBDCDE);
-		border-radius:4px;
-		box-shadow:0 1px 3px #666;
-		font-family: Arial;
-		color: grey;
-		font-size: 14px;
-		padding: 10px 5px;
-		text-decoration: none;
-		float: right
-	}
-	.buttonsample:hover {color:#2a70d3}
-	.tabsstyle {
-		padding: 10px;
-		overflow: hidden;
-	}
-	li.ui-tabs-tab > a:hover {
-		background-color:dodgerblue;
-		color:white;
-	}
-    	table.simple {                                                                      
-                  font-size: small;                                                           
-                          border-spacing:0;                                                   
-                          border-collapse:collapse;                                           
-                          border-bottom:3px solid #005a9c                                     
-        }                                                                                   
-        .simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}           
-        .simple th a{color:#fff;padding:3px 5px;text-align:left}                            
-        .simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}   
-        .simple td{padding:3px 10px;border-top:1px solid #ddd}                              
-        .simple tr:nth-child(even){background:#f0f6ff}
-    body.darkmode .simple th{background:#005a9c94;color:#ddd}
-	body.darkmode .simple th a{color:#ddd}
-	body.darkmode .simple tr:nth-child(even){background:#f0f6ff26}
-    body.darkmode :is(h4,h5,h6)+a.self-link::before {
-        color: var(--heading-text);
-    }
-    body.darkmode img {
-        background: none;
-    }
-    body.darkmode section#references :target {
-        background: #04162d;
-    }
-  </style>
+			cursor: pointer;
+			margin-top: 10px;
+			margin-left: 10px;
+			font-weight: 700;
+			border:0 outset buttonface;
+			background: #F5F6F8;
+			background-image: linear-gradient(to bottom,#F5F6F8,#DBDCDE);
+			border-radius:4px;
+			box-shadow:0 1px 3px #666;
+			font-family: Arial;
+			color: grey;
+			font-size: 13px !important;
+			padding: 10px 5px;
+			text-decoration: none;
+			float: right
+		}
+	    .chooseVersion {
+			cursor: pointer;
+			margin-top: 10px;
+			margin-left: 10px;
+			font-weight: 700;
+			border:0 outset buttonface;
+			background: #F5F6F8;
+			background-image: linear-gradient(to bottom,#F5F6F8,#DBDCDE);
+			border-radius:4px;
+			box-shadow:0 1px 3px #666;
+			font-family: Arial;
+			color: grey;
+			font-size: 13px !important;
+			padding: 9px 5px;
+			text-decoration: none;
+			float: right
+		}
+		.infosample {
+			cursor: pointer;
+			margin-top: 10px;
+			font-weight: 700;
+			border:0 outset buttonface;
+			border-radius:4px;
+			font-family: Arial;
+			color: grey;
+			font-size: 14px;
+			padding: 10px 0px;
+			text-decoration: none;
+			float: right
+		}
+		.buttonsample:hover {color:#2a70d3}
+		.tabsstyle {
+			padding: 10px;
+			overflow: hidden;
+		}
+		li.ui-tabs-tab > a:hover {
+			background-color:dodgerblue;
+			color:white;
+		}
+		table.simple {
+			font-size: small;
+			border-spacing:0;
+			border-collapse:collapse;
+			border-bottom:3px solid #005a9c
+		}
+		.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}
+		.simple th a{color:#fff;padding:3px 5px;text-align:left}
+		.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}
+		.simple td{padding:3px 10px;border-top:1px solid #ddd}
+		.simple tr:nth-child(even){background:#f0f6ff}
+		body.darkmode .simple th{background:#005a9c94;color:#ddd}
+		body.darkmode .simple th a{color:#ddd}
+		body.darkmode .simple tr:nth-child(even){background:#f0f6ff26}
+		body.darkmode :is(h4,h5,h6)+a.self-link::before {
+			color: var(--heading-text);
+		}
+		body.darkmode img {
+			background: none;
+		}
+		body.darkmode section#references :target {
+			background: #04162d;
+		}
+	</style>
 
-    	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
-	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/3.2.2/css/buttons.dataTables.min.css">
+	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/2.2.2/js/dataTables.min.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/3.2.2/js/dataTables.buttons.min.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/3.2.2/js/buttons.dataTables.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/3.2.0/js/buttons.html5.min.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/3.2.0/js/buttons.print.min.js"></script>
 </html>
