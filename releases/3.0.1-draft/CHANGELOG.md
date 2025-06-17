@@ -42,12 +42,12 @@ The list below indicates all changes and differences compared to DCAT-AP 3.0.0.
 - Issue [418](https://github.com/SEMICeu/dcat-ap/issues/418): Data Service property conforms to link to DCAT corrected.
 - Issue [419](https://github.com/SEMICeu/dcat-ap/issues/419): Add reference to DCAT for Dataset property has version.
 - Issue [426](https://github.com/SEMICeu/dcat-ap/issues/426): fixed the diagram
-- Issue [432](https://github.com/SEMICeu/dcat-ap/issues/432): TODO: add the Iana codelists to the codelist tables
+- Issue [432](https://github.com/SEMICeu/dcat-ap/issues/432): Add packaging format and compression format to the controlled vocabularies tables
 - Issue [436](https://github.com/SEMICeu/dcat-ap/issues/432): Remove catalogue from the classes that use dcat:theme in section 10
 - Issue [435](https://github.com/SEMICeu/DCAT-AP/pull/435): Fixed the typos for this release.
 - Issue [434](https://github.com/SEMICeu/dcat-ap/issues/434): Fixed the namespace issue for rdf:Property in all DCAT-AP base templates. Issue will disappear incrementally with deploying new releases.
-- Issue [426](https://github.com/SEMICeu/dcat-ap/issues/426): Ensure that the latest overview is shown in the draft
+- Issue [426](https://github.com/SEMICeu/dcat-ap/issues/426): Ensure that the latest overview is shown in the draft.
 - Issue [425](https://github.com/SEMICeu/dcat-ap/issues/425): align the diagram with the 3.0.0 agreement to follow the W3C DCAT inverse properties by removing the dct:isPartOf and dcat:isVersionOf from the diagram.
--
+
 
  
