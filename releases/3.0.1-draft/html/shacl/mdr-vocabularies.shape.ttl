@@ -355,14 +355,45 @@
         sh:path dct:type ;
 	sh:description "Multiple types can be used but it is recommended to also provide at least one concept of <http://publications.europa.eu/resource/authority/dataset-type> should be present" ;
         sh:severity sh:Warning
-	], [
+    ], [
         sh:node :AccessRightRestriction ;
         sh:nodeKind sh:IRI ;
         sh:path dct:accessRights ;
 		sh:description "A non EU managed concept is used to indicate the access right. If no corresponding can be found inform the maintainer of the EU language NAL" ;
-        sh:severity sh:Violation
+        sh:severity sh:Warning
     ] ;
     sh:targetClass dcat:Dataset.
+
+:DatasetSeries_ShapeCV
+    a sh:NodeShape ;
+    sh:property [
+        sh:node :FrequencyRestriction ;
+        sh:nodeKind sh:IRI ;
+        sh:path dct:accrualPeriodicity ;
+	sh:description "A non EU managed concept is used to indicate the accrualPeriodicity frequency. If no corresponding can be found inform the maintainer of the EU frequency NAL" ; 
+        sh:severity sh:Violation
+    ], [
+        sh:node :CorporateBodyRestriction ;
+        sh:node :Publisher_ShapeCV ;
+        sh:nodeKind sh:IRI ;
+        sh:path dct:publisher ;
+	sh:description "A non EU managed concept is used to indicate the publisher, check if a corresponding exists in the EU corporates bodies NAL" ; 
+        sh:severity sh:Warning
+    ], [
+        sh:node [
+            a sh:NodeShape ;
+            sh:or (:CountryRestriction
+                :PlaceRestriction
+                :ContinentRestriction
+                :GeoNamesRestrictionRegexURI
+            )
+        ] ;
+        sh:nodeKind sh:IRI ;
+        sh:path dct:spatial ;
+	sh:description "A non managed concept is used to indicate a spatial description, check if a corresponding exists" ; 
+        sh:severity sh:Warning
+    ] ;
+    sh:targetClass dcat:DatasetSeries.
 
 # ------------------------------------------------------------------------------------------------------------------
 # The constraints for dcat:mediaType, dcat:compressFormat, dcat:packageFormat which are limited to the IANA codelist 
@@ -401,32 +432,51 @@
         sh:nodeKind sh:IRI ;
         sh:path dcat:mediaType ;
 	sh:description "A mediaType expects a value from IANA. This check uses the URLs from IANA to perform the check as there is no IANA codelist downloadable." ; 
-        sh:severity sh:Warning
+        sh:severity sh:Violation
     ], [
         sh:node :IANARestrictionRegexURI;
         sh:nodeKind sh:IRI ;
         sh:path dcat:compressFormat ;
 	sh:description "A compressFormat expects a value from IANA. This check uses the URLs from IANA to perform the check as there is no IANA codelist downloadable." ; 
-        sh:severity sh:Warning
+        sh:severity sh:Violation
     ], [
         sh:node :IANARestrictionRegexURI;
         sh:nodeKind sh:IRI ;
         sh:path dcat:packageFormat ;
 	sh:description "A packageFormat expects a value from IANA. This check uses the URLs from IANA to perform the check as there is no IANA codelist downloadable." ; 
-        sh:severity sh:Warning
+        sh:severity sh:Violation
     ] ;
     sh:targetClass dcat:Distribution.
 
 :DataService_ShapeCV
     a sh:NodeShape ;
-	sh:property [
-	    sh:node :AccessRightRestriction ;
+    sh:property [
+        sh:node :FileTypeRestriction ;
+        sh:nodeKind sh:IRI ;
+        sh:path dct:format ;
+	sh:description "A non EU managed concept is used to indicate the format the data service supports. If no corresponding can be found inform the maintainer of the fileformat NAL." ; 
+        sh:severity sh:Violation
+    ], [
+        sh:node :DataThemeRestriction ;
+        sh:nodeKind sh:IRI ;
+        sh:path dcat:theme ;
+	sh:description "Multiple themes can be used but at least one concept of <http://publications.europa.eu/resource/authority/data-theme> should be present" ;
+        sh:severity sh:Warning
+    ], [
+        sh:node :CorporateBodyRestriction ;
+        sh:node :Publisher_ShapeCV ;
+        sh:nodeKind sh:IRI ;
+        sh:path dct:publisher ;
+	sh:description "A non EU managed concept is used to indicate the publisher, check if a corresponding exists in the EU corporates bodies NAL" ; 
+        sh:severity sh:Warning
+    ], [
+	sh:node :AccessRightRestriction ;
         sh:nodeKind sh:IRI ;
         sh:path dct:accessRights ;
 		sh:description "A non EU managed concept is used to indicate the access right. If no corresponding can be found inform the maintainer of the EU language NAL" ;
-        sh:severity sh:Violation
+        sh:severity sh:Warning
 	] ; 
-	sh:targetClass dcat:Distribution.
+	sh:targetClass dcat:DataService.
 
 
 :Publisher_ShapeCV
