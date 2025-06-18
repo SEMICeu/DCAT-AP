@@ -22,7 +22,6 @@
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dct:StandardShape>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#spdx:ChecksumShape>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#ChecksumAlgorithmShape>,
-    <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#TemporalLiteralShape>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#skos:ConceptShape>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#skos:ConceptSchemeShape>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#TimeInstantShape>,
@@ -948,7 +947,6 @@
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DatasetShape/41f263bb74ca0c94c6c7a50c981cace98f35802d>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DatasetShape/42110293925ce8bdb81f82dee95d1f78b2fca91c>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DatasetShape/46a60c7d3d828d3006937a12f82c1958b94e6f76>,
-    <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DatasetShape/4918ff7a6c1c4b0eea6403dca4b992b87ee1f4ab>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DatasetShape/495a2bdea22c8a156f1a7926737cdf33529871fd>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DatasetShape/4be37093e4c3ba0d5b5a18ef6b97778d6d689392>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DatasetShape/4f381639bb6e021939f65b4f41409d1edaeade9b>,
@@ -975,7 +973,6 @@
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DatasetShape/8f61614144aa7bca188b24f5976593dc08aad0e6>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DatasetShape/93f73e69bb03d2928fcf758a253ef316becdf9b9>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DatasetShape/95015004529c652bcb276060d84ed7423c4a9b08>,
-    <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DatasetShape/95c69c99a1e3ade043911b51b942f206dea0e68d>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DatasetShape/9678e29dc284ba14312bf01cd0a581b960b77a08>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DatasetShape/998ce689a5bcc3e2764ff84a05255e34d91e8102>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DatasetShape/9adf9f5890592909cf3e67021ae7ab4f895a7745>,
@@ -1452,7 +1449,6 @@
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DistributionShape/4be37093e4c3ba0d5b5a18ef6b97778d6d689392>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DistributionShape/59cbd395c4b9167c030b3fd61001eeeee5034346>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DistributionShape/6311ab0f528a12e90a9d4be09bdec4ff36578b32>,
-    <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DistributionShape/653804840386e33525b3d39d205c174780be414b>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DistributionShape/68388ec47b77212d80036e8a02e9956f5ba0e0f5>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DistributionShape/69c8fdb6db25c5ad1f8a47366c19adb834924ae0>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DistributionShape/6b7242b6b89977700c05e4875131fbb975c4235e>,
@@ -1469,7 +1465,6 @@
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DistributionShape/9a496b0d6c38eb05e46fa6c5ad11981f19fbbce4>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DistributionShape/9e9d878c1c354206edc1d411f33c82d4d01e5a8f>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DistributionShape/9eaae476a881de13b9430537ace6e70da7327dbd>,
-    <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DistributionShape/a07d6e7a0a1790b89a1ce7ff602cbbd9ea835282>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DistributionShape/a490981ff58636ec8601ca500e67bd9c575eaed9>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DistributionShape/b2f42c75fb59c422a82295439935cb6f63277c0b>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DistributionShape/b362d2bdbbe8ba1c689e5554cca2bcbd295546de>,
@@ -1841,7 +1836,6 @@
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:RelationshipShape/5945770a55865eb52bf4cbcac7847889d16a2926>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:RelationshipShape/a64a849abcc67d2a79ccfbbc89f318fab6543c88>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:RelationshipShape/a7737e15de2cea53610b34ef78cab0c2c9695a83>,
-    <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:RelationshipShape/b7aa98e1befa5130659568aa62e7f38575dc17c1>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:RelationshipShape/d171b3a7f68dcad152dc11b8200997a366513e00>;
   shacl:targetClass dcat:Relationship .
 
