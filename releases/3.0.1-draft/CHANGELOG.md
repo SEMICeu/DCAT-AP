@@ -1,12 +1,11 @@
 # **Consolidated ChangeLog**
 
-This Changelog provides an overview of the changes incorporated in DCAT-AP 3.0.1. A complete list of the issues closed with this release is accessible on [GitHub]().
+This Changelog provides an overview of the changes incorporated in DCAT-AP 3.0.1. A complete list of the issues closed with this release is accessible on [GitHub](https://github.com/SEMICeu/DCAT-AP/issues?q=is%3Aissue%20state%3Aopen%20label%3Arelease-3.0.1-draft).
 
 # **Editorial changes**
 
 - fixed the styling of the tables.
 - Improved navigation to point to previous version and current version.
-- TODO: update affiliations
 - removed the deprecated owl:versionInfo from the UML figure
 - validated the property reuse qualifications for the class Dataset.
 - removed the redundant link column in the properties table as the link used in the reuse table is the same.
@@ -47,7 +46,7 @@ The list below indicates all changes and differences compared to DCAT-AP 3.0.0.
 - Issue [435](https://github.com/SEMICeu/DCAT-AP/pull/435): Fixed the typos for this release.
 - Issue [434](https://github.com/SEMICeu/dcat-ap/issues/434): Fixed the namespace issue for rdf:Property in all DCAT-AP base templates. Issue will disappear incrementally with deploying new releases.
 - Issue [426](https://github.com/SEMICeu/dcat-ap/issues/426): Ensure that the latest overview is shown in the draft.
-- Issue [425](https://github.com/SEMICeu/dcat-ap/issues/425): align the diagram with the 3.0.0 agreement to follow the W3C DCAT inverse properties by removing the dct:isPartOf and dcat:isVersionOf from the diagram.
+- Issue [425](https://github.com/SEMICeu/dcat-ap/issues/425): Align the diagram with the 3.0.0 agreement to follow the W3C DCAT inverse properties by removing the dct:isPartOf and dcat:isVersionOf from the diagram.
 
 
  

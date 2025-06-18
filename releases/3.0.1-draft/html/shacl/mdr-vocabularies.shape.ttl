@@ -359,7 +359,7 @@
         sh:node :AccessRightRestriction ;
         sh:nodeKind sh:IRI ;
         sh:path dct:accessRights ;
-		sh:description "A non EU managed concept is used to indicate the access right. If no corresponding can be found inform the maintainer of the EU language NAL" ;
+	sh:description "A non EU managed concept is used to indicate the access right. If no corresponding can be found inform the maintainer of the EU language NAL" ;
         sh:severity sh:Warning
     ] ;
     sh:targetClass dcat:Dataset.
@@ -473,7 +473,7 @@
 	sh:node :AccessRightRestriction ;
         sh:nodeKind sh:IRI ;
         sh:path dct:accessRights ;
-		sh:description "A non EU managed concept is used to indicate the access right. If no corresponding can be found inform the maintainer of the EU language NAL" ;
+	sh:description "A non EU managed concept is used to indicate the access right. If no corresponding can be found inform the maintainer of the EU language NAL" ;
         sh:severity sh:Warning
 	] ; 
 	sh:targetClass dcat:DataService.
