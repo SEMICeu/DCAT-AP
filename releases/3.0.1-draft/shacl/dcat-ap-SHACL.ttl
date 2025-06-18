@@ -22,14 +22,7 @@
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dct:StandardShape>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#spdx:ChecksumShape>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#ChecksumAlgorithmShape>,
-    <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#rdfs:LiteralShape>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#TemporalLiteralShape>,
-    <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#rdfs:ResourceShape>,
-    <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#xsd:dateTimeShape>,
-    <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#xsd:decimalShape>,
-    <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#xsd:durationShape>,
-    <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#xsd:hexBinaryShape>,
-    <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#xsd:nonNegativeIntegerShape>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#skos:ConceptShape>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#skos:ConceptSchemeShape>,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#TimeInstantShape>,
@@ -54,10 +47,6 @@
 <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#ChecksumAlgorithmShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <http://spdx.org/rdf/terms#ChecksumAlgorithm> .
-
-<https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#TemporalLiteralShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass rdfs:Literal .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#TimeInstantShape> a shacl:NodeShape;
   shacl:closed false;
@@ -744,11 +733,6 @@
   shacl:name "licence"@en;
   shacl:path dc:license .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DataServiceShape/dc08f4dca4377fade57f89454e3fa06a8389d314> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#DataService.endpointdescription";
-  shacl:class rdfs:Resource;
-  shacl:description "A description of the services available via the end-points, including their operations, parameters etc."@en;
-  shacl:name "endpoint description"@en;
-  shacl:path dcat:endpointDescription .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DataServiceShape/dede6a68a95ac0f43ca88def472d8fc001f86ebe> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#DataService.theme";
   shacl:class skos:Concept;
@@ -756,11 +740,6 @@
   shacl:name "theme"@en;
   shacl:path dcat:theme .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DataServiceShape/eb3ac4e4fdde2e2588a9502c5956060a18c5c99f> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#DataService.endpointURL";
-  shacl:class rdfs:Resource;
-  shacl:description "The root location or primary endpoint of the service (an IRI)."@en;
-  shacl:name "endpoint URL"@en;
-  shacl:path dcat:endpointURL .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DataServiceShape/ee60fdd4b8581460f5fc4077813b8bb3e3d77441> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#DataService.accessrights";
   shacl:class dc:RightsStatement;
@@ -1159,11 +1138,6 @@
   shacl:nodeKind shacl:Literal;
   shacl:path dcat:spatialResolutionInMeters .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DatasetShape/4918ff7a6c1c4b0eea6403dca4b992b87ee1f4ab> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Dataset.relatedresource";
-  shacl:class rdfs:Resource;
-  shacl:description "A related resource."@en;
-  shacl:name "related resource"@en;
-  shacl:path dc:relation .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DatasetShape/495a2bdea22c8a156f1a7926737cdf33529871fd> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Dataset.hasversion";
   shacl:class dcat:Dataset;
@@ -1321,11 +1295,6 @@
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path dc:spatial .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DatasetShape/95c69c99a1e3ade043911b51b942f206dea0e68d> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Dataset.isreferencedby";
-  shacl:class rdfs:Resource;
-  shacl:description "A related resource, such as a publication, that references, cites, or otherwise points to the dataset."@en;
-  shacl:name "is referenced by"@en;
-  shacl:path dc:isReferencedBy .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DatasetShape/9678e29dc284ba14312bf01cd0a581b960b77a08> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Dataset.theme";
   shacl:description "A category of the Dataset."@en;
@@ -1654,11 +1623,6 @@
   shacl:name "checksum"@en;
   shacl:path <http://spdx.org/rdf/terms#checksum> .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DistributionShape/653804840386e33525b3d39d205c174780be414b> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Distribution.accessURL";
-  shacl:class rdfs:Resource;
-  shacl:description "A URL that gives access to a Distribution of the Dataset."@en;
-  shacl:name "access URL"@en;
-  shacl:path dcat:accessURL .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DistributionShape/68388ec47b77212d80036e8a02e9956f5ba0e0f5> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Distribution.documentation";
   shacl:class foaf:Document;
@@ -1756,11 +1720,6 @@
   shacl:name "licence"@en;
   shacl:path dc:license .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DistributionShape/a07d6e7a0a1790b89a1ce7ff602cbbd9ea835282> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Distribution.downloadURL";
-  shacl:class rdfs:Resource;
-  shacl:description "A URL that is a direct link to a downloadable file in a given format."@en;
-  shacl:name "download URL"@en;
-  shacl:path dcat:downloadURL .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:DistributionShape/a490981ff58636ec8601ca500e67bd9c575eaed9> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Distribution.accessURL";
   shacl:description "A URL that gives access to a Distribution of the Dataset."@en;
@@ -1910,11 +1869,6 @@
   shacl:name "had role"@en;
   shacl:path dcat:hadRole .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:RelationshipShape/b7aa98e1befa5130659568aa62e7f38575dc17c1> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Relationship.relation";
-  shacl:class rdfs:Resource;
-  shacl:description "A resource related to the source resource."@en;
-  shacl:name "relation"@en;
-  shacl:path dc:relation .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#dcat:RelationshipShape/d171b3a7f68dcad152dc11b8200997a366513e00> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#Relationship.hadrole";
   shacl:description "A function of an entity or agent with respect to another entity or resource."@en;
@@ -2166,13 +2120,6 @@
   shacl:closed false;
   shacl:targetClass prov:Attribution .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#rdfs:LiteralShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass rdfs:Literal .
-
-<https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#rdfs:ResourceShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass rdfs:Resource .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#skos:ConceptSchemeShape> a shacl:NodeShape;
   shacl:closed false;
@@ -2274,22 +2221,3 @@
   shacl:closed false;
   shacl:targetClass vcard:Kind .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#xsd:dateTimeShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass xsd:dateTime .
-
-<https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#xsd:decimalShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass xsd:decimal .
-
-<https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#xsd:durationShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass xsd:duration .
-
-<https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#xsd:hexBinaryShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass xsd:hexBinary .
-
-<https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft#xsd:nonNegativeIntegerShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass xsd:nonNegativeInteger .
