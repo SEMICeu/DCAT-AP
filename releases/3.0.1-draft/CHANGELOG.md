@@ -19,7 +19,7 @@ This Changelog provides an overview of the changes incorporated in DCAT-AP 3.0.1
 
 # **Adaptations to the different sections**
 
-Added a new section on the ecosystem. 
+Added a new section on the <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft/#dcat-ap-ecosystem">ecosystem</a>. 
 
 
 # **Data model adaptations**
