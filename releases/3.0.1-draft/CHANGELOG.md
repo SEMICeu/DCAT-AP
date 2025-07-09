@@ -17,8 +17,9 @@ This Changelog provides an overview of the changes incorporated in DCAT-AP 3.0.1
 - addressed reported typos 
 
 
-
 # **Adaptations to the different sections**
+
+Added a new section on the ecosystem. 
 
 
 # **Data model adaptations**
@@ -47,6 +48,7 @@ The list below indicates all changes and differences compared to DCAT-AP 3.0.0.
 - Issue [434](https://github.com/SEMICeu/dcat-ap/issues/434): Fixed the namespace issue for rdf:Property in all DCAT-AP base templates. Issue will disappear incrementally with deploying new releases.
 - Issue [426](https://github.com/SEMICeu/dcat-ap/issues/426): Ensure that the latest overview is shown in the draft.
 - Issue [425](https://github.com/SEMICeu/dcat-ap/issues/425): Align the diagram with the 3.0.0 agreement to follow the W3C DCAT inverse properties by removing the dct:isPartOf and dcat:isVersionOf from the diagram.
+- Issue [413](https://github.com/SEMICeu/dcat-ap/issues/425): Introduce an explicit reference to the supporting vocabulary r5r.
 
 
  

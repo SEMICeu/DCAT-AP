@@ -31,20 +31,26 @@
 		, 
 		
 		   {
-		    name: "Pavlina Fragkou",
+		    name: "Emiel Dhondt",
 		      
-		      
-		    company: "DG DIGIT",
 		      
 		      
 		    }
 		, 
 		
 		   {
-		    name: "Arthur Schiltz",
+		    name: "Pavlina Fragkou",
 		      
 		      
-		    company: "PwC EU Services",
+		    company: "OP",
+		      
+		      
+		    }
+		, 
+		
+		   {
+		    name: "Jakub Klímek",
+		      
 		      
 		      
 		    }
@@ -54,7 +60,7 @@
 		    name: "Anastasia Sofou",
 		      
 		      
-		    company: "Trasys International",
+		    company: "EC External",
 		      
 		      
 		    }
@@ -100,8 +106,8 @@
                 href: "https://joinup.ec.europa.eu/collection/semic-support-centre",
             },
             {
-                value: "Pavlina Fragkou (DG DIGIT)",
-            },
+                value: "Pavlina Fragkou (OP)",
+            }
 		]
 
 	function quickreference() {
@@ -150,7 +156,7 @@
       edDraftURI: "https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft",
       latestVersion: "https://semiceu.github.io/DCAT-AP/releases/3.0.0/",
       specStatus: "base",
-      publishDate: "2025-03-05",
+      publishDate: "2025-07-10",
       editors: myeditors,
       authors: myauthors,
       otherLinks: [
@@ -391,9 +397,9 @@ This document is the result of the major semantic change release process describ
     <h2>Status</h2>
         <p>
 <!-- readd when SEMIC has a codelist about it process 
-	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsW3C">SEMIC Draft Specification</a> published at 2025-03-05.
+	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsW3C">SEMIC Draft Specification</a> published at 2025-07-10.
 -->
-	This application profile has the status SEMIC Draft Specification published at 2025-03-05.
+	This application profile has the status SEMIC Draft Specification published at 2025-07-10.
         </p>
         <p>
             Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft/CHANGELOG.html">Changelog</a>.
@@ -490,6 +496,11 @@ A <strong>Data Portal</strong> is a Web-based system that contains a data catalo
             <tr><td><code>xsd</code></td><td><code>http://www.w3.org/2001/XMLSchema#</code></td></tr>
             </tbody>
         </table>
+
+<h3>DCAT-AP extended properties</h3>
+DCAT-AP extends DCAT with a few properties. The used namespace <a href="http://data.europa.eu/r5r/"><code>http://data.europa.eu/r5r/</code></a>. 
+In that namespace as general possible definitions of the additional DCAT-AP properties are provided to enable the use within DCAT-AP and possible beyond.
+
 
 </section>
 
@@ -10476,15 +10487,22 @@ For example, properties could be defined, such as foo:owner, foo:curator or foo:
 A possible source for such additional properties is the Roles Named Authority List  maintained by the Publications Office of the EU.
 Other domain-specific sources for additional properties are the <a href="https://knowledge-base.inspire.ec.europa.eu/index_en">INSPIRE</a> Responsible Party roles ,<a href="https://www.loc.gov/marc/relators/relaterm.html">the Library of Congress’ MARC relators</a> and <a href="https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#:~:text=Foo%20Data%20Center-,7.a%20contributorType,-Occurrence%3A%201">DataCite’s contributor types</a>.
 To enable the use of such properties, they must be defined as RDF properties with URIs in a well-managed namespace. 
+<a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#agent-roles">GeoDCAT-AP has introduced a number of specific <a href="https://semiceu.github.io/GeoDCAT-AP/930/releases/3.0.0/#properties">properties</a>.
 </p><p>
 A second approach is based on the use of W3C’s PROV ontology [[prov-o]]  which provides a powerful mechanism to express a set of classes, properties, and restrictions that can be used to represent and interchange provenance information generated in different systems and under different contexts. In the context of work on GeoDCAT-AP, a PROV-conformant solution for expressing agent roles was agreed . This solution uses prov:qualifiedAttribution in combination with a dct:type assertion pointing to the code list for Responsible Party Role in the <a href="https://knowledge-base.inspire.ec.europa.eu/index_en">INSPIRE</a> registry. To enable the use of such types, they must be defined with URIs in a well-managed namespace. 
 </p><p>
-Based on the experience gained with the use of domain-specific extensions for additional ‘agent roles’ in the exchange of information about Datasets and on the requests of implementors and stakeholders, the DCAT Application Profile release 2.0.0  is extended with additional roles as proposed by DCAT Version 2 [[vocab-dcat-2]] that have proven to be useful across domains. Precisely, properties <a href="#Dataset.creator">creator</a>, <a href="#Dataset.qualifiedattribution">qualified attribution</a> and <a href="#Dataset.qualifiedrelation">qualified relation</a> have been added to <a href="#Dataset">Dataset</a> class to further facilitate relationships between datasets and agents. 
+Based on the experience gained with the use of domain-specific extensions for additional ‘agent roles’ in the exchange of information about Datasets and on the requests of implementors and stakeholders, the DCAT Application Profile release 2.0.0  is extended with additional roles as proposed by DCAT Version 2 [[vocab-dcat-2]] that have proven to be useful across domains. Precisely, properties <a href="#Dataset.creator">creator</a>, <a href="#Dataset.qualifiedattribution">qualified attribution</a> and <a href="#Dataset.qualifiedrelation">qualified relation</a> have been added to <a href="#Dataset">Dataset</a> class to further facilitate relationships between datasets and agents.  
 </p><p>
 In the most recent DCAT Version 3 [[vocab-dcat-3]] a dedicated <a href="https://w3c.github.io/dxwg/dcat/#qualified-forms">section on the relationship with Agents</a> is provided.
 The DCAT-AP guidelines for Agents Roles are conformant to this.
 </p><p>
-It should be noted that, even if a more expressive approach is used in a particular implementation, the provision of information using dct:publisher for the Catalogue is still mandatory under the rules laid down in the Conformance Statement in section [[[#conformance]]], while the provision of information using dct:publisher is strongly recommended for Dataset. The provision of such information using dct:publisher will ensure interoperability with implementations that use the basic approach of DCAT-AP.
+As a technical note: While both approaches represent equivalent effort for publishers of datasets and editors of the specifications overall, their governance models differ.
+For the first approach using direct properties, the relationship definition occurs within the profile/extension. 
+The governance is external for the second approach using codelists. This may lead to unwanted overhead, e.g. to manage mappings between the distinct codelists different profiles may use.
+The impact between both is primary operational on querying the data catalogue. Direct properties support simple queries. Codelists necessitate complex queries, often extended with dynamic mapping logic between the external lists.
+</p><p>
+It should be noted that, even if the second approach is used in a particular implementation, the provision of information using dct:publisher for the Catalogue is still mandatory under the rules laid down in the Conformance Statement in section [[[#conformance]]], while the provision of information using dct:publisher is strongly recommended for Dataset. The provision of such information using dct:publisher will ensure interoperability with implementations that use the basic approach of DCAT-AP. As long the first approach is actively be used, the second approach is thus limited for use to a profile specific context.  
+For that reason, it is recommended to use the direct properties including the ones defined by <a href="https://semiceu.github.io/GeoDCAT-AP/930/releases/3.0.0/#properties">GeoDCAT-AP</a> such as custodian, distributor, originator, principalInvestigator, processor, resourceProvider in favor of the second approach using the prov:qualifiedAttribution.
 </p>
 </section>
 
@@ -10598,6 +10616,35 @@ It is recommended to use always these properties in combination with Dataset Ser
 <p/>
 The membership in a Dataset Series may influence the (descriptive) metadata to highlight differences from other Datasets in the collection. 
 For instance, a usual adaption is the addition of the release data in the title.
+
+
+
+
+
+
+
+
+</section>
+
+  <section class="informative">
+  <h2>DCAT-AP ecosystem</h2>
+
+DCAT-AP is a growing ecosystem with a large community resulting in several profiles. 
+To forster the sharing of experiences and insights this section lists known DCAT-AP profiles or mappings with other approaches.
+
+<h3>European DCAT-AP profiles</h3>
+<ul>
+<li> DCAT-AP: the base European profile DCAT-AP, <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1">https://semiceu.github.io/DCAT-AP/releases/3.0.1</a> </li>
+<li> DCAT-AP HVD: DCAT-AP for High Value Datasets <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd/">https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd/ </a> </li>
+<li> GeoDCAT-AP: DCAT-AP for geospatial datasets  <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0">https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0 </a> </li>
+<li> StatDCAT-AP: DCAT-AP for statistical datasets  <a href="https://github.com/SEMICeu/StatDCAT-AP">https://github.com/SEMICeu/StatDCAT-AP </a> </li>
+<li> Health DCAT-AP: DCAT-AP for health datasets <a href="https://healthdcat-ap.github.io/">https://healthdcat-ap.github.io/ </a> </li>
+<li> Mobility DCAT-AP: DCAT-AP for mobility datasets <a href="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/1.1.0/index.html">https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/1.1.0/index.html </a> </li>
+</ul>  
+
+<h3>Member State DCAT-AP profiles</h3>
+
+We invite EU MSs to share the references to their DCAT-AP profiles. This can be done by mentioning it in our <a href="https://github.com/SEMICeu/DCAT-AP/issues">GitHub issue tracker</a>.
 
 
 
@@ -10883,6 +10930,7 @@ As note to this discussion: when exchanging DCAT as an RDF graph the impact of t
 <li> RDF statements are non-ordered and grouping according to directionality is more for human readibility than technically enforced. 
 </li>
 <li> SPARQL allows to query in any direction simply by switching the subject and object variables.
+</li>
 </ul>  
 
 
@@ -13097,8 +13145,8 @@ To identify these deprecations, a <a href="./html/shacl/deprecateduris.ttl"  >SH
 The editors gratefully acknowledge the contributions made to this document by all members of the working group.
 <p/>
 This work was elaborated by a Working Group under SEMIC by Interoperable Europe.
-Interoperable Europe of the European Commission was represented by Pavlina Fragkou.
-Bert Van Nuffelen, Makx Dekkers, Pavlina Fragkou, Jitse De Cock, Arthur Schiltz, Anastasia Sofou were the editors of the specification.
+Interoperable Europe of the European Commission was represented by Pavlina Fragkou and Anastasia Sofou.
+Bert Van Nuffelen, Jakub Klimek, Pavlina Fragkou, Jitse De Cock, Emiel Dhondt, Anastasia Sofou were the editors of the specification.
 <p/>
 Past and current contributors are :
 
@@ -13109,9 +13157,6 @@ Past and current contributors are :
 
      
      
-           
-	 	Ludger A. Rinsche
-		, 
            
 	 	Kuldar Aasaga
 		, 
@@ -13132,6 +13177,12 @@ Past and current contributors are :
 		, 
            
 	 	Oystein Asnes
+		, 
+           
+	 	Ana Alice Baptista
+		, 
+           
+	 	Vincent Bombaerts
 		, 
            
 	 	Peter Burian
@@ -13155,6 +13206,9 @@ Past and current contributors are :
 	 	Adina Dragan
 		, 
            
+	 	Jordi Escriu 
+		, 
+           
 	 	Dietmar Gattwinkel
 		, 
            
@@ -13164,7 +13218,19 @@ Past and current contributors are :
 	 	Casper Gras
 		, 
            
+	 	Matthias Grönewald
+		, 
+           
 	 	Bart Hanssens
+		, 
+           
+	 	Robert Hiber 
+		, 
+           
+	 	Jan Hjelmager 
+		, 
+           
+	 	Niels Hoffmann
 		, 
            
 	 	Agnieszka Jasiczek
@@ -13173,7 +13239,7 @@ Past and current contributors are :
 	 	Fabian Kirstein
 		, 
            
-	 	Jakub Klímek
+	 	Fabian Kirstein
 		, 
            
 	 	Nataliia Kovalchuk
@@ -13206,6 +13272,9 @@ Past and current contributors are :
 	 	Lina Molinas Comet
 		, 
            
+	 	Joachim Niedlandt
+		, 
+           
 	 	Anastasija Nikiforova
 		, 
            
@@ -13224,6 +13293,9 @@ Past and current contributors are :
 	 	Taavi Ploompuu
 		, 
            
+	 	D Porteles
+		, 
+           
 	 	Ludger Rinsche
 		, 
            
@@ -13234,6 +13306,9 @@ Past and current contributors are :
 		, 
            
 	 	Fabian Santi
+		, 
+           
+	 	Arthur Schiltz
 		, 
            
 	 	Giampaolo Sellitto
@@ -13252,6 +13327,9 @@ Past and current contributors are :
 		, 
            
 	 	Igor Stefelin
+		, 
+           
+	 	Terje Sylvarnes 
 		, 
            
 	 	Kees Trautwein
@@ -13282,6 +13360,9 @@ Past and current contributors are :
 		, 
            
 	 	Christian Wittig
+		, 
+           
+	 	Jim Yang
 		, 
            
 	 	Agnieszka Zajac
