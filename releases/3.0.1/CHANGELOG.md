@@ -1,6 +1,6 @@
 # **Consolidated ChangeLog**
 
-This Changelog provides an overview of the changes incorporated in DCAT-AP 3.0.1. A complete list of the issues closed with this release is accessible on [GitHub](https://github.com/SEMICeu/DCAT-AP/issues?q=is%3Aissue%20state%3Aopen%20label%3Arelease-3.0.1-draft).
+This Changelog provides an overview of the changes incorporated in DCAT-AP 3.0.1. A complete list of the issues closed with this release is accessible on [GitHub](https://github.com/SEMICeu/DCAT-AP/issues?q=label%3Arelease-3.0.1)
 
 # **Editorial changes**
 
@@ -19,7 +19,7 @@ This Changelog provides an overview of the changes incorporated in DCAT-AP 3.0.1
 
 # **Adaptations to the different sections**
 
-Added a new section on the <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft/#dcat-ap-ecosystem">ecosystem</a>. 
+Added a new section on the <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#dcat-ap-ecosystem">ecosystem</a>. 
 
 
 # **Data model adaptations**
