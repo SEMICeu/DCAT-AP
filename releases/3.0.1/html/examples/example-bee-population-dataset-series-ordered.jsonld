@@ -1,0 +1,24 @@
+{
+  "@context": "https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/3.0.0/html/examples/context.jsonld",
+  "@graph": [
+    {
+      "@id": "example-ds:BeePopulation2022",
+      "@type": ["Dataset", "DatasetMemberOfADatasetSeries"],
+      "inSeries": "example-ser:BeePopulation"
+    },
+    {
+      "@id": "example-ds:BeePopulation2023",
+      "@type": ["Dataset", "DatasetMemberOfADatasetSeries"],
+      "inSeries": "example-ser:BeePopulation",
+      "previous": "example-ds:BeePopulation2022"
+    },
+    {
+      "@id": "example-ser:BeePopulation",
+      "@type": "DatasetSeries",
+      "title": {
+        "en" : "Bee population"
+      },
+      "last": "example-ds:BeePopulation2023"
+    }
+  ]
+}
