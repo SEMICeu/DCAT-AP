@@ -7,7 +7,7 @@ The DCAT Application profile for data portals in Europe (DCAT-AP) is a specifica
 The specification of the DCAT-AP was a joint initiative of DG CONNECT, the EU Publications Office and the ISA² Programme. The specification was elaborated by a multi-disciplinary Working Group with representatives from 16 European Member States, some European Institutions and the US.
 
 
-The latest version of DCAT-AP (SEMIC Recommendation v3.0.0) can be downloaded from from the [releases](https://github.com/SEMICeu/DCAT-AP/releases) or via [JoinUp](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/releases).
+The latest version of DCAT-AP (SEMIC Recommendation v3.0.1) can be downloaded from from the [releases](https://github.com/SEMICeu/DCAT-AP/releases) or via [JoinUp](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/releases).
 The HTML of this specification can be found [here](https://semiceu.github.io/DCAT-AP/releases/3.0.1/).
 
 The latest version of DCAT-AP Annex for High Value Datasets (SEMIC Recommendation v3.0.0) is also published [here](https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd/).
