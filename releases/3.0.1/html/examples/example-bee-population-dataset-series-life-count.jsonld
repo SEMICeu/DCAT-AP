@@ -1,0 +1,28 @@
+{
+  "@context": "https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/3.0.0/html/examples/context.jsonld",
+  "@graph": [
+    {
+      "@id": "example-ds:BeePopulationLive",
+      "@type": ["Dataset", "DatasetMemberOfADatasetSeries"],
+      "releaseDate": "2023-03-21",
+      "geographicalCoverage": "https://www.geonames.org/390903",
+      "title": {
+        "en": "life counts of the Bee population in Greece"
+      },
+      "inSeries": "example-ser:BeePopulation",
+      "previous": "example-ds:BeePopulation2023"
+    },
+    {
+      "@id": "example-api:EA-API-Platform",
+      "@type": "DataService",
+      "description": {
+        "en": "This data platform offers access to data related to biodiversity collected and published by the Greek Environment Agency"
+      },
+      "title": {
+        "en": "API platform for biodiversity data"
+      },
+      "endpointUrl": "https://ea.gov.gr/api/v2/biodiversity",
+      "servesDataset": "example-ds:BeePopulationLive"
+    }
+  ]
+}
