@@ -7,7 +7,7 @@
     
 	
     <meta charset="utf-8" />
-    <title>DCAT-AP 3.0.1</title>
+    <title>DCAT-AP 3.0.2</title>
     <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
     <script class="remove">
     // All config options at https://respec.org/docs/
@@ -153,10 +153,10 @@
 
     var respecConfig = {
       postProcess: [quickreference],
-      edDraftURI: "https://semiceu.github.io/DCAT-AP/releases/3.0.1",
-      latestVersion: "https://semiceu.github.io/DCAT-AP/releases/3.0.0/",
+      edDraftURI: "https://semiceu.github.io/DCAT-AP/drafts/latest",
+      latestVersion: "https://semiceu.github.io/DCAT-AP/releases/3.0.1/",
       specStatus: "base",
-      publishDate: "2025-07-10",
+      publishDate: "2026-01-27",
       editors: myeditors,
       authors: myauthors,
       otherLinks: [
@@ -166,15 +166,15 @@
         },
         {
 	  key: "Previous version:",
-	  data: [ { value : "https://semiceu.github.io/DCAT-AP/releases/3.0.0/", href : "https://semiceu.github.io/DCAT-AP/releases/3.0.0/" } ]
+	  data: [ { value : "https://semiceu.github.io/DCAT-AP/releases/3.0.1/", href : "https://semiceu.github.io/DCAT-AP/releases/3.0.1/" } ]
 	},
         {
 	  key: "This version:",
-	  data: [ { value : "https://semiceu.github.io/DCAT-AP/releases/3.0.1", href : "https://semiceu.github.io/DCAT-AP/releases/3.0.1" } ]
+	  data: [ { value : "https://semiceu.github.io/DCAT-AP/drafts/latest", href : "https://semiceu.github.io/DCAT-AP/drafts/latest" } ]
 	}
       ],
       github: "SEMICeu/DCAT-AP",
-      shortName: "DCAT-AP 3.0.1",
+      shortName: "DCAT-AP 3.0.2",
       xref: "web-platform",
       doJsonLd: true,
       logos: [{
@@ -285,22 +285,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="msapplication-TileColor" content="#7ED956" />
-    <!-- Matomo -->
-<script>
-  var _paq = window._paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="//health.semic.eu/matomo/";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '1']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<!-- End Matomo Code -->
-
 </head>
 <body>
     
@@ -377,7 +361,7 @@ In the release <a href="">DCAT-AP 3.0</a> the alignment was made together with a
 More information on the alignment and the applied changes in that context are found in that document.
 <p/>
 This release addresses identified bugfixes and issues that have been identified. 
-For an overview we refer to the <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/CHANGELOG.html">Changelog</a>.
+For an overview we refer to the <a href="https://semiceu.github.io/DCAT-AP/drafts/latest/CHANGELOG.html">Changelog</a>.
 
 
 <h3>Meeting minutes</h3>
@@ -413,12 +397,12 @@ This document is the result of the major semantic change release process describ
     <h2>Status</h2>
         <p>
 <!-- readd when SEMIC has a codelist about it process 
-	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsW3C">SEMIC Draft Specification</a> published at 2025-07-10.
+	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsW3C">SEMIC Draft Specification</a> published at 2026-01-27.
 -->
-	This application profile has the status SEMIC Draft Specification published at 2025-07-10.
+	This application profile has the status SEMIC Draft Specification published at 2026-01-27.
         </p>
         <p>
-            Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/CHANGELOG.html">Changelog</a>.
+            Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://semiceu.github.io/DCAT-AP/drafts/latest/CHANGELOG.html">Changelog</a>.
         </p>
 </section>
 
@@ -606,9 +590,9 @@ The cardinalities and qualifications are included in the figure.
                 
     </div>
     <div>
-        <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/html/overview.jpg"
+        <a href="https://semiceu.github.io/DCAT-AP/drafts/latest/html/overview.jpg"
            target="_blank">
-            <img src="https://semiceu.github.io/DCAT-AP/releases/3.0.1/html/overview.jpg"/>
+            <img src="https://semiceu.github.io/DCAT-AP/drafts/latest/html/overview.jpg"/>
         </a>
     </div>
 </section>
@@ -738,7 +722,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20name%20in%20Agent&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Agent.name" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20name%20in%20Agent&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Agent.name" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -789,7 +773,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20type%20in%20Agent&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Agent.type" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20type%20in%20Agent&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Agent.type" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -955,7 +939,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20applicable legislation%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Catalogue.applicablelegislation" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20applicable legislation%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Catalogue.applicablelegislation" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -1006,7 +990,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20catalogue%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Catalogue.catalogue" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20catalogue%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Catalogue.catalogue" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -1059,7 +1043,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20creator%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Catalogue.creator" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20creator%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Catalogue.creator" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -1112,7 +1096,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20dataset%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Catalogue.dataset" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20dataset%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Catalogue.dataset" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -1165,7 +1149,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20description%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Catalogue.description" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20description%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Catalogue.description" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -1218,7 +1202,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20geographical coverage%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Catalogue.geographicalcoverage" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20geographical coverage%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Catalogue.geographicalcoverage" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -1271,7 +1255,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20has part%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Catalogue.haspart" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20has part%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Catalogue.haspart" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -1324,7 +1308,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20homepage%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Catalogue.homepage" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20homepage%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Catalogue.homepage" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -1377,7 +1361,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20language%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Catalogue.language" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20language%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Catalogue.language" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -1430,7 +1414,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20licence%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Catalogue.licence" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20licence%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Catalogue.licence" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -1483,7 +1467,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20modification date%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Catalogue.modificationdate" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20modification date%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Catalogue.modificationdate" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -1536,7 +1520,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20publisher%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Catalogue.publisher" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20publisher%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Catalogue.publisher" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -1589,7 +1573,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20record%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Catalogue.record" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20record%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Catalogue.record" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -1642,7 +1626,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20release date%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Catalogue.releasedate" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20release date%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Catalogue.releasedate" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -1695,7 +1679,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20rights%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Catalogue.rights" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20rights%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Catalogue.rights" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -1748,7 +1732,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20service%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Catalogue.service" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20service%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Catalogue.service" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -1801,7 +1785,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20temporal coverage%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Catalogue.temporalcoverage" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20temporal coverage%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Catalogue.temporalcoverage" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -1854,7 +1838,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20themes%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Catalogue.themes" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20themes%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Catalogue.themes" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -1907,7 +1891,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20title%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Catalogue.title" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20title%20in%20Catalogue&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Catalogue.title" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -2063,7 +2047,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20application profile%20in%20Catalogue Record&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23CatalogueRecord.applicationprofile" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20application profile%20in%20Catalogue Record&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23CatalogueRecord.applicationprofile" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -2116,7 +2100,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20change type%20in%20Catalogue Record&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23CatalogueRecord.changetype" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20change type%20in%20Catalogue Record&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23CatalogueRecord.changetype" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -2167,7 +2151,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20description%20in%20Catalogue Record&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23CatalogueRecord.description" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20description%20in%20Catalogue Record&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23CatalogueRecord.description" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -2220,7 +2204,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20language%20in%20Catalogue Record&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23CatalogueRecord.language" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20language%20in%20Catalogue Record&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23CatalogueRecord.language" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -2271,7 +2255,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20listing date%20in%20Catalogue Record&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23CatalogueRecord.listingdate" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20listing date%20in%20Catalogue Record&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23CatalogueRecord.listingdate" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -2324,7 +2308,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20modification date%20in%20Catalogue Record&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23CatalogueRecord.modificationdate" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20modification date%20in%20Catalogue Record&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23CatalogueRecord.modificationdate" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -2377,7 +2361,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20primary topic%20in%20Catalogue Record&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23CatalogueRecord.primarytopic" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20primary topic%20in%20Catalogue Record&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23CatalogueRecord.primarytopic" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -2430,7 +2414,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20source metadata%20in%20Catalogue Record&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23CatalogueRecord.sourcemetadata" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20source metadata%20in%20Catalogue Record&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23CatalogueRecord.sourcemetadata" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -2481,7 +2465,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20title%20in%20Catalogue Record&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23CatalogueRecord.title" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20title%20in%20Catalogue Record&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23CatalogueRecord.title" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -2623,7 +2607,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
 		   Reference in DCAT
 		</dt>
 		    <dd>
-		    <a href="https://w3c.github.io/dxwg/dcat/#Class:Checksum">Link</a>
+		    <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Checksum">Link</a>
 		    </dd>
 		
                 
@@ -2694,7 +2678,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20algorithm%20in%20Checksum&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Checksum.algorithm" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20algorithm%20in%20Checksum&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Checksum.algorithm" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -2729,13 +2713,13 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
 				-->
 				<!--
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:checksum_algorithm">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:checksum_algorithm">Link</a>
                                 </td>
 				-->
                                 <td>
                                     
 				       
-				        <a href="https://w3c.github.io/dxwg/dcat/#Property:checksum_algorithm">E</a>
+				        <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:checksum_algorithm">E</a>
 				       
                                     
                                 </td>
@@ -2747,7 +2731,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20checksum value%20in%20Checksum&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Checksum.checksumvalue" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20checksum value%20in%20Checksum&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Checksum.checksumvalue" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -2782,13 +2766,13 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
 				-->
 				<!--
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:checksum_checksum_value">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:checksum_checksum_value">Link</a>
                                 </td>
 				-->
                                 <td>
                                     
 				       
-				        <a href="https://w3c.github.io/dxwg/dcat/#Property:checksum_checksum_value">E</a>
+				        <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:checksum_checksum_value">E</a>
 				       
                                     
                                 </td>
@@ -2923,7 +2907,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20access rights%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23DataService.accessrights" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20access rights%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23DataService.accessrights" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -2976,7 +2960,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20applicable legislation%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23DataService.applicablelegislation" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20applicable legislation%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23DataService.applicablelegislation" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -3027,7 +3011,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20conforms to%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23DataService.conformsto" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20conforms to%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23DataService.conformsto" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -3082,7 +3066,7 @@ For instance the data service adheres to the OGC WFS API standard, while the ass
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20contact point%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23DataService.contactpoint" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20contact point%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23DataService.contactpoint" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -3135,7 +3119,7 @@ For instance the data service adheres to the OGC WFS API standard, while the ass
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20description%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23DataService.description" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20description%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23DataService.description" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -3188,7 +3172,7 @@ For instance the data service adheres to the OGC WFS API standard, while the ass
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20documentation%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23DataService.documentation" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20documentation%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23DataService.documentation" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -3239,7 +3223,7 @@ For instance the data service adheres to the OGC WFS API standard, while the ass
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20endpoint description%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23DataService.endpointdescription" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20endpoint description%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23DataService.endpointdescription" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -3292,7 +3276,7 @@ For instance the data service adheres to the OGC WFS API standard, while the ass
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20endpoint URL%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23DataService.endpointURL" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20endpoint URL%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23DataService.endpointURL" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -3345,7 +3329,7 @@ For instance the data service adheres to the OGC WFS API standard, while the ass
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20format%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23DataService.format" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20format%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23DataService.format" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -3396,7 +3380,7 @@ For instance the data service adheres to the OGC WFS API standard, while the ass
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20keyword%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23DataService.keyword" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20keyword%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23DataService.keyword" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -3449,7 +3433,7 @@ For instance the data service adheres to the OGC WFS API standard, while the ass
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20landing page%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23DataService.landingpage" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20landing page%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23DataService.landingpage" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -3502,7 +3486,7 @@ For instance the data service adheres to the OGC WFS API standard, while the ass
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20licence%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23DataService.licence" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20licence%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23DataService.licence" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -3555,7 +3539,7 @@ For instance the data service adheres to the OGC WFS API standard, while the ass
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20publisher%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23DataService.publisher" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20publisher%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23DataService.publisher" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -3608,7 +3592,7 @@ For instance the data service adheres to the OGC WFS API standard, while the ass
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20serves dataset%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23DataService.servesdataset" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20serves dataset%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23DataService.servesdataset" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -3661,7 +3645,7 @@ For instance the data service adheres to the OGC WFS API standard, while the ass
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20theme%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23DataService.theme" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20theme%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23DataService.theme" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -3714,7 +3698,7 @@ For instance the data service adheres to the OGC WFS API standard, while the ass
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20title%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23DataService.title" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20title%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23DataService.title" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -3912,7 +3896,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20access rights%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Dataset.accessrights" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20access rights%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Dataset.accessrights" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -3965,7 +3949,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20applicable legislation%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Dataset.applicablelegislation" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20applicable legislation%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Dataset.applicablelegislation" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -4016,7 +4000,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20conforms to%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Dataset.conformsto" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20conforms to%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Dataset.conformsto" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -4069,7 +4053,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20contact point%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Dataset.contactpoint" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20contact point%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Dataset.contactpoint" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -4122,7 +4106,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20creator%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Dataset.creator" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20creator%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Dataset.creator" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -4175,7 +4159,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20dataset distribution%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Dataset.datasetdistribution" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20dataset distribution%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Dataset.datasetdistribution" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -4228,7 +4212,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20description%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Dataset.description" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20description%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Dataset.description" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -4281,7 +4265,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20documentation%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Dataset.documentation" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20documentation%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Dataset.documentation" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -4332,7 +4316,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20frequency%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Dataset.frequency" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20frequency%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Dataset.frequency" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -4385,7 +4369,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20geographical coverage%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Dataset.geographicalcoverage" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20geographical coverage%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Dataset.geographicalcoverage" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -4438,7 +4422,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20has version%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Dataset.hasversion" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20has version%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Dataset.hasversion" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -4491,7 +4475,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20identifier%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Dataset.identifier" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20identifier%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Dataset.identifier" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -4544,7 +4528,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20in series%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Dataset.inseries" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20in series%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Dataset.inseries" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -4597,7 +4581,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20is referenced by%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Dataset.isreferencedby" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20is referenced by%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Dataset.isreferencedby" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -4650,7 +4634,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20keyword%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Dataset.keyword" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20keyword%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Dataset.keyword" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -4703,7 +4687,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20landing page%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Dataset.landingpage" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20landing page%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Dataset.landingpage" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -4756,7 +4740,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20language%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Dataset.language" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20language%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Dataset.language" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -4809,7 +4793,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20modification date%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Dataset.modificationdate" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20modification date%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Dataset.modificationdate" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -4862,7 +4846,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20other identifier%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Dataset.otheridentifier" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20other identifier%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Dataset.otheridentifier" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -4915,7 +4899,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20provenance%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Dataset.provenance" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20provenance%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Dataset.provenance" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -4966,7 +4950,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20publisher%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Dataset.publisher" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20publisher%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Dataset.publisher" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -5019,7 +5003,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20qualified attribution%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Dataset.qualifiedattribution" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20qualified attribution%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Dataset.qualifiedattribution" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -5072,7 +5056,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20qualified relation%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Dataset.qualifiedrelation" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20qualified relation%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Dataset.qualifiedrelation" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -5125,7 +5109,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20related resource%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Dataset.relatedresource" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20related resource%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Dataset.relatedresource" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -5178,7 +5162,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20release date%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Dataset.releasedate" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20release date%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Dataset.releasedate" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -5231,7 +5215,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20sample%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Dataset.sample" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20sample%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Dataset.sample" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -5282,7 +5266,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20source%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Dataset.source" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20source%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Dataset.source" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -5333,7 +5317,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20spatial resolution%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Dataset.spatialresolution" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20spatial resolution%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Dataset.spatialresolution" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -5386,7 +5370,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20temporal coverage%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Dataset.temporalcoverage" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20temporal coverage%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Dataset.temporalcoverage" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -5439,7 +5423,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20temporal resolution%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Dataset.temporalresolution" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20temporal resolution%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Dataset.temporalresolution" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -5492,7 +5476,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20theme%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Dataset.theme" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20theme%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Dataset.theme" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -5545,7 +5529,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20title%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Dataset.title" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20title%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Dataset.title" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -5598,7 +5582,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20type%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Dataset.type" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20type%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Dataset.type" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -5651,7 +5635,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20version%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Dataset.version" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20version%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Dataset.version" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -5704,7 +5688,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20version notes%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Dataset.versionnotes" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20version notes%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Dataset.versionnotes" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -5755,7 +5739,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20was generated by%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Dataset.wasgeneratedby" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20was generated by%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Dataset.wasgeneratedby" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -5926,7 +5910,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20applicable legislation%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23DatasetSeries.applicablelegislation" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20applicable legislation%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23DatasetSeries.applicablelegislation" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -5977,7 +5961,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20contact point%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23DatasetSeries.contactpoint" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20contact point%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23DatasetSeries.contactpoint" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -6030,7 +6014,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20description%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23DatasetSeries.description" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20description%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23DatasetSeries.description" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -6085,7 +6069,7 @@ It is recommended to provide an indication about the dimensions the Dataset Seri
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20frequency%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23DatasetSeries.frequency" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20frequency%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23DatasetSeries.frequency" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -6138,7 +6122,7 @@ It is recommended to provide an indication about the dimensions the Dataset Seri
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20geographical coverage%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23DatasetSeries.geographicalcoverage" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20geographical coverage%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23DatasetSeries.geographicalcoverage" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -6191,7 +6175,7 @@ It is recommended to provide an indication about the dimensions the Dataset Seri
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20modification date%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23DatasetSeries.modificationdate" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20modification date%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23DatasetSeries.modificationdate" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -6244,7 +6228,7 @@ It is recommended to provide an indication about the dimensions the Dataset Seri
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20publisher%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23DatasetSeries.publisher" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20publisher%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23DatasetSeries.publisher" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -6298,7 +6282,7 @@ E.g. a digital archive could take over the publishing of older datasets in the 
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20release date%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23DatasetSeries.releasedate" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20release date%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23DatasetSeries.releasedate" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -6353,7 +6337,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20temporal coverage%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23DatasetSeries.temporalcoverage" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20temporal coverage%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23DatasetSeries.temporalcoverage" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -6406,7 +6390,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20title%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23DatasetSeries.title" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20title%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23DatasetSeries.title" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -6577,7 +6561,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20access service%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Distribution.accessservice" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20access service%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Distribution.accessservice" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -6630,7 +6614,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20access URL%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Distribution.accessURL" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20access URL%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Distribution.accessURL" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -6683,7 +6667,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20applicable legislation%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Distribution.applicablelegislation" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20applicable legislation%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Distribution.applicablelegislation" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -6734,7 +6718,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20availability%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Distribution.availability" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20availability%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Distribution.availability" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -6785,7 +6769,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20byte size%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Distribution.bytesize" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20byte size%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Distribution.bytesize" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -6838,7 +6822,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20checksum%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Distribution.checksum" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20checksum%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Distribution.checksum" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -6891,7 +6875,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20compression format%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Distribution.compressionformat" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20compression format%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Distribution.compressionformat" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -6944,7 +6928,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20description%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Distribution.description" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20description%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Distribution.description" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -6997,7 +6981,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20documentation%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Distribution.documentation" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20documentation%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Distribution.documentation" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -7048,7 +7032,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20download URL%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Distribution.downloadURL" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20download URL%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Distribution.downloadURL" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -7101,7 +7085,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20format%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Distribution.format" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20format%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Distribution.format" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -7154,7 +7138,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20has policy%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Distribution.haspolicy" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20has policy%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Distribution.haspolicy" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -7207,7 +7191,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20language%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Distribution.language" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20language%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Distribution.language" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -7258,7 +7242,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20licence%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Distribution.licence" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20licence%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Distribution.licence" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -7311,7 +7295,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20linked schemas%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Distribution.linkedschemas" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20linked schemas%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Distribution.linkedschemas" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -7364,7 +7348,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20media type%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Distribution.mediatype" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20media type%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Distribution.mediatype" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -7417,7 +7401,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20modification date%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Distribution.modificationdate" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20modification date%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Distribution.modificationdate" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -7470,7 +7454,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20packaging format%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Distribution.packagingformat" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20packaging format%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Distribution.packagingformat" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -7523,7 +7507,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20release date%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Distribution.releasedate" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20release date%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Distribution.releasedate" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -7576,7 +7560,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20rights%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Distribution.rights" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20rights%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Distribution.rights" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -7629,7 +7613,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20spatial resolution%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Distribution.spatialresolution" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20spatial resolution%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Distribution.spatialresolution" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -7682,7 +7666,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20status%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Distribution.status" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20status%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Distribution.status" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -7733,7 +7717,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20temporal resolution%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Distribution.temporalresolution" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20temporal resolution%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Distribution.temporalresolution" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -7786,7 +7770,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20title%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Distribution.title" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20title%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Distribution.title" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -7987,7 +7971,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20type%20in%20Licence Document&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23LicenceDocument.type" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20type%20in%20Licence Document&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23LicenceDocument.type" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -8146,7 +8130,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20bbox%20in%20Location&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Location.bbox" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20bbox%20in%20Location&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Location.bbox" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -8199,7 +8183,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20centroid%20in%20Location&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Location.centroid" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20centroid%20in%20Location&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Location.centroid" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -8252,7 +8236,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20geometry%20in%20Location&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Location.geometry" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20geometry%20in%20Location&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Location.geometry" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -8347,7 +8331,7 @@ This is not equal to the release date of the oldest dataset in the collection of
 		   Reference in DCAT
 		</dt>
 		    <dd>
-		    <a href="https://w3c.github.io/dxwg/dcat/#Class:Relationship">Link</a>
+		    <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Relationship">Link</a>
 		    </dd>
 		
                 
@@ -8411,7 +8395,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20had role%20in%20Relationship&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Relationship.hadrole" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20had role%20in%20Relationship&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Relationship.hadrole" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -8431,7 +8415,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                     
                                 </td>
                                 <td>
-                                    1..n
+                                    1..*
                                 </td>
                                 <td property="rdfs:comment">
                                     A function of an entity or agent with respect to another entity or resource.
@@ -8446,13 +8430,13 @@ This is not equal to the release date of the oldest dataset in the collection of
 				-->
 				<!--
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:relationship_hadRole">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:relationship_hadRole">Link</a>
                                 </td>
 				-->
                                 <td>
                                     
 				       
-				        <a href="https://w3c.github.io/dxwg/dcat/#Property:relationship_hadRole">E</a>
+				        <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:relationship_hadRole">E</a>
 				       
                                     
                                 </td>
@@ -8464,7 +8448,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20relation%20in%20Relationship&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Relationship.relation" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20relation%20in%20Relationship&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Relationship.relation" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -8484,7 +8468,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                     
                                 </td>
                                 <td>
-                                    1..n
+                                    1..*
                                 </td>
                                 <td property="rdfs:comment">
                                     A resource related to the source resource.
@@ -8499,13 +8483,13 @@ This is not equal to the release date of the oldest dataset in the collection of
 				-->
 				<!--
                                 <td>
-                                    <a href="https://w3c.github.io/dxwg/dcat/#Property:relationship_relation">Link</a>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:relationship_relation">Link</a>
                                 </td>
 				-->
                                 <td>
                                     
 				       
-				        <a href="https://w3c.github.io/dxwg/dcat/#Property:relationship_relation">E</a>
+				        <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:relationship_relation">E</a>
 				       
                                     
                                 </td>
@@ -8770,7 +8754,7 @@ They are included in the Application Profile because they form the range of prop
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20preferred label%20in%20Concept&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Concept.preferredlabel" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20preferred label%20in%20Concept&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Concept.preferredlabel" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -8790,7 +8774,7 @@ They are included in the Application Profile because they form the range of prop
                                     
                                 </td>
                                 <td>
-                                    1..n
+                                    1..*
                                 </td>
                                 <td property="rdfs:comment">
                                     A preferred label of the concept.
@@ -8916,7 +8900,7 @@ They are included in the Application Profile because they form the range of prop
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20title%20in%20Concept Scheme&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23ConceptScheme.title" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20title%20in%20Concept Scheme&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23ConceptScheme.title" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -8936,7 +8920,7 @@ They are included in the Application Profile because they form the range of prop
                                     
                                 </td>
                                 <td>
-                                    1..n
+                                    1..*
                                 </td>
                                 <td property="rdfs:comment">
                                     A name of the concept scheme.
@@ -9206,7 +9190,7 @@ This is based on the UN/CEFACT Identifier class.
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20notation%20in%20Identifier&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23Identifier.notation" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20notation%20in%20Identifier&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Identifier.notation" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -9585,7 +9569,7 @@ In this data specification the use is restricted to instances of this class that
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20beginning%20in%20Period of Time&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23PeriodofTime.beginning" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20beginning%20in%20Period of Time&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23PeriodofTime.beginning" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -9638,7 +9622,7 @@ In this data specification the use is restricted to instances of this class that
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20end%20in%20Period of Time&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23PeriodofTime.end" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20end%20in%20Period of Time&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23PeriodofTime.end" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -9691,7 +9675,7 @@ In this data specification the use is restricted to instances of this class that
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20end date%20in%20Period of Time&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23PeriodofTime.enddate" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20end date%20in%20Period of Time&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23PeriodofTime.enddate" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -9744,7 +9728,7 @@ In this data specification the use is restricted to instances of this class that
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20start date%20in%20Period of Time&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.1%23PeriodofTime.startdate" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20start date%20in%20Period of Time&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23PeriodofTime.startdate" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -10003,7 +9987,7 @@ In this data specification the use is restricted to instances of this class that
 		   Reference in DCAT
 		</dt>
 		    <dd>
-		    <a href="https://w3c.github.io/dxwg/dcat/#Class:Role">Link</a>
+		    <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Role">Link</a>
 		    </dd>
 		
                 
@@ -10257,8 +10241,8 @@ In this data specification the use is restricted to instances of this class that
          (non normative)
         
             <p>
-                A reusable JSON-LD context definition for this application profile is retrievable at: <a href="/DCAT-AP/releases/3.0.1/context/dcat-ap.jsonld"
-    target="_blank">/DCAT-AP/releases/3.0.1/context/dcat-ap.jsonld</a>
+                A reusable JSON-LD context definition for this application profile is retrievable at: <a href="/DCAT-AP/drafts/latest/context/dcat-ap.jsonld"
+    target="_blank">/DCAT-AP/drafts/latest/context/dcat-ap.jsonld</a>
             </p>
         
     </div>
@@ -10271,8 +10255,8 @@ In this data specification the use is restricted to instances of this class that
          (non normative)
         
             <p>
-                A reusable SHACL template for this application profile is retrievable at: <a href="/DCAT-AP/releases/3.0.1/shacl/dcat-ap-SHACL.ttl"
-    target="_blank">/DCAT-AP/releases/3.0.1/shacl/dcat-ap-SHACL.ttl</a>
+                A reusable SHACL template for this application profile is retrievable at: <a href="/DCAT-AP/drafts/latest/shacl/dcat-ap-SHACL.ttl"
+    target="_blank">/DCAT-AP/drafts/latest/shacl/dcat-ap-SHACL.ttl</a>
             </p>
         
     </div>
@@ -10426,7 +10410,7 @@ As a general principle, it is recommended that publishers consult their legal se
 
 <p></p>
 Within DCAT-AP properties licence, rights and access rights are used to share this information. 
-The basic guidelines for their usage are expressed in the <a href="https://w3c.github.io/dxwg/dcat/#license-rights">License and Rights statements</a> guideline in DCAT.
+The basic guidelines for their usage are expressed in the <a href="#https://www.w3.org/TR/vocab-dcat-3/#license-rights">License and Rights statements</a> guideline in DCAT.
 DCAT-AP implementers SHOULD consult these, in addition with the additional advices for the DCAT-AP usage context provided in this section.
 
 <p></p>
@@ -10495,7 +10479,7 @@ A second approach is based on the use of W3C’s PROV ontology [[prov-o]]  which
 </p><p>
 Based on the experience gained with the use of domain-specific extensions for additional ‘agent roles’ in the exchange of information about Datasets and on the requests of implementors and stakeholders, the DCAT Application Profile release 2.0.0  is extended with additional roles as proposed by DCAT Version 2 [[vocab-dcat-2]] that have proven to be useful across domains. Precisely, properties <a href="#Dataset.creator">creator</a>, <a href="#Dataset.qualifiedattribution">qualified attribution</a> and <a href="#Dataset.qualifiedrelation">qualified relation</a> have been added to <a href="#Dataset">Dataset</a> class to further facilitate relationships between datasets and agents.  
 </p><p>
-In the most recent DCAT Version 3 [[vocab-dcat-3]] a dedicated <a href="https://w3c.github.io/dxwg/dcat/#qualified-forms">section on the relationship with Agents</a> is provided.
+In the most recent DCAT Version 3 [[vocab-dcat-3]] a dedicated <a href="https://www.w3.org/TR/vocab-dcat-3/#qualified-forms">section on the relationship with Agents</a> is provided.
 The DCAT-AP guidelines for Agents Roles are conformant to this.
 </p><p>
 As a technical note: While both approaches represent equivalent effort for publishers of datasets and editors of the specifications overall, their governance models differ.
@@ -10543,7 +10527,7 @@ How multilingual information is handled in systems, for example in indexing and 
 The introduction of Data Services as first class citizens in DCAT 2.0 raised questions about the usage of Data Services and Distributions. This section provides a guideline for publishers what to consider as a Distribution and what as a Data Service.
 </p><p>
 
-A first distinction between distributions and data services is their dependency on a dataset for their existence. A distribution cannot exist without its dataset. It is a specific representation of a dataset (cfr definition W3C <a href="https://w3c.github.io/dxwg/dcat/#Class:Distribution">Distribution</a>). Whereas a data service is an entity in its own right. It provides access to datasets or it provides data processing functions. The independence also holds between the distributions of a dataset, and the data service which provides access to that dataset. The distributions are not required to be the result of the data service operations. However, they may.
+A first distinction between distributions and data services is their dependency on a dataset for their existence. A distribution cannot exist without its dataset. It is a specific representation of a dataset (cfr definition W3C <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Distribution">Distribution</a>). Whereas a data service is an entity in its own right. It provides access to datasets or it provides data processing functions. The independence also holds between the distributions of a dataset, and the data service which provides access to that dataset. The distributions are not required to be the result of the data service operations. However, they may.
 
 </p><p>
 Many of the properties of distributions are file oriented (downloadURL, format, byte size, checksum, modification date, ...). The relevance of this information is reduced for data services, related information is present in a very different form and thus under different terminology. For instance, data services do and can provide format transformations, language transformations and schema transformations on request. Also the handling of trust is different. While tampering of downloadable content is detected by e.g. checksums, data services create often a trusted channel using security measures such as authentication and encryption. This reduces the need for additional trust checks on the data.
@@ -10612,8 +10596,8 @@ Therefore the DCAT-AP working group has decided to retract the notion of a Datas
 Profile builders may reintroduce this notion when they want to express specific constraints for that usage scope.
 <p/>
 In case the connection is very strong or the result of an automated process, versioning terminology is a natural way to express the connection between the Datasets in the Dataset Series collection.
-For guidelines on expressing versioning information in DCAT-AP, consult the <a href="https://w3c.github.io/dxwg/dcat/#version-history">DCAT guidelines on versioning</a>.
-As versioning is not always the most appropriate terminology, DCAT introduces properties <a href="https://w3c.github.io/dxwg/dcat/#ex-dataset-series-containment">(e.g. next, previous, inSeries, last, etc.)</a> to interconnect the Dataset Series with its members and among the members themselves. 
+For guidelines on expressing versioning information in DCAT-AP, consult the <a href="https://www.w3.org/TR/vocab-dcat-3/#version-history">DCAT guidelines on versioning</a>.
+As versioning is not always the most appropriate terminology, DCAT introduces properties <a href="https://www.w3.org/TR/vocab-dcat-3/#ex-dataset-series-containment">(e.g. next, previous, inSeries, last, etc.)</a> to interconnect the Dataset Series with its members and among the members themselves. 
 It is recommended to use always these properties in combination with Dataset Series, and versioning when appropriate.
 <p/>
 The membership in a Dataset Series may influence the (descriptive) metadata to highlight differences from other Datasets in the collection. 
@@ -10639,7 +10623,7 @@ To forster the sharing of experiences and insights this section lists known DCAT
 <li> DCAT-AP: the base European profile DCAT-AP, <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1">https://semiceu.github.io/DCAT-AP/releases/3.0.1</a> </li>
 <li> DCAT-AP HVD: DCAT-AP for High Value Datasets <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd/">https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd/ </a> </li>
 <li> GeoDCAT-AP: DCAT-AP for geospatial datasets  <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0">https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0 </a> </li>
-<li> StatDCAT-AP: DCAT-AP for statistical datasets  <a href="https://github.com/SEMICeu/StatDCAT-AP">https://github.com/SEMICeu/StatDCAT-AP </a> </li>
+<li> StatDCAT-AP: DCAT-AP for statistical datasets  <a href="https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0/">https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0/</a> </li>
 <li> Health DCAT-AP: DCAT-AP for health datasets <a href="https://healthdcat-ap.github.io/">https://healthdcat-ap.github.io/ </a> </li>
 <li> Mobility DCAT-AP: DCAT-AP for mobility datasets <a href="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/1.1.0/index.html">https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/1.1.0/index.html </a> </li>
 </ul>  
@@ -10647,7 +10631,56 @@ To forster the sharing of experiences and insights this section lists known DCAT
 <h3>Member State DCAT-AP profiles</h3>
 
 We invite EU MSs to share the references to their DCAT-AP profiles. This can be done by mentioning it in our <a href="https://github.com/SEMICeu/DCAT-AP/issues">GitHub issue tracker</a>.
+In alphabetic order, 
+<ul>
+<!---
+<li>  
+ <dl>
+  <dt><a href=""></a></dt>
+     <dd></dd>
+</dl>
+</li>
+--->
 
+<li> Belgium 
+ <dl>
+  <dt><a href="https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/">DCAT-AP Vlaanderen</a></dt>
+     <dd>The DCAT-AP profile of the Flemish region. It is a generic profile for all metadata and has a seperate section for the Open Data domain.</dd>
+  <dt><a href="https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/">GeoDCAT-AP Vlaanderen</a></dt>
+     <dd>specialises DCAT-AP Vlaanderen for the Geo domain. It is used in practice to convert our ISO (19139, 19110) records into a DCAT-AP representation.</dd>
+</dl>
+</li>
+
+<li> Czechia 
+ <dl>
+  <dt><a href="https://ofn.gov.cz/dcat-ap-cz/">DCAT-AP-CZ</a></dt>
+      <dd>the main DCAT-AP profile containing mainly Czech translations of DCAT-AP terms, common provisions for detailed licensing descriptions, information about IRIs from a local cadastre to be used for spatial coverage, EuroVoc usage, and including DCAT-AP HVD</dd>
+  <dt><a href="https://ofn.gov.cz/dcat-ap-cz-rozhraní-katalogů-otevřených-dat/2024-05-28/">DCAT-AP-CZ - interface of local open data catalogs</a></dt>
+      <dd>profile of DCAT-AP-CZ specifying the protocols and data structures for harvesting local data catalogs using DCAT-AP-CZ</dd>
+  <dt><a href="https://ofn.gov.cz/dcat-ap-cz-360-2023/2025-08-12/">DCAT-AP-CZ-360-2023</a></dt>
+      <dd>profile of DCAT-AP-CZ implementing descriptions of data interfaces according to Czech Decree No. 360/2023 Coll., on long-term management of public administration information systems</dd>
+</dl>
+</li>
+
+</li>
+
+<li> Spain
+ <dl>
+  <dt><a href="https://datosgobes.github.io/NTI-RISP/">Pre-DCAT Metadata Profile (2013)</a></dt>
+     <dd>a generic profile established prior to DCAT 1.0 (2014), which served as the basis for DCAT/DCAT-AP adoption in Spain. While still in use for general-purpose metadata, it is currently being deprecated  in favor of DCAT-AP-ES.</dd>
+  <dt><a href="https://datosgobes.github.io/DCAT-AP-ES/">DCAT-AP-ES</a></dt>
+     <dd>metadata model included in the new version of the Technical Standard for Interoperability of Public Sector Information Resources (NTI-RISP), which is currently undergoing administrative processing and is already being implemented as an extended profile in the National Catalog ([datos.gob.es](https://datos.gob.es/en/catalogo)). In DCAT-AP-ES, we have chosen to incorporate the HVD extension into the core of the model to encourage publishers to describe high-value sets.</dd>
+</dl>
+</li>
+
+<li> The Netherlands 
+ <dl>
+  <dt><a href="https://docs.geostandaarden.nl/dcat/dcat-ap-nl30/">DCAT-AP-NL 3.0</a></dt>
+     <dd> DCAT-AP-NL specializes DCAT-AP 3.0. The requirements from <a href="https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd/">DCAT-AP-HVD</a> are incorporated in DCAT-AP-NL.
+</dd>
+</dl>
+</li>
+</ul>  
 
 
 
@@ -10787,7 +10820,7 @@ The shape is downloadable <a href="./shacl/dcat-ap-SHACL.ttl">here</a>.
 
 <p>This section describes the use of Dataset Series via examples.
 All examples are fictitious and are created to facilitate the understanding of Dataset Series.
-This section complements the usage explained in section <a href="https://w3c.github.io/dxwg/dcat/#dataset-series">Dataset series</a> in DCAT 3 [[vocab-dcat-3]], because it 
+This section complements the usage explained in section <a href="https://www.w3.org/TR/vocab-dcat-3/#dataset-series">Dataset series</a> in DCAT 3 [[vocab-dcat-3]], because it 
 illustrates the decision making process when switching from publishing a single Dataset to a Dataset Series.
 </p>
 
@@ -10918,7 +10951,7 @@ In general, this may lead to situations that data exchanges based on different D
 
 <p/>
 To harmonise the exchange of DCAT based data and reduce the need for inference engines, 
-W3C DCAT imposes <a href="https://w3c.github.io/dxwg/dcat/#inverse-properties">implementation guidelines</a> expressing a preference in use. 
+W3C DCAT imposes <a href="https://www.w3.org/TR/vocab-dcat-3/#inverse-properties">implementation guidelines</a> expressing a preference in use. 
 The guidelines state which property must be used while the other, called the inverse,  may be used.
 In a proper DCAT profile the inverse property cannot be used to replace completely the property. 
 
