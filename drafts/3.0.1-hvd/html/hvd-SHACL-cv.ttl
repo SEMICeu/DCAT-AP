@@ -1,0 +1,82 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix r5r: <http://data.europa.eu/r5r/> .
+
+@prefix : <https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd#>.
+
+
+
+<https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd> rdfs:member 
+          :DatasetShapeCV ,
+          :CatalogShapeCV,
+          :DistributionShapeCV,
+          :DataServiceShapeCVr, 
+          :DatasetSeriesShapeCV .
+
+:HVDCategoryRestriction
+    a shacl:NodeShape ;
+    rdfs:comment "HVD Category restriction" ;
+    rdfs:label "HVD Category restriction" ;
+    shacl:property [
+        shacl:hasValue <http://data.europa.eu/bna/asd487ae75> ;
+        shacl:minCount 1 ;
+        shacl:nodeKind shacl:IRI ;
+        shacl:path skos:inScheme
+    ] .
+
+
+:DatasetShapeCV
+    a shacl:NodeShape ;
+    shacl:property [
+        shacl:node :HVDCategoryRestriction ;
+        shacl:nodeKind shacl:IRI ;
+        shacl:path r5r:hvdCategory
+    ] ;
+    shacl:targetClass dcat:Dataset.
+
+
+:CatalogShapeCV
+    a shacl:NodeShape ;
+    shacl:property [
+        shacl:node :HVDCategoryRestriction ;
+        shacl:nodeKind shacl:IRI ;
+        shacl:path r5r:hvdCategory
+    ] ;
+    shacl:targetClass dcat:Catalog.
+
+:DistributionShapeCV
+    a shacl:NodeShape ;
+    shacl:property [
+        shacl:node :HVDCategoryRestriction ;
+        shacl:nodeKind shacl:IRI ;
+        shacl:path r5r:hvdCategory
+    ] ;
+    shacl:targetClass dcat:Distribution.
+
+:DataServiceShapeCV
+    a shacl:NodeShape ;
+    shacl:property [
+        shacl:node :HVDCategoryRestriction ;
+        shacl:nodeKind shacl:IRI ;
+        shacl:path r5r:hvdCategory
+    ] ; 
+    shacl:targetClass dcat:DataService.
+
+
+:DatasetSeriesShapeCV
+    a shacl:NodeShape ;
+    shacl:property [
+        shacl:node :HVDCategoryRestriction ;
+        shacl:nodeKind shacl:IRI ;
+        shacl:path r5r:hvdCategory
+    ] ; 
+    shacl:targetClass dcat:DatasetSeries.
+

@@ -1,0 +1,24 @@
+{
+  "@context": {
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "exampleMS": "https://data.exampleMS.gov/id/dataset/"
+  },
+  "@id": "exampleMS:HVD-reporting-2023",
+  "@type": "dcat:Catalogue",
+  "dcterms:description": {
+    "@language": "en",
+    "@value": "All information to provide the HVD conformance assessment for MS"
+  },
+  "dcterms:title": {
+    "@language": "en",
+    "@value": "MS HVD Reporting 2023"
+  },
+  "dcat:dataset": {
+    "@id": "exampleMS:1T2p3o4B"
+  },
+  "dcat:service": {
+    "@id": "exampleMS:EAMS-APIplatform"
+  }
+}

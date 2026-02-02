@@ -1,0 +1,22 @@
+{
+  "@context": {
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  },
+  "@graph": [
+    {
+      "@id": "http://publications.europa.eu/resource/authority/licence/CC_BY_4_0",
+      "skos:broadMatch": {
+        "@id": "https://data.exampleMS.gov/resource/FreeAndOpen"
+      }
+    },
+    {
+      "@id": "https://data.exampleMS.gov/resource/FreeAndOpen",
+      "@type": "dcterms:LicenseDocument",
+      "skos:narrowMatch": {
+        "@id": "http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"
+      }
+    }
+  ]
+}

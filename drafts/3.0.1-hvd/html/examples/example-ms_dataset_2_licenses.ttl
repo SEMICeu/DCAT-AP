@@ -1,0 +1,30 @@
+prefix exampleMS: <https://data.exampleMS.gov/id/dataset/>
+prefix dcat: <http://www.w3.org/ns/dcat#>
+prefix dcatap: <http://data.europa.eu/r5r/>
+prefix dct: <http://purl.org/dc/terms/>
+
+exampleMS:1T2p3o4B a dcat:Dataset ;
+   dct:title "The population of bees"@en ;
+   dcatap:applicableLegislation <http://data.europa.eu/eli/reg_impl/2023/138/oj>, <http://data.europa.eu/eli/dir/2007/2/2019-06-26> ;
+   dcat:distribution exampleMS:1T2p3o4B-dist-SHP, exampleMS:1T2p3o4B-dist-RDF .
+
+exampleMS:1W2o3p4T a dcat:Dataset ;
+  dct:title "The population of wasps"@en ;
+  dcat:distribution exampleMS:1W2o3p4T-dist-SHP .
+
+exampleMS:1T2p3o4B-dist-SHP a dcat:Distribution ;
+   dct:license <https://data.exampleMS.gov/resource/FreeAndOpen> ;
+   dcatap:applicableLegislation <http://data.europa.eu/eli/reg_impl/2023/138/oj> .
+
+exampleMS:1T2p3o4B-dist-RDF a dcat:Distribution ;
+   dct:license <https://data.exampleMS.gov/resource/FreeAndOpen> .
+
+exampleMS:1W2o3p4T-dist-SHP a dcat:Distribution ;
+   dct:license <https://data.exampleMS.gov/resource/NoCommercialUseWithFees> .
+
+exampleMS:EAMS-APIplatform a dcat:DataService;
+   dct:title "EA API platform"@en;
+   dct:description "The EA API platform provides a uniform access to the real-time data collected by EA"@en;
+   dcat:endpointURL <https://orgea.exampleMS.gov/api/v2/> ;
+   dcatap:applicableLegislation <http://data.europa.eu/eli/reg_impl/2023/138/oj> ;
+   dcat:servesDataset exampleMS:1T2p3o4B, exampleMS:1W2o3p4T .

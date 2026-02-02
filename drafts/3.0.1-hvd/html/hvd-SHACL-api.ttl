@@ -1,0 +1,34 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix r5r: <http://data.europa.eu/r5r/> .
+
+@prefix : <https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd#>.
+
+
+<https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd> rdfs:member 
+          :DatasetShapeAPI.
+
+
+:DatasetShapeAPI
+    a shacl:NodeShape ;
+    shacl:property [
+       shacl:path r5r:applicableLegislation;
+       shacl:nodeKind shacl:IRI;
+       shacl:severity shacl:Violation;
+       shacl:minCount 1
+      ], [
+       shacl:path  [ shacl:alternativePath ( [ shacl:inversePath dcat:servesDataset ]  ( dcat:distribution dcat:accessService ) )];
+       shacl:nodeKind shacl:IRI ; 
+       shacl:minCount 1 ;
+       shacl:severity shacl:Violation
+      ] ;
+    shacl:targetClass dcat:Dataset .
+

@@ -1,0 +1,8 @@
+prefix dct: <http://purl.org/dc/terms/>
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+
+<https://data.exampleMS.gov/resource/FreeAndOpen> a dct:LicenseDocument ;
+   skos:exactMatch <http://publications.europa.eu/resource/authority/licence/CC0>.
+
+<https://data.exampleMS.gov/resource/NoCommercialUseWithFees> a dct:LicenseDocument ;
+   skos:broadMatch <http://publications.europa.eu/resource/authority/licence/CC_BYNC_4_0> .
