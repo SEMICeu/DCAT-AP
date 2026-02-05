@@ -13,6 +13,7 @@ This Changelog provides an overview of the changes incorporated in DCAT-AP HVD 3
 # **Data Model Adaptations**  
   
 - Add Dataset `title` and `description` attributes, as they are required for the HVD reporting.
+- Change Dataset title and description range to `rdf:langString` to support auto-translation activities
 - Add Distribution `downloadURL`, which is mandatory for HVD bulk downloads for the HVD reporting.
 - Add LicenceDocument `as permissive as` and `more permissive than` properties for mapping to the EU Vocabularies Licences NAL, add the NAL to Controlled Vocabularies
   

@@ -12,7 +12,7 @@
     "Dct:Standard": "http://purl.org/dc/terms/Standard",
     "Eli:LegalResource": "http://data.europa.eu/eli/ontology#LegalResource",
     "Foaf:Document": "http://xmlns.com/foaf/0.1/Document",
-    "Rdfs:Literal": "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "Rdf:langString": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
     "Rdfs:Resource": "http://www.w3.org/2000/01/rdf-schema#Resource",
     "Skos:Concept": "http://www.w3.org/2004/02/skos/core#Concept",
     "Vcard:Kind": "http://www.w3.org/2006/vcard/ns#Kind",
@@ -93,7 +93,8 @@
     },
     "dct:description": {
       "@container": "@set",
-      "@id": "http://purl.org/dc/terms/description"
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "dct:license": {
       "@id": "http://purl.org/dc/terms/license",
@@ -106,7 +107,8 @@
     },
     "dct:title": {
       "@container": "@set",
-      "@id": "http://purl.org/dc/terms/title"
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "foaf:page": {
       "@container": "@set",
