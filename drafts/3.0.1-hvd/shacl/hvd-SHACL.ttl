@@ -1,4 +1,4 @@
-@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -204,10 +204,10 @@
   shacl:path foaf:page .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/99435c17158fbaa12d1d955b8886d5bf935ab016> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.rights";
-  shacl:class dc:RightsStatement;
+  shacl:class dct:RightsStatement;
   shacl:description "A statement that specifies rights associated with the Distribution."@en;
   shacl:name "rights"@en;
-  shacl:path dc:rights .
+  shacl:path dct:rights .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/998ce689a5bcc3e2764ff84a05255e34d91e8102> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.documentation";
   shacl:description "A page that provides additional information about the Data Service."@en;
@@ -225,13 +225,13 @@
   shacl:description "A licence under which the Data service is made available."@en;
   shacl:maxCount 1;
   shacl:name "licence"@en;
-  shacl:path dc:license .
+  shacl:path dct:license .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/b4c4138f0581e7240ec4dd866004c56407b3705a> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.rights";
   shacl:description "A statement that specifies rights associated with the Distribution."@en;
   shacl:name "rights"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path dc:rights .
+  shacl:path dct:rights .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/ca2bd10c893237fa342edb75240b08731acda92f> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.servesdataset";
   shacl:description "This property refers to a collection of data that this data service can distribute."@en;
@@ -246,10 +246,10 @@
   shacl:path <http://data.europa.eu/r5r/applicableLegislation> .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/dbcf2adef675735c48b532392359af27af5e8b71> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.licence";
-  shacl:class dc:LicenseDocument;
+  shacl:class dct:LicenseDocument;
   shacl:description "A licence under which the Data service is made available."@en;
   shacl:name "licence"@en;
-  shacl:path dc:license .
+  shacl:path dct:license .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/dc08f4dca4377fade57f89454e3fa06a8389d314> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.endpointdescription";
   shacl:class rdfs:Resource;
@@ -267,7 +267,7 @@
   shacl:description "A licence under which the Data service is made available."@en;
   shacl:name "licence"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path dc:license .
+  shacl:path dct:license .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/f514dbc668e2c9c457d61f1f2721c7fbcb22cb59> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.HVDcategory";
   shacl:description "The HVD category to which this Data Service belongs."@en;
@@ -351,7 +351,7 @@
   shacl:description "An implementing rule or other specification."@en;
   shacl:name "conforms to"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path dc:conformsTo .
+  shacl:path dct:conformsTo .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Dataset.applicablelegislation";
   shacl:description "The legislation that mandates the creation or management of the Dataset."@en;
@@ -369,7 +369,7 @@
   shacl:datatype rdf:langString;
   shacl:description "A name given to the Dataset."@en;
   shacl:name "title"@en;
-  shacl:path dc:title .
+  shacl:path dct:title .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetShape/63790d4374dda7d88681e2756e114a65082d9bfd> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Dataset.inseries";
   shacl:class dcat:DatasetSeries;
@@ -381,7 +381,7 @@
   shacl:description "A free-text account of the Dataset."@en;
   shacl:name "description"@en;
   shacl:nodeKind shacl:Literal;
-  shacl:path dc:description .
+  shacl:path dct:description .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Dataset.applicablelegislation";
   shacl:class <http://data.europa.eu/eli/ontology#LegalResource>;
@@ -392,7 +392,7 @@
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetShape/768bb4171e00505886fe9a1e949b4cd71f0eb548> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Dataset.description";
   shacl:description "A free-text account of the Dataset."@en;
   shacl:name "description"@en;
-  shacl:path dc:description;
+  shacl:path dct:description;
   shacl:uniqueLang true .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetShape/7b6713c1f4a52e964f5db57eabef294b6d04e90e> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Dataset.contactpoint";
@@ -417,7 +417,7 @@
   shacl:description "A free-text account of the Dataset."@en;
   shacl:minCount 1;
   shacl:name "description"@en;
-  shacl:path dc:description .
+  shacl:path dct:description .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetShape/924bfd3702cf51f4a6bc11bd1b7e06790d5d2fbc> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Dataset.HVDCategory";
   shacl:description "The HVD category to which this Dataset belongs."@en;
@@ -428,7 +428,7 @@
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetShape/92d65d33f2a5d5345f1980ffd0cf304e47dd0caf> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Dataset.title";
   shacl:description "A name given to the Dataset."@en;
   shacl:name "title"@en;
-  shacl:path dc:title;
+  shacl:path dct:title;
   shacl:uniqueLang true .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetShape/9adf9f5890592909cf3e67021ae7ab4f895a7745> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Dataset.contactpoint";
@@ -444,10 +444,10 @@
   shacl:path <http://data.europa.eu/r5r/hvdCategory> .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetShape/c84f7330b9538a899ebb875c44dc23c9882e74ac> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Dataset.conformsto";
-  shacl:class dc:Standard;
+  shacl:class dct:Standard;
   shacl:description "An implementing rule or other specification."@en;
   shacl:name "conforms to"@en;
-  shacl:path dc:conformsTo .
+  shacl:path dct:conformsTo .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetShape/d36065836a29f463546e269c25db7b95b879b3fb> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Dataset.applicablelegislation";
   shacl:description "The legislation that mandates the creation or management of the Dataset."@en;
@@ -459,13 +459,13 @@
   shacl:datatype rdf:langString;
   shacl:description "A free-text account of the Dataset."@en;
   shacl:name "description"@en;
-  shacl:path dc:description .
+  shacl:path dct:description .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetShape/d5d74574f70f9a979535f3624608f88180dd0c97> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Dataset.title";
   shacl:description "A name given to the Dataset."@en;
   shacl:name "title"@en;
   shacl:nodeKind shacl:Literal;
-  shacl:path dc:title .
+  shacl:path dct:title .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetShape/f6f077451f13ccf5d721838425fcc37f6cebfe48> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Dataset.datasetdistribution";
   shacl:description "An available Distribution for the Dataset."@en;
@@ -477,7 +477,7 @@
   shacl:description "A name given to the Dataset."@en;
   shacl:minCount 1;
   shacl:name "title"@en;
-  shacl:path dc:title .
+  shacl:path dct:title .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DistributionShape> a shacl:NodeShape;
   shacl:closed false;
@@ -507,10 +507,10 @@
   shacl:path <http://data.europa.eu/r5r/applicableLegislation> .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DistributionShape/226b9cb0511ec6b8da045829e10d2676ddbb8375> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Distribution.linkedschemas";
-  shacl:class dc:Standard;
+  shacl:class dct:Standard;
   shacl:description "An established schema to which the described Distribution conforms."@en;
   shacl:name "linked schemas"@en;
-  shacl:path dc:conformsTo .
+  shacl:path dct:conformsTo .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DistributionShape/23d4c038584493decec780192681ef61694bff7c> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Distribution.accessservice";
   shacl:description "A data service that gives access to the distribution of the dataset"@en;
@@ -522,7 +522,7 @@
   shacl:description "An established schema to which the described Distribution conforms."@en;
   shacl:name "linked schemas"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path dc:conformsTo .
+  shacl:path dct:conformsTo .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DistributionShape/27ee30c66ff3cd2714f73a4b488a5e0f6b64b7f6> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Distribution.downloadURL";
   shacl:description "A URL that is a direct link to a downloadable file in a given format."@en;
@@ -549,16 +549,16 @@
   shacl:path dcat:accessService .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DistributionShape/99435c17158fbaa12d1d955b8886d5bf935ab016> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Distribution.rights";
-  shacl:class dc:RightsStatement;
+  shacl:class dct:RightsStatement;
   shacl:description "A statement that specifies rights associated with the Distribution."@en;
   shacl:name "rights"@en;
-  shacl:path dc:rights .
+  shacl:path dct:rights .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DistributionShape/9eaae476a881de13b9430537ace6e70da7327dbd> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Distribution.licence";
   shacl:description "A licence under which the Distribution is made available."@en;
   shacl:maxCount 1;
   shacl:name "licence"@en;
-  shacl:path dc:license .
+  shacl:path dct:license .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DistributionShape/a07d6e7a0a1790b89a1ce7ff602cbbd9ea835282> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Distribution.downloadURL";
   shacl:class rdfs:Resource;
@@ -576,7 +576,7 @@
   shacl:description "A statement that specifies rights associated with the Distribution."@en;
   shacl:name "rights"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path dc:rights .
+  shacl:path dct:rights .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DistributionShape/d36065836a29f463546e269c25db7b95b879b3fb> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Distribution.applicablelegislation";
   shacl:description "The legislation that mandates the creation or management of the Distribution"@en;
@@ -585,10 +585,10 @@
   shacl:path <http://data.europa.eu/r5r/applicableLegislation> .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DistributionShape/dbcf2adef675735c48b532392359af27af5e8b71> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Distribution.licence";
-  shacl:class dc:LicenseDocument;
+  shacl:class dct:LicenseDocument;
   shacl:description "A licence under which the Distribution is made available."@en;
   shacl:name "licence"@en;
-  shacl:path dc:license .
+  shacl:path dct:license .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DistributionShape/e0065293221c5851ec508ae96cd4ad03ffdedd19> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Distribution.accessURL";
   shacl:description "A URL that gives access to a Distribution of the Dataset."@en;
@@ -600,7 +600,7 @@
   shacl:description "A licence under which the Distribution is made available."@en;
   shacl:name "licence"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path dc:license .
+  shacl:path dct:license .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:ResourceShape> a shacl:NodeShape;
   shacl:closed false;
@@ -614,7 +614,7 @@
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dct:LicenseDocumentShape/9cb510b2d387bc93ddecf23bb44d401117404110>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dct:LicenseDocumentShape/c2e2e99ee3d739d816472df0fc6bfd51aa14b4aa>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dct:LicenseDocumentShape/dbdcada8d8a906e49f12204752eadd74f54fcef5>;
-  shacl:targetClass dc:LicenseDocument .
+  shacl:targetClass dct:LicenseDocument .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dct:LicenseDocumentShape/38be194870411d44b5dbd112927def902b2138ff> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#LicenceDocument.morepermissivethan";
   shacl:class skos:Concept;
@@ -654,11 +654,11 @@
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dct:RightsStatementShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass dc:RightsStatement .
+  shacl:targetClass dct:RightsStatement .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dct:StandardShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass dc:Standard .
+  shacl:targetClass dct:Standard .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#eli:LegalResourceShape> a shacl:NodeShape;
   shacl:closed false;
@@ -692,39 +692,36 @@
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#vcard:KindShape/8cf3e751730442052d1b2174336d21bb838e4aab> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Kind.email";
   shacl:class rdfs:Resource;
-  shacl:description """A email address via which contact can be made.
-"""@en;
+  shacl:description "A email address via which contact can be made."@en;
   shacl:name "email"@en;
   shacl:path vcard:hasEmail .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#vcard:KindShape/95cf5318d1604f72f1c5d4d22a360ce268437bf0> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Kind.contactpage";
   shacl:class rdfs:Resource;
-  shacl:description "A webpage that either allows to make contact (i.e. a webform) or the information contains how to get into contact.ï¿½"@en;
+  shacl:description "A webpage that either allows to make contact (i.e. a webform) or the information contains how to get into contact."@en;
   shacl:name "contact page"@en;
   shacl:path vcard:hasURL .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#vcard:KindShape/9b6ccc41bb0ced6f6b8f28a86e120bd9d73b32fb> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Kind.email";
-  shacl:description """A email address via which contact can be made.
-"""@en;
+  shacl:description "A email address via which contact can be made."@en;
   shacl:name "email"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path vcard:hasEmail .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#vcard:KindShape/a736c4b01ea7557518c0c146f3e311947ce00ccc> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Kind.contactpage";
-  shacl:description "A webpage that either allows to make contact (i.e. a webform) or the information contains how to get into contact.ï¿½"@en;
+  shacl:description "A webpage that either allows to make contact (i.e. a webform) or the information contains how to get into contact."@en;
   shacl:name "contact page"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path vcard:hasURL .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#vcard:KindShape/af064e842c8e058505005f10ba6025ee57ad168b> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Kind.contactpage";
-  shacl:description "A webpage that either allows to make contact (i.e. a webform) or the information contains how to get into contact.ï¿½"@en;
+  shacl:description "A webpage that either allows to make contact (i.e. a webform) or the information contains how to get into contact."@en;
   shacl:maxCount 1;
   shacl:name "contact page"@en;
   shacl:path vcard:hasURL .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#vcard:KindShape/df2e16526cd0f7cc796d3bb27ac1861737a35d91> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Kind.email";
-  shacl:description """A email address via which contact can be made.
-"""@en;
+  shacl:description "A email address via which contact can be made."@en;
   shacl:maxCount 1;
   shacl:name "email"@en;
   shacl:path vcard:hasEmail .

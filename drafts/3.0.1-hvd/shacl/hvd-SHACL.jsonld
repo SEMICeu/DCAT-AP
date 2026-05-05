@@ -234,7 +234,7 @@
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Kind.email",
           "sh:class": "http://www.w3.org/2000/01/rdf-schema#Resource",
           "sh:description": {
-            "en": "A email address via which contact can be made.\r\n"
+            "en": "A email address via which contact can be made."
           },
           "sh:name": {
             "en": "email"
@@ -246,7 +246,7 @@
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Kind.contactpage",
           "sh:class": "http://www.w3.org/2000/01/rdf-schema#Resource",
           "sh:description": {
-            "en": "A webpage that either allows to make contact (i.e. a webform) or the information contains how to get into contact.ï¿½"
+            "en": "A webpage that either allows to make contact (i.e. a webform) or the information contains how to get into contact."
           },
           "sh:name": {
             "en": "contact page"
@@ -257,7 +257,7 @@
           "@id": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#vcard:KindShape/9b6ccc41bb0ced6f6b8f28a86e120bd9d73b32fb",
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Kind.email",
           "sh:description": {
-            "en": "A email address via which contact can be made.\r\n"
+            "en": "A email address via which contact can be made."
           },
           "sh:name": {
             "en": "email"
@@ -269,7 +269,7 @@
           "@id": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#vcard:KindShape/a736c4b01ea7557518c0c146f3e311947ce00ccc",
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Kind.contactpage",
           "sh:description": {
-            "en": "A webpage that either allows to make contact (i.e. a webform) or the information contains how to get into contact.ï¿½"
+            "en": "A webpage that either allows to make contact (i.e. a webform) or the information contains how to get into contact."
           },
           "sh:name": {
             "en": "contact page"
@@ -281,7 +281,7 @@
           "@id": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#vcard:KindShape/af064e842c8e058505005f10ba6025ee57ad168b",
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Kind.contactpage",
           "sh:description": {
-            "en": "A webpage that either allows to make contact (i.e. a webform) or the information contains how to get into contact.ï¿½"
+            "en": "A webpage that either allows to make contact (i.e. a webform) or the information contains how to get into contact."
           },
           "sh:maxCount": "1",
           "sh:name": {
@@ -293,7 +293,7 @@
           "@id": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#vcard:KindShape/df2e16526cd0f7cc796d3bb27ac1861737a35d91",
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Kind.email",
           "sh:description": {
-            "en": "A email address via which contact can be made.\r\n"
+            "en": "A email address via which contact can be made."
           },
           "sh:maxCount": "1",
           "sh:name": {
