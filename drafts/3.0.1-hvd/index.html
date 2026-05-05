@@ -107,7 +107,7 @@
       prevVersionURI: "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd",
       latestVersion: "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd",
       specStatus: "base",
-      publishDate: "2026-02-05",
+      publishDate: "2026-05-05",
       editors: myeditors,
       authors: myauthors,
       otherLinks: [
@@ -268,7 +268,7 @@ The <a href="https://data.europa.eu">Portal for European Data</a> [[DEU]] has pu
 <p>
 This document provides the guidelines on how to use DCAT-AP for a dataset that is subject to the requirements imposed by the High-Value Dataset implementing regulation (HVD IR).
 The document is called the "usage guidelines of DCAT-AP for High-Value Datasets", in short DCAT-AP HVD.
-It means that these guidelines are on top of the existing guidelines expressed by DCAT-AP. 
+It means that these guidelines are on top of the existing guidelines expressed by DCAT-AP, and its domain-specific profiles like GeoDCAT-AP, StatDCAT-AP, etc.
 
 </p><p>
 To understand these guidelines, it is important to realise that the HVD IR applies 
@@ -279,7 +279,7 @@ A single catalogue contains catalogued resources which are within and outside sc
 This document supports the need for a common usage of DCAT-AP for catalogued resources within the scope of the High-Value Dataset implementing regulation.
 When conforming to these guidelines, a dataset within the scope of the regulation will have satisfied the minimum metadata requirements to be included in the mandatory reporting of the regulation.
 It, however,  does not mean an automated compliance with the regulation because certain aspects are beyond DCAT-AP.
-For instance, the regulation imposes certain data aspects to be present, or the licencing requires to be more permissive than CC-BY 4.0. 
+For instance, the regulation imposes certain data aspects to be present, or the used identifiers to be persistent.
 Such requirements cannot be verified by just inspecting the DCAT-AP description, but the DCAT-AP description will assist in the assessment.
 
 </p><p>
@@ -288,14 +288,6 @@ When applying the guidelines to the metadata of their datasets, which are in sco
 At the same time, this effort will create an immediate benefit for the European citizens and businesses.
 Any improvement of the metadata will immediately flow throughout the European network of (Open) Data Portals and thus increase the level of metadata quality.
 </p>
-
-<h3>Meeting minutes</h3>
-    <ul>
-    <li>Webinar 24 February 2023 (<a href="https://joinup.ec.europa.eu/sites/default/files/event/attachment/2023-03/20230224%20Webinar%20DCAT-AP%20for%20HVD.pdf">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=koJKgjyfIWc">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/webinar_24_Feb_2022_HVD_v3.1.pdf">slides</a>) </li>
-    <li>Webinar 30 March 2023 (<a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/20230330%20Webinar%20DCAT-AP%20for%20HVD.pdf">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=mBXLW2jOA3I">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/webinar_30_mar_2022_HVD_finalpdf.pdf">slides</a>) </li>
-    <li>Webinar 07 November 2023 (<a href="https://joinup.ec.europa.eu/sites/default/files/event/attachment/2023-12/20231107%20Webinar%20dedicated%20to%20the%20status%20and%20governance%20of%20DCAT-AP%20%281%29.pdf">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=lMMaUa4mrQE">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/event/attachment/2023-11/Webinar%20DCAT-AP%20Status%20%26%20Governance_0.pdf">slides</a>) </li>
-    </ul>
-
 
 
 </section>
@@ -307,9 +299,9 @@ Any improvement of the metadata will immediately flow throughout the European ne
     <h2>Status</h2>
         <p>
 <!-- readd when SEMIC has a codelist about it process 
-	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsW3C">SEMIC Draft</a> published at 2026-02-05.
+	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsW3C">SEMIC Draft</a> published at 2026-05-05.
 -->
-	This application profile has the status SEMIC Draft published at 2026-02-05.
+	This application profile has the status SEMIC Draft published at 2026-05-05.
         </p>
         <p>
             Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/CHANGELOG.html">Changelog</a>.
@@ -1935,7 +1927,7 @@ This <a href="#apis-are-mandatory">section</a> provides more information how thi
                                     A free-text account of the Dataset.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    This property can be repeated for parallel language versions of the description.
+                                    This property can be repeated for parallel language versions of the description. For the HVD reporting, the English version is mandatory.
                                 </td>
 				<!--
                                 <td>
@@ -2094,7 +2086,7 @@ This <a href="#apis-are-mandatory">section</a> provides more information how thi
                                     A name given to the Dataset.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    This property can be repeated for parallel language versions of the name.
+                                    This property can be repeated for parallel language versions of the name. For the HVD reporting, the English version is mandatory.
                                 </td>
 				<!--
                                 <td>
@@ -3846,7 +3838,7 @@ Consequently, the application of DCAT-AP HVD is only necessary if the intention 
 As stated in the introduction, the use of DCAT-AP HVD is not obliged by the HVD IR, but in the case of exchanging DCAT-AP metadata of HVD Datasets this specification should be followed.  
 </p>
 
-<h4>Denoting a HVD Dataset</h4>
+<h4>Denoting an HVD Dataset</h4>
 Each entity (Dataset, Data Service, Distribution, Catalogue) that is identified by a MS in scope of the HVD IR should provide the European Legislation Identifier (ELI) <code>http://data.europa.eu/eli/reg_impl/2023/138/oj</code> of the HVD IR for the property <a href="http://data.europa.eu/r5r/applicableLegislation">applicable legislation</a>.
 
 For the reporting, a Member State can provide a catalogue containing all elements that are within scope for the reporting of the HVD IR. 
@@ -3866,7 +3858,7 @@ Becoming a Dataset in scope of HVD is an additional operation.
 
 <B>When a Data Service offers access to multiple datasets and this Data Service fulfils the HVD requirements (e.g. the HVD API for that dataset) for a HVD then the HVD requirements apply only to that HVD.</B>
 
-It is common that the same API service endpoint (denoted by a dcat:DataService) provides access to multiple datasets. 
+It is common that the same API service endpoint (denoted by a <code>dcat:DataService</code>) provides access to multiple datasets. 
 As such, it is to be expected that only some of the datasets are within scope of HVD. 
 Like for Distributions, the HVD does not enforce that all Datasets associated with a Data Service must be in scope of HVD. 
 Nevertheless, it must be noted that the HVD requirements on a Data Service might indirectly impact the other datasets that are available through the same data service, because a Data Service will share the operational and service level requirements for all its associated datasets. 
@@ -3877,11 +3869,9 @@ Nevertheless, it must be noted that the HVD requirements on a Data Service might
 <h3 id="c2">HVD data category</h3>
 The HVD IR defines six thematic data categories: geospatial, earth observation and environment, meteorological, statistics, companies and company ownership, and mobility. 
 A new property <a href="http://data.europa.eu/r5r/hvdCategory">HVD category</a> is introduced to indicate the HVD category to which an resource, i.e. a dataset, belongs.
-The controlled vocabulary <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/high-value-dataset-category">High-value dataset categories</a> with all possible values is maintained by the Publications Office.
+The controlled vocabulary <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/high-value-dataset-category">High-value dataset categories</a>, maintained by the Publications Office, contains not only these six categories, but also the complete list of datasets required by the HVD IR.
+The High Value Datasets and APIs MUST be annotated with the most precise concept.
 A resource may belong to more than one data category.
-It is recommended to annotate the High Value Datasets with the most precise concept.
-
-
 
 <h3 id="c2">Identifiers</h3>
 <p>
@@ -3895,7 +3885,7 @@ In short these are:
   <li>These URIs are dereferenceable, i.e. users are redirected to the metadata describing the entity.</li>
   <li>URIs are well defined, i.e. follow the 10 principles for good URIs.</li>
   <li>Data portals and harvesters implement the identifier guidelines in order not to lose information of alternative identifiers.</li> 
-  <li>When the metadata in DCAT-AP originates from other metadata (e.g. INSPIRE) then a cross-reference to that original metadata is included. This can be done by using the same identifiers, but also using another relation like the one expressed using dct:source.</li>
+  <li>When the metadata in DCAT-AP originates from other metadata (e.g. INSPIRE) then a cross-reference to that original metadata is included. This can be done by using the same identifiers, but also using another relation like the one expressed using <code>dct:source</code>.</li>
 </ul>
 
 In practice, multiple identifiers may have been assigned to a Dataset. 
@@ -3908,7 +3898,7 @@ These identifier processing recommendations are made to ensure that the informat
 </p>
 <h4 id="c5">Persistent identifiers</h4>
 <p>
-The HVD IR requires as part of the reporting requirements (article 5.3), that Licensing Conditions and APIs have persistent links.
+The HVD IR requires as part of the reporting requirements (<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32023R0138#005.003">article 5.3</a>), that Licensing Conditions and APIs have persistent links.
 
 </p><p>
 Persistence means that, for these entities, Member States take the responsibility to maintain the real world resource indefinitely and additionally reduce the accessibility challenge by maintaining the same name for that real world resource indefinitely.
@@ -3923,8 +3913,8 @@ Implementers of the HVD IR are advised to read these guidelines to understand ho
 
 
 </p><p>
-In article 5.3 of the HVD IR, the broad term Licensing Conditions is used, while in the other parts of the regulation the term Licence is used. 
-DCAT-AP provides several means to express legal information, notably the properties licence (dct:license) and rights (dct:rights). 
+In <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32023R0138#005.003">article 5.3</a> of the HVD IR, the broad term Licensing Conditions is used, while in the other parts of the regulation the term Licence is used. 
+DCAT-AP provides several means to express legal information, notably the properties licence (<code>dct:license</code>) and rights (<code>dct:rights</code>). 
 This may lead to questions whether <strong>rights</strong> are included by the reporting requirement. 
 As the final objective is to provide a trusted legal statement, it is considered that the requirement for a persistent link applies to rights too. 
 
@@ -4034,7 +4024,7 @@ A contact point is mandatory for HVD Data Services and recommended for HVD Datas
 
 <h3 id="c7">Specific data requirements</h3>
 <p>
-The HVD implementation regulation describes, in its Annex, precisely the data elements that should be provided for a HVD Dataset. 
+The HVD implementation regulation describes, in its <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32023R0138#anx_1">Annex</a>, precisely the data elements that should be provided for a HVD Dataset. 
 A HVD Dataset must conform to the rules defined in the HVD IR. 
 </p><p>
 It is recommended to provide a reference to a public document (for instance: data standards) that describes the internals of the Dataset (or Distribution) using the property conforms to.
@@ -4071,7 +4061,7 @@ To ensure that at least an API is present for a HVD Dataset the SHACL validation
 
 <p/>
 A similar request, although less visible, is the possibility of downloading the data in bulk. 
-The Annex of the HVD IR requests frequently this need.
+The <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32023R0138#anx_1">Annex</a> of the HVD IR requests frequently this need.
 Despite it is not obligatory in all cases, it is a strong recommendation.
 In the formal model such strong recommendations are hard to implement. 
 Adding a minimum cardinality of 1 would enforce the presence, which is too strict. 
@@ -4124,7 +4114,7 @@ The generic top-level category can be derived from it.</p>
 <div class="h3 examples" id="example-ms_dataset">Example 2 - MS dataset</div>
 
 
-<p>The datasets are published on the EU Memberstates national data portal <code>https://dataportal.exampleMS.gov</code>.
+<p>The datasets are published on the EU Member State's national data portal <code>https://dataportal.exampleMS.gov</code>.
 This portal provides another identifier to the datasets. 
 Because that new identifier is not the master identifier, the portal avoids this by sharing this identifier in its published DCAT-AP catalogue by listing it as an additional identifier.</p>
 
