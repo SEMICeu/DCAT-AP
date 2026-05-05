@@ -11,7 +11,7 @@
   "@graph": [
     {
       "@id": "_:EAMS-APIplatform-contactpoint",
-      "@type": "vcard:Kind",
+      "@type": "vcard:Organization",
       "vcard:hasURL": {
         "@id": "https://eams.jira.net/servicedesk"
       }
@@ -23,7 +23,7 @@
         "@id": "http://data.europa.eu/eli/reg_impl/2023/138/oj"
       },
       "dcatap:hvdCategory": {
-           "@id" :  "http://data.europa.eu/bna/c_b7f6a4f3"
+        "@id": "http://data.europa.eu/bna/c_b7f6a4f3"
       },
       "dcterms:description": {
         "@language": "en",

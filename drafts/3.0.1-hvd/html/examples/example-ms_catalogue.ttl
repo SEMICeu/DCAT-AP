@@ -1,17 +1,17 @@
-prefix adms: <http://www.w3.org/ns/adms#>
-prefix exampleMS: <https://data.exampleMS.gov/id/dataset/>
-prefix dcat: <http://www.w3.org/ns/dcat#>
-prefix dcatap: <http://data.europa.eu/r5r/>
-prefix dct: <http://purl.org/dc/terms/>
-prefix foaf: <http://xmlns.com/foaf/0.1/>
-prefix skos: <http://www.w3.org/2004/02/skos/core#>
-prefix vcard: <http://www.w3.org/2006/vcard/ns#>
-prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix exampleMS: <https://data.exampleMS.gov/id/dataset/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatap: <http://data.europa.eu/r5r/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 exampleMS:HVD-reporting-2023  a dcat:Catalogue;
   dct:title "MS HVD Reporting 2023"@en;
   dct:description "All information to provide the HVD conformance assessment for MS"@en;
-  dcat:dataset exampleMS:1T2p3o4B ;
+  dcat:dataset exampleMS:1T2p3o4B, exampleMS:dataset_wasp ;
   dcat:service exampleMS:EAMS-APIplatform.
   
 exampleMS:1T2p3o4B a dcat:Dataset;
@@ -22,19 +22,20 @@ exampleMS:1T2p3o4B a dcat:Dataset;
   dct:publisher _:EA-MS;
   dct:identifier "https://data.exampleMS.gov/id/dataset/1T2p3o4B";
   adms:identifier [
-        dct:creator _:EA-MS;
-        skos:notation "https://data.exampleMS.gov/id/dataset/1T2p3o4B"
-        ],
-        [
-        dct:creator <https://dataportal.exampleMS.gov>;
-        skos:notation "https://dataportal.exampleMS.gov/dataset/Thepopulationofbees";
-        ];
+      dct:creator _:EA-MS;
+      skos:notation "https://data.exampleMS.gov/id/dataset/1T2p3o4B"
+   ],
+   [
+      dct:creator <https://dataportal.exampleMS.gov>;
+      skos:notation "https://dataportal.exampleMS.gov/dataset/Thepopulationofbees";
+   ];
    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/BIENNIAL>;
    dct:conformsTo <https://orgea.exampleMS.gov/applicationprofile/populationOfInsects>;
    dcat:distribution exampleMS:1T2p3o4B-dist-SHP, exampleMS:1T2p3o4B-dist-RDF.
 
 exampleMS:1T2p3o4B-dist-SHP a dcat:Distribution;
    dcat:accessURL <https://orgea.exampleMS.gov/files/1T2p3o4B.shp> ;
+   dcat:downloadURL <https://orgea.exampleMS.gov/files/1T2p3o4B.shp> ;
    dct:conformsTo <https://orgea.exampleMS.gov/dataset/1T2p3o4B/schema/shp>;
    dcat:spatialResolutionInMeters "25000"^^xsd:decimal;
    dct:format <http://publications.europa.eu/resource/authority/file-type/SHP> ;
@@ -49,7 +50,7 @@ exampleMS:EAMS-APIplatform a dcat:DataService;
    foaf:page <https://orgea.exampleMS.gov/api/sla.html> ;
    dct:license <https://orgea.exampleMS.gov/api/documentation/TermsOfUse> ;
    dcatap:applicableLegislation <http://data.europa.eu/eli/reg_impl/2023/138/oj> ;
-  dcatap:hvdCategory <http://data.europa.eu/bna/c_b7f6a4f3>;
+   dcatap:hvdCategory <http://data.europa.eu/bna/c_b7f6a4f3>;
    dcat:contactPoint _:EAMS-APIplatform-contactpoint ;
    dcat:servesDataset exampleMS:1T2p3o4B, exampleMS:1W2o3p4T .
 
@@ -57,7 +58,7 @@ _:EAMS-APIplatform-contactpoint a vcard:Kind;
    vcard:hasURL <https://eams.jira.net/servicedesk> .
 
 _:EA-MS a foaf:Agent;
-    foaf:name "MS Environmental Agency".
+   foaf:name "MS Environmental Agency".
 
 <https://data.exampleMS.gov/resource/FreeAndOpen> a dct:LicenseDocument ;
    skos:exactMatch <http://publications.europa.eu/resource/authority/licence/CC0>.

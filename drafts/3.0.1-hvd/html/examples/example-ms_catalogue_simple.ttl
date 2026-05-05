@@ -1,6 +1,6 @@
-prefix exampleMS: <https://data.exampleMS.gov/id/dataset/>
-prefix dcat: <http://www.w3.org/ns/dcat#>
-prefix dct: <http://purl.org/dc/terms/>
+@prefix exampleMS: <https://data.exampleMS.gov/id/dataset/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 exampleMS:HVD-reporting-2023  a dcat:Catalogue;
   dct:title "MS HVD Reporting 2023"@en;

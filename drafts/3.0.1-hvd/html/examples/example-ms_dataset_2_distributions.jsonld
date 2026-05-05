@@ -76,6 +76,9 @@
       "dcat:accessURL": {
         "@id": "https://orgea.exampleMS.gov/files/1T2p3o4B.ttl"
       },
+      "dcat:downloadURL": {
+        "@id": "https://orgea.exampleMS.gov/files/1T2p3o4B.ttl"
+      },
       "dcat:spatialResolutionInMeters": {
         "@type": "xsd:decimal",
         "@value": "25000"
@@ -91,6 +94,9 @@
         "@id": "http://publications.europa.eu/resource/authority/file-type/SHP"
       },
       "dcat:accessURL": {
+        "@id": "https://orgea.exampleMS.gov/files/1T2p3o4B.shp"
+      },
+      "dcat:downloadURL": {
         "@id": "https://orgea.exampleMS.gov/files/1T2p3o4B.shp"
       },
       "dcat:spatialResolutionInMeters": {

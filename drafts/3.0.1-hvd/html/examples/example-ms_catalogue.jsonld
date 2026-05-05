@@ -50,7 +50,7 @@
         }
       ],
       "dcatap:hvdCategory": {
-           "@id" :  "http://data.europa.eu/bna/c_b7f6a4f3"
+        "@id": "http://data.europa.eu/bna/c_b7f6a4f3"
       },
       "dcterms:accrualPeriodicity": {
         "@id": "http://publications.europa.eu/resource/authority/frequency/BIENNIAL"
@@ -105,6 +105,9 @@
       "dcat:accessURL": {
         "@id": "https://orgea.exampleMS.gov/files/1T2p3o4B.shp"
       },
+      "dcat:downloadURL": {
+        "@id": "https://orgea.exampleMS.gov/files/1T2p3o4B.shp"
+      },
       "dcat:spatialResolutionInMeters": {
         "@type": "xsd:decimal",
         "@value": "25000"
@@ -117,7 +120,7 @@
         "@id": "http://data.europa.eu/eli/reg_impl/2023/138/oj"
       },
       "dcatap:hvdCategory": {
-           "@id" :  "http://data.europa.eu/bna/c_b7f6a4f3"
+        "@id": "http://data.europa.eu/bna/c_b7f6a4f3"
       },
       "dcterms:description": {
         "@language": "en",
@@ -162,9 +165,14 @@
         "@language": "en",
         "@value": "MS HVD Reporting 2023"
       },
-      "dcat:dataset": {
-        "@id": "exampleMS:1T2p3o4B"
-      },
+      "dcat:dataset": [
+        {
+          "@id": "exampleMS:1T2p3o4B"
+        },
+        {
+          "@id": "exampleMS:dataset_wasp"
+        }
+      ],
       "dcat:service": {
         "@id": "exampleMS:EAMS-APIplatform"
       }
