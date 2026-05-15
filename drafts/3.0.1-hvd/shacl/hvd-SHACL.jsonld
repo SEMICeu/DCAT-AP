@@ -494,6 +494,18 @@
           "sh:path": "http://www.w3.org/ns/dcat#endpointURL"
         },
         {
+          "@id": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.title",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "A name given to the Data Service."
+          },
+          "sh:name": {
+            "en": "title"
+          },
+          "sh:path": "http://purl.org/dc/terms/title"
+        },
+        {
           "@id": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/60675e8175395481680e343172eea5fcd3f82cd4",
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.HVDcategory",
           "sh:description": {
@@ -588,6 +600,18 @@
             "en": "documentation"
           },
           "sh:path": "http://xmlns.com/foaf/0.1/page"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/92d65d33f2a5d5345f1980ffd0cf304e47dd0caf",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.title",
+          "sh:description": {
+            "en": "A name given to the Data Service."
+          },
+          "sh:name": {
+            "en": "title"
+          },
+          "sh:path": "http://purl.org/dc/terms/title",
+          "sh:uniqueLang": "true"
         },
         {
           "@id": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/99435c17158fbaa12d1d955b8886d5bf935ab016",

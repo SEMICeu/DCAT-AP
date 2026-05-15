@@ -88,11 +88,13 @@
   shacl:closed false;
   shacl:property <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/3bde2663aaca96d953765ac2e525ef64710bf4d6>,
+    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/60675e8175395481680e343172eea5fcd3f82cd4>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/63240e11f1eb66f636413d1dbb134f0ff9066a7c>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/68dc6d1df6d91b2d33990e6db3c5af31b3d51de8>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/83ad7325cc6681e43e44550c269847065a95a14f>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/8521ebd386ec388c4cf09933c419e3fe7668f29d>,
+    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/92d65d33f2a5d5345f1980ffd0cf304e47dd0caf>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/998ce689a5bcc3e2764ff84a05255e34d91e8102>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/9adf9f5890592909cf3e67021ae7ab4f895a7745>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/9eaae476a881de13b9430537ace6e70da7327dbd>,
@@ -112,14 +114,18 @@
   shacl:path <http://data.europa.eu/r5r/applicableLegislation>;
   <https://purl.eu/ns/shacl#message> "The expected value for applicable legislation is a rdfs:Resource (URI or blank node)"@en .
 
-
-
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/3bde2663aaca96d953765ac2e525ef64710bf4d6> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.endpointURL";
   shacl:description "The root location or primary endpoint of the service (an IRI)."@en;
   shacl:name "endpoint URL"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path dcat:endpointURL;
   <https://purl.eu/ns/shacl#message> "The expected value for endpoint URL is a rdfs:Resource (URI or blank node)"@en .
+
+<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.title";
+  shacl:datatype rdf:langString;
+  shacl:description "A name given to the Data Service."@en;
+  shacl:name "title"@en;
+  shacl:path dct:title .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/60675e8175395481680e343172eea5fcd3f82cd4> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.HVDcategory";
   shacl:description "The HVD category to which this Data Service belongs."@en;
@@ -135,15 +141,12 @@
   shacl:path dcat:endpointDescription;
   <https://purl.eu/ns/shacl#message> "The expected value for endpoint description is a rdfs:Resource (URI or blank node)"@en .
 
-
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/68dc6d1df6d91b2d33990e6db3c5af31b3d51de8> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.contactpoint";
   shacl:description "Contact information that can be used for sending comments about the Data Service."@en;
   shacl:minCount 1;
   shacl:name "contact point"@en;
   shacl:path dcat:contactPoint;
   <https://purl.eu/ns/shacl#message> "Minimally 1 values are expected for contact point"@en .
-
-
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/83ad7325cc6681e43e44550c269847065a95a14f> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.endpointURL";
   shacl:description "The root location or primary endpoint of the service (an IRI)."@en;
@@ -159,6 +162,11 @@
   shacl:path foaf:page;
   <https://purl.eu/ns/shacl#message> "Minimally 1 values are expected for documentation"@en .
 
+<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/92d65d33f2a5d5345f1980ffd0cf304e47dd0caf> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.title";
+  shacl:description "A name given to the Data Service."@en;
+  shacl:name "title"@en;
+  shacl:path dct:title;
+  shacl:uniqueLang true .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/998ce689a5bcc3e2764ff84a05255e34d91e8102> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.documentation";
   shacl:description "A page that provides additional information about the Data Service."@en;

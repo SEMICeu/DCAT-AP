@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
 
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56.59cm" height="21.27cm" viewBox="0 0 2139 804">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="54.08cm" height="21.30cm" viewBox="0 0 2044 805">
 <title>DCAT-AP HVD 3.0.1</title>
 <desc>Diagram of DCAT-AP High Value Datasets 3.0.1</desc>
 <defs>
@@ -179,18 +179,6 @@
 <g style="stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00;">
 	<text x="155.00" y="62.00" textLength="50" style="font-family:Calibri; font-weight:700; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 155.00 62.00)">dcat:Catalog</text>
 </g>
-<g style="stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel; fill:#DCF8F0;fill-opacity:1.00; stroke:#577AC1; stroke-opacity:1.00;">
-  <path d="M 310 100 L 316 100 L 319 104 L 319 111 L 310 111 L 310 100 Z" shape-rendering="auto"/>
-</g>
-<g style="stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel; fill:#000000;fill-opacity:0.00; stroke:#577AC1; stroke-opacity:1.00;">
-  <path d="M 316 100 L 316 104 L 319 104" shape-rendering="auto"/>
-</g>
-<g style="stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel; fill:#000000;fill-opacity:0.00; stroke:#8C8C8C; stroke-opacity:1.00;">
-  <path d="M 312 102 L 315 102" shape-rendering="auto"/>
-  <path d="M 312 104 L 315 104" shape-rendering="auto"/>
-  <path d="M 312 106 L 317 106" shape-rendering="auto"/>
-  <path d="M 312 108 L 317 108" shape-rendering="auto"/>
-</g>
 <g style="stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel; fill:#FDFAF7;fill-opacity:1.00; stroke:#9A8484; stroke-opacity:1.00;">
  <rect x="420" y="40" width="228" height="83" rx="0.00" shape-rendering="auto"  />
 </g>
@@ -232,18 +220,6 @@
 <g style="stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel; fill:#66413F;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00;">
 	<text x="1016.00" y="364.00" textLength="7" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#66413F;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 1016.00 364.00)">+ </text>
 	<text x="1033.00" y="364.00" textLength="142" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#66413F;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 1033.00 364.00)">dct:conformsTo: dct:Standard [0..*]</text>
-</g>
-<g style="stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel; fill:#DCF8F0;fill-opacity:1.00; stroke:#577AC1; stroke-opacity:1.00;">
-  <path d="M 1276 462 L 1282 462 L 1285 466 L 1285 473 L 1276 473 L 1276 462 Z" shape-rendering="auto"/>
-</g>
-<g style="stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel; fill:#000000;fill-opacity:0.00; stroke:#577AC1; stroke-opacity:1.00;">
-  <path d="M 1282 462 L 1282 466 L 1285 466" shape-rendering="auto"/>
-</g>
-<g style="stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel; fill:#000000;fill-opacity:0.00; stroke:#8C8C8C; stroke-opacity:1.00;">
-  <path d="M 1278 464 L 1281 464" shape-rendering="auto"/>
-  <path d="M 1278 466 L 1281 466" shape-rendering="auto"/>
-  <path d="M 1278 468 L 1283 468" shape-rendering="auto"/>
-  <path d="M 1278 470 L 1283 470" shape-rendering="auto"/>
 </g>
 <g style="stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel; fill:#FDFAF7;fill-opacity:1.00; stroke:#9A8484; stroke-opacity:1.00;">
  <rect x="1012" y="558" width="279" height="208" rx="0.00" shape-rendering="auto"  />
@@ -319,21 +295,23 @@
 	<text x="625.00" y="365.00" textLength="7" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#66413F;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 625.00 365.00)">+ </text>
 	<text x="642.00" y="365.00" textLength="163" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#66413F;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 642.00 365.00)">dcatap:hvdCategory: skos:Concept [1..*]</text>
 	<text x="625.00" y="378.00" textLength="7" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#66413F;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 625.00 378.00)">+ </text>
-	<text x="642.00" y="378.00" textLength="128" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#66413F;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 642.00 378.00)">foaf:page: foaf:Document [1..*]</text>
+	<text x="642.00" y="378.00" textLength="113" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#66413F;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 642.00 378.00)">dct:title: rdf:langString [1..*]</text>
+	<text x="625.00" y="391.00" textLength="7" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#66413F;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 625.00 391.00)">+ </text>
+	<text x="642.00" y="391.00" textLength="128" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#66413F;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 642.00 391.00)">foaf:page: foaf:Document [1..*]</text>
 </g>
 <g style="stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00;">
-	<text x="632.00" y="395.00" textLength="68" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 632.00 395.00)">«recommended»</text>
+	<text x="632.00" y="408.00" textLength="68" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 632.00 408.00)">«recommended»</text>
 </g>
 <g style="stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel; fill:#66413F;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00;">
-	<text x="625.00" y="408.00" textLength="7" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#66413F;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 625.00 408.00)">+ </text>
-	<text x="642.00" y="408.00" textLength="182" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#66413F;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 642.00 408.00)">dcat:endpointDescription: rdfs:Resource [0..*]</text>
+	<text x="625.00" y="421.00" textLength="7" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#66413F;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 625.00 421.00)">+ </text>
+	<text x="642.00" y="421.00" textLength="182" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#66413F;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 642.00 421.00)">dcat:endpointDescription: rdfs:Resource [0..*]</text>
 </g>
 <g style="stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00;">
-	<text x="632.00" y="425.00" textLength="42" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 632.00 425.00)">«optional»</text>
+	<text x="632.00" y="438.00" textLength="42" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 632.00 438.00)">«optional»</text>
 </g>
 <g style="stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel; fill:#66413F;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00;">
-	<text x="625.00" y="438.00" textLength="7" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#66413F;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 625.00 438.00)">+ </text>
-	<text x="642.00" y="438.00" textLength="147" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#66413F;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 642.00 438.00)">dct:rights: dct:RightsStatement [0..*]</text>
+	<text x="625.00" y="451.00" textLength="7" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#66413F;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 625.00 451.00)">+ </text>
+	<text x="642.00" y="451.00" textLength="147" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#66413F;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 642.00 451.00)">dct:rights: dct:RightsStatement [0..*]</text>
 </g>
 <g style="stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel; fill:#FDFAF7;fill-opacity:1.00; stroke:#9A8484; stroke-opacity:1.00;">
  <rect x="766" y="47" width="927" height="76" rx="0.00" shape-rendering="auto"  />
@@ -421,41 +399,39 @@
   <path d="M 1169 543 L 1175 558 L 1181 543" shape-rendering="auto"/>
   <path d="M 858 377 L 1011 377" shape-rendering="auto"/>
   <path d="M 996 383 L 1011 377 L 996 371" shape-rendering="auto"/>
-</g>
-<g style="stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel; fill:#000000;fill-opacity:0.00; stroke:#000000; stroke-opacity:1.00;">
   <path d="M 248 120 L 248 231 L 788 231 A 6.00 -6.00 180.00 0 0 800 231 L 1011 231" shape-rendering="auto"/>
   <path d="M 996 237 L 1011 231 L 996 225" shape-rendering="auto"/>
 </g>
 <g style="stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00;">
+	<text x="1349.00" y="320.00" textLength="51" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 1349.00 320.00)">dcat:inSeries</text>
+	<text x="1353.00" y="337.00" textLength="42" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 1353.00 337.00)">«optional»</text>
+	<text x="1437.00" y="339.00" textLength="16" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 1437.00 339.00)">0..*</text>
+	<text x="896.00" y="373.00" textLength="77" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 896.00 373.00)">dcat:servesDataset</text>
+	<text x="900.00" y="390.00" textLength="68" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 900.00 390.00)">«recommended»</text>
+	<text x="991.00" y="392.00" textLength="16" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 991.00 392.00)">0..*</text>
+	<text x="680.00" y="75.00" textLength="71" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 680.00 75.00)">foaf:primaryTopic</text>
+	<text x="686.00" y="98.00" textLength="54" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 686.00 98.00)">«mandatory»</text>
+	<text x="747.00" y="99.00" textLength="16" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 747.00 99.00)">1..1</text>
+	<text x="418.00" y="290.00" textLength="48" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 418.00 290.00)">dcat:service</text>
+	<text x="411.00" y="309.00" textLength="68" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 411.00 309.00)">«recommended»</text>
+	<text x="596.00" y="312.00" textLength="16" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 596.00 312.00)">0..*</text>
+	<text x="1143.00" y="516.00" textLength="64" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 1143.00 516.00)">dcat:distribution</text>
+	<text x="1141.00" y="533.00" textLength="68" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 1141.00 533.00)">«recommended»</text>
+	<text x="1183.00" y="550.00" textLength="16" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 1183.00 550.00)">0..*</text>
+	<text x="604.00" y="227.00" textLength="50" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 604.00 227.00)">dcat:dataset</text>
+	<text x="595.00" y="244.00" textLength="68" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 595.00 244.00)">«recommended»</text>
+	<text x="992.00" y="246.00" textLength="16" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 992.00 246.00)">0..*</text>
+	<text x="337.00" y="61.00" textLength="45" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 337.00 61.00)">dcat:record</text>
+	<text x="340.00" y="85.00" textLength="42" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 340.00 85.00)">«optional»</text>
+	<text x="401.00" y="84.00" textLength="16" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 401.00 84.00)">0..*</text>
+	<text x="767.00" y="587.00" textLength="75" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 767.00 587.00)">dcat:accessService</text>
+	<text x="770.00" y="604.00" textLength="68" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 770.00 604.00)">«recommended»</text>
+	<text x="816.00" y="513.00" textLength="16" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 816.00 513.00)">0..*</text>
 	<text x="641.00" y="699.00" textLength="42" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 641.00 699.00)">dct:license</text>
 	<text x="628.00" y="716.00" textLength="68" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 628.00 716.00)">«recommended»</text>
 	<text x="604.00" y="718.00" textLength="16" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 604.00 718.00)">0..1</text>
 	<text x="740.00" y="738.00" textLength="42" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 740.00 738.00)">dct:license</text>
 	<text x="729.00" y="760.00" textLength="68" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 729.00 760.00)">«recommended»</text>
 	<text x="604.00" y="758.00" textLength="16" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 604.00 758.00)">0..1</text>
-	<text x="896.00" y="373.00" textLength="77" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 896.00 373.00)">dcat:servesDataset</text>
-	<text x="900.00" y="390.00" textLength="68" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 900.00 390.00)">«recommended»</text>
-	<text x="991.00" y="392.00" textLength="16" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 991.00 392.00)">0..*</text>
-	<text x="1349.00" y="320.00" textLength="51" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 1349.00 320.00)">dcat:inSeries</text>
-	<text x="1353.00" y="337.00" textLength="42" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 1353.00 337.00)">«optional»</text>
-	<text x="1437.00" y="339.00" textLength="16" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 1437.00 339.00)">0..*</text>
-	<text x="418.00" y="290.00" textLength="48" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 418.00 290.00)">dcat:service</text>
-	<text x="411.00" y="309.00" textLength="68" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 411.00 309.00)">«recommended»</text>
-	<text x="596.00" y="312.00" textLength="16" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 596.00 312.00)">0..*</text>
-	<text x="680.00" y="75.00" textLength="71" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 680.00 75.00)">foaf:primaryTopic</text>
-	<text x="686.00" y="98.00" textLength="54" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 686.00 98.00)">«mandatory»</text>
-	<text x="747.00" y="99.00" textLength="16" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 747.00 99.00)">1..1</text>
-	<text x="337.00" y="61.00" textLength="45" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 337.00 61.00)">dcat:record</text>
-	<text x="340.00" y="85.00" textLength="42" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 340.00 85.00)">«optional»</text>
-	<text x="401.00" y="84.00" textLength="16" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 401.00 84.00)">0..*</text>
-	<text x="604.00" y="227.00" textLength="50" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 604.00 227.00)">dcat:dataset</text>
-	<text x="595.00" y="244.00" textLength="68" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 595.00 244.00)">«recommended»</text>
-	<text x="992.00" y="246.00" textLength="16" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 992.00 246.00)">0..*</text>
-	<text x="767.00" y="587.00" textLength="75" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 767.00 587.00)">dcat:accessService</text>
-	<text x="770.00" y="604.00" textLength="68" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 770.00 604.00)">«recommended»</text>
-	<text x="816.00" y="513.00" textLength="16" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 816.00 513.00)">0..*</text>
-	<text x="1143.00" y="516.00" textLength="64" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 1143.00 516.00)">dcat:distribution</text>
-	<text x="1141.00" y="533.00" textLength="68" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 1141.00 533.00)">«recommended»</text>
-	<text x="1183.00" y="550.00" textLength="16" style="font-family:Calibri; font-weight:0; font-style:normal; font-size:10px; fill:#595959;fill-opacity:1.00; stroke:#000000; stroke-opacity:0.00; stroke-width:0; white-space: pre;" xml:space="preserve" transform="rotate(-0.00 1183.00 550.00)">0..*</text>
 </g>
 </svg>
