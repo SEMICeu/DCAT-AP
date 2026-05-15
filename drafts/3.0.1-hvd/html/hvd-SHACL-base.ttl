@@ -99,8 +99,10 @@
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/b4c4138f0581e7240ec4dd866004c56407b3705a>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/ca2bd10c893237fa342edb75240b08731acda92f>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/d36065836a29f463546e269c25db7b95b879b3fb>,
+    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/d5d74574f70f9a979535f3624608f88180dd0c97>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/f30149ffb6ec9d00dd5866b052105729fa27d02a>,
-    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/f514dbc668e2c9c457d61f1f2721c7fbcb22cb59>;
+    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/f514dbc668e2c9c457d61f1f2721c7fbcb22cb59>,
+    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/f8b02efd063b8089b72ce9677a1e4a3488eeb9a9>;
   shacl:targetClass dcat:DataService .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.applicablelegislation";
@@ -200,6 +202,12 @@
   shacl:path <http://data.europa.eu/r5r/applicableLegislation>;
   <https://purl.eu/ns/shacl#message> "Minimally 1 values are expected for applicable legislation"@en .
 
+<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/d5d74574f70f9a979535f3624608f88180dd0c97> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.title";
+  shacl:description "A name given to the Data Service."@en;
+  shacl:name "title"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path dct:title .
+
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/f30149ffb6ec9d00dd5866b052105729fa27d02a> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.licence";
   shacl:description "A licence under which the Data service is made available."@en;
   shacl:name "licence"@en;
@@ -213,6 +221,12 @@
   shacl:name "HVD category"@en;
   shacl:path <http://data.europa.eu/r5r/hvdCategory>;
   <https://purl.eu/ns/shacl#message> "Minimally 1 values are expected for HVD category"@en .
+
+<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/f8b02efd063b8089b72ce9677a1e4a3488eeb9a9> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.title";
+  shacl:description "A name given to the Data Service."@en;
+  shacl:minCount 1;
+  shacl:name "title"@en;
+  shacl:path dct:title .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape> a shacl:NodeShape;
   shacl:closed false;

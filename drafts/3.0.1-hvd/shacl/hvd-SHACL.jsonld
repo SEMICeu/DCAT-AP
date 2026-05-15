@@ -674,6 +674,18 @@
           "sh:path": "http://data.europa.eu/r5r/applicableLegislation"
         },
         {
+          "@id": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/d5d74574f70f9a979535f3624608f88180dd0c97",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.title",
+          "sh:description": {
+            "en": "A name given to the Data Service."
+          },
+          "sh:name": {
+            "en": "title"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/title"
+        },
+        {
           "@id": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/dbcf2adef675735c48b532392359af27af5e8b71",
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.licence",
           "sh:class": "http://purl.org/dc/terms/LicenseDocument",
@@ -732,6 +744,18 @@
             "en": "HVD category"
           },
           "sh:path": "http://data.europa.eu/r5r/hvdCategory"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/f8b02efd063b8089b72ce9677a1e4a3488eeb9a9",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.title",
+          "sh:description": {
+            "en": "A name given to the Data Service."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "title"
+          },
+          "sh:path": "http://purl.org/dc/terms/title"
         }
       ],
       "sh:targetClass": "http://www.w3.org/ns/dcat#DataService"
