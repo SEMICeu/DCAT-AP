@@ -103,11 +103,11 @@
     var respecConfig = {
       postProcess: [quickreference],
       edDraftURI: "",
-      thisVersionURI: "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd",
-      prevVersionURI: "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd",
-      latestVersion: "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd",
+      thisVersionURI: "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/",
+      prevVersionURI: "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd/",
+      latestVersion: "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/",
       specStatus: "base",
-      publishDate: "2026-05-05",
+      publishDate: "2026-05-15",
       editors: myeditors,
       authors: myauthors,
       otherLinks: [
@@ -299,12 +299,12 @@ Any improvement of the metadata will immediately flow throughout the European ne
     <h2>Status</h2>
         <p>
 <!-- readd when SEMIC has a codelist about it process 
-	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsW3C">SEMIC Draft</a> published at 2026-05-05.
+	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsW3C">SEMIC Draft</a> published at 2026-05-15.
 -->
-	This application profile has the status SEMIC Draft published at 2026-05-05.
+	This application profile has the status SEMIC Draft published at 2026-05-15.
         </p>
         <p>
-            Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/CHANGELOG.html">Changelog</a>.
+            Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="CHANGELOG">Changelog</a>.
         </p>
 </section>
 
@@ -1035,6 +1035,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                             , <a href="#DataService.licence">licence</a>
                             , <a href="#DataService.rights">rights</a>
                             , <a href="#DataService.servesdataset">serves dataset</a>
+                            , <a href="#DataService.title">title</a>
                             .
                     </dd>
                 
@@ -1560,6 +1561,59 @@ A Dataset MUST have an associated Data Service, besides the exceptions listed in
 				       
 				        <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#DataService.servesdataset">E</a>
 				       
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="DataService.title"
+                                typeof="rdf:Property"
+                                resource="http://purl.org/dc/terms/title"
+                                class="class mandatory">
+<!--
+                                <td>
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20title%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd%23DataService.title" target="_blank" rel="noopener noreferrer" >
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+--->
+                                <td>
+                                        <a href="http://purl.org/dc/terms/title"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/title"
+                                           data-placement="right">
+                                        title</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Language-taggedstring" data-placement="right">Language-tagged string</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    1..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    A name given to the Data Service.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    This property can be repeated for parallel language versions of the name.
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+				<!--
+                                <td>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_title">Link</a>
+                                </td>
+				-->
+                                <td>
+                                    
+				       
+				        <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#DataService.title">A</a>
+                                       
                                     
                                 </td>
                             </tr>
@@ -4412,6 +4466,16 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 					
 						
 					
+						
+							<tr>
+								<td><a href="#DataService">Data Service</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#DataService</div></td>
+								<td>Mandatory</td>
+								<td><a href="#DataService.title">title </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/title</div></td>
+							</tr>
+						
+					
 					
 						
 					
@@ -4447,6 +4511,8 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 							</tr>
 						
 					
+						
+					
 					
 						
 					
@@ -4478,6 +4544,8 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 								<td><a href="#DataService.rights">rights </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/rights</div></td>
 							</tr>
+						
+					
 						
 					
 						

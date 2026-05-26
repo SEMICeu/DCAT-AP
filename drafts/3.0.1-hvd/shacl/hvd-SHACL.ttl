@@ -109,6 +109,7 @@
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/1a61f733fafb015548fe0e21203d559c9cb4d228>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/1aeb85e10acb27fafc68a1bc04adb4860ecbea59>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/3bde2663aaca96d953765ac2e525ef64710bf4d6>,
+    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/60675e8175395481680e343172eea5fcd3f82cd4>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/63240e11f1eb66f636413d1dbb134f0ff9066a7c>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/68388ec47b77212d80036e8a02e9956f5ba0e0f5>,
@@ -117,6 +118,7 @@
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/7b6713c1f4a52e964f5db57eabef294b6d04e90e>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/83ad7325cc6681e43e44550c269847065a95a14f>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/8521ebd386ec388c4cf09933c419e3fe7668f29d>,
+    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/92d65d33f2a5d5345f1980ffd0cf304e47dd0caf>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/99435c17158fbaa12d1d955b8886d5bf935ab016>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/998ce689a5bcc3e2764ff84a05255e34d91e8102>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/9adf9f5890592909cf3e67021ae7ab4f895a7745>,
@@ -124,11 +126,13 @@
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/b4c4138f0581e7240ec4dd866004c56407b3705a>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/ca2bd10c893237fa342edb75240b08731acda92f>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/d36065836a29f463546e269c25db7b95b879b3fb>,
+    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/d5d74574f70f9a979535f3624608f88180dd0c97>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/dbcf2adef675735c48b532392359af27af5e8b71>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/dc08f4dca4377fade57f89454e3fa06a8389d314>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/eb3ac4e4fdde2e2588a9502c5956060a18c5c99f>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/f30149ffb6ec9d00dd5866b052105729fa27d02a>,
-    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/f514dbc668e2c9c457d61f1f2721c7fbcb22cb59>;
+    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/f514dbc668e2c9c457d61f1f2721c7fbcb22cb59>,
+    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/f8b02efd063b8089b72ce9677a1e4a3488eeb9a9>;
   shacl:targetClass dcat:DataService .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.applicablelegislation";
@@ -154,6 +158,12 @@
   shacl:name "endpoint URL"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path dcat:endpointURL .
+
+<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.title";
+  shacl:datatype rdf:langString;
+  shacl:description "A name given to the Data Service."@en;
+  shacl:name "title"@en;
+  shacl:path dct:title .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/60675e8175395481680e343172eea5fcd3f82cd4> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.HVDcategory";
   shacl:description "The HVD category to which this Data Service belongs."@en;
@@ -203,6 +213,12 @@
   shacl:name "documentation"@en;
   shacl:path foaf:page .
 
+<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/92d65d33f2a5d5345f1980ffd0cf304e47dd0caf> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.title";
+  shacl:description "A name given to the Data Service."@en;
+  shacl:name "title"@en;
+  shacl:path dct:title;
+  shacl:uniqueLang true .
+
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/99435c17158fbaa12d1d955b8886d5bf935ab016> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.rights";
   shacl:class dct:RightsStatement;
   shacl:description "A statement that specifies rights associated with the Distribution."@en;
@@ -245,6 +261,12 @@
   shacl:name "applicable legislation"@en;
   shacl:path <http://data.europa.eu/r5r/applicableLegislation> .
 
+<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/d5d74574f70f9a979535f3624608f88180dd0c97> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.title";
+  shacl:description "A name given to the Data Service."@en;
+  shacl:name "title"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path dct:title .
+
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/dbcf2adef675735c48b532392359af27af5e8b71> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.licence";
   shacl:class dct:LicenseDocument;
   shacl:description "A licence under which the Data service is made available."@en;
@@ -274,6 +296,12 @@
   shacl:minCount 1;
   shacl:name "HVD category"@en;
   shacl:path <http://data.europa.eu/r5r/hvdCategory> .
+
+<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/f8b02efd063b8089b72ce9677a1e4a3488eeb9a9> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.title";
+  shacl:description "A name given to the Data Service."@en;
+  shacl:minCount 1;
+  shacl:name "title"@en;
+  shacl:path dct:title .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape> a shacl:NodeShape;
   shacl:closed false;
