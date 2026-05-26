@@ -6,7 +6,7 @@
 # 
 # This file provides the imports that are implicitly the result of reusing them in the DCAT-AP application profile.
 # The imports point to the URL of the RDF serializations (mostly the turtle serializations) as not all ontology URIs have content negotation implemented. 
-# The RDF format is required for the ISA testbed validator.
+# The RDF format is required for the ITB testbed validator.
 # The following imports have been outcommented: 
 #   owl:imports <https://www.w3.org/ns/odrl/2/ODRL22.ttl> ; import is excluded because the shacl shape for Category applies to all instances of skos:Concept and the skos:Concepts in the ODRL do not comply to this. 
 
@@ -18,7 +18,6 @@
   owl:imports <http://xmlns.com/foaf/spec/index.rdf> ;
   owl:imports <https://www.w3.org/ns/locn.ttl> ;
   owl:imports <https://spdx.org/rdf/terms/spdx-ontology.owl.xml> ;
-  owl:imports <https://schema.org/version/latest/schema.ttl> ;
   owl:imports <http://www.w3.org/ns/prov-o.ttl> ;
   owl:imports <http://www.w3.org/2006/time.ttl> ;
   owl:imports <http://www.w3.org/2006/vcard/ns.ttl> ;

@@ -65,7 +65,7 @@
         sh:severity sh:Violation ;
         sh:shape :DateOrDateTimeDataType_Shape
     ], [
-        sh:maxCount 1 ;
+        sh:nodeKind sh:BlankNodeOrIRI ;
         sh:path dct:conformsTo ;
         sh:severity sh:Violation
     ], [
