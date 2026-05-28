@@ -21,7 +21,7 @@ This Changelog provides an overview of the changes incorporated in DCAT-AP 3.0.0
 - Agent roles: added paragraph to cross-reference to the guidelines in DCAT 3.
 - Accessibility and Multilingual Aspects: no change.
 - Usage guide on Datasets, Distributions and Data Services: integrated this GitHub located section in the document.
-- High Value Datasets: new section to create a reference to the guidelines for High Value Datasets.
+- High-Value Datasets: new section to create a reference to the guidelines for High-Value Datasets.
 - Validation of DCAT-AP: integrated this GitHub located section in the document.
 - Example Dataset Series: new section containing examples for Dataset Series.
 - Inverse properties: new section on the handling of inverse properties.
