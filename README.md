@@ -1,5 +1,4 @@
-![SEMIC Core Vocabulary](/semic-icon-small.png)
-# DCAT-AP 
+# DCAT-AP <img align="right" src="/semic-icon-small.png" alt="SEMIC Core Vocabulary" />
 
 This is the issue tracker for the maintenance of DCAT-AP.
 
@@ -11,7 +10,7 @@ The specification of the DCAT-AP was a joint initiative of DG CONNECT, the EU Pu
 The latest version of DCAT-AP (recommendation v3.0.1) can be downloaded from from the [releases](https://github.com/SEMICeu/DCAT-AP/releases) or via [SEMIC Support Centre](https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-data-portals-europe/releases).
 The HTML of this specification can be found [here](https://semiceu.github.io/DCAT-AP/releases/3.0.1/).
 
-The latest version of DCAT-AP Annex for High Value Datasets (recommendation v3.0.0) is also published [here](https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd).
+The latest version of DCAT-AP Annex for High Value Datasets (recommendation v3.0.0) is also published [here](https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd). A public review of the next version is open until September 2026. The draft version (v3.0.1) can be viewed [here](https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/).
 
 
 Any problems encountered, or suggestions for new functionalities can be submitted as issues on the DCAT-AP repository on GitHub. A short guideline for submitting issues can be found at https://github.com/SEMICeu/DCAT-AP/wiki/Submission-guidelines.
