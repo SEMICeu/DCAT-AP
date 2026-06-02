@@ -7,7 +7,7 @@ The DCAT Application profile for data portals in Europe (DCAT-AP) is a specifica
 The specification of the DCAT-AP was a joint initiative of DG CONNECT, the EU Publications Office and the ISA² Programme. The specification was elaborated by a multi-disciplinary Working Group with representatives from 16 European Member States, some European Institutions and the US.
 
 
-The latest version of DCAT-AP (SEMIC Recommendation v3.0.1) can be downloaded from from the [releases](https://github.com/SEMICeu/DCAT-AP/releases) or via [JoinUp](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/releases).
+The latest version of DCAT-AP (SEMIC Recommendation v3.0.1) can be downloaded from from the [releases](https://github.com/SEMICeu/DCAT-AP/releases) or via [SEMIC Support Centre](https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-data-portals-europe/releases).
 The HTML of this specification can be found [here](https://semiceu.github.io/DCAT-AP/releases/3.0.1/).
 
 The latest version of DCAT-AP Annex for High Value Datasets (SEMIC Recommendation v3.0.0) is also published [here](https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd/).
@@ -44,6 +44,22 @@ The table below shows webinars and events related to **latest version of DCAT-AP
 <p>04/02/2025</p>  
 </td>  
 </tr>  
+</tbody>  
+</table>  
+
+The table below shows webinars and events related to **previous versions of DCAT-AP**:
+<details closed>
+  <summary>Click to open table</summary>
+<table>  
+<tbody>  
+<tr>  
+<td>  
+<p><strong>Title</strong></p>  
+</td>  
+<td>  
+<p><strong>Date</strong></p>  
+</td>  
+</tr>
 <tr>  
 <td>   
 <p><a href="https://joinup.ec.europa.eu/collection/semic-support-centre/event/webinar-remaining-issues-dcat-ap">Remaining issues on DCAT-AP</a></p>  
@@ -90,22 +106,6 @@ The table below shows webinars and events related to **latest version of DCAT-AP
 </td>  
 <td>  
 <p>02/02/2023</p>  
-</td>  
-</tr>  
-</tbody>  
-</table>  
-
-The table below shows webinars and events related to **previous versions of DCAT-AP**:
-<details closed>
-  <summary>Click to open table</summary>
-<table>  
-<tbody>  
-<tr>  
-<td>  
-<p><strong>Title</strong></p>  
-</td>  
-<td>  
-<p><strong>Date</strong></p>  
 </td>  
 </tr>  
 <tr>  
