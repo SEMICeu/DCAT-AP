@@ -38,6 +38,14 @@ The table below shows webinars and events related to **latest version of DCAT-AP
 </tr>  
 <tr>  
 <td>  
+<p><a href="https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/event/webinar-dcat-ap-0">Webinar on DCAT-AP</a></p>  
+</td>  
+<td>  
+<p>04/02/2025</p>  
+</td>  
+</tr>  
+<tr>  
+<td>   
 <p><a href="https://joinup.ec.europa.eu/collection/semic-support-centre/event/webinar-remaining-issues-dcat-ap">Remaining issues on DCAT-AP</a></p>  
 </td>  
 <td>  
