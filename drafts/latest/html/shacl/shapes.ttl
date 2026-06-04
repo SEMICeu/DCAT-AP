@@ -78,6 +78,7 @@
         sh:path adms:status ;
         sh:severity sh:Violation
     ], [
+        sh:nodeKind sh:BlankNodeOrIRI ;
         sh:path dct:language ;
         sh:severity sh:Violation
     ], [
