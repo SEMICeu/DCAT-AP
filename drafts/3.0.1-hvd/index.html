@@ -8,7 +8,7 @@
 	
     <meta charset="utf-8" />
     <meta name="color-scheme" content="light dark">
-    <title>DCAT-AP High Value Datasets</title>
+    <title>DCAT-AP High-Value Datasets</title>
     <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
     <script class="remove">
     // All config options at https://respec.org/docs/
@@ -42,7 +42,7 @@
 		, 
 		
 		   {
-		    name: "Natasa Sofou",
+		    name: "Anastasia Sofou",
 		      
 		      
 		    company: "DIGIT-EXT",
@@ -107,7 +107,7 @@
       prevVersionURI: "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd/",
       latestVersion: "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/",
       specStatus: "base",
-      publishDate: "2026-05-15",
+      publishDate: "2026-06-10",
       editors: myeditors,
       authors: myauthors,
       otherLinks: [
@@ -136,7 +136,7 @@
         
       ],
       github: "SEMICeu/DCAT-AP",
-      shortName: "DCAT-AP High Value Datasets",
+      shortName: "DCAT-AP High-Value Datasets",
       xref: "web-platform",
       doJsonLd: true,
       historyURI: null,
@@ -204,7 +204,7 @@
          },
         "HVD" : {
            "href":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0138",
-           "title" : "Implementing Regulation for High Value Datasets",
+           "title" : "Implementing Regulation for High-Value Datasets",
            "publisher":"European Commission"
         },
         "BCP4715" : {
@@ -235,6 +235,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="msapplication-TileColor" content="#7ED956" />
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//health.semic.eu/matomo";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
 </head>
 <body>
     
@@ -299,9 +314,9 @@ Any improvement of the metadata will immediately flow throughout the European ne
     <h2>Status</h2>
         <p>
 <!-- readd when SEMIC has a codelist about it process 
-	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsW3C">SEMIC Draft</a> published at 2026-05-15.
+	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsW3C">SEMIC Draft</a> published at 2026-06-10.
 -->
-	This application profile has the status SEMIC Draft published at 2026-05-15.
+	This application profile has the status SEMIC Draft published at 2026-06-10.
         </p>
         <p>
             Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="CHANGELOG">Changelog</a>.
@@ -3923,7 +3938,7 @@ Nevertheless, it must be noted that the HVD requirements on a Data Service might
 The HVD IR defines six thematic data categories: geospatial, earth observation and environment, meteorological, statistics, companies and company ownership, and mobility. 
 A new property <a href="http://data.europa.eu/r5r/hvdCategory">HVD category</a> is introduced to indicate the HVD category to which an resource, i.e. a dataset, belongs.
 The controlled vocabulary <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/high-value-dataset-category">High-value dataset categories</a>, maintained by the Publications Office, contains not only these six categories, but also the complete list of datasets required by the HVD IR.
-The High Value Datasets and APIs MUST be annotated with the most precise concept.
+The High-Value Datasets and APIs MUST be annotated with the most precise concept.
 A resource may belong to more than one data category.
 
 <h3 id="c2">Identifiers</h3>
@@ -4948,12 +4963,11 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 <h2>Acknowledgments</h2>
 
 The editors gratefully acknowledge the contributions made to this document by all members of the working group.
-Especially we would like to express our gratetude for the former editor Makx Dekkers.
 </p><p>
-This work was elaborated by a Working Group under SEMIC by Interoperable Europe in collaboration with DG Environment and JRC.
-Interoperable Europe of the European Commission was represented by Pavlina Fragkou.
-DG CONNECT was represented by Jiri Pilar and Michal Kuban.
-Bert Van Nuffelen, Pavlina Fragkou, Jitse De Cock, and Arthur Schiltz were the editors of this specification.
+This work was elaborated by a Working Group under SEMIC by Interoperable Europe in collaboration with DG CONNECT.
+Interoperable Europe of the European Commission was represented by Anastasia Sofou and Georges Lobo.
+DG CONNECT was represented by Jiří Pilař and Michal Kubáň.
+Jakub Klímek, Bert Van Nuffelen, and Jitse De Cock were the editors of this specification.
 <p/>
 
 Past and current contributors are :
@@ -5098,7 +5112,7 @@ Past and current contributors are :
 	 	Sirkku Kokkola
 		, 
            
-	 	Michal Kuban
+	 	Michal Kubáň
 		, 
            
 	 	Kaia Kulla
