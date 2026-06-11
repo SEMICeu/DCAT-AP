@@ -1,0 +1,56 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix example-ds: <https://data.gov.gr/id/dataset/> .
+@prefix example-ser: <https://data.gov.gr/id/datasetseries/> .
+@prefix example-dist: <https://data.gov.gr/id/distribution/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+example-ds:BeePopulationLive a dcat:Dataset;
+  dct:title "life counts of the Bee population in Greece"@en;
+  dct:issued "2023-03-21"^^xsd:date;
+  dct:spatial <https://www.geonames.org/390903>;
+  dcat:inSeries example-ser:BeePopulation .
+
+<example-api:EA-API-Platform> a dcat:DataService;
+  dct:title "API platform for biodiversity data"@en;
+  dct:description "This data platform offers access to data related to biodiversity collected and published by the Greek Environment Agency"@en;
+  dcat:endpointURL <https://ea.gov.gr/api/v2/biodiversity>;
+  dcat:servesDataset example-ds:BeePopulationLive .
+
+example-ds:BeePopulation2023 a dcat:Dataset;
+  dct:title "Bee population 2023 in the region of Thessaloniki and Athens"@en;
+  dct:issued "2023-03-21"^^xsd:date;
+  dct:modified "2023-03-21"^^xsd:date;
+  dct:spatial <https://sws.geonames.org/734077>,
+    <https://sws.geonames.org/264371>;
+  dcat:distribution <example-dist:BeePopulation2023/csv>,
+    <example-dist:BeePopulation2023/biojson>;
+  dcat:inSeries example-ser:BeePopulation;
+  dcat:prev example-ds:BeePopulation2022 .
+
+example-dist:BeePopulation2023/biojson a dcat:Distribution .
+
+example-dist:BeePopulation2023/csv a dcat:Distribution .
+
+example-ds:BeePopulation2022 a dcat:Dataset;
+  dct:title "Bee population 2022 in the region of Thessaloniki"@en;
+  dct:issued "2022-03-01"^^xsd:date;
+  dct:modified "2022-03-20"^^xsd:date;
+  dct:spatial <https://sws.geonames.org/734077>;
+  dcat:inSeries example-ser:BeePopulation;
+  dcat:prev example-ds:BeePopulation2000 .
+
+example-ds:BeePopulation2000 a dcat:Dataset;
+  dct:title "Bee population 2000 in Greece"@en;
+  dct:issued "2023-06-01"^^xsd:date;
+  dct:modified "2023-06-01"^^xsd:date;
+  dct:spatial <https://www.geonames.org/390903>;
+  dcat:inSeries example-ser:BeePopulation .
+
+example-ser:BeePopulation a dcat:DatasetSeries;
+  dct:title "Bee population"@en;
+  dct:issued "2022-04-01"^^xsd:date;
+  dct:modified "2023-06-01"^^xsd:date;
+  dct:spatial <https://www.geonames.org/390903>;
+  dcat:last example-ds:BeePopulation2023 .

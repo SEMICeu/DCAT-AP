@@ -1,0 +1,16 @@
+{
+  "@context": "https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/3.0.0/html/examples/context.jsonld",
+  "@graph": [
+    {
+      "@id": "example-ds:BeePopulation",
+      "@type": "Dataset",
+      "description": {
+        "en": "A dataset about bee population in Greece"
+      },
+      "publisher": "example-ag:GreekEnvironmentAgency",
+      "title": {
+        "en": "Bee population"
+      }
+    }
+  ]
+}
