@@ -18,6 +18,11 @@ Any problems encountered, or suggestions for new functionalities can be submitte
 
 ## Structure of the repository
 /releases: DCAT-AP releases (1.1,1.2 etc), each release might have different distributions
+/drafts: DCAT-AP drafts texts, candidates for public review
+
+/r5r/releases: The DCAT-AP vocabulary releases
+/r5r/drafts: The DCAT-AP vocabulary drafts
+
 
 ## Licence
 Copyright © 2026 European Union. All material in this repository is published under the licence CC-BY 4.0, unless explicitly otherwise mentioned. Any problems encountered, or suggestions for new functionalities can be submitted as issues on the DCAT-AP repository on GitHub.
