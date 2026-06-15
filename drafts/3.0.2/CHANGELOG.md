@@ -1,6 +1,6 @@
 # **Consolidated ChangeLog**
 
-This Changelog provides an overview of the changes incorporated in DCAT-AP 3.0.2. A complete list of the issues closed with this release is accessible on [GitHub](https://github.com/SEMICeu/DCAT-AP/issues?q=label%3Arelease-3.0.2)
+This Changelog provides an overview of the changes incorporated in DCAT-AP 3.0.2. A complete list of the issues closed with this release is accessible on [GitHub](https://github.com/SEMICeu/DCAT-AP/issues?q=label%3Arelease:3.0.2-jun2026)
 
 # **Editorial changes**
 
