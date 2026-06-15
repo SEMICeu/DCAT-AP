@@ -18,8 +18,20 @@ Clarified and improved the communication on the DCAT-AP releases
 
 
 # **Data model adaptations**
-- Issue [357](https://github.com/SEMICeu/dcat-ap/issues/357): advice the usage of Core Business and Core Person for modeling agents (TODO)  
-- Issue [242](https://github.com/SEMICeu/dcat-ap/issues/242): add adms:status as optional property to the class Dataset and it MUST use the controlled vocabulary (TODO)  
+- Issue [357](https://github.com/SEMICeu/dcat-ap/issues/357): 
+        extend the advice for modeling agents to the usage of Core Business and Core Person Vocabularies.
+- Issue [242](https://github.com/SEMICeu/dcat-ap/issues/242): 
+        add adms:status as optional property to the class Dataset. 
+        It MUST use the controlled vocabulary http://publications.europa.eu/resource/authority/dataset-status.
+        This property is part of W3C DCAT and applicable to the class Dataset as it is a property of Catalogued Resource. 
+        This change of DCAT-AP adds a max 1 cardinality and a codelist usage guideline.
+- Issue [265](https://github.com/SEMICeu/dcat-ap/issues/265) and issue [175](https://github.com/SEMICeu/dcat-ap/issues/175): 
+        add usage note to allow for multiple serialisations for the same geographic expression. 
+        The properties bbox, centroid and geometry of a location can be expressed in different serialisations.
+        Given that the serialisations are convertable, there is in principle no need to encourage sharing multiple values.
+        This changes enables publishers perform a single publication effort for supporting catalogues that do not support 
+        serialisation conversion between multiple serialisations. 
+
 
 ## **Detailed issue feedback**
 

@@ -635,17 +635,17 @@
         sh:maxCount 1 ;
         sh:nodeKind sh:Literal ;
         sh:path dcat:bbox ;
-        sh:severity sh:Violation
+        sh:severity sh:Warning
     ], [
         sh:maxCount 1 ;
         sh:nodeKind sh:Literal ;
         sh:path dcat:centroid ;
-        sh:severity sh:Violation
+        sh:severity sh:Warning
     ], [
         sh:maxCount 1 ;
         sh:nodeKind sh:Literal ;
         sh:path lcon:geometry ;
-        sh:severity sh:Violation
+        sh:severity sh:Warning
     ] ;
     sh:targetClass dct:Location .
 
