@@ -383,7 +383,7 @@ This document is the result of the major semantic change release process describ
         This document reflects the standstill for the public review.
         </p>
         <p>
-            Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://semiceu.github.io/DCAT-AP/drafts/3.0.2/CHANGELOG.html">Changelog</a>.
+            Information about the process and the decisions involved in the creation of this specification can be consulted at the <a href="https://semiceu.github.io/DCAT-AP/drafts/3.0.2/CHANGELOG.html">Changelog</a>.
         </p>
 </section>
 
@@ -404,7 +404,7 @@ This document is the result of the major semantic change release process describ
 		  This specification </span> of <a rel="cc:attributionURL" property="cc:attributionName" href="ORGANISATION" xmlns:cc="http://creativecommons.org/ns#">ORGANISATION </a> 
 	          is published under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">"CC0"</a>.
 	-->
-             Copyright © 2025 European Union. All material in this repository is published under the license CC-BY 4.0, unless explicitly otherwise mentioned.
+             Copyright © 2026 European Union. All material in this repository is published under the license CC-BY 4.0, unless explicitly otherwise mentioned.
         </p>
     
 </section>
@@ -479,7 +479,7 @@ A <strong>Data Portal</strong> is a Web-based system that contains a data catalo
         </table>
 
 <h3>DCAT-AP extended properties</h3>
-DCAT-AP extends DCAT with a few properties. The used namespace <a href="http://data.europa.eu/r5r/"><code>http://data.europa.eu/r5r/</code></a>. 
+DCAT-AP extends DCAT with a few properties. The used namespace is <a href="http://data.europa.eu/r5r/"><code>http://data.europa.eu/r5r/</code></a>. 
 In that namespace as general possible definitions of the additional DCAT-AP properties are provided to enable the use within DCAT-AP and possible beyond.
 
 
@@ -10368,7 +10368,7 @@ No validation in this case is also acceptable.
 
 <p>
 The first two (and preferably also the others) SHOULD only be used for requirements that can be verified by a machine.
-If the validation can only be realised with the involvement of humans, then a less strong requirement (RECOMMMENDED or MAY) is used, 
+If the validation can only be realised with the involvement of humans, then a less strong requirement (RECOMMENDED or MAY) is used, 
 even if the intention is to be very strict.
 This is to ensure that the provided SHACL representations correspond closely to all use cases possible. 
 Stronger enforcements are left for implementations as they have control on actual data exchange.
@@ -10527,7 +10527,7 @@ For the first approach using direct properties, the relationship definition occu
 The governance is external for the second approach using codelists. This may lead to unwanted overhead, e.g. to manage mappings between the distinct codelists different profiles may use.
 The impact between both is primary operational on querying the data catalogue. Direct properties support simple queries. Codelists necessitate complex queries, often extended with dynamic mapping logic between the external lists.
 </p><p>
-It should be noted that, even if the second approach is used in a particular implementation, the provision of information using dct:publisher for the Catalogue is still mandatory under the rules laid down in the Conformance Statement in section [[[#conformance]]], while the provision of information using dct:publisher is strongly recommended for Dataset. The provision of such information using dct:publisher will ensure interoperability with implementations that use the basic approach of DCAT-AP. As long the first approach is actively be used, the second approach is thus limited for use to a profile specific context.  
+It should be noted that, even if the second approach is used in a particular implementation, the provision of information using dct:publisher for the Catalogue is still mandatory under the rules laid down in the Conformance Statement in section [[[#conformance]]], while the provision of information using dct:publisher is strongly recommended for Dataset. The provision of such information using dct:publisher will ensure interoperability with implementations that use the basic approach of DCAT-AP. As long as the first approach is actively used, the second approach is thus limited for use to a profile specific context.  
 For that reason, it is recommended to use the direct properties including the ones defined by <a href="https://semiceu.github.io/GeoDCAT-AP/930/releases/3.0.0/#properties">GeoDCAT-AP</a> such as custodian, distributor, originator, principalInvestigator, processor, resourceProvider in favor of the second approach using the prov:qualifiedAttribution.
 </p>
 </section>
@@ -10759,7 +10759,7 @@ For DCAT-AP conformance, it is not mandatory that this happens in a RDF serialis
 For the format JSON, a popular format to exchange data between systems, DCAT-AP provides a <a href="./context/dcat-ap.jsonld">JSON-LD context file</a>. 
 JSON-LD is a W3C Recommendation [[[json-ld11]]] that provided a standard approach to interpret JSON structures as RDF.
 The provided JSON-LD context file can be used by implementers to base their data exchange upon, and so create a DCAT-AP conformant data exchange.
-This JSON-LD context is not normative, i.e. other JSON-LD contexts are allowed to create a a conformant DCAT-AP data exchange.
+This JSON-LD context is not normative, i.e. other JSON-LD contexts are allowed to create a conformant DCAT-AP data exchange.
 <p/>
 The JSON-LD context file downloadable <a href="./context/dcat-ap.jsonld">here</a>.
 
@@ -10845,7 +10845,7 @@ In order to validate a catalogue additional data might be required to import int
     <li><a href="./html/shacl/mdr_imports.ttl">mdr_imports.ttl</a>: imports the recommended codelists.</li>
 </ul>
 
-The shacl files are configured in this instance of the Interoperable Europe testbed: <a href="https://www.itb.ec.europa.eu/shacl/dcat-ap/upload">https://www.itb.ec.europa.eu/shacl/dcat-ap/upload</a>. More information about the configured validation profiles is <a href="https://github.com/ISAITB/validator-resources-dcat-ap">https://github.com/ISAITB/validator-resources-dcat-ap</a>.
+The shacl files are configured in this instance of the Interoperable Europe testbed: <a href="https://www.itb.ec.europa.eu/shacl/semic-shacl/upload">https://www.itb.ec.europa.eu/shacl/semic-shacl/upload</a>. More information about the configured validation profiles is available at <a href="https://github.com/SEMICeu/semic-shacl-validator">https://github.com/SEMICeu/semic-shacl-validator</a>.
 
 <p/>
 In addition to these SHACL shapes extending the approach from DCAT-AP 2.x, the constraints are also provided in a new design where each constraint has got a unique identifier.
