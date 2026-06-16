@@ -510,7 +510,7 @@ Nevertheless, to keep DCAT-AP concise and to the point optional DCAT-AP properti
 An overview of DCAT-AP is shown by the UML diagram below. The UML diagram illustrates the specification described in this document. For readability purposes, the representation has been condensed as follows:
 <ul>
 <li> No ranges for data properties are shown, because some of them are expressed as unions of XSD types</li>
-<li> The figure contain the key classes with some important supporting classes. Other object properties (relationships) are listed as properties on the UML class with their target range.</li>
+<li> The figure contains the key classes with some important supporting classes. Other object properties (relationships) are listed as properties on the UML class with their target range.</li>
 <li> The class dcat:Resource has been included to ease to see the connection with W3C DCAT. DCAT-AP treats it as an abstract notion. </li>
 </ul>
 The cardinalities and qualifications are included in the figure.
@@ -597,7 +597,7 @@ In addition to the constraints also cross-references are provided to DCAT. To sa
 	<li>E: reused with additional usage notes or additional restrictions compared to DCAT [[vocab-dcat-3]]</li>
 	<li>P: DCAT-AP profile specific extension where DCAT had no requirements earlier on specified</li>
 </ul>
-This reuse qualification assessement is with respect to a specific version of DCAT. 
+This reuse qualification assessment is with respect to a specific version of DCAT. 
 Therefore it may vary over time when new versions of DCAT-AP are created.
 
 
@@ -2365,10 +2365,10 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                     1
                                 </td>
                                 <td property="rdfs:comment">
-                                    A link to the Dataset, Data service or Catalog described in the record.
+                                    A link to the Dataset, Data service and Catalogue described in the record.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    A catalogue record will refer to one entity in a catalogue. This can be either a Dataset or a Data Service. To ensure an unambigous reading of the cardinality the range is set to Catalogued Resource. However it is not the intent with this range to require the explicit use of the class Catalogued Record. As abstract class, an subclass should be used.
+                                    A catalogue record will refer to one entity in a catalogue. This can be either a Dataset or a Data Service. To ensure an unambiguous reading of the cardinality the range is set to Catalogued Resource. However it is not the intent with this range to require the explicit use of the class Catalogued Resource. As abstract class, an subclass should be used.
                                 </td>
 				<!--
                                 <td>
@@ -9315,7 +9315,7 @@ This is based on the UN/CEFACT Identifier class.
                         Usage Note
                     </dt>
                     <dd>
-                        The definition and properties of the Legal Resource class are aligned with the ontology included in "Council conclusions inviting the introduction of the European Legislation Identifier (<a href="https://eur-lex.europa.eu/eli-register/about.html">ELI</a>)". For describing the attributes of a Legal Resource (labels, preferred labels, alternative labels, definition, etc.) we refer to the (<a href="https://op.europa.eu/en/web/eu-vocabularies/eli">ELI</a>) ontology.
+                        The definition and properties of the Legal Resource class are aligned with the ontology included in "Council conclusions inviting the introduction of the European Legislation Identifier (<a href="https://eur-lex.europa.eu/eli-register/what_is_eli.html">ELI</a>)". For describing the attributes of a Legal Resource (labels, preferred labels, alternative labels, definition, etc.) we refer to the (<a href="https://op.europa.eu/en/web/eu-vocabularies/eli">ELI</a>) ontology.
 
 In this data specification the use is restricted to instances of this class that follow the (<a href="https://op.europa.eu/en/web/eu-vocabularies/eli">ELI</a>) URI guidelines.
                     </dd>
@@ -10392,7 +10392,7 @@ The tables below show the usage of the codelists with the expected qualification
 		<tr><td>dct:language</td><td><a href="#Catalogue">Catalogue</a>,<a href="#Dataset">Dataset</a>, <a href="#CatalogueRecord">Catalogue Records</a>, <a href="#Distribution">Distribution</a></td><td><a href="http://publications.europa.eu/resource/authority/language">EU Vocabularies Languages Named Authority List</a></td><td></td></tr>
 		<tr><td>adms:status</td><td><a href="#Dataset">Dataset</a></td><td><a href="http://publications.europa.eu/resource/authority/dataset-status">EU Vocabularies Dataset Status</a></td><td></td></tr>
 		<tr><td>adms:status</td><td><a href="#Distribution">Distribution</a></td><td><a href="http://publications.europa.eu/resource/authority/distribution-status">EU Vocabularies Distribution Status</a></td><td></td></tr>
-		<tr><td>dcatap:availability</td><td><a href="#Distribution">Distribution</a></td><td><a href="http://publications.europa.eu/resource/authority/planned-availability">Distribution availability vocabulary</a></td><td>The list of terms for the avalability levels of a dataset distribution in the DCAT-AP  specification.</td></tr>
+		<tr><td>dcatap:availability</td><td><a href="#Distribution">Distribution</a></td><td><a href="http://publications.europa.eu/resource/authority/planned-availability">Distribution availability vocabulary</a></td><td>The list of terms for the availability levels of a dataset distribution in the DCAT-AP  specification.</td></tr>
 		<tr><td>spdx:algorithm</td><td><a href="#Checksum">Checksum</a></td><td><a href="https://spdx.org/rdf/terms/#d4e2129">Checksum algorithm members</a></td><td>The members listed are considered a controlled vocabulary of supported checksum algorithms.</td></tr>
 		<tr><td><a href="#Distribution.compressionformat">compression format</a></td><td><a href="#Distribution">Distribution</a></td><td><a href="http://www.iana.org/assignments/media-types/media-types.xhtml">IANA Media Types</a></td><td>The members listed are considered a controlled vocabulary of supported compression formats.</td></tr>
 		<tr><td><a href="#Distribution.packagingformat">packaging format</a></td><td><a href="#Distribution">Distribution</a></td><td><a href="http://www.iana.org/assignments/media-types/media-types.xhtml">IANA Media Types</a></td><td>The members listed are considered a controlled vocabulary of supported compression formats.</td></tr>
@@ -10513,7 +10513,7 @@ For example, properties could be defined, such as foo:owner, foo:curator or foo:
 A possible source for such additional properties is the Roles Named Authority List  maintained by the Publications Office of the EU.
 Other domain-specific sources for additional properties are the <a href="https://knowledge-base.inspire.ec.europa.eu/index_en">INSPIRE</a> Responsible Party roles ,<a href="https://www.loc.gov/marc/relators/relaterm.html">the Library of Congress’ MARC relators</a> and <a href="https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#:~:text=Foo%20Data%20Center-,7.a%20contributorType,-Occurrence%3A%201">DataCite’s contributor types</a>.
 To enable the use of such properties, they must be defined as RDF properties with URIs in a well-managed namespace. 
-<a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#agent-roles">GeoDCAT-AP has introduced a number of specific <a href="https://semiceu.github.io/GeoDCAT-AP/930/releases/3.0.0/#properties">properties</a>.
+<a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.1.0/#agent-roles">GeoDCAT-AP has introduced a number of specific <a href="https://semiceu.github.io/GeoDCAT-AP/930/releases/3.1.0/#properties">properties</a>.
 </p><p>
 A second approach is based on the use of W3C’s PROV ontology [[prov-o]]  which provides a powerful mechanism to express a set of classes, properties, and restrictions that can be used to represent and interchange provenance information generated in different systems and under different contexts. In the context of work on GeoDCAT-AP, a PROV-conformant solution for expressing agent roles was agreed . This solution uses prov:qualifiedAttribution in combination with a dct:type assertion pointing to the code list for Responsible Party Role in the <a href="https://knowledge-base.inspire.ec.europa.eu/index_en">INSPIRE</a> registry. To enable the use of such types, they must be defined with URIs in a well-managed namespace. 
 </p><p>
@@ -10603,7 +10603,7 @@ In order to harmonise the use of Dataset Series, the following guidelines are to
 For instance, if dataset get retracted and as consequence the collection becomes empty, then publishers should consider to retract also the Dataset Series.
 In case, publishers use persistent identifiers, then this should be reflected in the status of the Dataset Series.
 </li>
-<li>A Dataset Series is an conceptual dataset without distributions.
+<li>A Dataset Series is a conceptual dataset without distributions.
 When interpreting a Dataset Series as a Dataset, then it is expected that the directly associated Distributions contain the data that is the union of all Datasets in the collection. 
 But the presence of these Distributions raise semantical conflicts such as whether the property of the Dataset Series <code>frequency</code> refers to the update frequency of the associated Distributions or the update frequency of the collection. To avoid these semantical conflicts, it is recommended not to associate distributions with a Dataset Series.
 </li>
@@ -10618,7 +10618,7 @@ But the presence of these Distributions raise semantical conflicts such as wheth
 While from a data knowledge graph these nestings are feasible and not so problematic, it must be realised that these complicate the presentation on a webpage. 
 Since data portal representations are the main communication from metadata owners to potential data consumers and there is no clear expectations
 on how to present the members of a Dataset Series in a UI (e.g. because ordering is not imposed), DCAT-AP users may not expect from other portals which harvest and process their Dataset Series, that these are more than a collection of Datasets.
-Any interpretation, such as the collection is ordered, or grouped according to time or any wellknown dimension, is a specific expectation beyond the agreemenents made in DCAT-AP. 
+Any interpretation, such as the collection is ordered, or grouped according to time or any wellknown dimension, is a specific expectation beyond the agreements made in DCAT-AP. 
 </li>
 <li>Conceptually, a Dataset Series is a special kind of Dataset. It is recommended to apply the same metadata quality of Datasets to Dataset Series (see [[[#quick-reference]]] ). The dedicated usage guidelines for Dataset Series and the Dataset members of a Dataset Series take priority over the generic DCAT-AP Dataset guidelines.
 </li>
@@ -10656,15 +10656,15 @@ For instance, a usual adaption is the addition of the release data in the title.
   <h2>DCAT-AP ecosystem</h2>
 
 DCAT-AP is a growing ecosystem with a large community resulting in several profiles. 
-To forster the sharing of experiences and insights this section lists known DCAT-AP profiles or mappings with other approaches.
+To foster the sharing of experiences and insights this section lists known DCAT-AP profiles or mappings with other approaches.
 
 <h3>European DCAT-AP profiles</h3>
 <ul>
-<li> DCAT-AP: the base European profile DCAT-AP, <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1">https://semiceu.github.io/DCAT-AP/releases/3.0.1</a> </li>
+<li> DCAT-AP: the base European profile DCAT-AP, <a href="https://semiceu.github.io/DCAT-AP/drafts/3.0.2/">https://semiceu.github.io/DCAT-AP/drafts/3.0.2/</a> </li>
 <li> DCAT-AP HVD: DCAT-AP for High-Value Datasets <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd/">https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd/ </a> </li>
-<li> GeoDCAT-AP: DCAT-AP for geospatial datasets  <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0">https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0 </a> </li>
+<li> GeoDCAT-AP: DCAT-AP for geospatial datasets  <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.1.0/">https://semiceu.github.io/GeoDCAT-AP/releases/3.1.0/ </a> </li>
 <li> StatDCAT-AP: DCAT-AP for statistical datasets  <a href="https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0/">https://semiceu.github.io/StatDCAT-AP/drafts/3.0.0/</a> </li>
-<li> Health DCAT-AP: DCAT-AP for health datasets <a href="https://healthdcat-ap.github.io/">https://healthdcat-ap.github.io/ </a> </li>
+<li> Health DCAT-AP: DCAT-AP for health datasets <a href="https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-7/">https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-7/ </a> </li>
 <li> Mobility DCAT-AP: DCAT-AP for mobility datasets <a href="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/1.1.0/index.html">https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/1.1.0/index.html </a> </li>
 </ul>  
 
@@ -10685,7 +10685,7 @@ In alphabetic order,
 <li> Belgium 
  <dl>
   <dt><a href="https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/">DCAT-AP Vlaanderen</a></dt>
-     <dd>The DCAT-AP profile of the Flemish region. It is a generic profile for all metadata and has a seperate section for the Open Data domain.</dd>
+     <dd>The DCAT-AP profile of the Flemish region. It is a generic profile for all metadata and has a separate section for the Open Data domain.</dd>
   <dt><a href="https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/">GeoDCAT-AP Vlaanderen</a></dt>
      <dd>specialises DCAT-AP Vlaanderen for the Geo domain. It is used in practice to convert our ISO (19139, 19110) records into a DCAT-AP representation.</dd>
 </dl>
