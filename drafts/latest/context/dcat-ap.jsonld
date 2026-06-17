@@ -390,6 +390,10 @@
           "@id": "http://www.w3.org/ns/dcat#spatialResolutionInMeters",
           "@type": "http://www.w3.org/2001/XMLSchema#decimal"
         },
+        "status": {
+          "@id": "http://www.w3.org/ns/adms#status",
+          "@type": "@id"
+        },
         "temporalCoverage": {
           "@container": "@set",
           "@id": "http://purl.org/dc/terms/temporal",

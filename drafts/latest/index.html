@@ -7,7 +7,7 @@
     
 	
     <meta charset="utf-8" />
-    <title>DCAT-AP 3.0.2</title>
+    <title>DCAT-AP 3.0.2 latest draft</title>
     <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
     <script class="remove">
     // All config options at https://respec.org/docs/
@@ -135,10 +135,10 @@
 
     var respecConfig = {
       postProcess: [quickreference],
-      edDraftURI: "https://semiceu.github.io/DCAT-AP/drafts/latest",
+      edDraftURI: "",
       latestVersion: "https://semiceu.github.io/DCAT-AP/releases/3.0.1/",
       specStatus: "base",
-      publishDate: "2026-01-27",
+      publishDate: "2026-06-17",
       editors: myeditors,
       authors: myauthors,
       otherLinks: [
@@ -153,10 +153,14 @@
         {
 	  key: "This version:",
 	  data: [ { value : "https://semiceu.github.io/DCAT-AP/drafts/latest", href : "https://semiceu.github.io/DCAT-AP/drafts/latest" } ]
-	}
+	},
+        {
+	  key: "Next version:",
+	  data: [ { value : "", href : "" } ]
+	},
       ],
       github: "SEMICeu/DCAT-AP",
-      shortName: "DCAT-AP 3.0.2",
+      shortName: "DCAT-AP 3.0.2 latest draft",
       xref: "web-platform",
       doJsonLd: true,
       logos: [{
@@ -260,7 +264,7 @@
     </style>
      
     <p class="copyright">
-        Copyright © 2024
+        Copyright © 2026
     </p>
     
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -339,18 +343,16 @@ The years after this specification was further elaborated in new release 2.0.1, 
 W3C DCAT 2 restructured DCAT by introducing the notions of a generic Catalogued Resource of which Datasets and Data Services are special cases.
 In 2023, the adoption of W3C DCAT 3 [[vocab-dcat-3]] triggered a new alignment for DCAT-AP.
 W3C DCAT 3 extends the profile with the Dataset Series notion.
-In the release <a href="">DCAT-AP 3.0</a> the alignment was made together with a number of community requests. 
+In the release <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0">DCAT-AP 3.0</a> the alignment was made together with a number of community requests. 
+A minor improved version 3.0.1 was published.
 More information on the alignment and the applied changes in that context are found in that document.
 <p/>
-This release addresses identified bugfixes and issues that have been identified. 
+This minor release addresses identified bugfixes and issues that have been identified. 
 For an overview we refer to the <a href="https://semiceu.github.io/DCAT-AP/drafts/latest/CHANGELOG.html">Changelog</a>.
 
 
 <h3>Meeting minutes</h3>
-The following webinars have been held for the creation of this release
-    <ul>
-	    <li>Webinar 4 February 2025 (<a href="https://interoperable-europe.ec.europa.eu/sites/default/files/event/attachment/2025-03/20250204%20Meeting%20Minutes%20webinar%20on%20DCAT-AP_1.pdf">Meeting Minutes</a>, <a href="https://youtu.be/G2G5MrA5jp0?feature=shared">recording</a>, <a href="https://interoperable-europe.ec.europa.eu/sites/default/files/event/attachment/2025-03/Webinar%20DCAT-AP%2020250204%20v1.0.pdf">slides</a>) </li>
-   </ul>
+This release has been created based upon the feedback received through issues.  
 
 
 <!--
@@ -374,14 +376,10 @@ This document is the result of the major semantic change release process describ
 
 
 
-<!--  should support https://www.w3.org/2021/Process-20211102/, mostly like https://www.w3.org/2021/Process-20211102/#maturity-levels -->
 <section id="specstatus">
     <h2>Status</h2>
         <p>
-<!-- readd when SEMIC has a codelist about it process 
-	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsW3C">SEMIC Draft Specification</a> published at 2026-01-27.
--->
-	This application profile has the status SEMIC Draft Specification published at 2026-01-27.
+	This application profile has the status SEMIC Draft Specification published at 2026-06-17.
         </p>
         <p>
             Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://semiceu.github.io/DCAT-AP/drafts/latest/CHANGELOG.html">Changelog</a>.
@@ -641,7 +639,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                         Usage Note
                     </dt>
                     <dd>
-                        If the Agent is an organisation, the use of the <a href="https://www.w3.org/TR/vocab-org/">Organization Ontology</a> is recommended.
+                        Use the Core Vocabularies (<a href="https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.1/">Core Person</a>, <a href="https://semiceu.github.io/Core-Business-Vocabulary/releases/2.3.0">Core Business</a>) for detailing Agents.
                     </dd>
                 
                 
@@ -3818,6 +3816,7 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
                             , <a href="#Dataset.sample">sample</a>
                             , <a href="#Dataset.source">source</a>
                             , <a href="#Dataset.spatialresolution">spatial resolution</a>
+                            , <a href="#Dataset.status">status</a>
                             , <a href="#Dataset.temporalcoverage">temporal coverage</a>
                             , <a href="#Dataset.temporalresolution">temporal resolution</a>
                             , <a href="#Dataset.theme">theme</a>
@@ -5342,6 +5341,59 @@ For this usage, consult the guidelines in section [[[#UsageGuidelines]]].
 				       
 				        <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_spatial_resolution">A</a>
                                        
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Dataset.status"
+                                typeof="rdf:Property"
+                                resource="http://www.w3.org/ns/adms#status"
+                                class="class mandatory">
+<!--
+                                <td>
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20status%20in%20Dataset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/latest%23Dataset.status" target="_blank" rel="noopener noreferrer" >
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+--->
+                                <td>
+                                        <a href="http://www.w3.org/ns/adms#status"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/ns/adms#status"
+                                           data-placement="right">
+                                        status</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Concept" data-placement="right">Concept</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    The status of the Dataset in the context of a particular workflow process. 
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+				<!--
+                                <td>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_status">Link</a>
+                                </td>
+				-->
+                                <td>
+                                    
+				       
+				        <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_status">E</a>
+				       
                                     
                                 </td>
                             </tr>
@@ -8138,7 +8190,8 @@ This is not equal to the release date of the oldest dataset in the collection of
                                     The geographic bounding box of a resource.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    
+                                    This property can be repeated for equivalent values in a distinct serialisation.
+To minimize publisher's effort, it is recommended to provide a single value in a well-known serialisation including the CRS.
                                 </td>
 				<!--
                                 <td>
@@ -8191,7 +8244,8 @@ This is not equal to the release date of the oldest dataset in the collection of
                                     The geographic center (centroid) of a resource.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    
+                                    This property can be repeated for equivalent values in a distinct serialisation.
+To minimize publisher's effort, it is recommended to provide a single value in a well-known serialisation including the CRS.
                                 </td>
 				<!--
                                 <td>
@@ -8244,7 +8298,9 @@ This is not equal to the release date of the oldest dataset in the collection of
                                     The corresponding geometry for a resource.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    
+                                    This property can be repeated for equivalent values in a distinct serialisation.
+To minimize publisher's effort, it is recommended to provide a single value in a well-known serialisation including the CRS.
+
                                 </td>
 				<!--
                                 <td>
@@ -10333,6 +10389,7 @@ The tables below show the usage of the codelists with the expected qualification
 		<tr><td>dct:accrualPeriodicity</td><td><a href="#Dataset">Dataset</a>,<a href="#DatasetSeries">Dataset Series</a></td><td><a href="http://publications.europa.eu/resource/authority/frequency">EU Vocabularies Frequency Named Authority List</a></td><td></td></tr>
 		<tr><td>dct:format</td><td><a href="#Distribution">Distribution</a>,<a href="#DataService">Data Service </a></td><td><a href="http://publications.europa.eu/resource/authority/file-type">EU Vocabularies File Type Named Authority List</a></td><td></td></tr>
 		<tr><td>dct:language</td><td><a href="#Catalogue">Catalogue</a>,<a href="#Dataset">Dataset</a>, <a href="#CatalogueRecord">Catalogue Records</a>, <a href="#Distribution">Distribution</a></td><td><a href="http://publications.europa.eu/resource/authority/language">EU Vocabularies Languages Named Authority List</a></td><td></td></tr>
+		<tr><td>adms:status</td><td><a href="#Dataset">Dataset</a></td><td><a href="http://publications.europa.eu/resource/authority/dataset-status">EU Vocabularies Dataset Status</a></td><td></td></tr>
 		<tr><td>adms:status</td><td><a href="#Distribution">Distribution</a></td><td><a href="http://publications.europa.eu/resource/authority/distribution-status">EU Vocabularies Distribution Status</a></td><td></td></tr>
 		<tr><td>dcatap:availability</td><td><a href="#Distribution">Distribution</a></td><td><a href="http://publications.europa.eu/resource/authority/planned-availability">Distribution availability vocabulary</a></td><td>The list of terms for the avalability levels of a dataset distribution in the DCAT-AP  specification.</td></tr>
 		<tr><td>spdx:algorithm</td><td><a href="#Checksum">Checksum</a></td><td><a href="https://spdx.org/rdf/terms/#d4e2129">Checksum algorithm members</a></td><td>The members listed are considered a controlled vocabulary of supported checksum algorithms.</td></tr>
@@ -10651,7 +10708,7 @@ In alphabetic order,
   <dt><a href="https://datosgobes.github.io/NTI-RISP/">Pre-DCAT Metadata Profile (2013)</a></dt>
      <dd>a generic profile established prior to DCAT 1.0 (2014), which served as the basis for DCAT/DCAT-AP adoption in Spain. While still in use for general-purpose metadata, it is currently being deprecated  in favor of DCAT-AP-ES.</dd>
   <dt><a href="https://datosgobes.github.io/DCAT-AP-ES/">DCAT-AP-ES</a></dt>
-     <dd>metadata model included in the new version of the Technical Standard for Interoperability of Public Sector Information Resources (NTI-RISP), which is currently undergoing administrative processing and is already being implemented as an extended profile in the National Catalog ([datos.gob.es](https://datos.gob.es/en/catalogo)). In DCAT-AP-ES, we have chosen to incorporate the HVD extension into the core of the model to encourage publishers to describe high-value sets.</dd>
+     <dd>metadata model included in the new version of the Technical Standard for Interoperability of Public Sector Information Resources (NTI-RISP), which is currently undergoing administrative processing and is already being implemented as an extended profile in the National Catalog ([datos.gob.es](https://datos.gob.es/en/catalogo)). In DCAT-AP-ES, we have chosen to incorporate the HVD extension into the core of the model to encourage publishers to describe High-Value datasets.</dd>
 </dl>
 </li>
 
@@ -10676,7 +10733,7 @@ In alphabetic order,
 <h2>High-Value Datasets</h2>
 
 <p>
-In light of the growing importance of data, the European Commission has adopted an <href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0138">implementing regulation</a> focused on high-value datasets on 21 December 2022 [[HVD]]. 
+In light of the growing importance of data, the European Commission has adopted an <href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0138">implementing regulation</a> focused on High-Value Datasets on 21 December 2022 [[HVD]]. 
 The ambition of the High-Value Datasets implementing regulation (HVD IR) is to improve the quality, the accessibility and use of a selective number of core datasets within the public sector.
 To achieve this the HVD IR sets, among others, requirements on the metadata associated with the disclosed datasets.
 These requirements can be expressed as additional constraints and usage notes on DCAT-AP and are collected in an annex dedicated to the implementation of the HVD IR [[DCAT-AP-HVD]].
@@ -11852,6 +11909,8 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 						
 					
 						
+					
+						
 							<tr>
 								<td><a href="#Dataset">Dataset</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></td>
@@ -11950,6 +12009,8 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 								<td><a href="#Dataset.publisher">publisher </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/publisher</div></td>
 							</tr>
+						
+					
 						
 					
 						
@@ -12228,6 +12289,16 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 								<td>Optional</td>
 								<td><a href="#Dataset.spatialresolution">spatial resolution </a></td>
 								<td><div class="shorten">http://www.w3.org/ns/dcat#spatialResolutionInMeters</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Dataset">Dataset</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></td>
+								<td>Optional</td>
+								<td><a href="#Dataset.status">status </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/adms#status</div></td>
 							</tr>
 						
 					

@@ -1,54 +1,76 @@
 # **Consolidated ChangeLog**
 
-This Changelog provides an overview of the changes incorporated in DCAT-AP 3.0.1. A complete list of the issues closed with this release is accessible on [GitHub](https://github.com/SEMICeu/DCAT-AP/issues?q=label%3Arelease-3.0.1)
+This Changelog provides an overview of the changes incorporated in DCAT-AP 3.0.2. A complete list of the issues closed with this release is accessible on [GitHub](https://github.com/SEMICeu/DCAT-AP/issues?q=label%3Arelease:3.0.2-jun2026)
 
 # **Editorial changes**
 
-- fixed the styling of the tables.
-- Improved navigation to point to previous version and current version.
-- removed the deprecated owl:versionInfo from the UML figure
-- validated the property reuse qualifications for the class Dataset.
-- removed the redundant link column in the properties table as the link used in the reuse table is the same.
-  This creates more space for additional documentation.
-- removed the supporting annotation for posting issues on specific datatypes.
-- Adapted the version history text.
-- fixed the diagram to the correct version
-- harmonised Class labels: Period of Time 
-- addressed reported typos 
+Updated section on the <a href="https://semiceu.github.io/DCAT-AP/drafts/3.0.2/#dcat-ap-ecosystem">ecosystem</a> with the addition of DCAT-AP NL, DCAT-AP ES and DCAT-AP Flanders
 
+Updates on codelist usage:
+- actualising the names and urls of codelists 
+- updating the generic guidelines on codelist conformance
 
-# **Adaptations to the different sections**
+Bugfixing of the SHACL shapes
 
-Added a new section on the <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#dcat-ap-ecosystem">ecosystem</a>. 
+Identified issues with external used vocabularies SPDX and ADMS
+
+Clarified and improved the communication on the DCAT-AP releases 
 
 
 # **Data model adaptations**
+- Issue [357](https://github.com/SEMICeu/dcat-ap/issues/357): 
+        extend the advice for modeling agents to the usage of Core Business and Core Person Vocabularies.
+- Issue [242](https://github.com/SEMICeu/dcat-ap/issues/242): 
+        add adms:status as optional property to the class Dataset. 
+        It MUST use the controlled vocabulary http://publications.europa.eu/resource/authority/dataset-status.
+        This property is part of W3C DCAT and applicable to the class Dataset as it is a property of Catalogued Resource. 
+        This change of DCAT-AP adds a max 1 cardinality and a codelist usage guideline.
+- Issue [265](https://github.com/SEMICeu/dcat-ap/issues/265) and issue [175](https://github.com/SEMICeu/dcat-ap/issues/175): 
+        add usage note to allow for multiple serialisations for the same geographic expression. 
+        The properties bbox, centroid and geometry of a location can be expressed in different serialisations.
+        Given that the serialisations are convertable, there is in principle no need to encourage sharing multiple values.
+        This changes enables publishers perform a single publication effort for supporting catalogues that do not support 
+        serialisation conversion between multiple serialisations. 
 
-The list below indicates all changes and differences compared to DCAT-AP 3.0.0. 
-- Issue [370](https://github.com/SEMICeu/dcat-ap/issues/370): Relaxing the cardinality of dct:rights to 0..n for the existing occurrences in the classes Catalogue and Distribution. 
-    As consequence the reuse qualification changes from extended to as-is.
-- Issue [380](https://github.com/SEMICeu/dcat-ap/issues/380): Relaxing the cardinality of dcat:spatialresolution to 0..n for the classes Dataset. 
-    Adapted the reuse qualification.
 
 ## **Detailed issue feedback**
 
-- Issue [399](https://github.com/SEMICeu/dcat-ap/issues/399): Fix the SHACL shape so that dcat:byteSize has range xsd:nonNegativeInteger.
-- Issue [392](https://github.com/SEMICeu/dcat-ap/issues/392): Make the notion Application more clear in the context of DCAT-AP as Application Profile.
-- Issue [389](https://github.com/SEMICeu/dcat-ap/issues/389): Fix the typo "Catalogue Record" in the class Catalogue Resource
-- Issue [368](https://github.com/SEMICeu/dcat-ap/issues/368): Ensure that the reference to DCAT is correct. Provide motivation for the reference.
-- Issue [395](https://github.com/SEMICeu/dcat-ap/issues/395): Replace abbreviation with expanded version.
-- Issue [415](https://github.com/SEMICeu/dcat-ap/issues/415): Remove duplicate Media Type
-- Issue [416](https://github.com/SEMICeu/dcat-ap/issues/416): Use British english spelling for Catalogue.
-- Issue [418](https://github.com/SEMICeu/dcat-ap/issues/418): Data Service property conforms to link to DCAT corrected.
-- Issue [419](https://github.com/SEMICeu/dcat-ap/issues/419): Add reference to DCAT for Dataset property has version.
-- Issue [426](https://github.com/SEMICeu/dcat-ap/issues/426): fixed the diagram
-- Issue [432](https://github.com/SEMICeu/dcat-ap/issues/432): Add packaging format and compression format to the controlled vocabularies tables
-- Issue [436](https://github.com/SEMICeu/dcat-ap/issues/432): Remove catalogue from the classes that use dcat:theme in section 10
-- Issue [435](https://github.com/SEMICeu/DCAT-AP/pull/435): Fixed the typos for this release.
-- Issue [434](https://github.com/SEMICeu/dcat-ap/issues/434): Fixed the namespace issue for rdf:Property in all DCAT-AP base templates. Issue will disappear incrementally with deploying new releases.
-- Issue [426](https://github.com/SEMICeu/dcat-ap/issues/426): Ensure that the latest overview is shown in the draft.
-- Issue [425](https://github.com/SEMICeu/dcat-ap/issues/425): Align the diagram with the 3.0.0 agreement to follow the W3C DCAT inverse properties by removing the dct:isPartOf and dcat:isVersionOf from the diagram.
-- Issue [413](https://github.com/SEMICeu/dcat-ap/issues/425): Introduce an explicit reference to the supporting vocabulary r5r.
+## resolution provided
+- Issue [481](https://github.com/SEMICeu/dcat-ap/issues/481): fixed name of controlled vocabulary
+- Issue [480](https://github.com/SEMICeu/dcat-ap/issues/480): aligned general conformance statements with the specific codelist usage qualifications
+- Issue [475](https://github.com/SEMICeu/dcat-ap/issues/475): fixed ineffective check in shacl shape  
+- Issue [473](https://github.com/SEMICeu/dcat-ap/issues/473): provided information to publish DCAT-AP on the website semantic farm  
+- Issue [469](https://github.com/SEMICeu/dcat-ap/issues/469): improved usage note for codelist usage for geographical coverage  
+- Issue [467](https://github.com/SEMICeu/dcat-ap/issues/467): reference W3C DCAT recommendation instead of the draft  
+- Issue [466](https://github.com/SEMICeu/dcat-ap/issues/466): explained the equivalence between * and n notation for max cardinality; harmonised the usage to * as it is the most used notation in the specification  
+- Issue [452](https://github.com/SEMICeu/dcat-ap/issues/452): integrated DCAT-AP NL references in the ecosystem section  
+- Issue [451](https://github.com/SEMICeu/dcat-ap/issues/451): integrated DCAT-AP ES references in the ecosystem section  
+- Issue [450](https://github.com/SEMICeu/dcat-ap/issues/450): provided an draft update of ADMS to document the advised adms:Identifier usage   
+- Issue [448](https://github.com/SEMICeu/dcat-ap/issues/448): fix SHACL shape deadlinks  
+- Issue [447](https://github.com/SEMICeu/dcat-ap/issues/447): remove schema.org from the SHACL import list as it is not used anymore.   
+- Issue [446](https://github.com/SEMICeu/dcat-ap/issues/446): fix SHACL shape for property dct:conformsTo for Catalogue Record    
+- Issue [445](https://github.com/SEMICeu/dcat-ap/issues/445): integrated DCAT-AP Flanders, BE references in the ecosystem section  
+- Issue [442](https://github.com/SEMICeu/dcat-ap/issues/442): fix links to codelists  
+- Issue [357](https://github.com/SEMICeu/dcat-ap/issues/357): advice the usage of Core Business and Core Person for modeling agents (TODO)  
+- Issue [242](https://github.com/SEMICeu/dcat-ap/issues/242): add adms:status to dataset and it MUST use the controlled vocabulary (TODO)  
+- Issue [316](https://github.com/SEMICeu/dcat-ap/issues/316): request on guidance on additional theme support closed because addressed due to updated codelist usage qualifications  
+- Issue [314](https://github.com/SEMICeu/dcat-ap/issues/314): request on guidance on mapping theme support closed because addressed due to updated codelist usage qualifications  
+
+## issues requesting clarification or closed due to long inactivity
+- Issue [471](https://github.com/SEMICeu/dcat-ap/issues/471): feedback provided on dataset series  
+- Issue [455](https://github.com/SEMICeu/dcat-ap/issues/455): feedback on publication as W3C and SEMIC for ADMS  
+- Issue [440](https://github.com/SEMICeu/dcat-ap/issues/440): feedback on the interplay of DCAT-AP and DCAT-AP HVD  
+- Issue [437](https://github.com/SEMICeu/dcat-ap/issues/437): feedback on the definition and usage of Catogue  
+- Issue [433](https://github.com/SEMICeu/dcat-ap/issues/433): feedback on the versioning of DCAT-AP  
+- Issue [430](https://github.com/SEMICeu/dcat-ap/issues/430): feedback on the usage of the properties accessURL and downloadURL  
+- Issue [417](https://github.com/SEMICeu/dcat-ap/issues/417): feedback on the availability of a common codelist for Standards  
+- Issue [414](https://github.com/SEMICeu/dcat-ap/issues/414): feedback on the published artefacts for DCAT-AP  
+- Issue [404](https://github.com/SEMICeu/dcat-ap/issues/404): request for an additional property target audience closed because no additional support  
 
 
- 
+- Issue [402](https://github.com/SEMICeu/dcat-ap/issues/402): adaptation of the SPDX URIs forwarded to W3C  
+
+## version management 
+- Issue [468](https://github.com/SEMICeu/dcat-ap/issues/468): release notes and versioning clarified and improved  
+- Issue [458](https://github.com/SEMICeu/dcat-ap/issues/458): release notes and versioning clarified and improved  
+- Issue [477](https://github.com/SEMICeu/dcat-ap/issues/477): release notes and versioning implemented in publication branch  
