@@ -27,3 +27,6 @@ This Changelog provides an overview of the changes incorporated in DCAT-AP HVD 3
 - Issue [459](https://github.com/SEMICeu/dcat-ap/issues/459), missing contact point for Dataset in diagram
 - Issue [462](https://github.com/SEMICeu/dcat-ap/issues/462), `DatasetSeries.HVDcategory` definition fix
 - Issue [482](https://github.com/SEMICeu/DCAT-AP/issues/482), `High Value datasets` changed to `High-Value datasets`
+- Issue [497](https://github.com/SEMICeu/DCAT-AP/issues/497), fix license document `more permissive than` property
+- Issue [494](https://github.com/SEMICeu/DCAT-AP/issues/494), add Dataset Series `title` and `description`
+- Issue [492](https://github.com/SEMICeu/DCAT-AP/issues/492), change `DataService.title` reuse qualification to `E`
