@@ -141,7 +141,6 @@
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/eb3ac4e4fdde2e2588a9502c5956060a18c5c99f>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/f30149ffb6ec9d00dd5866b052105729fa27d02a>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/f514dbc668e2c9c457d61f1f2721c7fbcb22cb59>,
-    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/f8b02efd063b8089b72ce9677a1e4a3488eeb9a9>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/HVDELI>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/HVDCategoryCV>;
   shacl:targetClass dcat:DataService .
@@ -167,18 +166,18 @@
   shacl:path <http://data.europa.eu/r5r/hvdCategory>;
   <https://purl.eu/ns/shacl#message> "The range of HVD category must be of type <http://www.w3.org/2004/02/skos/core#Concept>."@en .
 
-<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.title";
-  shacl:datatype rdf:langString;
-  shacl:description "A name given to the Data Service."@en;
-  shacl:name "title"@en;
-  shacl:path dct:title .
-
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/3bde2663aaca96d953765ac2e525ef64710bf4d6> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.endpointURL";
   shacl:description "The root location or primary endpoint of the service (an IRI)."@en;
   shacl:name "endpoint URL"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path dcat:endpointURL;
   <https://purl.eu/ns/shacl#message> "The expected value for endpoint URL is a rdfs:Resource (URI or blank node)"@en .
+
+<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.title";
+  shacl:datatype rdf:langString;
+  shacl:description "A name given to the Data Service."@en;
+  shacl:name "title"@en;
+  shacl:path dct:title .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/60675e8175395481680e343172eea5fcd3f82cd4> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.HVDcategory";
   shacl:description "The HVD category to which this Data Service belongs."@en;
@@ -290,7 +289,7 @@
   shacl:name "applicable legislation"@en;
   shacl:path <http://data.europa.eu/r5r/applicableLegislation>;
   <https://purl.eu/ns/shacl#message> "Minimally 1 values are expected for applicable legislation"@en .
-
+  
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/d5d74574f70f9a979535f3624608f88180dd0c97> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.title";
   shacl:description "A name given to the Data Service."@en;
   shacl:name "title"@en;
@@ -329,7 +328,7 @@
   shacl:name "HVD category"@en;
   shacl:path <http://data.europa.eu/r5r/hvdCategory>;
   <https://purl.eu/ns/shacl#message> "Minimally 1 values are expected for HVD category"@en .
-
+  
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/f8b02efd063b8089b72ce9677a1e4a3488eeb9a9> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.title";
   shacl:description "A name given to the Data Service."@en;
   shacl:minCount 1;
@@ -339,11 +338,19 @@
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb>,
+    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859>,
+    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/6cae9880e515253132af1452a38a8a5827165149>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e>,
+    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/768bb4171e00505886fe9a1e949b4cd71f0eb548>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/892bcf3c90199fdd741a47fc4559dc59d5a5b034>,
+    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/8f61614144aa7bca188b24f5976593dc08aad0e6>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/924bfd3702cf51f4a6bc11bd1b7e06790d5d2fbc>,
+    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/92d65d33f2a5d5345f1980ffd0cf304e47dd0caf>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/9f9f581dcae4fbd1653141d8b35ba7f86b4cf740>,
-    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/d36065836a29f463546e269c25db7b95b879b3fb>;
+    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/d36065836a29f463546e269c25db7b95b879b3fb>,
+    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/d4d4f2399b8cf2f615ac658920373b714726bed0>,
+    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/d5d74574f70f9a979535f3624608f88180dd0c97>,
+    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/f8b02efd063b8089b72ce9677a1e4a3488eeb9a9>;
   shacl:targetClass dcat:DatasetSeries .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DatasetSeries.applicablelegislation";
@@ -352,11 +359,29 @@
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path <http://data.europa.eu/r5r/applicableLegislation> .
 
+<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DatasetSeries.title";
+  shacl:datatype rdf:langString;
+  shacl:description "A name given to the Dataset Series."@en;
+  shacl:name "title"@en;
+  shacl:path dct:title .
+
+<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/6cae9880e515253132af1452a38a8a5827165149> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DatasetSeries.description";
+  shacl:description "A free-text account of the Dataset Series."@en;
+  shacl:name "description"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path dct:description .
+
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DatasetSeries.applicablelegislation";
   shacl:class <http://data.europa.eu/eli/ontology#LegalResource>;
   shacl:description "The legislation that mandates the creation or management of the Dataset Series."@en;
   shacl:name "applicable legislation"@en;
   shacl:path <http://data.europa.eu/r5r/applicableLegislation> .
+
+<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/768bb4171e00505886fe9a1e949b4cd71f0eb548> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DatasetSeries.description";
+  shacl:description "A free-text account of the Dataset Series."@en;
+  shacl:name "description"@en;
+  shacl:path dct:description;
+  shacl:uniqueLang true .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/892bcf3c90199fdd741a47fc4559dc59d5a5b034> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DatasetSeries.HVDCategory";
   shacl:class skos:Concept;
@@ -364,11 +389,23 @@
   shacl:name "HVD Category"@en;
   shacl:path <http://data.europa.eu/r5r/hvdCategory> .
 
+<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/8f61614144aa7bca188b24f5976593dc08aad0e6> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DatasetSeries.description";
+  shacl:description "A free-text account of the Dataset Series."@en;
+  shacl:minCount 1;
+  shacl:name "description"@en;
+  shacl:path dct:description .
+
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/924bfd3702cf51f4a6bc11bd1b7e06790d5d2fbc> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DatasetSeries.HVDCategory";
   shacl:description "The HVD category to which this Dataset Series belongs."@en;
   shacl:name "HVD Category"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path <http://data.europa.eu/r5r/hvdCategory> .
+
+<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/92d65d33f2a5d5345f1980ffd0cf304e47dd0caf> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DatasetSeries.title";
+  shacl:description "A name given to the Dataset Series."@en;
+  shacl:name "title"@en;
+  shacl:path dct:title;
+  shacl:uniqueLang true .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/9f9f581dcae4fbd1653141d8b35ba7f86b4cf740> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DatasetSeries.HVDCategory";
   shacl:description "The HVD category to which this Dataset Series belongs."@en;
@@ -381,6 +418,24 @@
   shacl:minCount 1;
   shacl:name "applicable legislation"@en;
   shacl:path <http://data.europa.eu/r5r/applicableLegislation> .
+
+<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/d4d4f2399b8cf2f615ac658920373b714726bed0> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DatasetSeries.description";
+  shacl:datatype rdf:langString;
+  shacl:description "A free-text account of the Dataset Series."@en;
+  shacl:name "description"@en;
+  shacl:path dct:description .
+
+<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/d5d74574f70f9a979535f3624608f88180dd0c97> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DatasetSeries.title";
+  shacl:description "A name given to the Dataset Series."@en;
+  shacl:name "title"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path dct:title .
+
+<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/f8b02efd063b8089b72ce9677a1e4a3488eeb9a9> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DatasetSeries.title";
+  shacl:description "A name given to the Dataset Series."@en;
+  shacl:minCount 1;
+  shacl:name "title"@en;
+  shacl:path dct:title .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetShape> a shacl:NodeShape;
   shacl:closed false;
@@ -708,15 +763,15 @@
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dct:LicenseDocumentShape/38be194870411d44b5dbd112927def902b2138ff> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#LicenceDocument.morepermissivethan";
   shacl:class skos:Concept;
-  shacl:description "A more permissive licence."@en;
+  shacl:description "A less permissive licence."@en;
   shacl:name "more permissive than"@en;
-  shacl:path skos:exactMatch .
+  shacl:path skos:narrowMatch .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dct:LicenseDocumentShape/5a3b1ca81c6e1076c42731653005614063d29095> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#LicenceDocument.morepermissivethan";
-  shacl:description "A more permissive licence."@en;
+  shacl:description "A less permissive licence."@en;
   shacl:name "more permissive than"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path skos:exactMatch .
+  shacl:path skos:narrowMatch .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dct:LicenseDocumentShape/64de7386a87e39725b217e3da2ff87b85902c34d> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#LicenceDocument.aspermissiveas";
   shacl:description "A licence with the same permissiveness."@en;
@@ -731,10 +786,10 @@
   shacl:path skos:exactMatch .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dct:LicenseDocumentShape/c2e2e99ee3d739d816472df0fc6bfd51aa14b4aa> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#LicenceDocument.morepermissivethan";
-  shacl:description "A more permissive licence."@en;
+  shacl:description "A less permissive licence."@en;
   shacl:maxCount 1;
   shacl:name "more permissive than"@en;
-  shacl:path skos:exactMatch .
+  shacl:path skos:narrowMatch .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dct:LicenseDocumentShape/dbdcada8d8a906e49f12204752eadd74f54fcef5> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#LicenceDocument.aspermissiveas";
   shacl:class skos:Concept;

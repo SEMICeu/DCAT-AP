@@ -107,7 +107,7 @@
       prevVersionURI: "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd/",
       latestVersion: "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/",
       specStatus: "base",
-      publishDate: "2026-06-10",
+      publishDate: "2026-10-06",
       editors: myeditors,
       authors: myauthors,
       otherLinks: [
@@ -314,9 +314,9 @@ Any improvement of the metadata will immediately flow throughout the European ne
     <h2>Status</h2>
         <p>
 <!-- readd when SEMIC has a codelist about it process 
-	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsW3C">SEMIC Draft</a> published at 2026-06-10.
+	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsW3C">SEMIC Draft</a> published at 2026-10-06.
 -->
-	This application profile has the status SEMIC Draft published at 2026-06-10.
+	This application profile has the status SEMIC Draft published at 2026-10-06.
         </p>
         <p>
             Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="CHANGELOG">Changelog</a>.
@@ -1627,8 +1627,8 @@ A Dataset MUST have an associated Data Service, besides the exceptions listed in
                                 <td>
                                     
 				       
-				        <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#DataService.title">A</a>
-                                       
+				        <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#DataService.title">E</a>
+				       
                                     
                                 </td>
                             </tr>
@@ -2245,7 +2245,9 @@ This <a href="#apis-are-mandatory">section</a> provides more information how thi
                     
                         <dd>
                             For this entity the following properties are defined: <a href="#DatasetSeries.applicablelegislation">applicable legislation</a>
+                            , <a href="#DatasetSeries.description">description</a>
                             , <a href="#DatasetSeries.HVDCategory">HVD Category</a>
+                            , <a href="#DatasetSeries.title">title</a>
                             .
                     </dd>
                 
@@ -2347,6 +2349,61 @@ As multiple legislations may apply to the resource the maximum cardinality is no
                                 </td>
                             </tr>
                         
+                            <tr id="DatasetSeries.description"
+                                typeof="rdf:Property"
+                                resource="http://purl.org/dc/terms/description"
+                                class="class mandatory">
+<!--
+                                <td>
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20description%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd%23DatasetSeries.description" target="_blank" rel="noopener noreferrer" >
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+--->
+                                <td>
+                                        <a href="http://purl.org/dc/terms/description"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/description"
+                                           data-placement="right">
+                                        description</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Language-taggedstring" data-placement="right">Language-tagged string</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    1..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    A free-text account of the Dataset Series.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    This property can be repeated for parallel language versions of the name. It is recommended to provide an indication about the dimensions the Dataset Series evolves. For the HVD reporting, the English version is mandatory.
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+				<!--
+                                <td>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_description">Link</a>
+                                </td>
+				-->
+                                <td>
+                                    
+                                       
+				           
+				           <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_description">E</a>
+				           
+                                       
+				    
+                                </td>
+                            </tr>
+                        
                             <tr id="DatasetSeries.HVDCategory"
                                 typeof="rdf:Property"
                                 resource="http://data.europa.eu/r5r/hvdCategory"
@@ -2396,6 +2453,61 @@ As multiple legislations may apply to the resource the maximum cardinality is no
                                        
 				        P
 				       
+				    
+                                </td>
+                            </tr>
+                        
+                            <tr id="DatasetSeries.title"
+                                typeof="rdf:Property"
+                                resource="http://purl.org/dc/terms/title"
+                                class="class mandatory">
+<!--
+                                <td>
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20title%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd%23DatasetSeries.title" target="_blank" rel="noopener noreferrer" >
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+--->
+                                <td>
+                                        <a href="http://purl.org/dc/terms/title"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/title"
+                                           data-placement="right">
+                                        title</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Language-taggedstring" data-placement="right">Language-tagged string</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    1..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    A name given to the Dataset Series.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    This property can be repeated for parallel language versions of the name. For the HVD reporting, the English version is mandatory.
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+				<!--
+                                <td>
+                                    <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_title">Link</a>
+                                </td>
+				-->
+                                <td>
+                                    
+                                       
+				           
+				           <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_title">E</a>
+				           
+                                       
 				    
                                 </td>
                             </tr>
@@ -3273,7 +3385,7 @@ According to the guidelines for <a href="#c3">legal Information</a> in DCAT-AP H
                         
                             <tr id="LicenceDocument.morepermissivethan"
                                 typeof="rdf:Property"
-                                resource="http://www.w3.org/2004/02/skos/core#exactMatch"
+                                resource="http://www.w3.org/2004/02/skos/core#narrowMatch"
                                 class="class mandatory">
 <!--
                                 <td>
@@ -3283,9 +3395,9 @@ According to the guidelines for <a href="#c3">legal Information</a> in DCAT-AP H
                                 </td>
 --->
                                 <td>
-                                        <a href="http://www.w3.org/2004/02/skos/core#exactMatch"
+                                        <a href="http://www.w3.org/2004/02/skos/core#narrowMatch"
                                            data-toggle="tooltip"
-                                           data-content="http://www.w3.org/2004/02/skos/core#exactMatch"
+                                           data-content="http://www.w3.org/2004/02/skos/core#narrowMatch"
                                            data-placement="right">
                                         more permissive than</a>
                                 </td>
@@ -3300,7 +3412,7 @@ According to the guidelines for <a href="#c3">legal Information</a> in DCAT-AP H
                                     0..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    A more permissive licence.
+                                    A less permissive licence.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -4704,8 +4816,28 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 								<td><a href="#DatasetSeries">Dataset Series</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/dcat#DatasetSeries</div></td>
 								<td>Mandatory</td>
+								<td><a href="#DatasetSeries.description">description </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/description</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#DatasetSeries">Dataset Series</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#DatasetSeries</div></td>
+								<td>Mandatory</td>
 								<td><a href="#DatasetSeries.HVDCategory">HVD Category </a></td>
 								<td><div class="shorten">http://data.europa.eu/r5r/hvdCategory</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#DatasetSeries">Dataset Series</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#DatasetSeries</div></td>
+								<td>Mandatory</td>
+								<td><a href="#DatasetSeries.title">title </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/title</div></td>
 							</tr>
 						
 					
@@ -4714,6 +4846,14 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 					
 						
 					
+						
+					
+						
+					
+					
+						
+					
+						
 					
 						
 					
@@ -4912,7 +5052,7 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 								<td><div class="shorten">http://purl.org/dc/terms/LicenseDocument</div></td>
 								<td></td>
 								<td><a href="#LicenceDocument.morepermissivethan">more permissive than </a></td>
-								<td><div class="shorten">http://www.w3.org/2004/02/skos/core#exactMatch</div></td>
+								<td><div class="shorten">http://www.w3.org/2004/02/skos/core#narrowMatch</div></td>
 							</tr>
 						
 					

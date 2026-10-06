@@ -124,7 +124,7 @@
       "@type": "@id"
     },
     "skos:narrowMatch": {
-      "@id": "http://www.w3.org/2004/02/skos/core#exactMatch",
+      "@id": "http://www.w3.org/2004/02/skos/core#narrowMatch",
       "@type": "@id"
     },
     "vcard:hasEmail": {
