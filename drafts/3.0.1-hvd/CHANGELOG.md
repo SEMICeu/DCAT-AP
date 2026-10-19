@@ -30,6 +30,16 @@ This Changelog provides an overview of the changes incorporated in DCAT-AP HVD 3
 - Remove the supportive class Literal
 - Add a Datatypes section
 - Add the `eli` prefix
+
+# **Validation (SHACL)**
+- Add English-language title and description checks for Dataset, with severity Violation.
+- Add licence-mapping validation shapes.
+- Update download URL validation shapes.
+- Add Data Service title validation shapes.
+- Update Dataset and Dataset Series title and description shapes.
+- Add the Dataset bulk-download shape as an rdfs:member of the shapes collection. This membership alone does not activate the check.
+- Change the prefix used for the Dublin Core Terms namespace from dc to dct. 
+
   
 ## **Detailed Issue Feedback**  
   
