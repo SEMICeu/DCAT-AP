@@ -1020,7 +1020,7 @@
   shacl:name "HVD category"@en;
   shacl:path <http://data.europa.eu/r5r/hvdCategory>;
   shacl:node <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#HVDCategoryRestriction> ;
-  <https://purl.eu/ns/shacl#message> "The range of HVD category must be of type <http://www.w3.org/2004/02/skos/core#Concept>."@en .
+  <https://purl.eu/ns/shacl#message> "The range of HVD category must be in scheme <http://data.europa.eu/bna/asd487ae75>."@en .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/HVDCategoryCV> rdfs:seeAlso "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.HVDcategory";
   shacl:description "The HVD category to which this Data Service belongs."@en;
