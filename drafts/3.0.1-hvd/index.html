@@ -107,7 +107,7 @@
       prevVersionURI: "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd/",
       latestVersion: "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/",
       specStatus: "base",
-      publishDate: "2026-10-06",
+      publishDate: "2026-10-25",
       editors: myeditors,
       authors: myauthors,
       otherLinks: [
@@ -314,9 +314,9 @@ Any improvement of the metadata will immediately flow throughout the European ne
     <h2>Status</h2>
         <p>
 <!-- readd when SEMIC has a codelist about it process 
-	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsW3C">SEMIC Draft</a> published at 2026-10-06.
+	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsW3C">SEMIC Draft</a> published at 2026-10-25.
 -->
-	This application profile has the status SEMIC Draft published at 2026-10-06.
+	This application profile has the status SEMIC Draft published at 2026-10-25.
         </p>
         <p>
             Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="CHANGELOG">Changelog</a>.
@@ -390,7 +390,7 @@ An <strong>Annex to an Application Profile</strong> is a specification that prec
 Despite DCAT-AP HVD being called an Annex to DCAT-AP it has all the properties of an application profile of DCAT-AP. 
 The notion Annex is intended to reflect the close proximity of this document to DCAT-AP. 
 In case there are changes to DCAT-AP, this document will be updated too. 
-Nevertheless, to keep the impact on the document to the minimum and maximize the readability in relationship to the HVD IR,   
+Nevertheless, to keep the impact on the document to the minimum and maximize the readability in relationship to the HVD IR,
 only the classes and properties that are featured explicitly in the HVD IR are listed in this document.
 
 </p>
@@ -510,7 +510,7 @@ In addition to the constraints also cross-references are provided to DCAT and DC
 	<li>E: reused with additional restrictions, additional usage notes or more specific usage expectations compared to DCAT-AP</li>
 	<li>P: profile specific extension where DCAT-AP had no requirements earlier on specified</li>
 </ul>
-This reuse qualification assessement is w.r.t. a specific version of DCAT-AP. 
+This reuse qualification assessment is w.r.t. a specific version of DCAT-AP.
 Therefore it may vary over time when new versions of DCAT-AP are created.
 
 
@@ -894,7 +894,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                     A link to the Dataset, Data service or Catalog described in the record.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    A catalogue record will refer to one entity in a catalogue. This can be either a Dataset or a Data Service. To ensure an unambigous reading of the cardinality the range is set to Catalogued Resource. However it is not the intend with this range to require the explicit use of the class Catalogued Record. As abstract class, an subclass should be used.
+                                    A catalogue record will refer to one entity in a catalogue. This can be either a Dataset or a Data Service. To ensure an unambiguous reading of the cardinality the range is set to Catalogued Resource. However it is not the intent with this range to require the explicit use of the class Catalogue Record. As abstract class, a subclass should be used.
                                 </td>
 				<!--
                                 <td>
@@ -1451,7 +1451,7 @@ Article 3.3 requires to provide API documentation in a Union or internationally 
                                     A licence under which the Data service is made available.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    Article 3.3 specifies that the terms of use should be provided. According to the guidelines for <a href="#c3">legal Information</a> in DCAT-AP HVD this is fulfilled by providing by preference a licence. As alternative rights can be used.
+                                    Article 3.2 specifies that the terms of use should be provided. According to the guidelines for <a href="#c3">legal Information</a> in DCAT-AP HVD this is fulfilled by providing by preference a licence. As alternative rights can be used.
                                 </td>
 				<!--
                                 <td>
@@ -1501,10 +1501,10 @@ Article 3.3 requires to provide API documentation in a Union or internationally 
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    A statement that specifies rights associated with the Distribution.
+                                    A statement that specifies rights associated with the Data Service.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    Article 3.3 specifies that the terms of use should be provided. According to the guidelines for <a href="#c3">legal Information</a> in DCAT-AP HVD this is fulfilled by providing by preference a licence. As alternative rights can be used.
+                                    Article 3.2 specifies that the terms of use should be provided. According to the guidelines for <a href="#c3">legal Information</a> in DCAT-AP HVD this is fulfilled by providing by preference a licence. As alternative rights can be used.
                                 </td>
 				<!--
                                 <td>
@@ -1780,7 +1780,7 @@ A Dataset MUST have an associated Data Service, besides the exceptions listed in
                                     The legislation that mandates the creation or management of the Dataset.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    For HVD the value must include the ELI <a href="http://data.europa.eu/eli/reg_impl/2023/138/oj">http://data.europa.eu/eli/reg_impl/2023/138/oj</a>. 
+                                    For HVD the value MUST include the ELI <a href="http://data.europa.eu/eli/reg_impl/2023/138/oj">http://data.europa.eu/eli/reg_impl/2023/138/oj</a>. 
 <br/>
 As multiple legislations may apply to the resource the maximum cardinality is not limited.
                                 </td>
@@ -1797,7 +1797,7 @@ As multiple legislations may apply to the resource the maximum cardinality is no
                                 <td>
                                     
 				       
-				        <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#DataService.applicablelegislation">E</a>
+				        <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Dataset.applicablelegislation">E</a>
 				       
                                     
                                 </td>
@@ -1996,7 +1996,7 @@ This <a href="#apis-are-mandatory">section</a> provides more information how thi
                                     A free-text account of the Dataset.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    This property can be repeated for parallel language versions of the description. For the HVD reporting, the English version is mandatory.
+                                    This property can be repeated for parallel language versions of the description. For the HVD reporting, providing English version is required. This can be either provided directly, or added automatically by the EDP eTranslation service.
                                 </td>
 				<!--
                                 <td>
@@ -2155,7 +2155,7 @@ This <a href="#apis-are-mandatory">section</a> provides more information how thi
                                     A name given to the Dataset.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    This property can be repeated for parallel language versions of the name. For the HVD reporting, the English version is mandatory.
+                                    This property can be repeated for parallel language versions of the name. For the HVD reporting, providing English version is required. This can be either provided directly, or added automatically by the EDP eTranslation service.
                                 </td>
 				<!--
                                 <td>
@@ -2326,7 +2326,7 @@ This <a href="#apis-are-mandatory">section</a> provides more information how thi
                                     The legislation that mandates the creation or management of the Dataset Series.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    For HVD the value must include the ELI <a href="http://data.europa.eu/eli/reg_impl/2023/138/oj">http://data.europa.eu/eli/reg_impl/2023/138/oj</a>. 
+                                    For HVD the value MUST include the ELI <a href="http://data.europa.eu/eli/reg_impl/2023/138/oj">http://data.europa.eu/eli/reg_impl/2023/138/oj</a>. 
 <br/>
 As multiple legislations may apply to the resource the maximum cardinality is not limited.
                                 </td>
@@ -2381,7 +2381,7 @@ As multiple legislations may apply to the resource the maximum cardinality is no
                                     A free-text account of the Dataset Series.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    This property can be repeated for parallel language versions of the name. It is recommended to provide an indication about the dimensions the Dataset Series evolves. For the HVD reporting, the English version is mandatory.
+                                    This property can be repeated for parallel language versions of the description. It is recommended to provide an indication about the dimensions the Dataset Series evolves. For the HVD reporting, providing English version is required. This can be either provided directly, or added automatically by the EDP eTranslation service.
                                 </td>
 				<!--
                                 <td>
@@ -2395,12 +2395,10 @@ As multiple legislations may apply to the resource the maximum cardinality is no
 				-->
                                 <td>
                                     
-                                       
-				           
-				           <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_description">E</a>
-				           
-                                       
-				    
+				       
+				        <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#DatasetSeries.description">E</a>
+				       
+                                    
                                 </td>
                             </tr>
                         
@@ -2489,7 +2487,7 @@ As multiple legislations may apply to the resource the maximum cardinality is no
                                     A name given to the Dataset Series.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    This property can be repeated for parallel language versions of the name. For the HVD reporting, the English version is mandatory.
+                                    This property can be repeated for parallel language versions of the name. For the HVD reporting, providing English version is required. This can be either provided directly, or added automatically by the EDP eTranslation service.
                                 </td>
 				<!--
                                 <td>
@@ -2503,12 +2501,10 @@ As multiple legislations may apply to the resource the maximum cardinality is no
 				-->
                                 <td>
                                     
-                                       
-				           
-				           <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_title">E</a>
-				           
-                                       
-				    
+				       
+				        <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#DatasetSeries.title">E</a>
+				       
+                                    
                                 </td>
                             </tr>
                         
@@ -2766,7 +2762,7 @@ A Dataset MUST have an associated Data Service, besides the exceptions listed in
                                     The legislation that mandates the creation or management of the Distribution
                                 </td>
                                 <td property="skos:scopeNote">
-                                    For HVD the value must include the ELI <a href="http://data.europa.eu/eli/reg_impl/2023/138/oj">http://data.europa.eu/eli/reg_impl/2023/138/oj</a>. 
+                                    For HVD the value MUST include the ELI <a href="http://data.europa.eu/eli/reg_impl/2023/138/oj">http://data.europa.eu/eli/reg_impl/2023/138/oj</a>. 
 <br/>
 As multiple legislations may apply to the resource the maximum cardinality is not limited.
                                 </td>
@@ -3056,7 +3052,7 @@ According to the guidelines for <a href="#c3">legal Information</a> in DCAT-AP H
                         Usage Note
                     </dt>
                     <dd>
-                        Article3.4 requires to designate a point of contact for an API. It is recommended to provide  at least either an email or a contact form from e.g. a service desk.
+                        Article 3.4 requires to designate a point of contact for an API. It is recommended to provide at least either an email or a contact form from e.g. a service desk.
                     </dd>
                 
                 
@@ -3284,6 +3280,7 @@ According to the guidelines for <a href="#c3">legal Information</a> in DCAT-AP H
                         <dd>
                             For this entity the following properties are defined: <a href="#LicenceDocument.aspermissiveas">as permissive as</a>
                             , <a href="#LicenceDocument.morepermissivethan">more permissive than</a>
+                            , <a href="#LicenceDocument.sameas">same as</a>
                             .
                     </dd>
                 
@@ -3359,7 +3356,7 @@ According to the guidelines for <a href="#c3">legal Information</a> in DCAT-AP H
                                     0..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    A licence with the same permissiveness.
+                                    A licence that is as permissive as this license.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -3412,7 +3409,60 @@ According to the guidelines for <a href="#c3">legal Information</a> in DCAT-AP H
                                     0..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    A less permissive licence.
+                                    A licence that is less permissive than this licence.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                       
+				        P
+				       
+				    
+                                </td>
+                            </tr>
+                        
+                            <tr id="LicenceDocument.sameas"
+                                typeof="rdf:Property"
+                                resource="http://www.w3.org/2002/07/owl#sameAs"
+                                class="class mandatory">
+<!--
+                                <td>
+				    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20same as%20in%20Licence Document&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd%23LicenceDocument.sameas" target="_blank" rel="noopener noreferrer" >
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+--->
+                                <td>
+                                        <a href="http://www.w3.org/2002/07/owl#sameAs"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2002/07/owl#sameAs"
+                                           data-placement="right">
+                                        same as</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#LicenceDocument" data-placement="right">Licence Document</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    A licence that is as permissive as this license.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -3941,6 +3991,7 @@ Validation systems SHOULD produce errors.
 <tr><td>dcatap:hvdCategory</td><td><a href="#DatasetSeries">Dataset Series </a></td><td><a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/high-value-dataset-category">EU Vocabularies HVD Categories</a></td><td><a href="http://data.europa.eu/bna/asd487ae75">http://data.europa.eu/bna/asd487ae75</a></td><td></td></tr>
 <tr><td>skos:narrowMatch</td><td><a href="#LicenceDocument">Licence Document </a></td><td><a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/licence">EU Vocabularies Licence</a></td><td><a href="http://publications.europa.eu/resource/dataset/licence">http://publications.europa.eu/resource/dataset/licence</a></td><td></td></tr>
 <tr><td>skos:exactMatch</td><td><a href="#LicenceDocument">Licence Document </a></td><td><a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/licence">EU Vocabularies Licence</a></td><td><a href="http://publications.europa.eu/resource/dataset/licence">http://publications.europa.eu/resource/dataset/licence</a></td><td></td></tr>
+<tr><td>owl:sameAs</td><td><a href="#LicenceDocument">Licence Document </a></td><td><a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/licence">EU Vocabularies Licence</a></td><td><a href="http://publications.europa.eu/resource/dataset/licence">http://publications.europa.eu/resource/dataset/licence</a></td><td></td></tr>
             </tbody>
             </table>
 
@@ -3999,7 +4050,7 @@ That is not provided by the HVD IR and therefore these advises or guidelines are
 <h3 id="c1">In scope of HVD IR</h3>
 
 <p>
-A Dataset is a HVD Dataset if and only if a MS has included it in its reporting. 
+For the purpose of this specification, a Dataset is a HVD Dataset if and only if a MS has included it in its reporting.
 The HVD IR defines High-Value Datasets. It may be possible that the same definition applies to multiple entities. 
 In that case, a Member State should select the most appropriate one, according to the rules in the regulation. 
 If the Member State decides to include multiple entities in the reporting, the requirements set out in the HVD IR will apply to all these entities.
@@ -4018,12 +4069,8 @@ Consequently, the application of DCAT-AP HVD is only necessary if the intention 
 As stated in the introduction, the use of DCAT-AP HVD is not obliged by the HVD IR, but in the case of exchanging DCAT-AP metadata of HVD Datasets this specification should be followed.  
 </p>
 
-<h4>Denoting an HVD Dataset</h4>
-Each entity (Dataset, Data Series, Data Service, Distribution, Catalogue) that is identified by a MS in scope of the HVD IR should provide the European Legislation Identifier (ELI) <code>http://data.europa.eu/eli/reg_impl/2023/138/oj</code> of the HVD IR for the property <a href="http://data.europa.eu/r5r/applicableLegislation">applicable legislation</a>.
-
-For the reporting, a Member State can provide a catalogue containing all elements that are within scope for the reporting of the HVD IR. 
-In that case the catalogue should also set the value for the property applicable legislation to the ELI of the HVD.
-
+<h4>Denoting a HVD Dataset</h4>
+Each entity (Dataset, Dataset Series, Data Service, Distribution) that is identified by a MS in scope of the HVD IR should provide the European Legislation Identifier (ELI) <code>http://data.europa.eu/eli/reg_impl/2023/138/oj</code> of the HVD IR for the property <a href="http://data.europa.eu/r5r/applicableLegislation">applicable legislation</a>.
 
 <h4>Special cases</h4>
 
@@ -4048,7 +4095,7 @@ Nevertheless, it must be noted that the HVD requirements on a Data Service might
 
 <h3 id="c2">HVD data category</h3>
 The HVD IR defines six thematic data categories: geospatial, earth observation and environment, meteorological, statistics, companies and company ownership, and mobility. 
-A new property <a href="http://data.europa.eu/r5r/hvdCategory">HVD category</a> is introduced to indicate the HVD category to which an resource, i.e. a dataset, belongs.
+A new property <a href="http://data.europa.eu/r5r/hvdCategory">HVD category</a> is introduced to indicate the HVD category to which a resource, i.e. a dataset, belongs.
 The controlled vocabulary <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/high-value-dataset-category">High-value dataset categories</a>, maintained by the Publications Office, contains not only these six categories, but also the complete list of datasets required by the HVD IR.
 The High-Value Datasets and APIs MUST be annotated with the most precise concept.
 A resource may belong to more than one data category.
@@ -4085,7 +4132,7 @@ Persistence means that, for these entities, Member States take the responsibilit
 Thus for the entities that MSs include in the reporting and for which the reporting requires a persistent link, a MS makes a persistent commitment.
 
 </p><p>
-As DCAT-AP is a Semantic Web data specification, persistence is associated with the use persistent URIs (PURIs) for the metadata descriptions. 
+As DCAT-AP is a Semantic Web data specification, persistence is associated with the use of persistent URIs (PURIs) for the metadata descriptions. 
 A general advice for DCAT-AP implementers is to use PURIs for all entities, but mostly for Datasets and Data Services. 
 The practice, though, shows that this is not universally applied. 
 To reduce this gap between the intention and the practice DCAT-AP has proposed a number of guidelines on identifiers [[IdentifierGuidelines]]. 
@@ -4112,7 +4159,7 @@ For that, DCAT-AP recommends to follow the DCAT guidelines on <a href="https://w
 </p><p>
 For example, consider an API which is at the end of its lifecycle. 
 According to DCAT(-AP), the PURI of the Data Service could get the status ‘deprecated’ and the endpoint URL could be made void when it is taken offline. 
-Any data portal user would understand that this Data Service should not to used anymore. 
+Any data portal user would understand that this Data Service should not be used anymore. 
 If the metadata is augmented with the information about the successor of the Data Service, the data portal owner can be guided to the new Data Service. 
 
 </p><p>
@@ -4170,17 +4217,14 @@ The decision trees in the figures allow to assess whether or not additional effo
 In the reporting requirements of the HVD IR, the notion <strong>terms of use</strong> is used. 
 It has been agreed, by the Working Group for DCAT-AP HVD, that providing terms of use information is the same as providing legal information for a Data Service. 
 
-<h4>Assessment support for  licences</h4>
+<h4>Assessment support for licences</h4>
 To support the assessment whether the assigned legal conditions are equal or more permissive than the reference CC-BY 4.0, the recommendation is to augment the machine-readable publication of MS-specific or publisher-specific licences with mapping information on the EU Vocabularies Licence NAL [[NAL-Licence]].
 It is recommended to express this mapping in the first place using properties that express equivalence. 
 In order of preference 
 <ul>
-<li>use properties that express a strong equality: <code>skos:exactMatch</code> or <code>owl:sameAs</code> </li>
-<li>use properties that express a permissiveness relation: <code>skos:broadMatch</code> or <code>skos:narrowMatch</code> </li>
+<li>use properties that express a strong equality: <code>skos:exactMatch</code> or <code>owl:sameAs</code></li>
+<li>use the property <code>skos:narrowMatch</code> to indicate a licence that is less permissive. For the HVD reporting, only <code>http://publications.europa.eu/resource/authority/licence/CC_BY_4_0</code> and <code>http://publications.europa.eu/resource/authority/licence/CC0</code> are accepted.</li>
 </ul>
-The use of properties that express a weak(er) equality, e.g. <code>skos:closeMatch</code> or <code>rdfs:seeAlso</code> is not recommended; they should only be used as last resort. 
-If none of the first two approaches could be used, then sharing  matching information using these weaker properties may still assist the assessment. 
-But the decision on compliance with the HVD IR is then left to the interpretation by the European Commission. 
 
 </p><p>
 Using the SKOS matching properties requires to agree on a direction to indicate "more permissive than". 
@@ -4191,7 +4235,7 @@ From the definition of the <a href="https://www.w3.org/TR/skos-reference/#semant
 
 <div class="h3 examples" id="example-hvd-licences">Encoding a more permissive licence than CC-BY-4.0</div>
 
-Because <code>skos:closeMatch</code> is an indication that one concept is  marginally more general or more precise than the other, it cannot be used to indicate the level op permissiveness.
+Because <code>skos:closeMatch</code> is an indication that one concept is marginally more general or more precise than the other, it cannot be used to indicate the level of permissiveness.
 As described above <code>skos:exactMatch</code> should be used preferably.
 
 <h3 id="c6">Contact Point</h3>
@@ -4204,8 +4248,8 @@ A contact point is mandatory for HVD Data Services and recommended for HVD Datas
 
 <h3 id="c7">Specific data requirements</h3>
 <p>
-The HVD implementation regulation describes, in its <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32023R0138#anx_1">Annex</a>, precisely the data elements that should be provided for a HVD Dataset. 
-A HVD Dataset must conform to the rules defined in the HVD IR. 
+The HVD implementation regulation describes, in its <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32023R0138#anx_1">Annex</a>, precisely the data elements that should be provided for a HVD Dataset.
+A HVD Dataset must conform to the rules defined in the HVD IR.
 </p><p>
 It is recommended to provide a reference to a public document (for instance: data standards) that describes the internals of the Dataset (or Distribution) using the property conforms to.
 This ensures that the information  is made publicly accessible for re-users.
@@ -4215,7 +4259,7 @@ It can be used by experts to verify if the Dataset matches the HVD requirements.
 An alternative approach is the use of a <strong>self declaration of conformance</strong>. 
 In this case the publisher of the HVD Dataset declares itself that it conforms to all data technical details the HVD IR imposes. 
 The INSPIRE community has used this approach before. 
-As the assessment of the validity of such self-declaration is a domain specific activity requiring expert knowledge, DCAT-AP HVD does not proposes a general self declaration statement. 
+As the assessment of the validity of such self-declaration is a domain specific activity requiring expert knowledge, DCAT-AP HVD does not propose a general self declaration statement. 
 But leaves the design of such statement to the data experts of the HVD categories to provide an trustable approach.
 
 </p>
@@ -4229,14 +4273,10 @@ In DCAT(-AP) there are two routes to relate Data Services with Datasets:
 </ul> 
 As such DCAT-AP HVD has not the intend to change the existing metadata description practices, nevertheless the following observations have to be made.
 <p/>
-In case of a HVD reporting the indirect approach will be transformed into the direct approach. 
-This is a natural consequence from the HVD IR wording: the dataset shall be available for reuse through APIs.
-Technically it corresponds to the following closure: the APIs for a HVD Dataset are the Data Servies that are directly or indirectly connected with the HVD Dataset.
-<p/>
-Data publishers that solely use the indirect approach might face a undesired side effect of their choice: namely that they must encode a HVD Distribution even that is not required nor necessary.
+Data publishers that solely use the indirect approach might face an undesired side effect of their choice: namely that they must encode a HVD Distribution even that is not required nor necessary.
 That is a consequence of the local publishers agreements but it might have policy impacts: namely also that superfluous Distribution becomes subject to the HVD IR.
 <p/>
-Having two routes to declare the presence of a API makes the expression of the obligation as a single cardinality in the specification non trivial.
+Having two routes to declare the presence of an API makes the expression of the obligation as a single cardinality in the specification non trivial.
 To ensure that at least an API is present for a HVD Dataset the SHACL validation rules have been extended.
 
 <p/>
@@ -4251,7 +4291,7 @@ Therefore the following approach has been applied in this specification to ensur
 The formal constraints have been relaxed, the usage qualification has been set to recommendation, and additional usage notes 
 including this explanation have been added.
 In addition the SHACL validation rules have been extended with a check to validate if each HVD dataset has a HVD Distribution.
-This check has severity Violation, to force publishers to reconsider in case of missing distributions their provided information.
+This check has severity Warning, to force publishers to consider if they really do not need to provide distributions their provided information.
 <p/>
 Forcing the presence of at least one distribution or data service for a Dataset, is also implicitly the result of the need for providing legal information. 
 As DCAT-AP mandates this to be expressed at the level of Distributions or Data Services, a Dataset will have 
@@ -4283,13 +4323,13 @@ The examples in this section are fictitious; their sole purpose is to illustrate
 <p>Consider that a dataset "The population of bees" is within scope of the HVD while another dataset "The population of wasps" is not.
 Both datasets however, are in scope of the INSPIRE directive, which, for illustrative purposes only, is denoted by the ELI <code>http://data.europa.eu/eli/dir/2007/2/2019-06-26</code>.
 The dataset "The population of bees" is also tagged with the appropriate HVD Category. 
-Observe that the solely the most granular concept "Nature preservation and biodiversity" is provided. 
+Observe that only the most granular concept "Nature preservation and biodiversity" is provided.
 The generic top-level category can be derived from it.</p>
 
 <div class="h3 examples" id="example-bees_wasps_dataset">Example 1 - Bees and wasps population datasets</div>
 
 
-<p>Both datasets are published by the Environment Agency of the EU Memberstate <code>ExampleMS</code> using a persistent identifier.</p>
+<p>Both datasets are published by the Environment Agency of the EU Member State <code>ExampleMS</code> using a persistent identifier.</p>
 
 <div class="h3 examples" id="example-ms_dataset">Example 2 - MS dataset</div>
 
@@ -4317,7 +4357,7 @@ The publisher describes the data semantically using an application profile, and 
 <h3>The HVD Dataset is accessible via an API</h3>
 
 <p>According to the HVD IR, the "bee population" dataset must be made available via an API. 
-The dataset publisher has an API platform deployed, via which data users have access to realtime data.
+The dataset publisher has an API platform deployed, via which data users have access to real-time data.
 This API platform supports all datasets of the publisher.</p>
 
 <div class="h3 examples" id="example-ms_dataset_data_service">Example 6 - MS dataset with data service </div>
@@ -4368,7 +4408,7 @@ This illustrates the flexibility the DCAT-AP HVD specification offers to address
 The Data Service <code>exampleMS:EAMS-APIplatform</code> provides access to both datasets. 
 The legal conditions on the usage of the platform for the "bee population" dataset is a combination of the API platform conditions (e.g. no misuse by triggering DDOS activities, no sharing of access tokens to third parties, etc. ) and the dataset conditions.
 The API request <code>https://orgea.exampleMS.gov/api/v2/beepopulation/</code> has thus different conditions than <code>https://orgea.exampleMS.gov/api/v2/wasppopulation/</code>.
-Therefore, the nature of the licence document, associated with a Data Service, is usually more oriented to the use of the API platform rather than to the use of the data it provides access too.</p><p>
+Therefore, the nature of the licence document, associated with a Data Service, is usually more oriented to the use of the API platform rather than to the use of the data it provides access to.</p><p>
 In the example the 'Terms of Use' for the API platform are mentioned as the license.
 In addition, the API platform can also indicate the SLA it offers. 
 </p>
@@ -4385,7 +4425,7 @@ The catalogue will also contain any additional supportive information such as Co
 
 <p>To reduce the risk of misinterpretation, the Catalogue Resource connecting properties such as <code>dcat:servesDataset</code> and <code>dcat:distribution</code> 
 should be inspected to not refer to Catalogued Resources outside the scope of HVD. In the example below, the reference to the RDF distribution for the "bee population" 
-and the "wasp population" dataset are removed from the reporting catalogue. During the collection stage of the common reporting approach a sparql query will perform 
+and the "wasp population" dataset are removed from the reporting catalogue. During the collection stage of the common reporting approach a SPARQL query will perform
 this scoping.
 </p>
 
@@ -4395,7 +4435,7 @@ this scoping.
 Crossing these boundaries is a regular occurrence and it can be done during the assessment without impacting the results when the supplied data is based on persistent identifiers (PURIs).</p><p>
 The use of dereferenceable persistent identifiers could also lead to another agreement to supply a more condensed representation of the reporting catalogue.
 Under the condition that all catalogued resources in scope of HVD are in the Portal for European Data [[DEU]], 
-the reporting by an MS could be reduced to sharing the minimal information how to collect these resources. 
+the reporting by a MS could be reduced to sharing the minimal information how to collect these resources.
 In the common reporting approach the set of harvested MS catalogues containing HVD information is requested.
 With that all the necessary information for the reporting is extracted from the DEU.</p>
 
@@ -4403,14 +4443,15 @@ With that all the necessary information for the reporting is extracted from the 
 </section>
 
   <section id="validation" class="informative">
-<h2>Validation</h2>
+<h2>Validation of DCAT-AP HVD</h2>
 
 To support the assessment if a Catalogue satisfies DCAT-AP HVD, the following SHACL templates are provided.
 
 <ul>
 <li><a href="html/hvd-SHACL-base.ttl">base.ttl</a>: all base constraints expressed in this document.</li>
 <li><a href="html/hvd-SHACL-ranges.ttl">ranges.ttl</a>: all the class range constraints expressed in this document.</li>
-<li><a href="html/hvd-SHACL-usagenotes.ttl">usagenotes.ttl</a>: additional constraints that are expressed as usagenotes or recommendations. Including controlled vocabularies, and the presence of an API or a bulk download for a dataset.</li>
+<li><a href="html/hvd-SHACL-cv.ttl">cv.ttl</a>: constraints concerning the usage of controlled vocabularies. Note that validating with these shapes requires the controlled vocabularies to be also present in the data graph.</li>
+<li><a href="html/hvd-SHACL-usagenotes.ttl">usagenotes.ttl</a>: additional constraints that are expressed as usage notes or recommendations.</li>
 </ul>
 
 The file <a href="html/hvd-SHACL-full.ttl">full.ttl</a> combines them all.</li>
@@ -4699,6 +4740,14 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 						
 					
 						
+							<tr>
+								<td><a href="#Dataset">Dataset</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></td>
+								<td>Mandatory</td>
+								<td><a href="#Dataset.description">description </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/description</div></td>
+							</tr>
+						
 					
 						
 							<tr>
@@ -4772,14 +4821,6 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 					
 						
 					
-						
-							<tr>
-								<td><a href="#Dataset">Dataset</a></td>
-								<td><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></td>
-								<td>Optional</td>
-								<td><a href="#Dataset.description">description </a></td>
-								<td><div class="shorten">http://purl.org/dc/terms/description</div></td>
-							</tr>
 						
 					
 						
@@ -5030,6 +5071,10 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 					
 						
 					
+						
+					
+					
+						
 					
 						
 					
@@ -5040,7 +5085,7 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 							<tr>
 								<td><a href="#LicenceDocument">Licence Document</a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/LicenseDocument</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#LicenceDocument.aspermissiveas">as permissive as </a></td>
 								<td><div class="shorten">http://www.w3.org/2004/02/skos/core#exactMatch</div></td>
 							</tr>
@@ -5050,9 +5095,19 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 							<tr>
 								<td><a href="#LicenceDocument">Licence Document</a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/LicenseDocument</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#LicenceDocument.morepermissivethan">more permissive than </a></td>
 								<td><div class="shorten">http://www.w3.org/2004/02/skos/core#narrowMatch</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#LicenceDocument">Licence Document</a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/LicenseDocument</div></td>
+								<td>Optional</td>
+								<td><a href="#LicenceDocument.sameas">same as </a></td>
+								<td><div class="shorten">http://www.w3.org/2002/07/owl#sameAs</div></td>
 							</tr>
 						
 					

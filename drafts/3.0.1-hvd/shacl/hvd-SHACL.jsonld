@@ -119,7 +119,7 @@
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#LicenceDocument.morepermissivethan",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
-            "en": "A less permissive licence."
+            "en": "A licence that is less permissive than this licence."
           },
           "sh:name": {
             "en": "more permissive than"
@@ -130,7 +130,7 @@
           "@id": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dct:LicenseDocumentShape/5a3b1ca81c6e1076c42731653005614063d29095",
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#LicenceDocument.morepermissivethan",
           "sh:description": {
-            "en": "A less permissive licence."
+            "en": "A licence that is less permissive than this licence."
           },
           "sh:name": {
             "en": "more permissive than"
@@ -139,10 +139,22 @@
           "sh:path": "http://www.w3.org/2004/02/skos/core#narrowMatch"
         },
         {
+          "@id": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dct:LicenseDocumentShape/621bd55ad606a5c75d25ce4a7adc2b2993e564e6",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#LicenceDocument.sameas",
+          "sh:class": "http://purl.org/dc/terms/LicenseDocument",
+          "sh:description": {
+            "en": "A licence that is as permissive as this license."
+          },
+          "sh:name": {
+            "en": "same as"
+          },
+          "sh:path": "http://www.w3.org/2002/07/owl#sameAs"
+        },
+        {
           "@id": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dct:LicenseDocumentShape/64de7386a87e39725b217e3da2ff87b85902c34d",
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#LicenceDocument.aspermissiveas",
           "sh:description": {
-            "en": "A licence with the same permissiveness."
+            "en": "A licence that is as permissive as this license."
           },
           "sh:name": {
             "en": "as permissive as"
@@ -151,10 +163,34 @@
           "sh:path": "http://www.w3.org/2004/02/skos/core#exactMatch"
         },
         {
+          "@id": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dct:LicenseDocumentShape/6eeb76090ddf8889d5ade597142d1d1880494fcf",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#LicenceDocument.sameas",
+          "sh:description": {
+            "en": "A licence that is as permissive as this license."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "same as"
+          },
+          "sh:path": "http://www.w3.org/2002/07/owl#sameAs"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dct:LicenseDocumentShape/77db7a4324686086fb8f3bc73fd9c45c2d2b88dd",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#LicenceDocument.sameas",
+          "sh:description": {
+            "en": "A licence that is as permissive as this license."
+          },
+          "sh:name": {
+            "en": "same as"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/2002/07/owl#sameAs"
+        },
+        {
           "@id": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dct:LicenseDocumentShape/9cb510b2d387bc93ddecf23bb44d401117404110",
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#LicenceDocument.aspermissiveas",
           "sh:description": {
-            "en": "A licence with the same permissiveness."
+            "en": "A licence that is as permissive as this license."
           },
           "sh:maxCount": "1",
           "sh:name": {
@@ -166,7 +202,7 @@
           "@id": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dct:LicenseDocumentShape/c2e2e99ee3d739d816472df0fc6bfd51aa14b4aa",
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#LicenceDocument.morepermissivethan",
           "sh:description": {
-            "en": "A less permissive licence."
+            "en": "A licence that is less permissive than this licence."
           },
           "sh:maxCount": "1",
           "sh:name": {
@@ -179,7 +215,7 @@
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#LicenceDocument.aspermissiveas",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
-            "en": "A licence with the same permissiveness."
+            "en": "A licence that is as permissive as this license."
           },
           "sh:name": {
             "en": "as permissive as"
@@ -618,7 +654,7 @@
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.rights",
           "sh:class": "http://purl.org/dc/terms/RightsStatement",
           "sh:description": {
-            "en": "A statement that specifies rights associated with the Distribution."
+            "en": "A statement that specifies rights associated with the Data Service."
           },
           "sh:name": {
             "en": "rights"
@@ -665,7 +701,7 @@
           "@id": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/b4c4138f0581e7240ec4dd866004c56407b3705a",
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.rights",
           "sh:description": {
-            "en": "A statement that specifies rights associated with the Distribution."
+            "en": "A statement that specifies rights associated with the Data Service."
           },
           "sh:name": {
             "en": "rights"

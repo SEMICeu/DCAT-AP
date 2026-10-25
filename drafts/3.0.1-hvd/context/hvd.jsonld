@@ -119,6 +119,10 @@
       "@id": "http://xmlns.com/foaf/0.1/primaryTopic",
       "@type": "@id"
     },
+    "owl:sameAs": {
+      "@id": "http://www.w3.org/2002/07/owl#sameAs",
+      "@type": "@id"
+    },
     "skos:exactMatch": {
       "@id": "http://www.w3.org/2004/02/skos/core#exactMatch",
       "@type": "@id"

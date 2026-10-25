@@ -1,3 +1,5 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -8,17 +10,14 @@
 @prefix : <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#>.
 
 
-<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd> rdfs:member 
-          :DatasetShapeCV ,
-          :CatalogShapeCV,
-          :DistributionShapeCV,
-          :DataServiceShapeCVr, 
-          :DatasetSeriesShapeCV .
+<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-cv.ttl> a shacl:ShapesGraph ;
+  rdfs:label "DCAT-AP HVD SHACL shapes for Controlled Vocabularies"@en .
 
-:HVDCategoryRestriction
-    a shacl:NodeShape ;
-    rdfs:comment "HVD Category restriction" ;
-    rdfs:label "HVD Category restriction" ;
+
+:HVDCategoryRestriction a shacl:NodeShape ;
+  rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-cv.ttl> ;
+    rdfs:comment "HVD Category restriction"@en ;
+    rdfs:label "HVD Category restriction"@en ;
     shacl:property [
         shacl:hasValue <http://data.europa.eu/bna/asd487ae75> ;
         shacl:minCount 1 ;
@@ -26,19 +25,109 @@
         shacl:path skos:inScheme
     ] .
 
-:EULicenceRestriction
-    a shacl:NodeShape ;
-    rdfs:comment "EU Licence restriction" ;
-    rdfs:label "EU Licence restriction" ;
-    shacl:property [
-        shacl:hasValue <http://publications.europa.eu/resource/authority/licence> ;
-        shacl:minCount 1 ;
-        shacl:nodeKind shacl:IRI ;
-        shacl:path skos:inScheme
-    ] .
+:DatasetLicenceShape a shacl:NodeShape ;
+  rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-cv.ttl> ;
+    rdfs:comment "HVD reporting licence restriction"@en ;
+    rdfs:label "HVD reporting licence restriction"@en ;
+    shacl:or (
+        [
+            shacl:path (shacl:inversePath dcat:servesDataset) ;
+            shacl:node :ServiceLicenceShape ;
+            shacl:minCount 1 ;
+        ]
+        [
+            shacl:path dcat:distribution;
+            shacl:node :DistributionLicenceShape ;
+            shacl:minCount 1 ;
+        ]
+        [
+            shacl:path (dcat:distribution dcat:accessService);
+            shacl:node :ServiceLicenceShape ;
+            shacl:minCount 1 ;
+        ]
+    );
+    shacl:severity shacl:Warning ;
+    shacl:targetClass dcat:Dataset .
 
-:DatasetShapeCV
-    a shacl:NodeShape ;
+# EU Licence HVD restrictions - CC0, CC BY 4.0, or mapped to them via owl:sameAs,skos:exactMatch or skos:narrowMatch.
+:ServiceLicenceShape a shacl:NodeShape ;
+  rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-cv.ttl> ;
+  shacl:or (
+    [
+        shacl:path dct:license;
+        shacl:hasValue <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0>;
+        shacl:minCount 1 ;
+    ]
+    [
+        shacl:path dct:license;
+        shacl:hasValue <http://publications.europa.eu/resource/authority/licence/CC0> ;
+        shacl:minCount 1 ;
+    ]
+    [
+        shacl:path dct:license;
+        shacl:node :EULicenceMappingRestriction; 
+        shacl:minCount 1 ;
+    ]
+  ).
+
+# EU Licence HVD restrictions - CC0, CC BY 4.0, or mapped to them via owl:sameAs,skos:exactMatch or skos:narrowMatch.
+:DistributionLicenceShape a shacl:NodeShape ;
+  rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-cv.ttl> ;
+  shacl:or (
+    [
+        shacl:path dct:license;
+        shacl:hasValue <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0>;
+        shacl:minCount 1 ;
+    ]
+    [
+        shacl:path dct:license;
+        shacl:hasValue <http://publications.europa.eu/resource/authority/licence/CC0> ;
+        shacl:minCount 1 ;
+    ]
+    [
+        shacl:path dct:license;
+        shacl:node :EULicenceMappingRestriction; 
+        shacl:minCount 1 ;
+    ]
+  ).
+
+:EULicenceMappingRestriction rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-cv.ttl> ;
+  a sh:NodeShape ;
+    sh:or (
+		[
+  			shacl:path skos:exactMatch;
+            shacl:hasValue <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0>;
+			shacl:minCount 1 ;
+		]
+		[
+  			shacl:path owl:sameAs;
+            shacl:hasValue <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0>;
+			shacl:minCount 1 ;
+		]
+		[
+  			shacl:path skos:narrowMatch;
+            shacl:hasValue <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0>;
+			shacl:minCount 1 ;
+		]
+		[
+  			shacl:path skos:exactMatch;
+            shacl:hasValue <http://publications.europa.eu/resource/authority/licence/CC0>;
+			shacl:minCount 1 ;
+		]
+		[
+  			shacl:path owl:sameAs;
+            shacl:hasValue <http://publications.europa.eu/resource/authority/licence/CC0>;
+			shacl:minCount 1 ;
+		]
+		[
+  			shacl:path skos:narrowMatch;
+            shacl:hasValue <http://publications.europa.eu/resource/authority/licence/CC0>;
+			shacl:minCount 1 ;
+		]
+	).
+
+:DatasetShapeCV a shacl:NodeShape ;
+  rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-cv.ttl> ;
     shacl:property [
         shacl:node :HVDCategoryRestriction ;
         shacl:nodeKind shacl:IRI ;
@@ -47,8 +136,8 @@
     shacl:targetClass dcat:Dataset.
 
 
-:DataServiceShapeCV
-    a shacl:NodeShape ;
+:DataServiceShapeCV a shacl:NodeShape ;
+  rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-cv.ttl> ;
     shacl:property [
         shacl:node :HVDCategoryRestriction ;
         shacl:nodeKind shacl:IRI ;
@@ -57,25 +146,11 @@
     shacl:targetClass dcat:DataService.
 
 
-:DatasetSeriesShapeCV
-    a shacl:NodeShape ;
+:DatasetSeriesShapeCV a shacl:NodeShape ;
+  rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-cv.ttl> ;
     shacl:property [
         shacl:node :HVDCategoryRestriction ;
         shacl:nodeKind shacl:IRI ;
         shacl:path r5r:hvdCategory
     ] ; 
     shacl:targetClass dcat:DatasetSeries.
-
-:LicenseDocumentShapeCV
-    a shacl:NodeShape ;
-    shacl:property [
-        shacl:node :EULicenceRestriction ;
-        shacl:nodeKind shacl:IRI ;
-        shacl:path skos:narrowMatch
-    ] ;
-    shacl:property [
-        shacl:node :EULicenceRestriction ;
-        shacl:nodeKind shacl:IRI ;
-        shacl:path skos:exactMatch
-    ] ; 
-    shacl:targetClass dct:LicenseDocument.
