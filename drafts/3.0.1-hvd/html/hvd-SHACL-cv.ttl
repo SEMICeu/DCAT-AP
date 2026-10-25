@@ -68,6 +68,11 @@
         shacl:node :EULicenceMappingRestriction; 
         shacl:minCount 1 ;
     ]
+    [
+        shacl:path [shacl:inversePath dcat:accessService];
+        shacl:node :DistributionLicenceShape;
+        shacl:minCount 1 ;
+    ]
   ).
 
 # EU Licence HVD restrictions - CC0, CC BY 4.0, or mapped to them via owl:sameAs,skos:exactMatch or skos:narrowMatch.
