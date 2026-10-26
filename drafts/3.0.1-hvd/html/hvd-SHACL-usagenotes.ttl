@@ -181,6 +181,11 @@
         shacl:minCount 1 ;
         shacl:nodeKind shacl:IRI ;
         shacl:path skos:inScheme
+    ] ;
+    shacl:property [
+        shacl:path [ shacl:inversePath skos:broader ] ;
+        shacl:maxCount 0 ;
+        shacl:message "The HVD category must be one of the most granular ones, i.e. no other category may have it as skos:broader."@en
     ] .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetShape/HVDCategoryCV> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;

@@ -44,6 +44,7 @@ This Changelog provides an overview of the changes incorporated in DCAT-AP HVD 3
 - Tightened validation of URLs (endpoint, download, access, etc.) not to allow blank nodes
 - Change the prefix used for the Dublin Core Terms namespace from `dc` to `dct`
 - SHACL ShapesGraphs now follow [SHACL 1.2 Profiling Packaging recommendation](https://www.w3.org/TR/shacl12-profiling/#packaging)
+- Added SHACL shape checking that the most granular HVD category is used
 
 ## **Detailed Issue Feedback**  
   
