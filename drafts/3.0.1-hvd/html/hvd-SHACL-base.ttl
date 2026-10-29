@@ -22,7 +22,7 @@
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:CatalogRecordShape/387c76a64757677cc2b899f0c4a20803263a0449> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-base.ttl> ;
   rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#CatalogueRecord.primarytopic>;
-  shacl:description "A link to the Dataset, Data service or Catalog described in the record."@en;
+  shacl:description "A link to the Dataset, Data Service or Catalogue described in the record."@en;
   shacl:name "primary topic"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path foaf:primaryTopic;
@@ -30,7 +30,7 @@
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:CatalogRecordShape/65eafe0643a998b84fc2d253de401f9ad8355770> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-base.ttl> ;
   rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#CatalogueRecord.primarytopic>;
-  shacl:description "A link to the Dataset, Data service or Catalog described in the record."@en;
+  shacl:description "A link to the Dataset, Data Service or Catalogue described in the record."@en;
   shacl:minCount 1;
   shacl:name "primary topic"@en;
   shacl:path foaf:primaryTopic;
@@ -39,7 +39,7 @@
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:CatalogRecordShape/edc684c84677aa4924b66988491caddda1a1e68b> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-base.ttl> ;
   rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#CatalogueRecord.primarytopic>;
-  shacl:description "A link to the Dataset, Data service or Catalog described in the record."@en;
+  shacl:description "A link to the Dataset, Data Service or Catalogue described in the record."@en;
   shacl:maxCount 1;
   shacl:name "primary topic"@en;
   shacl:path foaf:primaryTopic;

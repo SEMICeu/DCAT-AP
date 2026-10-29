@@ -22,7 +22,7 @@
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:CatalogRecordShape/c65d45ed7195ead5f643ec8c8afd29c6dd9662bf> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-ranges.ttl> ;
   rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#CatalogueRecord.primarytopic>;
   shacl:class dcat:Resource;
-  shacl:description "A link to the Dataset, Data service or Catalog described in the record."@en;
+  shacl:description "A link to the Dataset, Data Service or Catalogue described in the record."@en;
   shacl:name "primary topic"@en;
   shacl:path foaf:primaryTopic;
   <https://purl.eu/ns/shacl#message> "The range of primary topic must be of type <http://www.w3.org/ns/dcat#Resource>."@en .
