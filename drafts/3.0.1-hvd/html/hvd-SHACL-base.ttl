@@ -95,6 +95,7 @@
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/68dc6d1df6d91b2d33990e6db3c5af31b3d51de8>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/83ad7325cc6681e43e44550c269847065a95a14f>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/8521ebd386ec388c4cf09933c419e3fe7668f29d>,
+    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/88c9219ba84a561640b0a6ba0667b9f7752fea86>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/998ce689a5bcc3e2764ff84a05255e34d91e8102>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/9adf9f5890592909cf3e67021ae7ab4f895a7745>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/9eaae476a881de13b9430537ace6e70da7327dbd>,
@@ -136,6 +137,14 @@
   shacl:nodeKind shacl:IRI;
   shacl:path dcat:endpointDescription;
   <https://purl.eu/ns/shacl#message> "The expected value for endpoint description is an IRI."@en .
+
+<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/88c9219ba84a561640b0a6ba0667b9f7752fea86> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-base.ttl> ;
+  rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.endpointdescription>;
+  shacl:description "A description of the services available via the end-points, including their operations, parameters etc."@en;
+  shacl:minCount 1;
+  shacl:name "endpoint description"@en;
+  shacl:path dcat:endpointDescription;
+  <https://purl.eu/ns/shacl#message> "Minimally 1 values are expected for endpoint description"@en .
 
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/68dc6d1df6d91b2d33990e6db3c5af31b3d51de8> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-base.ttl> ;
@@ -616,33 +625,33 @@
   rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#LicenceDocument.morepermissivethan>;
   shacl:description "A licence that is less permissive than this licence."@en;
   shacl:name "more permissive than"@en;
-  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:nodeKind shacl:IRI;
   shacl:path skos:narrowMatch .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dct:LicenseDocumentShape/64de7386a87e39725b217e3da2ff87b85902c34d> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-base.ttl> ;
   rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#LicenceDocument.aspermissiveas>;
-  shacl:description "A licence that is as permissive as this license."@en;
+  shacl:description "A licence that is as permissive as this licence."@en;
   shacl:name "as permissive as"@en;
-  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:nodeKind shacl:IRI;
   shacl:path skos:exactMatch .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dct:LicenseDocumentShape/6eeb76090ddf8889d5ade597142d1d1880494fcf> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-base.ttl> ;
   rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#LicenceDocument.sameas>;
-  shacl:description "A licence that is as permissive as this license."@en;
+  shacl:description "A licence that is as permissive as this licence."@en;
   shacl:maxCount 1;
   shacl:name "same as"@en;
   shacl:path owl:sameAs .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dct:LicenseDocumentShape/77db7a4324686086fb8f3bc73fd9c45c2d2b88dd> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-base.ttl> ;
   rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#LicenceDocument.sameas>;
-  shacl:description "A licence that is as permissive as this license."@en;
+  shacl:description "A licence that is as permissive as this licence."@en;
   shacl:name "same as"@en;
-  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:nodeKind shacl:IRI;
   shacl:path owl:sameAs .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dct:LicenseDocumentShape/9cb510b2d387bc93ddecf23bb44d401117404110> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-base.ttl> ;
   rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#LicenceDocument.aspermissiveas>;
-  shacl:description "A licence that is as permissive as this license."@en;
+  shacl:description "A licence that is as permissive as this licence."@en;
   shacl:maxCount 1;
   shacl:name "as permissive as"@en;
   shacl:path skos:exactMatch .
@@ -695,7 +704,7 @@
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#vcard:KindShape/9b6ccc41bb0ced6f6b8f28a86e120bd9d73b32fb> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-base.ttl> ;
   rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Kind.email>;
-  shacl:description """A email address via which contact can be made."""@en;
+  shacl:description "An email address via which contact can be made."@en;
   shacl:name "email"@en;
   shacl:nodeKind shacl:IRI;
   shacl:path vcard:hasEmail;
@@ -719,7 +728,7 @@
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#vcard:KindShape/df2e16526cd0f7cc796d3bb27ac1861737a35d91> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-base.ttl> ;
   rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Kind.email>;
-  shacl:description """A email address via which contact can be made."""@en;
+  shacl:description "An email address via which contact can be made."@en;
   shacl:maxCount 1;
   shacl:name "email"@en;
   shacl:path vcard:hasEmail;

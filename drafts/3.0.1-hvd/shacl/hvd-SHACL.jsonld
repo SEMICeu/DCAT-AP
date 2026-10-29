@@ -141,9 +141,9 @@
         {
           "@id": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dct:LicenseDocumentShape/621bd55ad606a5c75d25ce4a7adc2b2993e564e6",
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#LicenceDocument.sameas",
-          "sh:class": "http://purl.org/dc/terms/LicenseDocument",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
-            "en": "A licence that is as permissive as this license."
+            "en": "A licence that is as permissive as this licence."
           },
           "sh:name": {
             "en": "same as"
@@ -154,7 +154,7 @@
           "@id": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dct:LicenseDocumentShape/64de7386a87e39725b217e3da2ff87b85902c34d",
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#LicenceDocument.aspermissiveas",
           "sh:description": {
-            "en": "A licence that is as permissive as this license."
+            "en": "A licence that is as permissive as this licence."
           },
           "sh:name": {
             "en": "as permissive as"
@@ -166,7 +166,7 @@
           "@id": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dct:LicenseDocumentShape/6eeb76090ddf8889d5ade597142d1d1880494fcf",
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#LicenceDocument.sameas",
           "sh:description": {
-            "en": "A licence that is as permissive as this license."
+            "en": "A licence that is as permissive as this licence."
           },
           "sh:maxCount": "1",
           "sh:name": {
@@ -178,7 +178,7 @@
           "@id": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dct:LicenseDocumentShape/77db7a4324686086fb8f3bc73fd9c45c2d2b88dd",
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#LicenceDocument.sameas",
           "sh:description": {
-            "en": "A licence that is as permissive as this license."
+            "en": "A licence that is as permissive as this licence."
           },
           "sh:name": {
             "en": "same as"
@@ -190,7 +190,7 @@
           "@id": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dct:LicenseDocumentShape/9cb510b2d387bc93ddecf23bb44d401117404110",
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#LicenceDocument.aspermissiveas",
           "sh:description": {
-            "en": "A licence that is as permissive as this license."
+            "en": "A licence that is as permissive as this licence."
           },
           "sh:maxCount": "1",
           "sh:name": {
@@ -215,7 +215,7 @@
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#LicenceDocument.aspermissiveas",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
-            "en": "A licence that is as permissive as this license."
+            "en": "A licence that is as permissive as this licence."
           },
           "sh:name": {
             "en": "as permissive as"
@@ -270,7 +270,7 @@
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Kind.email",
           "sh:class": "http://www.w3.org/2000/01/rdf-schema#Resource",
           "sh:description": {
-            "en": "A email address via which contact can be made."
+            "en": "An email address via which contact can be made."
           },
           "sh:name": {
             "en": "email"
@@ -293,7 +293,7 @@
           "@id": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#vcard:KindShape/9b6ccc41bb0ced6f6b8f28a86e120bd9d73b32fb",
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Kind.email",
           "sh:description": {
-            "en": "A email address via which contact can be made."
+            "en": "An email address via which contact can be made."
           },
           "sh:name": {
             "en": "email"
@@ -329,7 +329,7 @@
           "@id": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#vcard:KindShape/df2e16526cd0f7cc796d3bb27ac1861737a35d91",
           "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Kind.email",
           "sh:description": {
-            "en": "A email address via which contact can be made."
+            "en": "An email address via which contact can be made."
           },
           "sh:maxCount": "1",
           "sh:name": {
@@ -636,6 +636,18 @@
             "en": "documentation"
           },
           "sh:path": "http://xmlns.com/foaf/0.1/page"
+        },
+        {
+          "@id": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/88c9219ba84a561640b0a6ba0667b9f7752fea86",
+          "rdfs:seeAlso": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.endpointdescription",
+          "sh:description": {
+            "en": "A description of the services available via the end-points, including their operations, parameters etc."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "endpoint description"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#endpointDescription"
         },
         {
           "@id": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/92d65d33f2a5d5345f1980ffd0cf304e47dd0caf",

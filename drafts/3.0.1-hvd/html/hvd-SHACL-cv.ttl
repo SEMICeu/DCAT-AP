@@ -13,7 +13,6 @@
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-cv.ttl> a shacl:ShapesGraph ;
   rdfs:label "DCAT-AP HVD SHACL shapes for Controlled Vocabularies"@en .
 
-
 :HVDCategoryRestriction a shacl:NodeShape ;
   rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-cv.ttl> ;
     rdfs:comment "HVD Category restriction. The category must be the most granular one, from the correct controlled vocabulary."@en ;
@@ -36,7 +35,7 @@
     rdfs:label "HVD reporting licence restriction"@en ;
     shacl:or (
         [
-            shacl:path (shacl:inversePath dcat:servesDataset) ;
+            shacl:path [shacl:inversePath dcat:servesDataset] ;
             shacl:node :ServiceLicenceShape ;
             shacl:minCount 1 ;
         ]
@@ -51,7 +50,6 @@
             shacl:minCount 1 ;
         ]
     );
-    shacl:severity shacl:Warning ;
     shacl:targetClass dcat:Dataset .
 
 # EU Licence HVD restrictions - CC0, CC BY 4.0, or mapped to them via owl:sameAs,skos:exactMatch or skos:narrowMatch.

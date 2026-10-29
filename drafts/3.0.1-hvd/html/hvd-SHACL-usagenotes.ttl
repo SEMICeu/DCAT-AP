@@ -11,14 +11,12 @@
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> a shacl:ShapesGraph ;
   rdfs:label "DCAT-AP HVD SHACL shapes for usage notes"@en .
 
-
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetShape> a shacl:NodeShape ;
   rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
   shacl:closed false;
   shacl:property 
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetShape/API>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetShape/HVDELI>,
-    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetShape/HVDCategoryCV>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetShape/EnglishTitle>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetShape/EnglishDescription>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetShape/BulkDownload>;
@@ -29,8 +27,6 @@
   shacl:closed false;
   shacl:property 
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/HVDELI>,
-    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/legalInformation>,
-    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/HVDCategoryCV>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/contactPoint>;
   shacl:targetClass dcat:DataService .
 
@@ -39,7 +35,6 @@
   shacl:closed false;
   shacl:property 
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/HVDELI>,
-    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/HVDcategoryCV>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/EnglishTitle>,
     <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/EnglishDescription>;
   shacl:targetClass dcat:DatasetSeries .
@@ -47,9 +42,7 @@
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DistributionShape> a shacl:NodeShape ;
   rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
   shacl:closed false;
-  shacl:property <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DistributionShape/HVDELI>,
-  <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DistributionShape/legalInformation>,
-  <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DistributionShape/APIorBulk>;
+  shacl:property <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DistributionShape/HVDELI>;
   shacl:targetClass dcat:Distribution .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#vcard:KindShape/union> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
@@ -82,7 +75,8 @@
       sh:path dcat:downloadURL;
       sh:minCount 1 ;
     ]
-  )
+  );
+  shacl:targetClass dcat:Distribution
   .
   
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DistributionShape/legalInformation> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
@@ -167,50 +161,6 @@
   shacl:path <http://data.europa.eu/r5r/applicableLegislation> ;
   shacl:hasValue <http://data.europa.eu/eli/reg_impl/2023/138/oj> ;
   <https://purl.eu/ns/shacl#message> "The applicable legislation must be set to the HVD IR ELI."@en .
-
-<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#SHACL> 
-  rdf:type owl:Ontology ;
-  owl:imports <http://data.europa.eu/bna/asd487ae75>.
-
-<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#HVDCategoryRestriction> a shacl:NodeShape ;
-  rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
-    rdfs:comment "HVD Category Restriction" ;
-    rdfs:label "HVD Category Restriction" ;
-    shacl:property [
-        shacl:hasValue <http://data.europa.eu/bna/asd487ae75> ;
-        shacl:minCount 1 ;
-        shacl:nodeKind shacl:IRI ;
-        shacl:path skos:inScheme
-    ] ;
-    shacl:property [
-        shacl:path [ shacl:inversePath skos:broader ] ;
-        shacl:maxCount 0 ;
-        shacl:message "The HVD category must be one of the most granular ones, i.e. no other category may have it as skos:broader."@en
-    ] .
-
-<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetShape/HVDCategoryCV> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
-  rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Dataset.HVDCategory>;
-  shacl:description "The HVD category to which this Dataset belongs."@en;
-  shacl:name "HVD category"@en;
-  shacl:path <http://data.europa.eu/r5r/hvdCategory>;
-  shacl:node <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#HVDCategoryRestriction> ;
-  <https://purl.eu/ns/shacl#message> "The range of HVD category must be in scheme <http://data.europa.eu/bna/asd487ae75>."@en .
-
-<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/HVDCategoryCV> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
-  rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.HVDcategory>;
-  shacl:description "The HVD category to which this Data Service belongs."@en;
-  shacl:name "HVD category"@en;
-  shacl:path <http://data.europa.eu/r5r/hvdCategory>;
-  shacl:node <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#HVDCategoryRestriction> ;
-  <https://purl.eu/ns/shacl#message> "The range of HVD category must be in scheme <http://data.europa.eu/bna/asd487ae75>."@en .
-
-<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/HVDcategoryCV> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
-  rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DatasetSeries.HVDCategory>;
-  shacl:description "The HVD category to which this Dataset Series belongs."@en;
-  shacl:name "HVD category"@en;
-  shacl:path <http://data.europa.eu/r5r/hvdCategory>;
-  shacl:node <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#HVDCategoryRestriction> ;
-  <https://purl.eu/ns/shacl#message> "The range of HVD category must be in scheme <http://data.europa.eu/bna/asd487ae75>."@en .
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetShape/API> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
   rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/#apis-are-mandatory>;

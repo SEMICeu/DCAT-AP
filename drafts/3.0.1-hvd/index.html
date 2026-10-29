@@ -107,7 +107,7 @@
       prevVersionURI: "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd/",
       latestVersion: "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/",
       specStatus: "base",
-      publishDate: "2026-10-25",
+      publishDate: "2026-10-29",
       editors: myeditors,
       authors: myauthors,
       otherLinks: [
@@ -314,9 +314,9 @@ Any improvement of the metadata will immediately flow throughout the European ne
     <h2>Status</h2>
         <p>
 <!-- readd when SEMIC has a codelist about it process 
-	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsW3C">SEMIC Draft</a> published at 2026-10-25.
+	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsW3C">SEMIC Draft</a> published at 2026-10-29.
 -->
-	This application profile has the status SEMIC Draft published at 2026-10-25.
+	This application profile has the status SEMIC Draft published at 2026-10-29.
         </p>
         <p>
             Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="CHANGELOG">Changelog</a>.
@@ -384,7 +384,7 @@ It does neither imply nor prescribe what applications and services finally do wi
 <p>
 An <strong>Application Profile</strong> is a specification that reuses terms from one or more base standards, adding more specificity by identifying mandatory, recommended and optional elements to be used for a particular application, as well as recommendations for controlled vocabularies to be used.
 </p><p>
-An <strong>Annex to an Application Profile</strong> is a specification that precises the use of some aspects of the Application Profile for a specific context. 
+An <strong>Annex to an Application Profile</strong> is a specification that refines the use of some aspects of the Application Profile for a specific context. 
 
 </p><p>
 Despite DCAT-AP HVD being called an Annex to DCAT-AP it has all the properties of an application profile of DCAT-AP. 
@@ -894,7 +894,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                     A link to the Dataset, Data service or Catalog described in the record.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    A catalogue record will refer to one entity in a catalogue. This can be either a Dataset or a Data Service. To ensure an unambiguous reading of the cardinality the range is set to Catalogued Resource. However it is not the intent with this range to require the explicit use of the class Catalogue Record. As abstract class, a subclass should be used.
+                                    A catalogue record will refer to one entity in a catalogue. This can be either a Dataset or a Data Service. To ensure an unambiguous reading of the cardinality the range is set to Catalogued Resource. However it is not the intent with this range to require the explicit use of the class Catalogue Resource. As abstract class, a subclass should be used.
                                 </td>
 				<!--
                                 <td>
@@ -1284,7 +1284,7 @@ As multiple legislations may apply to the resource the maximum cardinality is no
                                     
                                 </td>
                                 <td>
-                                    0..*
+                                    1..*
                                 </td>
                                 <td property="rdfs:comment">
                                     A description of the services available via the end-points, including their operations, parameters etc.
@@ -3191,7 +3191,7 @@ According to the guidelines for <a href="#c3">legal Information</a> in DCAT-AP H
                                     0..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    A email address via which contact can be made.
+                                    An email address via which contact can be made.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -3356,7 +3356,7 @@ According to the guidelines for <a href="#c3">legal Information</a> in DCAT-AP H
                                     0..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    A licence that is as permissive as this license.
+                                    A licence that is as permissive as this licence.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -3454,7 +3454,7 @@ According to the guidelines for <a href="#c3">legal Information</a> in DCAT-AP H
                                 <td>
                                     
                                         
-                                            <a href="#LicenceDocument" data-placement="right">Licence Document</a>
+                                            <a href="#Concept" data-placement="right">Concept</a>
                                         
                                     
                                 </td>
@@ -3462,7 +3462,7 @@ According to the guidelines for <a href="#c3">legal Information</a> in DCAT-AP H
                                     0..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    A licence that is as permissive as this license.
+                                    A licence that is as permissive as this licence.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -4044,8 +4044,8 @@ It means that in case that according to the domain a Dataset Series would be con
 As a Dataset Series is often viewed as a Dataset also the HVD categorisation is imposed.
 More on this identification is found in the next section.
 <p/>
-In this annex, no further advices or guidelines are provided to determine whether a dataset should be considered or represented as a Dataset Series. 
-That is not provided by the HVD IR and therefore these advices or guidelines are to be discussed within the context of the generic DCAT-AP.
+In this annex, no further advice or guidelines are provided to determine whether a dataset should be considered or represented as a Dataset Series. 
+That is not provided by the HVD IR and therefore these advice or guidelines are to be discussed within the context of the generic DCAT-AP.
 
 <h3 id="c1">In scope of HVD IR</h3>
 
@@ -4240,7 +4240,7 @@ As described above <code>skos:exactMatch</code> should be used preferably.
 
 <h3 id="c6">Contact Point</h3>
 <p>
-The HVD IR request a contact point for APIs. 
+The HVD IR requests a contact point for APIs. 
 </p><p>
 This requirement is implemented as the following recommendation. 
 A contact point is mandatory for HVD Data Services and recommended for HVD Datasets either in the form of a (persistent) email address or a link to a contact form on a webpage, e.g. to contact a service desk. 
@@ -4260,7 +4260,7 @@ An alternative approach is the use of a <strong>self declaration of conformance<
 In this case the publisher of the HVD Dataset declares itself that it conforms to all data technical details the HVD IR imposes. 
 The INSPIRE community has used this approach before. 
 As the assessment of the validity of such self-declaration is a domain specific activity requiring expert knowledge, DCAT-AP HVD does not propose a general self declaration statement. 
-But leaves the design of such statement to the data experts of the HVD categories to provide an trustable approach.
+But leaves the design of such statement to the data experts of the HVD categories to provide a trustable approach.
 
 </p>
 
@@ -4271,14 +4271,13 @@ In DCAT(-AP) there are two routes to relate Data Services with Datasets:
    <li>Direct: The Data Service refers with the property <a href="#DataService.servesdataset"><code>serves dataset</code></a> to the Dataset.</li>
    <li>Indirect: The Data Service is referred by the property <a href="#Distribution.accessservice"><code>access service</code></a> from a Distribution to a Dataset.</li>
 </ul> 
-As such DCAT-AP HVD has not the intent to change the existing metadata description practices, nevertheless the following observations have to be made.
+As such DCAT-AP HVD does not intend to change the existing metadata description practices, nevertheless the following observations have to be made.
 <p/>
 Data publishers that solely use the indirect approach might face an undesired side effect of their choice: namely that they must encode a HVD Distribution even that is not required nor necessary.
 That is a consequence of the local publishers agreements but it might have policy impacts: namely also that superfluous Distribution becomes subject to the HVD IR.
 <p/>
 Having two routes to declare the presence of an API makes the expression of the obligation as a single cardinality in the specification non trivial.
 To ensure that at least an API is present for a HVD Dataset the SHACL validation rules have been extended.
-
 <p/>
 A similar request, although less visible, is the possibility of downloading the data in bulk. 
 The <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32023R0138#anx_1">Annex</a> of the HVD IR requests frequently this need.
@@ -4291,7 +4290,7 @@ Therefore the following approach has been applied in this specification to ensur
 The formal constraints have been relaxed, the usage qualification has been set to recommendation, and additional usage notes 
 including this explanation have been added.
 In addition the SHACL validation rules have been extended with a check to validate if each HVD dataset has a HVD Distribution.
-This check has severity Warning, to force publishers to consider if they really do not need to provide distributions their provided information.
+An additional check has been put in place to validate, that a Distribution represents either a bulk download via <code>dcat:downloadURL</code>, or an API via <code>dcat:accessService</code>.
 <p/>
 Forcing the presence of at least one distribution or data service for a Dataset, is also implicitly the result of the need for providing legal information. 
 As DCAT-AP mandates this to be expressed at the level of Distributions or Data Services, a Dataset will have 
@@ -4450,7 +4449,7 @@ To support the assessment if a Catalogue satisfies DCAT-AP HVD, the following SH
 <ul>
 <li><a href="html/hvd-SHACL-base.ttl">base.ttl</a>: all base constraints expressed in this document.</li>
 <li><a href="html/hvd-SHACL-ranges.ttl">ranges.ttl</a>: all the class range constraints expressed in this document.</li>
-<li><a href="html/hvd-SHACL-cv.ttl">cv.ttl</a>: constraints concerning the usage of controlled vocabularies. Note that validating with these shapes requires the controlled vocabularies to be also present in the data graph.</li>
+<li><a href="html/hvd-SHACL-cv.ttl">cv.ttl</a>: constraints concerning the usage of controlled vocabularies. Note that validating with these shapes requires the <a href="#controlled-vocs">controlled vocabularies</a> to be also present in the data graph.</li>
 <li><a href="html/hvd-SHACL-usagenotes.ttl">usagenotes.ttl</a>: additional constraints that are expressed as usage notes or recommendations.</li>
 </ul>
 
@@ -4607,6 +4606,14 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 						
 					
 						
+							<tr>
+								<td><a href="#DataService">Data Service</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#DataService</div></td>
+								<td>Mandatory</td>
+								<td><a href="#DataService.endpointdescription">endpoint description </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#endpointDescription</div></td>
+							</tr>
+						
 					
 						
 							<tr>
@@ -4651,14 +4658,6 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 					
 						
 					
-						
-							<tr>
-								<td><a href="#DataService">Data Service</a></td>
-								<td><div class="shorten">http://www.w3.org/ns/dcat#DataService</div></td>
-								<td>Recommended</td>
-								<td><a href="#DataService.endpointdescription">endpoint description </a></td>
-								<td><div class="shorten">http://www.w3.org/ns/dcat#endpointDescription</div></td>
-							</tr>
 						
 					
 						

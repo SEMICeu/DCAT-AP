@@ -11,11 +11,12 @@ This Changelog provides an overview of the changes incorporated in DCAT-AP HVD 3
 - Fix links from `DataService.rights` and `DataService.licence` to Article 3.2 instead of 3.3
 - Add a note about validating shapes concerning controlled vocabularies
 - Update the editors, Interoperable Europe representatives and collaborating Directorate-General in the Acknowledgments
-- Fix typos - Add a Datatypes section
+- Fix typos
+- Add a Datatypes section
 - Add the `eli` prefix
 
 # **Adaptations to the Different Sections**  
-- Align the specification with DCAT-AP 3.0.1, previously DCAT-AP 3.0.0, and updated the corresponding references and reuse links
+- Align the specification with DCAT-AP 3.0.1. Update the corresponding references and reuse links. Older DCAT-AP versions are not supported anymore.
 - Change the HVD data category guidance from RECOMMENDED to MUST for annotating datasets and APIs with the most precise applicable HVD category concept. This is a normative change
 - Update the Scope section to mention GeoDCAT-AP and StatDCAT-AP
 - Change the Scope example of a requirement that DCAT-AP cannot verify from licence permissiveness to identifier persistence
@@ -32,6 +33,7 @@ This Changelog provides an overview of the changes incorporated in DCAT-AP HVD 3
 - Add LicenceDocument `as permissive as` and `more permissive than` properties for mapping to the EU Vocabularies Licences NAL, add the NAL to Controlled Vocabularies
 - Explicitly added `owl:sameAs` as a Licence mapping option
 - Remove the supportive class Literal
+- `DataService.endpointDescription` made mandatory, according to [Article 3.3 of the HVD IR](https://eur-lex.europa.eu/eli/reg_impl/2023/138/oj/eng#003.003)
 
 # **SHACL Validation Changes**  
 - Add English-language title and description checks for Dataset, with severity Warning
@@ -43,16 +45,20 @@ This Changelog provides an overview of the changes incorporated in DCAT-AP HVD 3
 - Removed unnecessary shapes checking for instances of `rdfs:Resource`
 - Tightened validation of URLs (endpoint, download, access, etc.) not to allow blank nodes
 - Change the prefix used for the Dublin Core Terms namespace from `dc` to `dct`
-- SHACL ShapesGraphs now follow [SHACL 1.2 Profiling Packaging recommendation](https://www.w3.org/TR/shacl12-profiling/#packaging)
-- Added SHACL shape checking that the most granular HVD category is used
+- SHACL ShapesGraphs now follow [SHACL 1.2 Profiling Packaging recommendation draft](https://www.w3.org/TR/shacl12-profiling/#packaging)
+- Added SHACL shape checking that the most granular HVD category is used. It requires the HVD category controlled vocabulary loaded in the data graph.
+- Added SHACL shape enforcing that a Distribution represents either an API (has `dcat:accessService`), or a bulk download (has `dcat:downloadURL`), not both.
+- `DataService.endpointDescription` made mandatory, according to [Article 3.3 of the HVD IR](https://eur-lex.europa.eu/eli/reg_impl/2023/138/oj/eng#003.003)
+- Missing `DataService.contactPoint` check results in Violation
+- Removed `rdfs:seeAlso`, `skos:broadMatch` and `skos:closeMatch` from licence mapping alternatives
 
 ## **Detailed Issue Feedback**  
   
-- Issue [460](https://github.com/SEMICeu/dcat-ap/issues/460), `Dataset.datasetdistribution` cardinality - explained why it is recommended and `0..*`
-- Issue [461](https://github.com/SEMICeu/dcat-ap/issues/461), missing `inseries` `<<optional>>` qualification in diagram
-- Issue [463](https://github.com/SEMICeu/dcat-ap/issues/463), missing reference to DCAT-AP for Dataset Series
-- Issue [459](https://github.com/SEMICeu/dcat-ap/issues/459), missing contact point for Dataset in diagram
-- Issue [462](https://github.com/SEMICeu/dcat-ap/issues/462), `DatasetSeries.HVDcategory` definition fix
+- Issue [460](https://github.com/SEMICeu/DCAT-AP/issues/460), `Dataset.datasetdistribution` cardinality - explained why it is recommended and `0..*`
+- Issue [461](https://github.com/SEMICeu/DCAT-AP/issues/461), missing `inseries` `<<optional>>` qualification in diagram
+- Issue [463](https://github.com/SEMICeu/DCAT-AP/issues/463), missing reference to DCAT-AP for Dataset Series
+- Issue [459](https://github.com/SEMICeu/DCAT-AP/issues/459), missing contact point for Dataset in diagram
+- Issue [462](https://github.com/SEMICeu/DCAT-AP/issues/462), `DatasetSeries.HVDcategory` definition fix
 - Issue [482](https://github.com/SEMICeu/DCAT-AP/issues/482), `High Value datasets` changed to `High-Value datasets`
 - Issue [487](https://github.com/SEMICeu/DCAT-AP/issues/487), add note about illustrativeness of INSPIRE ELI
 - Issue [492](https://github.com/SEMICeu/DCAT-AP/issues/492), change `DataService.title` reuse qualification to `E`
