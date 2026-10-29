@@ -894,7 +894,7 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
                                     A link to the Dataset, Data Service or Catalogue described in the record.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    A catalogue record will refer to one entity in a catalogue. This can be either a Dataset or a Data Service. To ensure an unambiguous reading of the cardinality the range is set to Catalogued Resource. However it is not the intent with this range to require the explicit use of the class Catalogue Resource. As abstract class, a subclass should be used.
+                                    A catalogue record will refer to one entity in a catalogue. This can be either a Dataset or a Data Service. To ensure an unambiguous reading of the cardinality the range is set to Catalogued Resource. However it is not the intent with this range to require the explicit use of the class Catalogued Resource. As abstract class, a subclass should be used.
                                 </td>
 				<!--
                                 <td>
@@ -4045,7 +4045,7 @@ As a Dataset Series is often viewed as a Dataset also the HVD categorisation is 
 More on this identification is found in the next section.
 <p/>
 In this annex, no further advice or guidelines are provided to determine whether a dataset should be considered or represented as a Dataset Series. 
-That is not provided by the HVD IR and therefore these advice or guidelines are to be discussed within the context of the generic DCAT-AP.
+That is not provided by the HVD IR and therefore these guidelines are to be discussed within the context of the generic DCAT-AP.
 
 <h3 id="c1">In scope of HVD IR</h3>
 
@@ -4093,7 +4093,7 @@ Nevertheless, it must be noted that the HVD requirements on a Data Service might
 </p>
 
 
-<h3 id="c2">HVD data category</h3>
+<h3 id="hvd-category">HVD data category</h3>
 The HVD IR defines six thematic data categories: geospatial, earth observation and environment, meteorological, statistics, companies and company ownership, and mobility. 
 A new property <a href="http://data.europa.eu/r5r/hvdCategory">HVD category</a> is introduced to indicate the HVD category to which a resource, i.e. a dataset, belongs.
 The controlled vocabulary <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/high-value-dataset-category">High-value dataset categories</a>, maintained by the Publications Office, contains not only these six categories, but also the complete list of datasets required by the HVD IR.
@@ -4289,8 +4289,9 @@ Reviewers have pointed out this challenge.
 Therefore the following approach has been applied in this specification to ensure that publishers consider this need.
 The formal constraints have been relaxed, the usage qualification has been set to recommendation, and additional usage notes 
 including this explanation have been added.
-In addition the SHACL validation rules have been extended with a check to validate if each HVD dataset has a HVD Distribution.
-An additional check has been put in place to validate, that a Distribution represents either a bulk download via <code>dcat:downloadURL</code>, or an API via <code>dcat:accessService</code>.
+The SHACL validation rules have been extended with a check to validate if each HVD dataset has a HVD Distribution.
+An additional check has been put in place to validate, that a Distribution represents either a bulk download via <code>dcat:downloadURL</code>, or an API via <code>dcat:accessService</code>, not both, which would produce a Violation.
+If a dataset does not have a Bulk download distribution, a Warning is issued.
 <p/>
 Forcing the presence of at least one distribution or data service for a Dataset, is also implicitly the result of the need for providing legal information. 
 As DCAT-AP mandates this to be expressed at the level of Distributions or Data Services, a Dataset will have 
@@ -4422,7 +4423,7 @@ The catalogue will also contain any additional supportive information such as Co
 
 <div class="h3 examples" id="example-ms_catalogue">Example 13 - MS Catalogue</div>
 
-<p>To reduce the risk of misinterpretation, the Catalogue Resource connecting properties such as <code>dcat:servesDataset</code> and <code>dcat:distribution</code> 
+<p>To reduce the risk of misinterpretation, the Catalogued Resource connecting properties such as <code>dcat:servesDataset</code> and <code>dcat:distribution</code> 
 should be inspected to not refer to Catalogued Resources outside the scope of HVD. In the example below, the reference to the RDF distribution for the "bee population" 
 and the "wasp population" dataset are removed from the reporting catalogue. During the collection stage of the common reporting approach a SPARQL query will perform
 this scoping.

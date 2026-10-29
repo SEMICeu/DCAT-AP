@@ -13,7 +13,7 @@ This Changelog provides an overview of the changes incorporated in DCAT-AP HVD 3
 - Update [Section 9](#controlled-vocs) the usage note on HVD Categories to use the most detailed level.  
 - Update [Section 10](#mapping-the-hvd-ir-to-dcat-ap) with extended insights on the mapping from HVD IR to DCAT-AP.  
 - Add [Section 10.1.1](#guidelines-datasetseries) with guidelines on the use of Dataset Series.  
-- Update [Section 10.3](#c2) the usage note on HVD Categories to use the most detailed level.  
+- Update [Section 10.3](#hvd-category) the usage note on HVD Categories to use the most detailed level.  
 - Add [Section 10.5.1](#assessment-support-for-licences) with guidelines on mapping licences to EU NAL Licencea.  
 - Include a [Section 10.8](#apis-are-mandatory) on the obligation to provide an API and how this can be expressed in DCAT-AP (HVD).  
 - Reword the [Section 10.9](#c8) on reporting to align with the most recent recommendations on the Common HVD Reporting.  
