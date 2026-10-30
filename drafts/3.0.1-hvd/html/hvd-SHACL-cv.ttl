@@ -11,7 +11,8 @@
 
 
 <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-cv.ttl> a shacl:ShapesGraph ;
-  rdfs:label "DCAT-AP HVD SHACL shapes for Controlled Vocabularies"@en .
+  rdfs:label "DCAT-AP HVD SHACL shapes for Controlled Vocabularies"@en ;
+  owl:imports <http://publications.europa.eu/resource/distribution/high-value-dataset-category/rdf/skos_core/high-value-dataset-category.rdf> .
 
 :HVDCategoryRestriction a shacl:NodeShape ;
   rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-cv.ttl> ;
