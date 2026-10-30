@@ -8,45 +8,45 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 
-<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> a shacl:ShapesGraph ;
+<https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> a shacl:ShapesGraph ;
   rdfs:label "DCAT-AP HVD SHACL shapes for usage notes"@en .
 
-<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetShape> a shacl:NodeShape ;
-  rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
+<https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd#dcat:DatasetShape> a shacl:NodeShape ;
+  rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
   shacl:closed false;
   shacl:property 
-    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetShape/API>,
-    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetShape/HVDELI>,
-    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetShape/EnglishTitle>,
-    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetShape/EnglishDescription>,
-    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetShape/BulkDownload>;
+    <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd#dcat:DatasetShape/API>,
+    <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd#dcat:DatasetShape/HVDELI>,
+    <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd#dcat:DatasetShape/EnglishTitle>,
+    <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd#dcat:DatasetShape/EnglishDescription>,
+    <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd#dcat:DatasetShape/BulkDownload>;
   shacl:targetClass dcat:Dataset .
 
-<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape> a shacl:NodeShape ;
-  rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
+<https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd#dcat:DataServiceShape> a shacl:NodeShape ;
+  rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
   shacl:closed false;
   shacl:property 
-    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/HVDELI>,
-    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/contactPoint>;
+    <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd#dcat:DataServiceShape/HVDELI>,
+    <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd#dcat:DataServiceShape/contactPoint>;
   shacl:targetClass dcat:DataService .
 
-<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape> a shacl:NodeShape ;
-  rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
+<https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd#dcat:DatasetSeriesShape> a shacl:NodeShape ;
+  rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
   shacl:closed false;
   shacl:property 
-    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/HVDELI>,
-    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/EnglishTitle>,
-    <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/EnglishDescription>;
+    <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd#dcat:DatasetSeriesShape/HVDELI>,
+    <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd#dcat:DatasetSeriesShape/EnglishTitle>,
+    <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd#dcat:DatasetSeriesShape/EnglishDescription>;
   shacl:targetClass dcat:DatasetSeries .
 
-<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DistributionShape> a shacl:NodeShape ;
-  rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
+<https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd#dcat:DistributionShape> a shacl:NodeShape ;
+  rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
   shacl:closed false;
-  shacl:property <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DistributionShape/HVDELI>;
+  shacl:property <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd#dcat:DistributionShape/HVDELI>;
   shacl:targetClass dcat:Distribution .
 
-<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#vcard:KindShape/union> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
-  rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/#Kind>;
+<https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd#vcard:KindShape/union> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
+  rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd/#Kind>;
   shacl:description """It is recommended to provide at least either an email or a contact form from e.g. a service desk."""@en;
   shacl:or (
 		[
@@ -63,8 +63,8 @@
   shacl:severity shacl:Warning ;
   <https://purl.eu/ns/shacl#message> "It is recommended to provide at least either an email or a contact form from e.g. a service desk."@en .
 
-<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DistributionShape/APIorBulk> a shacl:NodeShape ;
-  rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
+<https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd#dcat:DistributionShape/APIorBulk> a shacl:NodeShape ;
+  rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
   shacl:description """Distribution either represents an API or a bulk download."""@en;
   sh:xone (
     [
@@ -79,8 +79,8 @@
   shacl:targetClass dcat:Distribution
   .
   
-<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DistributionShape/legalInformation> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
-  rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/#c3>;
+<https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd#dcat:DistributionShape/legalInformation> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
+  rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd/#c3>;
   shacl:description """It is mandatory to provide legal information."""@en;
   shacl:or (
 		[
@@ -96,8 +96,8 @@
   shacl:targetClass dcat:Distribution;
   <https://purl.eu/ns/shacl#message> "It is mandatory to provide legal information."@en .
 
-<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/legalInformation> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
-  rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/#c3>;
+<https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd#dcat:DataServiceShape/legalInformation> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
+  rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd/#c3>;
   shacl:description """It is mandatory to provide legal information."""@en;
   shacl:or (
 		[
@@ -121,9 +121,9 @@
   shacl:targetClass dcat:DataService;
   <https://purl.eu/ns/shacl#message> "It is mandatory to provide legal information."@en .
 
-<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/contactPoint> a shacl:PropertyShape ;
-  rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
-  rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/#c6>;
+<https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd#dcat:DataServiceShape/contactPoint> a shacl:PropertyShape ;
+  rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
+  rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd/#c6>;
   shacl:description "A contact point should have either an e-mail address or a contact page."@en;
   shacl:path dcat:contactPoint ;
   shacl:node [
@@ -134,36 +134,36 @@
   ] ;
   <https://purl.eu/ns/shacl#message> "A contact point should have either an e-mail address (vcard:hasEmail) or a contact page (vcard:hasURL)."@en .
 
-<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DataServiceShape/HVDELI> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
-  rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DataService.applicablelegislation>;
+<https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd#dcat:DataServiceShape/HVDELI> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
+  rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd#DataService.applicablelegislation>;
   shacl:description "The applicable legislation must be set to the HVD IR ELI."@en;
   shacl:path <http://data.europa.eu/r5r/applicableLegislation> ;
   shacl:hasValue <http://data.europa.eu/eli/reg_impl/2023/138/oj> ;
   <https://purl.eu/ns/shacl#message> "The applicable legislation must be set to the HVD IR ELI."@en .
 
-<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetShape/HVDELI> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
-  rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Dataset.applicablelegislation>;
+<https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd#dcat:DatasetShape/HVDELI> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
+  rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd#Dataset.applicablelegislation>;
   shacl:description "The applicable legislation must be set to the HVD IR ELI."@en;
   shacl:path <http://data.europa.eu/r5r/applicableLegislation> ;
   shacl:hasValue <http://data.europa.eu/eli/reg_impl/2023/138/oj> ;
   <https://purl.eu/ns/shacl#message> "The applicable legislation must be set to the HVD IR ELI."@en .
 
-<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DistributionShape/HVDELI> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
-  rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#Distribution.applicablelegislation>;
+<https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd#dcat:DistributionShape/HVDELI> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
+  rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd#Distribution.applicablelegislation>;
   shacl:description "The applicable legislation must be set to the HVD IR ELI."@en;
   shacl:path <http://data.europa.eu/r5r/applicableLegislation> ;
   shacl:hasValue <http://data.europa.eu/eli/reg_impl/2023/138/oj> ;
   <https://purl.eu/ns/shacl#message> "The applicable legislation must be set to the HVD IR ELI."@en .
 
-<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/HVDELI> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
-  rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#DatasetSeries.applicablelegislation>;
+<https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd#dcat:DatasetSeriesShape/HVDELI> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
+  rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd#DatasetSeries.applicablelegislation>;
   shacl:description "The applicable legislation must be set to the HVD IR ELI."@en;
   shacl:path <http://data.europa.eu/r5r/applicableLegislation> ;
   shacl:hasValue <http://data.europa.eu/eli/reg_impl/2023/138/oj> ;
   <https://purl.eu/ns/shacl#message> "The applicable legislation must be set to the HVD IR ELI."@en .
 
-<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetShape/API> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
-  rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/#apis-are-mandatory>;
+<https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd#dcat:DatasetShape/API> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
+  rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd/#apis-are-mandatory>;
   shacl:description "HVD Datasets are accessible via an API."@en;
   shacl:name "API exists"@en;
   shacl:path [ shacl:alternativePath ( [ shacl:inversePath dcat:servesDataset ]  ( dcat:distribution dcat:accessService ) )];
@@ -172,8 +172,8 @@
   shacl:severity shacl:Violation ;
   <https://purl.eu/ns/shacl#message> "An HVD dataset has an API"@en.
 
-<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetShape/BulkDownload> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
-  rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/#Dataset.datasetdistribution>;
+<https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd#dcat:DatasetShape/BulkDownload> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
+  rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd/#Dataset.datasetdistribution>;
   shacl:description "HVD Datasets are accessible via a bulk download."@en;
   shacl:name "Bulk download distribution is strongly recommended"@en;
   shacl:path dcat:distribution;
@@ -182,8 +182,8 @@
   shacl:severity shacl:Warning ;
   <https://purl.eu/ns/shacl#message> "An HVD dataset mostly has a bulk download."@en.
 
-<https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dct:LicenseDocumentShape/permissive> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
-  rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/#assessment-support-for-licences>;
+<https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd#dct:LicenseDocumentShape/permissive> rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
+  rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd/#assessment-support-for-licences>;
   shacl:description """It is recommended to provide an indication how the licence is related with other licences."""@en;
   shacl:or (
 		[
@@ -204,8 +204,8 @@
   shacl:severity shacl:Warning ;
   <https://purl.eu/ns/shacl#message> "It is recommended to provide an indication how the licence is related with other licences."@en .
 
-  <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetShape/EnglishTitle> a shacl:PropertyShape ;
-    rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
+  <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd#dcat:DatasetShape/EnglishTitle> a shacl:PropertyShape ;
+    rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
     shacl:path dct:title ;
     shacl:qualifiedValueShape [
       shacl:languageIn ("en")
@@ -214,8 +214,8 @@
     shacl:severity shacl:Warning ;
     <https://purl.eu/ns/shacl#message> "For HVD reporting, there has to be a title in English. If it is not present, it will be added automatically by the EDP eTranslation service."@en .
     
-  <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetShape/EnglishDescription> a shacl:PropertyShape ;
-    rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
+  <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd#dcat:DatasetShape/EnglishDescription> a shacl:PropertyShape ;
+    rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
     shacl:path dct:description ;
     shacl:qualifiedValueShape [
       shacl:languageIn ("en")
@@ -224,8 +224,8 @@
     shacl:severity shacl:Warning ;
     <https://purl.eu/ns/shacl#message> "For HVD reporting, there has to be a description in English. If it is not present, it will be added automatically by the EDP eTranslation service."@en .
 
-  <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/EnglishTitle> a shacl:PropertyShape ;
-    rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
+  <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd#dcat:DatasetSeriesShape/EnglishTitle> a shacl:PropertyShape ;
+    rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
     shacl:path dct:title ;
     shacl:qualifiedValueShape [
       shacl:languageIn ("en")
@@ -234,8 +234,8 @@
     shacl:severity shacl:Warning ;
     <https://purl.eu/ns/shacl#message> "For HVD reporting, there has to be a title in English. If it is not present, it will be added automatically by the EDP eTranslation service ."@en .
 
-  <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd#dcat:DatasetSeriesShape/EnglishDescription> a shacl:PropertyShape ;
-    rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
+  <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd#dcat:DatasetSeriesShape/EnglishDescription> a shacl:PropertyShape ;
+    rdfs:isDefinedBy <https://semiceu.github.io/DCAT-AP/releases/3.0.1-hvd/html/hvd-SHACL-usagenotes.ttl> ;
     shacl:path dct:description ;
     shacl:qualifiedValueShape [
       shacl:languageIn ("en")
