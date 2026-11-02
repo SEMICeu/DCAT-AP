@@ -14,6 +14,7 @@ This Changelog provides an overview of the changes incorporated in DCAT-AP HVD 3
 - Fix typos
 - Add a Datatypes section
 - Add the `eli` prefix
+- JSON-LD context made consistent with other SEMIC specifications
 
 # **Adaptations to the Different Sections**  
 - Align the specification with DCAT-AP 3.0.1. Update the corresponding references and reuse links. Older DCAT-AP versions are not supported anymore.
